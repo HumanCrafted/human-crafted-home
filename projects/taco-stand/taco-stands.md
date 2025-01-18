@@ -11,3 +11,4 @@ published_date: 2020-12-21
 ---
 
 # Taco Stands
+![](projects/taco-stand/Taco%20Stand.svg)

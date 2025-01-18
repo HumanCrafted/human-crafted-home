@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "projects/taco-stand/taco-stands.md",
+                "file": "templates/project-template.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "taco-stands"
+              "title": "project-template"
             }
           }
         ]
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "projects/taco-stand/taco-stands.md",
+                "file": "templates/project-template.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for taco-stands"
+              "title": "Backlinks for project-template"
             }
           },
           {
@@ -112,12 +112,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "projects/taco-stand/taco-stands.md",
+                "file": "templates/project-template.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from taco-stands"
+              "title": "Outgoing links from project-template"
             }
           },
           {
@@ -139,10 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "projects/taco-stand/taco-stands.md"
+                "file": "templates/project-template.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of taco-stands"
+              "title": "Outline of project-template"
             }
           },
           {
@@ -178,10 +178,13 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "e3ae9734b80c0b53",
+  "active": "50a0f7291eaba4d2",
   "lastOpenFiles": [
-    "projects/taco-stand/taco-stands-thumbnail.svg",
+    "templates/Project Template.md",
+    "templates/project-template.md",
     "projects/taco-stand/taco-stands.md",
+    "projects/taco-stand/Taco Stand.svg",
+    "projects/taco-stand/taco-stands-thumbnail.svg",
     "projects/shop-v3/shop-v3.md",
     "templates",
     "projects/shop-v3/shop-v3-thumbnail.svg",
