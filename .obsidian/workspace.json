@@ -144,6 +144,20 @@
               "icon": "lucide-list",
               "title": "Outline of Shop v3"
             }
+          },
+          {
+            "id": "0d6297d77f02e4c8",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
           }
         ]
       }
