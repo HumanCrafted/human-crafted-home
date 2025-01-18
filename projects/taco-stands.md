@@ -1,7 +1,7 @@
 ---
 title: Taco Stands
 slug: taco-stands
-main_image: "![](projects/taco-stand/taco-stands-thumbnail.svg)"
+main_image: "![](images/taco-stands-thumbnail.svg)"
 featured: false
 categories:
   - around the house
