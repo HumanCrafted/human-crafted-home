@@ -2,7 +2,7 @@
 title: Taco Stands
 slug: taco-stands
 main_image: "![](projects/taco-stand/taco-stands-thumbnail.svg)"
-featured: true
+featured: false
 categories:
   - around the house
   - 3d printing
@@ -11,4 +11,4 @@ published_date: 2020-12-21
 ---
 
 # Taco Stands
-![](projects/taco-stand/Taco%20Stand.svg)
+
