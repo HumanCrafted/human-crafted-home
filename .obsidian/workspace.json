@@ -174,16 +174,17 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "github-sync:Sync with Remote": false
+      "github-sync:Sync with Remote": false,
+      "publish:Publish changes...": false
     }
   },
   "active": "50a0f7291eaba4d2",
   "lastOpenFiles": [
-    "images/ShedDesign-02.svg",
-    "images/ShedDesign d2 Drawing.svg",
+    "images/shop-v3-drawing-1.svg",
+    "images/shop-v3-sketch-1.svg",
+    "images/shop-v3-outdoors-1.png",
     "projects/shop-v3.md",
-    "images/Shop-v3.png",
-    "images/Frame_60.svg",
+    "images/shop-v3-thumbnail.svg",
     "images"
   ]
 }
