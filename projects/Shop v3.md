@@ -18,5 +18,5 @@ Your project content goes here. You can use standard markdown formatting.
 Content for section 1...
 
 ## Section 2
-
+![[ShedDesign-02.svg]]
 Content for section 2...

@@ -159,11 +159,13 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "github-sync:Sync with Remote": false
     }
   },
   "active": "50a0f7291eaba4d2",
   "lastOpenFiles": [
+    "images/ShedDesign-02.svg",
     "images/ShedDesign d2 Drawing.svg",
     "projects/Shop v3.md",
     "images/Shop-v3.png",
