@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "projects/shop-v3.md",
+                "file": "projects/taco-stand/taco-stands.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "shop-v3"
+              "title": "taco-stands"
             }
           }
         ]
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "projects/Shop v3.md",
+                "file": "projects/taco-stand/taco-stands.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Shop v3"
+              "title": "Backlinks for taco-stands"
             }
           },
           {
@@ -112,12 +112,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "projects/Shop v3.md",
+                "file": "projects/taco-stand/taco-stands.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Shop v3"
+              "title": "Outgoing links from taco-stands"
             }
           },
           {
@@ -139,10 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "projects/Shop v3.md"
+                "file": "projects/taco-stand/taco-stands.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Shop v3"
+              "title": "Outline of taco-stands"
             }
           },
           {
@@ -159,12 +159,12 @@
               "title": "All properties"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -178,13 +178,18 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "50a0f7291eaba4d2",
+  "active": "e3ae9734b80c0b53",
   "lastOpenFiles": [
-    "images/shop-v3-drawing-1.svg",
-    "images/shop-v3-sketch-1.svg",
-    "images/shop-v3-outdoors-1.png",
-    "projects/shop-v3.md",
-    "images/shop-v3-thumbnail.svg",
+    "projects/taco-stand/taco-stands-thumbnail.svg",
+    "projects/taco-stand/taco-stands.md",
+    "projects/shop-v3/shop-v3.md",
+    "templates",
+    "projects/shop-v3/shop-v3-thumbnail.svg",
+    "projects/taco-stand",
+    "projects/shop-v3",
+    "projects/shop-v3/shop-v3-drawing-1.svg",
+    "projects/shop-v3/shop-v3-sketch-1.svg",
+    "projects/shop-v3/shop-v3-outdoors-1.png",
     "images"
   ]
 }
