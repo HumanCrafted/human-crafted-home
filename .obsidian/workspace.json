@@ -158,9 +158,21 @@
               "icon": "lucide-archive",
               "title": "All properties"
             }
+          },
+          {
+            "id": "0577b18bc97b4065",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "projects/shop-v3.md"
+              },
+              "icon": "lucide-info",
+              "title": "File properties for shop-v3"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -178,7 +190,7 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "4d9aab1f95f69356",
+  "active": "0577b18bc97b4065",
   "lastOpenFiles": [
     "projects/taco-stands.md",
     "images",
