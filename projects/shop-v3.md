@@ -7,23 +7,17 @@ categories:
   - around the house
   - around the shop
 published_date: 2023-01-31
-images: "![](images/shop-v3-drawing-1.svg)"
+images:
+  - "![](images/shop-v3-outdoors-1.png)"
+  - "![](images/shop-v3-drawing-1.svg)"
+  - "![](images/shop-v3-sketch-1.svg)"
+headline: A new home for Human Crafted
 ---
-![](images/shop-v3-outdoors-1.png)
-Your project content goes here. You can use standard markdown formatting.
 
-Some space
+Two years ago we bought a 1950 ranch home from a family friend in the town we grew up in. A Summer of remodeling, followed by a Winter living/working in the new space (or what’s done of it), led me to decide to let go of my great space in Madison and set out to build a new space on our property. It’s a modest 12x24 ft, but hopefully will be just the right amount of space for lasering, wood working, and running the cnc.  
 
-Some more space
-## Section 1
-![](images/shop-v3-drawing-1.svg)
-Content for section 1...
+About the size of a one car garage, the rectangular shape was the largest size we could fit on our property within the setbacks required by the city. We got special permission to exceed the setback spacing to the house because of a fire separation wall we put in the garage during out remodel.  
 
-Testing a list:
-- List 1
-- List 2
-- List 3
+The transom windows at one end are a set of three operable awning windows that match window sizes in another part of our house. The door is a double french door with full glass that swings out. And the square window at the other end is a vintage picture window we took out of the house when we remodeled. The roof is metal standing seam, which also runs down the back, and the three remaining sides are vertical tongue and groove, pre-finished cedar.  
 
-## Section 2
-![](images/shop-v3-sketch-1.svg)
-Content for section 2...
+The shop won’t be spacious, so I’ll be using the space as efficiently as I can. It will house my large laser and the CNC router, plus MFT work tables and work surfaces.
