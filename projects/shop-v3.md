@@ -8,8 +8,6 @@ categories:
   - around the shop
 published_date: 2023-01-31
 ---
-
-# Shop v3
 ![](images/shop-v3-outdoors-1.png)
 Your project content goes here. You can use standard markdown formatting.
 
