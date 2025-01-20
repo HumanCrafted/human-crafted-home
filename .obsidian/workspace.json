@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "projects/shop-v3.md",
+                "file": "content/home.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "shop-v3"
+              "title": "home"
             }
           }
         ]
@@ -188,8 +188,12 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "e3ae9734b80c0b53",
+  "active": "876345f3a34a27ea",
   "lastOpenFiles": [
+    "content/lab.md",
+    "content/home.md",
+    "content/about.md",
+    "projects/shop-v3.md",
     "components/theme-toggle.tsx",
     "components/theme-provider.tsx",
     "components/nav-link.tsx",
@@ -200,7 +204,6 @@
     "components/project-grid.tsx",
     "components/category-filter.tsx",
     "components/footer.tsx",
-    "components/nav-bar.tsx",
     "public/window.svg",
     "public/globe.svg",
     "public/next.svg",
@@ -228,9 +231,6 @@
     "node_modules/locate-path/readme.md",
     "node_modules/resolve-pkg-maps/README.md",
     "node_modules/object.fromentries/README.md",
-    "node_modules/object.fromentries/CHANGELOG.md",
-    "node_modules/type-check/README.md",
-    "node_modules/typed-array-buffer/README.md",
     "node_modules/date-fns/docs/logo.svg",
     "node_modules/date-fns/docs/logotype.svg",
     "images/shop-v3-drawing-1.svg",
