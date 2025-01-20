@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "c93981b2a3de73b7",
+        "id": "07d5bd2edc8c663c",
         "type": "tabs",
         "children": [
           {
-            "id": "4d9aab1f95f69356",
+            "id": "876345f3a34a27ea",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "projects/shop-v3.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "shop-v3"
+              "title": "New tab"
             }
           }
         ]
@@ -164,11 +160,9 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {
-                "file": "projects/shop-v3.md"
-              },
+              "state": {},
               "icon": "lucide-info",
-              "title": "File properties for shop-v3"
+              "title": "File properties"
             }
           }
         ],
@@ -176,7 +170,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -186,30 +181,56 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "github-sync:Sync with Remote": false,
-      "publish:Publish changes...": false
+      "github-sync:Sync with Remote": false
     }
   },
-  "active": "4d9aab1f95f69356",
+  "active": "876345f3a34a27ea",
   "lastOpenFiles": [
-    "content/home.md",
-    "content/about.md",
-    "content/lab.md",
-    "content",
     "projects/shop-v3.md",
-    "projects/taco-stands.md",
+    "lkasjdlkjasd.md",
+    "components/scalable-text.tsx",
+    "components/featured-project.tsx",
+    "components/project-grid.tsx",
+    "components/category-filter.tsx",
+    "components/footer.tsx",
+    "components/nav-bar.tsx",
+    "components",
+    "pages/lab.tsx",
+    "pages/about.tsx",
+    "lib/markdown.ts",
+    "node_modules/date-fns/SECURITY.md",
+    "node_modules/date-fns/README.md",
+    "node_modules/date-fns/LICENSE.md",
+    "node_modules/date-fns/CHANGELOG.md",
+    "node_modules/lucide-react/README.md",
+    "node_modules/date-fns/docs/webpack.md",
+    "node_modules/date-fns/docs/unicodeTokens.md",
+    "node_modules/date-fns/docs/timeZones.md",
+    "node_modules/date-fns/docs/release.md",
+    "node_modules/date-fns/docs/logo.svg",
+    "node_modules/date-fns/docs/logotype.svg",
+    "node_modules/date-fns/docs/i18nContributionGuide.md",
+    "node_modules/date-fns/docs/i18n.md",
+    "node_modules/date-fns/docs/gettingStarted.md",
+    "node_modules/date-fns/docs/fp.md",
+    "node_modules/date-fns/docs/cdn.md",
+    "node_modules/mdast-util-to-hast/readme.md",
+    "node_modules/hast-util-to-html/readme.md",
+    "node_modules/property-information/readme.md",
+    "node_modules/unified/readme.md",
+    "node_modules/@types/unist/README.md",
+    "node_modules/@types/hast/README.md",
+    "node_modules/stringify-entities/readme.md",
+    "node_modules/remark-stringify/readme.md",
+    "node_modules/hast-util-sanitize/readme.md",
+    "node_modules/remark-parse/readme.md",
+    "public/window.svg",
+    "public/globe.svg",
+    "public/next.svg",
+    "public/vercel.svg",
+    "public/file.svg",
     "images/shop-v3-drawing-1.svg",
-    "images",
-    "templates/project-template.md",
-    "templates/Project Template.md",
     "projects/taco-stand/Taco Stand.svg",
-    "images/taco-stands-thumbnail.svg",
-    "templates",
-    "images/shop-v3-thumbnail.svg",
-    "projects/taco-stand",
-    "projects/shop-v3",
-    "images/shop-v3-sketch-1.svg",
-    "images/shop-v3-outdoors-1.png",
-    "images"
+    "images/taco-stands-thumbnail.svg"
   ]
 }
