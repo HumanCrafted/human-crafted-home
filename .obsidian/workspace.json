@@ -190,6 +190,7 @@
   },
   "active": "e3ae9734b80c0b53",
   "lastOpenFiles": [
+    "image-extractor.js",
     "test-markdown-processing.mjs",
     "test-markdown-processing.js",
     "node_modules/@ungap/structured-clone/esm/types.js",
@@ -200,7 +201,6 @@
     "node_modules/@ungap/structured-clone/cjs/types.js",
     "node_modules/@ungap/structured-clone/cjs/serialize.js",
     "node_modules/@ungap/structured-clone/cjs/json.js",
-    "node_modules/@ungap/structured-clone/cjs/package.json",
     "node_modules/@ungap/structured-clone/README.md",
     "node_modules/mdast-util-find-and-replace/node_modules/escape-string-regexp/readme.md",
     "node_modules/mdast-util-find-and-replace/readme.md",

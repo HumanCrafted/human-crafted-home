@@ -10,6 +10,7 @@ const __dirname = path.dirname(__filename);
 const projectsDirectory = path.join(__dirname, 'projects');
 
 function extractImagePaths(markdownContent) {
+  console.log(`Extracting image paths from: "${markdownContent}"`);
   // Regular expression to match the markdown image syntax
   const regex = /!\[\]$$(.+?)$$/g;
 
@@ -17,16 +18,23 @@ function extractImagePaths(markdownContent) {
   const matches = [];
   let match;
   while ((match = regex.exec(markdownContent)) !== null) {
+    console.log(`Found match: ${match[0]}, Extracted path: ${match[1]}`);
     matches.push(match[1]); // Capturing group 1 contains the raw path
   }
 
+  console.log(`Extracted ${matches.length} image paths`);
   return matches;
 }
 
 function removeImageSyntax(str) {
-  if (typeof str !== 'string') return str;
+  if (typeof str !== 'string') {
+    console.log(`Input is not a string: ${typeof str}`);
+    return str;
+  }
   
   console.log(`\nProcessing string: "${str}"`);
+  console.log(`String length: ${str.length}`);
+  console.log(`Character codes: ${Array.from(str).map(c => c.charCodeAt(0).toString(16)).join(', ')}`);
   
   const paths = extractImagePaths(str);
   if (paths.length > 0) {
@@ -39,6 +47,7 @@ function removeImageSyntax(str) {
 }
 
 function processYamlMetadata(metadata) {
+  console.log(`Processing YAML metadata: ${JSON.stringify(metadata)}`);
   if (typeof metadata === 'string') {
     return removeImageSyntax(metadata);
   }
@@ -57,13 +66,16 @@ function processYamlMetadata(metadata) {
 
 async function testMarkdownProcessing() {
   try {
+    console.log(`Projects directory: ${projectsDirectory}`);
     const files = await fs.readdir(projectsDirectory);
+    console.log(`Found ${files.length} files in directory`);
     
     for (const file of files) {
       if (path.extname(file) === '.md') {
         console.log(`\n\nProcessing file: ${file}`);
         const fullPath = path.join(projectsDirectory, file);
         const fileContent = await fs.readFile(fullPath, 'utf8');
+        console.log(`File content length: ${fileContent.length}`);
         const { data: frontmatter, content } = matter(fileContent);
         
         console.log('\nOriginal frontmatter:');
@@ -94,6 +106,7 @@ async function testMarkdownProcessing() {
     }
   } catch (error) {
     console.error('Error processing Markdown files:', error);
+    console.error(error.stack);
   }
 }
 
