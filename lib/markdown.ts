@@ -2,8 +2,7 @@ import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
 import { remark } from "remark"
-import remarkRehype from "remark-rehype"
-import rehypeStringify from "rehype-stringify"
+import html from "remark-html"
 import remarkGfm from "remark-gfm"
 
 const projectsDirectory = path.join(process.cwd(), "projects")
@@ -27,13 +26,7 @@ export async function getProjectBySlug(slug: string) {
   const fileContents = fs.readFileSync(fullPath, "utf8")
   const { data, content } = matter(fileContents)
 
-  console.log("Raw content:", content)
-
-  const processedContent = await remark()
-    .use(remarkGfm)
-    .use(remarkRehype, { allowDangerousHtml: true })
-    .use(rehypeStringify, { allowDangerousHtml: true })
-    .process(content)
+  const processedContent = await remark().use(remarkGfm).use(html, { sanitize: false }).process(content)
 
   const contentHtml = processedContent.toString()
 
@@ -62,10 +55,7 @@ export async function getAllProjects() {
 }
 
 export async function fetchProjectContent(slug: string) {
-  console.log("Fetching content for slug:", slug)
   const { metadata, content } = await getProjectBySlug(slug)
-  console.log("Fetched metadata:", metadata)
-  console.log("Fetched content:", content)
   return { metadata, content }
 }
 
