@@ -1,17 +1,25 @@
-import path from "path"
 import fs from "fs"
+import path from "path"
 import matter from "gray-matter"
 import { remark } from "remark"
-import html from "remark-html"
-import remarkUnwrapImages from "remark-unwrap-images"
+import remarkRehype from "remark-rehype"
+import rehypeStringify from "rehype-stringify"
+import remarkGfm from "remark-gfm"
 
-interface ProjectMetadata {
+const projectsDirectory = path.join(process.cwd(), "projects")
+
+export interface ProjectMetadata {
   title: string
-  date: string
-  tags: string[]
+  slug: string
+  main_image: string
+  featured: boolean
+  categories: string[]
+  published_date: string
 }
 
-const projectsDirectory = path.join(process.cwd(), "data")
+export async function getProjectSlugs() {
+  return fs.readdirSync(projectsDirectory)
+}
 
 export async function getProjectBySlug(slug: string) {
   const realSlug = slug.replace(/\.md$/, "")
@@ -19,7 +27,11 @@ export async function getProjectBySlug(slug: string) {
   const fileContents = fs.readFileSync(fullPath, "utf8")
   const { data, content } = matter(fileContents)
 
-  const processedContent = await remark().use(html).use(remarkUnwrapImages).process(content)
+  const processedContent = await remark()
+    .use(remarkGfm)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeStringify, { allowDangerousHtml: true })
+    .process(content)
   const contentHtml = processedContent.toString()
 
   return {
@@ -30,28 +42,26 @@ export async function getProjectBySlug(slug: string) {
 }
 
 export async function getAllProjects() {
-  const fileNames = fs.readdirSync(projectsDirectory)
-  const allProjectsData = fileNames.map((fileName) => {
-    const slug = fileName.replace(/\.md$/, "")
-    const fullPath = path.join(projectsDirectory, fileName)
-    const fileContents = fs.readFileSync(fullPath, "utf8")
-    const matterResult = matter(fileContents)
+  const slugs = await getProjectSlugs()
+  const projects = await Promise.all(
+    slugs.map(async (slug) => {
+      const { metadata } = await getProjectBySlug(slug)
+      return {
+        ...metadata,
+        slug: slug.replace(/\.md$/, ""),
+      }
+    }),
+  )
 
-    return {
-      slug,
-      ...matterResult.data,
-    }
-  })
-  return allProjectsData
+  return projects.sort((a, b) => (a.published_date > b.published_date ? -1 : 1))
 }
 
-function adjustImagePaths(content: string): string {
-  // Handle Markdown image syntax
-  content = content.replace(/!\[(.+?)\]\(\.\/images\//g, "![[$1]](/images/")
+export async function fetchProjectContent(slug: string) {
+  const { metadata, content } = await getProjectBySlug(slug)
+  return { metadata, content }
+}
 
-  // Handle HTML image syntax
-  content = content.replace(/<img src="\.\/images\//g, '<img src="/images/')
-
-  return content
+export async function listProjects() {
+  return getAllProjects()
 }
 
