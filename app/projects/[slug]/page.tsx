@@ -4,8 +4,15 @@ import { Footer } from "@/components/footer"
 import { fetchProjectContent, listProjects } from "@/lib/markdown"
 import { notFound } from "next/navigation"
 
-export default async function ProjectPage({ params }: { params: { slug: string } }) {
-  const { metadata, content } = await fetchProjectContent(params.slug)
+interface ProjectPageProps {
+  params: {
+    slug: string
+  }
+}
+
+export default async function ProjectPage({ params }: ProjectPageProps) {
+  const slug = params.slug // Access slug directly from params
+  const { metadata, content } = await fetchProjectContent(slug)
 
   if (!metadata || !content) {
     notFound()
@@ -29,7 +36,10 @@ export default async function ProjectPage({ params }: { params: { slug: string }
             className="rounded-lg object-cover"
           />
         </div>
-        <div className="prose prose-lg dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: content }} />
+        <div
+          className="prose prose-lg dark:prose-invert max-w-none space-y-4"
+          dangerouslySetInnerHTML={{ __html: content }}
+        />
       </main>
       <Footer />
     </div>

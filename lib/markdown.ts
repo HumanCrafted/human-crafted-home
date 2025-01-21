@@ -18,7 +18,7 @@ export interface ProjectMetadata {
 }
 
 function removeImageMarkdownSyntax(content: string): string {
-  const regex = /!\[.*?\]$$(.*?)$$/g
+  const regex = /!\[.*?\]\((.*?)\)/g
   return content.replace(regex, "$1")
 }
 
