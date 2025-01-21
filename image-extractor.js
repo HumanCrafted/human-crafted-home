@@ -18,7 +18,7 @@ function extractImagePaths(input) {
   try {
     while ((match = regex.exec(input)) !== null) {
       console.log(`Found match: ${JSON.stringify(match)}`);
-      matches.push(match[1]);
+      matches.push(match[1]); // Extracting the path inside parentheses
     }
   } catch (error) {
     console.error(`Error during regex execution: ${error}`);
@@ -42,7 +42,7 @@ function removeImageSyntax(str) {
   const paths = extractImagePaths(str);
   if (paths.length > 0) {
     console.log(`Extracted image path: "${paths[0]}"`);
-    return paths[0];
+    return paths[0]; // Return the first matched path
   } else {
     console.log("No image syntax found");
     return str;
