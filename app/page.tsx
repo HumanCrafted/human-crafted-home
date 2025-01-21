@@ -44,7 +44,7 @@ export default function Home() {
   const allTags = Array.from(new Set(projects.flatMap((p) => p.categories)))
 
   return (
-    <>
+    <div className="bg-background text-foreground min-h-screen flex flex-col">
       <NavBar />
       <main className="flex-grow w-full px-[60px]">
         {error && (
@@ -91,7 +91,7 @@ export default function Home() {
         {isLoading ? <p>Loading projects...</p> : <ProjectGrid projects={filteredProjects} />}
       </main>
       <Footer />
-    </>
+    </div>
   )
 }
 

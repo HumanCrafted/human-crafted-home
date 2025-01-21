@@ -16,6 +16,23 @@ export interface ProjectMetadata {
   published_date: string
 }
 
+function removeImageMarkdownSyntax(content: string): string {
+  const regex = /!\[.*?\]\((.*?)\)/g
+  return content.replace(regex, "$1")
+}
+
+function processMetadata(metadata: any): ProjectMetadata {
+  const processedMetadata: any = {}
+  for (const [key, value] of Object.entries(metadata)) {
+    if (typeof value === "string") {
+      processedMetadata[key] = removeImageMarkdownSyntax(value)
+    } else {
+      processedMetadata[key] = value
+    }
+  }
+  return processedMetadata as ProjectMetadata
+}
+
 export async function getProjectSlugs() {
   return fs.readdirSync(projectsDirectory)
 }
@@ -26,7 +43,13 @@ export async function getProjectBySlug(slug: string) {
   const fileContents = fs.readFileSync(fullPath, "utf8")
   const { data, content } = matter(fileContents)
 
-  const processedContent = await remark().use(remarkGfm).use(html, { sanitize: false }).process(content)
+  const processedMetadata = processMetadata(data)
+  const contentWithoutImageSyntax = removeImageMarkdownSyntax(content)
+
+  const processedContent = await remark()
+    .use(remarkGfm)
+    .use(html, { sanitize: false })
+    .process(contentWithoutImageSyntax)
 
   const contentHtml = processedContent.toString()
 
@@ -34,7 +57,7 @@ export async function getProjectBySlug(slug: string) {
 
   return {
     slug: realSlug,
-    metadata: data as ProjectMetadata,
+    metadata: processedMetadata,
     content: contentHtml,
   }
 }

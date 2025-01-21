@@ -1,6 +1,7 @@
 "use client"
 
-import React, { useRef, useEffect, useState } from 'react'
+import type React from "react"
+import { useRef, useEffect, useState } from "react"
 
 interface ScalableTextProps {
   children: React.ReactNode
@@ -10,12 +11,12 @@ interface ScalableTextProps {
   highlight?: boolean
 }
 
-export function ScalableText({ 
-  children, 
-  className = '', 
-  minFontSize = 16, 
+export function ScalableText({
+  children,
+  className = "",
+  minFontSize = 16,
   maxFontSize = 128,
-  highlight = false
+  highlight = false,
 }: ScalableTextProps) {
   const containerRef = useRef<HTMLDivElement>(null)
   const textRef = useRef<HTMLDivElement>(null)
@@ -28,25 +29,25 @@ export function ScalableText({
         let low = minFontSize
         let high = maxFontSize
         let mid
-        
+
         while (low <= high) {
           mid = Math.floor((low + high) / 2)
           textRef.current.style.fontSize = `${mid}px`
-          
+
           if (textRef.current.scrollWidth <= containerWidth) {
             low = mid + 1
           } else {
             high = mid - 1
           }
         }
-        
+
         setFontSize(high)
       }
     }
 
     resizeText()
-    window.addEventListener('resize', resizeText)
-    return () => window.removeEventListener('resize', resizeText)
+    window.addEventListener("resize", resizeText)
+    return () => window.removeEventListener("resize", resizeText)
   }, [children, minFontSize, maxFontSize])
 
   return (
@@ -66,42 +67,39 @@ export function ScalableText({
         style={{
           fontSize: `${fontSize}px`,
           lineHeight: 1,
-          whiteSpace: 'nowrap',
-          position: 'relative',
-          display: 'inline-block',
+          whiteSpace: "nowrap",
+          position: "relative",
+          display: "inline-block",
           zIndex: 1,
         }}
       >
         {children}
         {highlight && (
-          <span 
+          <span
             className="absolute overflow-hidden"
             style={{
-              height: '35%',
-              top: '45%',
-              width: '116%',
-              left: '-8%',
+              height: "35%",
+              top: "45%",
+              width: "116%",
+              left: "-8%",
               zIndex: -1,
-              pointerEvents: 'none',
+              pointerEvents: "none",
             }}
           >
             <svg
               className="absolute"
               style={{
-                width: '80vw',
-                height: '80vw',
-                right: '0',
-                top: '50%',
-                transform: 'translateY(-50%)',
-                animation: 'slideInFromLeft 1s ease-out forwards',
+                width: "80vw",
+                height: "80vw",
+                right: "0",
+                top: "50%",
+                transform: "translateY(-50%)",
+                animation: "slideInFromLeft 1s ease-out forwards",
               }}
               viewBox="0 0 100 100"
               preserveAspectRatio="none"
             >
-              <polygon
-                points="50,0 100,50 50,100 0,50"
-                className="fill-accent"
-              />
+              <polygon points="50,0 100,50 50,100 0,50" className="fill-accent" />
             </svg>
           </span>
         )}

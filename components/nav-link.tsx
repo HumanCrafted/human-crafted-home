@@ -2,7 +2,6 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { useRouter } from "next/navigation"
 
 interface NavLinkProps {
   href: string
@@ -12,25 +11,10 @@ interface NavLinkProps {
 
 export function NavLink({ href, children, className = "" }: NavLinkProps) {
   const pathname = usePathname()
-  const router = useRouter()
-  const isActive = pathname === href || (pathname === "/" && href.startsWith("/#"))
+  const isActive = pathname === href
 
   return (
-    <Link
-      href={href}
-      className={`relative ${className} group`}
-      onClick={(e) => {
-        if (href.startsWith("/#")) {
-          e.preventDefault()
-          const element = document.querySelector(href.substring(1))
-          if (element) {
-            element.scrollIntoView({ behavior: "smooth" })
-          }
-        } else {
-          router.push(href)
-        }
-      }}
-    >
+    <Link href={href} className={`relative ${className} group`}>
       <span className="relative z-10">{children}</span>
       <span
         className={`

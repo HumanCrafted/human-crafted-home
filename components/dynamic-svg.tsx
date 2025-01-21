@@ -11,16 +11,11 @@ interface DynamicSvgProps {
 
 export function DynamicSvg({ svg, className = "", onError }: DynamicSvgProps) {
   const { theme } = useTheme()
-
-  // Extract src from img tag if present
-  const srcMatch = svg.match(/<img.*?src="(.*?)"/)
-  const src = srcMatch ? srcMatch[1] : svg
-
-  const isSvg = src.toLowerCase().endsWith(".svg")
+  const isSvg = svg.toLowerCase().endsWith(".svg")
 
   return (
     <Image
-      src={src || "/placeholder.svg"}
+      src={svg || "/placeholder.svg"}
       alt="SVG Image"
       width={500}
       height={500}
@@ -32,8 +27,8 @@ export function DynamicSvg({ svg, className = "", onError }: DynamicSvgProps) {
             : "none",
       }}
       onError={(e) => {
-        console.error("Error loading image:", src)
-        if (onError) onError(new Error(`Failed to load image: ${src}`))
+        console.error("Error loading image:", svg)
+        if (onError) onError(new Error(`Failed to load image: ${svg}`))
       }}
     />
   )
