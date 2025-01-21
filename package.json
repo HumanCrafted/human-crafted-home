@@ -2,6 +2,7 @@
   "name": "human-crafted-home",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -18,16 +19,13 @@
     "eslint-config-next": "13.4.5",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.244.0",
-    "next": "^15.1.5",
+    "next": "13.4.5",
     "next-themes": "^0.2.1",
-    "postcss": "^8.5.1",
+    "postcss": "8.4.24",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "rehype-stringify": "^10.0.1",
     "remark": "^14.0.3",
-    "remark-gfm": "^4.0.0",
     "remark-html": "^15.0.2",
-    "remark-rehype": "^11.1.1",
     "tailwindcss": "3.3.2",
     "typescript": "5.1.3"
   }
