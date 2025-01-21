@@ -27,12 +27,17 @@ export async function getProjectBySlug(slug: string) {
   const fileContents = fs.readFileSync(fullPath, "utf8")
   const { data, content } = matter(fileContents)
 
+  console.log("Raw content:", content)
+
   const processedContent = await remark()
     .use(remarkGfm)
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeStringify, { allowDangerousHtml: true })
     .process(content)
+
   const contentHtml = processedContent.toString()
+
+  console.log("Processed HTML content:", contentHtml)
 
   return {
     slug: realSlug,
@@ -57,7 +62,10 @@ export async function getAllProjects() {
 }
 
 export async function fetchProjectContent(slug: string) {
+  console.log("Fetching content for slug:", slug)
   const { metadata, content } = await getProjectBySlug(slug)
+  console.log("Fetched metadata:", metadata)
+  console.log("Fetched content:", content)
   return { metadata, content }
 }
 
