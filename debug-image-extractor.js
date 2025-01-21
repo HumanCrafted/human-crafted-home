@@ -1,8 +1,9 @@
-function extractImagePaths(input) {
+function debugExtractImagePaths(input) {
   console.log(`\nInput: ${JSON.stringify(input)}`);
   console.log(`Type: ${typeof input}`);
   console.log(`Length: ${input.length}`);
-  
+  console.log(`Character codes: ${Array.from(input).map(c => c.charCodeAt(0).toString(16)).join(', ')}`);
+
   if (typeof input !== 'string') {
     console.log('Input is not a string, returning empty array');
     return [];
@@ -27,28 +28,6 @@ function extractImagePaths(input) {
   return matches;
 }
 
-function removeImageSyntax(str) {
-  if (typeof str !== 'string') {
-    console.log(`Input is not a string: ${typeof str}`);
-    return str;
-  }
-  
-  console.log(`\nProcessing string: ${JSON.stringify(str)}`);
-  
-  // Remove surrounding quotes if present
-  str = str.replace(/^['"](.*)['"]$/, '$1');
-  
-  const paths = extractImagePaths(str);
-  if (paths.length > 0) {
-    console.log(`Extracted image path: "${paths[0]}"`);
-    return paths[0];
-  } else {
-    console.log("No image syntax found");
-    return str;
-  }
-}
-
-// Test cases
 const testStrings = [
   "'![](images/test.svg)'",
   '![](images/test.svg)',
@@ -62,11 +41,10 @@ const testStrings = [
 
 console.log("Testing sample strings:");
 testStrings.forEach(str => {
-  console.log(`\nInput: ${JSON.stringify(str)}`);
-  console.log(`Output: ${JSON.stringify(removeImageSyntax(str))}`);
+  const result = debugExtractImagePaths(str);
+  console.log(`Result: ${JSON.stringify(result)}\n`);
 });
 
-// Test with markdown content
 const markdownContent = `
 # Test Markdown
 
@@ -81,6 +59,6 @@ This is a normal paragraph.
 ![](images/third-example.svg)
 `;
 
-console.log("\nTesting with markdown content:");
-const markdownResult = extractImagePaths(markdownContent);
+console.log("Testing with markdown content:");
+const markdownResult = debugExtractImagePaths(markdownContent);
 console.log(`Markdown result: ${JSON.stringify(markdownResult)}`);
