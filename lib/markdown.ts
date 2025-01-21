@@ -2,8 +2,8 @@ import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
 import { remark } from "remark"
-import html from "remark-html"
 import remarkGfm from "remark-gfm"
+import remarkHtml from "remark-html"
 
 const projectsDirectory = path.join(process.cwd(), "projects")
 
@@ -40,20 +40,20 @@ export async function getProjectSlugs() {
 export async function getProjectBySlug(slug: string) {
   const realSlug = slug.replace(/\.md$/, "")
   const fullPath = path.join(projectsDirectory, `${realSlug}.md`)
+
+  if (!fs.existsSync(fullPath)) {
+    throw new Error(`Project file not found: ${fullPath}`)
+  }
+
   const fileContents = fs.readFileSync(fullPath, "utf8")
   const { data, content } = matter(fileContents)
 
   const processedMetadata = processMetadata(data)
   const contentWithoutImageSyntax = removeImageMarkdownSyntax(content)
 
-  const processedContent = await remark()
-    .use(remarkGfm)
-    .use(html, { sanitize: false })
-    .process(contentWithoutImageSyntax)
+  const processedContent = await remark().use(remarkGfm).use(remarkHtml).process(contentWithoutImageSyntax)
 
   const contentHtml = processedContent.toString()
-
-  console.log("Processed HTML content:", contentHtml)
 
   return {
     slug: realSlug,
@@ -78,8 +78,13 @@ export async function getAllProjects() {
 }
 
 export async function fetchProjectContent(slug: string) {
-  const { metadata, content } = await getProjectBySlug(slug)
-  return { metadata, content }
+  try {
+    const { metadata, content } = await getProjectBySlug(slug)
+    return { metadata, content }
+  } catch (error) {
+    console.error(`Error fetching project content for slug ${slug}:`, error)
+    return { metadata: null, content: null }
+  }
 }
 
 export async function listProjects() {
