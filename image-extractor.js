@@ -8,6 +8,7 @@ function extractImagePaths(input) {
     return [];
   }
 
+  // Correct regex pattern for markdown image syntax
   const regex = /!\[.*?\]$$(.*?)$$/g;
   console.log(`Regex pattern: ${regex}`);
 
