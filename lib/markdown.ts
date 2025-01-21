@@ -4,6 +4,7 @@ import matter from "gray-matter"
 import { remark } from "remark"
 import remarkGfm from "remark-gfm"
 import remarkHtml from "remark-html"
+import { visit } from "unist-util-visit"
 
 const projectsDirectory = path.join(process.cwd(), "projects")
 
@@ -33,6 +34,18 @@ function processMetadata(metadata: any): ProjectMetadata {
   return processedMetadata as ProjectMetadata
 }
 
+// Custom plugin to preserve empty lines
+function preserveEmptyLines() {
+  return (tree: any) => {
+    visit(tree, (node) => {
+      if (node.type === "paragraph" && node.children.length === 0) {
+        node.type = "html"
+        node.value = "<br>"
+      }
+    })
+  }
+}
+
 export async function getProjectSlugs() {
   return fs.readdirSync(projectsDirectory)
 }
@@ -51,7 +64,11 @@ export async function getProjectBySlug(slug: string) {
   const processedMetadata = processMetadata(data)
   const contentWithoutImageSyntax = removeImageMarkdownSyntax(content)
 
-  const processedContent = await remark().use(remarkGfm).use(remarkHtml).process(contentWithoutImageSyntax)
+  const processedContent = await remark()
+    .use(remarkGfm)
+    .use(preserveEmptyLines)
+    .use(remarkHtml, { sanitize: false })
+    .process(contentWithoutImageSyntax)
 
   const contentHtml = processedContent.toString()
 
