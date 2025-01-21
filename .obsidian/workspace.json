@@ -190,6 +190,12 @@
   },
   "active": "e3ae9734b80c0b53",
   "lastOpenFiles": [
+    "public/images/taco-stands-thumbnail.svg",
+    "public/images/shop-v3-thumbnail.svg",
+    "public/images/shop-v3-sketch-1.svg",
+    "public/images/shop-v3-outdoors-1.png",
+    "public/images/shop-v3-drawing-1.svg",
+    "public/images",
     "node_modules/@img/sharp-libvips-darwin-arm64/README.md",
     "node_modules/@img/sharp-libvips-darwin-arm64/versions.json",
     "node_modules/@img/sharp-libvips-darwin-arm64/lib/index.js",
@@ -201,7 +207,6 @@
     "node_modules/sharp/package.json",
     "node_modules/sharp/install/check.js",
     "node_modules/sharp/install",
-    "node_modules/sharp/lib/utility.js",
     "node_modules/@emnapi/runtime/README.md",
     "node_modules/detect-libc/README.md",
     "node_modules/color/README.md",
@@ -225,16 +230,11 @@
     "node_modules/is-alphabetical/readme.md",
     "node_modules/inline-style-parser/README.md",
     "node_modules/is-hexadecimal/readme.md",
-    "node_modules/is-decimal/readme.md",
     "node_modules/date-fns/docs/logotype.svg",
     "node_modules/date-fns/docs/logo.svg",
     "public/window.svg",
     "public/globe.svg",
     "public/next.svg",
-    "public/vercel.svg",
-    "public/file.svg",
-    "images/shop-v3-drawing-1.svg",
-    "projects/taco-stand/Taco Stand.svg",
-    "images/taco-stands-thumbnail.svg"
+    "public/vercel.svg"
   ]
 }
