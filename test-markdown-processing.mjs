@@ -13,12 +13,24 @@ function removeImageSyntax(str) {
   if (typeof str !== 'string') return str;
   
   console.log(`\nProcessing string: "${str}"`);
+  console.log(`String length: ${str.length}`);
+  console.log(`Character codes: ${Array.from(str).map(c => c.charCodeAt(0)).join(', ')}`);
   
-  // Remove the image syntax, handling various quoting scenarios
-  const result = str.replace(/^(['"]?)!\[(?:.*?)\]$$(.*?)$$\1$/, '$2');
+  // Remove any potential invisible characters at the start and end
+  str = str.trim();
   
-  console.log(`Result: "${result}"`);
-  return result;
+  // Check if the string matches our expected pattern
+  const match = str.match(/^!\[\]$$(.*?)$$$/);
+  if (match) {
+    console.log("Matched pattern: ![](...)");
+    // Extract the content inside the parentheses
+    const result = match[1];
+    console.log(`Extracted result: "${result}"`);
+    return result;
+  } else {
+    console.log("Did not match expected pattern");
+    return str;
+  }
 }
 
 function processYamlMetadata(metadata) {
@@ -70,7 +82,7 @@ async function testMarkdownProcessing() {
 
         // Process the main content
         console.log('\nProcessing main content...');
-        const processedContent = content.replace(/!\[(?:.*?)\]$$(.*?)$$/g, '$1');
+        const processedContent = content.replace(/!\[.*?\]$$(.*?)$$/g, '$1');
         console.log('\nProcessed main content (first 200 characters):');
         console.log(processedContent.slice(0, 200) + '...');
       }
@@ -83,11 +95,11 @@ async function testMarkdownProcessing() {
 // Test with sample strings
 console.log('\nTesting sample strings:');
 const testStrings = [
-  '"![](images/test.svg)"',
+  "'![](images/test.svg)'",
   '![](images/test.svg)',
   'normal string',
-  '"normal string"',
-  "'![](images/test.svg)'",
+  "'normal string'",
+  '"![](images/test.svg)"',
   '![Alt text](images/test.svg)',
   '"![Alt text](images/test.svg)"'
 ];
