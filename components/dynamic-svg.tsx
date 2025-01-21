@@ -13,9 +13,12 @@ export function DynamicSvg({ svg, className = "", onError }: DynamicSvgProps) {
   const { theme } = useTheme()
   const isSvg = svg.toLowerCase().endsWith(".svg")
 
+  // Ensure the svg path starts with a forward slash
+  const imagePath = svg.startsWith("/") ? svg : `/${svg}`
+
   return (
     <Image
-      src={svg || "/placeholder.svg"}
+      src={imagePath || "/placeholder.svg"}
       alt="SVG Image"
       width={500}
       height={500}
