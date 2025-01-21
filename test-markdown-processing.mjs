@@ -9,26 +9,31 @@ const __dirname = path.dirname(__filename);
 
 const projectsDirectory = path.join(__dirname, 'projects');
 
+function extractImagePaths(markdownContent) {
+  // Regular expression to match the markdown image syntax
+  const regex = /!\[\]$$(.+?)$$/g;
+
+  // Extract all matches and their captured groups
+  const matches = [];
+  let match;
+  while ((match = regex.exec(markdownContent)) !== null) {
+    matches.push(match[1]); // Capturing group 1 contains the raw path
+  }
+
+  return matches;
+}
+
 function removeImageSyntax(str) {
   if (typeof str !== 'string') return str;
   
   console.log(`\nProcessing string: "${str}"`);
-  console.log(`String length: ${str.length}`);
-  console.log(`Character codes: ${Array.from(str).map(c => c.charCodeAt(0)).join(', ')}`);
   
-  // Remove any potential invisible characters at the start and end
-  str = str.trim();
-  
-  // Check if the string matches our expected pattern
-  const match = str.match(/^!\[\]$$(.*?)$$$/);
-  if (match) {
-    console.log("Matched pattern: ![](...)");
-    // Extract the content inside the parentheses
-    const result = match[1];
-    console.log(`Extracted result: "${result}"`);
-    return result;
+  const paths = extractImagePaths(str);
+  if (paths.length > 0) {
+    console.log(`Extracted image path: "${paths[0]}"`);
+    return paths[0];
   } else {
-    console.log("Did not match expected pattern");
+    console.log("No image syntax found");
     return str;
   }
 }
@@ -82,7 +87,7 @@ async function testMarkdownProcessing() {
 
         // Process the main content
         console.log('\nProcessing main content...');
-        const processedContent = content.replace(/!\[.*?\]$$(.*?)$$/g, '$1');
+        const processedContent = content.replace(/!\[.*?\]$$(.+?)$$/g, '$1');
         console.log('\nProcessed main content (first 200 characters):');
         console.log(processedContent.slice(0, 200) + '...');
       }
