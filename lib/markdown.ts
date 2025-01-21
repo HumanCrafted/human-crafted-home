@@ -18,7 +18,7 @@ export interface ProjectMetadata {
 }
 
 function removeImageMarkdownSyntax(content: string): string {
-  const regex = /!\[.*?\]\((.*?)\)/g
+  const regex = /!\[.*?\]$$(.*?)$$/g
   return content.replace(regex, "$1")
 }
 
@@ -34,13 +34,20 @@ function processMetadata(metadata: any): ProjectMetadata {
   return processedMetadata as ProjectMetadata
 }
 
-// Custom plugin to preserve empty lines
-function preserveEmptyLines() {
+// Custom plugin to preserve line breaks
+function preserveLineBreaks() {
   return (tree: any) => {
-    visit(tree, (node) => {
-      if (node.type === "paragraph" && node.children.length === 0) {
-        node.type = "html"
-        node.value = "<br>"
+    visit(tree, "text", (node) => {
+      if (node.value.includes("\n")) {
+        const lines = node.value.split("\n")
+        const newNodes = lines.flatMap((line: string, i: number) => {
+          if (i === lines.length - 1) return [{ type: "text", value: line }]
+          return [
+            { type: "text", value: line },
+            { type: "html", value: "<br>" },
+          ]
+        })
+        Object.assign(node, { type: "parent", children: newNodes })
       }
     })
   }
@@ -66,7 +73,7 @@ export async function getProjectBySlug(slug: string) {
 
   const processedContent = await remark()
     .use(remarkGfm)
-    .use(preserveEmptyLines)
+    .use(preserveLineBreaks)
     .use(remarkHtml, { sanitize: false })
     .process(contentWithoutImageSyntax)
 
