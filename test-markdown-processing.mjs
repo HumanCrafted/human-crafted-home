@@ -5,31 +5,41 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
 import remarkGfm from 'remark-gfm';
+import yaml from 'js-yaml';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const projectsDirectory = path.join(__dirname, 'projects');
 
-function remarkImagePlugin() {
-  return (tree) => {
-    const visit = (node) => {
-      if (node.type === 'image') {
-        node.type = 'html';
-        node.value = `<img src="${node.url}" alt="${node.alt || ''}" />`;
-      }
-      if (node.children) {
-        node.children.forEach(visit);
-      }
-    };
-    visit(tree);
-  };
+function removeImageSyntax(str) {
+  // This regex will match the entire image syntax, including extra spaces
+  return str.replace(/!\s*\[([^\]]*)\]\s*$$([^)]+)$$/g, '$2');
+}
+
+function processYamlMetadata(metadata) {
+  if (typeof metadata === 'string') {
+    return removeImageSyntax(metadata);
+  }
+  if (Array.isArray(metadata)) {
+    return metadata.map(item => processYamlMetadata(item));
+  }
+  if (typeof metadata === 'object' && metadata !== null) {
+    const processedMetadata = {};
+    for (const [key, value] of Object.entries(metadata)) {
+      processedMetadata[key] = processYamlMetadata(value);
+    }
+    return processedMetadata;
+  }
+  return metadata;
 }
 
 async function processMarkdown(content) {
+  // First, remove image syntax from the content
+  content = removeImageSyntax(content);
+
   const processedContent = await remark()
     .use(remarkGfm)
-    .use(remarkImagePlugin)
     .use(html, { sanitize: false })
     .process(content);
 
@@ -45,9 +55,15 @@ async function testMarkdownProcessing() {
         console.log(`Processing file: ${file}`);
         const fullPath = path.join(projectsDirectory, file);
         const fileContent = await fs.readFile(fullPath, 'utf8');
-        const { content } = matter(fileContent);
+        const { data: frontmatter, content } = matter(fileContent);
         
-        console.log('Original content:');
+        console.log('Original frontmatter:');
+        console.log(yaml.dump(frontmatter));
+        console.log('\nProcessed frontmatter:');
+        const processedFrontmatter = processYamlMetadata(frontmatter);
+        console.log(yaml.dump(processedFrontmatter));
+        
+        console.log('\nOriginal content:');
         console.log(content);
         console.log('\nProcessed content:');
         const processedContent = await processMarkdown(content);
