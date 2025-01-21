@@ -1,0 +1,4 @@
+# Example .gitattributes file
+# Ensure node_modules is not tracked by Git LFS
+node_modules/** -filter -diff -merge
+
