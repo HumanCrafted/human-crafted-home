@@ -1,19 +1,16 @@
 "use client"
 
-import { useState } from "react"
-
 interface CategoryFilterProps {
   tags: string[]
   onSelectTag: (tag: string | null) => void
+  selectedTag: string | null
 }
 
-export function CategoryFilter({ tags, onSelectTag }: CategoryFilterProps) {
-  const [selectedTag, setSelectedTag] = useState<string | null>(null)
+export function CategoryFilter({ tags, onSelectTag, selectedTag }: CategoryFilterProps) {
   const allTags = ["all", ...tags]
 
   const handleSelectTag = (tag: string) => {
     const newTag = tag === "all" ? null : tag
-    setSelectedTag(newTag)
     onSelectTag(newTag)
   }
 

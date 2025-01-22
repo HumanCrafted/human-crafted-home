@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react"
 import { CategoryFilter } from "@/components/category-filter"
 import { ProjectGrid } from "@/components/project-grid"
-import { FeaturedProject } from "@/components/featured-project"
 import { ScalableText } from "@/components/scalable-text"
 import { NavBar } from "@/components/nav-bar"
 import { Footer } from "@/components/footer"
@@ -30,14 +29,17 @@ export default function Home() {
     fetchProjects()
   }, [])
 
-  const featuredProject = projects.find((project) => project.featured)
   const allTags = Array.from(new Set(projects.flatMap((p) => p.categories)))
+
+  const handleTagSelect = (tag: string | null) => {
+    setSelectedTag(tag)
+  }
 
   return (
     <div className="bg-background text-foreground min-h-screen flex flex-col">
       <NavBar />
       <main className="flex-grow w-full px-[60px]">
-        <section className="pt-32 mb-24 relative h-[65vh] grid grid-cols-1 lg:grid-cols-1 gap-8 lg:gap-16">
+        <section className="pt-32 mb-24 relative h-[60vh] grid grid-cols-1 lg:grid-cols-1 gap-8 lg:gap-16">
           <div className="flex flex-col justify-between">
             <div className="flex-1 flex flex-col justify-center">
               <ScalableText
@@ -53,24 +55,15 @@ export default function Home() {
               A product design studio specializing in the rapid realization of ideas.
             </p>
           </div>
-          {/* Commented out featured project section
-          <div className="flex items-center justify-center">
-            {featuredProject ? (
-              <FeaturedProject project={featuredProject} />
-            ) : (
-              <p>No featured project available</p>
-            )}
-          </div>
-          */}
         </section>
 
         <section className="mb-24">
           <div className="w-full h-px bg-foreground mb-8"></div>
           <div className="mb-4 text-lg font-medium font-mono">Idea Archive ↓</div>
-          <CategoryFilter tags={allTags} onSelectTag={setSelectedTag} />
+          <CategoryFilter tags={allTags} onSelectTag={handleTagSelect} selectedTag={selectedTag} />
         </section>
 
-        <ProjectGrid projects={projects} selectedTag={selectedTag} />
+        <ProjectGrid projects={projects} selectedTag={selectedTag} onSelectTag={handleTagSelect} />
       </main>
       <Footer />
     </div>

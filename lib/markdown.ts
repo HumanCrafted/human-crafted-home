@@ -24,6 +24,7 @@ export interface ContentMetadata {
 }
 
 function removeImageMarkdownSyntax(content: string): string {
+  // Regex from ChatGPT -> const regex = /!\[.*?\]\((.*?)\)/g
   const regex = /!\[.*?\]\((.*?)\)/g
   return content.replace(regex, "$1")
 }

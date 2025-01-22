@@ -14,12 +14,12 @@ export function DynamicSvg({ svg, className = "", onError }: DynamicSvgProps) {
   const isSvg = svg.toLowerCase().endsWith(".svg")
 
   // Ensure the svg path starts with a forward slash
-  const imagePath = svg.startsWith("/") ? svg : `/${svg}`
+  const imagePath = svg.startsWith("/") ? svg : svg.startsWith("images/") ? `/${svg}` : `/images/${svg}`
 
   return (
     <Image
       src={imagePath || "/placeholder.svg"}
-      alt="SVG Image"
+      alt="Project Image"
       width={500}
       height={500}
       className={`w-full h-auto ${className}`}

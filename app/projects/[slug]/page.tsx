@@ -32,7 +32,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               src={
                 metadata.main_image.startsWith("/")
                   ? metadata.main_image
-                  : `/images/${metadata.main_image.replace(/^images\//, "")}`
+                  : metadata.main_image.startsWith("images/")
+                    ? `/${metadata.main_image}`
+                    : `/images/${metadata.main_image}`
               }
               alt={metadata.title}
               fill

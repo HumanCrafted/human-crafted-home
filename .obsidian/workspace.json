@@ -190,6 +190,13 @@
   },
   "active": "876345f3a34a27ea",
   "lastOpenFiles": [
+    "public/images/3d-printed-planter-thumbnail.svg",
+    "public/images/cnc-coffee-table-thumbnail.svg",
+    "public/images/laser-cut-lamp-thumbnail.svg",
+    "projects/3d-printed-planter.md",
+    "projects/cnc-coffee-table.md",
+    "projects/laser-cut-lamp.md",
+    "node_modules/@img/sharp-libvips-darwin-x64",
     "projects/taco-stands.md",
     "content/about.md",
     "content/lab.md",
@@ -204,7 +211,6 @@
     "node_modules/@next/swc-linux-arm64-musl",
     "node_modules/@next/swc-linux-arm64-gnu",
     "node_modules/@img/sharp-win32-ia32",
-    "node_modules/@img/sharp-win32-x64",
     "public/images/taco-stands-thumbnail.svg",
     "public/images/shop-v3-thumbnail.svg",
     "public/images/shop-v3-sketch-1.svg",
@@ -227,14 +233,8 @@
     "node_modules/remark-rehype/readme.md",
     "node_modules/html-url-attributes/readme.md",
     "node_modules/estree-util-is-identifier-name/readme.md",
-    "node_modules/@types/estree/README.md",
-    "node_modules/parse-entities/node_modules/@types/unist/README.md",
-    "node_modules/parse-entities/readme.md",
-    "node_modules/@ungap/structured-clone/README.md",
     "node_modules/date-fns/docs/logotype.svg",
     "node_modules/date-fns/docs/logo.svg",
-    "public/window.svg",
-    "public/globe.svg",
-    "public/next.svg"
+    "public/window.svg"
   ]
 }
