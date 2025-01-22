@@ -35,7 +35,7 @@
     background-color: hsl(var(--background)) !important;
     color: hsl(var(--foreground)) !important;
     font-feature-settings: "rlig" 1, "calt" 1;
-    padding-top: 0; /* Remove any top padding */
+    padding-top: 0;
   }
 
   .font-sans {
@@ -73,5 +73,52 @@
   .bg-blur {
     background-color: rgba(var(--background), 0.95);
   }
+}
+
+/* Custom prose styles */
+.prose {
+  @apply text-foreground;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  @apply text-foreground font-sans;
+}
+
+.prose p {
+  @apply text-foreground font-sans;
+}
+
+.prose a {
+  @apply text-accent hover:text-accent/80;
+}
+
+.prose strong {
+  @apply text-foreground;
+}
+
+.prose ul,
+.prose ol {
+  @apply text-foreground;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-accent bg-muted text-foreground;
+}
+
+.prose code {
+  @apply bg-muted text-foreground px-1 py-0.5 rounded;
+}
+
+.prose pre {
+  @apply bg-muted text-foreground;
+}
+
+.prose img {
+  @apply rounded-lg;
 }
 

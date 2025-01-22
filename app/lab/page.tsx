@@ -6,10 +6,13 @@ export default async function Lab() {
   const { metadata, content } = await getContentBySlug("lab")
 
   return (
-    <div className="min-h-screen flex flex-col bg-background text-foreground theme-transition">
+    <div className="min-h-screen flex flex-col bg-background text-foreground">
       <NavBar />
       <main className="flex-grow pt-32 w-full px-[60px]">
-        <div className="prose dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: content }} />
+        <div
+          className="prose prose-lg dark:prose-invert max-w-none space-y-4 [&>p]:mb-4 [&>p>br]:content-[''] [&>p>br]:block [&>p>br]:mt-4 font-sans"
+          dangerouslySetInnerHTML={{ __html: content }}
+        />
       </main>
       <div className="mt-24">
         <Footer />
