@@ -1,13 +1,15 @@
-import { NavBar } from '@/components/nav-bar'
-import { Footer } from '@/components/footer'
+import { getContentBySlug } from "@/lib/markdown"
+import { NavBar } from "@/components/nav-bar"
+import { Footer } from "@/components/footer"
 
-export default function About() {
+export default async function About() {
+  const { metadata, content } = await getContentBySlug("about")
+
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground theme-transition">
       <NavBar />
       <main className="flex-grow pt-32 w-full px-[60px]">
-        <h1 className="text-4xl font-bold mb-6">About</h1>
-        <p>This is the About page. Content coming soon.</p>
+        <div className="prose dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: content }} />
       </main>
       <div className="mt-24">
         <Footer />

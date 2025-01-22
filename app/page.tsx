@@ -33,10 +33,7 @@ export default async function Home() {
           <div className="flex items-center justify-center">
             {featuredProject ? (
               <ClientWrapper>
-                <FeaturedProject
-                  project={featuredProject}
-                  onError={(error) => console.error("FeaturedProject error:", error)}
-                />
+                <FeaturedProject project={featuredProject} />
               </ClientWrapper>
             ) : (
               <p>No featured project available</p>
@@ -47,7 +44,7 @@ export default async function Home() {
         <section className="mb-24">
           <div className="mb-4 text-lg font-medium font-mono">Idea Archive ↓</div>
           <ClientWrapper>
-            <CategoryFilter tags={allTags} selectedTag={null} onSelectTag={() => {}} />
+            <CategoryFilter tags={allTags} />
           </ClientWrapper>
         </section>
 

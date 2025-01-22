@@ -6,10 +6,13 @@ import type { Project } from "@/types/project"
 
 interface FeaturedProjectProps {
   project: Project
-  onError?: (error: Error) => void
 }
 
-export function FeaturedProject({ project, onError }: FeaturedProjectProps) {
+export function FeaturedProject({ project }: FeaturedProjectProps) {
+  const handleError = (error: Error) => {
+    console.error("FeaturedProject error:", error)
+  }
+
   return (
     <Link href={`/projects/${project.slug}`} className="block w-full h-full relative group">
       <div className="flex flex-col items-center justify-center h-full">
@@ -17,9 +20,7 @@ export function FeaturedProject({ project, onError }: FeaturedProjectProps) {
           <DynamicSvg
             svg={project.main_image}
             className="w-full h-full transition-transform duration-300 group-hover:scale-105"
-            onError={(error) => {
-              if (onError) onError(error)
-            }}
+            onError={handleError}
           />
         </div>
         <div className="mt-4 text-center">

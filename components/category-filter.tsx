@@ -4,19 +4,22 @@ import { useState } from "react"
 
 interface CategoryFilterProps {
   tags: string[]
-  selectedTag: string | null
-  onSelectTag: (tag: string | null) => void
 }
 
-export function CategoryFilter({ tags, selectedTag, onSelectTag }: CategoryFilterProps) {
+export function CategoryFilter({ tags }: CategoryFilterProps) {
+  const [selectedTag, setSelectedTag] = useState<string | null>(null)
   const allTags = ["all", ...tags]
+
+  const handleSelectTag = (tag: string) => {
+    setSelectedTag(tag === "all" ? null : tag)
+  }
 
   return (
     <div className="flex flex-wrap gap-2 pb-2">
       {allTags.map((tag) => (
         <button
           key={tag}
-          onClick={() => onSelectTag(tag === "all" ? null : tag)}
+          onClick={() => handleSelectTag(tag)}
           className={`
             relative whitespace-nowrap px-3 py-1 rounded-full text-base transition-colors font-mono
             group
