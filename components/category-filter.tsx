@@ -4,14 +4,17 @@ import { useState } from "react"
 
 interface CategoryFilterProps {
   tags: string[]
+  onSelectTag: (tag: string | null) => void
 }
 
-export function CategoryFilter({ tags }: CategoryFilterProps) {
+export function CategoryFilter({ tags, onSelectTag }: CategoryFilterProps) {
   const [selectedTag, setSelectedTag] = useState<string | null>(null)
   const allTags = ["all", ...tags]
 
   const handleSelectTag = (tag: string) => {
-    setSelectedTag(tag === "all" ? null : tag)
+    const newTag = tag === "all" ? null : tag
+    setSelectedTag(newTag)
+    onSelectTag(newTag)
   }
 
   return (

@@ -1,6 +1,6 @@
 {
   "remoteURL": "https://github.com/HumanCrafted/Human-Crafted-Home.git",
   "gitLocation": "",
-  "syncinterval": 10,
+  "syncinterval": 0,
   "isSyncOnLoad": true
 }

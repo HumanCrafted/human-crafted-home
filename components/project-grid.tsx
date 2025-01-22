@@ -4,11 +4,16 @@ import type { Project } from "@/types/project"
 
 interface ProjectGridProps {
   projects: Project[]
+  selectedTag: string | null
   onError?: (error: Error) => void
 }
 
-export function ProjectGrid({ projects, onError }: ProjectGridProps) {
-  if (!projects?.length) {
+export function ProjectGrid({ projects, selectedTag, onError }: ProjectGridProps) {
+  const filteredProjects = selectedTag
+    ? projects.filter((project) => project.categories.includes(selectedTag))
+    : projects
+
+  if (!filteredProjects?.length) {
     return (
       <div className="text-center py-8">
         <p>No projects found. Check back later for updates!</p>
@@ -18,7 +23,7 @@ export function ProjectGrid({ projects, onError }: ProjectGridProps) {
 
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-      {projects.map((project) => (
+      {filteredProjects.map((project) => (
         <Link href={`/projects/${project.slug}`} key={project.slug} className="group">
           <div className="relative aspect-square mb-4">
             <DynamicSvg

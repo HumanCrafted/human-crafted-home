@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/lab.md",
+                "file": "projects/shop-v3.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "lab"
+              "title": "shop-v3"
             }
           }
         ]
@@ -190,10 +190,11 @@
   },
   "active": "876345f3a34a27ea",
   "lastOpenFiles": [
-    "components/client-wrapper.tsx",
-    "components/components_client-wrapper.tsx",
+    "projects/taco-stands.md",
     "content/about.md",
     "content/lab.md",
+    "components/client-wrapper.tsx",
+    "components/components_client-wrapper.tsx",
     "projects/shop-v3.md",
     "content/home.md",
     "node_modules/@next/swc-win32-arm64-msvc",
@@ -204,7 +205,6 @@
     "node_modules/@next/swc-linux-arm64-gnu",
     "node_modules/@img/sharp-win32-ia32",
     "node_modules/@img/sharp-win32-x64",
-    "node_modules/@img/sharp-linuxmusl-x64",
     "public/images/taco-stands-thumbnail.svg",
     "public/images/shop-v3-thumbnail.svg",
     "public/images/shop-v3-sketch-1.svg",

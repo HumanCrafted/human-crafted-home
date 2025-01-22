@@ -1,4 +1,6 @@
-import { listProjects } from "@/lib/markdown"
+"use client"
+
+import { useState, useEffect } from "react"
 import { CategoryFilter } from "@/components/category-filter"
 import { ProjectGrid } from "@/components/project-grid"
 import { FeaturedProject } from "@/components/featured-project"
@@ -6,10 +8,28 @@ import { ScalableText } from "@/components/scalable-text"
 import { NavBar } from "@/components/nav-bar"
 import { Footer } from "@/components/footer"
 import type { Project } from "@/types/project"
-import ClientWrapper from "@/components/client-wrapper"
 
-export default async function Home() {
-  const projects = await listProjects()
+export default function Home() {
+  const [projects, setProjects] = useState<Project[]>([])
+  const [selectedTag, setSelectedTag] = useState<string | null>(null)
+
+  useEffect(() => {
+    async function fetchProjects() {
+      try {
+        const response = await fetch("/api/projects")
+        if (!response.ok) {
+          throw new Error("Failed to fetch projects")
+        }
+        const data = await response.json()
+        setProjects(data)
+      } catch (error) {
+        console.error("Error fetching projects:", error)
+      }
+    }
+
+    fetchProjects()
+  }, [])
+
   const featuredProject = projects.find((project) => project.featured)
   const allTags = Array.from(new Set(projects.flatMap((p) => p.categories)))
 
@@ -31,24 +51,16 @@ export default async function Home() {
             </div>
           </div>
           <div className="flex items-center justify-center">
-            {featuredProject ? (
-              <ClientWrapper>
-                <FeaturedProject project={featuredProject} />
-              </ClientWrapper>
-            ) : (
-              <p>No featured project available</p>
-            )}
+            {featuredProject ? <FeaturedProject project={featuredProject} /> : <p>No featured project available</p>}
           </div>
         </section>
 
         <section className="mb-24">
           <div className="mb-4 text-lg font-medium font-mono">Idea Archive ↓</div>
-          <ClientWrapper>
-            <CategoryFilter tags={allTags} />
-          </ClientWrapper>
+          <CategoryFilter tags={allTags} onSelectTag={setSelectedTag} />
         </section>
 
-        <ProjectGrid projects={projects} />
+        <ProjectGrid projects={projects} selectedTag={selectedTag} />
       </main>
       <Footer />
     </div>
