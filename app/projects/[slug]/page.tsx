@@ -11,7 +11,7 @@ interface ProjectPageProps {
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
-  const slug = params.slug // Access slug directly from params
+  const slug = params.slug
   const { metadata, content } = await fetchProjectContent(slug)
 
   if (!metadata || !content) {
@@ -23,7 +23,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       <NavBar />
       <main className="flex-grow pt-32 w-full px-[60px]">
         <h1 className="text-4xl font-bold mb-6">{metadata.title}</h1>
-        <div className="mb-8">
+        <div className="mb-8 relative w-full aspect-square max-w-2xl mx-auto">
           <Image
             src={
               metadata.main_image.startsWith("/")
@@ -31,13 +31,13 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 : `/images/${metadata.main_image.replace(/^images\//, "")}`
             }
             alt={metadata.title}
-            width={800}
-            height={400}
-            className="rounded-lg object-cover"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="rounded-lg object-contain"
           />
         </div>
         <div
-          className="prose prose-lg dark:prose-invert max-w-none space-y-4"
+          className="prose prose-lg dark:prose-invert max-w-none space-y-4 [&>p]:mb-4 [&>p>br]:content-[''] [&>p>br]:block [&>p>br]:mt-4"
           dangerouslySetInnerHTML={{ __html: content }}
         />
       </main>
