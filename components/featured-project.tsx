@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link"
 import { DynamicSvg } from "./dynamic-svg"
 import type { Project } from "@/types/project"

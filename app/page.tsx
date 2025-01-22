@@ -6,6 +6,7 @@ import { ScalableText } from "@/components/scalable-text"
 import { NavBar } from "@/components/nav-bar"
 import { Footer } from "@/components/footer"
 import type { Project } from "@/types/project"
+import ClientWrapper from "@/components/client-wrapper"
 
 export default async function Home() {
   const projects = await listProjects()
@@ -31,10 +32,12 @@ export default async function Home() {
           </div>
           <div className="flex items-center justify-center">
             {featuredProject ? (
-              <FeaturedProject
-                project={featuredProject}
-                onError={(error) => console.error("FeaturedProject error:", error)}
-              />
+              <ClientWrapper>
+                <FeaturedProject
+                  project={featuredProject}
+                  onError={(error) => console.error("FeaturedProject error:", error)}
+                />
+              </ClientWrapper>
             ) : (
               <p>No featured project available</p>
             )}
@@ -43,7 +46,9 @@ export default async function Home() {
 
         <section className="mb-24">
           <div className="mb-4 text-lg font-medium font-mono">Idea Archive ↓</div>
-          <CategoryFilter tags={allTags} selectedTag={null} onSelectTag={() => {}} />
+          <ClientWrapper>
+            <CategoryFilter tags={allTags} selectedTag={null} onSelectTag={() => {}} />
+          </ClientWrapper>
         </section>
 
         <ProjectGrid projects={projects} />
