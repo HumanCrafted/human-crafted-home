@@ -7,6 +7,7 @@ import remarkHtml from "remark-html"
 import { visit } from "unist-util-visit"
 
 const projectsDirectory = path.join(process.cwd(), "projects")
+const contentDirectory = path.join(process.cwd(), "content")
 
 export interface ProjectMetadata {
   title: string
@@ -17,12 +18,17 @@ export interface ProjectMetadata {
   published_date: string
 }
 
+export interface ContentMetadata {
+  title: string
+  description: string
+}
+
 function removeImageMarkdownSyntax(content: string): string {
-  const regex = /!\[.*?\]\((.*?)\)/g
+  const regex = /!\[.*?\]$$(.*?)$$/g
   return content.replace(regex, "$1")
 }
 
-function processMetadata(metadata: any): ProjectMetadata {
+function processMetadata(metadata: any): ProjectMetadata | ContentMetadata {
   const processedMetadata: any = {}
   for (const [key, value] of Object.entries(metadata)) {
     if (typeof value === "string") {
@@ -31,23 +37,25 @@ function processMetadata(metadata: any): ProjectMetadata {
       processedMetadata[key] = value
     }
   }
-  return processedMetadata as ProjectMetadata
+  return processedMetadata
 }
 
-// Custom plugin to preserve line breaks
 function preserveLineBreaks() {
   return (tree: any) => {
-    visit(tree, "text", (node) => {
-      if (node.value.includes("\n")) {
+    visit(tree, "text", (node, index, parent) => {
+      if (typeof node.value === "string") {
         const lines = node.value.split("\n")
-        const newNodes = lines.flatMap((line: string, i: number) => {
-          if (i === lines.length - 1) return [{ type: "text", value: line }]
-          return [
-            { type: "text", value: line },
-            { type: "html", value: "<br>" },
-          ]
-        })
-        Object.assign(node, { type: "parent", children: newNodes })
+        if (lines.length > 1) {
+          const newNodes = lines.flatMap((line, i) => {
+            if (i === lines.length - 1) return [{ type: "text", value: line }]
+            return [
+              { type: "text", value: line },
+              { type: "html", value: "<br>" },
+            ]
+          })
+          parent.children.splice(index, 1, ...newNodes)
+          return index + newNodes.length
+        }
       }
     })
   }
@@ -68,7 +76,7 @@ export async function getProjectBySlug(slug: string) {
   const fileContents = fs.readFileSync(fullPath, "utf8")
   const { data, content } = matter(fileContents)
 
-  const processedMetadata = processMetadata(data)
+  const processedMetadata = processMetadata(data) as ProjectMetadata
   const contentWithoutImageSyntax = removeImageMarkdownSyntax(content)
 
   const processedContent = await remark()
@@ -113,5 +121,32 @@ export async function fetchProjectContent(slug: string) {
 
 export async function listProjects() {
   return getAllProjects()
+}
+
+export async function getContentBySlug(slug: string) {
+  const fullPath = path.join(contentDirectory, `${slug}.md`)
+
+  if (!fs.existsSync(fullPath)) {
+    throw new Error(`Content file not found: ${fullPath}`)
+  }
+
+  const fileContents = fs.readFileSync(fullPath, "utf8")
+  const { data, content } = matter(fileContents)
+
+  const processedMetadata = processMetadata(data) as ContentMetadata
+  const contentWithoutImageSyntax = removeImageMarkdownSyntax(content)
+
+  const processedContent = await remark()
+    .use(remarkGfm)
+    .use(preserveLineBreaks)
+    .use(remarkHtml, { sanitize: false })
+    .process(contentWithoutImageSyntax)
+
+  const contentHtml = processedContent.toString()
+
+  return {
+    metadata: processedMetadata,
+    content: contentHtml,
+  }
 }
 
