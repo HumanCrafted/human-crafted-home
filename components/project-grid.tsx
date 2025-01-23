@@ -18,7 +18,6 @@ export function ProjectGrid({ projects, selectedTag, onSelectTag, onError }: Pro
     : projects
 
   useEffect(() => {
-    // Close the project if the selected tag doesn't include it
     if (selectedProject) {
       const currentProject = projects.find((p) => p.slug === selectedProject)
       if (currentProject && selectedTag && !currentProject.categories.includes(selectedTag)) {
@@ -36,11 +35,7 @@ export function ProjectGrid({ projects, selectedTag, onSelectTag, onError }: Pro
   }
 
   const handleProjectClick = (slug: string) => {
-    if (selectedProject === slug) {
-      setSelectedProject(null)
-    } else {
-      setSelectedProject(slug)
-    }
+    setSelectedProject((prevSelected) => (prevSelected === slug ? null : slug))
   }
 
   const handleCloseProject = () => {
@@ -54,10 +49,7 @@ export function ProjectGrid({ projects, selectedTag, onSelectTag, onError }: Pro
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
       {filteredProjects.map((project) => (
-        <div key={project.slug} className={`${selectedProject === project.slug ? "col-span-full" : ""}`}>
-          {selectedProject === project.slug && (
-            <ProjectDetail project={project} onClose={handleCloseProject} onCategoryClick={handleCategoryClick} />
-          )}
+        <div key={project.slug} className={selectedProject === project.slug ? "col-span-full" : ""}>
           <button
             className={`group text-left w-full ${selectedProject === project.slug ? "hidden" : ""}`}
             onClick={() => handleProjectClick(project.slug)}
@@ -71,6 +63,9 @@ export function ProjectGrid({ projects, selectedTag, onSelectTag, onError }: Pro
             </div>
             <h3 className="text-sm text-center">{project.title}</h3>
           </button>
+          {selectedProject === project.slug && (
+            <ProjectDetail project={project} onClose={handleCloseProject} onCategoryClick={handleCategoryClick} />
+          )}
         </div>
       ))}
     </div>

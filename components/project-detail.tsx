@@ -38,7 +38,7 @@ export function ProjectDetail({ project, onClose, onCategoryClick }: ProjectDeta
   }
 
   return (
-    <div className="bg-background rounded-lg overflow-hidden">
+    <div className="bg-background rounded-lg overflow-hidden" data-testid="project-detail">
       <div className="relative">
         <button
           onClick={(e) => {

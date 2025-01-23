@@ -1,5 +1,5 @@
 import "./globals.css"
-import { Inter, Work_Sans, IBM_Plex_Mono } from "next/font/google"
+import { Inter, Work_Sans, IBM_Plex_Mono, DM_Mono } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -15,6 +15,13 @@ const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"],
   variable: "--font-ibm-plex-mono",
 })
+
+const dmMono = DM_Mono({
+  weight: ["300", "400", "500"],
+  subsets: ["latin"],
+  variable: "--font-dm-mono",
+})
+
 
 export const metadata = {
   title: "Human Crafted",
