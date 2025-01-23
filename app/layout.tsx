@@ -34,9 +34,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${workSans.variable} ${ibmPlexMono.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${dmMono.variable} ${workSans.variable} ${ibmPlexMono.variable}`}>
       <body
-        className={`${inter.className} ${workSans.className} bg-background text-foreground min-h-screen flex flex-col`}
+        className={` bg-background text-foreground min-h-screen flex flex-col`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}

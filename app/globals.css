@@ -14,8 +14,8 @@
 
     --radius: 0.5rem;
 
-    --font-sans: var(--font-work-sans);
-    --font-mono: var(--font-dm-mono);
+    --font-sans: var(--font-work-sans), sans-serif;
+    --font-mono: var(--font-dm-mono), monospace;
   }
 
   .dark {
@@ -38,13 +38,13 @@
     padding-top: 0;
   }
 
-  .font-sans {
+  /* .font-sans {
     font-family: var(--font-sans);
   }
 
   .font-mono {
     font-family: var(--font-mono);
-  }
+  } */
 }
 
 .category-scroll {

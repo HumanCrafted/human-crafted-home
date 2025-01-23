@@ -7,7 +7,6 @@ categories:
   - around the house
   - 3d printing
   - kitchen
-  - first
 published_date: 2020-12-21
 gallery_images: 
 headline: A place for tacos

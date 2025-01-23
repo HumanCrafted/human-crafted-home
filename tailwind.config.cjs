@@ -15,6 +15,10 @@ module.exports = {
         white: "hsl(var(--white))",
         black: "hsl(var(--black))",
       },
+      fontFamily: {
+        sans: ['var(--font-work-sans)', 'sans-serif'],
+        mono: ['var(--font-dm-mono)', 'monospace'],
+      },
     },
   },
   plugins: [],
