@@ -16,6 +16,8 @@ export interface ProjectMetadata {
   featured: boolean
   categories: string[]
   published_date: string
+  gallery_images?: string[]
+  headline: string
 }
 
 export interface ContentMetadata {
@@ -24,7 +26,6 @@ export interface ContentMetadata {
 }
 
 function removeImageMarkdownSyntax(content: string): string {
-  // Regex from ChatGPT -> const regex = /!\[.*?\]\((.*?)\)/g
   const regex = /!\[.*?\]\((.*?)\)/g
   return content.replace(regex, "$1")
 }
@@ -34,6 +35,8 @@ function processMetadata(metadata: any): ProjectMetadata | ContentMetadata {
   for (const [key, value] of Object.entries(metadata)) {
     if (typeof value === "string") {
       processedMetadata[key] = removeImageMarkdownSyntax(value)
+    } else if (Array.isArray(value) && key === "gallery_images") {
+      processedMetadata[key] = value.map(removeImageMarkdownSyntax)
     } else {
       processedMetadata[key] = value
     }

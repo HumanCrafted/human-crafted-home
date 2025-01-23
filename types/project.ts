@@ -5,7 +5,11 @@ export interface Project {
   featured: boolean
   categories: string[]
   published_date: string
+  headline: string
+  gallery_images?: string[]
 }
+
+
 
 export interface ProjectDetail extends Project {
   content: string

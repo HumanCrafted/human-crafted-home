@@ -190,6 +190,7 @@
   },
   "active": "876345f3a34a27ea",
   "lastOpenFiles": [
+    "components/image-gallery.tsx",
     "public/images/3d-printed-planter-thumbnail.svg",
     "public/images/cnc-coffee-table-thumbnail.svg",
     "public/images/laser-cut-lamp-thumbnail.svg",
@@ -234,7 +235,6 @@
     "node_modules/html-url-attributes/readme.md",
     "node_modules/estree-util-is-identifier-name/readme.md",
     "node_modules/date-fns/docs/logotype.svg",
-    "node_modules/date-fns/docs/logo.svg",
-    "public/window.svg"
+    "node_modules/date-fns/docs/logo.svg"
   ]
 }

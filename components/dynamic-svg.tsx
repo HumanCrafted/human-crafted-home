@@ -13,8 +13,8 @@ export function DynamicSvg({ svg, className = "", onError }: DynamicSvgProps) {
   const { theme } = useTheme()
   const isSvg = svg.toLowerCase().endsWith(".svg")
 
-  // Ensure the svg path starts with a forward slash
-  const imagePath = svg.startsWith("/") ? svg : svg.startsWith("images/") ? `/${svg}` : `/images/${svg}`
+  // Ensure the svg path is correct
+  const imagePath = svg.startsWith("/") ? svg : `/images/${svg.replace(/^images\//, "")}`
 
   return (
     <Image

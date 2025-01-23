@@ -21,3 +21,4 @@ About the size of a one car garage, the rectangular shape was the largest size w
 The transom windows at one end are a set of three operable awning windows that match window sizes in another part of our house. The door is a double french door with full glass that swings out. And the square window at the other end is a vintage picture window we took out of the house when we remodeled. The roof is metal standing seam, which also runs down the back, and the three remaining sides are vertical tongue and groove, pre-finished cedar.  
 
 The shop won’t be spacious, so I’ll be using the space as efficiently as I can. It will house my large laser and the CNC router, plus MFT work tables and work surfaces.
+
