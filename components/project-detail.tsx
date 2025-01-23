@@ -52,12 +52,12 @@ export function ProjectDetail({ project, onClose, onCategoryClick }: ProjectDeta
         </button>
       </div>
       <div className="flex flex-col md:flex-row">
-        <div className="md:w-1/2 p-6">
+        <div className="md:w-[30%] p-6">
           <div className="aspect-square relative">
             <DynamicSvg svg={project.main_image} className="w-full h-full object-contain" />
           </div>
         </div>
-        <div className="md:w-1/2 p-6">
+        <div className="md:w-[70%] p-6">
           <h2 className="text-2xl font-bold mb-4 font-sans">{project.title}</h2>
           <div className="prose prose-sm dark:prose-invert max-w-none space-y-4 [&>p]:mb-4 [&>p>br]:content-[''] [&>p>br]:block [&>p>br]:mt-4 font-sans">
             <p>{project.headline}</p>
@@ -78,13 +78,13 @@ export function ProjectDetail({ project, onClose, onCategoryClick }: ProjectDeta
             <p>Published: {new Date(project.published_date).toLocaleDateString()}</p>
             {fullContent && <div dangerouslySetInnerHTML={{ __html: fullContent }} />}
           </div>
+          {project.gallery_images && project.gallery_images.length > 0 && (
+            <div className="mt-6">
+              <ImageGallery images={project.gallery_images} />
+            </div>
+          )}
         </div>
       </div>
-      {project.gallery_images && project.gallery_images.length > 0 && (
-        <div className="p-6">
-          <ImageGallery images={project.gallery_images} />
-        </div>
-      )}
     </div>
   )
 }

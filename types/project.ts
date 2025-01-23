@@ -9,9 +9,3 @@ export interface Project {
   gallery_images?: string[]
 }
 
-
-
-export interface ProjectDetail extends Project {
-  content: string
-}
-

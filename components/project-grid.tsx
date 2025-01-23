@@ -36,7 +36,11 @@ export function ProjectGrid({ projects, selectedTag, onSelectTag, onError }: Pro
   }
 
   const handleProjectClick = (slug: string) => {
-    setSelectedProject(slug)
+    if (selectedProject === slug) {
+      setSelectedProject(null)
+    } else {
+      setSelectedProject(slug)
+    }
   }
 
   const handleCloseProject = () => {
@@ -51,20 +55,22 @@ export function ProjectGrid({ projects, selectedTag, onSelectTag, onError }: Pro
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
       {filteredProjects.map((project) => (
         <div key={project.slug} className={`${selectedProject === project.slug ? "col-span-full" : ""}`}>
-          {selectedProject === project.slug ? (
+          {selectedProject === project.slug && (
             <ProjectDetail project={project} onClose={handleCloseProject} onCategoryClick={handleCategoryClick} />
-          ) : (
-            <button className="group text-left w-full" onClick={() => handleProjectClick(project.slug)}>
-              <div className="relative aspect-square mb-4">
-                <DynamicSvg
-                  svg={project.main_image}
-                  className="w-full h-full transition-transform duration-300 group-hover:scale-105"
-                  onError={onError}
-                />
-              </div>
-              <h3 className="text-sm text-center">{project.title}</h3>
-            </button>
           )}
+          <button
+            className={`group text-left w-full ${selectedProject === project.slug ? "hidden" : ""}`}
+            onClick={() => handleProjectClick(project.slug)}
+          >
+            <div className="relative aspect-square mb-4">
+              <DynamicSvg
+                svg={project.main_image}
+                className="w-full h-full transition-transform duration-300 group-hover:scale-105"
+                onError={onError}
+              />
+            </div>
+            <h3 className="text-sm text-center">{project.title}</h3>
+          </button>
         </div>
       ))}
     </div>
