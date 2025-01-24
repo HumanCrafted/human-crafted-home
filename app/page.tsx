@@ -51,13 +51,13 @@ export default function Home() {
                 Made Better.
               </ScalableText>
             </div>
-            <p className="text-2xl lg:text-3xl max-w-md">
+            <p className="text-3xl lg:text-4xl max-w-md">
               A product design studio specializing in the rapid realization of ideas.
             </p>
           </div>
         </section>
 
-        <section className="mb-24">
+        <section className="mb-20">
           <div className="w-full h-px bg-foreground mb-8"></div>
           <div className="mb-4 text-lg font-medium font-mono">Idea Archive ↓</div>
           <CategoryFilter tags={allTags} onSelectTag={handleTagSelect} selectedTag={selectedTag} />

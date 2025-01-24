@@ -13,6 +13,7 @@ interface ProjectDetailProps {
 }
 
 export function ProjectDetail({ project, onClose, onCategoryClick }: ProjectDetailProps) {
+  console.log("Rendering ProjectDetail for project:", project.title)
   const [fullContent, setFullContent] = useState<string | null>(null)
 
   useEffect(() => {
@@ -38,7 +39,7 @@ export function ProjectDetail({ project, onClose, onCategoryClick }: ProjectDeta
   }
 
   return (
-    <div className="bg-background rounded-lg overflow-hidden" data-testid="project-detail">
+    <div className="bg-background rounded-lg overflow-hidden font-mono" data-testid="project-detail">
       <div className="relative">
         <button
           onClick={(e) => {
@@ -58,8 +59,8 @@ export function ProjectDetail({ project, onClose, onCategoryClick }: ProjectDeta
           </div>
         </div>
         <div className="md:w-[70%] p-6">
-          <h2 className="text-2xl font-bold mb-4 font-sans">{project.title}</h2>
-          <div className="prose prose-sm dark:prose-invert max-w-none space-y-4 [&>p]:mb-4 [&>p>br]:content-[''] [&>p>br]:block [&>p>br]:mt-4 font-sans">
+          <h2 className="text-2xl font-bold mb-4">{project.title}</h2>
+          <div className="prose prose-sm dark:prose-invert max-w-none space-y-4 [&>p]:mb-4 [&>p>br]:content-[''] [&>p>br]:block [&>p>br]:mt-4 font-mono">
             <p>{project.headline}</p>
             <p>
               Categories:{" "}
@@ -76,7 +77,7 @@ export function ProjectDetail({ project, onClose, onCategoryClick }: ProjectDeta
               ))}
             </p>
             <p>Published: {new Date(project.published_date).toLocaleDateString()}</p>
-            {fullContent && <div dangerouslySetInnerHTML={{ __html: fullContent }} />}
+            {fullContent && <div className="whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: fullContent }} />}
           </div>
           {project.gallery_images && project.gallery_images.length > 0 && (
             <div className="mt-6">

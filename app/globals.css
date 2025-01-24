@@ -86,11 +86,11 @@
 .prose h4,
 .prose h5,
 .prose h6 {
-  @apply text-foreground font-sans;
+  @apply text-foreground font-mono;
 }
 
 .prose p {
-  @apply text-foreground font-sans;
+  @apply text-foreground font-mono;
 }
 
 .prose a {
