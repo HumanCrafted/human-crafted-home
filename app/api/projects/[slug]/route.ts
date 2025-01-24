@@ -1,8 +1,14 @@
 import { NextResponse } from "next/server"
 import { fetchProjectContent } from "@/lib/markdown"
 
-export async function GET(request: Request, { params }: { params: { slug: string } }) {
-  const slug = params.slug
+export async function GET(request: Request) {
+  const url = new URL(request.url)
+  const slug = url.pathname.split('/').pop()
+
+  if (!slug) {
+    return NextResponse.json({ error: "Slug is required" }, { status: 400 })
+  }
+
   try {
     const projectContent = await fetchProjectContent(slug)
     if (!projectContent.metadata) {
