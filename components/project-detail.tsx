@@ -92,4 +92,3 @@ export function ProjectDetail({ project, onClose, onCategoryClick }: ProjectDeta
     </div>
   )
 }
-
