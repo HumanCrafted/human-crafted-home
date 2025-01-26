@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "07d5bd2edc8c663c",
+        "id": "e1e3d86ded8c0b25",
         "type": "tabs",
         "children": [
           {
-            "id": "876345f3a34a27ea",
+            "id": "9136378ddf4a7d6f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -188,8 +188,11 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "876345f3a34a27ea",
+  "active": "9136378ddf4a7d6f",
   "lastOpenFiles": [
+    "www.humancrafted.co.md",
+    "README.md",
+    "humancrafted.co.md",
     "projects/taco-stands.md",
     "components/scrambled-text.tsx",
     "app/test-page.tsx",
@@ -231,8 +234,6 @@
     "node_modules/hast-util-to-jsx-runtime/readme.md",
     "node_modules/react-markdown/readme.md",
     "node_modules/remark-rehype/readme.md",
-    "node_modules/html-url-attributes/readme.md",
-    "node_modules/estree-util-is-identifier-name/readme.md",
     "node_modules/date-fns/docs/logotype.svg",
     "node_modules/date-fns/docs/logo.svg"
   ]

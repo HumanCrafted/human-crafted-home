@@ -21,7 +21,7 @@ This project is built with:
 
 ## Site Architecture
 
-humancrafted.co is built as a static site, leveraging the power of Next.js for static site generation (SSG). 
+[humancrafted.co](www.humancrafted.co) is built as a static site, leveraging the power of Next.js for static site generation (SSG). 
 
 The content for the site developed locally, and then pushed as Markdown files to a GitHub repository, allowing for easy version control and collaboration. During the build process, these Markdown files are processed and converted into static HTML pages.
 
