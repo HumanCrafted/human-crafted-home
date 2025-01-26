@@ -21,14 +21,14 @@ export function CategoryFilter({ tags, onSelectTag, selectedTag }: CategoryFilte
           key={tag}
           onClick={() => handleSelectTag(tag)}
           className={`
-            relative whitespace-nowrap px-3 py-1 rounded-full text-base transition-colors font-mono
+            relative whitespace-nowrap px-3 py-1 rounded-full text-lg transition-colors font-mono
             group
           `}
         >
           <span className="relative z-10">{tag}</span>
           <span
             className={`
-              absolute left-[5%] bottom-0 w-[90%] top-[47%] h-[16%] bg-accent
+              absolute left-[5%] bottom-0 w-[90%] top-[45%] h-[15%] bg-accent
               transform origin-left scale-x-0 transition-transform duration-300 ease-out
               ${selectedTag === (tag === "all" ? null : tag) ? "scale-x-100" : "group-hover:scale-x-100"}
             `}

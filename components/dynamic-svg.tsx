@@ -2,6 +2,8 @@
 
 import { useTheme } from "next-themes"
 import Image from "next/image"
+import { useEffect, useState } from "react"
+
 
 interface DynamicSvgProps {
   svg: string
@@ -12,9 +14,23 @@ interface DynamicSvgProps {
 export function DynamicSvg({ svg, className = "", onError }: DynamicSvgProps) {
   const { theme } = useTheme()
   const isSvg = svg.toLowerCase().endsWith(".svg")
+  const [mounted, setMounted] = useState(false)
+
 
   // Ensure the svg path is correct
   const imagePath = svg.startsWith("/") ? svg : `/images/${svg.replace(/^images\//, "")}`
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  useEffect(() => {
+    // This effect will run whenever the theme changes
+  }, [theme])
+
+  if (!mounted) {
+    return null
+  }
 
   return (
     <Image

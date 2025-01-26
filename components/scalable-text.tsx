@@ -1,14 +1,14 @@
 "use client"
 
-import type React from "react"
-import { useRef, useEffect, useState } from "react"
+import React, { useRef, useEffect, useState } from "react"
 
 interface ScalableTextProps {
   children: React.ReactNode
   className?: string
   minFontSize?: number
   maxFontSize?: number
-  highlight?: boolean
+  highlightText?: string
+  showHighlight?: boolean
 }
 
 export function ScalableText({
@@ -16,7 +16,8 @@ export function ScalableText({
   className = "",
   minFontSize = 16,
   maxFontSize = 128,
-  highlight = false,
+  highlightText,
+  showHighlight = true,
 }: ScalableTextProps) {
   const containerRef = useRef<HTMLDivElement>(null)
   const textRef = useRef<HTMLDivElement>(null)
@@ -26,6 +27,7 @@ export function ScalableText({
     const resizeText = () => {
       if (containerRef.current && textRef.current) {
         const containerWidth = containerRef.current.offsetWidth
+        const containerHeight = containerRef.current.offsetHeight
         let low = minFontSize
         let high = maxFontSize
         let mid
@@ -34,7 +36,7 @@ export function ScalableText({
           mid = Math.floor((low + high) / 2)
           textRef.current.style.fontSize = `${mid}px`
 
-          if (textRef.current.scrollWidth <= containerWidth) {
+          if (textRef.current.scrollWidth <= containerWidth && textRef.current.scrollHeight <= containerHeight) {
             low = mid + 1
           } else {
             high = mid - 1
@@ -50,61 +52,50 @@ export function ScalableText({
     return () => window.removeEventListener("resize", resizeText)
   }, [children, minFontSize, maxFontSize])
 
+  const highlightedContent =
+    highlightText && showHighlight
+      ? React.Children.map(children, (child) => {
+          if (typeof child === "string") {
+            const regex = new RegExp(`(${highlightText})`, "g")
+            const parts = child.split(regex)
+            return parts.map((part, index) => {
+              if (part === highlightText) {
+                return (
+                  <span key={index} className="relative inline-block">
+                    <span className="relative z-10">{part}</span>
+                    <span
+                      className="absolute left-0 bottom-0 w-full h-[35%] bg-accent mix-blend-darken dark:mix-blend-lighten"
+                      style={{
+                        zIndex: -1,
+                      }}
+                    />
+                  </span>
+                )
+              }
+              return part
+            })
+          }
+          return child
+        })
+      : children
+
   return (
-    <div ref={containerRef} className={`w-full overflow-hidden ${className}`}>
-      <style jsx>{`
-        @keyframes slideInFromLeft {
-          0% {
-            transform: translateX(-100%) translateY(-50%);
-          }
-          100% {
-            transform: translateX(0) translateY(-50%);
-          }
-        }
-      `}</style>
+    <div ref={containerRef} className={`w-full h-full overflow-hidden ${className}`}>
       <div
         ref={textRef}
         style={{
           fontSize: `${fontSize}px`,
-          lineHeight: 1,
-          whiteSpace: "nowrap",
+          lineHeight: 1.2,
+          whiteSpace: "pre-wrap",
           position: "relative",
           display: "inline-block",
           zIndex: 1,
         }}
       >
-        {children}
-        {highlight && (
-          <span
-            className="absolute overflow-hidden"
-            style={{
-              height: "35%",
-              top: "45%",
-              width: "116%",
-              left: "-8%",
-              zIndex: -1,
-              pointerEvents: "none",
-            }}
-          >
-            <svg
-              className="absolute"
-              style={{
-                width: "80vw",
-                height: "80vw",
-                right: "0",
-                top: "50%",
-                transform: "translateY(-50%)",
-                animation: "slideInFromLeft 1s ease-out forwards",
-              }}
-              viewBox="0 0 100 100"
-              preserveAspectRatio="none"
-            >
-              <polygon points="50,0 100,50 50,100 0,50" className="fill-accent" />
-            </svg>
-          </span>
-        )}
+        {highlightedContent}
       </div>
     </div>
   )
 }
 
+ 

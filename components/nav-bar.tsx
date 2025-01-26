@@ -10,13 +10,13 @@ export function NavBar() {
       <header className="flex justify-between items-center px-14 py-8">
         <Logo />
         <nav className="flex items-center gap-8">
-          <NavLink href="/about" className="text-lg font-mono font-medium">
+          <NavLink href="/about" className="text-lg font-mono">
             About
           </NavLink>
           <ThemeToggle />
           <Link
             href="/lab"
-            className="font-sans font-bold px-5 py-1 bg-foreground text-background hover:bg-accent hover:text-foreground transition-colors rounded-full text-[22px] flex items-center gap-2"
+            className="font-mono font-bold tracking-tight px-5 py-1 bg-foreground text-background hover:bg-accent hover:text-foreground transition-colors rounded-full text-[22px] flex items-center gap-2"
           >
             Let's co/lab
             <ArrowRight className="w-6 h-6" strokeWidth={3} />

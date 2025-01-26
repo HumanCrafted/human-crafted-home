@@ -13,7 +13,7 @@ interface ProjectDetailProps {
 }
 
 export function ProjectDetail({ project, onClose, onCategoryClick }: ProjectDetailProps) {
-  console.log("Rendering ProjectDetail for project:", project.title)
+  // console.log("Rendering ProjectDetail for project:", project.title)
   const [fullContent, setFullContent] = useState<string | null>(null)
 
   useEffect(() => {
@@ -49,7 +49,7 @@ export function ProjectDetail({ project, onClose, onCategoryClick }: ProjectDeta
           }}
           className="absolute top-2 right-2 text-foreground hover:text-accent z-10 bg-background bg-opacity-50 rounded-full p-1"
         >
-          <X size={24} />
+          <X size={48} />
         </button>
       </div>
       <div className="flex flex-col md:flex-row">
@@ -57,26 +57,29 @@ export function ProjectDetail({ project, onClose, onCategoryClick }: ProjectDeta
           <div className="aspect-square relative">
             <DynamicSvg svg={project.main_image} className="w-full h-full object-contain" />
           </div>
+          <h3 className="text-lg text-center mt-4">{project.title}</h3>
         </div>
         <div className="md:w-[70%] p-6">
-          <h2 className="text-2xl font-bold mb-4">{project.title}</h2>
           <div className="prose prose-sm dark:prose-invert max-w-none space-y-4 [&>p]:mb-4 [&>p>br]:content-[''] [&>p>br]:block [&>p>br]:mt-4 font-mono">
-            <p>{project.headline}</p>
-            <p>
-              Categories:{" "}
-              {project.categories.map((category, index) => (
-                <span key={category}>
-                  {index > 0 && ", "}
-                  <button
-                    onClick={() => handleCategoryClick(category)}
-                    className="text-accent hover:underline focus:outline-none"
-                  >
-                    {category}
-                  </button>
-                </span>
-              ))}
-            </p>
-            <p>Published: {new Date(project.published_date).toLocaleDateString()}</p>
+            <p className="font-medium">{project.headline}</p>
+            <div className="flex items-center gap-2">
+              <p>[{new Date(project.published_date).toLocaleDateString()}]</p>
+              <p>-</p>
+              <p>
+                {project.categories.map((category, index) => (
+                  <span key={category}>
+                    {index > 0 && ", "}
+                    <button
+                      onClick={() => handleCategoryClick(category)}
+                      className="underline decoration-solid hover:decoration-wavy focus:outline-none"
+                    >
+                      {category}
+                    </button>
+                  </span>
+                ))}
+              </p>
+             
+            </div>
             {fullContent && <div className="whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: fullContent }} />}
           </div>
           {project.gallery_images && project.gallery_images.length > 0 && (

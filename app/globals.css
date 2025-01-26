@@ -15,7 +15,8 @@
     --radius: 0.5rem;
 
     --font-sans: var(--font-work-sans), sans-serif;
-    --font-mono: var(--font-dm-mono), monospace;
+    /* --font-mono: input-mono-narrow, monospace; */
+    --font-mono: var(--font-ibm-plex-mono), monospace;
   }
 
   .dark {
@@ -37,14 +38,6 @@
     font-feature-settings: "rlig" 1, "calt" 1;
     padding-top: 0;
   }
-
-  /* .font-sans {
-    font-family: var(--font-sans);
-  }
-
-  .font-mono {
-    font-family: var(--font-mono);
-  } */
 }
 
 .category-scroll {
@@ -90,7 +83,7 @@
 }
 
 .prose p {
-  @apply text-foreground font-mono;
+  @apply text-foreground font-mono text-lg;
 }
 
 .prose a {
@@ -120,5 +113,16 @@
 
 .prose img {
   @apply rounded-lg;
+}
+
+/* Custom text selection styles */
+::selection {
+  background-color: hsl(var(--foreground));
+  color: hsl(var(--background));
+}
+
+::-moz-selection {
+  background-color: hsl(var(--foreground));
+  color: hsl(var(--background));
 }
 

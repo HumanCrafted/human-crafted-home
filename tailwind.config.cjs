@@ -1,3 +1,4 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -16,8 +17,9 @@ module.exports = {
         black: "hsl(var(--black))",
       },
       fontFamily: {
-        sans: ['var(--font-work-sans)', 'sans-serif'],
-        mono: ['var(--font-dm-mono)', 'monospace'],
+        sans: ["var(--font-work-sans)", "sans-serif"],
+        // mono: ["input-mono-narrow","monospace"],
+        mono: ["var(--font-ibm-plex-mono)","monospace"],
       },
     },
   },
