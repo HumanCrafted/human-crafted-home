@@ -8,7 +8,7 @@ export default async function About() {
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       <NavBar />
-      <main className="flex-grow pt-32 w-full px-[60px]">
+      <main className="flex-grow pt-32 w-full px-[5%]">
         <div
           className="prose prose-lg dark:prose-invert max-w-none space-y-4 [&>p]:mb-4 [&>p>br]:content-[''] [&>p>br]:block [&>p>br]:mt-4 font-sans"
           dangerouslySetInnerHTML={{ __html: content }}

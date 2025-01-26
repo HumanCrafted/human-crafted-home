@@ -22,7 +22,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       <NavBar />
-      <main className="flex-grow pt-32 w-full px-[60px]">
+      <main className="flex-grow pt-32 w-full px-[5%]">
         <h1 className="text-4xl font-bold mb-6 font-sans">{metadata.title}</h1>
         <div className="mb-8 relative w-full aspect-square max-w-2xl mx-auto">
           {metadata.main_image.toLowerCase().endsWith(".svg") ? (

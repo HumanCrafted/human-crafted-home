@@ -40,7 +40,7 @@ export default function Home() {
   return (
     <div className="bg-background text-foreground min-h-screen flex flex-col">
       <NavBar />
-      <main className="flex-grow w-full px-[60px] pt-[20vh]">
+      <main className="flex-grow w-full px-[5%] pt-[20vh]">
         <section className="mb-24 h-[40vh] flex items-center">
           <div className="max-w-[800px]">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-normal font-mono mb-4">
