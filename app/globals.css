@@ -126,3 +126,12 @@
   color: hsl(var(--background));
 }
 
+/* Add this to your global CSS file */
+.svg-darkmode {
+  filter: none;
+}
+
+.dark .svg-darkmode {
+  filter: invert(91%) sepia(17%) saturate(166%) hue-rotate(1deg) brightness(94%) contrast(88%);
+}
+

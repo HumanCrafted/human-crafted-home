@@ -65,6 +65,28 @@ function preserveLineBreaks() {
   }
 }
 
+function processInlineImages() {
+  return (tree: any) => {
+    visit(tree, "image", (node: any) => {
+      const url = node.url.replace(/^public\//, "")
+      const processedUrl = url.startsWith("/") 
+        ? url 
+        : url.startsWith("images/")
+          ? `/${url}`
+          : `/images/${url}`
+
+      node.type = 'html'
+      const isSvg = processedUrl.toLowerCase().endsWith('.svg')
+      
+      if (isSvg) {
+        node.value = `<img src="${processedUrl}" alt="${node.alt || ''}" class="w-full h-auto svg-darkmode" />`
+      } else {
+        node.value = `<img src="${processedUrl}" alt="${node.alt || ''}" class="w-full h-auto" />`
+      }
+    })
+  }
+}
+
 export async function getProjectSlugs() {
   return fs.readdirSync(projectsDirectory)
 }
@@ -138,23 +160,13 @@ export async function getContentBySlug(slug: string) {
   const { data, content } = matter(fileContents)
 
   const processedMetadata = processMetadata(data) as ContentMetadata
-  
+
   const processedContent = await remark()
     .use(remarkGfm)
-    .use(function processImages() {
-      return (tree: any) => {
-        visit(tree, 'image', (node: any) => {
-          // Clean up image path
-          const cleanPath = node.url.replace(/^public\//, '')
-          node.url = cleanPath.startsWith('images/') 
-            ? `/${cleanPath}` 
-            : `/images/${cleanPath}`
-        })
-      }
-    })
+    .use(processInlineImages)
     .use([preserveLineBreaks])
-    .use(remarkHtml as any)
-    .process(content) // Use original content here
+    .use(remarkHtml, { sanitize: false })
+    .process(content)
 
   return {
     metadata: processedMetadata,
