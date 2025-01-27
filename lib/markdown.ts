@@ -138,18 +138,26 @@ export async function getContentBySlug(slug: string) {
   const { data, content } = matter(fileContents)
 
   const processedMetadata = processMetadata(data) as ContentMetadata
-  const contentWithoutImageSyntax = removeImageMarkdownSyntax(content)
-
+  
   const processedContent = await remark()
     .use(remarkGfm)
+    .use(function processImages() {
+      return (tree: any) => {
+        visit(tree, 'image', (node: any) => {
+          // Clean up image path
+          const cleanPath = node.url.replace(/^public\//, '')
+          node.url = cleanPath.startsWith('images/') 
+            ? `/${cleanPath}` 
+            : `/images/${cleanPath}`
+        })
+      }
+    })
     .use(preserveLineBreaks)
-    .use(remarkHtml as any)
-    .process(contentWithoutImageSyntax)
-
-  const contentHtml = processedContent.toString()
+    .use(remarkHtml, { sanitize: false })
+    .process(content) // Use original content here
 
   return {
     metadata: processedMetadata,
-    content: contentHtml,
+    content: processedContent.toString(),
   }
 }
