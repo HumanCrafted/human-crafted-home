@@ -20,19 +20,19 @@ User testing, Limited low volume production, Product strategy, Production suppor
 
 ### Tools
 
-|**Tool** |**Spec** |
-|---|---|
-|**Laser Cutter/Engraver** |1300mm x 900mm 150 Watt CO2|
-|**CNC Router** |24 in x 48 in X-Carve Pro|
-|**Digital mockups** |Figma, Illustrator, After Effects, Keyshot|
-|**Web design** |Notion + Super, Webflow, Squarespace, Wix|
-|**3D Printer** |7 in x 7 in x 7 in, Prusa MINI+|
-|**CAD design / engineering** |Fusion360|
-|**Electronics mockups** |Arduino, Raspberry Pi, ESP, IoT|
+| **Tool**                     | **Spec**                                   |
+| ---------------------------- | ------------------------------------------ |
+| **Laser Cutter/Engraver**    | 1300mm x 900mm 150 Watt CO2                |
+| **CNC Router**               | 24 in x 48 in X-Carve Pro                  |
+| **Digital mockups**          | Figma, Illustrator, After Effects, Keyshot |
+| **Web design**               | Notion + Super, Webflow, Squarespace, Wix  |
+| **3D Printer**               | 7 in x 7 in x 7 in, Prusa MINI+            |
+| **CAD design / engineering** | Fusion360                                  |
+| **Electronics mockups**      | Arduino, Raspberry Pi, ESP, IoT            |
 
 ### Past Work
 
-Fiskars, Georgia-Pacific, Weber Grill, Good Day Shop, Bunn-o-matic, Made Kits, Fellowes Office Products, Crescendo Espresso Bar, Bosch Tools, Monroe Street Arts Center, Kolpin Outdoors, Advance Concepts, Matrix Fitness, Ledger Coffee Roasters, EVEN Hotels, Violet Defense, Everthine Jewelry, PLOT Communications, Masen Environmental Solutions
+Fiskars, Georgia-Pacific, Weber Grill, Good Day Shop, Bunn-o-matic, Made Kits, Fellowes Office Products, Crescendo Espresso Bar, Bosch Tools, Monroe Street Arts Center, Kolpin Outdoors, Advance Concepts, Matrix Fitness, Ledger Coffee Roasters, EVEN Hotels, Violet Defense, Everthine Jewelry, PLOT Communications, Masen Environmental Solutions, ...
 
 
 

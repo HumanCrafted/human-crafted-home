@@ -17,7 +17,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 })
 
 export const metadata = {
-  title: "Human Crafted",
+  title: "human crafted",
   description: "A product design studio specializing in the rapid realization of ideas.",
   icons: {
     icon: [
