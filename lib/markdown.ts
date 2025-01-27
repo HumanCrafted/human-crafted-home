@@ -153,4 +153,3 @@ export async function getContentBySlug(slug: string) {
     content: contentHtml,
   }
 }
-

@@ -31,13 +31,7 @@ export default async function ProjectPage({ params, searchParams }: Props) {
             <DynamicSvg svg={metadata.main_image} className="w-full h-full object-contain" />
           ) : (
             <Image
-              src={
-                metadata.main_image.startsWith("/")
-                  ? metadata.main_image
-                  : metadata.main_image.startsWith("images/")
-                    ? `/${metadata.main_image}`
-                    : `/images/${metadata.main_image}`
-              }
+              src={`/images/${metadata.main_image}`}
               alt={metadata.title}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

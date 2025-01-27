@@ -21,32 +21,14 @@ I am proud of this range, and Iâ€™ve come to appreciate it as my super power. ðŸ
 
 ![](public/images/vennExpertise.svg)
 
-| **User testing**             | **Limited low volume production**   |
-| ---------------------------- | ----------------------------------- |
-| **Product strategy**         | **Production support**              |
-| **Concept development**      | **Production fixturing / patterns** |
-| **Industrial design**        | **Packaging design**                |
-| **Digital mockups**          | **Packaging mockups**               |
-| **Web design**               | **Fabrication**                     |
-| **Physical prototyping**     | **Space planning**                  |
-| **CAD design / engineering** | **Signage and way-finding**         |
-|                              | **Point of purchase design**        |
+
 
 ### Past Work
 
 ![](public/images/vennColab.svg)
 
 
-| Fiskars                      | **Georgia-Pacific**           |
-| ---------------------------- | ----------------------------- |
-| **Weber Grill**              | **Good Day Shop**             |
-| **Bunn-o-matic**             | **Made Kits**                 |
-| **Fellowes Office Products** | **Crescendo Espresso Bar**    |
-| **Bosch Tools**              | **Monroe Street Arts Center** |
-| **Kolpin Outdoors**          | **Advance Concepts**          |
-| **Matrix Fitness**           | **Ledger Coffee Roasters**    |
-| **EVEN Hotels**              | **Violet Defense**            |
-| **Everthine Jewelry**        | **PLOT Communications**       |
+
 
 
 
