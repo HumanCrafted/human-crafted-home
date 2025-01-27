@@ -85,7 +85,7 @@ export async function getProjectBySlug(slug: string) {
 
   const processedContent = await remark()
     .use(remarkGfm)
-    .use(preserveLineBreaks)
+    .use([preserveLineBreaks])
     .use(remarkHtml as any)
     .process(contentWithoutImageSyntax)
 
@@ -152,8 +152,8 @@ export async function getContentBySlug(slug: string) {
         })
       }
     })
-    .use(preserveLineBreaks)
-    .use(remarkHtml, { sanitize: false })
+    .use([preserveLineBreaks])
+    .use(remarkHtml as any)
     .process(content) // Use original content here
 
   return {
