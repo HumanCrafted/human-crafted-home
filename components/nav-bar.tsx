@@ -6,7 +6,7 @@ import { Logo } from "@/components/logo"
 
 export function NavBar() {
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-blur px-[5%] py-8">
+    <div className="fixed top-0 left-0 right-0 z-50 bg-blur px-[5%] py-8" role="navigation">
       <header className="flex flex-col md:flex-row md:items-center md:justify-between">
         <div className="flex items-center justify-between w-full md:w-auto">
           <Logo />

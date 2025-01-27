@@ -1,8 +1,7 @@
 import "./globals.css"
-import { Inter, Work_Sans, IBM_Plex_Mono } from "next/font/google"
+import type React from "react"
+import { Work_Sans } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
-
-const inter = Inter({ subsets: ["latin"] })
 
 const workSans = Work_Sans({
   subsets: ["latin"],
@@ -11,22 +10,17 @@ const workSans = Work_Sans({
   variable: "--font-work-sans",
 })
 
-const ibmPlexMono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  display: "swap",
-  variable: "--font-ibm-plex-mono",
-})
+const faviconVersion = Date.now()
 
 export const metadata = {
   title: "Human Crafted",
   description: "A product design studio specializing in the rapid realization of ideas.",
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: `/favicon.ico?v=${faviconVersion}`, sizes: "any" },
+      { url: `/icon.svg?v=${faviconVersion}`, type: "image/svg+xml" },
     ],
-    apple: "/apple-touch-icon.png",
+    apple: `/apple-touch-icon.png?v=${faviconVersion}`,
   },
 }
 
@@ -36,14 +30,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={`${workSans.variable} ${ibmPlexMono.variable}`}
-    >
-      {/* <head>
+    <html lang="en" suppressHydrationWarning className={`${workSans.variable}`}>
+      <head>
         <link rel="stylesheet" href="https://use.typekit.net/loe5zix.css" />
-      </head> */}
+      </head>
       <body className={`bg-background text-foreground min-h-screen flex flex-col`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}

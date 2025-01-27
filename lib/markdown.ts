@@ -50,7 +50,7 @@ function preserveLineBreaks() {
       if (typeof node.value === "string") {
         const lines = node.value.split("\n")
         if (lines.length > 1) {
-          const newNodes = lines.flatMap((line, i) => {
+          const newNodes = lines.flatMap((line: string, i: number) => {
             if (i === lines.length - 1) return [{ type: "text", value: line }]
             return [
               { type: "text", value: line },
@@ -86,7 +86,7 @@ export async function getProjectBySlug(slug: string) {
   const processedContent = await remark()
     .use(remarkGfm)
     .use(preserveLineBreaks)
-    .use(remarkHtml, { sanitize: false })
+    .use(remarkHtml as any)
     .process(contentWithoutImageSyntax)
 
   const contentHtml = processedContent.toString()
@@ -143,7 +143,7 @@ export async function getContentBySlug(slug: string) {
   const processedContent = await remark()
     .use(remarkGfm)
     .use(preserveLineBreaks)
-    .use(remarkHtml, { sanitize: false })
+    .use(remarkHtml as any)
     .process(contentWithoutImageSyntax)
 
   const contentHtml = processedContent.toString()

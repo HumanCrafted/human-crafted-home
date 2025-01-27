@@ -1,18 +1,20 @@
 import Image from "next/image"
+import type { Metadata } from "next"
 import { NavBar } from "@/components/nav-bar"
 import { Footer } from "@/components/footer"
 import { fetchProjectContent, listProjects } from "@/lib/markdown"
 import { notFound } from "next/navigation"
 import { DynamicSvg } from "@/components/dynamic-svg"
 
-interface ProjectPageProps {
-  params: {
-    slug: string
-  }
+type Props = {
+  params: Promise<{ slug: string }>
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }
 
-export default async function ProjectPage({ params }: ProjectPageProps) {
-  const slug = params.slug
+export default async function ProjectPage({ params, searchParams }: Props) {
+  const { slug } = await params
+  await searchParams // We're not using searchParams, but we need to await it
+
   const { metadata, content } = await fetchProjectContent(slug)
 
   if (!metadata || !content) {
@@ -58,5 +60,14 @@ export async function generateStaticParams() {
   return projects.map((project) => ({
     slug: project.slug,
   }))
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params
+  const { metadata } = await fetchProjectContent(slug)
+  return {
+    title: metadata?.title || "Project",
+    description: metadata?.headline || "",
+  }
 }
 

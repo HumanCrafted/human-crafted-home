@@ -38,9 +38,9 @@ export default function Home() {
   const scrambledWords = ["things", "products", "brands", "websites", "businesses", "our home"]
 
   return (
-    <div className="bg-background text-foreground min-h-screen flex flex-col">
+    <main className="bg-background text-foreground min-h-screen flex flex-col">
       <NavBar />
-      <main className="flex-grow w-full px-[5%] pt-[20vh]">
+      <div className="flex-grow w-full px-[5%] pt-[20vh]">
         <section className="mb-24 h-[40vh] flex items-center">
           <div className="max-w-[800px]">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-normal font-mono mb-4">
@@ -59,9 +59,9 @@ export default function Home() {
         </section>
 
         <ProjectGrid projects={projects} selectedTag={selectedTag} onSelectTag={handleTagSelect} />
-      </main>
+      </div>
       <Footer />
-    </div>
+    </main>
   )
 }
 

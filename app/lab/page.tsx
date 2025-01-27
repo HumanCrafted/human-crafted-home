@@ -3,7 +3,7 @@ import { NavBar } from "@/components/nav-bar"
 import { Footer } from "@/components/footer"
 
 export default async function Lab() {
-  const { metadata, content } = await getContentBySlug("lab")
+  const { content } = await getContentBySlug("lab")
 
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">

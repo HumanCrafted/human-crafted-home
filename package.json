@@ -2,12 +2,11 @@
   "name": "human-crafted-home",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@iconicicons/react": "^1.5.1",
@@ -16,8 +15,6 @@
     "@types/react-dom": "18.2.5",
     "autoprefixer": "10.4.14",
     "date-fns": "^2.30.0",
-    "eslint": "8.42.0",
-    "eslint-config-next": "13.4.5",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.244.0",
@@ -34,5 +31,11 @@
     "tailwindcss": "3.3.2",
     "typescript": "5.1.3",
     "unist-util-visit": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^15.1.6"
   }
 }
