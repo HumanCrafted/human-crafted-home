@@ -79,9 +79,9 @@ function processInlineImages() {
       const isSvg = processedUrl.toLowerCase().endsWith('.svg')
       
       if (isSvg) {
-        node.value = `<img src="${processedUrl}" alt="${node.alt || ''}" class="w-full h-auto svg-darkmode" />`
+        node.value = `<img src="${processedUrl}" alt="${node.alt || ''}" class="inline-image h-auto svg-darkmode" />`
       } else {
-        node.value = `<img src="${processedUrl}" alt="${node.alt || ''}" class="w-full h-auto" />`
+        node.value = `<img src="${processedUrl}" alt="${node.alt || ''}" class="inline-image h-auto" />`
       }
     })
   }
@@ -164,7 +164,7 @@ export async function getContentBySlug(slug: string) {
   const processedContent = await remark()
     .use(remarkGfm)
     .use(processInlineImages)
-    .use([preserveLineBreaks])
+    .use(preserveLineBreaks)
     .use(remarkHtml, { sanitize: false })
     .process(content)
 

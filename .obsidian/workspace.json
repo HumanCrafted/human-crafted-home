@@ -190,6 +190,8 @@
   },
   "active": "9136378ddf4a7d6f",
   "lastOpenFiles": [
+    "content/lab.md",
+    "content/about.md",
     "node_modules/hast-util-to-html/lib/handle/text.d.ts.map",
     "node_modules/hast-util-to-html/lib/handle/raw.d.ts.map",
     "node_modules/hast-util-to-html/lib/omission/util/siblings.d.ts.map",
@@ -200,9 +202,7 @@
     "node_modules/hast-util-to-html/lib/handle/index.d.ts.map",
     "node_modules/hast-util-to-html/index.d.ts.map",
     "node_modules/hast-util-to-html/lib/handle/element.d.ts.map",
-    "node_modules/hast-util-to-html/lib/handle/doctype.d.ts.map",
     "projects/shop-v3.md",
-    "content/about.md",
     "public/images/vennColab.svg",
     "public/images/vennExpertise.svg",
     "README.md",

@@ -29,7 +29,7 @@ export function ProjectGrid({ projects, selectedTag, onSelectTag, onError }: Pro
   if (!filteredProjects?.length) {
     return (
       <div className="text-center py-8">
-        <p>No projects found. Check back later for updates!</p>
+        <p>Sorry, something's wrong. Check back later for updates!</p>
       </div>
     )
   }

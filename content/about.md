@@ -1,13 +1,7 @@
 ---
-title: About Us
-description: Learn more about Human Crafted, our mission, and our team.
+title: Engineering my own path.
 ---
-
-# Engineering My Own Path
-
-Human Crafted is a product design studio dedicated to bringing ideas to life through innovative design and rapid prototyping...
-
-### Creative Engineer
+### Creative engineer
 
 Hi, I’m Jon, a creative engineer.
 
@@ -22,13 +16,23 @@ I am proud of this range, and I’ve come to appreciate it as my super power. �
 ![](public/images/vennExpertise.svg)
 
 
+User testing, Limited low volume production, Product strategy, Production support, Concept development, Production fixturing / patterns, Industrial design, Packaging design, Digital mockups, Packaging mockups, Web design, Fabrication, Physical prototyping, Space planning, CAD design / engineering, Signage and way-finding, Point-of-purchase design, ...
+
+### Tools
+
+|   |   |
+|---|---|
+|**Laser Cutter/Engraver**|1300mm x 900mm 150 Watt CO2|
+|**CNC Router**|24 in x 48 in X-Carve Pro|
+|**Digital mockups**|Figma, Illustrator, After Effects, Keyshot|
+|**Web design**|Notion + Super, Webflow, Squarespace, Wix|
+|**3D Printer**|7 in x 7 in x 7 in, Prusa MINI+|
+|**CAD design / engineering**|Fusion360|
+|**Electronics mockups**|Arduino, Raspberry Pi, ESP, IoT|
 
 ### Past Work
 
-![](public/images/vennColab.svg)
-
-
-
+Fiskars, Georgia-Pacific, Weber Grill, Good Day Shop, Bunn-o-matic, Made Kits, Fellowes Office Products, Crescendo Espresso Bar, Bosch Tools, Monroe Street Arts Center, Kolpin Outdoors, Advance Concepts, Matrix Fitness, Ledger Coffee Roasters, EVEN Hotels, Violet Defense, Everthine Jewelry, PLOT Communications, Masen Environmental Solutions
 
 
 

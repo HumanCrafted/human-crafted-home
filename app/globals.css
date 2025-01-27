@@ -82,6 +82,18 @@
   @apply text-foreground font-mono;
 }
 
+.prose h1 {
+  @apply text-3xl md:text-4xl lg:text-5xl font-normal;
+}
+
+.prose h2 {
+  @apply text-2xl md:text-3xl lg:text-4xl font-medium;
+}
+
+.prose h3 {
+  @apply text-xl md:text-2xl lg:text-3xl font-normal py-8 lg:py-16;
+}
+
 .prose p {
   @apply text-foreground font-mono text-lg;
 }
@@ -126,7 +138,6 @@
   color: hsl(var(--background));
 }
 
-/* Add this to your global CSS file */
 .svg-darkmode {
   filter: none;
 }
@@ -135,3 +146,10 @@
   filter: invert(91%) sepia(17%) saturate(166%) hue-rotate(1deg) brightness(94%) contrast(88%);
 }
 
+
+.inline-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 4em;
+}
