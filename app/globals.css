@@ -153,3 +153,19 @@
   display: block;
   margin-bottom: 4em;
 }
+
+table {
+  width: 100%;
+  font-family: var(--font-mono);
+}
+
+
+td {
+  padding-right: 5%;
+}
+
+th {
+  text-align: left;
+  font-size: large;
+  font-weight: 500;
+}

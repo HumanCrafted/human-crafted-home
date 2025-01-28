@@ -1,7 +1,7 @@
 ---
 title: Engineering my own path.
 ---
-### Creative engineer
+### Creative engineering
 
 Hi, I’m Jon, a creative engineer.
 
@@ -16,23 +16,25 @@ I am proud of this range, and I’ve come to appreciate it as my super power. �
 ![](public/images/vennExpertise.svg)
 
 
-User testing, Limited low volume production, Product strategy, Production support, Concept development, Production fixturing / patterns, Industrial design, Packaging design, Digital mockups, Packaging mockups, Web design, Fabrication, Physical prototyping, Space planning, CAD design / engineering, Signage and way-finding, Point-of-purchase design, ...
+CAD design and engineering, User testing, Limited low volume production, Product strategy, Production support, Concept development, Production fixturing / patterns, Industrial design, Packaging design, Digital mockups, Packaging mockups, Web design, Fabrication, Physical prototyping, Electronics prototyping, App prototyping, Space planning, Architectural layout and concepts, Signage and way-finding, Point-of-purchase design, ...
 
 ### Tools
 
-| **Tool**                     | **Spec**                                   |
-| ---------------------------- | ------------------------------------------ |
-| **Laser Cutter/Engraver**    | 1300mm x 900mm 150 Watt CO2                |
-| **CNC Router**               | 24 in x 48 in X-Carve Pro                  |
-| **Digital mockups**          | Figma, Illustrator, After Effects, Keyshot |
-| **Web design**               | Notion + Super, Webflow, Squarespace, Wix  |
-| **3D Printer**               | 7 in x 7 in x 7 in, Prusa MINI+            |
-| **CAD design / engineering** | Fusion360                                  |
-| **Electronics mockups**      | Arduino, Raspberry Pi, ESP, IoT            |
+| **Tool**                 | **Spec**                                                        |
+| ------------------------ | --------------------------------------------------------------- |
+| Laser Cutter/Engraver    | 1300mm x 900mm 150 Watt CO2                                     |
+| CNC Router               | 24 in x 48 in X-Carve Pro                                       |
+| Digital mockups          | Figma, Illustrator,                                             |
+| Web design               | Static Page Sites, Framer, Notion + Super, Webflow, Squarespace |
+| 3D Printer               | 7 in x 7 in x 7 in, Prusa MINI+                                 |
+| CAD design / engineering | Fusion360                                                       |
+| Electronics mockups      | Arduino, Raspberry Pi, IoT                                      |
+| Organization             | Notion, Airtable                                                |
+| AI Tools                 | ChatGPT, Vercel v0                                              |
 
 ### Past Work
 
-Fiskars, Georgia-Pacific, Weber Grill, Good Day Shop, Bunn-o-matic, Made Kits, Fellowes Office Products, Crescendo Espresso Bar, Bosch Tools, Monroe Street Arts Center, Kolpin Outdoors, Advance Concepts, Matrix Fitness, Ledger Coffee Roasters, EVEN Hotels, Violet Defense, Everthine Jewelry, PLOT Communications, Masen Environmental Solutions, ...
+Masen Environmental Solutions, PLOT Communications, Everthine Jewelry, Violet Defense, EVEN Hotels, Ledger Coffee Roasters, Matrix Fitness, Advance Concepts, Kolpin Outdoors, Monroe Street Arts Center, Bosch Tools, Crescendo Espresso Bar, Fellowes Office Products, Made Kits, Bunn-o-matic, Good Day Shop, Weber Grill, Georgia-Pacific, Fiskars, ...
 
 
 
