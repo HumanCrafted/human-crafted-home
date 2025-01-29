@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { DynamicSvg } from "./dynamic-svg"
 import { ImageGallery } from "./image-gallery"
 import { X } from "lucide-react"
 import type { Project } from "@/types/project"
@@ -13,7 +12,6 @@ interface ProjectDetailProps {
 }
 
 export function ProjectDetail({ project, onClose, onCategoryClick }: ProjectDetailProps) {
-  // console.log("Rendering ProjectDetail for project:", project.title)
   const [fullContent, setFullContent] = useState<string | null>(null)
 
   useEffect(() => {
@@ -54,9 +52,9 @@ export function ProjectDetail({ project, onClose, onCategoryClick }: ProjectDeta
       </div>
       <div className="flex flex-col md:flex-row">
         <div className="md:w-[30%] p-6">
-          <div className="aspect-square relative">
-            <DynamicSvg svg={project.main_image} className="w-full h-full object-contain" />
-          </div>
+            <div className="aspect-square relative">
+            <img src={project.main_image} className="w-full h-full object-contain svg-darkmode" alt={project.title} />
+            </div>
           <h3 className="text-lg text-center mt-4">{project.title}</h3>
         </div>
         <div className="md:w-[70%] p-6">
