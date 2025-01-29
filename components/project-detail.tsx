@@ -47,7 +47,7 @@ export function ProjectDetail({ project, onClose, onCategoryClick }: ProjectDeta
             e.stopPropagation()
             onClose()
           }}
-          className="absolute top-2 right-2 text-foreground hover:text-accent z-10 bg-background bg-opacity-50 rounded-full p-1"
+          className="absolute top-2 right-2 text-foreground hover:text-muted z-10 bg-background bg-opacity-50 rounded-full p-1"
         >
           <X size={48} />
         </button>

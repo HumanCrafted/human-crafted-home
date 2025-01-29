@@ -1,7 +1,6 @@
 import React from "react"
 import Image from "next/image"
 import { X } from "lucide-react"
-import { DynamicSvg } from "./dynamic-svg"
 
 interface ImageModalProps {
   src: string
@@ -17,7 +16,7 @@ export function ImageModal({ src, alt, onClose }: ImageModalProps) {
     >
       <div className="relative max-w-4xl w-full h-full">
         {src.toLowerCase().endsWith(".svg") ? (
-          <DynamicSvg svg={src} className="w-full h-full object-contain" />
+          <img src={src} alt={alt} className="w-full h-full object-contain svg-darkmode inline-image" />
         ) : (
           <Image
             src={src || "/placeholder.svg"}

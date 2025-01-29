@@ -29,7 +29,7 @@ export function NavBar() {
             <ThemeToggle />
             <Link
               href="/lab"
-              className="font-sans font-bold px-5 py-1 bg-foreground text-background hover:bg-accent hover:text-foreground transition-colors rounded-full text-[22px] flex items-center gap-2"
+              className="font-bold px-5 py-1 bg-foreground text-background hover:bg-accent hover:text-foreground transition-colors rounded-full text-[22px] flex items-center gap-2"
             >
               Let's co/lab
               <ArrowRight className="w-6 h-6" strokeWidth={3} />

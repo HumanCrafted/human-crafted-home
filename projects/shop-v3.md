@@ -9,8 +9,8 @@ categories:
 published_date: 2023-01-31
 gallery_images:
   - "![](public/images/shop-v3-outdoors-1.png)"
-  - "![](images/shop-v3-drawing-1.svg)"
-  - "![](images/shop-v3-sketch-1.svg)"
+  - "![](public/images/shop-v3-drawing-1.svg)"
+  - "![](public/images/shop-v3-sketch-1.svg)"
 headline: A new home for Human Crafted
 ---
 

@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react"
-import { DynamicSvg } from "./dynamic-svg"
+import { useState, useEffect, SyntheticEvent } from "react"
 import { ProjectDetail } from "./project-detail"
 import type { Project } from "@/types/project"
 
@@ -7,7 +6,7 @@ interface ProjectGridProps {
   projects: Project[]
   selectedTag: string | null
   onSelectTag: (tag: string | null) => void
-  onError?: (error: Error) => void
+  onError?: (event: SyntheticEvent<HTMLImageElement, Event>) => void
 }
 
 export function ProjectGrid({ projects, selectedTag, onSelectTag, onError }: ProjectGridProps) {
@@ -55,9 +54,10 @@ export function ProjectGrid({ projects, selectedTag, onSelectTag, onError }: Pro
             onClick={() => handleProjectClick(project.slug)}
           >
             <div className="relative aspect-square mb-4">
-              <DynamicSvg
-                svg={project.main_image}
-                className="w-full h-full transition-transform duration-300 group-hover:scale-105"
+              <img
+                src={project.main_image}
+                alt={project.title}
+                className="w-full h-full transition-transform duration-300 group-hover:scale-105 svg-darkmode inline-image"
                 onError={onError}
               />
             </div>

@@ -7,7 +7,8 @@
     --background: 39 26% 83% !important;
     --foreground: 0 0% 20% !important;
     --accent: 60 100% 50% !important;
-    --muted: 43 28% 95% !important;
+    /* --muted: 42 45% 60% !important; */
+    --muted: 39 20% 71% !important;
     --muted-foreground: 0 0% 40% !important;
     --white: 0 0% 100% !important;
     --black: 0 0% 0% !important;
@@ -23,14 +24,13 @@
     --background: 0 0% 20% !important;
     --foreground: 39 26% 83% !important;
     --accent: 60 100% 50% / 0.3 !important;
-    --muted: 0 0% 15% !important;
+    /* --muted: 42 45% 60% !important; */
+    --muted: 60 100% 50% / 0.3 !important;
     --muted-foreground: 43 28% 95% !important;
     --white: 0 0% 100% !important;
     --black: 0 0% 0% !important;
   }
-}
 
-@layer base {
   body {
     @apply bg-background text-foreground pt-0;
     background-color: hsl(var(--background)) !important;
@@ -39,33 +39,78 @@
   }
 }
 
-.category-scroll {
-  @apply flex gap-4 overflow-x-auto pb-4 no-scrollbar;
-}
-
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.theme-transition {
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.bg-blur {
-  backdrop-filter: blur(8px);
-  background-color: rgba(var(--background), 0.8);
-}
-
-@supports not (backdrop-filter: blur(10px)) {
-  .bg-blur {
-    background-color: rgba(var(--background), 0.95);
+@layer components {
+  .bg-background {
+    background-color: hsl(var(--background)) !important;
   }
-}
+
+  .text-foreground {
+    color: hsl(var(--foreground)) !important;
+  }
+
+  .bg-foreground {
+    background-color: hsl(var(--foreground)) !important;
+  }
+
+  .text-background {
+    color: hsl(var(--background)) !important;
+  }
+
+  .bg-accent {
+    background-color: hsl(var(--accent)) !important;
+  }
+
+  .text-accent {
+    color: hsl(var(--accent)) !important;
+  }
+
+  .border-accent {
+    border-color: hsl(var(--accent)) !important;
+  }
+
+  .bg-muted {
+    background-color: hsl(var(--muted)) !important;
+  }
+
+  .text-muted {
+    color: hsl(var(--muted)) !important;
+  }
+
+  .svg-darkmode {
+    filter: none;
+  }
+
+  .dark .svg-darkmode {
+    filter: invert(91%) sepia(17%) saturate(166%) hue-rotate(1deg) brightness(94%) contrast(88%);
+  }
+
+  .category-scroll {
+    @apply flex gap-4 overflow-x-auto pb-4 no-scrollbar;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .theme-transition {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .bg-blur {
+    backdrop-filter: blur(8px);
+    background-color: rgba(var(--background), 0.8);
+  }
+
+  @supports not (backdrop-filter: blur(10px)) {
+    .bg-blur {
+      background-color: rgba(var(--background), 0.95);
+    }
+  }
 
 /* Custom prose styles */
 .prose {
@@ -138,26 +183,18 @@
   @apply text-left text-lg font-medium;
 }
 
+  /* Custom text selection styles */
+  ::selection {
+    background-color: hsl(var(--foreground));
+    color: hsl(var(--background));
+  }
 
-/* Custom text selection styles */
-::selection {
-  background-color: hsl(var(--foreground));
-  color: hsl(var(--background));
-}
+  ::-moz-selection {
+    background-color: hsl(var(--foreground));
+    color: hsl(var(--background));
+  }
 
-::-moz-selection {
-  background-color: hsl(var(--foreground));
-  color: hsl(var(--background));
-}
-
-.svg-darkmode {
-  filter: none;
-}
-
-.dark .svg-darkmode {
-  filter: invert(91%) sepia(17%) saturate(166%) hue-rotate(1deg) brightness(94%) contrast(88%);
-}
-
-.inline-image {
-  @apply block mb-16 max-w-full h-auto;
+  .inline-image {
+    @apply block mb-16 max-w-full h-auto;
+  }
 }

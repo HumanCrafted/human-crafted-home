@@ -30,13 +30,21 @@ function removeImageMarkdownSyntax(content: string): string {
   return content.replace(regex, "$1")
 }
 
+function processImagePath(imagePath: string): string {
+  return imagePath.replace(/^public\//, "")
+}
+
 function processMetadata(metadata: any): ProjectMetadata | ContentMetadata {
   const processedMetadata: any = {}
   for (const [key, value] of Object.entries(metadata)) {
     if (typeof value === "string") {
-      processedMetadata[key] = removeImageMarkdownSyntax(value)
+      if (key === "main_image") {
+        processedMetadata[key] = processImagePath(removeImageMarkdownSyntax(value))
+      } else {
+        processedMetadata[key] = removeImageMarkdownSyntax(value)
+      }
     } else if (Array.isArray(value) && key === "gallery_images") {
-      processedMetadata[key] = value.map(removeImageMarkdownSyntax)
+      processedMetadata[key] = value.map(removeImageMarkdownSyntax).map(processImagePath)
     } else {
       processedMetadata[key] = value
     }

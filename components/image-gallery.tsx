@@ -1,6 +1,5 @@
 import { useState } from "react"
 import Image from "next/image"
-import { DynamicSvg } from "./dynamic-svg"
 import { ImageModal } from "./image-modal"
 
 interface ImageGalleryProps {
@@ -46,7 +45,7 @@ export function ImageGallery({ images }: ImageGalleryProps) {
               onClick={() => handleImageClick(processedPath)}
             >
               {isSvg(processedPath) ? (
-                <DynamicSvg svg={processedPath} className="w-full h-full object-contain" />
+                <img src={processedPath} alt={`Gallery image ${index + 1}`} className="w-full h-full object-contain svg-darkmode inline-image" />
               ) : (
                 <Image
                   src={processedPath}

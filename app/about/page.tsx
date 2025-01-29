@@ -17,7 +17,7 @@ export default async function About() {
           </div>
         </section>
         <div
-          className="prose prose-lg dark:prose-invert max-w-none space-y-4 [&>p]:mb-4 [&>p>br]:content-[''] [&>p>br]:block [&>p>br]:mt-4 font-sans md:w-[70%]"
+          className="prose prose-lg dark:prose-invert max-w-none space-y-4 [&>p]:mb-4 [&>p>br]:content-[''] [&>p>br]:block [&>p>br]:mt-4 md:w-[70%]"
           dangerouslySetInnerHTML={{ __html: content }}
         />
       </main>

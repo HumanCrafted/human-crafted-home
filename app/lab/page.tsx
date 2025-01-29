@@ -17,13 +17,13 @@ export default async function Lab() {
           </div>
         </section>
         <div
-          className="prose prose-lg dark:prose-invert max-w-none space-y-4 [&>p]:mb-4 [&>p>br]:content-[''] [&>p>br]:block [&>p>br]:mt-4 font-sans md:w-[70%]"
+          className="prose prose-lg dark:prose-invert max-w-none space-y-4 [&>p]:mb-4 [&>p>br]:content-[''] [&>p>br]:block [&>p>br]:mt-4 md:w-[70%]"
           dangerouslySetInnerHTML={{ __html: content }}
         />
         <div className="mt-8">
             <a
             href="mailto:jon@humancrafted.co"
-            className="mt-6 font-sans font-bold px-5 py-1 bg-foreground text-background hover:bg-accent hover:text-foreground transition-colors rounded-full text-[22px] inline-flex items-center gap-2 w-auto"
+            className="mt-6 font-bold px-5 py-1 bg-foreground text-background hover:bg-accent hover:text-foreground transition-colors rounded-full text-[22px] inline-flex items-center gap-2 w-auto"
             >
             Contact me
             </a>

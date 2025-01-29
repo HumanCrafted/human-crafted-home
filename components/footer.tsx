@@ -6,19 +6,19 @@ export function Footer() {
     <footer className="bg-background">
       <div className="mx-auto w-full px-[5%] py-12 md:flex md:items-center md:justify-between">
         <div className="flex justify-center space-x-6 md:order-2">
-          <Link href="https://www.instagram.com/human_crafted/" className="text-foreground hover:text-accent" target="_blank" rel="noopener noreferrer">
+          <Link href="https://www.instagram.com/human_crafted/" className="text-foreground hover:text-muted" target="_blank" rel="noopener noreferrer">
             <span className="sr-only">Instagram</span>
             <Instagram className="h-5 w-5" strokeWidth={2} />
           </Link>
-          <Link href="https://x.com/jonalling" className="text-foreground hover:text-accent" target="_blank" rel="noopener noreferrer">
+          <Link href="https://x.com/jonalling" className="text-foreground hover:text-muted" target="_blank" rel="noopener noreferrer">
             <span className="sr-only">Twitter</span>
             <Twitter className="h-5 w-5" strokeWidth={2} />
           </Link>
-          <Link href="https://www.linkedin.com/in/alling/" className="text-foreground hover:text-accent" target="_blank" rel="noopener noreferrer">
+          <Link href="https://www.linkedin.com/in/alling/" className="text-foreground hover:text-muted" target="_blank" rel="noopener noreferrer">
             <span className="sr-only">LinkedIn</span>
             <Linkedin className="h-5 w-5" strokeWidth={2} />
           </Link>
-          <Link href="https://github.com/HumanCrafted" className="text-foreground hover:text-accent" target="_blank" rel="noopener noreferrer">
+          <Link href="https://github.com/HumanCrafted" className="text-foreground hover:text-muted" target="_blank" rel="noopener noreferrer">
             <span className="sr-only">Github</span>
             <Github className="h-5 w-5" strokeWidth={2} />
           </Link>

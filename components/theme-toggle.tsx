@@ -25,11 +25,11 @@ export function ThemeToggle() {
       className="w-14 h-14 flex items-center justify-center text-foreground relative"
     >
       <Sun
-        className={`h-6 w-6 transition-all ${currentTheme === "dark" ? "scale-0 -rotate-90" : "scale-100 rotate-0"}`}
+        className={`h-6 w-6 transition-all hover:text-muted ${currentTheme === "dark" ? "scale-0 -rotate-90" : "scale-100 rotate-0"}`}
         strokeWidth={2}
       />
       <Moon
-        className={`absolute h-6 w-6 transition-all ${currentTheme === "dark" ? "scale-100 rotate-0" : "scale-0 rotate-90"}`}
+        className={`absolute h-6 w-6 transition-all hover:text-muted ${currentTheme === "dark" ? "scale-100 rotate-0" : "scale-0 rotate-90"}`}
         strokeWidth={2}
       />
       <span className="sr-only">Toggle theme</span>
