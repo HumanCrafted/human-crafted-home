@@ -4,7 +4,7 @@ import { NavBar } from "@/components/nav-bar"
 import { Footer } from "@/components/footer"
 import { fetchProjectContent, listProjects } from "@/lib/markdown"
 import { notFound } from "next/navigation"
-import { DynamicSvg } from "@/components/dynamic-svg"
+// import { DynamicSvg } from "@/components/dynamic-svg"
 
 type Props = {
   params: Promise<{ slug: string }>
@@ -28,7 +28,11 @@ export default async function ProjectPage({ params, searchParams }: Props) {
         <h1 className="text-4xl font-bold mb-6 font-sans">{metadata.title}</h1>
         <div className="mb-8 relative w-full aspect-square max-w-2xl mx-auto">
           {metadata.main_image.toLowerCase().endsWith(".svg") ? (
-            <DynamicSvg svg={metadata.main_image} className="w-full h-full object-contain" />
+            <img 
+              src={`/images/${metadata.main_image}`} 
+              alt={metadata.title} 
+              className="w-full h-full object-contain svg-darkmode" 
+            />
           ) : (
             <Image
               src={`/images/${metadata.main_image}`}
@@ -64,4 +68,3 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: metadata?.headline || "",
   }
 }
-

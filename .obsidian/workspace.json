@@ -190,6 +190,7 @@
   },
   "active": "9136378ddf4a7d6f",
   "lastOpenFiles": [
+    "components/dynamic-svg.tsx",
     "content/about.md",
     "content/lab.md",
     "projects/shop-v3.md",
@@ -225,7 +226,6 @@
     "node_modules/@typescript-eslint/eslint-plugin/docs/rules/space-before-blocks.md",
     "node_modules/@typescript-eslint/eslint-plugin/docs/rules/sort-type-union-intersection-members.md",
     "node_modules/@typescript-eslint/eslint-plugin/docs/rules/sort-type-constituents.md",
-    "node_modules/@typescript-eslint/eslint-plugin/docs/rules/semi.md",
     "node_modules/date-fns/docs/logotype.svg",
     "node_modules/date-fns/docs/logo.svg",
     "public/images/vennColab.svg",
