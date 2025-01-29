@@ -20,7 +20,7 @@ CAD design and engineering, User testing, Limited low volume production, Product
 
 ### Tools
 
-| **Tool**                 | **Spec**                                                        |
+| **Type**                 | **Spec**                                                        |
 | ------------------------ | --------------------------------------------------------------- |
 | Laser Cutter/Engraver    | 1300mm x 900mm 150 Watt CO2                                     |
 | CNC Router               | 24 in x 48 in X-Carve Pro                                       |
@@ -29,8 +29,9 @@ CAD design and engineering, User testing, Limited low volume production, Product
 | 3D Printer               | 7 in x 7 in x 7 in, Prusa MINI+                                 |
 | CAD design / engineering | Fusion360                                                       |
 | Electronics mockups      | Arduino, Raspberry Pi, IoT                                      |
-| Organization             | Notion, Airtable                                                |
-| AI Tools                 | ChatGPT, Vercel v0                                              |
+| Organization             | Notion, Airtable, Mural, Figjam                                 |
+| Business Operations      | Toggl, Xero, Ramp, Tally.so                                     |
+| AI Tools                 | ChatGPT, Vercel v0, GitHub Co-Pilot                             |
 
 ### Past Work
 
