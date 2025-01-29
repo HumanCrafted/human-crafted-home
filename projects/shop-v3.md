@@ -2,7 +2,7 @@
 title: Shop v3
 slug: shop-v3
 main_image: "![](public/images/shop-v3-thumbnail.svg)"
-featured: true
+featured: false
 categories:
   - around the house
   - around the shop
@@ -12,6 +12,7 @@ gallery_images:
   - "![](public/images/shop-v3-drawing-1.svg)"
   - "![](public/images/shop-v3-sketch-1.svg)"
 headline: A new home for Human Crafted
+version: "1.0"
 ---
 
 Two years ago we bought a 1950 ranch home from a family friend in the town we grew up in. A Summer of remodeling, followed by a Winter living/working in the new space (or what’s done of it), led me to decide to let go of my great space in Madison and set out to build a new space on our property. It’s a modest 12x24 ft, but hopefully will be just the right amount of space for lasering, wood working, and running the cnc.  

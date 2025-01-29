@@ -1,7 +1,0 @@
-<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect width="100%" height="100%" fill="#d0f0d0"/>
-  <path d="M50,150 L100,50 L150,150 Z" fill="none" stroke="#228B22" stroke-width="4"/>
-  <circle cx="100" cy="100" r="40" fill="#228B22"/>
-  <text x="100" y="180" font-family="Arial" font-size="14" text-anchor="middle">3D Printed Planter</text>
-</svg>
-
