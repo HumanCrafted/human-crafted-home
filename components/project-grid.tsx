@@ -1,4 +1,7 @@
+"use client"
+
 import { useState, useEffect, SyntheticEvent } from "react"
+import { useRouter, usePathname, useSearchParams } from "next/navigation"
 import { ProjectDetail } from "./project-detail"
 import type { Project } from "@/types/project"
 
@@ -11,6 +14,25 @@ interface ProjectGridProps {
 
 export function ProjectGrid({ projects, selectedTag, onSelectTag, onError }: ProjectGridProps) {
   const [selectedProject, setSelectedProject] = useState<string | null>(null)
+  const router = useRouter()
+  const searchParams = useSearchParams()
+
+  // Initialize selected project from URL on component mount
+  useEffect(() => {
+    const projectSlug = searchParams?.get('project')
+    if (projectSlug && projects.some(p => p.slug === projectSlug)) {
+      setSelectedProject(projectSlug)
+    }
+  }, [searchParams, projects])
+
+  // Update URL when project is selected
+  useEffect(() => {
+    if (selectedProject) {
+      window.history.pushState({}, '', `/?project=${selectedProject}`)
+    } else {
+      window.history.pushState({}, '', '/')
+    }
+  }, [selectedProject])
 
   const filteredProjects = selectedTag
     ? projects.filter((project) => project.categories.includes(selectedTag))

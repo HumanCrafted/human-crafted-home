@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, Suspense } from "react"
 import { CategoryFilter } from "@/components/category-filter"
 import { ProjectGrid } from "@/components/project-grid"
 import { NavBar } from "@/components/nav-bar"
@@ -56,9 +56,15 @@ export default function Home() {
           <div className="w-full h-px bg-foreground mb-8"></div>
           <div className="mb-4 text-lg font-medium font-mono">The Archive ↓</div>
           <CategoryFilter tags={allTags} onSelectTag={handleTagSelect} selectedTag={selectedTag} />
+          <Suspense fallback={<div className="text-center py-8">Loading projects...</div>}>
+            <ProjectGrid
+              projects={projects}
+              selectedTag={selectedTag}
+              onSelectTag={handleTagSelect}
+              onError={(e) => console.error("Error loading project image:", e)}
+            />
+          </Suspense>
         </section>
-
-        <ProjectGrid projects={projects} selectedTag={selectedTag} onSelectTag={handleTagSelect} />
       </div>
       <Footer />
     </main>

@@ -190,6 +190,7 @@
   },
   "active": "9136378ddf4a7d6f",
   "lastOpenFiles": [
+    "middleware.ts",
     "components/dynamic-svg.tsx",
     "content/about.md",
     "content/lab.md",
@@ -204,7 +205,6 @@
     "node_modules/next/dist/esm/client/components/react-dev-overlay/internal/container/RuntimeError/ComponentStackFrameRow.js.map",
     "node_modules/next/dist/esm/client/components/react-dev-overlay/internal/container/RuntimeError/ComponentStackFrameRow.js",
     "node_modules/next/dist/esm/client/components/react-dev-overlay/internal/container/RuntimeError/CallStackFrame.js.map",
-    "node_modules/next/dist/esm/client/components/react-dev-overlay/internal/container/RuntimeError/CallStackFrame.js",
     "node_modules/tailwindcss/node_modules/fast-glob/node_modules/glob-parent/README.md",
     "node_modules/tailwindcss/node_modules/fast-glob/node_modules/glob-parent/CHANGELOG.md",
     "node_modules/next/dist/compiled/@babel/runtime/README.md",
