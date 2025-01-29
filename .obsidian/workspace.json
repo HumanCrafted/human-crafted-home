@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/about.md",
+                "file": "content/lab.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "about"
+              "title": "lab"
             }
           }
         ]
@@ -190,6 +190,10 @@
   },
   "active": "9136378ddf4a7d6f",
   "lastOpenFiles": [
+    "tailwind.config.js",
+    "package-lock.json",
+    "content/about.md",
+    "content/lab.md",
     "node_modules/hast-util-select/node_modules/zwitch/readme.md",
     "node_modules/hast-util-select/node_modules/zwitch/package.json",
     "node_modules/hast-util-select/node_modules/zwitch/license",
@@ -203,7 +207,6 @@
     "node_modules/hast-util-select/node_modules/property-information/index.js",
     "node_modules/hast-util-select/node_modules/property-information/LICENSE",
     "node_modules/hast-util-select/node_modules/hast-util-whitespace/readme.md",
-    "node_modules/hast-util-select/node_modules/hast-util-whitespace/package.json",
     "node_modules/hast-util-select/node_modules/comma-separated-tokens/readme.md",
     "node_modules/hast-util-select/readme.md",
     "node_modules/boolbase/README.md",
@@ -215,8 +218,6 @@
     "node_modules/camelcase/readme.md",
     "node_modules/rehype-stringify/readme.md",
     "node_modules/rehype-add-classes/README.md",
-    "content/lab.md",
-    "content/about.md",
     "projects/shop-v3.md",
     "public/images/vennColab.svg",
     "public/images/vennExpertise.svg",
@@ -229,7 +230,6 @@
     "node_modules/@typescript-eslint/eslint-plugin/docs/rules/no-duplicate-type-constituents.md",
     "node_modules/@typescript-eslint/eslint-plugin/docs/rules/lines-around-comment.md",
     "node_modules/@typescript-eslint/eslint-plugin/docs/rules/key-spacing.md",
-    "node_modules/@typescript-eslint/eslint-plugin/docs/rules/block-spacing.md",
     "public/images/3d-printed-planter-thumbnail.svg",
     "public/images/cnc-coffee-table-thumbnail.svg",
     "public/images/laser-cut-lamp-thumbnail.svg",

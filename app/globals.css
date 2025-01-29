@@ -32,11 +32,10 @@
 
 @layer base {
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground pt-0;
     background-color: hsl(var(--background)) !important;
     color: hsl(var(--foreground)) !important;
     font-feature-settings: "rlig" 1, "calt" 1;
-    padding-top: 0;
   }
 }
 
@@ -99,16 +98,16 @@
 }
 
 .prose a {
-  @apply text-accent hover:text-accent/80;
+  @apply underline hover:decoration-wavy;
 }
 
 .prose strong {
-  @apply text-foreground;
+  
 }
 
 .prose ul,
 .prose ol {
-  @apply text-foreground;
+  @apply w-full font-mono list-disc ml-5;
 }
 
 .prose blockquote {
@@ -126,6 +125,19 @@
 .prose img {
   @apply rounded-lg;
 }
+
+.prose table {
+  @apply w-full font-mono;
+}
+
+.prose td  {
+  @apply pr-2;
+}
+
+.prose th {
+  @apply text-left text-lg font-medium;
+}
+
 
 /* Custom text selection styles */
 ::selection {
@@ -146,26 +158,6 @@
   filter: invert(91%) sepia(17%) saturate(166%) hue-rotate(1deg) brightness(94%) contrast(88%);
 }
 
-
 .inline-image {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 4em;
-}
-
-table {
-  width: 100%;
-  font-family: var(--font-mono);
-}
-
-
-td {
-  padding-right: 5%;
-}
-
-th {
-  text-align: left;
-  font-size: large;
-  font-weight: 500;
+  @apply block mb-16 max-w-full h-auto;
 }

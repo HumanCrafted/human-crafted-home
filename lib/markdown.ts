@@ -87,6 +87,50 @@ function processInlineImages() {
   }
 }
 
+function processInternalLinks() {
+  return (tree: any) => {
+    visit(tree, "text", (node, index, parent) => {
+      if (typeof node.value === "string") {
+        const linkRegex = /\[\[(.*?)\]\]/g
+        const matches = [...node.value.matchAll(linkRegex)]
+
+        if (matches.length > 0) {
+          const newNodes = []
+          let lastIndex = 0
+
+          matches.forEach((match) => {
+            const [fullMatch, linkText] = match
+            const matchIndex = match.index!
+
+            if (matchIndex > lastIndex) {
+              newNodes.push({
+                type: "text",
+                value: node.value.slice(lastIndex, matchIndex),
+              })
+            }
+
+            newNodes.push({
+              type: "html",
+              value: `<a href="/${linkText.toLowerCase()}">${linkText}</a>`,
+            })
+
+            lastIndex = matchIndex + fullMatch.length
+          })
+
+          if (lastIndex < node.value.length) {
+            newNodes.push({
+              type: "text",
+              value: node.value.slice(lastIndex),
+            })
+          }
+
+          parent.children.splice(index, 1, ...newNodes)
+        }
+      }
+    })
+  }
+}
+
 export async function getProjectSlugs() {
   return fs.readdirSync(projectsDirectory)
 }
@@ -165,6 +209,7 @@ export async function getContentBySlug(slug: string) {
     .use(remarkGfm)
     .use(processInlineImages)
     .use(preserveLineBreaks)
+    .use(processInternalLinks)
     .use(remarkHtml, { sanitize: false })
     .process(content)
 
