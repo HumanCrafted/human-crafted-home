@@ -4,7 +4,6 @@ import { NavBar } from "@/components/nav-bar"
 import { Footer } from "@/components/footer"
 import { fetchProjectContent, listProjects } from "@/lib/markdown"
 import { notFound } from "next/navigation"
-// import { DynamicSvg } from "@/components/dynamic-svg"
 
 type Props = {
   params: Promise<{ slug: string }>

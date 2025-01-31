@@ -23,3 +23,5 @@ The transom windows at one end are a set of three operable awning windows that m
 
 The shop won’t be spacious, so I’ll be using the space as efficiently as I can. It will house my large laser and the CNC router, plus MFT work tables and work surfaces.
 
+More images and details to come...
+
