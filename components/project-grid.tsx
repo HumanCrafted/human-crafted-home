@@ -68,7 +68,7 @@ export function ProjectGrid({ projects, selectedTag, onSelectTag, onError }: Pro
   }
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-10 gap-y-20">
       {filteredProjects.map((project) => (
         <div key={project.slug} className={selectedProject === project.slug ? "col-span-full" : ""}>
           <button

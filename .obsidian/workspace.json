@@ -191,8 +191,12 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "37659ab1ebf37133",
+  "active": "e3ae9734b80c0b53",
   "lastOpenFiles": [
+    "TO_DO.md",
+    "BUG_LIST.md",
+    "HELPER.md",
+    "helper.md",
     "projects/v60-filter-tray.md",
     "projects/wall-hooks.md",
     "projects/whiteboard-photo-wall.md",
@@ -215,10 +219,6 @@
     "projects/fridge-frames.md",
     "projects/concentric-coaster.md",
     "projects/mist-system.md",
-    "projects/made-kits-loom.md",
-    "projects/elevations-clock.md",
-    "projects/made-kits-loom-tools.md",
-    "projects/concrete-trays.md",
     "public/images/abc-blocks-thumbnail.svg",
     "node_modules/rehype-add-classes/node_modules/hast-util-select/lib/test.js",
     "node_modules/rehype-add-classes/node_modules/hast-util-select/lib/pseudo.js",
