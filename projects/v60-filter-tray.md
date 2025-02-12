@@ -13,4 +13,5 @@ gallery_images:
 headline: 
 version: "1.0"
 ---
+
 More project details coming soon!

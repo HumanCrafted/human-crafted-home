@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "projects/v60-filter-tray.md",
+                "file": "projects/slot-wall-hook.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "v60-filter-tray"
+              "title": "slot-wall-hook"
             }
           }
         ]
@@ -40,7 +40,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -165,10 +166,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "projects/v60-filter-tray.md"
+                "file": "projects/slot-wall-hook.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for v60-filter-tray"
+              "title": "File properties for slot-wall-hook"
             }
           }
         ],
@@ -192,9 +193,33 @@
   },
   "active": "37659ab1ebf37133",
   "lastOpenFiles": [
-    "projects/shop-v3.md",
-    "projects/taco-stands.md",
-    "projects/v60-filter-tray.md",
+    "projects/contact-lens-holder.md",
+    "projects/zen-coaster.md",
+    "projects/quip-stand.md",
+    "projects/tradeshow-layout-v4.md",
+    "projects/cord-keeper.md",
+    "projects/fridge-folders.md",
+    "projects/fridge-frames.md",
+    "projects/concentric-coaster.md",
+    "projects/mist-system.md",
+    "projects/made-kits-loom.md",
+    "projects/elevations-clock.md",
+    "projects/made-kits-loom-tools.md",
+    "projects/concrete-trays.md",
+    "projects/acrylic-robin.md",
+    "projects/elevations.md",
+    "projects/tissue-dispenser.md",
+    "projects/retail-sandwich-sign.md",
+    "projects/led-open-sign.md",
+    "projects/acrylic-trees.md",
+    "projects/modern-doll-house.md",
+    "projects/bath-container.md",
+    "projects/post-it-holders.md",
+    "projects/acrylic-deer-and-snowman.md",
+    "projects/shop-v2.md",
+    "projects/trofast-storage-shelf.md",
+    "projects/whiteboard-photo-wall.md",
+    "public/images/abc-blocks-thumbnail.svg",
     "node_modules/rehype-add-classes/node_modules/hast-util-select/lib/test.js",
     "node_modules/rehype-add-classes/node_modules/hast-util-select/lib/pseudo.js",
     "node_modules/rehype-add-classes/node_modules/hast-util-select/lib/nest.js",
@@ -205,29 +230,6 @@
     "node_modules/rehype-add-classes/node_modules/hast-util-select/lib/attribute.js",
     "node_modules/rehype-add-classes/node_modules/hast-util-select/lib/any.js",
     "node_modules/rehype-add-classes/node_modules/css-selector-parser/lib/utils.js",
-    "node_modules/rehype-add-classes/node_modules/zwitch/readme.md",
-    "node_modules/rehype-add-classes/node_modules/space-separated-tokens/readme.md",
-    "node_modules/rehype-add-classes/node_modules/property-information/readme.md",
-    "node_modules/rehype-add-classes/node_modules/nth-check/README.md",
-    "node_modules/rehype-add-classes/node_modules/hast-util-whitespace/readme.md",
-    "node_modules/rehype-add-classes/node_modules/hast-util-select/readme.md",
-    "node_modules/rehype-add-classes/node_modules/hast-util-has-property/readme.md",
-    "node_modules/rehype-add-classes/node_modules/css-selector-parser/README.md",
-    "node_modules/rehype-add-classes/node_modules/comma-separated-tokens/readme.md",
-    "node_modules/rehype-add-classes/README.md",
-    "node_modules/not/README.md",
-    "node_modules/hast-util-is-element/readme.md",
-    "node_modules/camelcase/readme.md",
-    "node_modules/hast-util-sanitize/readme.md",
-    "node_modules/boolbase/README.md",
-    "node_modules/nth-check/README.md",
-    "node_modules/hast-util-to-string/readme.md",
-    "node_modules/hast-util-has-property/readme.md",
-    "node_modules/direction/readme.md",
-    "node_modules/bcp-47-match/readme.md",
-    "node_modules/css-selector-parser/README.md",
-    "node_modules/remark-html/readme.md",
-    "node_modules/remark/readme.md",
     "public/images/tisue-dispenser-thumbnail.svg",
     "public/images/shop-v2-thumbnail.svg",
     "public/images/bi-fold-wallet-thumbnail.svg",
@@ -236,7 +238,6 @@
     "public/images/fridge-folders-thumbnail.svg",
     "public/images/fridge-frames-thumbnail.svg",
     "public/images/concrete-coaster-thumbnail.svg",
-    "public/images/mist-system-thumbnail.svg",
-    "public/images/elevations-clock-thumbnail.svg"
+    "public/images/mist-system-thumbnail.svg"
   ]
 }
