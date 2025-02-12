@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "projects/slot-wall-hook.md",
+                "file": "projects/uv-micro.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "slot-wall-hook"
+              "title": "uv-micro"
             }
           }
         ]
@@ -191,13 +191,25 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "e3ae9734b80c0b53",
+  "active": "37659ab1ebf37133",
   "lastOpenFiles": [
-    "bug_list.md",
-    "projects/contact-lens-holder.md",
+    "projects/v60-filter-tray.md",
+    "projects/wall-hooks.md",
+    "projects/whiteboard-photo-wall.md",
     "projects/zen-coaster.md",
-    "projects/quip-stand.md",
+    "projects/toilet-paper-holder.md",
+    "projects/contact-lens-holder.md",
+    "projects/abc-blocks.md",
+    "content templates/project properties.md",
+    "content templates/more project details.md",
+    "projects/sunnersta-wire-tray.md",
     "projects/tradeshow-layout-v4.md",
+    "projects/erasable-notepad.md",
+    "projects/sunnersta-tape.md",
+    "projects/uv-micro.md",
+    "projects/slot-wall-hook.md",
+    "bug_list.md",
+    "projects/quip-stand.md",
     "projects/cord-keeper.md",
     "projects/fridge-folders.md",
     "projects/fridge-frames.md",
@@ -207,18 +219,6 @@
     "projects/elevations-clock.md",
     "projects/made-kits-loom-tools.md",
     "projects/concrete-trays.md",
-    "projects/acrylic-robin.md",
-    "projects/elevations.md",
-    "projects/tissue-dispenser.md",
-    "projects/retail-sandwich-sign.md",
-    "projects/led-open-sign.md",
-    "projects/acrylic-trees.md",
-    "projects/modern-doll-house.md",
-    "projects/bath-container.md",
-    "projects/post-it-holders.md",
-    "projects/acrylic-deer-and-snowman.md",
-    "projects/shop-v2.md",
-    "projects/trofast-storage-shelf.md",
     "public/images/abc-blocks-thumbnail.svg",
     "node_modules/rehype-add-classes/node_modules/hast-util-select/lib/test.js",
     "node_modules/rehype-add-classes/node_modules/hast-util-select/lib/pseudo.js",

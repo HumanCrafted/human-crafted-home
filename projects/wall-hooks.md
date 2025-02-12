@@ -7,7 +7,7 @@ categories:
   - 3d printing
   - around the house
   - bathroom
-published_date: 10-04-2021
+published_date: 2021-10-04
 gallery_images: 
 headline: 
 version: "1.0"
