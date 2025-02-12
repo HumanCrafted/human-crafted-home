@@ -191,8 +191,9 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "37659ab1ebf37133",
+  "active": "e3ae9734b80c0b53",
   "lastOpenFiles": [
+    "bug_list.md",
     "projects/contact-lens-holder.md",
     "projects/zen-coaster.md",
     "projects/quip-stand.md",
@@ -218,7 +219,6 @@
     "projects/acrylic-deer-and-snowman.md",
     "projects/shop-v2.md",
     "projects/trofast-storage-shelf.md",
-    "projects/whiteboard-photo-wall.md",
     "public/images/abc-blocks-thumbnail.svg",
     "node_modules/rehype-add-classes/node_modules/hast-util-select/lib/test.js",
     "node_modules/rehype-add-classes/node_modules/hast-util-select/lib/pseudo.js",
