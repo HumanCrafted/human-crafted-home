@@ -4,7 +4,7 @@ import { Instagram, Twitter, Linkedin, Github } from 'lucide-react'
 export function Footer() {
   return (
     <footer className="bg-background">
-      <div className="mx-auto w-full px-[5%] py-12 md:flex md:items-center md:justify-between">
+      <div className="mx-auto w-full px-[var(--content-padding)] py-12 md:flex md:items-center md:justify-between">
         <div className="flex justify-center space-x-6 md:order-2">
           <Link href="https://www.instagram.com/human_crafted/" className="text-foreground hover:text-muted" target="_blank" rel="noopener noreferrer">
             <span className="sr-only">Instagram</span>

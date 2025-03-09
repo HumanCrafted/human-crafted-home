@@ -5,7 +5,6 @@ import { CategoryFilter } from "@/components/category-filter"
 import { ProjectGrid } from "@/components/project-grid"
 import { NavBar } from "@/components/nav-bar"
 import { Footer } from "@/components/footer"
-import ScrambledText from "@/components/scrambled-text"
 import type { Project } from "@/types/project"
 
 export default function Home() {
@@ -40,15 +39,12 @@ export default function Home() {
   return (
     <main className="bg-background text-foreground min-h-screen flex flex-col">
       <NavBar />
-      <div className="flex-grow w-full px-[5%] pt-[20vh]">
+      <div className="flex-grow w-full px-[var(--content-padding)] pt-[20vh]">
         <section className="mb-24 h-[40vh] flex items-center">
           <div className="max-w-[800px]">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-normal font-mono mb-4">
               A product design studio specializing in the rapid realization of ideas.
             </h1>
-            <p className="text-3xl md:text-4xl lg:text-5xl font-normal font-mono">
-              We make <ScrambledText words={scrambledWords} interval={5000} /> better.
-            </p>
           </div>
         </section>
 

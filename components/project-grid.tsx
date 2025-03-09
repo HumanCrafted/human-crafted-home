@@ -83,7 +83,7 @@ export function ProjectGrid({ projects, selectedTag, onSelectTag, onError }: Pro
                 onError={onError}
               />
             </div>
-            <h3 className="text-lg text-center font-mono">{project.title}</h3>
+            <h3 className="text-base text-center font-mono">{project.title}</h3>
           </button>
           {selectedProject === project.slug && (
             <ProjectDetail project={project} onClose={handleCloseProject} onCategoryClick={handleCategoryClick} />

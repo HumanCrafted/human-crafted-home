@@ -6,7 +6,7 @@ import { Logo } from "@/components/logo"
 
 export function NavBar() {
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-blur px-[5%] py-8" role="navigation">
+    <div className="fixed top-0 left-0 right-0 z-50 bg-blur px-[var(--content-padding)] py-8" role="navigation">
       <header className="flex flex-col md:flex-row md:items-center md:justify-between">
         <div className="flex items-center justify-between w-full md:w-auto">
           <Logo />
@@ -22,8 +22,8 @@ export function NavBar() {
           </div>
         </div>
         <nav className="flex flex-col items-start mt-8 space-y-8 md:flex-row md:items-center md:mt-0 md:space-y-0 md:space-x-8">
-          <NavLink href="/about" className="text-lg font-mono">
-            About
+          <NavLink href="/more" className="text-lg font-mono">
+            More
           </NavLink>
           <div className="hidden md:flex md:items-center md:space-x-4">
             <ThemeToggle />

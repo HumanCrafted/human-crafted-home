@@ -117,9 +117,12 @@ function processInternalLinks() {
               })
             }
 
+            // Update "about" links to "more"
+            const href = linkText.toLowerCase() === "about" ? "/more" : `/${linkText.toLowerCase()}`
+
             newNodes.push({
               type: "html",
-              value: `<a href="/${linkText.toLowerCase()}">${linkText}</a>`,
+              value: `<a href="${href}">${linkText}</a>`,
             })
 
             lastIndex = matchIndex + fullMatch.length

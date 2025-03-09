@@ -1,6 +1,6 @@
 **Bugs to fix**
 - [ ] scrambled text in dark mode is slow
-- [ ] fix spacing between rows of projects in grid
+- [x] fix spacing between rows of projects in grid
 - [ ] mobile on iphone nav bar design
 
 

@@ -8,7 +8,7 @@ export default async function Lab() {
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       <NavBar />
-      <main className="flex-grow pt-32 w-full px-[5%] pt-[20vh]">
+      <main className="flex-grow pt-32 w-full px-[var(--content-padding)] pt-[20vh]">
         <section className="mb-24 h-[40vh] flex items-center">
           <div className="max-w-[800px]">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-normal font-mono mb-4">

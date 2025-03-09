@@ -18,6 +18,8 @@
     --font-sans: var(--font-work-sans), sans-serif;
     /* --font-mono: input-mono-narrow, monospace; */
     --font-mono: var(--font-ibm-plex-mono), monospace;
+
+    --content-padding: 8%;
   }
 
   .dark {
@@ -112,6 +114,28 @@
     }
   }
 
+  .font-mono {
+    -webkit-font-smoothing: antialiased;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
+  .scrambled-text {
+    isolation: isolate;
+    contain: content;
+    opacity: 0.999; /* Creates a new stacking context */
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    will-change: transform;
+    transform: translateZ(0);
+  }
+
+  /* Dark mode specific optimizations */
+  .dark .scrambled-text {
+    text-rendering: optimizeLegibility;
+    filter: none; /* Ensure no filters are being applied */
+  }
+
 /* Custom prose styles */
 .prose {
   @apply text-foreground;
@@ -135,7 +159,7 @@
 }
 
 .prose h3 {
-  @apply text-xl md:text-2xl lg:text-3xl font-normal py-8 lg:py-16;
+  @apply text-xl md:text-2xl lg:text-3xl font-normal py-8 lg:py-16 scroll-mt-32;
 }
 
 .prose p {
@@ -181,6 +205,11 @@
 
 .prose th {
   @apply text-left text-lg font-medium;
+}
+
+.prose hr{
+  border-color: hsl(var(--foreground));
+  margin-top: 2rem !important;
 }
 
   /* Custom text selection styles */
