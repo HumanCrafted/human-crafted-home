@@ -52,7 +52,7 @@
     if (toggle) {
       const theme = getThemeToApply(preference);
       toggle.setAttribute('aria-label', `Switch to ${theme === 'light' ? 'dark' : 'light'} theme`);
-      toggle.innerHTML = theme === 'light' ? '🌙' : '☀️';
+      // Icon visibility is now handled by CSS based on data-theme attribute
     }
   }
   

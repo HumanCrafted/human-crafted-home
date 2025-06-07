@@ -143,10 +143,35 @@ body {
   transition: color 150ms ease;
   font-size: 1rem;
   margin-left: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .theme-toggle:hover {
   color: hsl(var(--muted));
+}
+
+.theme-icon {
+  transition: opacity 150ms ease;
+}
+
+/* Show sun icon in light mode, hide moon */
+.theme-icon-light {
+  display: block;
+}
+
+.theme-icon-dark {
+  display: none;
+}
+
+/* Show moon icon in dark mode, hide sun */
+[data-theme="dark"] .theme-icon-light {
+  display: none;
+}
+
+[data-theme="dark"] .theme-icon-dark {
+  display: block;
 }
 
 /* Main content */
