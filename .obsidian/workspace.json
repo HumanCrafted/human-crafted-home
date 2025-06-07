@@ -34,6 +34,18 @@
             }
           },
           {
+            "id": "f99b1b6df89fb020",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.10"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.10"
+            }
+          },
+          {
             "id": "08bb56c501112836",
             "type": "leaf",
             "state": {
@@ -46,7 +58,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -216,8 +228,11 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "303fc62a55b5680f",
+  "active": "f99b1b6df89fb020",
   "lastOpenFiles": [
+    "more.md",
+    "lab.md",
+    "assets/js/theme.js",
     "projects/uv-micro.md",
     "TO_DO.md",
     "BUG_LIST.md",
@@ -242,8 +257,6 @@
     "projects/cord-keeper.md",
     "projects/fridge-folders.md",
     "projects/fridge-frames.md",
-    "projects/concentric-coaster.md",
-    "projects/mist-system.md",
     "public/images/abc-blocks-thumbnail.svg",
     "node_modules/rehype-add-classes/node_modules/hast-util-select/lib/test.js",
     "node_modules/rehype-add-classes/node_modules/hast-util-select/lib/pseudo.js",
@@ -254,7 +267,6 @@
     "node_modules/rehype-add-classes/node_modules/hast-util-select/lib/class-name.js",
     "node_modules/rehype-add-classes/node_modules/hast-util-select/lib/attribute.js",
     "node_modules/rehype-add-classes/node_modules/hast-util-select/lib/any.js",
-    "node_modules/rehype-add-classes/node_modules/css-selector-parser/lib/utils.js",
     "public/images/tisue-dispenser-thumbnail.svg",
     "public/images/shop-v2-thumbnail.svg",
     "public/images/bi-fold-wallet-thumbnail.svg",

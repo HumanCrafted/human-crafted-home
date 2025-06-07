@@ -1,24 +1,10 @@
 ---
-layout: home
-title: Welcome to Human Crafted Home
+layout: default
+title: Human Crafted
 ---
 
-# Welcome to Human Crafted Home
+# A product design studio specializing in the rapid realization of ideas.
 
-This is your Jekyll-powered website, managed with Obsidian and automatically deployed via GitHub Pages.
+## The Archive
 
-## Getting Started
-
-You can edit this content directly in Obsidian or any markdown editor. When you push changes to GitHub, your site will automatically update.
-
-## Navigation
-
-- [[About]] - Learn more about this site
-- [Blog](/blog/) - Read the latest posts
-
-## Features
-
-- ✅ Jekyll static site generation
-- ✅ Obsidian-friendly markdown editing
-- ✅ Automatic GitHub Pages deployment
-- ✅ Wikilink support for easy cross-referencing
+Projects and collaborations coming soon...
