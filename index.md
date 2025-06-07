@@ -24,8 +24,9 @@ title: Human Crafted
   {% for project in sorted_projects %}
     <a href="{{ project.url | relative_url }}" class="project-card" data-categories="{{ project.categories | join: ',' }}">
       <div class="project-image">
-        {% if project.slug %}
-          <img src="{{ '/assets/images/' | append: project.slug | append: '-thumbnail.svg' | relative_url }}" alt="{{ project.title }}" />
+        {% if project.main_image %}
+          {% assign image_path = project.main_image | replace: '![', '' | replace: '](', '' | replace: ')', '' | split: '](' | last | replace: 'public/images/', '/assets/images/' %}
+          <img src="{{ image_path | relative_url }}" alt="{{ project.title }}" />
         {% else %}
           <!-- Fallback SVG -->
           <svg width="120" height="80" viewBox="0 0 120 80" fill="none">

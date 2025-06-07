@@ -16,7 +16,8 @@ layout: default
 
   {% if page.main_image %}
     <div class="project-hero">
-      {{ page.main_image }}
+      {% assign corrected_image = page.main_image | replace: 'public/images/', '/assets/images/' %}
+      {{ corrected_image }}
     </div>
   {% endif %}
 
