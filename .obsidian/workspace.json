@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_projects/note-todo-stack.md",
+                "file": "_projects/acrylic-deer-and-snowman.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "note-todo-stack"
+              "title": "acrylic-deer-and-snowman"
             }
           }
         ]
@@ -193,6 +193,9 @@
   },
   "active": "f99b1b6df89fb020",
   "lastOpenFiles": [
+    "_projects/abc-blocks.md",
+    "_projects/acrylic-deer-and-snowman.md",
+    "_projects/note-todo-stack.md",
     "_projects/quip-stand.md",
     "_projects/retail-shield.md",
     "_projects/shop-v3.md",
@@ -208,9 +211,7 @@
     "_projects/cord-keeper.md",
     "_projects/concrete-trays.md",
     "_projects/acrylic-robin.md",
-    "_projects/abc-blocks.md",
     "_projects/made-kits-loom.md",
-    "_projects/acrylic-deer-and-snowman.md",
     "content/projects/abc-blocks.md",
     "_layouts/project.html",
     "_projects/zen-coaster.md",
@@ -219,7 +220,6 @@
     "_projects/wall-hooks.md",
     "_projects/v60-filter-tray.md",
     "_projects/uv-micro.md",
-    "_projects/trofast-storage-shelf.md",
     "_projects",
     "assets/images/abc-blocks-thumbnail.svg",
     "assets/images/concrete-trays-thumbnail.svg",
