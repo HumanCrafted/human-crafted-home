@@ -14,7 +14,7 @@ I am proud of this range, and Iâ€™ve come to appreciate it as my super power. ðŸ
 
 ### Expertise
 
-![](public/images/vennExpertise.svg)
+![](/assets/images/vennExpertise.svg)
 
 
 CAD design and engineering, User testing, Limited low volume production, Product strategy, Production support, Concept development, Production fixturing / patterns, Industrial design, Packaging design, Digital mockups, Packaging mockups, Web design, Fabrication, Physical prototyping, Electronics prototyping, App prototyping, Space planning, Architectural layout and concepts, Signage and way-finding, Point-of-purchase design, ...
@@ -31,7 +31,7 @@ Masen Environmental Solutions, PLOT Communications, Everthine Jewelry, Violet De
 ### Process
 
 
-![](public/images/vennColab.svg)
+![](/assets/images/vennColab.svg)
 
 We build to learn. We cut through the chaos to identify the next discrete and logical step to solve any problem. Then we get to work rapidly building solutions to test, informing future steps, and above all... **MAKING PROGRESS.**
 

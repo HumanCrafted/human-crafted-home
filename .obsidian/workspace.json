@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_projects/contact-lens-holder.md",
+                "file": "_projects/note-todo-stack.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "contact-lens-holder"
+              "title": "note-todo-stack"
             }
           }
         ]
@@ -193,11 +193,19 @@
   },
   "active": "f99b1b6df89fb020",
   "lastOpenFiles": [
+    "_projects/quip-stand.md",
+    "_projects/retail-shield.md",
+    "_projects/shop-v3.md",
+    "_projects/sunnersta-blade.md",
+    "_projects/slot-wall-hook.md",
+    "_projects/sunnersta-hook.md",
+    "_projects/sunnersta-tape.md",
+    "_projects/tissue-dispenser.md",
+    "_projects/contact-lens-holder.md",
     "_projects/made-kits-fun-loom.md",
     "_projects/led-open-sign.md",
     "_projects/everthine-jewelry-stand.md",
     "_projects/cord-keeper.md",
-    "_projects/contact-lens-holder.md",
     "_projects/concrete-trays.md",
     "_projects/acrylic-robin.md",
     "_projects/abc-blocks.md",
@@ -212,14 +220,6 @@
     "_projects/v60-filter-tray.md",
     "_projects/uv-micro.md",
     "_projects/trofast-storage-shelf.md",
-    "_projects/trofast-lego-storage.md",
-    "_projects/tradeshow-layout-v4.md",
-    "_projects/toilet-paper-holder.md",
-    "_projects/tissue-dispenser.md",
-    "_projects/taco-stands.md",
-    "_projects/sunnersta-wire-tray.md",
-    "_projects/sunnersta-tape.md",
-    "_projects/sunnersta-pen-cup.md",
     "_projects",
     "assets/images/abc-blocks-thumbnail.svg",
     "assets/images/concrete-trays-thumbnail.svg",

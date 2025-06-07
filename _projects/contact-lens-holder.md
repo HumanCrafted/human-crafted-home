@@ -1,7 +1,7 @@
 ---
 title: Contact Lens Holder
 slug: lens-holder
-main_image: "![](public/images/contact-lens-holder-thumbnail.svg)"
+main_image: "![](/assets/images/contact-lens-holder-thumbnail.svg)"
 featured: false
 categories:
   - 3d printing
