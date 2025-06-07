@@ -3,7 +3,7 @@ title: Human Crafted Home
 email: your-email@example.com
 description: >-
   A website built with Jekyll, managed with Obsidian, and deployed via GitHub Pages.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/Human-Crafted-Home" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
@@ -41,6 +41,4 @@ kramdown:
     block:
       line_numbers: false
 
-# Enable wikilinks (Obsidian-style [[links]])
-plugins:
-  - jekyll-wikilinks
+# GitHub Pages compatible plugins only
