@@ -1,7 +1,7 @@
 ---
 title: Acrylic Trees
 slug: acrylic-trees
-main_image: "![](public/images/acrylic-trees-thumbnail.svg)"
+main_image: "![](/assets/images/acrylic-trees-thumbnail.svg)"
 featured: false
 categories:
   - laser

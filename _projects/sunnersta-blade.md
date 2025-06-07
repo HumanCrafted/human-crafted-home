@@ -1,7 +1,7 @@
 ---
 title: Sunnersta Blade
 slug: sunnersta-blade
-main_image: "![](public/images/sunnersta-blade-thumbnail.svg)"
+main_image: "![](/assets/images/sunnersta-blade-thumbnail.svg)"
 featured: false
 categories:
   - 3d printing

@@ -1,7 +1,7 @@
 ---
 title: Pen Cup
 slug: pen-cup
-main_image: "![](public/images/pen-cup-thumbnail.svg)"
+main_image: "![](/assets/images/pen-cup-thumbnail.svg)"
 featured: false
 categories:
   - laser

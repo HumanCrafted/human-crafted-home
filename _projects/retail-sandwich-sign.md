@@ -1,7 +1,7 @@
 ---
 title: Retail Sandwich Sign
 slug: retail-sandwich-sign
-main_image: "![](public/images/retail-sandwich-sign-thumbnail.svg)"
+main_image: "![](/assets/images/retail-sandwich-sign-thumbnail.svg)"
 featured: false
 categories:
   - client work

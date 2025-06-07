@@ -1,7 +1,7 @@
 ---
 title: Whiteboard Photo Wall
 slug: whiteboard-photo-wall
-main_image: "![](public/images/whiteboard-photo-wall-thumbnail.svg)"
+main_image: "![](/assets/images/whiteboard-photo-wall-thumbnail.svg)"
 featured: false
 categories:
   - around the shop

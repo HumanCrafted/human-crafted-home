@@ -1,7 +1,7 @@
 ---
 title: Trofast Storage Shelf
 slug: trofast-storage-shelf
-main_image: "![](public/images/trofast-storage-shelf-thumbnail.svg)"
+main_image: "![](/assets/images/trofast-storage-shelf-thumbnail.svg)"
 featured: false
 categories:
   - ikea hack

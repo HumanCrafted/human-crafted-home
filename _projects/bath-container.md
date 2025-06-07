@@ -1,7 +1,7 @@
 ---
 title: Bath Container
 slug: bath-container
-main_image: "![](public/images/bath-container-thumbnail.svg)"
+main_image: "![](/assets/images/bath-container-thumbnail.svg)"
 featured: false
 categories:
   - wooden

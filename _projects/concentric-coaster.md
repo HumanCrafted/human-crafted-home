@@ -1,7 +1,7 @@
 ---
 title: Concentric Coaster
 slug: concentric-coaster
-main_image: "![](public/images/concrete-coaster-thumbnail.svg)"
+main_image: "![](/assets/images/concrete-coaster-thumbnail.svg)"
 featured: false
 categories:
   - concrete

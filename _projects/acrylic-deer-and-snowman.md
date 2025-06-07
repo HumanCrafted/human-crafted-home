@@ -1,7 +1,7 @@
 ---
 title: Acrylic Deer and Snowman
 slug: acrylic-deer-and-snowman
-main_image: "![](public/images/acrylic-deer-and-snowman-thumbnail.svg)"
+main_image: "![](/assets/images/acrylic-deer-and-snowman-thumbnail.svg)"
 featured: false
 categories:
   - laser

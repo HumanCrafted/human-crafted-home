@@ -1,7 +1,7 @@
 ---
 title: Elevations Clock
 slug: elevations-clock
-main_image: "![](public/images/elevations-clock-thumbnail.svg)"
+main_image: "![](/assets/images/elevations-clock-thumbnail.svg)"
 featured: false
 categories:
   - wooden

@@ -1,7 +1,7 @@
 ---
 title: Slot Wall Hook
 slug: slot-wall-hook
-main_image: "![](public/images/slot-wall-hook-thumbnail.svg)"
+main_image: "![](/assets/images/slot-wall-hook-thumbnail.svg)"
 featured: false
 categories:
   - 3d printing

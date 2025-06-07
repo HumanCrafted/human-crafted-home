@@ -1,7 +1,7 @@
 ---
 title: Water Wall Toys
 slug: water-wall-toys
-main_image: "![](public/images/water-wall-toys-thumbnail.svg)"
+main_image: "![](/assets/images/water-wall-toys-thumbnail.svg)"
 featured: false
 categories:
   - 3d printing

@@ -1,7 +1,7 @@
 ---
 title: Fridge Folders
 slug: fridge-folders
-main_image: "![](public/images/fridge-folders-thumbnail.svg)"
+main_image: "![](/assets/images/fridge-folders-thumbnail.svg)"
 featured: false
 categories:
   - laser

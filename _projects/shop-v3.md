@@ -1,16 +1,16 @@
 ---
 title: Shop v3
 slug: shop-v3
-main_image: "![](public/images/shop-v3-thumbnail.svg)"
+main_image: "![](/assets/images/shop-v3-thumbnail.svg)"
 featured: false
 categories:
   - around the house
   - around the shop
 published_date: 2023-01-31
 gallery_images:
-  - "![](public/images/shop-v3-outdoors-1.png)"
-  - "![](public/images/shop-v3-drawing-1.svg)"
-  - "![](public/images/shop-v3-sketch-1.svg)"
+  - "![](/assets/images/shop-v3-outdoors-1.png)"
+  - "![](/assets/images/shop-v3-drawing-1.svg)"
+  - "![](/assets/images/shop-v3-sketch-1.svg)"
 headline: A new home for Human Crafted
 version: "1.0"
 ---

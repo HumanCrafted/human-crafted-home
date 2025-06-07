@@ -1,7 +1,7 @@
 ---
 title: Quip Stand
 slug: quip-stand
-main_image: "![](public/images/quip-stand-thumbnail.svg)"
+main_image: "![](/assets/images/quip-stand-thumbnail.svg)"
 featured: false
 categories:
   - around the house

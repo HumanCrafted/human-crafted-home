@@ -1,7 +1,7 @@
 ---
 title: Post-It Holders
 slug: post-it-holders
-main_image: "![](public/images/post-it-holders-thumbnail.svg)"
+main_image: "![](/assets/images/post-it-holders-thumbnail.svg)"
 featured: false
 categories:
   - laser

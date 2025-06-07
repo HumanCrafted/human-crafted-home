@@ -1,7 +1,7 @@
 ---
 title: Fellow Brush Stand
 slug: fellow-brush-stand
-main_image: "![](public/images/fellow-brush-stand-thumbnail.svg)"
+main_image: "![](/assets/images/fellow-brush-stand-thumbnail.svg)"
 featured: false
 categories:
   - 3d printing

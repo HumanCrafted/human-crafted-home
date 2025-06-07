@@ -1,7 +1,7 @@
 ---
 title: Modern Doll House
 slug: modern-doll-house
-main_image: "![](public/images/modern-doll-house-thumbnail.svg)"
+main_image: "![](/assets/images/modern-doll-house-thumbnail.svg)"
 featured: false
 categories:
   - furniture

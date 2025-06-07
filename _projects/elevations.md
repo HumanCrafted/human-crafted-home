@@ -1,7 +1,7 @@
 ---
 title: Elevations
 slug: elevations
-main_image: "![](public/images/elevations-thumbnail.svg)"
+main_image: "![](/assets/images/elevations-thumbnail.svg)"
 featured: false
 categories:
   - wooden

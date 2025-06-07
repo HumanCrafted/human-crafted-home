@@ -1,7 +1,7 @@
 ---
 title: Erasable Notepad
 slug: erasable-notepad
-main_image: "![](public/images/eraseable-notepad-thumbnail.svg)"
+main_image: "![](/assets/images/eraseable-notepad-thumbnail.svg)"
 featured: false
 categories:
   - laser

@@ -1,7 +1,7 @@
 ---
 title: Sunnersta Wire Tray
 slug: sunnersta-wire-tray
-main_image: "![](public/images/sunnersta-wire-tray-thumbnail.svg)"
+main_image: "![](/assets/images/sunnersta-wire-tray-thumbnail.svg)"
 featured: false
 categories:
   - 3d printing

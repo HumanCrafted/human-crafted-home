@@ -1,7 +1,7 @@
 ---
 title: Trofast Lego Storage
 slug: trofast-lego-storage
-main_image: "![](public/images/trofast-lefo-storage-thumbnail.svg)"
+main_image: "![](/assets/images/trofast-lefo-storage-thumbnail.svg)"
 featured: false
 categories:
   - ikea hack

@@ -1,7 +1,7 @@
 ---
 title: Made Kits Loom Tools
 slug: made-kits-loom-tools
-main_image: "![](public/images/made-kits-loom-tools-thumbnail.svg)"
+main_image: "![](/assets/images/made-kits-loom-tools-thumbnail.svg)"
 featured: false
 categories:
   - laser

@@ -1,7 +1,7 @@
 ---
 title: Dyson Hand Saver
 slug: dyson-hand-saver
-main_image: "![](public/images/dyson-hand-saver-thumbnail.svg)"
+main_image: "![](/assets/images/dyson-hand-saver-thumbnail.svg)"
 featured: false
 categories:
   - 3d printing

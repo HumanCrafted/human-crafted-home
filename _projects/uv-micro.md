@@ -1,7 +1,7 @@
 ---
 title: UV Micro
 slug: uv-micro
-main_image: "![](public/images/uv-micro-thumbnail.svg)"
+main_image: "![](/assets/images/uv-micro-thumbnail.svg)"
 featured: false
 categories:
   - client work

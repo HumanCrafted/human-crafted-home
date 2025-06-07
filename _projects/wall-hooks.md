@@ -1,7 +1,7 @@
 ---
 title: Wall Hooks
 slug: wall-hooks
-main_image: "![](public/images/wall-hooks-thumbnail.svg)"
+main_image: "![](/assets/images/wall-hooks-thumbnail.svg)"
 featured: false
 categories:
   - 3d printing

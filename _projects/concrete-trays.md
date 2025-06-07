@@ -1,7 +1,7 @@
 ---
 title: Concrete Trays
 slug: concrete-trays
-main_image: "![](public/images/concrete-trays-thumbnail.svg)"
+main_image: "![](/assets/images/concrete-trays-thumbnail.svg)"
 featured: false
 categories:
   - concrete
