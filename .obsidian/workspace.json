@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "lab.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "lab"
+              "title": "index"
             }
           }
         ]
@@ -193,10 +193,10 @@
   },
   "active": "f99b1b6df89fb020",
   "lastOpenFiles": [
-    "more.md",
     "lab.md",
-    "about.md",
     "index.md",
+    "more.md",
+    "about.md",
     "more 1.md",
     "_projects/abc-blocks.md",
     "_projects/acrylic-trees.md",
