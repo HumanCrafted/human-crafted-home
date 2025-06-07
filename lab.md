@@ -1,13 +1,6 @@
 ---
 layout: default
-title: Let's co/lab
+title: .Co/Lab
 permalink: /lab/
 ---
-
-# Let's co/lab
-
-This is where collaboration happens. Content coming soon...
-
----
-
-Ready to work together? Let's explore what's possible.
+We love working with other passionate entrepreneurs and forward-thinking companies. You have dreams and goals; we love planning and building. Let's **collab** to make something great! Read [[more]] about what we do, or reach out using the button below ↓.
