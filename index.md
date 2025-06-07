@@ -10,23 +10,7 @@ title: Human Crafted
   
   <div class="tag-filters">
     <button class="tag-filter active" data-filter="all">all</button>
-    {% assign all_categories = "" %}
-    {% for project in site.projects %}
-      {% if project.categories %}
-        {% if project.categories contains "," %}
-          {% assign project_cats = project.categories | split: "," %}
-        {% else %}
-          {% assign project_cats = project.categories %}
-        {% endif %}
-        {% for cat in project_cats %}
-          {% assign clean_cat = cat | strip %}
-          {% unless all_categories contains clean_cat %}
-            {% assign all_categories = all_categories | append: clean_cat | append: "," %}
-          {% endunless %}
-        {% endfor %}
-      {% endif %}
-    {% endfor %}
-    {% assign all_categories = all_categories | split: "," | sort %}
+    {% assign all_categories = site.projects | map: 'categories' | join: ',' | split: ',' | uniq | sort %}
     {% for category in all_categories %}
       {% unless category == blank %}
         <button class="tag-filter" data-filter="{{ category | strip }}">{{ category | strip }}</button>
@@ -38,12 +22,7 @@ title: Human Crafted
 <div class="project-grid">
   {% assign sorted_projects = site.projects | sort: 'published_date' | reverse %}
   {% for project in sorted_projects %}
-    {% if project.categories contains "," %}
-      {% assign card_categories = project.categories %}
-    {% else %}
-      {% assign card_categories = project.categories | join: ',' %}
-    {% endif %}
-    <a href="{{ project.url | relative_url }}" class="project-card" data-categories="{{ card_categories }}">
+    <a href="{{ project.url | relative_url }}" class="project-card" data-categories="{{ project.categories | join: ',' }}">
       <div class="project-image">
         {% if project.main_image %}
           {% assign image_path = project.main_image | replace: '![', '' | replace: '](', '' | replace: ')', '' | split: '](' | last %}
