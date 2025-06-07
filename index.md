@@ -1,7 +1,10 @@
 ---
 layout: default
-title: A product design studio specializing in the rapid realization of ideas.
+title: Human Crafted
 ---
+
+# A product design studio specializing in the rapid realization of ideas.
+
 <div class="archive-header">
   <h2 class="archive-title">The Archive</h2>
   
