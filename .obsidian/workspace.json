@@ -193,6 +193,8 @@
   },
   "active": "f99b1b6df89fb020",
   "lastOpenFiles": [
+    "assets/images/logo.svg",
+    "favicon.ico",
     "lab.md",
     "index.md",
     "more.md",
@@ -218,7 +220,6 @@
     "_projects/cord-keeper.md",
     "_projects/concrete-trays.md",
     "_projects/made-kits-loom.md",
-    "content/projects/abc-blocks.md",
     "_layouts/project.html",
     "_projects",
     "assets/images/abc-blocks-thumbnail.svg",
@@ -237,7 +238,6 @@
     "assets/js/theme.js",
     "node_modules/rehype-add-classes/node_modules/hast-util-select/lib/test.js",
     "node_modules/rehype-add-classes/node_modules/hast-util-select/lib/pseudo.js",
-    "node_modules/rehype-add-classes/node_modules/hast-util-select/lib/nest.js",
-    "node_modules/rehype-add-classes/node_modules/hast-util-select/lib/name.js"
+    "node_modules/rehype-add-classes/node_modules/hast-util-select/lib/nest.js"
   ]
 }

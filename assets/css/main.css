@@ -78,6 +78,16 @@ body {
   transition: color 150ms ease;
 }
 
+.site-logo {
+  height: 2rem;
+  width: auto;
+  transition: opacity 150ms ease;
+}
+
+.site-title:hover .site-logo {
+  opacity: 0.7;
+}
+
 /* Navigation */
 .site-nav {
   display: flex;
