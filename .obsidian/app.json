@@ -1,8 +1,13 @@
 {
   "alwaysUpdateLinks": true,
-  "newFileLocation": "root",
-  "newFileFolderPath": "images",
+  "newFileLocation": "current",
+  "newFileFolderPath": "content",
   "useMarkdownLinks": true,
-  "attachmentFolderPath": "./",
-  "newLinkFormat": "absolute"
+  "attachmentFolderPath": "assets/images",
+  "newLinkFormat": "relative",
+  "legacyEditor": false,
+  "livePreview": true,
+  "defaultViewMode": "preview",
+  "showFrontmatter": true,
+  "strictLineBreaks": false
 }

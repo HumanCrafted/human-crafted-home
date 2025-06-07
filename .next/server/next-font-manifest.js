@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/nginear/Documents/GitHub/human-crafted-home/app/layout\":[\"static/media/3478b6abef19b3b3-s.p.woff2\",\"static/media/684e5662d94c69e1-s.p.woff2\",\"static/media/035951aefad7b653-s.p.woff2\",\"static/media/6905431624c34d00-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
