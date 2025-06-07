@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Human Crafted
+title:
 ---
 
 # A product design studio specializing in the rapid realization of ideas.
