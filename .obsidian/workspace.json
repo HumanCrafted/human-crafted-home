@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "more.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "more"
             }
           }
         ]
@@ -193,8 +193,8 @@
   },
   "active": "f99b1b6df89fb020",
   "lastOpenFiles": [
-    "lab.md",
     "index.md",
+    "lab.md",
     "about.md",
     "more.md",
     "assets/js/theme.js",
