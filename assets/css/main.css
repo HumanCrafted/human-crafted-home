@@ -469,3 +469,23 @@ hr {
 .back-link:hover {
   color: hsl(var(--foreground));
 }
+
+/* Contact button */
+.contact-btn {
+  display: inline-block;
+  background: hsl(var(--foreground));
+  color: hsl(var(--background));
+  padding: 0.75rem 1.5rem;
+  border-radius: 1.5rem;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 400;
+  transition: all 150ms ease;
+  margin-top: 2rem;
+}
+
+.contact-btn:hover {
+  background: hsl(var(--muted));
+  color: hsl(var(--background));
+  transform: translateY(-1px);
+}
