@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/projects/abc-blocks.md",
+                "file": "_projects/acrylic-deer-and-snowman.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "abc-blocks"
+              "title": "acrylic-deer-and-snowman"
             }
           }
         ]
@@ -193,6 +193,8 @@
   },
   "active": "f99b1b6df89fb020",
   "lastOpenFiles": [
+    "content/projects/abc-blocks.md",
+    "_projects/abc-blocks.md",
     "_layouts/project.html",
     "_projects/zen-coaster.md",
     "_projects/whiteboard-photo-wall.md",
@@ -218,7 +220,6 @@
     "_projects/retail-sandwich-sign.md",
     "_projects/quip-stand.md",
     "_projects/post-it-holders.md",
-    "_projects/plant-support.md",
     "_projects",
     "assets/images/abc-blocks-thumbnail.svg",
     "assets/images/concrete-trays-thumbnail.svg",
@@ -237,7 +238,6 @@
     "node_modules/rehype-add-classes/node_modules/hast-util-select/lib/test.js",
     "node_modules/rehype-add-classes/node_modules/hast-util-select/lib/pseudo.js",
     "node_modules/rehype-add-classes/node_modules/hast-util-select/lib/nest.js",
-    "node_modules/rehype-add-classes/node_modules/hast-util-select/lib/name.js",
-    "node_modules/rehype-add-classes/node_modules/hast-util-select/lib/id.js"
+    "node_modules/rehype-add-classes/node_modules/hast-util-select/lib/name.js"
   ]
 }
