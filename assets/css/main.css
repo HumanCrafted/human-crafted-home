@@ -1,0 +1,278 @@
+/* Human Crafted Design System - Exact Recreation */
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Work+Sans:wght@400;500;700&display=swap');
+
+/* CSS Variables - Exact from new.humancrafted.co */
+:root {
+  --background: 39 26% 83%;
+  --foreground: 0 0% 20%;
+  --accent: 60 100% 50%;
+  --muted: 39 20% 71%;
+  --muted-foreground: 0 0% 40%;
+}
+
+[data-theme="dark"] {
+  --background: 0 0% 20%;
+  --foreground: 39 26% 83%;
+  --accent: 60 100% 50%;
+  --muted: 60 100% 50%;
+  --muted-foreground: 43 28% 95%;
+}
+
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 16px;
+  line-height: 1.5;
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--background));
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: all 150ms ease;
+  font-weight: 400;
+}
+
+/* Layout */
+.site-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 8%;
+}
+
+/* Header */
+.site-header {
+  padding: 3rem 0 1.5rem 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: hsl(var(--foreground));
+  text-decoration: none;
+  letter-spacing: -0.025em;
+}
+
+.site-title:hover {
+  color: hsl(var(--muted));
+  transition: color 150ms ease;
+}
+
+/* Navigation */
+.site-nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.site-nav a {
+  color: hsl(var(--muted));
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: color 150ms ease;
+}
+
+.site-nav a:hover {
+  color: hsl(var(--foreground));
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  background: none;
+  border: none;
+  color: hsl(var(--muted));
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  transition: color 150ms ease;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+.theme-toggle:hover {
+  color: hsl(var(--foreground));
+}
+
+/* Main content */
+.page-content {
+  flex: 1;
+  padding: 4rem 0 6rem 0;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: hsl(var(--foreground));
+  margin: 0;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 4rem;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  color: hsl(var(--foreground));
+  line-height: 1.625;
+}
+
+/* Links */
+a {
+  color: hsl(var(--foreground));
+  text-decoration: none;
+}
+
+a:hover {
+  color: hsl(var(--muted));
+  transition: color 150ms ease;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.75rem;
+  border-bottom: 1px solid hsl(var(--muted));
+}
+
+th {
+  font-weight: 500;
+  color: hsl(var(--foreground));
+}
+
+td {
+  color: hsl(var(--muted-foreground));
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Lists */
+ul, ol {
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  color: hsl(var(--foreground));
+}
+
+/* Code */
+code {
+  font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
+  background-color: hsl(var(--muted) / 0.1);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid hsl(var(--accent));
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: hsl(var(--muted-foreground));
+}
+
+/* HR */
+hr {
+  border: none;
+  border-top: 1px solid hsl(var(--muted));
+  margin: 3rem 0;
+}
+
+/* Footer */
+.site-footer {
+  padding: 3rem 0 2rem 0;
+  text-align: center;
+  margin-top: auto;
+}
+
+.site-footer p {
+  color: hsl(var(--muted));
+  font-size: 0.875rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .site-container {
+    padding: 0 5%;
+  }
+  
+  .site-header {
+    padding: 2rem 0 1rem 0;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+  
+  .site-nav {
+    gap: 1.5rem;
+  }
+  
+  .page-content {
+    padding: 3rem 0 4rem 0;
+  }
+  
+  h1 {
+    font-size: 2.25rem;
+    margin-bottom: 3rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+}

@@ -193,6 +193,7 @@
   },
   "active": "f99b1b6df89fb020",
   "lastOpenFiles": [
+    "assets/css/main.css",
     "index.md",
     "lab.md",
     "about.md",
@@ -219,7 +220,6 @@
     "projects/slot-wall-hook.md",
     "bug_list.md",
     "projects/quip-stand.md",
-    "projects/cord-keeper.md",
     "public/images/abc-blocks-thumbnail.svg",
     "node_modules/rehype-add-classes/node_modules/hast-util-select/lib/test.js",
     "node_modules/rehype-add-classes/node_modules/hast-util-select/lib/pseudo.js",
