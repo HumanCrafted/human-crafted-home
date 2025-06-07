@@ -1,1 +1,0 @@
-More project details coming soon!
