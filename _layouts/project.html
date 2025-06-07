@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<article class="project-detail">
+  <header class="project-header">
+    <h1>{{ page.title }}</h1>
+    {% if page.categories %}
+      <div class="project-categories">
+        {% for category in page.categories %}
+          <span class="category-tag">{{ category }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </header>
+
+  {% if page.main_image %}
+    <div class="project-hero">
+      {{ page.main_image }}
+    </div>
+  {% endif %}
+
+  <div class="project-content">
+    {{ content }}
+  </div>
+
+  {% if page.gallery_images %}
+    <div class="project-gallery">
+      <h2>Gallery</h2>
+      {{ page.gallery_images }}
+    </div>
+  {% endif %}
+
+  <footer class="project-footer">
+    <a href="{{ '/' | relative_url }}" class="back-link">← Back to Archive</a>
+  </footer>
+</article>

@@ -9,57 +9,62 @@ title: Human Crafted
   <h2 class="archive-title">The Archive</h2>
   
   <div class="tag-filters">
-    <button class="tag-filter active">all</button>
-    <button class="tag-filter">around the house</button>
-    <button class="tag-filter">around the shop</button>
-    <button class="tag-filter">3d printing</button>
-    <button class="tag-filter">kitchen</button>
-    <button class="tag-filter">coffee</button>
-    <button class="tag-filter">bathroom</button>
-    <button class="tag-filter">laser</button>
-    <button class="tag-filter">wooden</button>
-    <button class="tag-filter">desktop</button>
-    <button class="tag-filter">ikea hack</button>
-    <button class="tag-filter">client work</button>
-    <button class="tag-filter">brand</button>
-    <button class="tag-filter">retail</button>
-    <button class="tag-filter">lego</button>
-    <button class="tag-filter">furniture</button>
-    <button class="tag-filter">holiday</button>
-    <button class="tag-filter">electrical</button>
-    <button class="tag-filter">concrete</button>
+    <button class="tag-filter active" data-filter="all">all</button>
+    {% assign all_categories = site.projects | map: 'categories' | join: ',' | split: ',' | uniq | sort %}
+    {% for category in all_categories %}
+      {% unless category == blank %}
+        <button class="tag-filter" data-filter="{{ category | strip }}">{{ category | strip }}</button>
+      {% endunless %}
+    {% endfor %}
   </div>
 </div>
 
 <div class="project-grid">
-  <a href="#" class="project-card">
-    <div class="project-image">
-      <!-- SVG placeholder -->
-      <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
-        <rect x="10" y="30" width="100" height="40" fill="#666" rx="4"/>
-        <rect x="15" y="35" width="90" height="30" fill="#999" rx="2"/>
-      </svg>
-    </div>
-    <h3 class="project-title">Sample Project</h3>
-  </a>
-  
-  <a href="#" class="project-card">
-    <div class="project-image">
-      <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
-        <circle cx="60" cy="40" r="30" fill="#666"/>
-        <circle cx="60" cy="40" r="20" fill="#999"/>
-      </svg>
-    </div>
-    <h3 class="project-title">Another Project</h3>
-  </a>
-  
-  <a href="#" class="project-card">
-    <div class="project-image">
-      <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
-        <polygon points="60,10 100,60 20,60" fill="#666"/>
-        <polygon points="60,20 90,55 30,55" fill="#999"/>
-      </svg>
-    </div>
-    <h3 class="project-title">Third Project</h3>
-  </a>
+  {% assign sorted_projects = site.projects | sort: 'published_date' | reverse %}
+  {% for project in sorted_projects %}
+    <a href="{{ project.url | relative_url }}" class="project-card" data-categories="{{ project.categories | join: ',' }}">
+      <div class="project-image">
+        {% if project.slug %}
+          <img src="{{ '/assets/images/' | append: project.slug | append: '-thumbnail.svg' | relative_url }}" alt="{{ project.title }}" />
+        {% else %}
+          <!-- Fallback SVG -->
+          <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
+            <rect x="10" y="30" width="100" height="40" fill="#666" rx="4"/>
+          </svg>
+        {% endif %}
+      </div>
+      <h3 class="project-title">{{ project.title }}</h3>
+    </a>
+  {% endfor %}
 </div>
+
+<script>
+// Tag filtering functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const filters = document.querySelectorAll('.tag-filter');
+  const projects = document.querySelectorAll('.project-card');
+  
+  filters.forEach(filter => {
+    filter.addEventListener('click', function() {
+      // Update active state
+      filters.forEach(f => f.classList.remove('active'));
+      this.classList.add('active');
+      
+      const filterValue = this.dataset.filter;
+      
+      projects.forEach(project => {
+        if (filterValue === 'all') {
+          project.style.display = 'block';
+        } else {
+          const categories = project.dataset.categories.split(',');
+          if (categories.includes(filterValue)) {
+            project.style.display = 'block';
+          } else {
+            project.style.display = 'none';
+          }
+        }
+      });
+    });
+  });
+});
+</script>
