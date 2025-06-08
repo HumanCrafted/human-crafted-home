@@ -175,7 +175,10 @@ body {
 }
 
 /* Dark mode SVG filter */
-[data-theme="dark"] .svg-darkmode {
+[data-theme="dark"] .svg-darkmode,
+[data-theme="dark"] .page-content img[src$=".svg"],
+[data-theme="dark"] .project-image img[src$=".svg"],
+[data-theme="dark"] .project-image svg {
   filter: invert(91%) sepia(17%) saturate(166%) hue-rotate(1deg) brightness(94%) contrast(88%);
 }
 
