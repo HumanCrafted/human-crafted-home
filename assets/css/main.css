@@ -49,8 +49,7 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 0 8% 0 8%;
-  max-width: 90%;
+  padding: 0 8%;
 }
 
 /* Header */
@@ -200,8 +199,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 3rem;
   font-weight: 400;
-  margin-bottom: 6rem;
-  margin-top: 2rem;
+  margin-bottom: 4rem;
   line-height: 1;
 }
 
@@ -330,7 +328,7 @@ hr {
 .tag-filter {
   background: none;
   border: none;
-  color: hsl(var(--foreground));
+  color: hsl(var(--muted));
   font-family: inherit;
   font-size: 0.875rem;
   font-weight: 400;
