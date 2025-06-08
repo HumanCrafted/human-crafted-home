@@ -42,6 +42,10 @@ body {
   flex-direction: column;
   transition: all 150ms ease;
   font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'kern' 1;
+  text-rendering: optimizeLegibility;
 }
 
 /* Layout */
@@ -53,17 +57,32 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   width: 100%;
+  padding-top: 20vh;
 }
 
 /* Header */
 .site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: var(--background);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 2rem 0;
+  width: 100%;
 }
 
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 115px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .site-title {
@@ -126,14 +145,14 @@ body {
 }
 
 /* Co/lab button styling */
-.colab-btn {
+.site-nav .colab-btn {
   background: var(--foreground);
-  color: #dfd7c8;
+  color: var(--background) !important;
   padding: 0 1.375rem;
   border-radius: 1.875rem;
   text-decoration: none;
-  font-size: 22px;
-  font-weight: 700;
+  font-size: 22px !important;
+  font-weight: 700 !important;
   font-family: 'Work Sans', sans-serif;
   letter-spacing: -0.33px;
   transition: all 150ms ease;
@@ -145,16 +164,16 @@ body {
   white-space: nowrap;
 }
 
-.colab-btn:hover {
+.site-nav .colab-btn:hover {
   background: var(--muted);
-  color: #dfd7c8;
+  color: var(--background) !important;
 }
 
-.colab-btn:hover::after {
+.site-nav .colab-btn:hover::after {
   background-image: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23dfd7c8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>');
 }
 
-.colab-btn::after {
+.site-nav .colab-btn::after {
   content: "";
   width: 24px;
   height: 24px;
@@ -239,7 +258,7 @@ h1 {
   font-size: 3rem;
   font-weight: 400;
   margin-bottom: 0;
-  margin-top: 20vh;
+  margin-top: 0;
   line-height: 1.1;
   max-width: 60%;
   height: 40vh;
@@ -344,7 +363,7 @@ hr {
 /* Archive section */
 .archive-header {
   margin-bottom: 2rem;
-  margin-top: 8rem;
+  margin-top: 0;
 }
 
 .archive-title {
@@ -530,6 +549,7 @@ hr {
 @media (max-width: 768px) {
   .site-container {
     padding: 0 5%;
+    padding-top: 15vh;
   }
   
   .site-header {
@@ -540,6 +560,7 @@ hr {
     flex-direction: column;
     gap: 1.5rem;
     align-items: flex-start;
+    padding: 0 5%;
   }
   
   .site-nav {
@@ -552,7 +573,7 @@ hr {
   
   h1 {
     font-size: 2.25rem;
-    margin-top: 10vh;
+    margin-top: 0;
     height: 30vh;
     max-width: 100%;
   }
@@ -579,7 +600,7 @@ hr {
   }
   
   .archive-header {
-    margin-top: 4rem;
+    margin-top: 0;
   }
 }
 
