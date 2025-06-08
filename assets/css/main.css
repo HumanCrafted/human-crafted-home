@@ -67,9 +67,9 @@ body {
   left: 0;
   right: 0;
   z-index: 50;
-  background: var(--background);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background-color: rgba(223, 215, 200, 0.8);
   padding: 2rem 0;
   width: 100%;
 }
@@ -257,13 +257,21 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 3rem;
   font-weight: 400;
-  margin-bottom: 0;
+  margin-bottom: 2rem;
+  margin-top: 0;
+  line-height: 1.1;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 6rem;
   margin-top: 0;
   line-height: 1.1;
   max-width: 60%;
   height: 40vh;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
 
 h2 {
@@ -571,7 +579,7 @@ hr {
     padding: 0;
   }
   
-  h1 {
+  .hero-title {
     font-size: 2.25rem;
     margin-top: 0;
     height: 30vh;

@@ -3,7 +3,7 @@ layout: default
 title:
 ---
 
-# A product design studio specializing in the rapid realization of ideas.
+<h1 class="hero-title">A product design studio specializing in the rapid realization of ideas.</h1>
 
 <div class="archive-header">
   <h2 class="archive-title">The Archive</h2>
