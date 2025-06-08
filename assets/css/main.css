@@ -50,6 +50,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 0 8%;
+  max-width: 1400px;
 }
 
 /* Header */
@@ -185,7 +186,7 @@ body {
 /* Main content */
 .page-content {
   flex: 1;
-  padding: 4rem 0 6rem 0;
+  padding: 2rem 0 6rem 0;
 }
 
 /* Typography */
@@ -199,8 +200,10 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 3rem;
   font-weight: 400;
-  margin-bottom: 4rem;
-  line-height: 1;
+  margin-bottom: 8rem;
+  margin-top: 3rem;
+  line-height: 1.1;
+  max-width: 60%;
 }
 
 h2 {
@@ -328,7 +331,7 @@ hr {
 .tag-filter {
   background: none;
   border: none;
-  color: hsl(var(--muted));
+  color: hsl(var(--foreground));
   font-family: inherit;
   font-size: 0.875rem;
   font-weight: 400;
