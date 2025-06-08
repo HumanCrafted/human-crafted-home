@@ -142,6 +142,7 @@ body {
   gap: 0.375rem;
   height: 2.5rem;
   box-sizing: border-box;
+  white-space: nowrap;
 }
 
 .colab-btn:hover {
@@ -149,11 +150,15 @@ body {
   color: var(--background);
 }
 
+.colab-btn:hover::after {
+  background-image: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23dfd7c8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>');
+}
+
 .colab-btn::after {
   content: "";
   width: 24px;
   height: 24px;
-  background-image: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23dfd7c8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23dfd7c8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 24px 24px;
@@ -233,10 +238,13 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 3rem;
   font-weight: 400;
-  margin-bottom: 4rem;
-  margin-top: 4rem;
+  margin-bottom: 0;
+  margin-top: 20vh;
   line-height: 1.1;
   max-width: 60%;
+  height: 40vh;
+  display: flex;
+  align-items: flex-start;
 }
 
 h2 {
@@ -336,6 +344,7 @@ hr {
 /* Archive section */
 .archive-header {
   margin-bottom: 2rem;
+  margin-top: 8rem;
 }
 
 .archive-title {
@@ -492,6 +501,31 @@ hr {
   color: var(--muted);
 }
 
+/* Utility classes for margin-bottom based on Figma frames */
+.margin-bottom-1rem {
+  margin-bottom: 1rem;
+}
+
+.margin-bottom-2rem {
+  margin-bottom: 2rem;
+}
+
+.margin-bottom-3rem {
+  margin-bottom: 3rem;
+}
+
+.margin-bottom-4rem {
+  margin-bottom: 4rem;
+}
+
+.margin-bottom-6rem {
+  margin-bottom: 6rem;
+}
+
+.margin-bottom-8rem {
+  margin-bottom: 8rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .site-container {
@@ -513,12 +547,13 @@ hr {
   }
   
   .page-content {
-    padding: 3rem 0 4rem 0;
+    padding: 0;
   }
   
   h1 {
     font-size: 2.25rem;
-    margin-bottom: 3rem;
+    margin-top: 10vh;
+    height: 30vh;
     max-width: 100%;
   }
   
@@ -541,6 +576,10 @@ hr {
   .tag-filter.active::before {
     left: -100px;
     width: 100px;
+  }
+  
+  .archive-header {
+    margin-top: 4rem;
   }
 }
 
