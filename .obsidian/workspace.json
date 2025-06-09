@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CLAUDE.md",
+                "file": "_pages/laser-cutter.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CLAUDE"
+              "title": "laser-cutter"
             }
           }
         ]
@@ -193,22 +193,29 @@
   },
   "active": "f99b1b6df89fb020",
   "lastOpenFiles": [
+    "_site/404.html",
+    "404.html",
+    "_site/manufacturing/index.html",
+    "_site/manufacturing",
+    "_pages/manufacturing.md",
     "_pages/fusion360.md",
-    "_pages/laser-cutter.md",
+    "_pages/tools.md",
+    "_site/fabrication/index.html",
+    "_site/fabrication",
+    "_pages/fabrication.md",
+    "_site/tools/index.html",
+    "_site/tools",
     "more.md",
+    "_projects/trofast-lego-storage.md",
+    "lab.md",
+    "index.md",
+    "_projects/abc-blocks.md",
+    "CLAUDE.md",
+    "_pages/laser-cutter.md",
     "_plugins/obsidian_links.rb",
     "_plugins",
-    "lab.md",
     "_posts/2025-02-07-welcome-to-jekyll.md",
-    "_projects/abc-blocks.md",
     "_site/fusion360/index.html",
-    "_site/fusion360",
-    "_site/laser-cutter/index.html",
-    "_site/laser-cutter",
-    "_site/zen-coaster/index.html",
-    "_site/zen-coaster",
-    "_site/whiteboard-photo-wall/index.html",
-    "_site/whiteboard-photo-wall",
     "_site/favicon.svg",
     "_site/favicon.png",
     "_site/assets/images/zen-coaster-thumbnail.svg",
@@ -222,10 +229,8 @@
     "_site/CLAUDE.md",
     "laser-cutter.md",
     "_projects/shop-v3.md",
-    "index.md",
     "_projects/shop-v2.md",
     "_projects/slot-wall-hook.md",
-    "CLAUDE.md",
     "about.md",
     "more 1.md",
     "_projects/acrylic-trees.md",
@@ -233,10 +238,6 @@
     "_projects/acrylic-deer-and-snowman.md",
     "_projects/note-todo-stack.md",
     "_projects/quip-stand.md",
-    "_projects/retail-shield.md",
-    "_projects/sunnersta-blade.md",
-    "_projects/sunnersta-hook.md",
-    "_projects/sunnersta-tape.md",
-    "_projects/tissue-dispenser.md"
+    "_projects/retail-shield.md"
   ]
 }

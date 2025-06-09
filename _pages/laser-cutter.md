@@ -2,7 +2,10 @@
 layout: default
 title: Laser Cutter/Engraver
 permalink: /laser-cutter/
-categories: [tools, fabrication, manufacturing]
+categories:
+  - tools
+  - fabrication
+  - manufacturing
 tool_type: Laser Cutter/Engraver
 specs: 1300mm x 900mm 150 Watt CO2
 ---

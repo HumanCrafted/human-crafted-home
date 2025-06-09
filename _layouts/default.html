@@ -19,7 +19,7 @@
                 </a>
                 <nav class="site-nav">
                     <a href="{{ '/more/' | relative_url }}"{% if page.url contains '/more/' %} class="active"{% endif %}>More</a>
-                    <a href="{{ '/lab/' | relative_url }}" class="colab-btn{% if page.url contains '/lab/' %} active{% endif %}">
+                    <a href="{{ '/lab/' | relative_url }}" class="btn colab-btn{% if page.url contains '/lab/' %} active{% endif %}">
                         Let's co/lab
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M5 12h14"/>
@@ -46,6 +46,16 @@
                     {% if page.collection == "pages" %}
                         <div class="project-meta">
                             <a href="{{ '/more/' | relative_url }}" class="back-link">← Back to More</a>
+                            {% if page.categories %}
+                              {% unless page.categories contains 'index' %}
+                                <div class="project-categories">
+                                  <span class="categories-label">Categories:</span>
+                                  {% for category in page.categories %}
+                                    <a href="{{ '/' | append: category | append: '/' | relative_url }}" class="category-tag">{{ category }}</a>
+                                  {% endfor %}
+                                </div>
+                              {% endunless %}
+                            {% endif %}
                         </div>
                     {% endif %}
                 {% endif %}

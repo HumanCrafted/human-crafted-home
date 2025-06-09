@@ -4,8 +4,7 @@ title: Fusion360
 permalink: /fusion360/
 categories:
   - tools
-  - design
-  - software
+  - CAD design and engineering
 tool_type: CAD Software
 specs: Autodesk Fusion360 Professional
 ---
