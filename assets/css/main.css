@@ -140,42 +140,19 @@ body {
   text-decoration: none;
   font-size: 18px;
   font-weight: 400;
-  transition: color 150ms ease;
+  transition: text-decoration 150ms ease;
 }
 
-.site-nav a[href*="more"] {
-  position: relative;
-  overflow: hidden;
-  padding: 0 0.25rem;
+.site-nav a:hover {
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-style: wavy;
 }
 
-.site-nav a[href*="more"]::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%) translateX(-100%);
-  width: 100%;
-  height: 6px;
-  background: var(--accent);
-  transition: transform 150ms ease;
-  z-index: -1;
-}
-
-[data-theme="dark"] .site-nav a[href*="more"]::before {
-  background: rgba(255, 255, 0, 0.3);
-}
-
-.site-nav a[href*="more"]:hover::before {
-  transform: translateY(-50%) translateX(0);
-}
-
-.site-nav a[href*="more"]:hover {
-  color: var(--foreground) !important;
-}
-
-.site-nav a:hover:not([href*="more"]) {
-  color: var(--muted);
+.site-nav a.active {
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-style: wavy;
 }
 
 /* Co/lab button styling */
@@ -184,7 +161,7 @@ body {
   color: var(--background) !important;
   padding: 0 1.375rem;
   border-radius: 1.875rem;
-  text-decoration: none;
+  text-decoration: none !important;
   font-size: 22px !important;
   font-weight: 700 !important;
   font-family: 'Work Sans', sans-serif;
@@ -201,6 +178,12 @@ body {
 .site-nav .colab-btn:hover {
   background: var(--accent);
   color: var(--foreground) !important;
+}
+
+.site-nav .colab-btn.active {
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-style: wavy;
 }
 
 [data-theme="dark"] .site-nav .colab-btn:hover {
@@ -278,6 +261,18 @@ body {
   padding: 0;
 }
 
+.page-content a {
+  color: var(--foreground);
+  text-decoration: underline;
+  text-decoration-style: solid;
+  transition: text-decoration 150ms ease;
+}
+
+.page-content a:hover {
+  font-weight: 500;
+  text-decoration-style: wavy;
+}
+
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   color: var(--foreground);
@@ -317,6 +312,7 @@ h3 {
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 1rem;
+  margin-top: 2.5rem;
 }
 
 p {
@@ -329,11 +325,12 @@ p {
 a {
   color: var(--foreground);
   text-decoration: none;
+  transition: text-decoration 150ms ease;
 }
 
 a:hover {
-  color: var(--muted);
-  transition: color 150ms ease;
+  text-decoration: underline;
+  text-decoration-style: wavy;
 }
 
 /* Tables */
@@ -450,32 +447,20 @@ hr {
   cursor: pointer;
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
-  transition: all 150ms ease;
   text-decoration: none;
-  position: relative;
-  overflow: hidden;
+  transition: text-decoration 150ms ease;
 }
 
-.tag-filter::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%) translateX(-110%);
-  width: 100%;
-  height: 6px;
-  background: var(--accent);
-  transition: transform 350ms ease;
-  z-index: -1;
+.tag-filter.active {
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-style: wavy;
 }
 
-[data-theme="dark"] .tag-filter::before {
-  background: rgba(255, 255, 0, 0.3);
-}
-
-.tag-filter.active::before,
-.tag-filter:hover::before {
-  transform: translateY(-50%) translateX(0);
+.tag-filter:hover {
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-style: wavy;
 }
 
 /* Project grid */
@@ -495,6 +480,17 @@ hr {
 
 .project-card:hover {
   color: inherit;
+}
+
+/* Override page-content link styling for project cards */
+.page-content .project-card {
+  text-decoration: none;
+}
+
+.page-content .project-card:hover {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  font-weight: 500;
 }
 
 .project-image {
@@ -635,29 +631,8 @@ hr {
     letter-spacing: normal !important;
     height: auto !important;
     gap: 0 !important;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .site-nav .colab-btn::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%) translateX(-110%);
-    width: 100%;
-    height: 6px;
-    background: var(--accent);
-    transition: transform 350ms ease;
-    z-index: -1;
-  }
-  
-  [data-theme="dark"] .site-nav .colab-btn::before {
-    background: rgba(255, 255, 0, 0.3);
-  }
-  
-  .site-nav .colab-btn:hover::before {
-    transform: translateY(-50%) translateX(0);
+    text-decoration: none !important;
+    transition: text-decoration 150ms ease !important;
   }
   
   .site-nav .colab-btn svg {
@@ -667,6 +642,15 @@ hr {
   .site-nav .colab-btn:hover {
     background: none !important;
     color: var(--foreground) !important;
+    font-weight: 500 !important;
+    text-decoration: underline !important;
+    text-decoration-style: wavy !important;
+  }
+  
+  .site-nav .colab-btn.active {
+    font-weight: 500 !important;
+    text-decoration: underline !important;
+    text-decoration-style: wavy !important;
   }
   
   .page-content {
@@ -714,12 +698,12 @@ hr {
 
 /* Project detail pages */
 .project-thumbnail {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   text-align: left;
 }
 
 .project-thumbnail img {
-  width: 300px;
+  width: 50%;
   height: auto;
   border-radius: 0.5rem;
 }
@@ -744,36 +728,47 @@ hr {
 }
 
 .project-header {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+}
+
+.project-header h1 {
+  margin-bottom: 1rem;
 }
 
 .project-meta {
   display: flex;
   align-items: center;
   gap: 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .project-categories {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
 
+.categories-label {
+  color: var(--foreground);
+  font-size: 0.875rem;
+  margin-right: 0.5rem;
+}
+
 .category-tag {
-  background: rgba(153, 153, 153, 0.2);
   color: var(--foreground);
   padding: 0.25rem 0.75rem;
   border-radius: 1rem;
   font-size: 0.875rem;
   font-weight: 400;
-  text-decoration: none;
-  transition: all 150ms ease;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  transition: text-decoration 150ms ease;
 }
 
 .category-tag:hover {
-  background: rgba(153, 153, 153, 0.3);
-  color: var(--foreground);
+  font-weight: 500;
+  text-decoration-style: wavy;
 }
 
 .project-hero {
@@ -792,20 +787,127 @@ hr {
   margin-bottom: 3rem;
 }
 
+.project-content a {
+  color: var(--foreground);
+  text-decoration: underline;
+  text-decoration-style: solid;
+  transition: text-decoration 150ms ease;
+}
+
+.project-content a:hover {
+  font-weight: 500;
+  text-decoration-style: wavy;
+}
+
 .project-footer {
   border-top: 1px solid var(--muted);
   padding-top: 2rem;
 }
 
 .back-link {
-  color: var(--muted);
+  color: var(--foreground);
   text-decoration: none;
   font-size: 0.875rem;
-  transition: color 150ms ease;
+  transition: text-decoration 150ms ease;
 }
 
 .back-link:hover {
-  color: var(--foreground);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
+
+/* Override page-content link styling for back-link */
+.page-content .back-link {
+  text-decoration: none;
+}
+
+.page-content .back-link:hover {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  cursor: pointer;
+  animation: fadeIn 150ms ease;
+}
+
+.lightbox.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  animation: scaleIn 150ms ease;
+}
+
+.lightbox img[src$=".svg"] {
+  filter: invert(91%) sepia(17%) saturate(166%) hue-rotate(1deg) brightness(94%) contrast(88%);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #dfd7c8;
+  font-size: 2rem;
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 150ms ease;
+  line-height: 1;
+  font-family: Arial, sans-serif;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { 
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to { 
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Gallery images cursor */
+.project-gallery img {
+  cursor: pointer;
+  transition: transform 150ms ease;
+}
+
+.project-gallery img:hover {
+  transform: scale(1.02);
 }
 
 /* Contact button */

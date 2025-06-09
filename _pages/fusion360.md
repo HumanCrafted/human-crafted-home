@@ -2,44 +2,44 @@
 layout: default
 title: Fusion360
 permalink: /fusion360/
-categories: [tools, cad, design]
-tool_type: CAD design / engineering
+categories:
+  - tools
+  - design
+  - software
+tool_type: CAD Software
+specs: Autodesk Fusion360 Professional
 ---
 
-# Fusion360
+**Software:** Autodesk Fusion360 Professional  
+**Applications:** Product design, mechanical engineering, prototyping
 
-**Tool Type:** CAD design / engineering  
-**Use Cases:** Product design, engineering, simulation, manufacturing prep
+## Capabilities
 
-## Overview
+- **Parametric Modeling** - Feature-based design with full edit history
+- **Assembly Design** - Multi-part assemblies with joints and constraints
+- **Simulation** - Stress analysis, thermal, and fluid dynamics
+- **Manufacturing** - CAM toolpaths for CNC, 3D printing preparation
 
-Fusion360 is my primary CAD software for product design and engineering. It combines parametric modeling, simulation, and manufacturing tools in one integrated platform.
+## Design Process
 
-## Why I chose it
+1. **Sketch** - 2D profiles with parametric constraints
+2. **Model** - 3D features built from sketches
+3. **Assemble** - Components with realistic joints and motion
+4. **Simulate** - Test designs before manufacturing
+5. **Manufacture** - Generate toolpaths and export files
 
-- **Integrated workflow** - Design, simulate, and prep for manufacturing in one tool
-- **Cloud-based** - Access projects anywhere, automatic versioning
-- **Affordable** - Much cheaper than traditional CAD suites
-- **Manufacturing focus** - Built-in CAM for CNC, 3D printing support
+## Project Types
 
-## What I use it for
+- **Functional Prototypes** - Moving parts with proper clearances
+- **Manufacturing Fixtures** - Jigs and tooling for production
+- **Product Design** - Consumer goods with aesthetic and functional requirements
+- **Technical Parts** - Precision components for mechanical systems
 
-- Product concept development
-- Technical drawings and documentation  
-- 3D printing preparation
-- CNC toolpath generation
-- Design validation through simulation
-- Assembly modeling and motion studies
+## Recent Projects
 
-## Projects
-
-Here are some projects where Fusion360 was essential:
-
-{% assign fusion_projects = site.projects | where_exp: "project", "project.content contains 'Fusion360' or project.content contains 'CAD'" %}
-{% for project in fusion_projects limit: 6 %}
+{% assign fusion_projects = site.projects | where_exp: "project", "project.content contains 'Fusion360'" %}
+{% for project in fusion_projects limit: 8 %}
 - [{{ project.title }}]({{ project.url }})
 {% endfor %}
 
 ---
-
-← [Back to More](/more/)
