@@ -1,7 +1,8 @@
 ---
+layout: project
 title: Made Kits Loom
 slug: made-kits-loom
-main_image: "![](/assets/images/make-kits-loom-thumbnail.svg)"
+main_image: "![[make-kits-loom-thumbnail.svg]]"
 featured: false
 categories:
   - wooden

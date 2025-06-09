@@ -1,7 +1,8 @@
 ---
+layout: project
 title: Everthine Jewelry Stand
 slug: everthine-jewelry-stand
-main_image: "![](/assets/images/everthine-jewelry-stand-thumbnail.svg)"
+main_image: "![[everthine-jewelry-stand-thumbnail.svg]]"
 featured: false
 categories:
   - client work

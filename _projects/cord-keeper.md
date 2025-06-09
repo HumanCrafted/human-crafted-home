@@ -1,7 +1,8 @@
 ---
+layout: project
 title: Cord Keeper
 slug: cord-keeper
-main_image: "![](/assets/images/cord-keeper-thumbnail.svg)"
+main_image: "![[cord-keeper-thumbnail.svg]]"
 featured: false
 categories:
   - concrete

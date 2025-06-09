@@ -1,7 +1,8 @@
 ---
+layout: project
 title: Sunnersta Blade
 slug: sunnersta-blade
-main_image: "![](/assets/images/sunnersta-blade-thumbnail.svg)"
+main_image: "![[sunnersta-blade-thumbnail.svg]]"
 featured: false
 categories:
   - 3d printing

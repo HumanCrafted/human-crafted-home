@@ -1,7 +1,8 @@
 ---
+layout: project
 title: Mist System
 slug: mist-system
-main_image: "![](/assets/images/mist-system-thumbnail.svg)"
+main_image: "![[mist-system-thumbnail.svg]]"
 featured: false
 categories:
   - client work

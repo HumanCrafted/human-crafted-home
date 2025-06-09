@@ -1,7 +1,8 @@
 ---
+layout: project
 title: Note To Do Stack
 slug: note-todo-stack
-main_image: "![](/assets/images/note-todo-stack-thumbnail.svg)"
+main_image: "![[note-todo-stack-thumbnail.svg]]"
 featured: false
 categories:
   - laser

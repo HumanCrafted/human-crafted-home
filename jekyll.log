@@ -7,396 +7,708 @@ To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
        Jekyll Feed: Generating feed for posts
                     done in 0.781 seconds.
  Auto-regeneration: enabled for '/Users/nginear/Documents/GitHub/human-crafted-home'
-    Server address: http://127.0.0.1:4000/Human-Crafted-Home/
+    Server address: http://0.0.0.0:4000/Human-Crafted-Home/
   Server running... press ctrl-c to stop.
-      Regenerating: 1 file(s) changed at 2025-06-08 18:23:33
-                    CLAUDE.md
+      Regenerating: 1 file(s) changed at 2025-06-09 09:39:43
+                    _pages/fusion360.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.678159 seconds.
+                    ...done in 0.701127 seconds.
                     
-      Regenerating: 2 file(s) changed at 2025-06-08 18:26:44
+      Regenerating: 1 file(s) changed at 2025-06-09 09:39:55
+                    _pages/laser-cutter.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.68678 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-06-09 09:40:35
+                    more.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.655056 seconds.
+                    
+[2025-06-09 09:41:37] ERROR '/laser-cutter/' not found.
+[2025-06-09 09:41:43] ERROR '/fusion360/' not found.
+[2025-06-09 09:44:17] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:14 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-09 09:44:17] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:15 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-09 09:44:17] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:11 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-09 09:44:17] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-09 09:44:17] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:12 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-06-09 09:45:54
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.710173 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 09:45:59
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.665426 seconds.
+                    
+[2025-06-09 09:46:38] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:11 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-06-09 09:48:16
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.674891 seconds.
+                    
+[2025-06-09 09:48:59] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:11 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-06-09 09:50:57
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.683194 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 09:51:10
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.666312 seconds.
+                    
+[2025-06-09 09:51:48] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:12 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-09 09:51:48] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:14 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-09 09:51:48] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:11 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-09 09:51:48] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:13 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-09 09:51:48] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-06-09 09:52:18
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.681376 seconds.
+                    
+[2025-06-09 09:53:10] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:13 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-09 09:53:10] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:14 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-09 09:53:10] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-06-09 09:55:37
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.684663 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 09:57:13
+                    _layouts/default.html
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.688322 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 09:57:25
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.633161 seconds.
+                    
+[2025-06-09 09:58:06] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-09 09:59:11] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:14 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-06-09 09:59:27
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.668325 seconds.
+                    
+[2025-06-09 10:00:05] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-09 10:46:22] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-09 10:46:22] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:14 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-09 10:46:22] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:11 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-09 10:46:22] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:15 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-09 10:46:22] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:12 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 6 file(s) changed at 2025-06-09 10:50:37
+                    _projects/abc-blocks.md
+                    _projects/acrylic-trees.md
+                    _projects/bath-container.md
+                    _projects/concentric-coaster.md
+                    _projects/acrylic-deer-and-snowman.md
+                    _projects/acrylic-robin.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.728265 seconds.
+                    
+      Regenerating: 5 file(s) changed at 2025-06-09 10:50:56
+                    _projects/elevations-clock.md
+                    _projects/concrete-trays.md
+                    _projects/dyson-hand-saver.md
+                    _projects/cord-keeper.md
+                    _projects/contact-lens-holder.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.654006 seconds.
+                    
+      Regenerating: 5 file(s) changed at 2025-06-09 10:51:11
+                    _projects/everthine-jewelry-stand.md
+                    _projects/erasable-notepad.md
+                    _projects/fellow-brush-stand.md
+                    _projects/fridge-folders.md
+                    _projects/fridge-frames.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.676657 seconds.
+                    
+      Regenerating: 5 file(s) changed at 2025-06-09 10:51:26
+                    _projects/made-kits-loom.md
+                    _projects/made-kits-fun-loom.md
+                    _projects/led-open-sign.md
+                    _projects/mist-system.md
+                    _projects/made-kits-loom-tools.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.666136 seconds.
+                    
+      Regenerating: 5 file(s) changed at 2025-06-09 10:51:40
+                    _projects/modern-doll-house.md
+                    _projects/note-todo-stack.md
+                    _projects/pen-cup.md
+                    _projects/plant-support.md
+                    _projects/post-it-holders.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.690031 seconds.
+                    
+      Regenerating: 5 file(s) changed at 2025-06-09 10:51:55
+                    _projects/quip-stand.md
+                    _projects/retail-sandwich-sign.md
+                    _projects/retail-shield.md
+                    _projects/shop-v2.md
+                    _projects/slot-wall-hook.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.693342 seconds.
+                    
+      Regenerating: 4 file(s) changed at 2025-06-09 10:52:10
+                    _projects/sunnersta-blade.md
+                    _projects/sunnersta-hook.md
+                    _projects/sunnersta-tape.md
+                    _projects/sunnersta-pen-cup.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.738943 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 10:52:11
+                    _projects/sunnersta-wire-tray.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.694393 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 10:52:15
+                    _projects/shop-v3.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.70513 seconds.
+                    
+      Regenerating: 5 file(s) changed at 2025-06-09 10:52:31
+                    _projects/trofast-lego-storage.md
+                    _projects/tissue-dispenser.md
+                    _projects/tradeshow-layout-v4.md
+                    _projects/taco-stands.md
+                    _projects/toilet-paper-holder.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.674945 seconds.
+                    
+      Regenerating: 4 file(s) changed at 2025-06-09 10:52:49
+                    _projects/trofast-storage-shelf.md
+                    _projects/v60-filter-tray.md
+                    _projects/wall-hooks.md
+                    _projects/uv-micro.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.025431 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 10:52:50
+                    _projects/water-wall-toys.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.706008 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-06-09 10:52:58
+                    _projects/whiteboard-photo-wall.md
+                    _projects/zen-coaster.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.694472 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 10:53:39
+                    _projects/elevations.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.73062 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 10:58:27
+                    _layouts/project.html
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.780264 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:03:07
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.821003 seconds.
+                    
+[2025-06-09 11:04:57] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:11 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-06-09 11:05:08
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.802902 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:08:05
+                    _layouts/project.html
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.807785 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:08:12
+                    _layouts/project.html
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.718761 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:10:07
+                    _layouts/project.html
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.801052 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:10:15
+                    _layouts/project.html
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.739674 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-06-09 11:10:25
                     index.md
                     jekyll.log
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.701999 seconds.
+                    ...done in 0.745789 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-08 18:26:52
+      Regenerating: 1 file(s) changed at 2025-06-09 11:10:33
+                    _projects/shop-v3.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.774902 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:10:40
+                    _projects/shop-v3.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.72407 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:11:22
+                    _projects/shop-v3.md
+       Jekyll Feed: Generating feed for posts
+[33m     Build Warning: Layout '["project"]' requested in _projects/shop-v3.md does not exist.[0m
+                    ...done in 0.849228 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:13:10
+                    _projects/abc-blocks.md
+       Jekyll Feed: Generating feed for posts
+[33m     Build Warning: Layout '["project"]' requested in _projects/shop-v3.md does not exist.[0m
+                    ...done in 0.756012 seconds.
+                    
+      Regenerating: 5 file(s) changed at 2025-06-09 11:13:19
+                    _projects/acrylic-deer-and-snowman.md
+                    _projects/acrylic-robin.md
+                    _projects/acrylic-trees.md
+                    _projects/bath-container.md
+                    _projects/concentric-coaster.md
+       Jekyll Feed: Generating feed for posts
+[33m     Build Warning: Layout '["project"]' requested in _projects/shop-v3.md does not exist.[0m
+                    ...done in 0.713177 seconds.
+                    
+      Regenerating: 4 file(s) changed at 2025-06-09 11:13:29
+                    _projects/concrete-trays.md
+                    _projects/contact-lens-holder.md
+                    _projects/dyson-hand-saver.md
+                    _projects/cord-keeper.md
+       Jekyll Feed: Generating feed for posts
+[33m     Build Warning: Layout '["project"]' requested in _projects/shop-v3.md does not exist.[0m
+                    ...done in 0.757391 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:13:30
+                    _projects/elevations-clock.md
+       Jekyll Feed: Generating feed for posts
+[33m     Build Warning: Layout '["project"]' requested in _projects/shop-v3.md does not exist.[0m
+                    ...done in 0.73306 seconds.
+                    
+      Regenerating: 5 file(s) changed at 2025-06-09 11:13:39
+                    _projects/erasable-notepad.md
+                    _projects/elevations.md
+                    _projects/everthine-jewelry-stand.md
+                    _projects/fellow-brush-stand.md
+                    _projects/fridge-folders.md
+       Jekyll Feed: Generating feed for posts
+[33m     Build Warning: Layout '["project"]' requested in _projects/shop-v3.md does not exist.[0m
+                    ...done in 0.699868 seconds.
+                    
+      Regenerating: 4 file(s) changed at 2025-06-09 11:13:48
+                    _projects/fridge-frames.md
+                    _projects/made-kits-loom.md
+                    _projects/made-kits-fun-loom.md
+                    _projects/led-open-sign.md
+       Jekyll Feed: Generating feed for posts
+[33m     Build Warning: Layout '["project"]' requested in _projects/shop-v3.md does not exist.[0m
+                    ...done in 0.716088 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:13:49
+                    _projects/made-kits-loom-tools.md
+       Jekyll Feed: Generating feed for posts
+[33m     Build Warning: Layout '["project"]' requested in _projects/shop-v3.md does not exist.[0m
+                    ...done in 0.730437 seconds.
+                    
+      Regenerating: 5 file(s) changed at 2025-06-09 11:13:59
+                    _projects/mist-system.md
+                    _projects/modern-doll-house.md
+                    _projects/plant-support.md
+                    _projects/note-todo-stack.md
+                    _projects/pen-cup.md
+       Jekyll Feed: Generating feed for posts
+[33m     Build Warning: Layout '["project"]' requested in _projects/shop-v3.md does not exist.[0m
+                    ...done in 0.759389 seconds.
+                    
+      Regenerating: 5 file(s) changed at 2025-06-09 11:14:08
+                    _projects/quip-stand.md
+                    _projects/post-it-holders.md
+                    _projects/retail-sandwich-sign.md
+                    _projects/retail-shield.md
+                    _projects/shop-v2.md
+       Jekyll Feed: Generating feed for posts
+[33m     Build Warning: Layout '["project"]' requested in _projects/shop-v3.md does not exist.[0m
+                    ...done in 0.720455 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:14:13
+                    _projects/shop-v3.md
+       Jekyll Feed: Generating feed for posts
+[33m     Build Warning: Layout '["project"]' requested in _projects/shop-v3.md does not exist.[0m
+                    ...done in 0.730391 seconds.
+                    
+      Regenerating: 4 file(s) changed at 2025-06-09 11:14:23
+                    _projects/slot-wall-hook.md
+                    _projects/sunnersta-blade.md
+                    _projects/sunnersta-hook.md
+                    _projects/sunnersta-pen-cup.md
+       Jekyll Feed: Generating feed for posts
+[33m     Build Warning: Layout '["project"]' requested in _projects/shop-v3.md does not exist.[0m
+                    ...done in 0.733873 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:14:24
+                    _projects/sunnersta-tape.md
+       Jekyll Feed: Generating feed for posts
+[33m     Build Warning: Layout '["project"]' requested in _projects/shop-v3.md does not exist.[0m
+                    ...done in 0.705696 seconds.
+                    
+      Regenerating: 4 file(s) changed at 2025-06-09 11:14:34
+                    _projects/sunnersta-wire-tray.md
+                    _projects/tissue-dispenser.md
+                    _projects/taco-stands.md
+                    _projects/toilet-paper-holder.md
+       Jekyll Feed: Generating feed for posts
+[33m     Build Warning: Layout '["project"]' requested in _projects/shop-v3.md does not exist.[0m
+                    ...done in 0.725466 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:14:35
+                    _projects/tradeshow-layout-v4.md
+       Jekyll Feed: Generating feed for posts
+[33m     Build Warning: Layout '["project"]' requested in _projects/shop-v3.md does not exist.[0m
+                    ...done in 0.73172 seconds.
+                    
+      Regenerating: 5 file(s) changed at 2025-06-09 11:14:45
+                    _projects/trofast-lego-storage.md
+                    _projects/trofast-storage-shelf.md
+                    _projects/v60-filter-tray.md
+                    _projects/wall-hooks.md
+                    _projects/uv-micro.md
+       Jekyll Feed: Generating feed for posts
+[33m     Build Warning: Layout '["project"]' requested in _projects/shop-v3.md does not exist.[0m
+                    ...done in 0.746343 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:15:05
+                    _projects/shop-v3.md
+       Jekyll Feed: Generating feed for posts
+[33m     Build Warning: Layout '["project"]' requested in _projects/shop-v3.md does not exist.[0m
+                    ...done in 0.814753 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:15:12
+                    _projects/shop-v3.md
+       Jekyll Feed: Generating feed for posts
+[33m     Build Warning: Layout '["project"]' requested in _projects/shop-v3.md does not exist.[0m
+                    ...done in 0.723193 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:15:16
+                    _projects/shop-v3.md
+       Jekyll Feed: Generating feed for posts
+[33m     Build Warning: Layout '["project"]' requested in _projects/shop-v3.md does not exist.[0m
+                    ...done in 0.72973 seconds.
+                    
+      Regenerating: 3 file(s) changed at 2025-06-09 11:15:20
+                    _projects/water-wall-toys.md
+                    _projects/whiteboard-photo-wall.md
+                    _projects/zen-coaster.md
+       Jekyll Feed: Generating feed for posts
+[33m     Build Warning: Layout '["project"]' requested in _projects/shop-v3.md does not exist.[0m
+                    ...done in 0.69609 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:15:25
+                    _projects/shop-v3.md
+       Jekyll Feed: Generating feed for posts
+[33m     Build Warning: Layout '["project"]' requested in _projects/shop-v3.md does not exist.[0m
+                    ...done in 0.739749 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:16:39
+                    _projects/shop-v3.md
+       Jekyll Feed: Generating feed for posts
+[33m     Build Warning: Layout '[]' requested in _projects/shop-v3.md does not exist.[0m
+                    ...done in 0.764401 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:16:43
+                    _projects/shop-v3.md
+       Jekyll Feed: Generating feed for posts
+[33m     Build Warning: Layout '["pro"]' requested in _projects/shop-v3.md does not exist.[0m
+                    ...done in 0.748965 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:16:46
+                    _projects/shop-v3.md
+       Jekyll Feed: Generating feed for posts
+[33m     Build Warning: Layout '[]' requested in _projects/shop-v3.md does not exist.[0m
+                    ...done in 0.73903 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:16:49
+                    _projects/shop-v3.md
+       Jekyll Feed: Generating feed for posts
+[33m     Build Warning: Layout '["project"]' requested in _projects/shop-v3.md does not exist.[0m
+                    ...done in 0.763856 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:18:16
+                    _projects/shop-v3.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.805162 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:18:46
+                    _projects/shop-v3.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.78486 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:18:48
+                    _projects/shop-v3.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.784689 seconds.
+                    
+[2025-06-09 11:18:52] ERROR '/assets/images/acrylic-deer-and-snowman-thumbnail.svg' not found.
+[2025-06-09 11:18:55] ERROR '/assets/images/acrylic-deer-and-snowman-thumbnail.svg' not found.
+[2025-06-09 11:18:57] ERROR '/assets/images/acrylic-deer-and-snowman-thumbnail.svg' not found.
+[2025-06-09 11:18:58] ERROR '/assets/images/acrylic-deer-and-snowman-thumbnail.svg' not found.
+      Regenerating: 1 file(s) changed at 2025-06-09 11:20:27
+                    _layouts/project.html
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.784011 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:20:37
+                    _layouts/project.html
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.784386 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-06-09 11:20:47
+                    index.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.7552 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:21:45
+                    _projects/shop-v3.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.793193 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:22:01
+                    _projects/shop-v3.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.749787 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:22:07
+                    _projects/shop-v3.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.77569 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:22:28
+                    _projects/shop-v3.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.827798 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:22:29
+                    _projects/shop-v3.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.710115 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:26:22
+                    _layouts/project.html
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.845582 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:26:32
                     assets/css/main.css
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.658546 seconds.
+                    ...done in 0.76344 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-08 18:57:38
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.000465 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-08 18:58:05
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.994493 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-08 19:00:08
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.971355 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-08 19:06:11
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.02842 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-08 19:08:31
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.985756 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-08 19:11:13
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.048798 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-08 19:13:36
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.955412 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-08 19:14:06
+[2025-06-09 11:33:01] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:11 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-06-09 11:33:47
                     _layouts/default.html
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.984498 seconds.
+                    ...done in 0.810159 seconds.
                     
-[2025-06-08 19:14:52] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-08 19:14:52] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:13 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-08 19:14:52] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:14 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-08 19:14:52] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:12 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-08 19:14:52] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:15 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-      Regenerating: 1 file(s) changed at 2025-06-08 19:17:58
-                    _layouts/default.html
+      Regenerating: 1 file(s) changed at 2025-06-09 11:34:02
+                    _layouts/project.html
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.971962 seconds.
+                    ...done in 0.754797 seconds.
                     
-[2025-06-08 19:18:59] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:12 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-08 19:18:59] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-08 19:18:59] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:15 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-08 19:18:59] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:11 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-08 19:18:59] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:13 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-      Regenerating: 1 file(s) changed at 2025-06-08 19:19:03
-                    _layouts/default.html
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.96084 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-08 19:20:51
+      Regenerating: 1 file(s) changed at 2025-06-09 11:34:09
                     assets/css/main.css
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.955766 seconds.
+                    ...done in 0.767721 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-08 19:21:41
+      Regenerating: 1 file(s) changed at 2025-06-09 11:35:29
                     assets/css/main.css
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.945563 seconds.
+                    ...done in 0.807897 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-08 19:23:30
+      Regenerating: 1 file(s) changed at 2025-06-09 11:35:34
+                    _layouts/project.html
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.773863 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:35:41
                     assets/css/main.css
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.923585 seconds.
+                    ...done in 0.777506 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-08 19:23:49
+      Regenerating: 1 file(s) changed at 2025-06-09 11:37:16
+                    _layouts/project.html
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.788045 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:37:29
+                    _layouts/project.html
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.841118 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:37:36
                     assets/css/main.css
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.95096 seconds.
+                    ...done in 0.771064 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-08 19:25:13
-                    _layouts/default.html
+      Regenerating: 2 file(s) changed at 2025-06-09 11:39:14
+                    index.md
+                    jekyll.log
        Jekyll Feed: Generating feed for posts
-                    ...done in 1.018998 seconds.
+                    ...done in 0.755591 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-08 19:25:27
+      Regenerating: 1 file(s) changed at 2025-06-09 11:39:19
+                    _layouts/project.html
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.869535 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-06-09 11:40:48
+                    index.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.801597 seconds.
+                    
+[2025-06-09 11:41:40] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-09 11:41:40] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:13 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-09 11:41:40] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:14 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-09 11:41:40] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:11 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-09 11:41:40] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:16 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-06-09 11:41:48
                     assets/css/main.css
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.921783 seconds.
+                    ...done in 0.790285 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-08 19:26:43
+      Regenerating: 1 file(s) changed at 2025-06-09 11:43:11
                     assets/css/main.css
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.952629 seconds.
+                    ...done in 0.792841 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-08 19:28:27
+      Regenerating: 1 file(s) changed at 2025-06-09 11:43:39
                     assets/css/main.css
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.99441 seconds.
+                    ...done in 0.7723 seconds.
                     
-[2025-06-08 19:29:16] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:13 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-08 19:29:16] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:12 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-08 19:29:16] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-08 19:29:16] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:15 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-08 19:29:16] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:14 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-      Regenerating: 1 file(s) changed at 2025-06-08 19:32:16
+      Regenerating: 1 file(s) changed at 2025-06-09 11:44:48
+                    _layouts/project.html
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.75106 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-06-09 11:45:02
+                    index.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.769428 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-09 11:45:11
                     assets/css/main.css
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.96441 seconds.
+                    ...done in 0.744484 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-08 19:34:14
-                    assets/css/main.css
+      Regenerating: 1 file(s) changed at 2025-06-09 11:46:35
+                    _layouts/project.html
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.992824 seconds.
+                    ...done in 0.779818 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-08 19:34:50
-                    assets/css/main.css
+      Regenerating: 2 file(s) changed at 2025-06-09 11:46:45
+                    index.md
+                    jekyll.log
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.966628 seconds.
+                    ...done in 0.793126 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-08 19:36:14
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.003508 seconds.
-                    
-[2025-06-08 19:37:00] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:12 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-      Regenerating: 1 file(s) changed at 2025-06-08 19:37:29
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.962787 seconds.
-                    
-[2025-06-08 19:38:19] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:14 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-08 19:38:19] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:15 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-08 19:38:19] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-08 19:38:19] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:12 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-08 19:38:19] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:11 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-      Regenerating: 1 file(s) changed at 2025-06-08 19:38:33
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.968911 seconds.
-                    
-[2025-06-08 19:39:01] ERROR '/favicon.ico' not found.
-      Regenerating: 1 file(s) changed at 2025-06-08 19:41:15
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.008862 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-08 19:44:12
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.969297 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-08 19:47:21
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.930646 seconds.
-                    
-[2025-06-08 19:48:28] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-      Regenerating: 1 file(s) changed at 2025-06-08 19:50:08
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.967315 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-08 19:51:30
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.947386 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-08 19:51:36
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.92119 seconds.
-                    
-[2025-06-08 19:52:32] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:12 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-      Regenerating: 1 file(s) changed at 2025-06-08 19:56:10
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.988331 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-08 19:57:14
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.001286 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-08 19:57:37
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.919421 seconds.
-                    
-[2025-06-08 19:58:09] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:12 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-08 19:58:09] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:11 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-08 19:58:09] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:13 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-08 19:58:09] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-08 19:58:09] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:15 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-      Regenerating: 1 file(s) changed at 2025-06-08 19:59:42
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.973745 seconds.
-                    
-[2025-06-08 20:00:23] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:14 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-08 20:00:23] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:15 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-08 20:00:23] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:11 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-08 20:00:23] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-08 20:00:23] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:12 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-      Regenerating: 1 file(s) changed at 2025-06-08 20:00:37
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.981642 seconds.
-                    
-[2025-06-08 20:01:15] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:13 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-08 20:01:15] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:11 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-08 20:01:15] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-08 20:01:15] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:14 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-08 20:01:15] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:15 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-      Regenerating: 1 file(s) changed at 2025-06-08 20:01:38
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.961338 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-08 20:03:41
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.977833 seconds.
-                    
-[2025-06-08 20:04:21] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-      Regenerating: 1 file(s) changed at 2025-06-08 20:04:39
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.963704 seconds.
-                    
-[2025-06-08 20:05:17] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:15 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-08 20:05:17] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:11 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-09 09:13:48] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:14 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-09 09:13:48] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-09 09:13:48] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:15 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-09 09:13:48] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:12 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-09 09:13:48] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:13 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'

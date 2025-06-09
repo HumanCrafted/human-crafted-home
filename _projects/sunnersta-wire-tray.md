@@ -1,7 +1,8 @@
 ---
+layout: project
 title: Sunnersta Wire Tray
 slug: sunnersta-wire-tray
-main_image: "![](/assets/images/sunnersta-wire-tray-thumbnail.svg)"
+main_image: "![[sunnersta-wire-tray-thumbnail.svg]]"
 featured: false
 categories:
   - 3d printing

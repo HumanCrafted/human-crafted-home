@@ -1,7 +1,8 @@
 ---
+layout: project
 title: Sunnersta Pen Cup
 slug: sunnersta-pen-cup
-main_image: "![](/assets/images/sunnersta-pen-cup-thumbnail.svg)"
+main_image: "![[sunnersta-pen-cup-thumbnail.svg]]"
 featured: false
 categories:
   - 3d printing

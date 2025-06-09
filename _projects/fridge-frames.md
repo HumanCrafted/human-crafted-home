@@ -1,7 +1,8 @@
 ---
+layout: project
 title: Fridge Frames
 slug: fridge-frames
-main_image: "![](/assets/images/fridge-frames-thumbnail.svg)"
+main_image: "![[fridge-frames-thumbnail.svg]]"
 featured: false
 categories:
   - laser

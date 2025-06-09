@@ -4,6 +4,9 @@
     "cssclasses": "multitext",
     "tags": "tags",
     "images": "multitext",
-    "published_date": "date"
+    "published_date": "date",
+    "categories": "multitext",
+    "layout": "text",
+    "gallery_images": "multitext"
   }
 }

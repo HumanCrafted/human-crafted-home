@@ -1,7 +1,8 @@
 ---
+layout: project
 title: Elevations
 slug: elevations
-main_image: "![](/assets/images/elevations-thumbnail.svg)"
+main_image: "![[elevations-thumbnail.svg]]"
 featured: false
 categories:
   - wooden

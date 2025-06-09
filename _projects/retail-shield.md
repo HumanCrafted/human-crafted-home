@@ -1,7 +1,8 @@
 ---
+layout: project
 title: Retail Shield
 slug: retail-shield
-main_image: "![](/assets/images/retail-shield-thumbnail.svg)"
+main_image: "![[retail-shield-thumbnail.svg]]"
 featured: false
 categories:
   - laser

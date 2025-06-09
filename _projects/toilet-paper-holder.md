@@ -1,7 +1,8 @@
 ---
+layout: project
 title: Toilet Paper Holder
 slug: toilet-paper-holder
-main_image: "![](/assets/images/toilet-paper-holder-thumbnail.svg)"
+main_image: "![[toilet-paper-holder-thumbnail.svg]]"
 featured: false
 categories:
   - laser

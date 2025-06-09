@@ -1,7 +1,8 @@
 ---
+layout: project
 title: v60 Filter Tray
 slug: v60-filter-tray
-main_image: "![](/assets/images/v60-filter-tray-thumbnail.svg)"
+main_image: "![[v60-filter-tray-thumbnail.svg]]"
 featured: false
 categories:
   - 3d printing

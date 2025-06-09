@@ -1,7 +1,8 @@
 ---
+layout: project
 title: UV Micro
 slug: uv-micro
-main_image: "![](/assets/images/uv-micro-thumbnail.svg)"
+main_image: "![[uv-micro-thumbnail.svg]]"
 featured: false
 categories:
   - client work

@@ -19,6 +19,13 @@
                 </a>
                 <nav class="site-nav">
                     <a href="{{ '/more/' | relative_url }}">More</a>
+                    <a href="{{ '/lab/' | relative_url }}" class="colab-btn">
+                        Let's co/lab
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"/>
+                            <path d="M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
                     <button class="theme-toggle" aria-label="Toggle theme">
                         <svg class="theme-icon theme-icon-light" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="12" cy="12" r="5"/>
@@ -28,21 +35,16 @@
                             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
                         </svg>
                     </button>
-                    <a href="{{ '/lab/' | relative_url }}" class="colab-btn">
-                        Let's co/lab
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M5 12h14"/>
-                            <path d="M12 5l7 7-7 7"/>
-                        </svg>
-                    </a>
                 </nav>
             </div>
         </header>
 
         <main class="page-content">
-            {% if page.title and page.url != "/" %}
-                <h1>{{ page.title }}</h1>
-            {% endif %}
+            {% unless page.layout == "project" %}
+                {% if page.title and page.url != "/" %}
+                    <h1>{{ page.title }}</h1>
+                {% endif %}
+            {% endunless %}
             {{ content }}
         </main>
 

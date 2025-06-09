@@ -33,7 +33,10 @@ collections:
     permalink: /:categories/:year/:month/:day/:title/
   projects:
     output: true
-    permalink: /projects/:slug/
+    permalink: /:slug/
+  pages:
+    output: true
+    permalink: /:slug/
 
 # Obsidian-friendly settings
 kramdown:

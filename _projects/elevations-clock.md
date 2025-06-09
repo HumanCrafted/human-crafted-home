@@ -1,7 +1,8 @@
 ---
+layout: project
 title: Elevations Clock
 slug: elevations-clock
-main_image: "![](/assets/images/elevations-clock-thumbnail.svg)"
+main_image: "![[elevations-clock-thumbnail.svg]]"
 featured: false
 categories:
   - wooden

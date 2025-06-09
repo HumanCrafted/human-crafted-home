@@ -1,7 +1,8 @@
 ---
+layout: project
 title: Slot Wall Hook
 slug: slot-wall-hook
-main_image: "![](/assets/images/slot-wall-hook-thumbnail.svg)"
+main_image: "![[slot-wall-hook-thumbnail.svg]]"
 featured: false
 categories:
   - 3d printing

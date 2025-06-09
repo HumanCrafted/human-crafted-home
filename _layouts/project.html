@@ -2,36 +2,52 @@
 layout: default
 ---
 
-<article class="project-detail">
-  <header class="project-header">
-    <h1>{{ page.title }}</h1>
-    {% if page.categories %}
-      <div class="project-categories">
-        {% for category in page.categories %}
-          <span class="category-tag">{{ category }}</span>
-        {% endfor %}
-      </div>
+{% if page.main_image %}
+  <div class="project-thumbnail">
+    {% if page.main_image contains '![[' %}
+      {% assign image_filename = page.main_image | replace: '![[', '' | replace: ']]', '' %}
+      <img src="{{ '/assets/images/' | append: image_filename | relative_url }}" alt="{{ page.title }}" />
+    {% elsif page.main_image contains '../assets/images/' %}
+      {% assign image_filename = page.main_image | replace: '![](', '' | replace: ')', '' | replace: '../assets/images/', '' %}
+      <img src="{{ '/assets/images/' | append: image_filename | relative_url }}" alt="{{ page.title }}" />
+    {% else %}
+      {% assign image_path = page.main_image | replace: '![', '' | replace: '](', '' | replace: ')', '' | split: '](' | last %}
+      <img src="{{ image_path | relative_url }}" alt="{{ page.title }}" />
     {% endif %}
-  </header>
-
-  {% if page.main_image %}
-    <div class="project-hero">
-      {{ page.main_image }}
-    </div>
-  {% endif %}
-
-  <div class="project-content">
-    {{ content }}
   </div>
+{% endif %}
 
-  {% if page.gallery_images %}
-    <div class="project-gallery">
-      <h2>Gallery</h2>
-      {{ page.gallery_images }}
+<h1>{{ page.title }}</h1>
+
+<div class="project-meta">
+  <a href="{{ '/' | relative_url }}#archive" class="back-link">← Back to Archive</a>
+  {% if page.categories %}
+    <div class="project-categories">
+      {% for category in page.categories %}
+        <a href="{{ '/' | relative_url }}?category={{ category | url_encode }}#archive" class="category-tag">{{ category }}</a>
+      {% endfor %}
     </div>
   {% endif %}
+</div>
 
-  <footer class="project-footer">
-    <a href="{{ '/' | relative_url }}" class="back-link">← Back to Archive</a>
-  </footer>
-</article>
+<div class="project-content">
+  {{ content }}
+</div>
+
+{% if page.gallery_images %}
+  <div class="project-gallery">
+    <h3>Gallery</h3>
+    {% for gallery_image in page.gallery_images %}
+      {% if gallery_image contains '![[' %}
+        {% assign image_filename = gallery_image | replace: '![[', '' | replace: ']]', '' %}
+        <img src="{{ '/assets/images/' | append: image_filename | relative_url }}" alt="{{ page.title }} gallery image" />
+      {% elsif gallery_image contains '../assets/images/' %}
+        {% assign image_filename = gallery_image | replace: '![](', '' | replace: ')', '' | replace: '../assets/images/', '' %}
+        <img src="{{ '/assets/images/' | append: image_filename | relative_url }}" alt="{{ page.title }} gallery image" />
+      {% else %}
+        {% assign image_path = gallery_image | replace: '![', '' | replace: '](', '' | replace: ')', '' | split: '](' | last %}
+        <img src="{{ image_path | relative_url }}" alt="{{ page.title }} gallery image" />
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}

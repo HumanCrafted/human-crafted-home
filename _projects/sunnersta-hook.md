@@ -1,7 +1,8 @@
 ---
+layout: project
 title: Sunnersta Hook
 slug: sunnersta-hook
-main_image: "![](/assets/images/sunnersta-hook-thumbnail.svg)"
+main_image: "![[sunnersta-hook-thumbnail.svg]]"
 featured: false
 categories:
   - 3d printing

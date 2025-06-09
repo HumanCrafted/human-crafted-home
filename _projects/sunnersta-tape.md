@@ -1,7 +1,8 @@
 ---
+layout: project
 title: Sunnersta Tape
 slug: sunnersta-tape
-main_image: "![](/assets/images/sunnersta-tape-thumbnail.svg)"
+main_image: "![[sunnersta-tape-thumbnail.svg]]"
 featured: false
 categories:
   - 3d printing

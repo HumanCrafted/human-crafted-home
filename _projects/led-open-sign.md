@@ -1,7 +1,8 @@
 ---
+layout: project
 title: LED Open Sign
 slug: led-open-sign
-main_image: "![](/assets/images/led-open-sign-thumbnail.svg)"
+main_image: "![[led-open-sign-thumbnail.svg]]"
 featured: false
 categories:
   - wooden

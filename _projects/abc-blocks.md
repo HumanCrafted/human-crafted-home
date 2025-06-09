@@ -1,7 +1,8 @@
 ---
+layout: project
 title: ABC Blocks
 slug: abc-blocks
-main_image: "![](/assets/images/abc-blocks-thumbnail.svg)"
+main_image: "![[abc-blocks-thumbnail.svg]]"
 featured: false
 categories:
   - 3d printing

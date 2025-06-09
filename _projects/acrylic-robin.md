@@ -1,7 +1,8 @@
 ---
+layout: project
 title: Acrylic Robin
 slug: acrylic-robin
-main_image: "![](/assets/images/acrylic-robin-thumbnail.svg)"
+main_image: "![[acrylic-robin-thumbnail.svg]]"
 featured: false
 categories:
   - laser

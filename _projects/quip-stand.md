@@ -1,7 +1,8 @@
 ---
+layout: project
 title: Quip Stand
 slug: quip-stand
-main_image: "![](/assets/images/quip-stand-thumbnail.svg)"
+main_image: "![[quip-stand-thumbnail.svg]]"
 featured: false
 categories:
   - around the house

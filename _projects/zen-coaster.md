@@ -1,7 +1,8 @@
 ---
+layout: project
 title: Zen Coaster
 slug: zen-coaster
-main_image: "![](/assets/images/zen-coaster-thumbnail.svg)"
+main_image: "![[zen-coaster-thumbnail.svg]]"
 featured: false
 categories:
   - desktop

@@ -1,7 +1,8 @@
 ---
+layout: project
 title: Shop v2
 slug: shop-v2
-main_image: "![](/assets/images/shop-v2-thumbnail.svg)"
+main_image: "![[shop-v2-thumbnail.svg]]"
 featured: false
 categories:
   - around the shop

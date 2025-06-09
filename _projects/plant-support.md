@@ -1,7 +1,8 @@
 ---
+layout: project
 title: Plant Support
 slug: plant-support
-main_image: "![](/assets/images/plant-support-thumbnail.svg)"
+main_image: "![[plant-support-thumbnail.svg]]"
 featured: false
 categories:
   - 3d printing

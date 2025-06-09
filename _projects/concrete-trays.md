@@ -1,7 +1,8 @@
 ---
+layout: project
 title: Concrete Trays
 slug: concrete-trays
-main_image: "![](/assets/images/concrete-trays-thumbnail.svg)"
+main_image: "![[concrete-trays-thumbnail.svg]]"
 featured: false
 categories:
   - concrete

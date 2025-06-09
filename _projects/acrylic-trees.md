@@ -1,7 +1,8 @@
 ---
+layout: project
 title: Acrylic Trees
 slug: acrylic-trees
-main_image: "![](/assets/images/acrylic-trees-thumbnail.svg)"
+main_image: "![[acrylic-trees-thumbnail.svg]]"
 featured: false
 categories:
   - laser
