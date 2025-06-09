@@ -1,0 +1,402 @@
+Configuration file: /Users/nginear/Documents/GitHub/human-crafted-home/_config.yml
+To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
+            Source: /Users/nginear/Documents/GitHub/human-crafted-home
+       Destination: /Users/nginear/Documents/GitHub/human-crafted-home/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+       Jekyll Feed: Generating feed for posts
+                    done in 0.781 seconds.
+ Auto-regeneration: enabled for '/Users/nginear/Documents/GitHub/human-crafted-home'
+    Server address: http://127.0.0.1:4000/Human-Crafted-Home/
+  Server running... press ctrl-c to stop.
+      Regenerating: 1 file(s) changed at 2025-06-08 18:23:33
+                    CLAUDE.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.678159 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-06-08 18:26:44
+                    index.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.701999 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-08 18:26:52
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.658546 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-08 18:57:38
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.000465 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-08 18:58:05
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.994493 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-08 19:00:08
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.971355 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-08 19:06:11
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.02842 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-08 19:08:31
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.985756 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-08 19:11:13
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.048798 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-08 19:13:36
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.955412 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-08 19:14:06
+                    _layouts/default.html
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.984498 seconds.
+                    
+[2025-06-08 19:14:52] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-08 19:14:52] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:13 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-08 19:14:52] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:14 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-08 19:14:52] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:12 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-08 19:14:52] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:15 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-06-08 19:17:58
+                    _layouts/default.html
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.971962 seconds.
+                    
+[2025-06-08 19:18:59] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:12 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-08 19:18:59] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-08 19:18:59] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:15 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-08 19:18:59] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:11 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-08 19:18:59] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:13 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-06-08 19:19:03
+                    _layouts/default.html
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.96084 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-08 19:20:51
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.955766 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-08 19:21:41
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.945563 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-08 19:23:30
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.923585 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-08 19:23:49
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.95096 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-08 19:25:13
+                    _layouts/default.html
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.018998 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-08 19:25:27
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.921783 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-08 19:26:43
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.952629 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-08 19:28:27
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.99441 seconds.
+                    
+[2025-06-08 19:29:16] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:13 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-08 19:29:16] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:12 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-08 19:29:16] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-08 19:29:16] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:15 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-08 19:29:16] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:14 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-06-08 19:32:16
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.96441 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-08 19:34:14
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.992824 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-08 19:34:50
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.966628 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-08 19:36:14
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.003508 seconds.
+                    
+[2025-06-08 19:37:00] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:12 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-06-08 19:37:29
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.962787 seconds.
+                    
+[2025-06-08 19:38:19] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:14 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-08 19:38:19] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:15 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-08 19:38:19] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-08 19:38:19] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:12 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-08 19:38:19] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:11 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-06-08 19:38:33
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.968911 seconds.
+                    
+[2025-06-08 19:39:01] ERROR '/favicon.ico' not found.
+      Regenerating: 1 file(s) changed at 2025-06-08 19:41:15
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.008862 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-08 19:44:12
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.969297 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-08 19:47:21
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.930646 seconds.
+                    
+[2025-06-08 19:48:28] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-06-08 19:50:08
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.967315 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-08 19:51:30
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.947386 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-08 19:51:36
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.92119 seconds.
+                    
+[2025-06-08 19:52:32] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:12 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-06-08 19:56:10
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.988331 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-08 19:57:14
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.001286 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-08 19:57:37
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.919421 seconds.
+                    
+[2025-06-08 19:58:09] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:12 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-08 19:58:09] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:11 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-08 19:58:09] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:13 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-08 19:58:09] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-08 19:58:09] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:15 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-06-08 19:59:42
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.973745 seconds.
+                    
+[2025-06-08 20:00:23] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:14 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-08 20:00:23] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:15 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-08 20:00:23] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:11 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-08 20:00:23] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-08 20:00:23] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:12 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-06-08 20:00:37
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.981642 seconds.
+                    
+[2025-06-08 20:01:15] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:13 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-08 20:01:15] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:11 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-08 20:01:15] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-08 20:01:15] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:14 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-08 20:01:15] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:15 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-06-08 20:01:38
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.961338 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-08 20:03:41
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.977833 seconds.
+                    
+[2025-06-08 20:04:21] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-06-08 20:04:39
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.963704 seconds.
+                    
+[2025-06-08 20:05:17] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:15 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-08 20:05:17] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:11 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-09 09:13:48] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:14 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-09 09:13:48] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-09 09:13:48] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:15 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-09 09:13:48] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:12 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-09 09:13:48] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:13 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
