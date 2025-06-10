@@ -16,3 +16,183 @@ To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
 	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
 	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
 [2025-06-09 16:43:30] ERROR '/Human-Crafted-Home/CAD design and engineering/' not found.
+[2025-06-09 16:44:26] ERROR '/Human-Crafted-Home/CAD design and engineering/' not found.
+      Regenerating: 1 file(s) changed at 2025-06-10 14:08:45
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.05507 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 14:09:00
+                    _layouts/default.html
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.846947 seconds.
+                    
+[2025-06-10 14:09:45] ERROR '/Human-Crafted-Home/CAD design and engineering/' not found.
+[2025-06-10 14:09:49] ERROR '/Human-Crafted-Home/CAD design and engineering/' not found.
+      Regenerating: 1 file(s) changed at 2025-06-10 14:10:38
+                    _layouts/default.html
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.86893 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 14:10:50
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.782373 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 14:13:14
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.890037 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 14:14:27
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.830816 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 14:17:13
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.818835 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 14:18:33
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.795195 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 14:19:50
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.802896 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 14:22:59
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.821104 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 14:23:05
+                    _layouts/default.html
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.760575 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 14:23:50
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.787649 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 14:25:35
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.827215 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 14:26:40
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.78041 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 14:27:26
+                    _layouts/default.html
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.842318 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 14:27:32
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.791136 seconds.
+                    
+[2025-06-10 14:28:09] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-06-10 14:28:31
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.817922 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 14:29:14
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.785046 seconds.
+                    
+[2025-06-10 14:29:52] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-06-10 14:31:05
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.819316 seconds.
+                    
+[2025-06-10 14:31:41] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-10 14:32:39] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-06-10 14:32:58
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.834877 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 14:34:25
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.805565 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 14:35:08
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.763006 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-06-10 14:39:05
+                    jekyll.log
+                    CLAUDE.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.810214 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-06-10 14:39:12
+                    jekyll.log
+                    CLAUDE.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.770219 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-06-10 14:39:41
+                    jekyll.log
+                    CLAUDE.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.826061 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 14:43:13
+                    _layouts/default.html
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.842392 seconds.
+                    
+[2025-06-10 14:44:26] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:15 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 2 file(s) changed at 2025-06-10 14:46:37
+                    more.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.794505 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-06-10 14:46:43
+                    more.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.741596 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-06-10 14:46:48
+                    more.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.764991 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-06-10 14:46:55
+                    more.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.845306 seconds.
+                    

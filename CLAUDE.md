@@ -123,7 +123,12 @@ pkill -f "jekyll serve"
 
 ### Responsive Breakpoints
 - Mobile: `@media (max-width: 768px)`
-- Adjusts hero height to 30vh and container padding to 15vh
+- Adjusts hero height to 30vh and container padding to 20vh
+- Mobile navigation: vertical stack with custom order (Let's co/lab, More, theme toggle)
+- Mobile navigation gap: 0.25rem for compact spacing
+- Logo aligned to flex-start on mobile header
+- H1 font size reduced to 2.25rem on mobile
+- Project meta layout: vertical stack with 1rem gap (overrides 4rem desktop gap)
 
 ## Figma Design Implementation
 - Fixed navigation matching Figma positioning
@@ -211,9 +216,10 @@ git checkout -b hover-experiment
 
 ### CSS Changes
 - Test changes locally before committing
-- Use proper specificity for overrides
+- Use proper specificity for overrides (use `!important` for mobile overrides if needed)
 - Consider mobile breakpoints for responsive design
 - Yellow highlight system saved in commit `24fbbea` if needed
+- Mobile layouts require separate styling from desktop (different flex directions, gaps, alignments)
 
 ## Known Issues
 - Complex markdown tables may not process Obsidian links correctly (use Jekyll syntax)
@@ -224,6 +230,18 @@ git checkout -b hover-experiment
 - Test responsive behavior across devices
 - Expand tool pages and documentation
 
+### Recent Mobile Layout Updates (June 10, 2025)
+- **Mobile Navigation Order**: Custom CSS order properties for mobile stack: Let's co/lab (1st), More (2nd), theme toggle (3rd)
+- **Navigation Spacing**: Reduced mobile nav gap to 0.25rem for compact layout
+- **Header Alignment**: Logo aligned to flex-start (top) on mobile header
+- **Typography**: H1 font size reduced to 2.25rem on mobile for better readability
+- **Page Meta Layout**: Comprehensive mobile restructure for `_pages` collection:
+  - Back link and categories stack vertically with 1rem gap (4rem on desktop with `!important` override)
+  - Category section: horizontal layout with "Category:" label and tags
+  - Category tags: wrapped in `.category-tags` div, stack vertically on mobile
+  - All elements left-aligned with proper flex alignment
+- **Button Hover**: Added missing hover effects for mobile co/lab button (wavy underline)
+
 ---
-*Last updated: June 9, 2025 at 3:27 PM*
+*Last updated: June 10, 2025 at 2:40 PM*
 *Claude Code session documentation*

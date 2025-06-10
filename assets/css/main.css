@@ -582,7 +582,7 @@ hr {
 @media (max-width: 768px) {
   .site-container {
     padding: 0 5%;
-    padding-top: 15vh;
+    padding-top: 20vh;
   }
   
   .site-header {
@@ -591,6 +591,7 @@ hr {
   
   .header-content {
     padding: 0 5%;
+    align-items: flex-start;
   }
   
   .site-logo {
@@ -598,7 +599,21 @@ hr {
   }
   
   .site-nav {
-    gap: 1.5rem;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.25rem;
+  }
+  
+  .site-nav a:first-child {
+    order: 2; /* More - second */
+  }
+  
+  .site-nav .colab-btn {
+    order: 1; /* Let's co/lab - first */
+  }
+  
+  .site-nav .theme-toggle {
+    order: 3; /* Theme toggle - third */
   }
   
   .site-nav .colab-btn {
@@ -614,6 +629,12 @@ hr {
     gap: 0 !important;
     text-decoration: none !important;
     transition: text-decoration 150ms ease !important;
+  }
+  
+  .site-nav .colab-btn:hover {
+    font-weight: 500 !important;
+    text-decoration: underline !important;
+    text-decoration-style: wavy !important;
   }
   
   .site-nav .colab-btn svg {
@@ -639,6 +660,10 @@ hr {
     max-width: 100%;
   }
   
+  h1 {
+    font-size: 2.25rem;
+  }
+  
   h2 {
     font-size: 1.5rem;
     margin-top: 3rem;
@@ -647,6 +672,32 @@ hr {
   
   .project-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .project-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem !important;
+  }
+  
+  .back-link {
+    align-self: flex-start;
+  }
+  
+  .project-categories {
+    flex-direction: row;
+    align-items: flex-start;
+    align-self: flex-start;
+  }
+  
+  .categories-label {
+    align-self: flex-start;
+  }
+  
+  .category-tags {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
   }
   
   .footer-content {
@@ -713,7 +764,7 @@ hr {
 .project-meta {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 4rem;
   margin-bottom: 3rem;
 }
 

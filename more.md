@@ -35,9 +35,9 @@ Masen Environmental Solutions, PLOT Communications, Everthine Jewelry, Violet De
 
 ![](/assets/images/vennColab.svg)
 
-We build to learn. We cut through the chaos to identify the next discrete and logical step to solve any problem. Then we get to work rapidly building solutions to test, informing future steps, and above all... **MAKING PROGRESS.**
+Build to learn. I cut through the chaos to identify the next discrete and logical step to solve any problem. Then I get to work rapidly building solutions to test, informing future steps, and above all... **MAKING PROGRESS.**
 
-We are a great match when these apply:
+I'm a great match when these apply:
 
 - Having trouble getting started...
 - Your project is stuck and you need a boost...
