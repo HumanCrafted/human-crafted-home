@@ -234,3 +234,144 @@ To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
        Jekyll Feed: Generating feed for posts
                     ...done in 0.781743 seconds.
                     
+      Regenerating: 2 file(s) changed at 2025-06-10 15:29:11
+                    _projects/content templates/more project details.md
+                    _projects/content templates/project properties.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.830344 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-06-10 15:29:18
+                    _projects/project templates/more project details.md
+                    _projects/project templates/project properties.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.815322 seconds.
+                    
+      Regenerating: 7 file(s) changed at 2025-06-10 15:29:53
+                    jekyll.log
+                    project templates/more project details.md
+                    project templates/project properties.md
+                    _projects/content templates/more project details.md
+                    _projects/content templates/project properties.md
+                    _projects/project templates/more project details.md
+                    _projects/project templates/project properties.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.773827 seconds.
+                    
+      Regenerating: 5 file(s) changed at 2025-06-10 15:29:58
+                    jekyll.log
+                    templates/more project details.md
+                    templates/project properties.md
+                    project templates/more project details.md
+                    project templates/project properties.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.738685 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 15:30:02
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.756728 seconds.
+                    
+      Regenerating: 5 file(s) changed at 2025-06-10 15:31:13
+                    jekyll.log
+                    obsidian-templates/more project details.md
+                    obsidian-templates/project properties.md
+                    templates/more project details.md
+                    templates/project properties.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.801893 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 15:31:31
+                    _projects/wave-soap-tray.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.807546 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 15:31:32
+                    _projects/wave-soap-tray.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.801029 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 15:31:56
+                    _projects/wave-soap-tray.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.858082 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 15:32:04
+                    _projects/wave-soap-tray.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.804893 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 15:32:06
+                    _projects/wave-soap-tray.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.79712 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 15:32:11
+                    _projects/wave-soap-tray.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.81173 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 15:32:22
+                    _projects/wave-soap-tray.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.803848 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 15:32:32
+                    _projects/wave-soap-tray.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.797874 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 15:32:33
+                    _projects/wave-soap-tray.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.769144 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 15:32:34
+                    _projects/wave-soap-tray.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.79867 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 15:32:36
+                    _projects/wave-soap-tray.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.814153 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 15:32:53
+                    _projects/wave-soap-tray.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.793103 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 15:32:55
+                    _projects/wave-soap-tray.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.809523 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 15:33:17
+                    _projects/wave-soap-tray.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.828124 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 15:33:26
+                    _projects/wave-soap-tray.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.800883 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 15:33:41
+                    obsidian-templates/project properties.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.803044 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 15:33:43
+                    obsidian-templates/project properties.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.77804 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 15:33:49
+                    obsidian-templates/project properties.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.774754 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 15:33:51
+                    obsidian-templates/project properties.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.778518 seconds.
+                    
