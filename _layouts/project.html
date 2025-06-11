@@ -25,9 +25,11 @@ layout: default
     {% if page.categories %}
       <div class="project-categories">
         <span class="categories-label">Categories:</span>
-        {% for category in page.categories %}
-          <a href="{{ '/' | relative_url }}?category={{ category | url_encode }}#archive" class="category-tag">{{ category }}</a>
-        {% endfor %}
+        <div class="meta-links">
+          {% for category in page.categories %}
+            <a href="{{ '/' | relative_url }}?category={{ category | url_encode }}#archive" class="meta-link">{{ category }}</a>
+          {% endfor %}
+        </div>
       </div>
     {% endif %}
   </div>

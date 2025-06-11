@@ -55,9 +55,9 @@
                               {% unless page.tag contains 'index' %}
                                 <div class="project-tags">
                                   <span class="tags-label">Tag:</span>
-                                  <div class="tag-items">
+                                  <div class="meta-links">
                                     {% for tag in page.tag %}
-                                      <a href="{{ '/' | append: tag | append: '/' | relative_url }}" class="tag-item">{{ tag }}</a>
+                                      <a href="{{ '/' | append: tag | append: '/' | relative_url }}" class="meta-link">{{ tag }}</a>
                                     {% endfor %}
                                   </div>
                                 </div>

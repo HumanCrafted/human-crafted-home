@@ -619,7 +619,7 @@ hr {
   .site-nav .colab-btn {
     background: none !important;
     color: var(--foreground) !important;
-    padding: 0 0.25rem !important;
+    padding: 0 !important;
     border-radius: 0 !important;
     font-size: 18px !important;
     font-weight: 400 !important;
@@ -684,20 +684,31 @@ hr {
     align-self: flex-start;
   }
   
-  .project-tags {
+  .project-tags,
+  .project-categories {
     flex-direction: row;
     align-items: flex-start;
     align-self: flex-start;
   }
   
-  .tags-label {
+  .tags-label,
+  .categories-label {
     align-self: flex-start;
   }
   
-  .tag-items {
+  .meta-links {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+  }
+  
+  
+  .project-categories .meta-link {
+    align-self: flex-start;
+  }
+  
+  .meta-link {
+    padding: 0 !important;
   }
   
   .footer-content {
@@ -758,7 +769,7 @@ hr {
 }
 
 .project-header h1 {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .project-meta {
@@ -781,7 +792,7 @@ hr {
   margin-right: 0.5rem;
 }
 
-.tag-item {
+.meta-link {
   color: var(--foreground);
   padding: 0.25rem 0.75rem;
   border-radius: 1rem;
@@ -792,10 +803,24 @@ hr {
   transition: text-decoration 150ms ease;
 }
 
-.tag-item:hover {
+.meta-link:hover {
   font-weight: 500;
   text-decoration-style: wavy;
 }
+
+.project-categories {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.categories-label {
+  color: var(--foreground);
+  font-size: 0.875rem;
+  margin-right: 0.5rem;
+}
+
 
 .project-hero {
   margin-bottom: 2rem;
