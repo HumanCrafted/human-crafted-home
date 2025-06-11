@@ -582,7 +582,7 @@ hr {
 @media (max-width: 768px) {
   .site-container {
     padding: 0 5%;
-    padding-top: 20vh;
+    padding-top: 25vh;
   }
   
   .site-header {

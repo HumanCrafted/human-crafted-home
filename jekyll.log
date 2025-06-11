@@ -565,3 +565,11 @@ To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
        Jekyll Feed: Generating feed for posts
                     ...done in 0.850875 seconds.
                     
+[2025-06-11 07:50:56] ERROR '/apple-touch-icon-precomposed.png' not found.
+[2025-06-11 07:50:56] ERROR '/apple-touch-icon.png' not found.
+[2025-06-11 07:50:56] ERROR '/favicon.ico' not found.
+      Regenerating: 1 file(s) changed at 2025-06-11 07:53:58
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.03061 seconds.
+                    
