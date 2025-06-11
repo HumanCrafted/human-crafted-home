@@ -1,0 +1,77 @@
+# Social Media Links Configuration
+# Set enabled: false to hide any platform
+
+- name: Reddit
+  url: "https://www.reddit.com/user/_nginear/"
+  enabled: true
+  aria_label: "Reddit"
+
+- name: Figma
+  url: "https://www.figma.com/@jonalling"
+  enabled: true
+  aria_label: "Figma"
+
+- name: GitHub
+  url: "https://github.com/HumanCrafted"
+  enabled: true
+  aria_label: "GitHub"
+
+- name: Pinterest
+  url: "https://www.pinterest.com/human_crafted/"
+  enabled: true
+  aria_label: "Pinterest"
+
+- name: LinkedIn
+  url: "https://www.linkedin.com/in/alling/"
+  enabled: true
+  aria_label: "LinkedIn"
+
+- name: Instagram
+  url: "https://www.instagram.com/human_crafted/"
+  enabled: true
+  aria_label: "Instagram"
+
+- name: X-Twitter
+  url: "https://x.com/jonalling"
+  enabled: true
+  aria_label: "X-Twitter"
+
+- name: Apple
+  url: "https://apple.com/yourusername"
+  enabled: false
+  aria_label: "Apple"
+
+- name: Discord
+  url: "https://discord.gg/yourusername"
+  enabled: false
+  aria_label: "Discord"
+
+- name: Snapchat
+  url: "https://snapchat.com/add/yourusername"
+  enabled: false
+  aria_label: "Snapchat"
+
+- name: YouTube
+  url: "https://youtube.com/@yourusername"
+  enabled: false
+  aria_label: "YouTube"
+
+- name: WhatsApp
+  url: "https://wa.me/yourusername"
+  enabled: false
+  aria_label: "WhatsApp"
+
+- name: Threads
+  url: "https://threads.net/@yourusername"
+  enabled: false
+  aria_label: "Threads"
+
+- name: Medium
+  url: "https://medium.com/@yourusername"
+  enabled: false
+  aria_label: "Medium"
+
+- name: Facebook
+  url: "https://facebook.com/yourusername"
+  enabled: false
+  aria_label: "Facebook"

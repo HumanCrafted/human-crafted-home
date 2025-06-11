@@ -48,17 +48,17 @@ I'm a great match when these apply:
 
 ### Tools
 
-| **Type**                               | **Spec**                                                        |
-| -------------------------------------- | --------------------------------------------------------------- |
-| [Laser Cutter](_pages/laser-cutter.md) | 1300mm x 900mm 150 Watt CO2                                     |
-| CNC Router                             | 24 in x 48 in X-Carve Pro                                       |
-| Digital mockups                        | Figma, Illustrator,                                             |
-| Web design                             | Static Page Sites, Framer, Notion + Super, Webflow, Squarespace |
-| 3D Printer                             | 7 in x 7 in x 7 in, Prusa MINI+                                 |
-| CAD Design                             | [Fusion360](_pages/fusion360.md)                                |
-| Electronics mockups                    | Arduino, Raspberry Pi, IoT                                      |
-| Organization                           | Notion, Airtable, Mural, Figjam                                 |
-| Business Operations                    | Toggl, Xero, Ramp, Tally.so                                     |
-| AI Tools                               | ChatGPT, Vercel v0, GitHub Co-Pilot                             |
+| **Type**                              | **Spec**                                                        |
+| ------------------------------------- | --------------------------------------------------------------- |
+| [Laser Cutter](_docs/laser-cutter.md) | 1300mm x 900mm 150 Watt CO2                                     |
+| CNC Router                            | 24 in x 48 in X-Carve Pro                                       |
+| Digital mockups                       | Figma, Illustrator,                                             |
+| Web design                            | Static Page Sites, Framer, Notion + Super, Webflow, Squarespace |
+| 3D Printer                            | 7 in x 7 in x 7 in, Prusa MINI+                                 |
+| CAD Design                            | [Fusion360](_docs/fusion360.md)                                 |
+| Electronics mockups                   | Arduino, Raspberry Pi, IoT                                      |
+| Organization                          | Notion, Airtable, Mural, Figjam                                 |
+| Business Operations                   | Toggl, Xero, Ramp, Tally.so                                     |
+| AI Tools                              | ChatGPT, Vercel v0, GitHub Co-Pilot                             |
 
 ---

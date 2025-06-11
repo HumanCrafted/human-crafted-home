@@ -553,6 +553,15 @@ hr {
   color: var(--muted);
 }
 
+.social-links svg {
+  color: var(--foreground);
+  transition: color 150ms ease;
+}
+
+.social-links a:hover svg {
+  color: var(--muted);
+}
+
 /* Utility classes for margin-bottom based on Figma frames */
 .margin-bottom-1rem {
   margin-bottom: 1rem;

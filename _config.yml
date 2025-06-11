@@ -28,7 +28,7 @@ exclude:
 
 # Collections for organized content
 collections:
-  pages:
+  docs:
     output: true
     permalink: /:name/
   posts:
