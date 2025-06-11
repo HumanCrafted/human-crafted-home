@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
     <title>{% if page.title and page.url != "/" %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
     <link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">

@@ -554,3 +554,14 @@ To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
                     ...done in 0.781725 seconds.
                     
 [2025-06-10 19:20:31] ERROR '/Human-Crafted-Home/CAD design and engineering/' not found.
+      Regenerating: 2 file(s) changed at 2025-06-10 19:26:35
+                    jekyll.log
+                    robots.txt
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.848948 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 19:26:47
+                    _layouts/default.html
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.850875 seconds.
+                    
