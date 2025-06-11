@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "more.md",
+                "file": "_projects/v60-filter-tray.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "more"
+              "title": "v60-filter-tray"
             }
           }
         ]
@@ -191,8 +191,11 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "e3ae9734b80c0b53",
+  "active": "f99b1b6df89fb020",
   "lastOpenFiles": [
+    "_projects/uv-micro.md",
+    "_projects/v60-filter-tray.md",
+    "more.md",
     "_site/assets/images/YouTube.svg",
     "_site/assets/images/WhatsApp.svg",
     "_site/assets/images/Threads.svg",
@@ -203,7 +206,6 @@
     "_site/assets/images/Apple.svg",
     "assets/images/Apple.svg",
     "assets/images/Discord.svg",
-    "assets/images/Facebook.svg",
     "_includes/footer-social.liquid",
     "_layouts/footer-social.liquid",
     "_data/social.yml",
@@ -236,8 +238,6 @@
     "project templates/more project details.md",
     "_projects/project templates/project properties.md",
     "_projects/project templates/more project details.md",
-    "_site/more project details.md",
-    "_projects/content templates/project properties.md",
-    "_projects/content templates/more project details.md"
+    "_site/more project details.md"
   ]
 }

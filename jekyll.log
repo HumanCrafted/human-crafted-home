@@ -252,3 +252,32 @@ To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
 	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
 	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
 	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 2 file(s) changed at 2025-06-11 12:33:46
+                    index.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+[31m  Liquid Exception: Liquid error (line 20): Invalid nils order: 'title' is not a valid nils order. It must be 'first' or 'last'. in index.md[0m
+[33m             Error: Liquid error (line 20): Invalid nils order: 'title' is not a valid nils order. It must be 'first' or 'last'.[0m
+[33m             Error: Run jekyll build --trace for more information.[0m
+                    
+      Regenerating: 1 file(s) changed at 2025-06-11 12:35:56
+                    _projects/v60-filter-tray.md
+       Jekyll Feed: Generating feed for posts
+[31m  Liquid Exception: Liquid error (line 20): Invalid nils order: 'title' is not a valid nils order. It must be 'first' or 'last'. in index.md[0m
+[33m             Error: Liquid error (line 20): Invalid nils order: 'title' is not a valid nils order. It must be 'first' or 'last'.[0m
+[33m             Error: Run jekyll build --trace for more information.[0m
+                    
+      Regenerating: 1 file(s) changed at 2025-06-11 12:35:57
+                    _projects/v60-filter-tray.md
+       Jekyll Feed: Generating feed for posts
+[31m  Liquid Exception: Liquid error (line 20): Invalid nils order: 'title' is not a valid nils order. It must be 'first' or 'last'. in index.md[0m
+[33m             Error: Liquid error (line 20): Invalid nils order: 'title' is not a valid nils order. It must be 'first' or 'last'.[0m
+[33m             Error: Run jekyll build --trace for more information.[0m
+                    
+      Regenerating: 1 file(s) changed at 2025-06-11 12:35:59
+                    _projects/v60-filter-tray.md
+       Jekyll Feed: Generating feed for posts
+[31m  Liquid Exception: Liquid error (line 20): Invalid nils order: 'title' is not a valid nils order. It must be 'first' or 'last'. in index.md[0m
+[33m             Error: Liquid error (line 20): Invalid nils order: 'title' is not a valid nils order. It must be 'first' or 'last'.[0m
+[33m             Error: Run jekyll build --trace for more information.[0m
+                    
