@@ -299,3 +299,23 @@ To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
        Jekyll Feed: Generating feed for posts
                     ...done in 1.018836 seconds.
                     
+      Regenerating: 1 file(s) changed at 2025-06-11 12:42:38
+                    _projects/v60-filter-tray.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.888662 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-11 12:42:39
+                    _projects/v60-filter-tray.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.805124 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-11 12:43:00
+                    _projects/v60-filter-tray.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.832242 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-11 12:43:03
+                    _projects/v60-filter-tray.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.824189 seconds.
+                    
