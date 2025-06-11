@@ -8,6 +8,7 @@ categories:
   - laser
   - desktop
 published_date: 2019-11-05
+draft: false
 gallery_images: 
 headline: 
 version: "1.0"

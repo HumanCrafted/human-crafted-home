@@ -8,6 +8,7 @@ categories:
   - around the shop
   - wooden
 published_date: 2020-03-02
+draft: false
 gallery_images: 
 headline: 
 version: "1.0"

@@ -8,6 +8,7 @@ categories:
   - 3d printing
   - around the house
 published_date: 2020-11-14
+draft: false
 gallery_images: 
 headline: 
 version: "1.0"

@@ -375,3 +375,182 @@ To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
        Jekyll Feed: Generating feed for posts
                     ...done in 0.778518 seconds.
                     
+      Regenerating: 1 file(s) changed at 2025-06-10 15:36:29
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.853876 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 15:50:05
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.841868 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 19:04:59
+                    _projects/abc-blocks.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.056538 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 19:05:30
+                    _projects/acrylic-deer-and-snowman.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.88435 seconds.
+                    
+      Regenerating: 4 file(s) changed at 2025-06-10 19:05:32
+                    _projects/acrylic-trees.md
+                    _projects/bath-container.md
+                    _projects/acrylic-robin.md
+                    _projects/concentric-coaster.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.825921 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 19:06:08
+                    _projects/concrete-trays.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.788391 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 19:06:21
+                    _projects/contact-lens-holder.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.783666 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 19:06:26
+                    _projects/cord-keeper.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.762556 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 19:06:41
+                    _projects/dyson-hand-saver.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.784164 seconds.
+                    
+      Regenerating: 5 file(s) changed at 2025-06-10 19:07:03
+                    _projects/everthine-jewelry-stand.md
+                    _projects/erasable-notepad.md
+                    _projects/elevations-clock.md
+                    _projects/fellow-brush-stand.md
+                    _projects/elevations.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.795942 seconds.
+                    
+      Regenerating: 5 file(s) changed at 2025-06-10 19:07:24
+                    _projects/made-kits-loom-tools.md
+                    _projects/made-kits-fun-loom.md
+                    _projects/fridge-frames.md
+                    _projects/led-open-sign.md
+                    _projects/fridge-folders.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.764498 seconds.
+                    
+      Regenerating: 5 file(s) changed at 2025-06-10 19:07:46
+                    _projects/mist-system.md
+                    _projects/modern-doll-house.md
+                    _projects/note-todo-stack.md
+                    _projects/made-kits-loom.md
+                    _projects/pen-cup.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.767909 seconds.
+                    
+      Regenerating: 5 file(s) changed at 2025-06-10 19:08:08
+                    _projects/quip-stand.md
+                    _projects/plant-support.md
+                    _projects/retail-sandwich-sign.md
+                    _projects/retail-shield.md
+                    _projects/post-it-holders.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.766778 seconds.
+                    
+      Regenerating: 5 file(s) changed at 2025-06-10 19:08:30
+                    _projects/sunnersta-hook.md
+                    _projects/slot-wall-hook.md
+                    _projects/sunnersta-blade.md
+                    _projects/shop-v3.md
+                    _projects/shop-v2.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.797739 seconds.
+                    
+      Regenerating: 5 file(s) changed at 2025-06-10 19:08:52
+                    _projects/sunnersta-tape.md
+                    _projects/tissue-dispenser.md
+                    _projects/sunnersta-pen-cup.md
+                    _projects/sunnersta-wire-tray.md
+                    _projects/taco-stands.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.785404 seconds.
+                    
+      Regenerating: 5 file(s) changed at 2025-06-10 19:09:14
+                    _projects/trofast-lego-storage.md
+                    _projects/tradeshow-layout-v4.md
+                    _projects/trofast-storage-shelf.md
+                    _projects/toilet-paper-holder.md
+                    _projects/uv-micro.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.771803 seconds.
+                    
+      Regenerating: 6 file(s) changed at 2025-06-10 19:09:41
+                    _projects/whiteboard-photo-wall.md
+                    _projects/v60-filter-tray.md
+                    _projects/wall-hooks.md
+                    _projects/wave-soap-tray.md
+                    _projects/water-wall-toys.md
+                    _projects/zen-coaster.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.767049 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-06-10 19:10:19
+                    index.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.783745 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 19:10:40
+                    _projects/wave-soap-tray.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.821777 seconds.
+                    
+[2025-06-10 19:11:23] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-06-10 19:11:30
+                    _projects/wave-soap-tray.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.834092 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 19:11:43
+                    _projects/wave-soap-tray.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.840398 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 19:14:52
+                    _layouts/default.html
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.806317 seconds.
+                    
+      Regenerating: 3 file(s) changed at 2025-06-10 19:15:02
+                    _pages/manufacturing.md
+                    _pages/fabrication.md
+                    _pages/tools.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.806773 seconds.
+                    
+      Regenerating: 5 file(s) changed at 2025-06-10 19:15:20
+                    _pages/manufacturing.md
+                    _pages/laser-cutter.md
+                    _pages/fabrication.md
+                    _pages/fusion360.md
+                    _pages/tools.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.778223 seconds.
+                    
+[2025-06-10 19:15:57] ERROR '/Human-Crafted-Home/CAD design and engineering/' not found.
+      Regenerating: 1 file(s) changed at 2025-06-10 19:17:27
+                    _layouts/default.html
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.833396 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-10 19:17:53
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.781725 seconds.
+                    
+[2025-06-10 19:20:31] ERROR '/Human-Crafted-Home/CAD design and engineering/' not found.

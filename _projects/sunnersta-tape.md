@@ -9,6 +9,7 @@ categories:
   - ikea hack
   - around the shop
 published_date: 2021-01-31
+draft: false
 gallery_images: 
 headline: 
 version: "1.0"

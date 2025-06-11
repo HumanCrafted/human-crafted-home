@@ -9,6 +9,7 @@ categories:
   - wooden
   - retail
 published_date: 2019-08-05
+draft: false
 gallery_images: 
 headline: 
 version: "1.0"

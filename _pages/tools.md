@@ -2,7 +2,7 @@
 layout: default
 title: Tools
 permalink: /tools/
-categories:
+tag:
   - index
 ---
 
@@ -10,7 +10,7 @@ This is a collection of all the tools and software I use in my design and fabric
 
 ### Design & Engineering Tools
 
-{% assign tool_pages = site.pages | where_exp: "page", "page.categories contains 'tools'" %}
+{% assign tool_pages = site.pages | where_exp: "page", "page.tag contains 'tools'" %}
 {% for page in tool_pages %}
 {% unless page.title == "Tools" %}
 - **[{{ page.title }}]({{ page.url | relative_url }})** - {{ page.tool_type | default: "Tool" }}

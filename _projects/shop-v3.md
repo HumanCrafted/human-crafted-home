@@ -8,6 +8,7 @@ categories:
   - around the house
   - around the shop
 published_date: 2023-01-31
+draft: false
 gallery_images:
   - "![[shop-v3-outdoors-1.png]]"
   - "![[shop-v3-drawing-1.svg]]"

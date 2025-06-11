@@ -9,6 +9,7 @@ categories:
   - around the house
   - bathroom
 published_date: 2021-10-15
+draft: false
 gallery_images: 
 headline: 
 version: "1.0"

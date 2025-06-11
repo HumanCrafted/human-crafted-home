@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "obsidian-templates/project properties.md",
+                "file": "_pages/fabrication.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "project properties"
+              "title": "fabrication"
             }
           }
         ]
@@ -193,19 +193,19 @@
   },
   "active": "f99b1b6df89fb020",
   "lastOpenFiles": [
-    "obsidian-templates/more project details.md",
     "_projects/wave-soap-tray.md",
+    "_projects/abc-blocks.md",
+    "obsidian-templates/project properties.md",
+    "obsidian-templates/more project details.md",
     "_projects/whiteboard-photo-wall.md",
     "_projects/water-wall-toys.md",
     "_projects/wall-hooks.md",
     "_site/wave-soap-tray/index.html",
     "_site/wave-soap-tray",
-    "_projects/abc-blocks.md",
     "_site/obsidian-templates/project properties.html",
     "_site/obsidian-templates/more project details.html",
     "_site/obsidian-templates/more project details.md",
     "_site/obsidian-templates",
-    "obsidian-templates/project properties.md",
     "obsidian-templates",
     "_site/templates/project properties.html",
     "_site/templates/more project details.md",

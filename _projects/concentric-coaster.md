@@ -9,6 +9,7 @@ categories:
   - around the house
   - desktop
 published_date: 2017-04-05
+draft: false
 gallery_images: 
 headline: 
 version: "1.0"

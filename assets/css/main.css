@@ -684,17 +684,17 @@ hr {
     align-self: flex-start;
   }
   
-  .project-categories {
+  .project-tags {
     flex-direction: row;
     align-items: flex-start;
     align-self: flex-start;
   }
   
-  .categories-label {
+  .tags-label {
     align-self: flex-start;
   }
   
-  .category-tags {
+  .tag-items {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
@@ -768,20 +768,20 @@ hr {
   margin-bottom: 3rem;
 }
 
-.project-categories {
+.project-tags {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
 
-.categories-label {
+.tags-label {
   color: var(--foreground);
   font-size: 0.875rem;
   margin-right: 0.5rem;
 }
 
-.category-tag {
+.tag-item {
   color: var(--foreground);
   padding: 0.25rem 0.75rem;
   border-radius: 1rem;
@@ -792,7 +792,7 @@ hr {
   transition: text-decoration 150ms ease;
 }
 
-.category-tag:hover {
+.tag-item:hover {
   font-weight: 500;
   text-decoration-style: wavy;
 }

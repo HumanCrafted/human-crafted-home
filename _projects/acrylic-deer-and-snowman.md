@@ -9,6 +9,7 @@ categories:
   - around the house
   - holiday
 published_date: 2019-11-11
+draft: false
 gallery_images: 
 headline: 
 version: "1.0"

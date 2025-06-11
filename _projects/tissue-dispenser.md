@@ -10,6 +10,7 @@ categories:
   - bathroom
   - wooden
 published_date: 2018-01-21
+draft: false
 gallery_images: 
 headline: 
 version: "1.0"

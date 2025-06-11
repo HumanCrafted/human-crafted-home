@@ -50,13 +50,13 @@
                     {% if page.collection == "pages" %}
                         <div class="project-meta">
                             <a href="{{ '/more/' | relative_url }}" class="back-link">← Back to More</a>
-                            {% if page.categories %}
-                              {% unless page.categories contains 'index' %}
-                                <div class="project-categories">
-                                  <span class="categories-label">Category:</span>
-                                  <div class="category-tags">
-                                    {% for category in page.categories %}
-                                      <a href="{{ '/' | append: category | append: '/' | relative_url }}" class="category-tag">{{ category }}</a>
+                            {% if page.tag %}
+                              {% unless page.tag contains 'index' %}
+                                <div class="project-tags">
+                                  <span class="tags-label">Tag:</span>
+                                  <div class="tag-items">
+                                    {% for tag in page.tag %}
+                                      <a href="{{ '/' | append: tag | append: '/' | relative_url }}" class="tag-item">{{ tag }}</a>
                                     {% endfor %}
                                   </div>
                                 </div>

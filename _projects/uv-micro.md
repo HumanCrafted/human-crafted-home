@@ -8,6 +8,7 @@ categories:
   - client work
   - brand
 published_date: 2021-01-21
+draft: false
 gallery_images: 
 headline: 
 version: "1.0"

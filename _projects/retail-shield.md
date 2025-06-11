@@ -8,6 +8,7 @@ categories:
   - laser
   - retail
 published_date: 2020-05-14
+draft: false
 gallery_images: 
 headline: 
 version: "1.0"

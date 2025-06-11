@@ -22,7 +22,7 @@ title:
 </div>
 
 <div class="project-grid">
-  {% assign sorted_projects = site.projects | sort: 'published_date' | reverse %}
+  {% assign sorted_projects = site.projects | where: 'draft', false | sort: 'published_date' | reverse %}
   {% for project in sorted_projects %}
     <a href="{{ project.url | relative_url }}" class="project-card" data-categories="{{ project.categories | join: ',' }}">
       <div class="project-image">

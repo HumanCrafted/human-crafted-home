@@ -2,7 +2,7 @@
 layout: default
 title: Fabrication
 permalink: /fabrication/
-categories:
+tag:
   - index
 ---
 
@@ -10,7 +10,7 @@ Tools and projects related to physical fabrication and making.
 
 ### Fabrication Tools
 
-{% assign fabrication_pages = site.pages | where_exp: "page", "page.categories contains 'fabrication'" %}
+{% assign fabrication_pages = site.pages | where_exp: "page", "page.tag contains 'fabrication'" %}
 {% for page in fabrication_pages %}
 {% unless page.title == "Fabrication" %}
 - **[{{ page.title }}]({{ page.url | relative_url }})** - {{ page.tool_type | default: "Tool" }}

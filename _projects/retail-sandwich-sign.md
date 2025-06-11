@@ -10,6 +10,7 @@ categories:
   - wooden
   - laser
 published_date: 2018-09-17
+draft: false
 gallery_images: 
 headline: 
 version: "1.0"

@@ -10,6 +10,7 @@ categories:
   - kitchen
   - coffee
 published_date: 2023-01-31
+draft: false
 gallery_images: 
 headline: 
 version: "1.0"

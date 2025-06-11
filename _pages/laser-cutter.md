@@ -2,7 +2,7 @@
 layout: default
 title: Laser Cutter/Engraver
 permalink: /laser-cutter/
-categories:
+tag:
   - tools
   - fabrication
   - manufacturing

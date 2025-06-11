@@ -2,7 +2,7 @@
 layout: default
 title: Fusion360
 permalink: /fusion360/
-categories:
+tag:
   - tools
   - CAD design and engineering
 tool_type: CAD Software

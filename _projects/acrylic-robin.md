@@ -8,6 +8,7 @@ categories:
   - laser
   - around the house
 published_date: 2017-10-22
+draft: false
 gallery_images: 
 headline: 
 version: "1.0"

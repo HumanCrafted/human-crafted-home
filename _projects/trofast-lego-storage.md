@@ -10,6 +10,7 @@ categories:
   - around the house
   - lego
 published_date: 2020-12-27
+draft: false
 gallery_images: 
 headline: 
 version: "1.0"
