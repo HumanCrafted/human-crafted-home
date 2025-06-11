@@ -281,3 +281,21 @@ To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
 [33m             Error: Liquid error (line 20): Invalid nils order: 'title' is not a valid nils order. It must be 'first' or 'last'.[0m
 [33m             Error: Run jekyll build --trace for more information.[0m
                     
+[2025-06-11 12:36:36] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:14 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-11 12:36:36] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:15 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-11 12:36:36] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:11 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 2 file(s) changed at 2025-06-11 12:39:59
+                    index.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.018836 seconds.
+                    
