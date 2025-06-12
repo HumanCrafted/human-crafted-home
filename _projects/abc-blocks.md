@@ -12,6 +12,10 @@ draft: false
 gallery_images: 
 headline: 
 version: "1.0"
+tools:
+  - 3D printer
+process:
+  - 3D printing
 ---
 
 More project details coming soon!

@@ -7,6 +7,8 @@
     "published_date": "date",
     "categories": "multitext",
     "layout": "text",
-    "gallery_images": "multitext"
+    "gallery_images": "multitext",
+    "tools": "multitext",
+    "process": "multitext"
   }
 }

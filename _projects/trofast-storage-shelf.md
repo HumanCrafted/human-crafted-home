@@ -14,6 +14,8 @@ draft: false
 gallery_images: 
 headline: 
 version: "1.0"
+tools:
+process:
 ---
 
 More project details coming soon!
