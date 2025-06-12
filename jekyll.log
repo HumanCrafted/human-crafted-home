@@ -5,317 +5,205 @@ To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
  Incremental build: disabled. Enable with --incremental
       Generating... 
        Jekyll Feed: Generating feed for posts
-                    done in 0.967 seconds.
+                    done in 1.024 seconds.
  Auto-regeneration: enabled for '/Users/nginear/Documents/GitHub/human-crafted-home'
     Server address: http://127.0.0.1:4000/Human-Crafted-Home/
   Server running... press ctrl-c to stop.
-[2025-06-11 11:13:36] ERROR '/Human-Crafted-Home/CAD design and engineering/' not found.
-      Regenerating: 2 file(s) changed at 2025-06-11 11:15:03
-                    404.html
+      Regenerating: 1 file(s) changed at 2025-06-11 21:17:47
+                    more.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 2.025921 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-11 21:17:49
                     jekyll.log
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.86794 seconds.
+                    ...done in 1.293239 seconds.
                     
-      Regenerating: 2 file(s) changed at 2025-06-11 11:15:10
-                    404.html
+      Regenerating: 2 file(s) changed at 2025-06-11 21:17:56
+                    more.md
                     jekyll.log
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.847967 seconds.
+                    ...done in 1.485995 seconds.
                     
-[2025-06-11 11:15:18] ERROR '/Human-Crafted-Home/CAD design and engineering/' not found.
-[2025-06-11 11:15:34] ERROR '/Human-Crafted-Home/CAD design and engineering/' not found.
-      Regenerating: 2 file(s) changed at 2025-06-11 11:16:59
-                    404.html
+      Regenerating: 2 file(s) changed at 2025-06-11 21:18:06
+                    more.md
                     jekyll.log
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.885062 seconds.
+                    ...done in 1.273932 seconds.
                     
-[2025-06-11 11:17:06] ERROR '/Human-Crafted-Home/CAD design and engineering/' not found.
-[2025-06-11 11:17:15] ERROR '/Human-Crafted-Home/CAD design and engineering/' not found.
-[2025-06-11 11:18:39] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:13 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-11 11:18:39] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:15 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-      Regenerating: 7 file(s) changed at 2025-06-11 11:27:48
-                    assets/images/X-Twitter.svg
-                    assets/images/Figma.svg
-                    assets/images/Github.svg
-                    assets/images/Instagram.svg
-                    assets/images/Pinterest.svg
-                    assets/images/Reddit.svg
-                    assets/images/LinkedIn.svg
+[2025-06-11 21:18:58] ERROR '/assets/images/vennColab.svg' not found.
+[2025-06-11 21:19:02] ERROR '/assets/images/vennExpertise.svg' not found.
+      Regenerating: 2 file(s) changed at 2025-06-11 21:19:44
+                    jekyll.log
+                    {{.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.841418 seconds.
+                    ...done in 1.242863 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-11 11:28:59
-                    _layouts/default.html
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.857898 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-11 11:30:11
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.889112 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-11 11:33:00
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.892958 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-11 11:34:09
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.853388 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-11 11:34:18
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.909609 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-11 11:35:05
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.910316 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-11 11:35:18
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.871045 seconds.
-                    
-[2025-06-11 11:35:55] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:12 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-      Regenerating: 1 file(s) changed at 2025-06-11 11:39:10
-                    _layouts/default.html
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.859239 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-11 11:39:20
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.836825 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-11 11:44:34
-                    _data/social.yml
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.93389 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-11 11:46:47
-                    _layouts/default.html
-       Jekyll Feed: Generating feed for posts
-[31m  Liquid Exception: Liquid syntax error (line 120): 'case' tag was never closed in /_layouts/default.html[0m
-[33m             Error: Liquid syntax error (line 120): 'case' tag was never closed[0m
-[33m             Error: Run jekyll build --trace for more information.[0m
-                    
-      Regenerating: 1 file(s) changed at 2025-06-11 11:48:05
-                    _layouts/footer-social.liquid
-       Jekyll Feed: Generating feed for posts
-[31m  Liquid Exception: Liquid syntax error (line 120): 'case' tag was never closed in /_layouts/default.html[0m
-[33m             Error: Liquid syntax error (line 120): 'case' tag was never closed[0m
-[33m             Error: Run jekyll build --trace for more information.[0m
-                    
-      Regenerating: 1 file(s) changed at 2025-06-11 11:49:34
-                    _layouts/default.html
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.898635 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-11 11:49:44
-                    _layouts/default.html
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.81152 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-11 11:50:05
-                    _layouts/default.html
-       Jekyll Feed: Generating feed for posts
-[31m  Liquid Exception: Could not locate the included file 'footer-social.liquid' in any of ["/Users/nginear/Documents/GitHub/human-crafted-home/_includes", "/opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-theme-primer-0.6.0/_includes"]. Ensure it exists in one of those directories and is not a symlink as those are not allowed in safe mode. in /_layouts/default.html[0m
-[33m             Error: Could not locate the included file 'footer-social.liquid' in any of ["/Users/nginear/Documents/GitHub/human-crafted-home/_includes", "/opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-theme-primer-0.6.0/_includes"]. Ensure it exists in one of those directories and is not a symlink as those are not allowed in safe mode.[0m
-[33m             Error: Run jekyll build --trace for more information.[0m
-                    
-      Regenerating: 1 file(s) changed at 2025-06-11 11:50:58
+      Regenerating: 2 file(s) changed at 2025-06-11 21:21:27
+                    more.md
                     jekyll.log
        Jekyll Feed: Generating feed for posts
-[31m  Liquid Exception: Could not locate the included file 'footer-social.liquid' in any of ["/Users/nginear/Documents/GitHub/human-crafted-home/_includes", "/opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-theme-primer-0.6.0/_includes"]. Ensure it exists in one of those directories and is not a symlink as those are not allowed in safe mode. in /_layouts/default.html[0m
-[33m             Error: Could not locate the included file 'footer-social.liquid' in any of ["/Users/nginear/Documents/GitHub/human-crafted-home/_includes", "/opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-theme-primer-0.6.0/_includes"]. Ensure it exists in one of those directories and is not a symlink as those are not allowed in safe mode.[0m
-[33m             Error: Run jekyll build --trace for more information.[0m
+                    ...done in 1.250486 seconds.
                     
-      Regenerating: 2 file(s) changed at 2025-06-11 11:52:29
-                    _includes/footer-social.liquid
-                    _layouts/footer-social.liquid
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.875487 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-11 11:52:56
-                    _data/social.yml
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.870418 seconds.
-                    
-      Regenerating: 8 file(s) changed at 2025-06-11 11:55:40
-                    assets/images/Medium.svg
-                    assets/images/Threads.svg
-                    assets/images/Snapchat.svg
-                    assets/images/Facebook.svg
-                    assets/images/WhatsApp.svg
-                    assets/images/YouTube.svg
-                    assets/images/Discord.svg
-                    assets/images/Apple.svg
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.824102 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-11 11:57:10
-                    _data/social.yml
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.837794 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-11 11:59:20
-                    _includes/footer-social.liquid
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.912861 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-11 11:59:23
+      Regenerating: 2 file(s) changed at 2025-06-11 21:21:30
+                    more.md
                     jekyll.log
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.783706 seconds.
+                    ...done in 1.166483 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-11 11:59:31
+      Regenerating: 2 file(s) changed at 2025-06-11 21:21:54
+                    more.md
                     jekyll.log
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.818943 seconds.
+                    ...done in 1.246891 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-11 11:59:39
-                    _data/social.yml
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.866156 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-11 12:00:33
+      Regenerating: 2 file(s) changed at 2025-06-11 21:21:56
+                    more.md
                     jekyll.log
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.914092 seconds.
+                    ...done in 1.204395 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-11 12:01:16
-                    _data/social.yml
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.924214 seconds.
-                    
-[2025-06-11 12:01:49] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-11 12:01:49] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:12 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-11 12:01:49] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:14 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-11 12:01:49] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:13 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-11 12:03:03] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:12 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-11 12:03:03] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:15 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-      Regenerating: 1 file(s) changed at 2025-06-11 12:08:47
-                    _data/social.yml
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.97761 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-11 12:09:33
-                    _data/social.yml
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.020094 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-11 12:12:09
-                    _data/social.yml
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.033332 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-11 12:12:43
-                    _data/social.yml
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.999654 seconds.
-                    
-[2025-06-11 12:12:50] ERROR '/apple-touch-icon-precomposed.png' not found.
-[2025-06-11 12:12:50] ERROR '/apple-touch-icon.png' not found.
-[2025-06-11 12:12:50] ERROR '/favicon.ico' not found.
-[2025-06-11 12:13:19] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:11 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-      Regenerating: 2 file(s) changed at 2025-06-11 12:33:46
-                    index.md
+      Regenerating: 2 file(s) changed at 2025-06-11 21:22:03
+                    more.md
                     jekyll.log
        Jekyll Feed: Generating feed for posts
-[31m  Liquid Exception: Liquid error (line 20): Invalid nils order: 'title' is not a valid nils order. It must be 'first' or 'last'. in index.md[0m
-[33m             Error: Liquid error (line 20): Invalid nils order: 'title' is not a valid nils order. It must be 'first' or 'last'.[0m
-[33m             Error: Run jekyll build --trace for more information.[0m
+[33m    Liquid Warning: Liquid syntax error (line 7): Unexpected character { in "{{ "/process/" , and reference the [tools]({{ "/tools/" | relative_url }}" in more.md[0m
+                    ...done in 1.293208 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-11 12:35:56
-                    _projects/v60-filter-tray.md
-       Jekyll Feed: Generating feed for posts
-[31m  Liquid Exception: Liquid error (line 20): Invalid nils order: 'title' is not a valid nils order. It must be 'first' or 'last'. in index.md[0m
-[33m             Error: Liquid error (line 20): Invalid nils order: 'title' is not a valid nils order. It must be 'first' or 'last'.[0m
-[33m             Error: Run jekyll build --trace for more information.[0m
-                    
-      Regenerating: 1 file(s) changed at 2025-06-11 12:35:57
-                    _projects/v60-filter-tray.md
-       Jekyll Feed: Generating feed for posts
-[31m  Liquid Exception: Liquid error (line 20): Invalid nils order: 'title' is not a valid nils order. It must be 'first' or 'last'. in index.md[0m
-[33m             Error: Liquid error (line 20): Invalid nils order: 'title' is not a valid nils order. It must be 'first' or 'last'.[0m
-[33m             Error: Run jekyll build --trace for more information.[0m
-                    
-      Regenerating: 1 file(s) changed at 2025-06-11 12:35:59
-                    _projects/v60-filter-tray.md
-       Jekyll Feed: Generating feed for posts
-[31m  Liquid Exception: Liquid error (line 20): Invalid nils order: 'title' is not a valid nils order. It must be 'first' or 'last'. in index.md[0m
-[33m             Error: Liquid error (line 20): Invalid nils order: 'title' is not a valid nils order. It must be 'first' or 'last'.[0m
-[33m             Error: Run jekyll build --trace for more information.[0m
-                    
-[2025-06-11 12:36:36] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:14 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-11 12:36:36] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:15 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-11 12:36:36] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:11 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-      Regenerating: 2 file(s) changed at 2025-06-11 12:39:59
-                    index.md
+      Regenerating: 2 file(s) changed at 2025-06-11 21:22:05
+                    more.md
                     jekyll.log
        Jekyll Feed: Generating feed for posts
-                    ...done in 1.018836 seconds.
+                    ...done in 1.235401 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-11 12:42:38
-                    _projects/v60-filter-tray.md
+      Regenerating: 2 file(s) changed at 2025-06-11 21:22:08
+                    more.md
+                    jekyll.log
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.888662 seconds.
+                    ...done in 1.219938 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-11 12:42:39
-                    _projects/v60-filter-tray.md
+      Regenerating: 2 file(s) changed at 2025-06-11 21:22:13
+                    more.md
+                    jekyll.log
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.805124 seconds.
+                    ...done in 1.208931 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-11 12:43:00
-                    _projects/v60-filter-tray.md
+      Regenerating: 2 file(s) changed at 2025-06-11 21:22:38
+                    more.md
+                    jekyll.log
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.832242 seconds.
+[33m    Liquid Warning: Liquid syntax error (line 7): Unexpected character # in "{{ "/tools/" | rethat help me bring ideas to life. Or if you want to talk further, get in touch [here](lab.md). --- ### Expertise ![](/Human-Crafted-Home/assets/images/vennExpertise.svg) CAD design and engineering, User testing, Limited low volume production, Product strategy, Production support, Concept development, Production fixturing / patterns, Industrial design, Packaging design, Digital mockups, Packaging mockups, Web design, Fabrication, Physical prototyping, Electronics prototyping, App prototyping, Space planning, Architectural layout and concepts, Signage and way-finding, Point-of-purchase design, ... --- ### Past Work Masen Environmental Solutions, PLOT Communications, Everthine Jewelry, Violet Defense, EVEN Hotels, Ledger Coffee Roasters, Matrix Fitness, Advance Concepts, Kolpin Outdoors, Monroe Street Arts Center, Bosch Tools, Crescendo Espresso Bar, Fellowes Office Products, Made Kits, Bunn-o-matic, Good Day Shop, Weber Grill, Georgia-Pacific, Fiskars, ... --- ### Process ![](/Human-Crafted-Home/assets/images/vennColab.svg) Build to learn. I cut through the chaos to identify the next discrete and logical step to solve any problem. Then I get to work rapidly building solutions to test, informing future steps, and above all... **MAKING PROGRESS.** I'm a great match when these apply: - Having trouble getting started... - Your project is stuck and you need a boost... - Big dreams, but limited budget... - You want to fly under-the-radar among giants... --- ### Tools | **Type** | **Spec** | | ------------------------------------- | --------------------------------------------------------------- | | [Laser Cutter]({{ "/laser-cutter/" | relative_url }}" in more.md[0m
+                    ...done in 1.280522 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-11 12:43:03
-                    _projects/v60-filter-tray.md
+      Regenerating: 2 file(s) changed at 2025-06-11 21:22:40
+                    more.md
+                    jekyll.log
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.824189 seconds.
+                    ...done in 1.194788 seconds.
                     
+      Regenerating: 2 file(s) changed at 2025-06-11 21:22:42
+                    more.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.247983 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-06-11 21:22:47
+                    more.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.222123 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-06-11 21:22:54
+                    more.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+[33m    Liquid Warning: Liquid syntax error (line 5): Unexpected character # in "{{ "/expertise/" | relthat span creative design and technical engineering so I can adapt to a new need at any moment. I coined the term "Creative Engineer" to describe this unique combination. I am proud of this range, and I've come to appreciate it as my super power. 🦸🏻‍♂️ On this site you can learn more about me, explore my [past work](index.md), dig into my [process](/Human-Crafted-Home/process/), and reference the [tools](/Human-Crafted-Home/tools/)that help me bring ideas to life. Or if you want to talk further, get in touch [here](/Human-Crafted-Home/lab/). --- ### Expertise ![](/Human-Crafted-Home/assets/images/vennExpertise.svg) CAD design and engineering, User testing, Limited low volume production, Product strategy, Production support, Concept development, Production fixturing / patterns, Industrial design, Packaging design, Digital mockups, Packaging mockups, Web design, Fabrication, Physical prototyping, Electronics prototyping, App prototyping, Space planning, Architectural layout and concepts, Signage and way-finding, Point-of-purchase design, ... --- ### Past Work Masen Environmental Solutions, PLOT Communications, Everthine Jewelry, Violet Defense, EVEN Hotels, Ledger Coffee Roasters, Matrix Fitness, Advance Concepts, Kolpin Outdoors, Monroe Street Arts Center, Bosch Tools, Crescendo Espresso Bar, Fellowes Office Products, Made Kits, Bunn-o-matic, Good Day Shop, Weber Grill, Georgia-Pacific, Fiskars, ... --- ### Process ![](/Human-Crafted-Home/assets/images/vennColab.svg) Build to learn. I cut through the chaos to identify the next discrete and logical step to solve any problem. Then I get to work rapidly building solutions to test, informing future steps, and above all... **MAKING PROGRESS.** I'm a great match when these apply: - Having trouble getting started... - Your project is stuck and you need a boost... - Big dreams, but limited budget... - You want to fly under-the-radar among giants... --- ### Tools | **Type** | **Spec** | | ------------------------------------- | --------------------------------------------------------------- | | [Laser Cutter]({{ "/laser-cutter/" | relative_url }}" in more.md[0m
+                    ...done in 1.256939 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-06-11 21:22:56
+                    more.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.219631 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-06-11 21:22:58
+                    more.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.159615 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-06-11 21:23:04
+                    more.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.214416 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-06-11 21:23:11
+                    more.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.181526 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-06-11 21:23:25
+                    jekyll.log
+                    {{.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.290928 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-11 21:23:26
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.18163 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-06-11 21:23:39
+                    more.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.219023 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-06-11 21:23:41
+                    more.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.215456 seconds.
+                    
+[2025-06-11 21:24:50] ERROR '/assets/images/vennColab.svg' not found.
+[2025-06-11 21:47:05] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:11 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-11 21:47:05] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-06-12 07:05:46
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.962571 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-12 09:15:30
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 2.698203 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-12 09:19:26
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 5.151577 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-12 09:19:32
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.070276 seconds.
+                    
+[2025-06-12 09:48:54] ERROR '/apple-touch-icon-precomposed.png' not found.
+[2025-06-12 09:48:54] ERROR '/apple-touch-icon.png' not found.
+[2025-06-12 09:48:54] ERROR '/favicon.ico' not found.
+[2025-06-12 09:49:27] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:11 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-12 09:49:27] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'

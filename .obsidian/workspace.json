@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_projects/shop-v3.md",
+                "file": "more.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "shop-v3"
+              "title": "more"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 274.5
   },
   "right": {
     "id": "97c3ec9191ddd5fb",
@@ -193,11 +193,39 @@
   },
   "active": "f99b1b6df89fb020",
   "lastOpenFiles": [
-    "_projects/v60-filter-tray.md",
+    "_docs/process.md",
+    "more.md",
+    "_docs/expertise.md",
+    "_docs/tools.md",
+    "{{.md",
+    "_site/{{.md",
+    "_site/{{.html",
+    "lab.md",
+    "obsidian-templates/doc properties.md",
+    "_site/process/index.html",
+    "_site/process",
+    "_site/expertise/index.html",
+    "_site/expertise",
+    "_site/debug_plugin.rb",
+    "debug_plugin.rb",
+    "_site/test_regex.rb",
+    "test_regex.rb",
+    "_docs/fabrication.md",
+    "_site/obsidian-templates/doc properties.html",
+    "obsidian-templates/project properties.md",
+    "obsidian-templates/more project details.md",
+    "_docs/about me.md",
+    "_site/about me.md",
+    "_site/Untitled.md",
+    "_site/process.md",
+    "_docs/past work.md",
+    "_site/expertise.md",
+    "_site/Expertise.md",
+    "_site/past work.md",
     "_projects/shop-v3.md",
+    "_projects/v60-filter-tray.md",
     "_projects/wall-hooks.md",
     "_projects/uv-micro.md",
-    "more.md",
     "_site/assets/images/YouTube.svg",
     "_site/assets/images/WhatsApp.svg",
     "_site/assets/images/Threads.svg",
@@ -208,36 +236,8 @@
     "_site/assets/images/Apple.svg",
     "assets/images/Apple.svg",
     "assets/images/Discord.svg",
-    "_includes/footer-social.liquid",
-    "_layouts/footer-social.liquid",
-    "_data/social.yml",
-    "_site/tools/index.html",
-    "_site/tools",
-    "_site/manufacturing/index.html",
-    "_site/manufacturing",
-    "_site/laser-cutter/index.html",
-    "_site/laser-cutter",
-    "_site/fusion360/index.html",
     "_projects/wave-soap-tray.md",
     "_pages/fabrication.md",
-    "_docs/tools.md",
-    "_docs/manufacturing.md",
-    "_docs/laser-cutter.md",
-    "_docs/fusion360.md",
-    "_docs/fabrication.md",
-    "_projects/abc-blocks.md",
-    "obsidian-templates/project properties.md",
-    "obsidian-templates/more project details.md",
-    "_projects/whiteboard-photo-wall.md",
-    "_projects/water-wall-toys.md",
-    "_site/obsidian-templates/more project details.md",
-    "_site/templates/more project details.md",
-    "templates/project properties.md",
-    "templates/more project details.md",
-    "_site/project templates/more project details.md",
-    "project templates/project properties.md",
-    "project templates/more project details.md",
-    "_projects/project templates/project properties.md",
-    "_projects/project templates/more project details.md"
+    "_docs/manufacturing.md"
   ]
 }

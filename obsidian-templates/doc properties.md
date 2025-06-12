@@ -1,10 +1,10 @@
 ---
-layout: project
+layout: default
 title: 
 slug: 
 main_image: 
 featured: false
-categories: 
+tag: 
 published_date: 
 gallery_images: 
 headline: 
