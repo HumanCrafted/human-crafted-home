@@ -10,5 +10,6 @@ gallery_images:
 headline: 
 version: 
 draft: false
+tags:
 ---
 

@@ -18,6 +18,8 @@ Jekyll::Hooks.register [:pages, :documents], :pre_render do |item|
   item.content = item.content.gsub(/\[([^\]]+)\]\(_docs\/([^)]+)\.md\)/) do |match|
     display_text = $1.strip
     filename = $2.strip
+    # Handle URL encoding (e.g., %20 for spaces) and convert to Jekyll-friendly format
+    filename = CGI.unescape(filename).downcase.gsub(/\s+/, '-').gsub(/[^a-z0-9\-_]/, '')
     baseurl = item.site.config['baseurl'] || ''
     "[#{display_text}](#{baseurl}/#{filename}/)"
   end

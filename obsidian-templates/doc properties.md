@@ -1,13 +1,12 @@
 ---
-layout: default
+layout: doc
 title: 
 slug: 
 main_image: 
 featured: false
-tag: 
+tags: 
 published_date: 
 gallery_images: 
-headline: 
 version: 
 draft: false
 ---

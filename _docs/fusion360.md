@@ -1,14 +1,18 @@
 ---
-layout: default
-title: Fusion360
-permalink: /fusion360/
-tag:
+layout: doc
+title: Fusion 360
+slug: fusion360
+main_image: 
+featured: false
+tags:
   - tools
-  - CAD design and engineering
-tool_type: CAD Software
-specs: Autodesk Fusion360 Professional
+  - CAD
+  - design
+published_date: 2025-06-12
+gallery_images: 
+version: 
+draft: false
 ---
-
 **Software:** Autodesk Fusion360 Professional  
 **Applications:** Product design, mechanical engineering, prototyping
 

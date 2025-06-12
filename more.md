@@ -10,7 +10,7 @@ Hi, I'm Jon, a creative engineer. I started Human Crafted in 2016 as a boutique 
 
 Throughout this site you will find a diversified range of projects and products, each starting with an idea to **make something better** at its core. This pursuit of better has driven me to fine tune my craft for speed and efficiency, developing [expertise](_docs/expertise.md) that span creative design and technical engineering so I can adapt to a new need at any moment. I coined the term "Creative Engineer" to describe this unique combination. I am proud of this range, and I've come to appreciate it as my super power. 🦸🏻‍♂️ 
 
-On this site you can learn more about me, explore my [past work](index.md), dig into my [process](_docs/process.md), and reference the [tools](_docs/tools.md) that help me bring ideas to life.  Or if you want to talk further, get in touch [here](lab.md).
+Below you can learn more [about me](_docs/about-me.md), explore my [past work](index.md), dig into my [process](_docs/process.md), and reference the [tools](_docs/tools.md) that help me bring ideas to life.  Or if you want to talk further, get in touch [here](lab.md).
 
 ---
 

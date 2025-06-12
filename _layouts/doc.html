@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<div class="doc-content">
+    <!-- Doc metadata section -->
+    {% if page.tool_type or page.specs %}
+    <div class="doc-meta">
+        {% if page.specs %}<p><strong>Specs:</strong> {{ page.specs }}</p>{% endif %}
+        {% if page.tool_type %}<p><strong>Type:</strong> {{ page.tool_type }}</p>{% endif %}
+        {% if page.applications %}<p><strong>Applications:</strong> {{ page.applications }}</p>{% endif %}
+    </div>
+    {% endif %}
+
+    <!-- Main content -->
+    {% assign processed_content = content | replace: 'src="/assets/', 'src="/Human-Crafted-Home/assets/' %}
+    {{ processed_content }}
+
+    <!-- Related projects section -->
+    {% if page.show_related_projects %}
+    <div class="related-projects">
+        <h3>Related Projects</h3>
+        {% if page.project_filter %}
+            {% assign related_projects = site.projects | where_exp: "project", page.project_filter %}
+        {% elsif page.tag %}
+            {% assign related_projects = site.projects | where_exp: "project", "project.categories contains page.tag.first" %}
+        {% else %}
+            {% assign related_projects = site.projects %}
+        {% endif %}
+        
+        {% if related_projects.size > 0 %}
+            <ul class="project-list">
+            {% for project in related_projects limit: 8 %}
+                <li><a href="{{ project.url }}">{{ project.title }}</a></li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p><em>No related projects found.</em></p>
+        {% endif %}
+    </div>
+    {% endif %}
+</div>

@@ -5,205 +5,109 @@ To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
  Incremental build: disabled. Enable with --incremental
       Generating... 
        Jekyll Feed: Generating feed for posts
-                    done in 1.024 seconds.
+                    done in 1.073 seconds.
  Auto-regeneration: enabled for '/Users/nginear/Documents/GitHub/human-crafted-home'
     Server address: http://127.0.0.1:4000/Human-Crafted-Home/
   Server running... press ctrl-c to stop.
-      Regenerating: 1 file(s) changed at 2025-06-11 21:17:47
-                    more.md
+[2025-06-12 10:26:34] ERROR '/assets/images/vennColab.svg' not found.
+[2025-06-12 10:26:34] ERROR '/assets/images/vennColab.svg' not found.
+      Regenerating: 1 file(s) changed at 2025-06-12 10:26:57
+                    _docs/about-me.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 2.025921 seconds.
+                    ...done in 0.937872 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-11 21:17:49
-                    jekyll.log
+      Regenerating: 1 file(s) changed at 2025-06-12 10:26:58
+                    _docs/about-me.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 1.293239 seconds.
+                    ...done in 0.883836 seconds.
                     
-      Regenerating: 2 file(s) changed at 2025-06-11 21:17:56
-                    more.md
-                    jekyll.log
+      Regenerating: 1 file(s) changed at 2025-06-12 10:27:02
+                    _docs/expertise.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 1.485995 seconds.
+                    ...done in 0.896742 seconds.
                     
-      Regenerating: 2 file(s) changed at 2025-06-11 21:18:06
-                    more.md
-                    jekyll.log
+      Regenerating: 1 file(s) changed at 2025-06-12 10:27:04
+                    _docs/expertise.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 1.273932 seconds.
+                    ...done in 0.862553 seconds.
                     
-[2025-06-11 21:18:58] ERROR '/assets/images/vennColab.svg' not found.
-[2025-06-11 21:19:02] ERROR '/assets/images/vennExpertise.svg' not found.
-      Regenerating: 2 file(s) changed at 2025-06-11 21:19:44
-                    jekyll.log
-                    {{.md
+      Regenerating: 1 file(s) changed at 2025-06-12 10:27:06
+                    _docs/expertise.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 1.242863 seconds.
+                    ...done in 0.854937 seconds.
                     
-      Regenerating: 2 file(s) changed at 2025-06-11 21:21:27
-                    more.md
-                    jekyll.log
+      Regenerating: 1 file(s) changed at 2025-06-12 10:27:18
+                    _docs/process.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 1.250486 seconds.
+                    ...done in 0.861289 seconds.
                     
-      Regenerating: 2 file(s) changed at 2025-06-11 21:21:30
-                    more.md
-                    jekyll.log
+      Regenerating: 1 file(s) changed at 2025-06-12 10:27:21
+                    _docs/process.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 1.166483 seconds.
+                    ...done in 0.840972 seconds.
                     
-      Regenerating: 2 file(s) changed at 2025-06-11 21:21:54
-                    more.md
-                    jekyll.log
+      Regenerating: 1 file(s) changed at 2025-06-12 10:27:24
+                    _docs/process.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 1.246891 seconds.
+                    ...done in 0.825312 seconds.
                     
-      Regenerating: 2 file(s) changed at 2025-06-11 21:21:56
-                    more.md
-                    jekyll.log
+      Regenerating: 1 file(s) changed at 2025-06-12 10:27:27
+                    _docs/tools.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 1.204395 seconds.
+                    ...done in 0.832875 seconds.
                     
-      Regenerating: 2 file(s) changed at 2025-06-11 21:22:03
-                    more.md
-                    jekyll.log
+      Regenerating: 1 file(s) changed at 2025-06-12 10:27:31
+                    _docs/laser-cutter.md
        Jekyll Feed: Generating feed for posts
-[33m    Liquid Warning: Liquid syntax error (line 7): Unexpected character { in "{{ "/process/" , and reference the [tools]({{ "/tools/" | relative_url }}" in more.md[0m
-                    ...done in 1.293208 seconds.
+                    ...done in 0.826187 seconds.
                     
-      Regenerating: 2 file(s) changed at 2025-06-11 21:22:05
-                    more.md
-                    jekyll.log
+      Regenerating: 1 file(s) changed at 2025-06-12 10:27:33
+                    _docs/fusion360.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 1.235401 seconds.
+                    ...done in 0.855255 seconds.
                     
-      Regenerating: 2 file(s) changed at 2025-06-11 21:22:08
-                    more.md
-                    jekyll.log
+      Regenerating: 1 file(s) changed at 2025-06-12 10:27:34
+                    _docs/fabrication.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 1.219938 seconds.
+                    ...done in 0.831821 seconds.
                     
-      Regenerating: 2 file(s) changed at 2025-06-11 21:22:13
-                    more.md
-                    jekyll.log
+      Regenerating: 1 file(s) changed at 2025-06-12 10:27:35
+                    _docs/fabrication.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 1.208931 seconds.
+                    ...done in 0.802788 seconds.
                     
-      Regenerating: 2 file(s) changed at 2025-06-11 21:22:38
-                    more.md
-                    jekyll.log
+[2025-06-12 10:27:45] ERROR '/assets/images/vennColab.svg' not found.
+[2025-06-12 10:27:45] ERROR '/assets/images/vennColab.svg' not found.
+[2025-06-12 10:27:48] ERROR '/assets/images/vennColab.svg' not found.
+[2025-06-12 10:27:48] ERROR '/assets/images/vennColab.svg' not found.
+[2025-06-12 10:27:49] ERROR '/assets/images/vennColab.svg' not found.
+[2025-06-12 10:27:49] ERROR '/assets/images/vennColab.svg' not found.
+[2025-06-12 10:28:02] ERROR '/assets/images/vennColab.svg' not found.
+[2025-06-12 10:28:02] ERROR '/assets/images/vennColab.svg' not found.
+      Regenerating: 1 file(s) changed at 2025-06-12 10:28:19
+                    _docs/process.md
        Jekyll Feed: Generating feed for posts
-[33m    Liquid Warning: Liquid syntax error (line 7): Unexpected character # in "{{ "/tools/" | rethat help me bring ideas to life. Or if you want to talk further, get in touch [here](lab.md). --- ### Expertise ![](/Human-Crafted-Home/assets/images/vennExpertise.svg) CAD design and engineering, User testing, Limited low volume production, Product strategy, Production support, Concept development, Production fixturing / patterns, Industrial design, Packaging design, Digital mockups, Packaging mockups, Web design, Fabrication, Physical prototyping, Electronics prototyping, App prototyping, Space planning, Architectural layout and concepts, Signage and way-finding, Point-of-purchase design, ... --- ### Past Work Masen Environmental Solutions, PLOT Communications, Everthine Jewelry, Violet Defense, EVEN Hotels, Ledger Coffee Roasters, Matrix Fitness, Advance Concepts, Kolpin Outdoors, Monroe Street Arts Center, Bosch Tools, Crescendo Espresso Bar, Fellowes Office Products, Made Kits, Bunn-o-matic, Good Day Shop, Weber Grill, Georgia-Pacific, Fiskars, ... --- ### Process ![](/Human-Crafted-Home/assets/images/vennColab.svg) Build to learn. I cut through the chaos to identify the next discrete and logical step to solve any problem. Then I get to work rapidly building solutions to test, informing future steps, and above all... **MAKING PROGRESS.** I'm a great match when these apply: - Having trouble getting started... - Your project is stuck and you need a boost... - Big dreams, but limited budget... - You want to fly under-the-radar among giants... --- ### Tools | **Type** | **Spec** | | ------------------------------------- | --------------------------------------------------------------- | | [Laser Cutter]({{ "/laser-cutter/" | relative_url }}" in more.md[0m
-                    ...done in 1.280522 seconds.
+                    ...done in 0.881054 seconds.
                     
-      Regenerating: 2 file(s) changed at 2025-06-11 21:22:40
-                    more.md
-                    jekyll.log
+[2025-06-12 10:28:26] ERROR '/assets/images/vennColab.svg' not found.
+[2025-06-12 10:28:26] ERROR '/assets/images/vennColab.svg' not found.
+[2025-06-12 10:29:01] ERROR '/assets/images/vennExpertise.svg' not found.
+[2025-06-12 10:29:19] ERROR '/assets/images/vennColab.svg' not found.
+[2025-06-12 10:29:19] ERROR '/assets/images/vennColab.svg' not found.
+      Regenerating: 1 file(s) changed at 2025-06-12 10:31:54
+                    _layouts/doc.html
        Jekyll Feed: Generating feed for posts
-                    ...done in 1.194788 seconds.
+                    ...done in 0.954035 seconds.
                     
-      Regenerating: 2 file(s) changed at 2025-06-11 21:22:42
-                    more.md
-                    jekyll.log
+      Regenerating: 1 file(s) changed at 2025-06-12 10:32:04
+                    _layouts/doc.html
        Jekyll Feed: Generating feed for posts
-                    ...done in 1.247983 seconds.
+                    ...done in 0.868014 seconds.
                     
-      Regenerating: 2 file(s) changed at 2025-06-11 21:22:47
-                    more.md
-                    jekyll.log
+      Regenerating: 1 file(s) changed at 2025-06-12 10:32:14
+                    _layouts/doc.html
        Jekyll Feed: Generating feed for posts
-                    ...done in 1.222123 seconds.
+                    ...done in 0.853048 seconds.
                     
-      Regenerating: 2 file(s) changed at 2025-06-11 21:22:54
-                    more.md
-                    jekyll.log
-       Jekyll Feed: Generating feed for posts
-[33m    Liquid Warning: Liquid syntax error (line 5): Unexpected character # in "{{ "/expertise/" | relthat span creative design and technical engineering so I can adapt to a new need at any moment. I coined the term "Creative Engineer" to describe this unique combination. I am proud of this range, and I've come to appreciate it as my super power. 🦸🏻‍♂️ On this site you can learn more about me, explore my [past work](index.md), dig into my [process](/Human-Crafted-Home/process/), and reference the [tools](/Human-Crafted-Home/tools/)that help me bring ideas to life. Or if you want to talk further, get in touch [here](/Human-Crafted-Home/lab/). --- ### Expertise ![](/Human-Crafted-Home/assets/images/vennExpertise.svg) CAD design and engineering, User testing, Limited low volume production, Product strategy, Production support, Concept development, Production fixturing / patterns, Industrial design, Packaging design, Digital mockups, Packaging mockups, Web design, Fabrication, Physical prototyping, Electronics prototyping, App prototyping, Space planning, Architectural layout and concepts, Signage and way-finding, Point-of-purchase design, ... --- ### Past Work Masen Environmental Solutions, PLOT Communications, Everthine Jewelry, Violet Defense, EVEN Hotels, Ledger Coffee Roasters, Matrix Fitness, Advance Concepts, Kolpin Outdoors, Monroe Street Arts Center, Bosch Tools, Crescendo Espresso Bar, Fellowes Office Products, Made Kits, Bunn-o-matic, Good Day Shop, Weber Grill, Georgia-Pacific, Fiskars, ... --- ### Process ![](/Human-Crafted-Home/assets/images/vennColab.svg) Build to learn. I cut through the chaos to identify the next discrete and logical step to solve any problem. Then I get to work rapidly building solutions to test, informing future steps, and above all... **MAKING PROGRESS.** I'm a great match when these apply: - Having trouble getting started... - Your project is stuck and you need a boost... - Big dreams, but limited budget... - You want to fly under-the-radar among giants... --- ### Tools | **Type** | **Spec** | | ------------------------------------- | --------------------------------------------------------------- | | [Laser Cutter]({{ "/laser-cutter/" | relative_url }}" in more.md[0m
-                    ...done in 1.256939 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-11 21:22:56
-                    more.md
-                    jekyll.log
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.219631 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-11 21:22:58
-                    more.md
-                    jekyll.log
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.159615 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-11 21:23:04
-                    more.md
-                    jekyll.log
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.214416 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-11 21:23:11
-                    more.md
-                    jekyll.log
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.181526 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-11 21:23:25
-                    jekyll.log
-                    {{.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.290928 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-11 21:23:26
-                    jekyll.log
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.18163 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-11 21:23:39
-                    more.md
-                    jekyll.log
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.219023 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-11 21:23:41
-                    more.md
-                    jekyll.log
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.215456 seconds.
-                    
-[2025-06-11 21:24:50] ERROR '/assets/images/vennColab.svg' not found.
-[2025-06-11 21:47:05] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:11 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-11 21:47:05] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-      Regenerating: 1 file(s) changed at 2025-06-12 07:05:46
-                    jekyll.log
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.962571 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-12 09:15:30
-                    jekyll.log
-       Jekyll Feed: Generating feed for posts
-                    ...done in 2.698203 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-12 09:19:26
-                    jekyll.log
-       Jekyll Feed: Generating feed for posts
-                    ...done in 5.151577 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-12 09:19:32
-                    jekyll.log
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.070276 seconds.
-                    
-[2025-06-12 09:48:54] ERROR '/apple-touch-icon-precomposed.png' not found.
-[2025-06-12 09:48:54] ERROR '/apple-touch-icon.png' not found.
-[2025-06-12 09:48:54] ERROR '/favicon.ico' not found.
-[2025-06-12 09:49:27] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:11 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-12 09:49:27] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-12 10:32:31] ERROR '/assets/images/vennExpertise.svg' not found.
+[2025-06-12 10:32:36] ERROR '/assets/images/vennColab.svg' not found.

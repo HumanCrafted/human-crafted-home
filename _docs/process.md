@@ -1,10 +1,15 @@
 ---
-layout: default
+layout: doc
 title: Process
-permalink: /process/
+slug: process
+main_image: 
+featured: false
+tags: 
+published_date: 2025-06-12
+gallery_images: 
+version: 
+draft: false
 ---
-
-# Process
 
 ![](/assets/images/vennColab.svg)
 

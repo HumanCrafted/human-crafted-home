@@ -1,15 +1,16 @@
 ---
-layout: default
-title: Laser Cutter/Engraver
-permalink: /laser-cutter/
-tag:
+layout: doc
+title: Laser Cutter
+slug: laser-cutter
+main_image: 
+featured: false
+tags:
   - tools
-  - fabrication
-  - manufacturing
-tool_type: Laser Cutter/Engraver
-specs: 1300mm x 900mm 150 Watt CO2
+published_date: 2025-06-12
+gallery_images: 
+version: 
+draft: false
 ---
-
 **Specs:** 1300mm x 900mm 150 Watt CO2  
 **Materials:** Wood, acrylic, cardboard, fabric, leather, paper
 

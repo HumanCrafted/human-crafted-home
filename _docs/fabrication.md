@@ -1,11 +1,17 @@
 ---
-layout: default
+layout: doc
 title: Fabrication
-permalink: /fabrication/
-tag:
-  - index
+slug: fabrication
+main_image: 
+featured: false
+tags:
+  - expertise
+  - manufacturing
+published_date: 2025-06-12
+gallery_images: 
+version: 
+draft: false
 ---
-
 Tools and projects related to physical fabrication and making.
 
 ### Fabrication Tools

@@ -1,11 +1,16 @@
 ---
-layout: default
+layout: doc
 title: Tools
-permalink: /tools/
-tag:
+slug: tools
+main_image: 
+featured: false
+tags:
   - index
+published_date: 
+gallery_images: 
+version: 
+draft: false
 ---
-
 This is a collection of all the tools and software I use in my design and fabrication process.
 
 ### Design & Engineering Tools

@@ -30,7 +30,7 @@ exclude:
 collections:
   docs:
     output: true
-    permalink: /:name/
+    permalink: /:slug/
   posts:
     output: true
     permalink: /:categories/:year/:month/:day/:title/
