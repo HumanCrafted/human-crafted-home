@@ -5,244 +5,231 @@ To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
  Incremental build: disabled. Enable with --incremental
       Generating... 
        Jekyll Feed: Generating feed for posts
-                    done in 1.073 seconds.
+                    done in 0.947 seconds.
  Auto-regeneration: enabled for '/Users/nginear/Documents/GitHub/human-crafted-home'
     Server address: http://127.0.0.1:4000/Human-Crafted-Home/
   Server running... press ctrl-c to stop.
-[2025-06-12 10:26:34] ERROR '/assets/images/vennColab.svg' not found.
-[2025-06-12 10:26:34] ERROR '/assets/images/vennColab.svg' not found.
-      Regenerating: 1 file(s) changed at 2025-06-12 10:26:57
-                    _docs/about-me.md
+[2025-06-13 10:41:09] ERROR '/2025/06/12/made-better.html' not found.
+[2025-06-13 10:41:13] ERROR '/apple-touch-icon-precomposed.png' not found.
+[2025-06-13 10:41:13] ERROR '/apple-touch-icon.png' not found.
+[2025-06-13 10:41:13] ERROR '/favicon.ico' not found.
+[2025-06-13 10:41:16] ERROR '/2025/06/12/made-better.html' not found.
+      Regenerating: 2 file(s) changed at 2025-06-13 10:41:49
+                    more.md
+                    jekyll.log
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.937872 seconds.
+                    ...done in 0.933747 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-12 10:26:58
-                    _docs/about-me.md
+[2025-06-13 10:42:40] ERROR '/Human-Crafted-Home/2025/06/12/made-better.html' not found.
+[2025-06-13 10:42:43] ERROR '/Human-Crafted-Home/2025/06/12/made-better.html' not found.
+[2025-06-13 10:42:48] ERROR '/Human-Crafted-Home/2025/06/12/made-better.html' not found.
+[2025-06-13 10:42:51] ERROR '/apple-touch-icon-precomposed.png' not found.
+[2025-06-13 10:42:51] ERROR '/apple-touch-icon.png' not found.
+[2025-06-13 10:42:51] ERROR '/favicon.ico' not found.
+      Regenerating: 2 file(s) changed at 2025-06-13 10:43:31
+                    more.md
+                    jekyll.log
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.883836 seconds.
+                    ...done in 0.937456 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-12 10:27:02
-                    _docs/expertise.md
+      Regenerating: 1 file(s) changed at 2025-06-13 10:47:09
+                    _layouts/default.html
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.896742 seconds.
+                    ...done in 0.929106 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-12 10:27:04
-                    _docs/expertise.md
+      Regenerating: 1 file(s) changed at 2025-06-13 10:47:51
+                    _layouts/post.html
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.862553 seconds.
+                    ...done in 0.895534 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-12 10:27:06
-                    _docs/expertise.md
+      Regenerating: 2 file(s) changed at 2025-06-13 14:25:38
+                    jekyll.log
+                    writing.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.854937 seconds.
+                    ...done in 1.002068 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-12 10:27:18
-                    _docs/process.md
+      Regenerating: 1 file(s) changed at 2025-06-13 14:25:52
+                    assets/css/main.css
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.861289 seconds.
+                    ...done in 0.931541 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-12 10:27:21
-                    _docs/process.md
+      Regenerating: 1 file(s) changed at 2025-06-13 14:28:25
+                    _layouts/post.html
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.840972 seconds.
+                    ...done in 0.906828 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-12 10:27:24
-                    _docs/process.md
+[2025-06-13 15:09:26] ERROR '/apple-touch-icon-precomposed.png' not found.
+[2025-06-13 15:09:26] ERROR '/apple-touch-icon.png' not found.
+[2025-06-13 15:09:26] ERROR '/favicon.ico' not found.
+[2025-06-13 15:11:12] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:14 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-06-13 15:12:37
+                    _posts/2025-02-07-welcome-to-jekyll.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.825312 seconds.
+                    ...done in 0.95379 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-12 10:27:27
-                    _docs/tools.md
+      Regenerating: 1 file(s) changed at 2025-06-13 15:12:41
+                    _posts/2025-06-12-made-better.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.832875 seconds.
+                    ...done in 0.824775 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-12 10:27:31
-                    _docs/laser-cutter.md
+      Regenerating: 2 file(s) changed at 2025-06-13 17:12:19
+                    more.md
+                    jekyll.log
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.826187 seconds.
+                    ...done in 0.933866 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-12 10:27:33
-                    _docs/fusion360.md
+      Regenerating: 1 file(s) changed at 2025-06-14 07:37:51
+                    assets/css/main.css
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.855255 seconds.
+                    ...done in 1.352753 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-12 10:27:34
-                    _docs/fabrication.md
+      Regenerating: 1 file(s) changed at 2025-06-14 07:38:32
+                    _includes/wiki-two-column.html
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.831821 seconds.
+                    ...done in 1.242163 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-12 10:27:35
-                    _docs/fabrication.md
+      Regenerating: 2 file(s) changed at 2025-06-14 07:38:57
+                    more.md
+                    jekyll.log
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.802788 seconds.
+                    ...done in 1.306442 seconds.
                     
-[2025-06-12 10:27:45] ERROR '/assets/images/vennColab.svg' not found.
-[2025-06-12 10:27:45] ERROR '/assets/images/vennColab.svg' not found.
-[2025-06-12 10:27:48] ERROR '/assets/images/vennColab.svg' not found.
-[2025-06-12 10:27:48] ERROR '/assets/images/vennColab.svg' not found.
-[2025-06-12 10:27:49] ERROR '/assets/images/vennColab.svg' not found.
-[2025-06-12 10:27:49] ERROR '/assets/images/vennColab.svg' not found.
-[2025-06-12 10:28:02] ERROR '/assets/images/vennColab.svg' not found.
-[2025-06-12 10:28:02] ERROR '/assets/images/vennColab.svg' not found.
-      Regenerating: 1 file(s) changed at 2025-06-12 10:28:19
-                    _docs/process.md
+[2025-06-14 07:42:01] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-06-14 07:44:09
+                    assets/css/main.css
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.881054 seconds.
+                    ...done in 1.324859 seconds.
                     
-[2025-06-12 10:28:26] ERROR '/assets/images/vennColab.svg' not found.
-[2025-06-12 10:28:26] ERROR '/assets/images/vennColab.svg' not found.
-[2025-06-12 10:29:01] ERROR '/assets/images/vennExpertise.svg' not found.
-[2025-06-12 10:29:19] ERROR '/assets/images/vennColab.svg' not found.
-[2025-06-12 10:29:19] ERROR '/assets/images/vennColab.svg' not found.
-      Regenerating: 1 file(s) changed at 2025-06-12 10:31:54
-                    _layouts/doc.html
+      Regenerating: 1 file(s) changed at 2025-06-14 07:44:19
+                    assets/css/main.css
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.954035 seconds.
+                    ...done in 1.27922 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-12 10:32:04
-                    _layouts/doc.html
+      Regenerating: 1 file(s) changed at 2025-06-14 07:45:35
+                    assets/css/main.css
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.868014 seconds.
+                    ...done in 1.276181 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-12 10:32:14
-                    _layouts/doc.html
+      Regenerating: 1 file(s) changed at 2025-06-14 07:48:07
+                    assets/css/main.css
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.853048 seconds.
+                    ...done in 1.332721 seconds.
                     
-[2025-06-12 10:32:31] ERROR '/assets/images/vennExpertise.svg' not found.
-[2025-06-12 10:32:36] ERROR '/assets/images/vennColab.svg' not found.
-      Regenerating: 1 file(s) changed at 2025-06-12 12:32:29
-                    _projects/v60-filter-tray.md
+      Regenerating: 2 file(s) changed at 2025-06-14 07:49:58
+                    more.md
+                    jekyll.log
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.96535 seconds.
+                    ...done in 1.2628 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-12 12:32:30
-                    _projects/elevations-clock.md
+      Regenerating: 2 file(s) changed at 2025-06-14 07:50:00
+                    more.md
+                    jekyll.log
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.926892 seconds.
+                    ...done in 1.158071 seconds.
                     
-      Regenerating: 2 file(s) changed at 2025-06-12 12:32:31
-                    _projects/modern-doll-house.md
-                    _projects/shop-v3.md
+      Regenerating: 2 file(s) changed at 2025-06-14 07:50:17
+                    more.md
+                    jekyll.log
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.890106 seconds.
+                    ...done in 1.190201 seconds.
                     
-      Regenerating: 4 file(s) changed at 2025-06-12 12:32:59
-                    _projects/abc-blocks.md
-                    _projects/acrylic-deer-and-snowman.md
-                    _projects/acrylic-robin.md
-                    _projects/acrylic-trees.md
+      Regenerating: 2 file(s) changed at 2025-06-14 07:50:19
+                    more.md
+                    jekyll.log
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.907277 seconds.
+                    ...done in 1.189942 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-12 12:33:00
-                    _projects/bath-container.md
+      Regenerating: 2 file(s) changed at 2025-06-14 07:51:29
+                    more.md
+                    jekyll.log
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.897828 seconds.
+                    ...done in 1.262654 seconds.
                     
-      Regenerating: 4 file(s) changed at 2025-06-12 12:33:16
-                    _projects/concentric-coaster.md
-                    _projects/concrete-trays.md
-                    _projects/contact-lens-holder.md
-                    _projects/cord-keeper.md
+      Regenerating: 1 file(s) changed at 2025-06-14 07:55:48
+                    _posts/2025-06-12-made-better 1.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.936113 seconds.
+                    ...done in 1.304052 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-12 12:33:17
-                    _projects/dyson-hand-saver.md
+      Regenerating: 2 file(s) changed at 2025-06-14 07:55:55
+                    obsidian-templates/2025-06-12-made-better 1.md
+                    _posts/2025-06-12-made-better 1.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.909649 seconds.
+                    ...done in 1.265491 seconds.
                     
-      Regenerating: 5 file(s) changed at 2025-06-12 12:34:04
-                    _projects/everthine-jewelry-stand.md
-                    _projects/erasable-notepad.md
-                    _projects/fellow-brush-stand.md
-                    _projects/elevations.md
-                    _projects/fridge-folders.md
+      Regenerating: 2 file(s) changed at 2025-06-14 07:56:22
+                    obsidian-templates/post - article coming soon....md
+                    obsidian-templates/2025-06-12-made-better 1.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.918657 seconds.
+                    ...done in 1.273715 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-12 12:34:16
-                    _projects/led-open-sign.md
+      Regenerating: 1 file(s) changed at 2025-06-14 07:56:27
+                    obsidian-templates/post - article coming soon....md
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.901577 seconds.
+                    ...done in 1.175561 seconds.
                     
-      Regenerating: 5 file(s) changed at 2025-06-12 12:34:37
-                    _projects/mist-system.md
-                    _projects/made-kits-loom-tools.md
-                    _projects/made-kits-loom.md
-                    _projects/made-kits-fun-loom.md
-                    _projects/fridge-frames.md
+      Regenerating: 2 file(s) changed at 2025-06-14 07:56:46
+                    obsidian-templates/project - more project details.md
+                    obsidian-templates/more project details.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.929204 seconds.
+                    ...done in 1.273439 seconds.
                     
-      Regenerating: 5 file(s) changed at 2025-06-12 12:34:58
-                    _projects/quip-stand.md
-                    _projects/plant-support.md
-                    _projects/note-todo-stack.md
-                    _projects/pen-cup.md
-                    _projects/post-it-holders.md
+      Regenerating: 2 file(s) changed at 2025-06-14 07:56:52
+                    obsidian-templates/doc - properties.md
+                    obsidian-templates/doc properties.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.87288 seconds.
+                    ...done in 1.269319 seconds.
                     
-      Regenerating: 5 file(s) changed at 2025-06-12 12:35:18
-                    _projects/slot-wall-hook.md
-                    _projects/sunnersta-blade.md
-                    _projects/retail-sandwich-sign.md
-                    _projects/retail-shield.md
-                    _projects/shop-v2.md
+      Regenerating: 2 file(s) changed at 2025-06-14 07:56:58
+                    obsidian-templates/project - properties.md
+                    obsidian-templates/project properties.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.916246 seconds.
+                    ...done in 1.205149 seconds.
                     
-      Regenerating: 5 file(s) changed at 2025-06-12 12:35:41
-                    _projects/sunnersta-hook.md
-                    _projects/sunnersta-tape.md
-                    _projects/sunnersta-pen-cup.md
-                    _projects/sunnersta-wire-tray.md
-                    _projects/taco-stands.md
+      Regenerating: 1 file(s) changed at 2025-06-14 07:57:08
+                    _posts/2025-06-12-made-better 1.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.916843 seconds.
+                    ...done in 1.252757 seconds.
                     
-      Regenerating: 5 file(s) changed at 2025-06-12 12:36:00
-                    _projects/trofast-lego-storage.md
-                    _projects/tissue-dispenser.md
-                    _projects/tradeshow-layout-v4.md
-                    _projects/trofast-storage-shelf.md
-                    _projects/toilet-paper-holder.md
+      Regenerating: 2 file(s) changed at 2025-06-14 07:57:12
+                    obsidian-templates/2025-06-12-made-better 1.md
+                    _posts/2025-06-12-made-better 1.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.99161 seconds.
+                    ...done in 1.252059 seconds.
                     
-      Regenerating: 5 file(s) changed at 2025-06-12 12:36:19
-                    _projects/whiteboard-photo-wall.md
-                    _projects/wall-hooks.md
-                    _projects/water-wall-toys.md
-                    _projects/zen-coaster.md
-                    _projects/uv-micro.md
+      Regenerating: 2 file(s) changed at 2025-06-14 07:57:29
+                    obsidian-templates/posts - properties.md
+                    obsidian-templates/2025-06-12-made-better 1.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.925196 seconds.
+                    ...done in 1.222252 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-12 12:36:30
-                    _projects/wave-soap-tray.md
+      Regenerating: 1 file(s) changed at 2025-06-14 07:57:32
+                    obsidian-templates/posts - properties.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.892084 seconds.
+                    ...done in 1.241299 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-12 12:43:17
-                    _projects/abc-blocks.md
+      Regenerating: 1 file(s) changed at 2025-06-14 07:57:34
+                    obsidian-templates/posts - properties.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.977902 seconds.
+                    ...done in 1.210162 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-12 12:43:23
-                    _projects/abc-blocks.md
+      Regenerating: 1 file(s) changed at 2025-06-14 07:57:37
+                    obsidian-templates/posts - properties.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.937867 seconds.
+                    ...done in 1.233613 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-12 12:43:29
-                    _projects/abc-blocks.md
+      Regenerating: 1 file(s) changed at 2025-06-14 07:57:39
+                    obsidian-templates/posts - properties.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.895319 seconds.
+                    ...done in 1.229177 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-12 12:43:35
-                    _projects/abc-blocks.md
+      Regenerating: 1 file(s) changed at 2025-06-14 07:58:22
+                    jekyll.log
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.900473 seconds.
+                    ...done in 1.242878 seconds.
                     

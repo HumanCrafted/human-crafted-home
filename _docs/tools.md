@@ -13,6 +13,22 @@ draft: false
 ---
 This is a collection of all the tools and software I use in my design and fabrication process.
 
+| **Type**                              | **Spec**                                                        |
+| ------------------------------------- | --------------------------------------------------------------- |
+| [Laser Cutter]({{ "/laser-cutter/" | relative_url }}) | 1300mm x 900mm 150 Watt CO2                                     |
+| CNC Router                            | 24 in x 48 in X-Carve Pro                                       |
+| Digital mockups                       | Figma, Illustrator,                                             |
+| Web design                            | Static Page Sites, Framer, Notion + Super, Webflow, Squarespace |
+| 3D Printer                            | 7 in x 7 in x 7 in, Prusa MINI+                                 |
+| CAD Design                            | [Fusion360]({{ "/fusion360/" | relative_url }})                                 |
+| Electronics mockups                   | Arduino, Raspberry Pi, IoT                                      |
+| Organization                          | Notion, Airtable, Mural, Figjam                                 |
+| Business Operations                   | Toggl, Xero, Ramp, Tally.so                                     |
+| AI Tools                              | ChatGPT, Vercel v0, GitHub Co-Pilot                             |
+
+---
+
+
 ### Design & Engineering Tools
 
 {% assign tool_pages = site.pages | where_exp: "page", "page.tag contains 'tools'" %}

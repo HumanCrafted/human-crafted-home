@@ -225,10 +225,69 @@ git checkout -b hover-experiment
 - Complex markdown tables may not process Obsidian links correctly (use Jekyll syntax)
 - Jekyll server occasionally needs restart for plugin changes
 
+## Wiki Section System (June 12, 2025)
+
+### Implementation
+- Created `_includes/wiki-section.html` for collapsible content sections
+- Added CSS styling for `.wiki-item`, `.wiki-header`, `.wiki-content`
+- Transformed MORE page into wiki-style knowledge hub with auto-populated and manual sections
+
+### Wiki Section Usage Guide
+
+**Basic Syntax:**
+```markdown
+{% raw %}{% include wiki-section.html title="Section Name" [options] %}{% endraw %}
+```
+
+**Required Parameters:**
+- `title="Section Name"` - The collapsible header text
+
+**Content Options (pick one or both):**
+- `items="item1,item2,item3"` - Manual list of items
+- `auto="collection_name"` - Auto-populate from collections
+
+**Item Formatting:**
+- Plain text: `items="CNC Router,3D Printer"`
+- With links: `items="About me:/about-me/,Expertise:/expertise/"`
+- Mixed: `items="CNC Router,Fusion 360:/fusion360/,3D Printer"`
+
+**Auto-Population Types:**
+- `auto="projects"` - All projects from `_projects`
+- `auto="tool_docs"` - Docs tagged with 'tool'
+- `auto="process_docs"` - Docs tagged with 'process'  
+- `auto="all_docs"` - All docs from `_docs`
+
+**Optional Modifiers:**
+- `limit="10"` - Limit auto-populated items (default: unlimited)
+- `open="true"` - Start section expanded (default: collapsed)
+- `show_all_link="/page/"` - Add "View all" link at bottom
+- `show_all_text="Custom text"` - Custom text for view all link
+
+**Example Patterns:**
+```markdown
+{% raw %}{% include wiki-section.html title="Skills" items="Design,Engineering,Prototyping" %}
+
+{% include wiki-section.html title="Projects" auto="projects" limit="8" %}
+
+{% include wiki-section.html title="Tools" items="CNC Router" auto="tool_docs" %}
+
+{% include wiki-section.html title="Projects" auto="projects" limit="10" show_all_link="/#archive" show_all_text="See all projects" %}
+
+{% include wiki-section.html title="About" items="Bio:/about/" open="true" %}{% endraw %}
+```
+
+### CSS Features
+- Collapsible sections using HTML `<details>`/`<summary>` elements
+- Arrow indicators (▶ rotates to ▼ when open)
+- Hover effects matching site design system
+- Mobile responsive with adjusted padding and font sizes
+- Smooth transitions for expand/collapse animations
+
 ## Next Steps
 - Continue implementing any additional Figma design elements
 - Test responsive behavior across devices
 - Expand tool pages and documentation
+- Add more auto-population types to wiki-section.html as needed
 
 ### Recent Mobile Layout Updates (June 10, 2025)
 - **Mobile Navigation Order**: Custom CSS order properties for mobile stack: Let's co/lab (1st), More (2nd), theme toggle (3rd)
@@ -243,5 +302,5 @@ git checkout -b hover-experiment
 - **Button Hover**: Added missing hover effects for mobile co/lab button (wavy underline)
 
 ---
-*Last updated: June 10, 2025 at 2:40 PM*
+*Last updated: June 12, 2025 at 6:20 PM*
 *Claude Code session documentation*

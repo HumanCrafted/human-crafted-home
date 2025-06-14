@@ -33,7 +33,6 @@ collections:
     permalink: /:slug/
   posts:
     output: true
-    permalink: /:categories/:year/:month/:day/:title/
   projects:
     output: true
     permalink: /:slug/

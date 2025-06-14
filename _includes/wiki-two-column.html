@@ -1,0 +1,57 @@
+{% comment %} Two Column Wiki Section {% endcomment %}
+
+<div class="wiki-two-column">
+  <h3 class="wiki-section-title">{{ include.title }}</h3>
+  <div class="wiki-comma-list">
+    {% comment %} Manual items {% endcomment %}
+    {% if include.items %}
+      {% assign item_list = include.items | split: ',' %}
+      {% for item in item_list %}
+        {% if item contains ':' %}
+          {% assign item_parts = item | split: ':' %}
+          {% assign item_title = item_parts[0] %}
+          {% assign item_url = item_parts[1] %}
+          <a href="{{ item_url | relative_url }}">{{ item_title }}</a>{% unless forloop.last %}, {% endunless %}
+        {% else %}
+          {{ item }}{% unless forloop.last %}, {% endunless %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+    {% comment %} Auto-populated items {% endcomment %}
+    {% if include.auto %}
+      {% assign item_limit = include.limit | default: 999 %}
+      
+      {% if include.auto == "projects" %}
+        {% for project in site.projects limit:item_limit %}
+          <a href="{{ project.url | relative_url }}">{{ project.title }}</a>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+      {% endif %}
+      
+      {% if include.auto == "tool_docs" %}
+        {% assign tool_docs = site.docs | where_exp: "doc", "doc.tag contains 'tool'" %}
+        {% for tool in tool_docs limit:item_limit %}
+          <a href="{{ tool.url | relative_url }}">{{ tool.title }}</a>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+      {% endif %}
+      
+      {% if include.auto == "process_docs" %}
+        {% assign process_docs = site.docs | where_exp: "doc", "doc.tag contains 'process'" %}
+        {% for doc in process_docs limit:item_limit %}
+          <a href="{{ doc.url | relative_url }}">{{ doc.title }}</a>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+      {% endif %}
+      
+      {% if include.auto == "all_docs" %}
+        {% for doc in site.docs limit:item_limit %}
+          <a href="{{ doc.url | relative_url }}">{{ doc.title }}</a>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+      {% endif %}
+    {% endif %}
+
+    {% comment %} Show all link {% endcomment %}
+    {% if include.show_all_link %}
+      {% if include.items or include.auto %}, {% endif %}<a href="{{ include.show_all_link | relative_url }}">{{ include.show_all_text | default: "View all" }}</a>
+    {% endif %}
+  </div>
+</div>

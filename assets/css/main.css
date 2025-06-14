@@ -31,7 +31,7 @@ html {
 
 body {
   font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   color: var(--foreground);
   background-color: var(--background);
@@ -73,8 +73,8 @@ body {
   left: 0;
   right: 0;
   z-index: 50;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   background-color: rgba(223, 215, 200, 0.8);
   padding: 2.5rem 0;
   width: 100%;
@@ -506,7 +506,7 @@ hr {
 
 
 .project-title {
-  font-size: 0.875rem;
+  font-size: 16px;
   font-weight: 400;
   color: var(--foreground);
   margin: 0;
@@ -711,7 +711,6 @@ hr {
     gap: 0.25rem;
   }
   
-  
   .project-categories .meta-link {
     align-self: flex-start;
   }
@@ -750,7 +749,7 @@ hr {
 
 .project-thumbnail img {
   width: 50%;
-  height: auto;
+  height: 50vh;
   border-radius: 0.5rem;
 }
 
@@ -1001,4 +1000,170 @@ hr {
 /* Contact button specific */
 .contact-btn {
   margin-top: 2rem;
+}
+
+/* Wiki/Collapsible Sections */
+.wiki-section {
+  margin-top: 2rem;
+}
+
+.wiki-item {
+  margin-bottom: 1.5rem;
+  border: none;
+}
+
+.wiki-header {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--foreground);
+  cursor: pointer;
+  padding: 0.75rem 0;
+  margin: 0;
+  list-style: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  transition: color 150ms ease;
+}
+
+.wiki-header:hover {
+  color: var(--muted);
+}
+
+.wiki-header::before {
+  content: "▶";
+  margin-right: 0.75rem;
+  transition: transform 150ms ease;
+  font-size: 0.875rem;
+}
+
+.wiki-item[open] .wiki-header::before {
+  transform: rotate(90deg);
+}
+
+.wiki-content {
+  padding-left: 1.75rem;
+  margin-top: 0.5rem;
+}
+
+.wiki-content ul {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.wiki-content li {
+  margin-bottom: 0.375rem;
+  color: var(--foreground);
+}
+
+.wiki-content a {
+  color: var(--foreground);
+  text-decoration: underline;
+  text-decoration-style: solid;
+  transition: text-decoration 150ms ease;
+}
+
+.wiki-content a:hover {
+  font-weight: 500;
+  text-decoration-style: wavy;
+}
+
+/* Mobile wiki sections */
+@media (max-width: 768px) {
+  .wiki-header {
+    font-size: 1.125rem;
+    padding: 0.5rem 0;
+  }
+  
+  .wiki-content {
+    padding-left: 1.25rem;
+  }
+}
+
+/* Writing/Posts Index */
+.post-item {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(153, 153, 153, 0.2);
+}
+
+.post-item:last-child {
+  border-bottom: none;
+}
+
+.post-item h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.post-item h3 a {
+  color: var(--foreground);
+  text-decoration: none;
+  transition: text-decoration 150ms ease;
+}
+
+.post-item h3 a:hover {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  font-weight: 500;
+}
+
+.post-meta {
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+/* Two Column Wiki Layout */
+.wiki-two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.wiki-section-title {
+  /* Let h3 default styles take precedence */
+  margin-top: 0;
+}
+
+.wiki-comma-list {
+  /* Use default body/p styling */
+}
+
+.wiki-comma-list a {
+  color: var(--foreground);
+  text-decoration: underline;
+  text-decoration-style: solid;
+  transition: text-decoration 150ms ease;
+}
+
+.wiki-comma-list a:hover {
+  font-weight: 500;
+  text-decoration-style: wavy;
+}
+
+/* Tablet and Mobile two column */
+@media (max-width: 1024px) {
+  .wiki-two-column {
+    grid-template-columns: 200px 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .wiki-two-column {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  
+  .wiki-section-title {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .wiki-comma-list {
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+  }
 }

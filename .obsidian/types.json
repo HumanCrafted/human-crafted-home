@@ -9,6 +9,7 @@
     "layout": "text",
     "gallery_images": "multitext",
     "tools": "multitext",
-    "process": "multitext"
+    "process": "multitext",
+    "date": "date"
   }
 }
