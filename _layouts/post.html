@@ -27,13 +27,4 @@ layout: default
   </p>
   
   {{ content }}
-  
-  {% if page.tags.size > 0 %}
-    <div class="post-tags">
-      <strong>Tags:</strong>
-      {% for tag in page.tags %}
-        <span class="tag">{{ tag }}</span>
-      {% endfor %}
-    </div>
-  {% endif %}
 </div>

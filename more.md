@@ -24,4 +24,4 @@ Below you can learn more [about me](_docs/about-me.md), explore my [past work](/
 
 {% include wiki-two-column.html title="Resources" items="Design principles,Manufacturing contacts,Material library,Supplier directory,Process documentation" %}
 
-{% include wiki-two-column.html title="Writing" items="Made Better:/writing/2025/06/12/made-better.html,The Beginning and End Of What If,Innovating Innovation,A Fitter Future,Triple Top Line,Accounting for Disruption,Hierarchy of Experience,Building a Scene,Innovation and the NPD Wave,Design" %}
+{% include wiki-two-column.html title="Writing" auto="posts" show_all_link="/writing/" show_all_text="View all posts" %}

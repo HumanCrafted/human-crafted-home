@@ -364,7 +364,7 @@ code {
 
 /* Blockquotes */
 blockquote {
-  border-left: 4px solid var(--accent);
+  border-left: 4px solid var(--foreground);
   padding-left: 1.5rem;
   margin: 1.5rem 0;
   font-style: italic;
@@ -1114,8 +1114,9 @@ hr {
   margin-bottom: 1rem;
 }
 
-/* Two Column Wiki Layout */
-.wiki-two-column {
+/* Two Column Wiki Layout - Only for wiki sections */
+.wiki-section .wiki-two-column,
+.page-content .wiki-two-column {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;

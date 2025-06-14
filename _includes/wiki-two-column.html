@@ -47,6 +47,13 @@
           <a href="{{ doc.url | relative_url }}">{{ doc.title }}</a>{% unless forloop.last %}, {% endunless %}
         {% endfor %}
       {% endif %}
+      
+      {% if include.auto == "posts" %}
+        {% assign filtered_posts = site.posts | where_exp: "post", "post.draft != true" %}
+        {% for post in filtered_posts limit:item_limit %}
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+      {% endif %}
     {% endif %}
 
     {% comment %} Show all link {% endcomment %}

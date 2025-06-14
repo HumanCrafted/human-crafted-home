@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Made. Better.
-date: 2025-06-12
+title: Hierarchy of Experience
+date: 2014-11-29
+draft: false
 categories:
   - writing
 tags:
