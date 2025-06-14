@@ -6,16 +6,7 @@
     {% comment %} Manual items {% endcomment %}
     {% if include.items %}
       {% assign item_list = include.items | split: ',' %}
-      {% for item in item_list %}
-        {% if item contains ':' %}
-          {% assign item_parts = item | split: ':' %}
-          {% assign item_title = item_parts[0] %}
-          {% assign item_url = item_parts[1] %}
-          <a href="{{ item_url | relative_url }}">{{ item_title }}</a>{% unless forloop.last %}, {% endunless %}
-        {% else %}
-          {{ item }}{% unless forloop.last %}, {% endunless %}
-        {% endif %}
-      {% endfor %}
+      {% for item in item_list %}{% if item contains ':' %}{% assign item_parts = item | split: ':' %}{% assign item_title = item_parts[0] %}{% assign item_url = item_parts[1] %}<a href="{{ item_url | relative_url }}">{{ item_title }}</a>{% unless forloop.last %}, {% endunless %}{% else %}{{ item }}{% unless forloop.last %}, {% endunless %}{% endif %}{% endfor %}
     {% endif %}
 
     {% comment %} Auto-populated items {% endcomment %}
@@ -24,10 +15,7 @@
       
       {% if include.auto == "projects" %}
         {% assign auto_items = site.projects | slice: 0, item_limit %}
-        {% if include.items and auto_items.size > 0 %}, {% endif %}
-        {% for project in auto_items %}
-          <a href="{{ project.url | relative_url }}">{{ project.title }}</a>{% unless forloop.last %}, {% endunless %}
-        {% endfor %}
+        {% if include.items and auto_items.size > 0 %}, {% endif %}{% for project in auto_items %}<a href="{{ project.url | relative_url }}">{{ project.title }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}
       {% endif %}
       
       {% if include.auto == "tool_docs" %}
@@ -64,7 +52,7 @@
 
     {% comment %} Show all link {% endcomment %}
     {% if include.show_all_link %}
-      {% if include.items or include.auto %}, {% endif %}<a href="{{ include.show_all_link | relative_url }}">{{ include.show_all_text | default: "View all" }}</a>
+      {% if include.items or include.auto %},{% endif %} <a href="{{ include.show_all_link | relative_url }}">{{ include.show_all_text | default: "View all" }}</a>
     {% endif %}
   </div>
 </div>
