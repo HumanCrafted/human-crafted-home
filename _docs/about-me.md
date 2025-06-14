@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: About me
-slug: about
+slug: about-me
 main_image: 
 featured: false
 tags: 

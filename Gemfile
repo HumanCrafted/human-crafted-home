@@ -1,7 +1,10 @@
 source "https://rubygems.org"
 
-# Use GitHub Pages gem for compatibility
-gem "github-pages", group: :jekyll_plugins
+# Jekyll and plugins
+gem "jekyll", "~> 4.3"
+gem "jekyll-feed", "~> 0.17"
+gem "jekyll-sitemap", "~> 1.4"
+gem "jekyll-seo-tag", "~> 2.8"
 
-# Required for GitHub Pages
+# Required for local server
 gem "webrick", "~> 1.7"

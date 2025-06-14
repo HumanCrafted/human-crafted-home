@@ -1,1022 +1,150 @@
+/opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-4.4.1/lib/jekyll.rb:26: warning: logger was loaded from the standard library, but will no longer be part of the default gems starting from Ruby 3.5.0.
+You can add logger to your Gemfile or gemspec to silence this warning.
 Configuration file: /Users/nginear/Documents/GitHub/human-crafted-home/_config.yml
-To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
             Source: /Users/nginear/Documents/GitHub/human-crafted-home
        Destination: /Users/nginear/Documents/GitHub/human-crafted-home/_site
  Incremental build: disabled. Enable with --incremental
       Generating... 
        Jekyll Feed: Generating feed for posts
-                    done in 0.947 seconds.
+                    done in 0.35 seconds.
  Auto-regeneration: enabled for '/Users/nginear/Documents/GitHub/human-crafted-home'
     Server address: http://127.0.0.1:4000/Human-Crafted-Home/
   Server running... press ctrl-c to stop.
-[2025-06-13 10:41:09] ERROR '/2025/06/12/made-better.html' not found.
-[2025-06-13 10:41:13] ERROR '/apple-touch-icon-precomposed.png' not found.
-[2025-06-13 10:41:13] ERROR '/apple-touch-icon.png' not found.
-[2025-06-13 10:41:13] ERROR '/favicon.ico' not found.
-[2025-06-13 10:41:16] ERROR '/2025/06/12/made-better.html' not found.
-      Regenerating: 2 file(s) changed at 2025-06-13 10:41:49
+      Regenerating: 1 file(s) changed at 2025-06-14 13:00:09
+                    more.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.304884 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-14 13:00:30
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.18577 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-06-14 13:00:50
                     more.md
                     jekyll.log
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.933747 seconds.
+                    ...done in 0.172876 seconds.
                     
-[2025-06-13 10:42:40] ERROR '/Human-Crafted-Home/2025/06/12/made-better.html' not found.
-[2025-06-13 10:42:43] ERROR '/Human-Crafted-Home/2025/06/12/made-better.html' not found.
-[2025-06-13 10:42:48] ERROR '/Human-Crafted-Home/2025/06/12/made-better.html' not found.
-[2025-06-13 10:42:51] ERROR '/apple-touch-icon-precomposed.png' not found.
-[2025-06-13 10:42:51] ERROR '/apple-touch-icon.png' not found.
-[2025-06-13 10:42:51] ERROR '/favicon.ico' not found.
-      Regenerating: 2 file(s) changed at 2025-06-13 10:43:31
+      Regenerating: 2 file(s) changed at 2025-06-14 13:00:58
                     more.md
                     jekyll.log
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.937456 seconds.
+                    ...done in 0.154052 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-13 10:47:09
-                    _layouts/default.html
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.929106 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-13 10:47:51
-                    _layouts/post.html
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.895534 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-13 14:25:38
+[2025-06-14 13:01:19] ERROR '/Human-Crafted-Home/lab/more.md' not found.
+      Regenerating: 2 file(s) changed at 2025-06-14 13:01:38
+                    lab.md
                     jekyll.log
-                    writing.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 1.002068 seconds.
+                    ...done in 0.156587 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-13 14:25:52
-                    assets/css/main.css
+      Regenerating: 2 file(s) changed at 2025-06-14 13:01:40
+                    lab.md
+                    jekyll.log
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.931541 seconds.
+                    ...done in 0.136715 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-13 14:28:25
-                    _layouts/post.html
+      Regenerating: 2 file(s) changed at 2025-06-14 13:01:42
+                    lab.md
+                    jekyll.log
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.906828 seconds.
+                    ...done in 0.130859 seconds.
                     
-[2025-06-13 15:09:26] ERROR '/apple-touch-icon-precomposed.png' not found.
-[2025-06-13 15:09:26] ERROR '/apple-touch-icon.png' not found.
-[2025-06-13 15:09:26] ERROR '/favicon.ico' not found.
-[2025-06-13 15:11:12] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:14 
+      Regenerating: 2 file(s) changed at 2025-06-14 13:01:45
+                    lab.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.139321 seconds.
+                    
+[2025-06-14 13:01:48] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:11 
 	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
 	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
 	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-      Regenerating: 1 file(s) changed at 2025-06-13 15:12:37
-                    _posts/2025-02-07-welcome-to-jekyll.md
+[2025-06-14 13:01:48] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+[2025-06-14 13:01:51] ERROR '/Human-Crafted-Home/lab/more.md' not found.
+[2025-06-14 13:02:42] ERROR '/Human-Crafted-Home/lab/more.md' not found.
+[2025-06-14 13:02:45] ERROR '/apple-touch-icon-precomposed.png' not found.
+[2025-06-14 13:02:45] ERROR '/apple-touch-icon.png' not found.
+[2025-06-14 13:02:45] ERROR '/favicon.ico' not found.
+      Regenerating: 2 file(s) changed at 2025-06-14 13:03:34
+                    lab.md
+                    jekyll.log
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.95379 seconds.
+                    ...done in 0.179468 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-13 15:12:41
-                    _posts/2025-06-12-made-better.md
+[2025-06-14 13:04:21] ERROR '/Human-Crafted-Home/lab/more.md' not found.
+[2025-06-14 13:05:03] ERROR '/apple-touch-icon-precomposed.png' not found.
+[2025-06-14 13:05:03] ERROR '/apple-touch-icon.png' not found.
+[2025-06-14 13:05:03] ERROR '/favicon.ico' not found.
+      Regenerating: 1 file(s) changed at 2025-06-14 13:06:18
+                    assets/css/main.css
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.824775 seconds.
+                    ...done in 0.187104 seconds.
                     
-      Regenerating: 2 file(s) changed at 2025-06-13 17:12:19
+      Regenerating: 2 file(s) changed at 2025-06-14 13:07:58
                     more.md
                     jekyll.log
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.933866 seconds.
+                    ...done in 0.175704 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-14 07:37:51
+      Regenerating: 2 file(s) changed at 2025-06-14 13:08:02
+                    more.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.175843 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-06-14 13:08:06
+                    more.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.159415 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-06-14 13:08:08
+                    more.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.162745 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-06-14 13:08:18
+                    more.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.239452 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-14 13:08:18
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.170852 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-14 13:10:17
                     assets/css/main.css
        Jekyll Feed: Generating feed for posts
-                    ...done in 1.352753 seconds.
+                    ...done in 0.185832 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-14 07:38:32
+      Regenerating: 1 file(s) changed at 2025-06-14 13:12:22
                     _includes/wiki-two-column.html
        Jekyll Feed: Generating feed for posts
-                    ...done in 1.242163 seconds.
+                    ...done in 0.173005 seconds.
                     
-      Regenerating: 2 file(s) changed at 2025-06-14 07:38:57
-                    more.md
-                    jekyll.log
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.306442 seconds.
-                    
-[2025-06-14 07:42:01] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-      Regenerating: 1 file(s) changed at 2025-06-14 07:44:09
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.324859 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 07:44:19
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.27922 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 07:45:35
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.276181 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 07:48:07
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.332721 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 07:49:58
-                    more.md
-                    jekyll.log
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.2628 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 07:50:00
-                    more.md
-                    jekyll.log
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.158071 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 07:50:17
-                    more.md
-                    jekyll.log
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.190201 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 07:50:19
-                    more.md
-                    jekyll.log
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.189942 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 07:51:29
-                    more.md
-                    jekyll.log
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.262654 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 07:55:48
-                    _posts/2025-06-12-made-better 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.304052 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 07:55:55
-                    obsidian-templates/2025-06-12-made-better 1.md
-                    _posts/2025-06-12-made-better 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.265491 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 07:56:22
-                    obsidian-templates/post - article coming soon....md
-                    obsidian-templates/2025-06-12-made-better 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.273715 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 07:56:27
-                    obsidian-templates/post - article coming soon....md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.175561 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 07:56:46
-                    obsidian-templates/project - more project details.md
-                    obsidian-templates/more project details.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.273439 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 07:56:52
-                    obsidian-templates/doc - properties.md
-                    obsidian-templates/doc properties.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.269319 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 07:56:58
-                    obsidian-templates/project - properties.md
-                    obsidian-templates/project properties.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.205149 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 07:57:08
-                    _posts/2025-06-12-made-better 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.252757 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 07:57:12
-                    obsidian-templates/2025-06-12-made-better 1.md
-                    _posts/2025-06-12-made-better 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.252059 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 07:57:29
-                    obsidian-templates/posts - properties.md
-                    obsidian-templates/2025-06-12-made-better 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.222252 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 07:57:32
-                    obsidian-templates/posts - properties.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.241299 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 07:57:34
-                    obsidian-templates/posts - properties.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.210162 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 07:57:37
-                    obsidian-templates/posts - properties.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.233613 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 07:57:39
-                    obsidian-templates/posts - properties.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.229177 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 07:58:22
-                    jekyll.log
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.242878 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 07:59:20
-                    _posts/2025-06-12-made-better 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.333589 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 07:59:27
-                    _posts/2025-06-12-made-better 1 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.239382 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 07:59:29
-                    _posts/2025-06-12-made-better 1 1 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.238183 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 07:59:36
-                    _posts/2025-06-12-made-better 1 1 1 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.419551 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 07:59:38
-                    _posts/2025-06-12-made-better 1 1 1 1 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.322658 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 07:59:41
-                    _posts/2025-06-12-made-better 1 1 1 1 1 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.289292 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 07:59:43
-                    _posts/2025-06-12-made-better 1 1 1 1 1 1 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.272784 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 07:59:45
-                    _posts/2025-06-12-made-better 1 1 1 1 1 1 1 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.253732 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 07:59:48
-                    _posts/2025-06-12-made-better 1 1 1 1 1 1 1 1 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.303864 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 07:59:50
-                    _posts/2025-06-12-made-better 1 1 1 1 1 1 1 1 1 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.26765 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 08:00:59
-                    _posts/2025-06-12-the-beginning-and-end-of-what-if.md
-                    _posts/2025-06-12-made-better 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.367528 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:01:07
-                    _posts/2025-06-12-the-beginning-and-end-of-what-if.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.296249 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:01:09
-                    _posts/2025-06-12-the-beginning-and-end-of-what-if.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.2637 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:01:23
-                    _posts/2025-06-12-made-better 1 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.354316 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 08:01:34
-                    _posts/2025-06-12-innovating-innovation.md
-                    _posts/2025-06-12-made-better 1 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.355354 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:01:38
-                    _posts/2025-06-12-innovating-innovation.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.316509 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:01:45
-                    _posts/2025-06-12-innovating-innovation.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.249559 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:02:06
-                    _posts/2025-06-12-made-better 1 1 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.291274 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:02:15
-                    _posts/2025-06-12-made-better 1 1 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.260673 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 08:02:24
-                    _posts/2025-06-12-a-fitter-future.md
-                    _posts/2025-06-12-made-better 1 1 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.246559 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 08:02:49
-                    _posts/2025-06-12-triple-top-line.md
-                    _posts/2025-06-12-made-better 1 1 1 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.272033 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:02:50
-                    _posts/2025-06-12-triple-top-line.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.249422 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:02:53
-                    _posts/2025-06-12-triple-top-line.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.252943 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:02:56
-                    _posts/2025-06-12-triple-top-line.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.239619 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:02:58
-                    _posts/2025-06-12-triple-top-line.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.28179 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:03:14
-                    _posts/2025-06-12-made-better 1 1 1 1 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.317174 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:03:17
-                    _posts/2025-06-12-made-better 1 1 1 1 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.248933 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:03:19
-                    _posts/2025-06-12-made-better 1 1 1 1 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.248654 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:03:21
-                    _posts/2025-06-12-made-better 1 1 1 1 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.31303 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 08:03:36
-                    _posts/2025-06-12-accounting-for-disruption.md
-                    _posts/2025-06-12-made-better 1 1 1 1 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.233479 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:03:50
-                    _posts/2025-06-12-made-better 1 1 1 1 1 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.264087 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 08:04:07
-                    _posts/2025-06-12-hierarchy-of-experience.md
-                    _posts/2025-06-12-made-better 1 1 1 1 1 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.282744 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:04:32
-                    _posts/2025-06-12-made-better 1 1 1 1 1 1 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.282641 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 08:04:40
-                    _posts/2025-06-12-building-a-scene.md
-                    _posts/2025-06-12-made-better 1 1 1 1 1 1 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.271594 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:04:53
-                    _posts/2025-06-12-made-better 1 1 1 1 1 1 1 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.301853 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 08:05:04
-                    _posts/2025-06-12-innovation-and-the-npd-wave.md
-                    _posts/2025-06-12-made-better 1 1 1 1 1 1 1 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.254577 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:05:05
-                    _posts/2025-06-12-innovation-and-the-npd-wave.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.227424 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:05:08
-                    _posts/2025-06-12-innovation-and-the-npd-wave.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.295003 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:05:23
-                    _posts/2025-06-12-made-better 1 1 1 1 1 1 1 1 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.343268 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 08:05:30
-                    _posts/2025-06-12-design.md
-                    _posts/2025-06-12-made-better 1 1 1 1 1 1 1 1 1 1.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.267828 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:05:33
-                    _posts/2025-06-12-design.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.263736 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:06:23
-                    _posts/2025-06-12-design.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.289624 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:06:25
-                    _posts/2025-06-12-design.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.278319 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:06:26
-                    _posts/2025-06-12-design.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.277858 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:06:27
-                    _posts/2025-06-12-design.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.253121 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:06:29
-                    _posts/2025-06-12-design.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.267094 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 08:06:42
-                    _posts/2013-09-28-design.md
-                    _posts/2025-06-12-design.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.260882 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:06:56
-                    _posts/2025-06-12-innovation-and-the-npd-wave.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.274332 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:07:00
-                    _posts/2025-06-12-innovation-and-the-npd-wave.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.31322 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:07:02
-                    _posts/2025-06-12-innovation-and-the-npd-wave.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.314936 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:07:03
-                    _posts/2025-06-12-innovation-and-the-npd-wave.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.280009 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 08:07:14
-                    _posts/2014-09-03-innovation-and-the-npd-wave.md
-                    _posts/2025-06-12-innovation-and-the-npd-wave.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.344953 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:07:23
-                    _posts/2025-06-12-building-a-scene.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.279153 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:07:25
-                    _posts/2025-06-12-building-a-scene.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.246457 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:07:27
-                    _posts/2025-06-12-building-a-scene.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.283356 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:07:28
-                    _posts/2025-06-12-building-a-scene.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.244788 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 08:07:40
-                    _posts/2014-11-20-building-a-scene.md
-                    _posts/2025-06-12-building-a-scene.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.309813 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:07:50
-                    _posts/2025-06-12-hierarchy-of-experience.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.248406 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:07:52
-                    _posts/2025-06-12-hierarchy-of-experience.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.257009 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:07:53
-                    _posts/2025-06-12-hierarchy-of-experience.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.275254 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:07:54
-                    _posts/2025-06-12-hierarchy-of-experience.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.275251 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:07:56
-                    _posts/2025-06-12-hierarchy-of-experience.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.270012 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 08:08:06
-                    _posts/2014-11-29-hierarchy-of-experience.md
-                    _posts/2025-06-12-hierarchy-of-experience.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.263129 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:08:19
-                    _posts/2025-06-12-accounting-for-disruption.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.244086 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:08:21
-                    _posts/2025-06-12-accounting-for-disruption.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.270177 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:08:23
-                    _posts/2025-06-12-accounting-for-disruption.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.280834 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:08:25
-                    _posts/2025-06-12-accounting-for-disruption.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.408165 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 08:08:31
-                    _posts/2024-12-10-accounting-for-disruption.md
-                    _posts/2025-06-12-accounting-for-disruption.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.253183 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:08:44
-                    _posts/2025-06-12-triple-top-line.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.308188 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:08:46
-                    _posts/2025-06-12-triple-top-line.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.285622 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:08:47
-                    _posts/2025-06-12-triple-top-line.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.286871 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 08:08:56
-                    _posts/2015-06-25-triple-top-line.md
-                    _posts/2025-06-12-triple-top-line.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.248257 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:09:15
-                    _posts/2025-06-12-a-fitter-future.md
-[31m             Error: could not read file /Users/nginear/Documents/GitHub/human-crafted-home/_posts/2025-06-12-a-fitter-future.md: Invalid date '': Document '_posts/2025-06-12-a-fitter-future.md' does not have a valid date in the YAML front matter.[0m
-[33m             Error: Invalid date '': Document '_posts/2025-06-12-a-fitter-future.md' does not have a valid date in the YAML front matter.[0m
-[33m             Error: Run jekyll build --trace for more information.[0m
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:09:15
-                    _posts/2025-06-12-a-fitter-future.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.300407 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:09:19
-                    _posts/2025-06-12-a-fitter-future.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.221495 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:09:20
-                    _posts/2025-06-12-a-fitter-future.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.256886 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:09:22
-                    _posts/2025-06-12-a-fitter-future.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.26562 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:09:23
-                    _posts/2025-06-12-a-fitter-future.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.278345 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:09:24
-                    _posts/2025-06-12-a-fitter-future.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.279272 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:09:26
-                    _posts/2025-06-12-a-fitter-future.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.288062 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 08:09:36
-                    _posts/2015-07-23-a-fitter-future.md
-                    _posts/2025-06-12-a-fitter-future.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.308927 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:09:43
-                    _posts/2025-06-12-innovating-innovation.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.240503 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:09:46
-                    _posts/2025-06-12-innovating-innovation.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.241719 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:09:48
-                    _posts/2025-06-12-innovating-innovation.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.312781 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:09:49
-                    _posts/2025-06-12-innovating-innovation.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.255826 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 08:09:57
-                    _posts/2015-09-23-innovating-innovation.md
-                    _posts/2025-06-12-innovating-innovation.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.248673 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:10:12
-                    _posts/2025-06-12-the-beginning-and-end-of-what-if.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.283782 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:10:13
-                    _posts/2025-06-12-the-beginning-and-end-of-what-if.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.268733 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:10:15
-                    _posts/2025-06-12-the-beginning-and-end-of-what-if.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.24814 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:10:16
-                    _posts/2025-06-12-the-beginning-and-end-of-what-if.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.265132 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:10:17
-                    _posts/2025-06-12-the-beginning-and-end-of-what-if.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.279636 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 08:10:27
-                    _posts/2016-04-15-the-beginning-and-end-of-what-if.md
-                    _posts/2025-06-12-the-beginning-and-end-of-what-if.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.268533 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 08:10:42
-                    _posts/2014-12-10-accounting-for-disruption.md
-                    _posts/2024-12-10-accounting-for-disruption.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.275066 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:11:20
-                    _posts/2025-06-12-made-better.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.326164 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 08:14:30
-                    _posts/2016-06-30-made-better.md
-                    _posts/2025-06-12-made-better.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.352033 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:14:31
-                    _posts/2016-06-30-made-better.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.230085 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:14:33
-                    _posts/2016-06-30-made-better.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.272961 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:14:34
-                    _posts/2016-06-30-made-better.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.257271 seconds.
-                    
-[2025-06-14 08:15:04] ERROR '/Human-Crafted-Home/writing/2025/06/12/made-better.html' not found.
-[2025-06-14 08:15:07] ERROR '/Human-Crafted-Home/writing/2025/06/12/made-better.html' not found.
-[2025-06-14 08:15:10] ERROR '/apple-touch-icon-precomposed.png' not found.
-[2025-06-14 08:15:10] ERROR '/apple-touch-icon.png' not found.
-[2025-06-14 08:15:10] ERROR '/favicon.ico' not found.
-      Regenerating: 2 file(s) changed at 2025-06-14 08:15:30
-                    more.md
-                    jekyll.log
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.285703 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 08:15:33
-                    more.md
-                    jekyll.log
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.251195 seconds.
-                    
-[2025-06-14 08:15:45] ERROR '/apple-touch-icon-precomposed.png' not found.
-[2025-06-14 08:15:45] ERROR '/apple-touch-icon.png' not found.
-[2025-06-14 08:15:45] ERROR '/favicon.ico' not found.
-      Regenerating: 1 file(s) changed at 2025-06-14 08:17:10
-                    _posts/2016-06-30-made-better.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.310178 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:17:14
-                    _posts/2016-06-30-made-better.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.262297 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:20:40
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.324312 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:22:01
+      Regenerating: 1 file(s) changed at 2025-06-14 13:13:38
                     _includes/wiki-two-column.html
        Jekyll Feed: Generating feed for posts
-                    ...done in 1.378579 seconds.
+                    ...done in 0.198984 seconds.
                     
-      Regenerating: 2 file(s) changed at 2025-06-14 08:22:16
-                    more.md
-                    jekyll.log
+      Regenerating: 1 file(s) changed at 2025-06-14 13:15:00
+                    _includes/wiki-two-column.html
        Jekyll Feed: Generating feed for posts
-                    ...done in 1.289319 seconds.
+                    ...done in 0.192547 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-14 08:25:23
-                    _posts/2015-06-25-triple-top-line.md
+      Regenerating: 1 file(s) changed at 2025-06-14 13:17:07
+                    _includes/wiki-two-column.html
        Jekyll Feed: Generating feed for posts
-                    ...done in 1.335929 seconds.
+                    ...done in 0.18109 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-14 08:25:45
-                    _posts/2015-07-23-a-fitter-future.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.2644 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:25:50
-                    _posts/2015-09-23-innovating-innovation.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.253877 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:25:57
-                    _posts/2014-09-03-innovation-and-the-npd-wave.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.220431 seconds.
-                    
-      Regenerating: 3 file(s) changed at 2025-06-14 08:26:11
-                    _posts/2013-09-28-design.md
-                    _posts/2014-11-20-building-a-scene.md
-                    _posts/2014-11-29-hierarchy-of-experience.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.227471 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 08:26:24
-                    _posts/2016-04-15-the-beginning-and-end-of-what-if.md
-                    _posts/2014-12-10-accounting-for-disruption.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.224965 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:27:44
-                    _posts/2016-06-30-made-better.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.31315 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:28:06
-                    _posts/2016-06-30-made-better.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.42375 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:28:08
-                    _posts/2016-06-30-made-better.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.282761 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:29:24
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.291789 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:29:43
-                    _posts/2016-06-30-made-better.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.282259 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:29:51
-                    _posts/2016-06-30-made-better.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.274417 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:32:04
-                    _layouts/post.html
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.326945 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:33:09
-                    _posts/2016-06-30-made-better.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.308633 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:33:12
-                    _posts/2016-06-30-made-better.md
-       Jekyll Feed: Generating feed for posts
-[2025-06-14 08:33:13] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-14 08:33:13] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:11 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-                    ...done in 1.251607 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:33:14
-                    _posts/2016-06-30-made-better.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.270045 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:33:26
-                    _posts/2016-06-30-made-better.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.272744 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:33:42
-                    _posts/2015-07-23-a-fitter-future.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.273221 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:33:47
-                    _posts/2016-04-15-the-beginning-and-end-of-what-if.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.352195 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:33:56
-                    _posts/2016-04-15-the-beginning-and-end-of-what-if.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.356981 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:33:58
-                    _posts/2015-09-23-innovating-innovation.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.326216 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:34:00
-                    _posts/2015-07-23-a-fitter-future.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.28607 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:34:02
-                    _posts/2015-06-25-triple-top-line.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.309151 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:34:04
-                    _posts/2014-12-10-accounting-for-disruption.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.306942 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:34:05
-                    _posts/2014-11-29-hierarchy-of-experience.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.332053 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:34:07
-                    _posts/2014-11-20-building-a-scene.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.319396 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:34:09
-                    _posts/2014-09-03-innovation-and-the-npd-wave.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.315123 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:34:12
-                    _posts/2013-09-28-design.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.273732 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:34:20
-                    _posts/2016-06-30-made-better.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.284147 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:34:25
-                    _posts/2016-06-30-made-better.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.277112 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:34:27
-                    _posts/2016-06-30-made-better.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.276794 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:34:31
-                    _posts/2016-06-30-made-better.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.262465 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:34:39
-                    _posts/2016-06-30-made-better.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.273411 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:34:44
-                    _posts/2016-06-30-made-better.md
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.279373 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:40:17
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.351264 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:41:25
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.352829 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:42:32
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.3452 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:43:51
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.284793 seconds.
-                    
-[2025-06-14 08:44:27] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-      Regenerating: 1 file(s) changed at 2025-06-14 08:47:43
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.338644 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:53:27
-                    assets/js/theme.js
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.30909 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:53:38
-                    _layouts/project.html
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.310976 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:53:44
-                    _layouts/post.html
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.262937 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 08:53:57
-                    _layouts/default.html
-       Jekyll Feed: Generating feed for posts
-                    ...done in 1.273193 seconds.
-                    
+[2025-06-14 13:17:44] ERROR '/apple-touch-icon-precomposed.png' not found.
+[2025-06-14 13:17:44] ERROR '/apple-touch-icon.png' not found.
+[2025-06-14 13:17:44] ERROR '/favicon.ico' not found.
