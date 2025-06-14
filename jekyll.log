@@ -971,3 +971,52 @@ To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
        Jekyll Feed: Generating feed for posts
                     ...done in 1.279373 seconds.
                     
+      Regenerating: 1 file(s) changed at 2025-06-14 08:40:17
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.351264 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-14 08:41:25
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.352829 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-14 08:42:32
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.3452 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-14 08:43:51
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.284793 seconds.
+                    
+[2025-06-14 08:44:27] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-06-14 08:47:43
+                    assets/css/main.css
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.338644 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-14 08:53:27
+                    assets/js/theme.js
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.30909 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-14 08:53:38
+                    _layouts/project.html
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.310976 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-14 08:53:44
+                    _layouts/post.html
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.262937 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-06-14 08:53:57
+                    _layouts/default.html
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.273193 seconds.
+                    

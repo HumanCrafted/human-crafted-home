@@ -306,6 +306,7 @@ p {
 a {
   color: var(--foreground);
   text-decoration: none;
+  text-underline-offset: 0.2rem;
   transition: text-decoration 150ms ease;
 }
 
@@ -1153,18 +1154,16 @@ hr {
 }
 
 @media (max-width: 768px) {
-  .wiki-two-column {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
+  .wiki-section .wiki-two-column,
+  .page-content .wiki-two-column {
+    display: block;
   }
   
   .wiki-section-title {
-    font-size: 1rem;
-    margin-bottom: 0.25rem;
+    margin-bottom: 1rem;
   }
   
   .wiki-comma-list {
-    font-size: 0.875rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
 }

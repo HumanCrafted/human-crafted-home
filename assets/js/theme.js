@@ -94,3 +94,13 @@
   // Expose toggle function globally for manual use
   window.toggleTheme = toggleTheme;
 })();
+
+// Smart back navigation
+function goBack() {
+  if (document.referrer && document.referrer.includes(window.location.host)) {
+    history.back();
+  } else {
+    // Fallback to homepage if no referrer or external referrer
+    window.location.href = '/';
+  }
+}
