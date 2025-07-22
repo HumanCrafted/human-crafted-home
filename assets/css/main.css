@@ -619,54 +619,13 @@ hr {
   }
   
   .site-nav {
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 0.25rem;
-  }
-  
-  .site-nav a:first-child {
-    order: 2; /* More - second */
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
   }
   
   .site-nav .colab-btn {
-    order: 1; /* Let's co/lab - first */
-  }
-  
-  .site-nav .theme-toggle {
-    order: 3; /* Theme toggle - third */
-  }
-  
-  .site-nav .colab-btn {
-    background: none !important;
-    color: var(--foreground) !important;
-    padding: 0 !important;
-    border-radius: 0 !important;
-    font-size: 18px !important;
-    font-weight: 400 !important;
-    font-family: 'IBM Plex Mono', monospace !important;
-    letter-spacing: normal !important;
-    height: auto !important;
-    gap: 0 !important;
-    text-decoration: none !important;
-    transition: text-decoration 150ms ease !important;
-  }
-  
-  .site-nav .colab-btn:hover {
-    font-weight: 500 !important;
-    text-decoration: underline !important;
-    text-decoration-style: wavy !important;
-  }
-  
-  .site-nav .colab-btn svg {
-    display: none;
-  }
-  
-  /* Removed - now inherits from .btn:hover */
-  
-  .site-nav .colab-btn.active {
-    font-weight: 500 !important;
-    text-decoration: underline !important;
-    text-decoration-style: wavy !important;
+    display: none; /* Hide Let's co/lab on mobile */
   }
   
   .page-content {
