@@ -19,7 +19,7 @@
       {% endif %}
       
       {% if include.auto == "tool_docs" %}
-        {% assign tool_docs = site.docs | where_exp: "doc", "doc.tag contains 'tool'" %}
+        {% assign tool_docs = site.docs | where_exp: "doc", "doc.tag contains 'tool' or doc.tags contains 'tool' or doc.tags contains 'tools'" %}
         {% if include.items and tool_docs.size > 0 %}, {% endif %}
         {% for tool in tool_docs limit:item_limit %}
           <a href="{{ tool.url | relative_url }}">{{ tool.title }}</a>{% unless forloop.last %}, {% endunless %}
@@ -27,7 +27,7 @@
       {% endif %}
       
       {% if include.auto == "process_docs" %}
-        {% assign process_docs = site.docs | where_exp: "doc", "doc.tag contains 'process'" %}
+        {% assign process_docs = site.docs | where_exp: "doc", "doc.tag contains 'process' or doc.tags contains 'process'" %}
         {% if include.items and process_docs.size > 0 %}, {% endif %}
         {% for doc in process_docs limit:item_limit %}
           <a href="{{ doc.url | relative_url }}">{{ doc.title }}</a>{% unless forloop.last %}, {% endunless %}
@@ -35,7 +35,7 @@
       {% endif %}
       
       {% if include.auto == "expertise_docs" %}
-        {% assign expertise_docs = site.docs | where_exp: "doc", "doc.tag contains 'expertise'" %}
+        {% assign expertise_docs = site.docs | where_exp: "doc", "doc.tag contains 'expertise' or doc.tags contains 'expertise'" %}
         {% if include.items and expertise_docs.size > 0 %}, {% endif %}
         {% for doc in expertise_docs limit:item_limit %}
           <a href="{{ doc.url | relative_url }}">{{ doc.title }}</a>{% unless forloop.last %}, {% endunless %}
@@ -43,7 +43,7 @@
       {% endif %}
       
       {% if include.auto == "note_docs" %}
-        {% assign note_docs = site.docs | where_exp: "doc", "doc.tag contains 'note'" %}
+        {% assign note_docs = site.docs | where_exp: "doc", "doc.tag contains 'note' or doc.tags contains 'note'" %}
         {% if include.items and note_docs.size > 0 %}, {% endif %}
         {% for doc in note_docs limit:item_limit %}
           <a href="{{ doc.url | relative_url }}">{{ doc.title }}</a>{% unless forloop.last %}, {% endunless %}
