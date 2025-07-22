@@ -20,17 +20,19 @@
                 </a>
                 <nav class="site-nav">
                     <a href="{{ '/more/' | relative_url }}"{% if page.url contains '/more/' %} class="active"{% endif %}>More</a>
-                    {% if page.url == "/" %}
-                        <a href="{{ '/lab/' | relative_url }}" class="btn colab-btn{% if page.url contains '/lab/' %} active{% endif %}">
-                            Let's co/lab
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M5 12h14"/>
-                                <path d="M12 5l7 7-7 7"/>
-                            </svg>
-                        </a>
-                    {% else %}
-                        <a href="{{ '/lab/' | relative_url }}"{% if page.url contains '/lab/' %} class="active"{% endif %}>Let's co/lab</a>
-                    {% endif %}
+                    <div class="colab-link-wrapper">
+                        {% if page.url == "/" %}
+                            <a href="{{ '/lab/' | relative_url }}" class="btn colab-btn{% if page.url contains '/lab/' %} active{% endif %}">
+                                Let's co/lab
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 12h14"/>
+                                    <path d="M12 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        {% else %}
+                            <a href="{{ '/lab/' | relative_url }}"{% if page.url contains '/lab/' %} class="active"{% endif %}>Let's co/lab</a>
+                        {% endif %}
+                    </div>
                     <button class="theme-toggle" aria-label="Toggle theme">
                         <svg class="theme-icon theme-icon-light" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="12" cy="12" r="5"/>

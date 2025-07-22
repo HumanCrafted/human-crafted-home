@@ -624,7 +624,7 @@ hr {
     gap: 2rem;
   }
   
-  .site-nav .colab-btn {
+  .colab-link-wrapper {
     display: none; /* Hide Let's co/lab on mobile */
   }
   

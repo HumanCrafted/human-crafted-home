@@ -301,6 +301,18 @@ git checkout -b hover-experiment
   - All elements left-aligned with proper flex alignment
 - **Button Hover**: Added missing hover effects for mobile co/lab button (wavy underline)
 
+### Mobile Navigation Simplification (July 22, 2025)
+- **Simplified Layout**: Removed complex vertical stacking with CSS order properties
+- **Hidden Co/lab Button**: "Let's co/lab" button completely hidden on mobile (`display: none`)
+- **Horizontal Navigation**: "More" and theme toggle now display side-by-side on single line
+- **Clean CSS**: Removed 45 lines of complex mobile-specific CSS overrides and !important declarations
+- **Improved UX**: Cleaner, more intuitive mobile navigation with fewer elements
+
+### Project Cleanup (July 22, 2025)
+- **Removed Unused Directories**: Deleted `.vercel/` and `.next/` directories (not needed for Jekyll)
+- **Security**: Removed `.env.local` file containing GitHub access token
+- **File Organization**: Cleaned up project structure while preserving necessary Obsidian and Jekyll files
+
 ---
-*Last updated: June 12, 2025 at 6:20 PM*
+*Last updated: July 22, 2025*
 *Claude Code session documentation*
