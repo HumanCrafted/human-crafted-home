@@ -173,3 +173,38 @@ Configuration file: /Users/nginear/Documents/GitHub/human-crafted-home/_config.y
        Jekyll Feed: Generating feed for posts
                     ...done in 0.161536 seconds.
                     
+[31m                    ------------------------------------------------[0m
+[31m      Jekyll 4.4.1   Please append `--trace` to the `serve` command [0m
+[31m                     for any additional information or backtrace. [0m
+[31m                    ------------------------------------------------[0m
+/opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-4.4.1/lib/jekyll/commands/serve.rb:291:in 'Thread#join': SIGTERM (SignalException)
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-4.4.1/lib/jekyll/commands/serve.rb:291:in 'Jekyll::Commands::Serve.boot_or_detach'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-4.4.1/lib/jekyll/commands/serve.rb:221:in 'Jekyll::Commands::Serve.start_up_webrick'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-4.4.1/lib/jekyll/commands/serve.rb:102:in 'Jekyll::Commands::Serve.process'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-4.4.1/lib/jekyll/command.rb:91:in 'block in Jekyll::Command.process_with_graceful_fail'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-4.4.1/lib/jekyll/command.rb:91:in 'Array#each'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-4.4.1/lib/jekyll/command.rb:91:in 'Jekyll::Command.process_with_graceful_fail'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-4.4.1/lib/jekyll/commands/serve.rb:85:in 'block (2 levels) in Jekyll::Commands::Serve.init_with_program'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in 'block in Mercenary::Command#execute'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in 'Array#each'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in 'Mercenary::Command#execute'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/mercenary-0.4.0/lib/mercenary/program.rb:44:in 'Mercenary::Program#go'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/mercenary-0.4.0/lib/mercenary.rb:21:in 'Mercenary.program'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-4.4.1/exe/jekyll:15:in '<top (required)>'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/bin/jekyll:25:in 'Kernel#load'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/bin/jekyll:25:in '<top (required)>'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/cli/exec.rb:59:in 'Kernel.load'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/cli/exec.rb:59:in 'Bundler::CLI::Exec#kernel_load'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/cli/exec.rb:23:in 'Bundler::CLI::Exec#run'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/cli.rb:452:in 'Bundler::CLI#exec'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/vendor/thor/lib/thor/command.rb:28:in 'Bundler::Thor::Command#run'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/vendor/thor/lib/thor/invocation.rb:127:in 'Bundler::Thor::Invocation#invoke_command'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/vendor/thor/lib/thor.rb:538:in 'Bundler::Thor.dispatch'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/cli.rb:35:in 'Bundler::CLI.dispatch'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/vendor/thor/lib/thor/base.rb:584:in 'Bundler::Thor::Base::ClassMethods#start'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/cli.rb:29:in 'Bundler::CLI.start'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/exe/bundle:28:in 'block in <top (required)>'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/friendly_errors.rb:117:in 'Bundler.with_friendly_errors'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/exe/bundle:20:in '<top (required)>'
+	from /opt/homebrew/opt/ruby/bin/bundle:25:in 'Kernel#load'
+	from /opt/homebrew/opt/ruby/bin/bundle:25:in '<main>'
