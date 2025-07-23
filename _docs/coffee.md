@@ -30,7 +30,6 @@ SORT date_tried DESC
 ```
 
 ## Rating System
-I use a 7-point rating system following Stephango's approach:
 - **7** - Exceptional, would buy again immediately
 - **6** - Excellent, highly recommend  
 - **5** - Very good, solid choice
