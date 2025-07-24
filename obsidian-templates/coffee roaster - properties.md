@@ -9,8 +9,7 @@ visit_date:
 notes: ""
 favorite_coffees: 
 tags:
-  - coffee
-  - roaster
+  - coffee-roaster
 layout: doc
 slug: 
 main_image: roaster-logo.jpg
