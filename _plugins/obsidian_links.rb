@@ -1,5 +1,6 @@
 Jekyll::Hooks.register [:pages, :documents], :pre_render do |item|
   next unless item.path.end_with?('.md')
+  next unless item.content
   
   # Convert Obsidian image syntax in frontmatter 'image' field for SEO metadata
   if item.data['image'] && item.data['image'].match(/!\[\[([^\]]+\.(jpg|jpeg|png|gif|svg|webp))\]\]/i)
@@ -8,7 +9,7 @@ Jekyll::Hooks.register [:pages, :documents], :pre_render do |item|
   end
   
   # Also set description from content if first line is just an image
-  if item.content.strip.match(/^!\[\[([^\]]+\.(jpg|jpeg|png|gif|svg|webp))\]\]/)
+  if item.content && item.content.strip.match(/^!\[\[([^\]]+\.(jpg|jpeg|png|gif|svg|webp))\]\]/)
     # If first line is just an image, use the image filename as description instead
     filename = $1.strip
     item.data['description'] = "Coffee review with tasting notes and brewing recommendations"
@@ -16,7 +17,7 @@ Jekyll::Hooks.register [:pages, :documents], :pre_render do |item|
   
   # Skip processing if content contains complex Liquid template blocks (avoid interfering with templates)
   # But allow simple relative_url usage which is created by our own processing
-  if item.content.include?('{% if')
+  if item.content && (item.content.include?('{% if') || (item.data['layout'] == 'doc'))
     # Only process simple Obsidian links, avoid complex template areas
     # Convert [text](/index.md) and [text](../index.md) to homepage link (safest conversion)
     item.content = item.content.gsub(/\[([^\]]+)\]\((\.\.\/)?index\.md\)/) do |match|
@@ -37,7 +38,8 @@ Jekyll::Hooks.register [:pages, :documents], :pre_render do |item|
     # Convert Obsidian image syntax ![[image.ext]] to Jekyll format (for template files)
     item.content = item.content.gsub(/!\[\[([^\]]+\.(jpg|jpeg|png|gif|svg|webp))\]\]/i) do |match|
       filename = $1.strip
-      "![]({{ \"/assets/images/#{filename}\" | relative_url }})"
+      baseurl = item.site.config['baseurl'] || ''
+      "![](#{baseurl}/assets/images/#{filename})"
     end
   else
     # Full processing for simple markdown files without templates
@@ -73,14 +75,16 @@ Jekyll::Hooks.register [:pages, :documents], :pre_render do |item|
     # Convert Obsidian image syntax ![[image.ext]] to Jekyll format
     item.content = item.content.gsub(/!\[\[([^\]]+\.(jpg|jpeg|png|gif|svg|webp))\]\]/i) do |match|
       filename = $1.strip
-      "![]({{ \"/assets/images/#{filename}\" | relative_url }})"
+      baseurl = item.site.config['baseurl'] || ''
+      "![](#{baseurl}/assets/images/#{filename})"
     end
     
     # Convert Obsidian image syntax with alt text ![[image.ext|alt text]]
     item.content = item.content.gsub(/!\[\[([^\|\]]+\.(jpg|jpeg|png|gif|svg|webp))\|([^\]]+)\]\]/i) do |match|
       filename = $1.strip
       alt_text = $3.strip
-      "![#{alt_text}]({{ \"/assets/images/#{filename}\" | relative_url }})"
+      baseurl = item.site.config['baseurl'] || ''
+      "![#{alt_text}](#{baseurl}/assets/images/#{filename})"
     end
   end
 end
