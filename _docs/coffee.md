@@ -40,9 +40,16 @@ A collection of coffee beans I've tried, rated, and reviewed.
           {% endif %}
         </td>
         <td><a href="{{ coffee.url | relative_url }}">{{ coffee.name }}</a></td>
-        <td>{{ coffee.roaster }}</td>
+        <td>
+          {% assign roaster_page = site.docs | where_exp: "doc", "doc.tags contains 'coffee roaster' and doc.name == coffee.roaster" | first %}
+          {% if roaster_page %}
+            <a href="{{ roaster_page.url | relative_url }}">{{ coffee.roaster }}</a>
+          {% else %}
+            {{ coffee.roaster }}
+          {% endif %}
+        </td>
         <td>{{ coffee.origin }}</td>
-        <td>{{ coffee.rating }}/7</td>
+        <td>{{ coffee.rating_1-5 }}/5</td>
         <td>{{ coffee.price }}</td>
         <td>{{ coffee.date_tried }}</td>
       </tr>
@@ -55,14 +62,10 @@ A collection of coffee beans I've tried, rated, and reviewed.
 {% endif %}
 
 ## Rating System
-- **7** - Exceptional, would buy again immediately
-- **6** - Excellent, highly recommend  
-- **5** - Very good, solid choice
-- **4** - Good, decent coffee
+- **5** - Excellent, highly recommend  
+- **4** - Very good, solid choice
 - **3** - Okay, drinkable but nothing special
 - **2** - Poor, wouldn't recommend
 - **1** - Terrible, avoid
 
-## Recent Coffee Notes
 
-*Individual coffee reviews and detailed tasting notes appear below as I add them to the database.*

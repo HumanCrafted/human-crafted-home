@@ -10,6 +10,10 @@
     "gallery_images": "multitext",
     "tools": "multitext",
     "process": "multitext",
-    "date": "date"
+    "date": "date",
+    "date_purchased": "date",
+    "date_roast": "date",
+    "date_tried": "date",
+    "date_roasted": "date"
   }
 }
