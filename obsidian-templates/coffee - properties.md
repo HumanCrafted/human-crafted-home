@@ -21,7 +21,7 @@ draft: false
 ---
 
 {% if page.image %}
-  {% assign image_path = page.image | replace: '![](', '' | replace: ')', '' | replace: '../', '' %}
+  {% assign image_path = page.image | replace: '![](', '' | replace: ')', '' %}
   <div class="coffee-bag-image" style="text-align: center; margin: 2rem 0;">
     <img src="{{ image_path | relative_url }}" alt="{{ page.name }} coffee bag" style="max-width: 300px; height: auto; border-radius: 8px;">
   </div>

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_docs/rogue-wave-yellow-sunset-decaf.md",
+                "file": "obsidian-templates/coffee - properties.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "rogue-wave-yellow-sunset-decaf"
+              "title": "coffee - properties"
             }
           }
         ]
@@ -195,8 +195,9 @@
   "lastOpenFiles": [
     "_docs/rogue-wave-huila-community-decaf.md",
     "_docs/rogue-wave-granja-paradiso-decaf.md",
-    "obsidian-templates/coffee - properties.md",
     "_docs/rogue-wave-yellow-sunset-decaf.md",
+    "_docs/coffee.md.tmp.13363.1753375601122",
+    "obsidian-templates/coffee - properties.md",
     "_docs/coffee-roaster-rogue-wave.md",
     "obsidian-templates/',.md",
     "_docs/coffee.md",
@@ -229,7 +230,6 @@
     "_site/whiteboard-photo-wall/index.html",
     "_site/whiteboard-photo-wall",
     "_site/wave-soap-tray/index.html",
-    "_site/wave-soap-tray",
     "_site/obsidian-templates/project - more project details.md",
     "_site/obsidian-templates/post - article coming soon.md",
     "_site/favicon.svg",
@@ -237,7 +237,6 @@
     "_site/assets/images/zen-coaster-thumbnail.svg",
     "_site/assets/images/whiteboard-photo-wall-thumbnail.svg",
     "_site/CLAUDE.md",
-    "_projects/abc-blocks.md",
-    "index.md"
+    "_projects/abc-blocks.md"
   ]
 }
