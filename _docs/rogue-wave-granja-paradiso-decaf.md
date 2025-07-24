@@ -42,4 +42,4 @@ None
 This coffee is too floral in my opinion.  The tart Lychee, almost lemon, comes through too much for my taste.
 
 ## Links
-- Roaster: [coffee-roaster-rogue-wave](coffee-roaster-rogue-wave.md)
+- Roaster: [Rogue Wave]({{ "/rogue-wave/" | relative_url }})

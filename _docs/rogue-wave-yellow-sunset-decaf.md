@@ -44,4 +44,4 @@ Espresso: 1:2.2 90C, 27s
 This coffee was very good and very interesting.  Very noticeable tasting note beyond the standard Community Huila. 
 
 ## Links
-- Roaster: [coffee-roaster-rogue-wave](coffee-roaster-rogue-wave.md)
+- Roaster: [Rogue Wave]({{ "/rogue-wave/" | relative_url }})

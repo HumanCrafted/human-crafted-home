@@ -49,7 +49,6 @@ A collection of coffee beans I've tried, rated, and reviewed.
         </td>
         <td>{{ coffee.origin }}</td>
         <td>{{ coffee.rating_1-5 }}/5</td>
-        <td>{{ coffee.price }}</td>
         <td>{{ coffee.date_tried }}</td>
       </tr>
       {% endfor %}
