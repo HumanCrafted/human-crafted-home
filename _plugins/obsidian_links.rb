@@ -1,6 +1,19 @@
 Jekyll::Hooks.register [:pages, :documents], :pre_render do |item|
   next unless item.path.end_with?('.md')
   
+  # Convert Obsidian image syntax in frontmatter 'image' field for SEO metadata
+  if item.data['image'] && item.data['image'].match(/!\[\[([^\]]+\.(jpg|jpeg|png|gif|svg|webp))\]\]/i)
+    filename = $1.strip
+    item.data['image'] = "/assets/images/#{filename}"
+  end
+  
+  # Also set description from content if first line is just an image
+  if item.content.strip.match(/^!\[\[([^\]]+\.(jpg|jpeg|png|gif|svg|webp))\]\]/)
+    # If first line is just an image, use the image filename as description instead
+    filename = $1.strip
+    item.data['description'] = "Coffee review with tasting notes and brewing recommendations"
+  end
+  
   # Skip processing if content contains Liquid template blocks (avoid interfering with templates)
   if item.content.include?('{% if') || item.content.include?('{{ ')
     # Only process simple Obsidian links, avoid complex template areas
@@ -48,6 +61,19 @@ Jekyll::Hooks.register [:pages, :documents], :pre_render do |item|
     item.content = item.content.gsub(/\[([^\]]+)\]\((\.\.\/)?index\.md\)/) do |match|
       display_text = $1.strip
       "[#{display_text}]({{ \"/\" | relative_url }})"
+    end
+    
+    # Convert Obsidian image syntax ![[image.ext]] to Jekyll format
+    item.content = item.content.gsub(/!\[\[([^\]]+\.(jpg|jpeg|png|gif|svg|webp))\]\]/i) do |match|
+      filename = $1.strip
+      "![]({{ \"/assets/images/#{filename}\" | relative_url }})"
+    end
+    
+    # Convert Obsidian image syntax with alt text ![[image.ext|alt text]]
+    item.content = item.content.gsub(/!\[\[([^\|\]]+\.(jpg|jpeg|png|gif|svg|webp))\|([^\]]+)\]\]/i) do |match|
+      filename = $1.strip
+      alt_text = $3.strip
+      "![#{alt_text}]({{ \"/assets/images/#{filename}\" | relative_url }})"
     end
   end
 end

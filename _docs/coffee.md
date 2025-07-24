@@ -32,8 +32,8 @@ A collection of coffee beans I've tried, rated, and reviewed.
       {% for coffee in coffee_docs %}
       <tr>
         <td>
-          {% if coffee.coffee_bag_image %}
-            {% assign image_filename = coffee.coffee_bag_image | replace: '![](', '' | replace: ')', '' | replace: '../assets/images/', '' %}
+          {% if coffee.image %}
+            {% assign image_filename = coffee.image | replace: '![[', '' | replace: ']]', '' %}
             <img src="{{ '/assets/images/' | append: image_filename | relative_url }}" alt="{{ coffee.name }}" style="width: 50px; height: auto;">
           {% endif %}
         </td>

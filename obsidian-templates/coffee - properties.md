@@ -11,8 +11,7 @@ date_purchased:
 date_roasted: 
 price: 
 rating_1-5: 
-coffee_bag_image: "![](../assets/images/filename.jpg)"
-main_image: "/assets/images/filename.jpg" 
+image: "![[filename.jpg]]" 
 tags:
   - coffee
 layout: doc
@@ -21,12 +20,7 @@ version: "1"
 draft: false
 ---
 
-{% if page.coffee_bag_image %}
-  {% assign image_filename = page.coffee_bag_image | replace: '![](', '' | replace: ')', '' | replace: '../assets/images/', '' %}
-  <div class="coffee-bag-image" style="text-align: center; margin: 2rem 0;">
-    <img src="{{ '/assets/images/' | append: image_filename | relative_url }}" alt="{{ page.name }} coffee bag" style="max-width: 300px; height: auto; border-radius: 8px;">
-  </div>
-{% endif %}
+![[filename.jpg]]
 
 ## Tasting Notes
 - 
@@ -40,4 +34,4 @@ Espresso:
 
 
 ## Links
-- Roaster: [Roaster Name]({{ "/roaster-slug/" | relative_url }})
+- Roaster: [[roaster-slug|Roaster Name]]

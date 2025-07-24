@@ -11,8 +11,7 @@ date_purchased: 2025-02-26
 date_roasted: 
 price: $19.00 / 250g
 rating_1-5: "5"
-coffee_bag_image: "![](../assets/images/ColombiaLasPalmasYellowSunsetEADecaf250gBAG.jpg)"
-main_image: "/assets/images/ColombiaLasPalmasYellowSunsetEADecaf250gBAG.jpg"
+image: "![[ColombiaLasPalmasYellowSunsetEADecaf250gBAG.jpg]]"
 tags:
   - coffee
 layout: doc
@@ -21,12 +20,7 @@ version: "1"
 draft: false
 ---
 
-{% if page.coffee_bag_image %}
-  {% assign image_filename = page.coffee_bag_image | replace: '![](', '' | replace: ')', '' | replace: '../assets/images/', '' %}
-  <div class="coffee-bag-image" style="text-align: center; margin: 2rem 0;">
-    <img src="{{ '/assets/images/' | append: image_filename | relative_url }}" alt="{{ page.name }} coffee bag" style="max-width: 300px; height: auto; border-radius: 8px;">
-  </div>
-{% endif %}
+![[ColombiaLasPalmasYellowSunsetEADecaf250gBAG.jpg]]
 
 ## Tasting Notes
 - Peach
@@ -44,4 +38,4 @@ Espresso: 1:2.2 90C, 27s
 This coffee was very good and very interesting.  Very noticeable tasting note beyond the standard Community Huila. 
 
 ## Links
-- Roaster: [Rogue Wave]({{ "/rogue-wave/" | relative_url }})
+- Roaster: [[rogue-wave|Rogue Wave]]

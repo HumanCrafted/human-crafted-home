@@ -11,8 +11,7 @@ date_purchased: 2025-06-06
 date_roasted: 
 price: $20.00 / 340g
 rating_1-5: "5"
-coffee_bag_image: "![](../assets/images/Colombia_Huila_Decaf_2025_340g_BAG.jpg)"
-main_image: "assets/images/Colombia_Huila_Decaf_2025_340g_BAG.jpg"
+image: "![[Colombia_Huila_Decaf_2025_340g_BAG.jpg]]"
 tags:
   - coffee
 layout: doc
@@ -21,12 +20,7 @@ version: "1"
 draft: false
 ---
 
-{% if page.coffee_bag_image %}
-  {% assign image_filename = page.coffee_bag_image | replace: '![](', '' | replace: ')', '' | replace: '../assets/images/', '' %}
-  <div class="coffee-bag-image" style="text-align: center; margin: 2rem 0;">
-    <img src="{{ '/assets/images/' | append: image_filename | relative_url }}" alt="{{ page.name }} coffee bag" style="max-width: 300px; height: auto; border-radius: 8px;">
-  </div>
-{% endif %}
+![[Colombia_Huila_Decaf_2025_340g_BAG.jpg]]
 
 ## Tasting Notes
 - Apple
@@ -43,4 +37,4 @@ Espresso: 1:2.2 90C, 27s
 This is a daily driver for me
 
 ## Links
-- Roaster: [Rogue Wave]({{ "/rogue-wave/" | relative_url }})
+- Roaster: [[rogue-wave|Rogue Wave]]
