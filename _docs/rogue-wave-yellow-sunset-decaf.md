@@ -19,6 +19,14 @@ slug: rogue-wave-yellow-sunset-decaf
 version: "1"
 draft: false
 ---
+
+{% if page.image %}
+  {% assign image_path = page.image | replace: '![](', '' | replace: ')', '' | replace: '../', '' %}
+  <div class="coffee-bag-image" style="text-align: center; margin: 2rem 0;">
+    <img src="{{ image_path | relative_url }}" alt="{{ page.name }} coffee bag" style="max-width: 300px; height: auto; border-radius: 8px;">
+  </div>
+{% endif %}
+
 ## Tasting Notes
 - Peach
 - Passionfruit
@@ -35,6 +43,4 @@ Espresso: 1:2.2 90C, 27s
 This coffee was very good and very interesting.  Very noticeable tasting note beyond the standard Community Huila. 
 
 ## Links
-- Roaster: [[]]
-- Origin: [[]]
-- Similar coffees: [[]]
+- Roaster: [coffee-roaster-rogue-wave](coffee-roaster-rogue-wave.md)

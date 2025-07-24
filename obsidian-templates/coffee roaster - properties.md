@@ -37,8 +37,8 @@ draft: false
       <tr>
         <td><a href="{{ coffee.url | relative_url }}">{{ coffee.name }}</a></td>
         <td>{{ coffee.origin }}</td>
-        <td>{{ coffee.rating }}/7</td>
-        <td>{{ coffee.date_tried }}</td>
+        <td>{{ coffee.rating_1-5 }}/7</td>
+        <td>{{ coffee.date_purchased }}</td>
       </tr>
       {% endfor %}
     </tbody>

@@ -11,8 +11,6 @@ gallery_images:
 version: "1"
 draft: false
 ---
-# Coffee Database
-
 A collection of coffee beans I've tried, rated, and reviewed.
 
 {% assign coffee_docs = site.docs | where_exp: "doc", "doc.tags contains 'coffee'" | sort: "date_tried" | reverse %}
@@ -36,7 +34,8 @@ A collection of coffee beans I've tried, rated, and reviewed.
       <tr>
         <td>
           {% if coffee.image %}
-            <img src="{{ coffee.image | relative_url }}" alt="{{ coffee.name }}" style="width: 50px; height: auto;">
+            {% assign image_path = coffee.image | replace: '![](', '' | replace: ')', '' | replace: '../', '' %}
+            <img src="{{ image_path | relative_url }}" alt="{{ coffee.name }}" style="width: 50px; height: auto;">
           {% endif %}
         </td>
         <td><a href="{{ coffee.url | relative_url }}">{{ coffee.name }}</a></td>

@@ -19,6 +19,14 @@ slug: rogue-wave-granja-paradiso-decaf
 version: "1"
 draft: false
 ---
+
+{% if page.image %}
+  {% assign image_path = page.image | replace: '![](', '' | replace: ')', '' | replace: '../', '' %}
+  <div class="coffee-bag-image" style="text-align: center; margin: 2rem 0;">
+    <img src="{{ image_path | relative_url }}" alt="{{ page.name }} coffee bag" style="max-width: 300px; height: auto; border-radius: 8px;">
+  </div>
+{% endif %}
+
 ## Tasting Notes
 - Strawberry
 - Lychee
@@ -33,6 +41,4 @@ None
 This coffee is too floral in my opinion.  The tart Lychee, almost lemon, comes through too much for my taste.
 
 ## Links
-- Roaster: [[]]
-- Origin: [[]]
-- Similar coffees: [[]]
+- Roaster: [coffee-roaster-rogue-wave](coffee-roaster-rogue-wave.md)
