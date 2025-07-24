@@ -8,7 +8,7 @@ roast_level: Light/Medium/Dark
 date_purchased: 
 date_tried: 
 price: 
-rating: 
+rating: "6"
 image: coffee-bag-image.jpg
 brewing_method: V60/French Press/Espresso
 grind_size: Coarse/Medium/Fine

@@ -15,19 +15,44 @@ draft: false
 
 A collection of coffee beans I've tried, rated, and reviewed.
 
-```dataview
-TABLE 
-  "![Image](" + image + ")" as Bag,
-  name as "Coffee",
-  roaster as "Roaster", 
-  origin as "Origin",
-  rating + "/7" as "Rating",
-  price as "Price",
-  date_tried as "Tried"
-FROM "_docs"
-WHERE contains(tags, "coffee")
-SORT date_tried DESC
-```
+{% assign coffee_docs = site.docs | where_exp: "doc", "doc.tags contains 'coffee'" | sort: "date_tried" | reverse %}
+
+{% if coffee_docs.size > 0 %}
+<div class="coffee-database">
+  <table>
+    <thead>
+      <tr>
+        <th>Bag</th>
+        <th>Coffee</th>
+        <th>Roaster</th>
+        <th>Origin</th>
+        <th>Rating</th>
+        <th>Price</th>
+        <th>Tried</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for coffee in coffee_docs %}
+      <tr>
+        <td>
+          {% if coffee.image %}
+            <img src="{{ coffee.image | relative_url }}" alt="{{ coffee.name }}" style="width: 50px; height: auto;">
+          {% endif %}
+        </td>
+        <td><a href="{{ coffee.url | relative_url }}">{{ coffee.name }}</a></td>
+        <td>{{ coffee.roaster }}</td>
+        <td>{{ coffee.origin }}</td>
+        <td>{{ coffee.rating }}/7</td>
+        <td>{{ coffee.price }}</td>
+        <td>{{ coffee.date_tried }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% else %}
+<p><em>No coffee reviews found yet. Add some coffee documents with the 'coffee' tag to see them here!</em></p>
+{% endif %}
 
 ## Rating System
 - **7** - Exceptional, would buy again immediately
