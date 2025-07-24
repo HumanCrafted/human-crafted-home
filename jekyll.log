@@ -287,3 +287,29 @@ Configuration file: /Users/nginear/Documents/GitHub/human-crafted-home/_config.y
        Jekyll Feed: Generating feed for posts
                     ...done in 0.115066 seconds.
                     
+[2025-07-24 13:56:53] ERROR '/Human-Crafted-Home/ColombiaLasPalmasYellowSunsetEADecaf250gBAG.jpg/' not found.
+[2025-07-24 13:57:01] ERROR '/Human-Crafted-Home/ColombiaLasPalmasYellowSunsetEADecaf250gBAG.jpg/' not found.
+[2025-07-24 13:57:34] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:15 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-07-24 13:58:13
+                    _plugins/obsidian_links.rb
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.168994 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 13:59:20
+                    _docs/rogue-wave-yellow-sunset-decaf.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.225472 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 13:59:35
+                    _plugins/obsidian_links.rb
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.157889 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 13:59:51
+                    _docs/rogue-wave-yellow-sunset-decaf.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.118551 seconds.
+                    

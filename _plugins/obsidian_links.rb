@@ -14,8 +14,9 @@ Jekyll::Hooks.register [:pages, :documents], :pre_render do |item|
     item.data['description'] = "Coffee review with tasting notes and brewing recommendations"
   end
   
-  # Skip processing if content contains Liquid template blocks (avoid interfering with templates)
-  if item.content.include?('{% if') || item.content.include?('{{ ')
+  # Skip processing if content contains complex Liquid template blocks (avoid interfering with templates)
+  # But allow simple relative_url usage which is created by our own processing
+  if item.content.include?('{% if')
     # Only process simple Obsidian links, avoid complex template areas
     # Convert [text](/index.md) and [text](../index.md) to homepage link (safest conversion)
     item.content = item.content.gsub(/\[([^\]]+)\]\((\.\.\/)?index\.md\)/) do |match|
@@ -31,6 +32,12 @@ Jekyll::Hooks.register [:pages, :documents], :pre_render do |item|
       filename = CGI.unescape(filename).downcase.gsub(/\s+/, '-').gsub(/[^a-z0-9\-_]/, '')
       baseurl = item.site.config['baseurl'] || ''
       "[#{display_text}](#{baseurl}/#{filename}/)"
+    end
+    
+    # Convert Obsidian image syntax ![[image.ext]] to Jekyll format (for template files)
+    item.content = item.content.gsub(/!\[\[([^\]]+\.(jpg|jpeg|png|gif|svg|webp))\]\]/i) do |match|
+      filename = $1.strip
+      "![]({{ \"/assets/images/#{filename}\" | relative_url }})"
     end
   else
     # Full processing for simple markdown files without templates
