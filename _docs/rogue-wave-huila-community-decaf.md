@@ -22,9 +22,9 @@ draft: false
 ---
 
 {% if page.coffee_bag_image %}
-  {% assign image_path = page.coffee_bag_image | replace: '![](', '' | replace: ')', '' | replace: '../', '/' %}
+  {% assign image_filename = page.coffee_bag_image | replace: '![](', '' | replace: ')', '' | replace: '../assets/images/', '' %}
   <div class="coffee-bag-image" style="text-align: center; margin: 2rem 0;">
-    <img src="{{ image_path | relative_url }}" alt="{{ page.name }} coffee bag" style="max-width: 300px; height: auto; border-radius: 8px;">
+    <img src="{{ '/assets/images/' | append: image_filename | relative_url }}" alt="{{ page.name }} coffee bag" style="max-width: 300px; height: auto; border-radius: 8px;">
   </div>
 {% endif %}
 

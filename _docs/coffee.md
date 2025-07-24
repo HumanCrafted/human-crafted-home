@@ -24,9 +24,8 @@ A collection of coffee beans I've tried, rated, and reviewed.
         <th>Coffee</th>
         <th>Roaster</th>
         <th>Origin</th>
+        <th>Roasted</th>
         <th>Rating</th>
-        <th>Price</th>
-        <th>Tried</th>
       </tr>
     </thead>
     <tbody>
@@ -34,8 +33,8 @@ A collection of coffee beans I've tried, rated, and reviewed.
       <tr>
         <td>
           {% if coffee.coffee_bag_image %}
-            {% assign image_path = coffee.coffee_bag_image | replace: '![](', '' | replace: ')', '' | replace: '../', '/' %}
-            <img src="{{ image_path | relative_url }}" alt="{{ coffee.name }}" style="width: 50px; height: auto;">
+            {% assign image_filename = coffee.coffee_bag_image | replace: '![](', '' | replace: ')', '' | replace: '../assets/images/', '' %}
+            <img src="{{ '/assets/images/' | append: image_filename | relative_url }}" alt="{{ coffee.name }}" style="width: 50px; height: auto;">
           {% endif %}
         </td>
         <td><a href="{{ coffee.url | relative_url }}">{{ coffee.name }}</a></td>
@@ -48,8 +47,8 @@ A collection of coffee beans I've tried, rated, and reviewed.
           {% endif %}
         </td>
         <td>{{ coffee.origin }}</td>
+        <td>{{ coffee.date_roasted }}</td>
         <td>{{ coffee.rating_1-5 }}/5</td>
-        <td>{{ coffee.date_tried }}</td>
       </tr>
       {% endfor %}
     </tbody>
