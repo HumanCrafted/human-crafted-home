@@ -49,6 +49,4 @@ draft: false
 {% endif %}
 
 ## Links
-- Website: {{ website }}
-{% if instagram %}- Instagram: [{{ instagram }}](https://instagram.com/{{ instagram | remove: "@" }}){% endif %}
-- Featured in: [[]]
+- Website: https://roguewavecoffee.ca

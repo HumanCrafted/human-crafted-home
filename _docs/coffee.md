@@ -34,7 +34,7 @@ A collection of coffee beans I've tried, rated, and reviewed.
       <tr>
         <td>
           {% if coffee.image %}
-            {% assign image_path = page.image | replace: '![](', '' | replace: ')', '' | replace: '../', '/' %}
+            {% assign image_path = coffee.image | replace: '![](', '' | replace: ')', '' | replace: '../', '/' %}
             <img src="{{ image_path | relative_url }}" alt="{{ coffee.name }}" style="width: 50px; height: auto;">
           {% endif %}
         </td>

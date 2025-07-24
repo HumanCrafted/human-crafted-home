@@ -6,205 +6,51 @@ Configuration file: /Users/nginear/Documents/GitHub/human-crafted-home/_config.y
  Incremental build: disabled. Enable with --incremental
       Generating... 
        Jekyll Feed: Generating feed for posts
-                    done in 0.35 seconds.
+                    done in 0.363 seconds.
  Auto-regeneration: enabled for '/Users/nginear/Documents/GitHub/human-crafted-home'
     Server address: http://127.0.0.1:4000/Human-Crafted-Home/
   Server running... press ctrl-c to stop.
-      Regenerating: 1 file(s) changed at 2025-06-14 13:00:09
-                    more.md
+[2025-07-24 12:04:36] ERROR '/apple-touch-icon-precomposed.png' not found.
+[2025-07-24 12:04:36] ERROR '/apple-touch-icon-precomposed.png' not found.
+[2025-07-24 12:04:36] ERROR '/apple-touch-icon.png' not found.
+[2025-07-24 12:04:36] ERROR '/favicon.ico' not found.
+[2025-07-24 12:04:36] ERROR '/apple-touch-icon.png' not found.
+      Regenerating: 1 file(s) changed at 2025-07-24 12:05:46
+                    _docs/coffee-roaster-rogue-wave.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.304884 seconds.
+[33m    Liquid Warning: Liquid syntax error (line 33): Unexpected character / in "{{ https://roguewavecoffee.ca }}" in /Users/nginear/Documents/GitHub/human-crafted-home/_docs/coffee-roaster-rogue-wave.md[0m
+                    ...done in 0.272572 seconds.
                     
-      Regenerating: 1 file(s) changed at 2025-06-14 13:00:30
-                    _docs/about-me.md
+      Regenerating: 1 file(s) changed at 2025-07-24 12:06:08
+                    _docs/coffee-roaster-rogue-wave.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.18577 seconds.
+                    ...done in 0.126138 seconds.
                     
-      Regenerating: 2 file(s) changed at 2025-06-14 13:00:50
-                    more.md
-                    jekyll.log
+      Regenerating: 1 file(s) changed at 2025-07-24 12:06:13
+                    _docs/coffee-roaster-rogue-wave.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.172876 seconds.
+                    ...done in 0.123554 seconds.
                     
-      Regenerating: 2 file(s) changed at 2025-06-14 13:00:58
-                    more.md
-                    jekyll.log
+      Regenerating: 1 file(s) changed at 2025-07-24 12:06:16
+                    _docs/coffee-roaster-rogue-wave.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.154052 seconds.
+                    ...done in 0.152885 seconds.
                     
-[2025-06-14 13:01:19] ERROR '/Human-Crafted-Home/lab/more.md' not found.
-      Regenerating: 2 file(s) changed at 2025-06-14 13:01:38
-                    lab.md
-                    jekyll.log
+      Regenerating: 1 file(s) changed at 2025-07-24 12:07:06
+                    _docs/coffee-roaster-rogue-wave.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.156587 seconds.
+[31m  Liquid Exception: Liquid syntax error (line 33): Variable '{{' was not properly terminated with regexp: /\}\}/ in /Users/nginear/Documents/GitHub/human-crafted-home/_docs/coffee-roaster-rogue-wave.md[0m
+[33m             Error: Liquid syntax error (line 33): Variable '{{' was not properly terminated with regexp: /\}\}/[0m
+[33m             Error: Run jekyll build --trace for more information.[0m
                     
-      Regenerating: 2 file(s) changed at 2025-06-14 13:01:40
-                    lab.md
-                    jekyll.log
+      Regenerating: 1 file(s) changed at 2025-07-24 12:07:10
+                    _docs/coffee-roaster-rogue-wave.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.136715 seconds.
+[33m    Liquid Warning: Liquid syntax error (line 33): Unexpected character / in "{{https://roguewavecoffee.ca}}" in /Users/nginear/Documents/GitHub/human-crafted-home/_docs/coffee-roaster-rogue-wave.md[0m
+                    ...done in 0.141711 seconds.
                     
-      Regenerating: 2 file(s) changed at 2025-06-14 13:01:42
-                    lab.md
-                    jekyll.log
+      Regenerating: 1 file(s) changed at 2025-07-24 12:07:27
+                    _docs/coffee-roaster-rogue-wave.md
        Jekyll Feed: Generating feed for posts
-                    ...done in 0.130859 seconds.
+                    ...done in 0.16288 seconds.
                     
-      Regenerating: 2 file(s) changed at 2025-06-14 13:01:45
-                    lab.md
-                    jekyll.log
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.139321 seconds.
-                    
-[2025-06-14 13:01:48] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:11 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-14 13:01:48] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
-	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
-[2025-06-14 13:01:51] ERROR '/Human-Crafted-Home/lab/more.md' not found.
-[2025-06-14 13:02:42] ERROR '/Human-Crafted-Home/lab/more.md' not found.
-[2025-06-14 13:02:45] ERROR '/apple-touch-icon-precomposed.png' not found.
-[2025-06-14 13:02:45] ERROR '/apple-touch-icon.png' not found.
-[2025-06-14 13:02:45] ERROR '/favicon.ico' not found.
-      Regenerating: 2 file(s) changed at 2025-06-14 13:03:34
-                    lab.md
-                    jekyll.log
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.179468 seconds.
-                    
-[2025-06-14 13:04:21] ERROR '/Human-Crafted-Home/lab/more.md' not found.
-[2025-06-14 13:05:03] ERROR '/apple-touch-icon-precomposed.png' not found.
-[2025-06-14 13:05:03] ERROR '/apple-touch-icon.png' not found.
-[2025-06-14 13:05:03] ERROR '/favicon.ico' not found.
-      Regenerating: 1 file(s) changed at 2025-06-14 13:06:18
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.187104 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 13:07:58
-                    more.md
-                    jekyll.log
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.175704 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 13:08:02
-                    more.md
-                    jekyll.log
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.175843 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 13:08:06
-                    more.md
-                    jekyll.log
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.159415 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 13:08:08
-                    more.md
-                    jekyll.log
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.162745 seconds.
-                    
-      Regenerating: 2 file(s) changed at 2025-06-14 13:08:18
-                    more.md
-                    jekyll.log
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.239452 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 13:08:18
-                    jekyll.log
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.170852 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 13:10:17
-                    assets/css/main.css
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.185832 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 13:12:22
-                    _includes/wiki-two-column.html
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.173005 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 13:13:38
-                    _includes/wiki-two-column.html
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.198984 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 13:15:00
-                    _includes/wiki-two-column.html
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.192547 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 13:17:07
-                    _includes/wiki-two-column.html
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.18109 seconds.
-                    
-[2025-06-14 13:17:44] ERROR '/apple-touch-icon-precomposed.png' not found.
-[2025-06-14 13:17:44] ERROR '/apple-touch-icon.png' not found.
-[2025-06-14 13:17:44] ERROR '/favicon.ico' not found.
-      Regenerating: 1 file(s) changed at 2025-06-14 13:18:57
-                    _includes/wiki-two-column.html
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.177069 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 13:20:52
-                    _includes/wiki-two-column.html
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.217613 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 13:21:00
-                    _includes/wiki-two-column.html
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.163334 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 13:21:11
-                    _includes/wiki-two-column.html
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.166589 seconds.
-                    
-      Regenerating: 1 file(s) changed at 2025-06-14 13:21:17
-                    _includes/wiki-two-column.html
-       Jekyll Feed: Generating feed for posts
-                    ...done in 0.161536 seconds.
-                    
-[31m                    ------------------------------------------------[0m
-[31m      Jekyll 4.4.1   Please append `--trace` to the `serve` command [0m
-[31m                     for any additional information or backtrace. [0m
-[31m                    ------------------------------------------------[0m
-/opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-4.4.1/lib/jekyll/commands/serve.rb:291:in 'Thread#join': SIGTERM (SignalException)
-	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-4.4.1/lib/jekyll/commands/serve.rb:291:in 'Jekyll::Commands::Serve.boot_or_detach'
-	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-4.4.1/lib/jekyll/commands/serve.rb:221:in 'Jekyll::Commands::Serve.start_up_webrick'
-	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-4.4.1/lib/jekyll/commands/serve.rb:102:in 'Jekyll::Commands::Serve.process'
-	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-4.4.1/lib/jekyll/command.rb:91:in 'block in Jekyll::Command.process_with_graceful_fail'
-	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-4.4.1/lib/jekyll/command.rb:91:in 'Array#each'
-	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-4.4.1/lib/jekyll/command.rb:91:in 'Jekyll::Command.process_with_graceful_fail'
-	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-4.4.1/lib/jekyll/commands/serve.rb:85:in 'block (2 levels) in Jekyll::Commands::Serve.init_with_program'
-	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in 'block in Mercenary::Command#execute'
-	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in 'Array#each'
-	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in 'Mercenary::Command#execute'
-	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/mercenary-0.4.0/lib/mercenary/program.rb:44:in 'Mercenary::Program#go'
-	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/mercenary-0.4.0/lib/mercenary.rb:21:in 'Mercenary.program'
-	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-4.4.1/exe/jekyll:15:in '<top (required)>'
-	from /opt/homebrew/lib/ruby/gems/3.4.0/bin/jekyll:25:in 'Kernel#load'
-	from /opt/homebrew/lib/ruby/gems/3.4.0/bin/jekyll:25:in '<top (required)>'
-	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/cli/exec.rb:59:in 'Kernel.load'
-	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/cli/exec.rb:59:in 'Bundler::CLI::Exec#kernel_load'
-	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/cli/exec.rb:23:in 'Bundler::CLI::Exec#run'
-	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/cli.rb:452:in 'Bundler::CLI#exec'
-	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/vendor/thor/lib/thor/command.rb:28:in 'Bundler::Thor::Command#run'
-	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/vendor/thor/lib/thor/invocation.rb:127:in 'Bundler::Thor::Invocation#invoke_command'
-	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/vendor/thor/lib/thor.rb:538:in 'Bundler::Thor.dispatch'
-	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/cli.rb:35:in 'Bundler::CLI.dispatch'
-	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/vendor/thor/lib/thor/base.rb:584:in 'Bundler::Thor::Base::ClassMethods#start'
-	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/cli.rb:29:in 'Bundler::CLI.start'
-	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/exe/bundle:28:in 'block in <top (required)>'
-	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/friendly_errors.rb:117:in 'Bundler.with_friendly_errors'
-	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/exe/bundle:20:in '<top (required)>'
-	from /opt/homebrew/opt/ruby/bin/bundle:25:in 'Kernel#load'
-	from /opt/homebrew/opt/ruby/bin/bundle:25:in '<main>'
