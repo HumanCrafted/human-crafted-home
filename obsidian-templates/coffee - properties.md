@@ -11,7 +11,8 @@ date_purchased:
 date_roasted: 
 price: 
 rating_1-5: 
-image: 
+coffee_bag_image:
+main_image: 
 tags:
   - coffee
 layout: doc

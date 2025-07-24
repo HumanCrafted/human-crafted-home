@@ -11,7 +11,8 @@ date_purchased: 2025-06-06
 date_roasted: 
 price: $20.00 / 340g
 rating_1-5: "5"
-image: "![](../assets/images/Colombia_Huila_Decaf_2025_340g_BAG.jpg)"
+coffee_bag_image: "![](../assets/images/Colombia_Huila_Decaf_2025_340g_BAG.jpg)"
+main_image: "assets/images/Colombia_Huila_Decaf_2025_340g_BAG.jpg"
 tags:
   - coffee
 layout: doc

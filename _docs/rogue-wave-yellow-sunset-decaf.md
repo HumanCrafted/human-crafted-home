@@ -11,7 +11,8 @@ date_purchased: 2025-02-26
 date_roasted: 
 price: $19.00 / 250g
 rating_1-5: "5"
-image: "![](../assets/images/ColombiaLasPalmasYellowSunsetEADecaf250gBAG.jpg)"
+coffee_bag_image: "![](../assets/images/ColombiaLasPalmasYellowSunsetEADecaf250gBAG.jpg)"
+main_image: "/assets/images/ColombiaLasPalmasYellowSunsetEADecaf250gBAG.jpg"
 tags:
   - coffee
 layout: doc
@@ -20,8 +21,8 @@ version: "1"
 draft: false
 ---
 
-{% if page.image %}
-  {% assign image_path = page.image | replace: '![](', '' | replace: ')', '' | replace: '../', '/' %}
+{% if page.coffee_bag_image %}
+  {% assign image_path = page.coffee_bag_image | replace: '![](', '' | replace: ')', '' | replace: '../', '/' %}
   <div class="coffee-bag-image" style="text-align: center; margin: 2rem 0;">
     <img src="{{ image_path | relative_url }}" alt="{{ page.name }} coffee bag" style="max-width: 300px; height: auto; border-radius: 8px;">
   </div>

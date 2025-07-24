@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "27eb4965504f10be",
+        "id": "1835d9c0b4d055bb",
         "type": "tabs",
         "children": [
           {
-            "id": "6c7d63fb715e1e4f",
+            "id": "9e0d1f3b6f739523",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_docs/coffee-roaster-rogue-wave.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "coffee-roaster-rogue-wave"
+              "title": "New tab"
             }
           }
         ]
@@ -191,11 +187,12 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "6c7d63fb715e1e4f",
+  "active": "9e0d1f3b6f739523",
   "lastOpenFiles": [
     "_docs/coffee.md",
-    "_docs/rogue-wave-granja-paradiso-decaf.md",
+    "obsidian-templates/coffee - properties.md",
     "_docs/coffee-roaster-rogue-wave.md",
+    "_docs/rogue-wave-granja-paradiso-decaf.md",
     "obsidian-templates/coffee roaster - properties.md",
     "_site/rogue-wave-yellow-sunset-decaf/index.html",
     "_site/rogue-wave-yellow-sunset-decaf",
@@ -211,7 +208,6 @@
     "_site/assets/images/Colombia_Huila_Decaf_2025_340g_BAG.jpg",
     "_site/assets/images/Colombia_Granja_Paraiso_Red_Bourbon_Natural_Decaf_250g_BAG.jpg",
     "_site/assets/images/ColombiaLasPalmasYellowSunsetEADecaf250gBAG.jpg",
-    "obsidian-templates/coffee - properties.md",
     "_docs/rogue-wave-yellow-sunset-decaf.md",
     "_docs/rogue-wave-huila-community-decaf.md",
     "obsidian-templates/',.md",

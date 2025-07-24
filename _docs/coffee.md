@@ -33,8 +33,8 @@ A collection of coffee beans I've tried, rated, and reviewed.
       {% for coffee in coffee_docs %}
       <tr>
         <td>
-          {% if coffee.image %}
-            {% assign image_path = coffee.image | replace: '![](', '' | replace: ')', '' | replace: '../', '/' %}
+          {% if coffee.coffee_bag_image %}
+            {% assign image_path = coffee.coffee_bag_image | replace: '![](', '' | replace: ')', '' | replace: '../', '/' %}
             <img src="{{ image_path | relative_url }}" alt="{{ coffee.name }}" style="width: 50px; height: auto;">
           {% endif %}
         </td>
@@ -63,7 +63,7 @@ A collection of coffee beans I've tried, rated, and reviewed.
 ## Rating System
 - **5** - Excellent, highly recommend  
 - **4** - Very good, solid choice
-- **3** - Okay, drinkable but nothing special
+- **3** - Okay
 - **2** - Poor, wouldn't recommend
 - **1** - Terrible, avoid
 
