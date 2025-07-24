@@ -198,3 +198,12 @@ Configuration file: /Users/nginear/Documents/GitHub/human-crafted-home/_config.y
        Jekyll Feed: Generating feed for posts
                     ...done in 0.179915 seconds.
                     
+[2025-07-24 13:39:57] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-07-24 13:43:46
+                    _layouts/doc.html
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.174221 seconds.
+                    

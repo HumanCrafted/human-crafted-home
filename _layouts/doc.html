@@ -13,8 +13,7 @@ layout: default
     {% endif %}
 
     <!-- Main content -->
-    {% assign processed_content = content | replace: 'src="/assets/', 'src="/Human-Crafted-Home/assets/' %}
-    {{ processed_content }}
+    {{ content }}
 
     <!-- Related projects section -->
     {% if page.show_related_projects %}
