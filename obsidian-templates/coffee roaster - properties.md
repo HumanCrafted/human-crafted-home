@@ -17,7 +17,8 @@ draft: false
 ---
 ## Coffees I've Tried
 
-{% assign roaster_coffees = site.docs | where_exp: "doc", "doc.tags contains 'coffee' and doc.roaster == page.name" | sort: "date_tried" | reverse %}
+{% assign roaster_link = 'coffee-roaster-' | append: page.slug %}
+{% assign roaster_coffees = site.docs | where_exp: "doc", "doc.tags contains 'coffee' and doc.roaster contains roaster_link" | sort: "date_tried" | reverse %}
 
 {% if roaster_coffees.size > 0 %}
 <div class="roaster-coffees">
@@ -27,7 +28,6 @@ draft: false
         <th>Coffee</th>
         <th>Origin</th>
         <th>Rating</th>
-        <th>Date Tried</th>
       </tr>
     </thead>
     <tbody>
@@ -35,8 +35,7 @@ draft: false
       <tr>
         <td><a href="{{ coffee.url | relative_url }}">{{ coffee.name }}</a></td>
         <td>{{ coffee.origin }}</td>
-        <td>{{ coffee.rating_1-5 }}/7</td>
-        <td>{{ coffee.date_purchased }}</td>
+        <td>{{ coffee.rating_1-5 }}/5</td>
       </tr>
       {% endfor %}
     </tbody>
