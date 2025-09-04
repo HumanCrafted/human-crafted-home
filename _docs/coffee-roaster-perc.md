@@ -5,21 +5,20 @@ founded: "2010"
 website: https://perccoffee.com
 instagram: "@perccoffee"
 visited: false
-visit_date: 
-notes: 
-favorite_coffees: 
+visit_date:
+notes:
+favorite_coffees:
 tags:
   - coffee-roaster
 layout: doc
-slug: perc
+slug: coffee-roaster-perc
 version: "1.0"
 draft: false
 ---
 
 ## Coffees I've Tried
 
-{% assign roaster_link = 'coffee-roaster-' | append: page.slug %}
-{% assign roaster_coffees = site.docs | where_exp: "doc", "doc.tags contains 'coffee' and doc.roaster contains roaster_link" | sort: "date_tried" | reverse %}
+{% assign roaster_coffees = site.docs | where_exp: "doc", "doc.tags contains 'coffee' and doc.roaster contains page.slug" | sort: "date_tried" | reverse %}
 
 {% if roaster_coffees.size > 0 %}
 <div class="roaster-coffees">

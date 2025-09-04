@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_docs/rogue-wave-yellow-sunset-decaf.md",
+                "file": "_docs/perc-uganda-nagasire.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "rogue-wave-yellow-sunset-decaf"
+              "title": "perc-uganda-nagasire"
             }
           }
         ]
@@ -194,17 +194,18 @@
   },
   "active": "bdd931607c16b429",
   "lastOpenFiles": [
-    "_docs/rogue-wave-huila-community-decaf.md",
+    "_docs/coffee-roaster-perc.md",
+    "_docs/coffee-beans.md",
     "_docs/rogue-wave-granja-paradiso-decaf.md",
+    "_docs/laser-cutter.md",
+    "_docs/coffee-roaster-rogue-wave.md",
+    "_docs/rogue-wave-yellow-sunset-decaf.md",
+    "_docs/rogue-wave-huila-community-decaf.md",
     "_docs/perc-uganda-nagasire.md",
     "_docs/perc-perc-up.md",
     "_docs/perc-columbia-huila-decaf.md",
     "_docs/perc-brazil-legender.md",
     "more.md",
-    "_docs/coffee-roaster-rogue-wave.md",
-    "_docs/coffee-roaster-perc.md",
-    "_docs/rogue-wave-yellow-sunset-decaf.md",
-    "_docs/coffee-beans.md",
     "obsidian-templates/coffee - properties.md",
     "_docs/coffee-roaster-rogue-wave.md.tmp.16781.1757010638627",
     "_docs/about-me.md",
@@ -225,7 +226,6 @@
     "_docs/process.md",
     "_docs/fabrication.md",
     "_docs/coffee.md",
-    "_docs/laser-cutter.md",
     "_site/synth-patches/index.html",
     "_site/synth-patches",
     "assets/images/Apple.svg",

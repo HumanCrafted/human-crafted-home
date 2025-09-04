@@ -41,13 +41,12 @@ A collection of coffee beans I've tried, rated, and reviewed.
         <td>
           {% if coffee.roaster contains '[[' %}
             {% assign roaster_parts = coffee.roaster | replace: '[[', '' | replace: ']]', '' | split: '|' %}
-            {% assign roaster_link = roaster_parts[0] %}
+            {% assign roaster_slug = roaster_parts[0] %}
             {% if roaster_parts[1] %}
               {% assign roaster_display = roaster_parts[1] %}
             {% else %}
-              {% assign roaster_display = roaster_link | replace: 'coffee-roaster-', '' %}
+              {% assign roaster_display = roaster_slug | replace: 'coffee-roaster-', '' %}
             {% endif %}
-            {% assign roaster_slug = roaster_link | replace: 'coffee-roaster-', '' %}
             {% assign roaster_page = site.docs | where: "slug", roaster_slug | first %}
             {% if roaster_page %}
               <a href="{{ roaster_page.url | relative_url }}">{{ roaster_display }}</a>
