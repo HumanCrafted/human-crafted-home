@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_docs/about-me.md",
+                "file": "_docs/coffee-beans.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "about-me"
+              "title": "coffee-beans"
             }
           }
         ]
@@ -194,6 +194,7 @@
   },
   "active": "bdd931607c16b429",
   "lastOpenFiles": [
+    "_docs/about-me.md",
     "_docs/espresso.md",
     "_docs/coffee-beans.md",
     "Test.md",
@@ -223,7 +224,6 @@
     "_docs/process.md",
     "_docs/fabrication.md",
     "_docs/coffee.md",
-    "_docs/about-me.md",
     "_docs/laser-cutter.md",
     "obsidian-templates/coffee roaster - properties.md",
     "_site/synth-patches/index.html",

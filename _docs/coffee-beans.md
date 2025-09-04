@@ -58,6 +58,7 @@ A collection of coffee beans I've tried, rated, and reviewed.
 <p><em>No coffee reviews found yet. Add some coffee documents with the 'coffee' tag to see them here!</em></p>
 {% endif %}
 
+%% dlkjlkdjfsdfs %%
 ## Rating System
 - **5** - Excellent, highly recommend  
 - **4** - Very good, solid choice
