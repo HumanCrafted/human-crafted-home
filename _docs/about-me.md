@@ -17,10 +17,12 @@ Hi, I'm Jon. I am an engineer, designer, and maker. For over 25 years I have fin
 **Human Crafted LLC | Founder & Principal Designer**
 **2016 - Present**
 - Founded boutique product design studio specializing in human-centered design solutions
-- Lead product development from concept through manufacturing for consumer and B2B clients
+	- Lead product development from concept through manufacturing for consumer and B2B clients
+	- Technical co-founding, core skills in getting started, product-market fit, and building from 0-1.
+	- Executive leadership advisor, consulting on Brand, Design, Innovation, Product Strategy, Business design, Business tools and process
+- Expertise in industrial design, mechanical engineering, business strategy, product design and development, brand development, user experience design, business tools, and rapid hardware/software prototyping
 - Established a thriving e-commerce brand that manufactured and sold products nationally while exhibiting at the NY NOW trade show as well as regional retail markets.
-- Expertise in industrial design, mechanical engineering, business strategy, product design and development, brand development, user experience design, and rapid hardware/software prototyping
-- Built comprehensive workshop for fabrication, testing, and small-batch production
+
 
 **Johnson Health Tech NA | Creator, Manager Advanced Development Group**
 **2011 - 2016**
@@ -29,11 +31,12 @@ Hi, I'm Jon. I am an engineer, designer, and maker. For over 25 years I have fin
 
 **Johnson Health Tech NA | Senior Design Engineer and Project Manager
 2007 - 2011**
-- Guided cross-functional project teams through three successful new commercial cardio platform launches for the Matrix brand. Responsible for balancing industrial design and engineering in pursuit of established marketing specifications. Managed manufacturing hand-off and quality documentation, including frequent travel to Taiwan to collaborate with production engineers and factory. 
+- Guided cross-functional project teams through three successful new commercial cardio platform launches for the Matrix brand. Responsible for balancing industrial design and engineering in pursuit of established marketing specifications. Managed manufacturing hand-off and quality documentation, including frequent travel to Taiwan and China to collaborate with production engineers, factories, and vendors. 
 
 **Visualize | Director and Senior Design Engineer**
 **2000 - 2007**
-- Oversaw the opening of a satellite office in Madison, WI. Responsible for employee performance and resource allocation, in addition to acting as lead engineer and project manager for numerous consumer products.
+- Oversaw the opening of a satellite office in Madison, WI. Responsible for employee performance and resource allocation
+- Lead engineer and project manager for numerous consumer products.
 
 ### Skills & Expertise
 
