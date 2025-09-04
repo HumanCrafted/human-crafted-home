@@ -25,7 +25,7 @@ A collection of coffee beans I've tried, rated, and reviewed. Each coffee is rat
         <th>Roaster</th>
         <th>Origin</th>
         <th>Roasted</th>
-        <th markdown="span">Rating[^2]</th>
+        <th markdown="span">Rating[^1]</th>
       </tr>
     </thead>
     <tbody>
@@ -70,12 +70,5 @@ A collection of coffee beans I've tried, rated, and reviewed. Each coffee is rat
 <p><em>No coffee reviews found yet. Add some coffee documents with the 'coffee' tag to see them here!</em></p>
 {% endif %}
 
-## Rating System
-- **5** - Excellent, highly recommend  
-- **4** - Very good, solid choice
-- **3** - Okay
-- **2** - Poor, wouldn't recommend
-- **1** - Terrible, avoid
 
-[^1]: Rating System: 5 (excellent, highly recommended) - 1 (terrible, avoid it)
-[^2]: Scale from 1-5, where 5 is excellent and 1 is terrible
+[^1]: Scale from 1-5, where 5 is excellent and 1 is terrible
