@@ -42,16 +42,6 @@ Jekyll::Hooks.register [:pages, :documents], :pre_render do |item|
       "[#{display_text}](#{baseurl}/#{filename}/)"
     end
     
-    # Convert [[page-name|Display Text]] to Jekyll links (for doc layout)
-    item.content = item.content.gsub(/\[\[([^\|\]]+)\|([^\]]+)\]\]/) do |match|
-      page_name = $1.strip
-      display_text = $2.strip
-      # Extract slug from page name (e.g., coffee-roaster-rogue-wave -> rogue-wave)
-      slug = page_name.gsub('coffee-roaster-', '')
-      baseurl = item.site.config['baseurl'] || ''
-      "[#{display_text}](#{baseurl}/#{slug}/)"
-    end
-    
     # Convert Obsidian image syntax ![[image.ext]] to Jekyll format (for template files)
     item.content = item.content.gsub(/!\[\[([^\]]+\.(jpg|jpeg|png|gif|svg|webp))\]\]/i) do |match|
       filename = $1.strip

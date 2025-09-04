@@ -17,7 +17,7 @@ A collection of coffee beans I've tried, rated, and reviewed.
 
 {% if coffee_docs.size > 0 %}
 <div class="coffee-database">
-  <table markdown="1">
+  <table>
     <thead>
       <tr>
         <th>Bag</th>
