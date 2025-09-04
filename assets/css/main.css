@@ -1200,13 +1200,12 @@ hr {
 .footnotes {
   margin-top: 3rem;
   padding-top: 1.5rem;
-  border-top: 1px solid var(--muted);
   font-size: 0.875rem;
   color: var(--muted-foreground);
 }
 
 .footnotes::before {
-  content: "Notes";
+  content: "Footnotes";
   display: block;
   font-weight: 600;
   margin-bottom: 0.5rem;
@@ -1241,8 +1240,8 @@ sup[role="doc-noteref"] a {
 }
 
 sup[role="doc-noteref"] a:hover {
-  text-decoration: underline;
-  text-decoration-style: wavy;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 /* Back to reference link */
