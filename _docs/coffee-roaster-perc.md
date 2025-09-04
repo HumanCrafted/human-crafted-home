@@ -18,7 +18,8 @@ draft: false
 
 ## Coffees I've Tried
 
-{% assign roaster_coffees = site.docs | where_exp: "doc", "doc.tags contains 'coffee' and doc.roaster == page.name" | sort: "date_tried" | reverse %}
+{% assign roaster_link = 'coffee-roaster-' | append: page.slug %}
+{% assign roaster_coffees = site.docs | where_exp: "doc", "doc.tags contains 'coffee' and doc.roaster contains roaster_link" | sort: "date_tried" | reverse %}
 
 {% if roaster_coffees.size > 0 %}
 <div class="roaster-coffees">

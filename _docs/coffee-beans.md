@@ -39,14 +39,23 @@ A collection of coffee beans I've tried, rated, and reviewed.
         </td>
         <td><a href="{{ coffee.url | relative_url }}">{{ coffee.name }}</a></td>
         <td>
-          {% assign roaster_name = coffee.roaster | replace: '[[coffee-roaster-', '' | replace: '|', '' | replace: ']]', '' | split: '|' | first %}
-          {% assign roaster_display = coffee.roaster | split: '|' | last | replace: ']]', '' %}
-          {% assign roaster_slug = 'coffee-roaster-' | append: roaster_name %}
-          {% assign roaster_page = site.docs | where: "slug", roaster_slug | first %}
-          {% if roaster_page %}
-            <a href="{{ roaster_page.url | relative_url }}">{{ roaster_display }}</a>
+          {% if coffee.roaster contains '[[' %}
+            {% assign roaster_parts = coffee.roaster | replace: '[[', '' | replace: ']]', '' | split: '|' %}
+            {% assign roaster_link = roaster_parts[0] %}
+            {% if roaster_parts[1] %}
+              {% assign roaster_display = roaster_parts[1] %}
+            {% else %}
+              {% assign roaster_display = roaster_link | replace: 'coffee-roaster-', '' %}
+            {% endif %}
+            {% assign roaster_slug = roaster_link | replace: 'coffee-roaster-', '' %}
+            {% assign roaster_page = site.docs | where: "slug", roaster_slug | first %}
+            {% if roaster_page %}
+              <a href="{{ roaster_page.url | relative_url }}">{{ roaster_display }}</a>
+            {% else %}
+              {{ roaster_display }}
+            {% endif %}
           {% else %}
-            {{ roaster_display | default: roaster_name }}
+            {{ coffee.roaster }}
           {% endif %}
         </td>
         <td>{{ coffee.origin }}</td>
