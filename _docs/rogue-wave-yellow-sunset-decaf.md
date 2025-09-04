@@ -38,5 +38,5 @@ Espresso: 1:2.2 90C, 27s
 This coffee was very good and very interesting.  Very noticeable tasting note beyond the standard Community Huila. 
 
 ## Links
-- Website: [Colombia - Las Palmas Yellow Sunset | Fruit Fermented EA DECAF](https://roguewavecoffee.ca/products/colombia-las-palmas-yellow-sunset-fruit-fermented-ea-decaf?srsltid=AfmBOoo9fDGHsHWUo2irsDE_lVh9TpHeKSIhIl3kjS6FFQuQQr2hcNKy)
+- Website: [Colombia - Las Palmas Yellow Sunset Fruit Fermented EA DECAF](https://roguewavecoffee.ca/products/colombia-las-palmas-yellow-sunset-fruit-fermented-ea-decaf?srsltid=AfmBOoo9fDGHsHWUo2irsDE_lVh9TpHeKSIhIl3kjS6FFQuQQr2hcNKy)
 - Roaster: [[coffee-roaster-rogue-wave|Rogue Wave]]

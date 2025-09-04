@@ -1227,21 +1227,22 @@ hr {
 }
 
 /* Footnote reference in text */
-sup[role="doc-noteref"] {
+sup[role="doc-noteref"],
+sup {
   font-size: 0.75rem;
   vertical-align: super;
   line-height: 0;
 }
 
 sup[role="doc-noteref"] a,
-.coffee-database sup a {
+sup a {
   color: var(--foreground);
   text-decoration: none !important;
   padding: 0 0.1rem;
 }
 
 sup[role="doc-noteref"] a:hover,
-.coffee-database sup a:hover {
+sup a:hover {
   text-decoration: none !important;
   font-weight: 500;
 }
