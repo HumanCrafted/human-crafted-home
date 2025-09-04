@@ -70,5 +70,4 @@ A collection of coffee beans I've tried, rated, and reviewed.
 <p><em>No coffee reviews found yet. Add some coffee documents with the 'coffee' tag to see them here!</em></p>
 {% endif %}
 
-
 [^1]: Scale from 1-5, where 5 is excellent and 1 is terrible

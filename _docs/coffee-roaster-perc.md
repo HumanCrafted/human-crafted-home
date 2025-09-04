@@ -28,7 +28,7 @@ draft: false
       <tr>
         <th>Coffee</th>
         <th>Origin</th>
-        <th>Rating</th>
+        <th markdown="span">Rating[^1]</th>
       </tr>
     </thead>
     <tbody>
@@ -48,3 +48,5 @@ draft: false
 
 ## Links
 - Website: [https://perccoffee.com](https://perccoffee.com)
+
+[^1]: Scale from 1-5, where 5 is excellent and 1 is terrible

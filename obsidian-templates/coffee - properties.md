@@ -34,4 +34,5 @@ Espresso:
 
 
 ## Links
-- Roaster: [[roaster-slug|Roaster Name]]
+- Website: [Title](https://www.example.com)
+- Roaster: [[doc_name|Title]]
