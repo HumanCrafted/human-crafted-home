@@ -11,7 +11,7 @@ gallery_images:
 version: "1.0"
 draft: false
 ---
-A collection of coffee beans I've tried, rated, and reviewed. Each coffee is rated on a scale[^1] based on taste, quality, and overall experience.
+A collection of coffee beans I've tried, rated, and reviewed. 
 
 {% assign coffee_docs = site.docs | where_exp: "doc", "doc.tags contains 'coffee'" | sort: "date_tried" | reverse %}
 
