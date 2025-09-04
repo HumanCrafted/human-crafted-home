@@ -1,11 +1,11 @@
 ---
 name: Brazil Legender
 roaster: "[[coffee-roaster-perc|Perc]]"
-origin: MINAS GERAIS, BRAZIL
+origin: Minas Gerais, Brazil
 process:
   - Natural
 roast_level: Light
-harvest: 
+harvest:
 elevation: 1100 MASL
 date_purchased: 2025-08-13
 date_roasted: 2025-08-11

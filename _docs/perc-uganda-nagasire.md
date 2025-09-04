@@ -1,11 +1,11 @@
 ---
 name: Uganda Nagasire
 roaster: "[[coffee-roaster-perc|Perc]]"
-origin: NAGASIRE, KAPCHORWA
+origin: Nagasire, Kapchorwa
 process:
   - Culture Washed
 roast_level: Light
-harvest: 
+harvest:
 elevation: 1900 MASL
 date_purchased: 2025-08-13
 date_roasted: 2025-08-12
