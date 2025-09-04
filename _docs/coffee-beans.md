@@ -11,7 +11,7 @@ gallery_images:
 version: "1.0"
 draft: false
 ---
-A collection of coffee beans I've tried, rated, and reviewed.
+A collection of coffee beans I've tried, rated, and reviewed. Each coffee is rated on a scale[^1] based on taste, quality, and overall experience.
 
 {% assign coffee_docs = site.docs | where_exp: "doc", "doc.tags contains 'coffee'" | sort: "date_tried" | reverse %}
 
@@ -76,6 +76,5 @@ A collection of coffee beans I've tried, rated, and reviewed.
 - **3** - Okay
 - **2** - Poor, wouldn't recommend
 - **1** - Terrible, avoid
-
 
 [^1]: Rating System: 5 (excellent, highly recommended) - 1 (terrible, avoid it)
