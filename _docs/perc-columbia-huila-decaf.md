@@ -36,4 +36,4 @@ Slightly darker than Rogue Wave's Huila, but not bad
 
 ## Links
 - Website: [Perc Columbia Huila Decaf](https://perccoffee.com/products/decaf?variant=44057029869882)
-- Roaster: [[coffee-roaster-perc|Perc]]
+- Roaster: [Perc](_docs/coffee-roaster-perc.md)

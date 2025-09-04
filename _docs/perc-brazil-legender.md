@@ -35,4 +35,4 @@ Espresso:
 
 ## Links
 - Website: [Perc Brazil Legender](https://perccoffee.com/products/brazil?variant=44056980554042)
-- Roaster: [[coffee-roaster-perc|Perc]]
+- Roaster: [Perc](_docs/coffee-roaster-perc.md)

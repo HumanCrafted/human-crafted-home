@@ -39,4 +39,4 @@ This coffee was very good and very interesting.  Very noticeable tasting note be
 
 ## Links
 - Website: [Colombia - Las Palmas Yellow Sunset Fruit Fermented EA DECAF](https://roguewavecoffee.ca/products/colombia-las-palmas-yellow-sunset-fruit-fermented-ea-decaf?srsltid=AfmBOoo9fDGHsHWUo2irsDE_lVh9TpHeKSIhIl3kjS6FFQuQQr2hcNKy)
-- Roaster: [[coffee-roaster-rogue-wave|Rogue Wave]]
+- Roaster: [Rogue Wave](_docs/coffee-roaster-rogue-wave.md)

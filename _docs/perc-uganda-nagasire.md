@@ -37,4 +37,4 @@ Espresso: Grind - 5, Dose - 16, Water - 32, Time - 0:27, TDS - 8.89
 
 ## Links
 - Website: [Perc Uganda Nagasire](https://perccoffee.com/products/uganda-nagasire?variant=51500360827194)
-- Roaster: [[coffee-roaster-perc|Perc]]
+- Roaster: [Perc](_docs/coffee-roaster-perc.md)
