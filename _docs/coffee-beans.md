@@ -39,11 +39,14 @@ A collection of coffee beans I've tried, rated, and reviewed.
         </td>
         <td><a href="{{ coffee.url | relative_url }}">{{ coffee.name }}</a></td>
         <td>
-          {% assign roaster_page = site.docs | where_exp: "doc", "doc.tags contains 'coffee-roaster' and doc.name == coffee.roaster" | first %}
+          {% assign roaster_name = coffee.roaster | replace: '[[coffee-roaster-', '' | replace: '|', '' | replace: ']]', '' | split: '|' | first %}
+          {% assign roaster_display = coffee.roaster | split: '|' | last | replace: ']]', '' %}
+          {% assign roaster_slug = 'coffee-roaster-' | append: roaster_name %}
+          {% assign roaster_page = site.docs | where: "slug", roaster_slug | first %}
           {% if roaster_page %}
-            <a href="{{ roaster_page.url | relative_url }}">{{ coffee.roaster }}</a>
+            <a href="{{ roaster_page.url | relative_url }}">{{ roaster_display }}</a>
           {% else %}
-            {{ coffee.roaster }}
+            {{ roaster_display | default: roaster_name }}
           {% endif %}
         </td>
         <td>{{ coffee.origin }}</td>
@@ -58,7 +61,6 @@ A collection of coffee beans I've tried, rated, and reviewed.
 <p><em>No coffee reviews found yet. Add some coffee documents with the 'coffee' tag to see them here!</em></p>
 {% endif %}
 
-%% dlkjlkdjfsdfs %%
 ## Rating System
 - **5** - Excellent, highly recommend  
 - **4** - Very good, solid choice
