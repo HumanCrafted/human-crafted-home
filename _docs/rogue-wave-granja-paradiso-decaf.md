@@ -1,6 +1,6 @@
 ---
 name: Colombia - Granja Paraiso 92 | Natural EA DECAF Red Bourbon
-roaster: Rogue Wave
+roaster: "[[coffee-roaster-rogue-wave|Rogue Wave]]"
 origin: Columbia
 process:
   - Natural EA Decaf
@@ -16,7 +16,7 @@ tags:
   - coffee
 layout: doc
 slug: rogue-wave-granja-paradiso-decaf
-version: "1"
+version: "1.0"
 draft: false
 ---
 
@@ -29,11 +29,11 @@ draft: false
 - Rose
 - Milk Chocolate
 
-## Brewing Recommendation
+## Brewing Recommendation (manufacturer)
 None
 
 ## Other Notes
 This coffee is too floral in my opinion.  The tart Lychee, almost lemon, comes through too much for my taste.
 
 ## Links
-- Roaster: [[rogue-wave|Rogue Wave]]
+- Roaster: 

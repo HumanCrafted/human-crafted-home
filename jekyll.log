@@ -25,3 +25,1690 @@ Configuration file: /Users/nginear/Documents/GitHub/human-crafted-home/_config.y
        Jekyll Feed: Generating feed for posts
                     ...done in 0.123816 seconds.
                     
+      Regenerating: 2 file(s) changed at 2025-07-24 14:18:42
+                    more.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+[31m  Liquid Exception: Invalid syntax for include tag: title="Expertise" items="CAD design and engineering,User testing,Limited low run production,Product strategy,Production support,Concept development,Rapid prototyping,Design for manufacturing"auto="expertise_docs" Valid syntax: {% include file.ext param='value' param2='value' %} in more.md[0m
+[33m             Error: Invalid syntax for include tag: title="Expertise" items="CAD design and engineering,User testing,Limited low run production,Product strategy,Production support,Concept development,Rapid prototyping,Design for manufacturing"auto="expertise_docs" Valid syntax: {% include file.ext param='value' param2='value' %} [0m
+[33m             Error: Run jekyll build --trace for more information.[0m
+                    
+[2025-07-24 14:18:48] ERROR '/apple-touch-icon-precomposed.png' not found.
+[2025-07-24 14:18:48] ERROR '/apple-touch-icon.png' not found.
+[2025-07-24 14:18:48] ERROR '/favicon.ico' not found.
+      Regenerating: 2 file(s) changed at 2025-07-24 14:20:44
+                    more.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.144313 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:20:45
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.111004 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:22:35
+                    _projects/Untitled.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.165952 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-07-24 14:22:52
+                    _projects/svg-pattern-generator.md
+                    _projects/Untitled.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.12613 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:23:01
+                    _projects/svg-pattern-generator.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.139454 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:23:02
+                    _projects/svg-pattern-generator.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.116527 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:23:13
+                    _projects/svg-pattern-generator.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.134258 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:23:20
+                    _projects/svg-pattern-generator.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.132632 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:23:23
+                    _projects/svg-pattern-generator.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.131911 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:24:09
+                    _projects/svg-pattern-generator.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.153164 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:24:13
+                    _projects/svg-pattern-generator.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.115098 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:24:22
+                    _docs/rogue-wave-yellow-sunset-decaf.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.121433 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:24:25
+                    _docs/rogue-wave-huila-community-decaf.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.125108 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:24:29
+                    _docs/rogue-wave-granja-paradiso-decaf.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.125174 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:24:34
+                    _docs/coffee.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.124925 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:24:39
+                    _docs/coffee-roaster-rogue-wave.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.145711 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:24:51
+                    _docs/coffee-roaster-rogue-wave.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.116134 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:24:59
+                    obsidian-templates/coffee roaster - properties.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.115594 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:25:42
+                    _projects/Untitled.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.148199 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-07-24 14:25:48
+                    _projects/scout.md
+                    _projects/Untitled.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.125404 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:25:54
+                    _projects/scout.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.131246 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:25:55
+                    _projects/scout.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.118368 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:26:02
+                    _projects/scout.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.123461 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:26:08
+                    _projects/scout.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.123679 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:26:10
+                    _projects/scout.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.116301 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:26:36
+                    obsidian-templates/coffee roaster - properties.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.145172 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:26:41
+                    obsidian-templates/coffee - properties.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.141082 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:27:38
+                    _projects/Untitled.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.150929 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-07-24 14:27:55
+                    _projects/espresso-accessories.md
+                    _projects/Untitled.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.130491 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:28:00
+                    _projects/espresso-accessories.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.12934 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:28:03
+                    _projects/espresso-accessories.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.126694 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:28:11
+                    _projects/espresso-accessories.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.115293 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:28:16
+                    _projects/espresso-accessories.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.120377 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:28:18
+                    _projects/espresso-accessories.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.119639 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:28:19
+                    _projects/espresso-accessories.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.132999 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:28:29
+                    _projects/espresso-accessories.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.130461 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:28:34
+                    _projects/espresso-accessories.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.116621 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:28:43
+                    _projects/espresso-accessories.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.118791 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:28:54
+                    _projects/scout.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.114133 seconds.
+                    
+[2025-07-24 14:31:10] ERROR '/assets/images/vennExpertise.svg' not found.
+[2025-07-24 14:32:17] ERROR '/assets/images/vennColab.svg' not found.
+[2025-07-24 14:33:13] ERROR '/assets/images/vennColab.svg' not found.
+      Regenerating: 1 file(s) changed at 2025-07-24 14:33:46
+                    _docs/process.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.190717 seconds.
+                    
+[2025-07-24 14:33:49] ERROR '/Human-Crafted-Home/process/vennColab.svg' not found.
+[2025-07-24 14:33:51] ERROR '/Human-Crafted-Home/process/vennColab.svg' not found.
+[2025-07-24 14:33:52] ERROR '/Human-Crafted-Home/process/vennColab.svg' not found.
+[2025-07-24 14:33:53] ERROR '/Human-Crafted-Home/process/vennColab.svg' not found.
+      Regenerating: 1 file(s) changed at 2025-07-24 14:34:36
+                    _docs/process.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.159652 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:34:46
+                    _docs/process.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.153865 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:34:50
+                    _docs/process.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.116598 seconds.
+                    
+[2025-07-24 14:35:33] ERROR '/assets/images/vennExpertise.svg' not found.
+      Regenerating: 1 file(s) changed at 2025-07-24 14:35:47
+                    _docs/expertise.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.163707 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:35:56
+                    _docs/expertise.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.136291 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-07-24 14:37:49
+                    more.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.151035 seconds.
+                    
+[2025-07-24 14:39:30] ERROR '/assets/images/vennExpertise.svg' not found.
+[2025-07-24 14:40:15] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:12 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-07-24 14:42:24
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.182167 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:42:27
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.153871 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:42:30
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.121727 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:42:32
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.120531 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:42:38
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.12009 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:42:55
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.156186 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:42:59
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.139352 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:43:25
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.171887 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:43:27
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.133921 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:43:30
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.140021 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:43:45
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.168984 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:43:48
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.114673 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:43:53
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.140864 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:43:56
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.114248 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:44:19
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.171247 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:44:21
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.128258 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:44:23
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.118057 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:44:40
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.146514 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:44:46
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.15868 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:44:47
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.134307 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:45:00
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.127714 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:45:09
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.148726 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:45:13
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.124541 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:45:22
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.150528 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:45:25
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.127618 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:45:36
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.17953 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:45:38
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.130789 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:45:57
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.149219 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:45:59
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.126835 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:46:01
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.11909 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:46:13
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.140385 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:46:15
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.120135 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:46:17
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.1232 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:46:20
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.142033 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:46:22
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.122714 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:46:24
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.124148 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:46:27
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.124453 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:46:29
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.126316 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:46:36
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.146021 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:46:38
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.120739 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:46:40
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.113996 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:46:42
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.120595 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:47:03
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.171312 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:47:12
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.147335 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:47:39
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.145126 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:47:51
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.155687 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:48:00
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.132003 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:48:12
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.134987 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:48:15
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.117259 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:48:39
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.160639 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:48:40
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.125336 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:48:43
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.155396 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:48:45
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.122739 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:48:53
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.119693 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:48:55
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.116603 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:48:57
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.114101 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:48:59
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.118618 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:49:01
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.127138 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:49:04
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.148402 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:49:06
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.110179 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:49:09
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.121775 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:49:11
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.134466 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:49:25
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.152876 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:49:29
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.131061 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:49:32
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.12723 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:49:40
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.125557 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:50:16
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.193301 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:50:18
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.157108 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:50:22
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.125692 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:50:27
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.130566 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:50:29
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.118561 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:50:32
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.11894 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:50:35
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.130372 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:50:37
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.120839 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:50:39
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.119686 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:50:42
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.148009 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:51:00
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.137183 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:51:02
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.121997 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:51:09
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.118766 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:51:11
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.137053 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:51:16
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.138689 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:51:18
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.159324 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:51:21
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.11988 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:51:23
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.120528 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:51:25
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.11975 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:51:27
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.135162 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:51:30
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.133504 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:51:32
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.120073 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:51:34
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.115274 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:51:37
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.11811 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:51:40
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.126109 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:51:49
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.120865 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:51:54
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.166713 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:52:03
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.126934 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:52:06
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.131531 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:52:08
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.12222 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:52:34
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.188622 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:52:37
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.133846 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:52:40
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.116256 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:52:43
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.129979 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:52:46
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.120467 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:52:52
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.126543 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:53:30
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.178591 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:53:33
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.122751 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:53:36
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.126864 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:53:38
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.120445 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:53:47
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.165456 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:53:51
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.121953 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:53:54
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.126583 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:54:00
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.122391 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:54:03
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.118461 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:54:12
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.13046 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:54:23
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.147078 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:54:25
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.122612 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:54:32
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.132429 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:54:59
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.167131 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:55:16
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.148479 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:56:55
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.220361 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:56:57
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.137351 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:57:11
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.203434 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:57:12
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.143199 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:57:15
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.124534 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:57:17
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.128732 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:57:20
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.125845 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:57:22
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.122967 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:57:25
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.137318 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:57:32
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.118309 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:57:41
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.126447 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:58:01
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.143572 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:58:05
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.115035 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:58:10
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.118476 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:58:14
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.128991 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:58:24
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.145184 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:58:45
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.135463 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:59:37
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.1756 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:59:39
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.12722 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:59:41
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.125561 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:59:43
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.127175 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:59:46
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.120154 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 14:59:48
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.121765 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:00:06
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.147246 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:00:07
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.110687 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:00:09
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.127023 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:00:14
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.137189 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:00:17
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.145293 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:00:19
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.118314 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:00:22
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.128151 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:00:24
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.16106 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:00:26
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.129833 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:00:28
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.122258 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:00:31
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.116379 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:00:33
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.121365 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:00:35
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.114826 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:00:38
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.130599 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:00:41
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.139566 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:00:45
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.131529 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:00:47
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.11779 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:00:53
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.173582 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:00:56
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.133161 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:00:59
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.12127 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:01:02
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.134352 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:01:04
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.122746 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:01:08
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.115426 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:01:11
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.114223 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:01:13
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.136023 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:01:15
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.145964 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:01:25
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.14305 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:01:27
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.118524 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:01:29
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.129171 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:01:32
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.119056 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:01:34
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.121611 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:01:46
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.143107 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:01:49
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.139362 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:01:51
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.122182 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:01:56
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.113958 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:02:14
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.215002 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:02:17
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.135472 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:02:20
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.126232 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:02:25
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.160155 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:02:31
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.123155 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:02:44
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.120818 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:02:47
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.124865 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:03:05
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.124324 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:03:07
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.136581 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:03:12
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.120151 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:03:16
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.161257 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:03:19
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.124166 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:03:22
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.114239 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:03:28
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.120569 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:03:31
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.116142 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:03:41
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.154187 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:03:44
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.135345 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:03:49
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.132658 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:03:51
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.118391 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:03:54
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.131696 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:03:56
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.113678 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:04:02
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.130133 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:04:43
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.176027 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:04:46
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.133722 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:04:55
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.126793 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:05:01
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.118626 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:05:12
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.17094 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:05:44
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.190316 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:05:46
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.164194 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:05:48
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.124125 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:05:50
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.128943 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:06:42
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.21486 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:06:44
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.145181 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:06:54
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.155316 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:07:04
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.151823 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:07:10
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.145086 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:07:16
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.137246 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:07:21
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.169482 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:07:24
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.11644 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:07:44
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.150685 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:07:48
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.145328 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:07:53
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.124451 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:07:58
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.116885 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:08:14
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.139071 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:08:18
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.134767 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:08:20
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.134031 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:08:24
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.118858 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:08:27
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.117817 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:08:34
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.133997 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:08:36
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.116646 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:08:39
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.121075 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:08:45
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.1197 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:08:56
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.13477 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:09:00
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.128275 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:09:02
+                    _docs/about-me.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.110923 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-07-24 15:11:22
+                    more.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.153475 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:12:44
+                    _docs/Untitled.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.242619 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-07-24 15:12:50
+                    _docs/synth-patches.md
+                    _docs/Untitled.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.128857 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:12:54
+                    _docs/synth-patches.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.121392 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:12:56
+                    _docs/synth-patches.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.117587 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:12:58
+                    _docs/synth-patches.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.119546 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:13:03
+                    _docs/synth-patches.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.115626 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:13:08
+                    _docs/synth-patches.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.126784 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:13:18
+                    _docs/synth-patches.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.138796 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:13:33
+                    _docs/synth-patches.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.13734 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:13:38
+                    _docs/synth-patches.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.13103 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:13:52
+                    _docs/synth-patches.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.146676 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:14:43
+                    _docs/synth-patches.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.21216 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:14:46
+                    _docs/synth-patches.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.129908 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:14:50
+                    _docs/synth-patches.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.123053 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:15:10
+                    _docs/synth-patches.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.151013 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:17:47
+                    _docs/synth-patches.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.195672 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:17:49
+                    _docs/synth-patches.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.187131 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:17:54
+                    _docs/synth-patches.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.122364 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:18:19
+                    _docs/synth-patches.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.269589 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:18:33
+                    _docs/synth-patches.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.160707 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:18:35
+                    _docs/synth-patches.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.12647 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:18:37
+                    _docs/synth-patches.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.126251 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:18:39
+                    _docs/synth-patches.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.119532 seconds.
+                    
+[2025-07-24 15:19:06] ERROR '/apple-touch-icon-precomposed.png' not found.
+[2025-07-24 15:19:06] ERROR '/apple-touch-icon.png' not found.
+[2025-07-24 15:19:06] ERROR '/favicon.ico' not found.
+      Regenerating: 1 file(s) changed at 2025-07-24 15:19:43
+                    _docs/synth-patches.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.180085 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:19:46
+                    _docs/synth-patches.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.178982 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:19:49
+                    _docs/synth-patches.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.117018 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:19:51
+                    _docs/synth-patches.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.122256 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:20:03
+                    _docs/synth-patches.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.140505 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:21:00
+                    _docs/synth-patches.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.28104 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:21:26
+                    _docs/synth-patches.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.188516 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 15:21:34
+                    _docs/synth-patches.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.156715 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-07-24 15:22:12
+                    more.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.181035 seconds.
+                    
+[2025-07-24 15:52:17] ERROR Errno::ECONNRESET: Connection reset by peer @ io_fillbuf - fd:10 
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	/opt/homebrew/lib/ruby/gems/3.4.0/gems/webrick-1.9.1/lib/webrick/server.rb:310:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2025-07-24 19:41:42
+                    _docs/fabrication.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.623902 seconds.
+                    
+[2025-07-24 19:41:46] ERROR '/apple-touch-icon-precomposed.png' not found.
+[2025-07-24 19:41:46] ERROR '/apple-touch-icon.png' not found.
+[2025-07-24 19:41:46] ERROR '/favicon.ico' not found.
+      Regenerating: 2 file(s) changed at 2025-07-24 19:42:05
+                    more.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.271265 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-07-24 19:42:07
+                    more.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.165152 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-07-24 19:42:09
+                    more.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.132982 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 19:43:16
+                    _plugins/obsidian_links.rb
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.240693 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 19:43:25
+                    _docs/rogue-wave-yellow-sunset-decaf.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.168168 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 19:43:55
+                    _plugins/obsidian_links.rb
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.181905 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 19:44:03
+                    _docs/rogue-wave-yellow-sunset-decaf.md
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.157103 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-07-24 19:45:11
+                    more.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.190255 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 19:45:12
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.141002 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2025-07-24 19:45:46
+                    more.md
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.186364 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2025-07-24 19:45:46
+                    jekyll.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 0.128507 seconds.
+                    
+[31m                    ------------------------------------------------[0m
+[31m      Jekyll 4.4.1   Please append `--trace` to the `serve` command [0m
+[31m                     for any additional information or backtrace. [0m
+[31m                    ------------------------------------------------[0m
+/opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-4.4.1/lib/jekyll/commands/serve.rb:291:in 'Thread#join': SIGTERM (SignalException)
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-4.4.1/lib/jekyll/commands/serve.rb:291:in 'Jekyll::Commands::Serve.boot_or_detach'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-4.4.1/lib/jekyll/commands/serve.rb:221:in 'Jekyll::Commands::Serve.start_up_webrick'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-4.4.1/lib/jekyll/commands/serve.rb:102:in 'Jekyll::Commands::Serve.process'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-4.4.1/lib/jekyll/command.rb:91:in 'block in Jekyll::Command.process_with_graceful_fail'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-4.4.1/lib/jekyll/command.rb:91:in 'Array#each'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-4.4.1/lib/jekyll/command.rb:91:in 'Jekyll::Command.process_with_graceful_fail'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-4.4.1/lib/jekyll/commands/serve.rb:85:in 'block (2 levels) in Jekyll::Commands::Serve.init_with_program'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in 'block in Mercenary::Command#execute'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in 'Array#each'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in 'Mercenary::Command#execute'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/mercenary-0.4.0/lib/mercenary/program.rb:44:in 'Mercenary::Program#go'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/mercenary-0.4.0/lib/mercenary.rb:21:in 'Mercenary.program'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/jekyll-4.4.1/exe/jekyll:15:in '<top (required)>'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/bin/jekyll:25:in 'Kernel#load'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/bin/jekyll:25:in '<top (required)>'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/cli/exec.rb:59:in 'Kernel.load'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/cli/exec.rb:59:in 'Bundler::CLI::Exec#kernel_load'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/cli/exec.rb:23:in 'Bundler::CLI::Exec#run'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/cli.rb:452:in 'Bundler::CLI#exec'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/vendor/thor/lib/thor/command.rb:28:in 'Bundler::Thor::Command#run'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/vendor/thor/lib/thor/invocation.rb:127:in 'Bundler::Thor::Invocation#invoke_command'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/vendor/thor/lib/thor.rb:538:in 'Bundler::Thor.dispatch'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/cli.rb:35:in 'Bundler::CLI.dispatch'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/vendor/thor/lib/thor/base.rb:584:in 'Bundler::Thor::Base::ClassMethods#start'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/cli.rb:29:in 'Bundler::CLI.start'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/exe/bundle:28:in 'block in <top (required)>'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/lib/bundler/friendly_errors.rb:117:in 'Bundler.with_friendly_errors'
+	from /opt/homebrew/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/exe/bundle:20:in '<top (required)>'
+	from /opt/homebrew/opt/ruby/bin/bundle:25:in 'Kernel#load'
+	from /opt/homebrew/opt/ruby/bin/bundle:25:in '<main>'

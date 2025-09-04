@@ -1,6 +1,6 @@
 ---
 name: Colombia - Huila Community Decaf
-roaster: Rogue Wave
+roaster: "[[coffee-roaster-rogue-wave|Rogue Wave]]"
 origin: Columbia
 process:
   - Washed EA Decaf
@@ -16,7 +16,7 @@ tags:
   - coffee
 layout: doc
 slug: rogue-wave-huila-decaf
-version: "1"
+version: "1.0"
 draft: false
 ---
 
@@ -28,7 +28,7 @@ draft: false
 - Caramel
 - Orange
 
-## Brewing Recommendation
+## Brewing Recommendation (manufacturer)
 Resting Time : 1-2  weeks, 10 days for espresso
 Filter Brew: 88C, 1:15-1:16, brew time 2:30-3:30
 Espresso: 1:2.2 90C, 27s
@@ -37,4 +37,4 @@ Espresso: 1:2.2 90C, 27s
 This is a daily driver for me
 
 ## Links
-- Roaster: [[rogue-wave|Rogue Wave]]
+- Roaster: 

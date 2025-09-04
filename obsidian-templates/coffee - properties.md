@@ -11,12 +11,12 @@ date_purchased:
 date_roasted: 
 price: 
 rating_1-5: 
-image: "![[filename.jpg]]" 
+image: "![[filename.jpg]]"
 tags:
   - coffee
 layout: doc
 slug: 
-version: "1"
+version: "1.0"
 draft: false
 ---
 
@@ -25,7 +25,7 @@ draft: false
 ## Tasting Notes
 - 
 
-## Brewing Recommendation
+## Brewing Recommendation (manufacturer)
 Resting Time: 
 Filter Brew: 
 Espresso: 

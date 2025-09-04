@@ -12,8 +12,7 @@ tags:
   - coffee-roaster
 layout: doc
 slug: rogue-wave
-main_image: "![](../assets/images/rw-logo-horizontal-black-RGB_1caf9b21-e328-4ecd-9397-a4249f440449.png)"
-version: "1"
+version: "1.0"
 draft: false
 ---
 

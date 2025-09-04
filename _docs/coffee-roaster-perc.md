@@ -1,20 +1,21 @@
 ---
-name: Roaster Name
-location: City, State/Country
-founded: ""
-website: https://roasterwebsite.com
-instagram: "@roasterhandle"
+name: Perc
+location: 1802 East Broad St.Savannah, GA 31401
+founded: "2010"
+website: https://perccoffee.com
+instagram: "@perccoffee"
 visited: false
 visit_date: 
-notes: ""
+notes: 
 favorite_coffees: 
 tags:
   - coffee-roaster
 layout: doc
-slug: 
+slug: perc
 version: "1.0"
 draft: false
 ---
+
 ## Coffees I've Tried
 
 {% assign roaster_coffees = site.docs | where_exp: "doc", "doc.tags contains 'coffee' and doc.roaster == page.name" | sort: "date_tried" | reverse %}
@@ -47,6 +48,4 @@ draft: false
 {% endif %}
 
 ## Links
-- Website: {{ website }}
-{% if instagram %}- Instagram: [{{ instagram }}](https://instagram.com/{{ instagram | remove: "@" }}){% endif %}
-- Featured in: [[]]
+- Website: [https://perccoffee.com](https://perccoffee.com)

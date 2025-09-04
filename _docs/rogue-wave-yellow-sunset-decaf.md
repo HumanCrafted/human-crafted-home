@@ -1,6 +1,6 @@
 ---
 name: Colombia - Las Palmas Yellow Sunset | Fruit Fermented EA DECAF
-roaster: Rogue Wave
+roaster: "[[coffee-roaster-rogue-wave|Rogue Wave]]"
 origin: Columbia
 process:
   - Fruit Fermented EA Decaf
@@ -16,7 +16,7 @@ tags:
   - coffee
 layout: doc
 slug: rogue-wave-yellow-sunset-decaf
-version: "1"
+version: "1.0"
 draft: false
 ---
 
@@ -29,7 +29,7 @@ draft: false
 - Pineapple
 - Honey
 
-## Brewing Recommendation
+## Brewing Recommendation (manufacturer)
 Resting Time : 1-2  weeks, 10 days for espresso
 Filter Brew: 88C, 1:15-1:16, brew time 2:30-3:30
 Espresso: 1:2.2 90C, 27s
@@ -38,4 +38,4 @@ Espresso: 1:2.2 90C, 27s
 This coffee was very good and very interesting.  Very noticeable tasting note beyond the standard Community Huila. 
 
 ## Links
-- Roaster: [[rogue-wave|Rogue Wave]]
+- Roaster: 

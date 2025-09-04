@@ -5,7 +5,6 @@ slug: fabrication
 main_image: 
 featured: false
 tags:
-  - expertise
   - manufacturing
 published_date: 2025-06-12
 gallery_images: 

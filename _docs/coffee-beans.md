@@ -1,14 +1,14 @@
 ---
 layout: doc
-title: Coffee
-slug: coffee
+title: Coffee Beans
+slug: coffee-beans
 main_image: 
 featured: false
 tags:
   - note
 published_date: 2025-07-21
 gallery_images: 
-version: "1"
+version: "1.0"
 draft: false
 ---
 A collection of coffee beans I've tried, rated, and reviewed.

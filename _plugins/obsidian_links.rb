@@ -2,6 +2,13 @@ Jekyll::Hooks.register [:pages, :documents], :pre_render do |item|
   next unless item.path.end_with?('.md')
   next unless item.content
   
+  # Debug logging
+  if item.path.include?('rogue-wave') && item.path.include?('yellow-sunset')
+    puts "DEBUG: Processing #{item.path}, layout: #{item.data['layout']}"
+    puts "DEBUG: Content preview: #{item.content[0..100]}"
+    puts "DEBUG: Image processing branch: #{(item.data['layout'] == 'doc') ? 'doc layout path' : 'normal path'}"
+  end
+  
   # Convert Obsidian image syntax in frontmatter 'image' field for SEO metadata
   if item.data['image'] && item.data['image'].match(/!\[\[([^\]]+\.(jpg|jpeg|png|gif|svg|webp))\]\]/i)
     filename = $1.strip
