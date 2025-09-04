@@ -25,7 +25,7 @@ A collection of coffee beans I've tried, rated, and reviewed.
         <th>Roaster</th>
         <th>Origin</th>
         <th>Roasted</th>
-        <th>Rating</th>
+        <th>Rating[^1]</th>
       </tr>
     </thead>
     <tbody>
@@ -78,3 +78,4 @@ A collection of coffee beans I've tried, rated, and reviewed.
 - **1** - Terrible, avoid
 
 
+[^1]: Rating System: 5 (excellent, highly recommended) - 1 (terrible, avoid it)
