@@ -17,7 +17,7 @@ A collection of coffee beans I've tried, rated, and reviewed. Each coffee is rat
 
 {% if coffee_docs.size > 0 %}
 <div class="coffee-database">
-  <table>
+  <table markdown="1">
     <thead>
       <tr>
         <th>Bag</th>
@@ -25,7 +25,7 @@ A collection of coffee beans I've tried, rated, and reviewed. Each coffee is rat
         <th>Roaster</th>
         <th>Origin</th>
         <th>Roasted</th>
-        <th>Rating[^1]</th>
+        <th markdown="span">Rating[^2]</th>
       </tr>
     </thead>
     <tbody>
@@ -78,3 +78,4 @@ A collection of coffee beans I've tried, rated, and reviewed. Each coffee is rat
 - **1** - Terrible, avoid
 
 [^1]: Rating System: 5 (excellent, highly recommended) - 1 (terrible, avoid it)
+[^2]: Scale from 1-5, where 5 is excellent and 1 is terrible
