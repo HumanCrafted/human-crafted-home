@@ -1195,3 +1195,64 @@ hr {
     width: 30px;
   }
 }
+
+/* Footnotes styling */
+.footnotes {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--muted);
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.footnotes::before {
+  content: "Notes";
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--foreground);
+  font-size: 0.9rem;
+}
+
+.footnotes ol {
+  padding-left: 1.5rem;
+}
+
+.footnotes li {
+  margin-bottom: 0.5rem;
+}
+
+.footnotes p {
+  margin: 0;
+  display: inline;
+}
+
+/* Footnote reference in text */
+sup[role="doc-noteref"] {
+  font-size: 0.75rem;
+  vertical-align: super;
+  line-height: 0;
+}
+
+sup[role="doc-noteref"] a {
+  color: var(--foreground);
+  text-decoration: none;
+  padding: 0 0.1rem;
+}
+
+sup[role="doc-noteref"] a:hover {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
+
+/* Back to reference link */
+.reversefootnote {
+  text-decoration: none;
+  margin-left: 0.25rem;
+  font-size: 0.75rem;
+}
+
+.reversefootnote:hover {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}

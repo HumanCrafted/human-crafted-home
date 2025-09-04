@@ -41,6 +41,8 @@ collections:
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+  footnote_nr: 1
+  show_warnings: false
   syntax_highlighter_opts:
     block:
       line_numbers: false
