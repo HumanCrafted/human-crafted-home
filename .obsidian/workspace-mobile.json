@@ -11,10 +11,14 @@
             "id": "4ef47e1f08672c10",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "_docs/coffee-roaster-perc.md",
+                "mode": "preview",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "coffee-roaster-perc"
             }
           }
         ]
@@ -79,6 +83,20 @@
           "state": {},
           "icon": "lucide-bookmark",
           "title": "Bookmarks"
+        }
+      },
+      {
+        "id": "a19f3f20a894dc4d",
+        "type": "leaf",
+        "state": {
+          "type": "all-properties",
+          "state": {
+            "sortOrder": "frequency",
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-archive",
+          "title": "All properties"
         }
       }
     ],
@@ -148,5 +166,8 @@
     }
   },
   "active": "4ef47e1f08672c10",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "_docs/perc-columbia-huila-decaf.md",
+    "_docs/coffee-roaster-perc.md"
+  ]
 }
