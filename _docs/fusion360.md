@@ -40,9 +40,9 @@ draft: false
 
 ## Recent Projects
 
-{% assign fusion_projects = site.projects | where_exp: "project", "project.content contains 'Fusion360'" %}
+{% assign fusion_projects = site.projects | where_exp: "project", "project.tools contains 'fusion360'" | sort: "published_date" | reverse %}
 {% for project in fusion_projects limit: 8 %}
-- [{{ project.title }}]({{ project.url }})
+- [{{ project.title }}]({{ project.url | relative_url }})
 {% endfor %}
 
 ---

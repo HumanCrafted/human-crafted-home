@@ -38,9 +38,9 @@ draft: false
 
 ### Recent Projects
 
-{% assign laser_projects = site.projects | where_exp: "project", "project.content contains 'acrylic'" %}
+{% assign laser_projects = site.projects | where_exp: "project", "project.tools contains 'laser-cutter'" | sort: "published_date" | reverse %}
 {% for project in laser_projects limit: 8 %}
-- [{{ project.title }}]({{ project.url }})
+- [{{ project.title }}]({{ project.url | relative_url }})
 {% endfor %}
 
 ---
