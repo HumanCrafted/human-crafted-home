@@ -3,8 +3,8 @@ title: human crafted
 email: your-email@example.com
 description: >-
   A product design studio specializing in the rapid realization of ideas.
-baseurl: "/Human-Crafted-Home" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://humancrafted.co" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown

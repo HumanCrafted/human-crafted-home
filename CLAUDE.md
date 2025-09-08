@@ -90,7 +90,7 @@ ps aux | grep -v grep | grep jekyll
 tail jekyll.log
 ```
 
-**Local URL**: http://127.0.0.1:4000/Human-Crafted-Home/
+**Local URL**: http://127.0.0.1:4000/
 
 ### Stop Server
 ```bash
@@ -186,7 +186,7 @@ git checkout -b hover-experiment
 ### Jekyll Server Issues
 - **Liquid Syntax Errors**: Check for `or` operators in `where_exp` filters - not supported
 - **Plugin Not Loading**: Restart Jekyll server after adding/modifying plugins
-- **404 Errors**: Verify baseurl (`/Human-Crafted-Home/`) is included in URLs
+- **404 Errors**: Verify baseurl is correctly set in _config.yml
 - **Cache Issues**: Clear `_site` and `.jekyll-cache` directories if needed
 
 ### Obsidian Workflow

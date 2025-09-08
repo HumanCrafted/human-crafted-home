@@ -192,8 +192,9 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "bdd931607c16b429",
+  "active": "e3ae9734b80c0b53",
   "lastOpenFiles": [
+    "sitemap.xml",
     "_docs/website.md",
     "_docs/coffee-beans.md",
     "_docs/coffee-roaster-rogue-wave.md",
@@ -226,7 +227,6 @@
     "Test note.md",
     "jekyll.log",
     "_plugins/obsidian_links.rb",
-    "_docs/process.md",
     "_site/synth-patches/index.html",
     "_site/synth-patches",
     "assets/images/Apple.svg",
