@@ -11,6 +11,9 @@ date_purchased: 2025-08-13
 date_roasted: 2025-08-11
 price: $19.00 / 12oz
 rating_1-5: "4"
+tasting_notes:
+  - Graham Cracker
+  - Cashew
 image: "![[PERC_DecafColombiaHuila_2025.jpg]]"
 tags:
   - coffee

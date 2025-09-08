@@ -11,6 +11,12 @@ date_purchased: 2025-02-26
 date_roasted: 
 price: $19.00 / 250g
 rating_1-5: "5"
+tasting_notes:
+  - Peach
+  - Passionfruit
+  - Tangerine
+  - Pineapple
+  - Honey
 image: "![[ColombiaLasPalmasYellowSunsetEADecaf250gBAG.jpg]]"
 tags:
   - coffee

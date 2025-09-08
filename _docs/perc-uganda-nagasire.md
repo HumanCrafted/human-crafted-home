@@ -11,6 +11,11 @@ date_purchased: 2025-08-13
 date_roasted: 2025-08-12
 price: $24.00 / 12oz
 rating_1-5: "4"
+tasting_notes:
+  - Brown Sugar
+  - Golden Raisin
+  - Dates
+  - Fudge
 image: "![[PERC_UgandaNagasire_2025.jpg]]"
 tags:
   - coffee

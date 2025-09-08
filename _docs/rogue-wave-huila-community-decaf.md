@@ -11,6 +11,11 @@ date_purchased: 2025-06-06
 date_roasted: 
 price: $20.00 / 340g
 rating_1-5: "5"
+tasting_notes:
+  - Apple
+  - Dried Peach
+  - Caramel
+  - Orange
 image: "![[Colombia_Huila_Decaf_2025_340g_BAG.jpg]]"
 tags:
   - coffee

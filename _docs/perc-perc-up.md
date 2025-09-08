@@ -11,6 +11,9 @@ date_purchased: 2025-07-18
 date_roasted: 2025-07-17
 price: $19.00 / 12oz
 rating_1-5: "4"
+tasting_notes:
+  - Baking Spices
+  - Toffee
 image: "![[PERC_PercUp_2025.jpg]]"
 tags:
   - coffee

@@ -24,7 +24,7 @@ A collection of coffee beans I've tried, rated, and reviewed.
         <th>Coffee</th>
         <th>Roaster</th>
         <th>Origin</th>
-        <th>Roasted</th>
+        <th>Tasting Notes</th>
         <th markdown="span">Rating[^1]</th>
       </tr>
     </thead>
@@ -58,7 +58,7 @@ A collection of coffee beans I've tried, rated, and reviewed.
           {% endif %}
         </td>
         <td>{{ coffee.origin }}</td>
-        <td>{{ coffee.date_roasted }}</td>
+        <td>{{ coffee.tasting_notes | join: ', ' }}</td>
         <td>{{ coffee.rating_1-5 }}/5</td>
       </tr>
       {% endfor %}

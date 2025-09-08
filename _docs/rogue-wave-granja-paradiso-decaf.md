@@ -11,6 +11,12 @@ date_purchased: 2025-06-06
 date_roasted: 
 price: $20.00 / 250g
 rating_1-5: "3"
+tasting_notes:
+  - Strawberry
+  - Lychee
+  - Apricot
+  - Rose
+  - Milk Chocolate
 image: "![[Colombia_Granja_Paraiso_Red_Bourbon_Natural_Decaf_250g_BAG.jpg]]"
 tags:
   - coffee
