@@ -2,12 +2,12 @@
 layout: doc
 title: Coffee Beans
 slug: coffee-beans
-main_image: 
+main_image:
 featured: false
 tags:
   - note
 published_date: 2025-07-21
-gallery_images: 
+gallery_images:
 version: "1.0"
 draft: false
 ---
