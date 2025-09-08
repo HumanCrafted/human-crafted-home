@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_docs/synth-patches.md",
+                "file": "_docs/expertise.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "synth-patches"
+              "title": "expertise"
             }
           }
         ]
@@ -192,8 +192,10 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "e3ae9734b80c0b53",
+  "active": "bdd931607c16b429",
   "lastOpenFiles": [
+    "_docs/about-me.md",
+    "_docs/synth-patches.md",
     "sitemap.xml",
     "_docs/website.md",
     "_docs/coffee-beans.md",
@@ -214,12 +216,10 @@
     "more.md",
     "obsidian-templates/coffee - properties.md",
     "_docs/coffee-roaster-rogue-wave.md.tmp.16781.1757010638627",
-    "_docs/about-me.md",
     "Test.md",
     "_projects/scout.md",
     "_projects/svg-pattern-generator.md",
     "_projects/espresso-accessories.md",
-    "_docs/synth-patches.md",
     "assets/images/PERC_PercUp_2025.jpg",
     "assets/images/PERC_DecafColombiaHuila_2025.jpg",
     "assets/images/PERC_UgandaNagasire_2025.jpg",
@@ -234,7 +234,6 @@
     "_site/espresso-accessories",
     "_site/scout/index.html",
     "_site/scout",
-    "_site/svg-pattern-generator/index.html",
     "_site/favicon.svg",
     "_site/favicon.png",
     "_site/assets/images/zen-coaster-thumbnail.svg",
