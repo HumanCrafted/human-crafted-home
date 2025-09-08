@@ -29,7 +29,7 @@ This website was built with the help of Claude Code, and inspired by [Steph Ango
 - **Git** - Version control with detailed commit history
 
 ### Development Tools
-- **Claude Code** - AI-powered development assistant for implementatio and edits
+- **Claude Code** - AI-powered development assistant for implementation, edits, and content prototyping.
 - **Figma** - Design reference and specifications
 - **VS Code** - Code editor
 

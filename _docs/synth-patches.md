@@ -32,4 +32,4 @@ A collection of synth patches and sounds (coming soon).
 
 Build your own patches with my Figma Community Resource
 
-[Synth Components and Patch Templates | Figma Community](https://www.figma.com/community/file/1347614670994807331/synth-components-and-patch-templates)
+[Synth Components and Patch Templates](https://www.figma.com/community/file/1347614670994807331/synth-components-and-patch-templates)
