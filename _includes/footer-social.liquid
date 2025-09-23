@@ -1,6 +1,6 @@
 {% for social in site.data.social %}
     {% if social.enabled %}
-        <a href="{{ social.url }}" aria-label="{{ social.aria_label }}" target="_blank" rel="noopener noreferrer">
+        <a href="{{ social.url }}" aria-label="{{ social.aria_label }}" target="_blank" rel="noopener noreferrer" data-umami-event="Social click" data-umami-event-platform="{{ social.name }}">
             {% case social.name %}
                 {% when 'Reddit' %}
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">

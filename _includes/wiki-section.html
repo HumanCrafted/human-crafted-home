@@ -1,6 +1,6 @@
 {% comment %} Wiki Section Include {% endcomment %}
 
-<details class="wiki-item"{% if include.open == "true" %} open{% endif %}>
+<details class="wiki-item"{% if include.open == "true" %} open{% endif %} data-wiki-section="{{ include.title }}">
 <summary class="wiki-header">{{ include.title }}</summary>
 <div class="wiki-content">
 <ul>

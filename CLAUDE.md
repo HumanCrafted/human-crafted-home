@@ -323,6 +323,25 @@ git checkout -b hover-experiment
   - Location: `_layouts/default.html` in `<head>` section
   - Loading: Uses `defer` attribute for optimal page load performance
 
+### Umami Event Tracking (September 23, 2025)
+- **Event Tracking Added**: Implemented custom event tracking for key user interactions
+- **Navigation Events**:
+  - Logo click tracking (`data-umami-event="Logo click"`)
+  - More navigation link (`data-umami-event="More nav"`)
+  - Let's co/lab CTA button on homepage (`data-umami-event="Colab CTA button"`)
+  - Let's co/lab navigation link on other pages (`data-umami-event="Colab nav"`)
+  - Theme toggle button (`data-umami-event="Theme toggle"`)
+  - Back navigation link (`data-umami-event="Back navigation"`)
+- **Social Media Tracking**:
+  - All footer social links tracked with platform name (`data-umami-event="Social click"` with `data-umami-event-platform` property)
+- **Content Interaction**:
+  - Wiki section expansions tracked via JavaScript (`Wiki section expanded` event with section name)
+  - Only tracks when sections are opened, not closed
+- **Implementation Methods**:
+  - Data attributes for simple click tracking (navigation, buttons, links)
+  - JavaScript event listeners for dynamic interactions (wiki sections)
+  - All tracking only active in production environment
+
 ---
 *Last updated: September 23, 2025*
 *Claude Code session documentation*

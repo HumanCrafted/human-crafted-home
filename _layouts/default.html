@@ -23,14 +23,14 @@
     <div class="site-container">
         <header class="site-header">
             <div class="header-content">
-                <a href="{{ '/' | relative_url }}" class="site-title">
+                <a href="{{ '/' | relative_url }}" class="site-title" data-umami-event="Logo click">
                     <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="{{ site.title }}" class="site-logo svg-darkmode">
                 </a>
                 <nav class="site-nav">
-                    <a href="{{ '/more/' | relative_url }}"{% if page.url contains '/more/' %} class="active"{% endif %}>More</a>
+                    <a href="{{ '/more/' | relative_url }}"{% if page.url contains '/more/' %} class="active"{% endif %} data-umami-event="More nav">More</a>
                     <div class="colab-link-wrapper">
                         {% if page.url == "/" %}
-                            <a href="{{ '/lab/' | relative_url }}" class="btn colab-btn{% if page.url contains '/lab/' %} active{% endif %}">
+                            <a href="{{ '/lab/' | relative_url }}" class="btn colab-btn{% if page.url contains '/lab/' %} active{% endif %}" data-umami-event="Colab CTA button">
                                 Let's co/lab
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M5 12h14"/>
@@ -38,10 +38,10 @@
                                 </svg>
                             </a>
                         {% else %}
-                            <a href="{{ '/lab/' | relative_url }}"{% if page.url contains '/lab/' %} class="active"{% endif %}>Let's co/lab</a>
+                            <a href="{{ '/lab/' | relative_url }}"{% if page.url contains '/lab/' %} class="active"{% endif %} data-umami-event="Colab nav">Let's co/lab</a>
                         {% endif %}
                     </div>
-                    <button class="theme-toggle" aria-label="Toggle theme">
+                    <button class="theme-toggle" aria-label="Toggle theme" data-umami-event="Theme toggle">
                         <svg class="theme-icon theme-icon-light" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="12" cy="12" r="5"/>
                             <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
@@ -60,7 +60,7 @@
                     <h1>{{ page.title }}</h1>
                     {% if page.collection == "docs" %}
                         <div class="project-meta">
-                            <a href="javascript:void(0)" onclick="goBack()" class="back-link">← Go Back</a>
+                            <a href="javascript:void(0)" onclick="goBack()" class="back-link" data-umami-event="Back navigation">← Go Back</a>
                             {% if page.tag %}
                               {% unless page.tag contains 'index' %}
                                 <div class="project-tags">
@@ -89,5 +89,23 @@
             </div>
         </footer>
     </div>
+
+    <!-- Umami event tracking for wiki sections -->
+    {% if jekyll.environment == "production" %}
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Track wiki section expansions
+        const wikiSections = document.querySelectorAll('.wiki-item[data-wiki-section]');
+        wikiSections.forEach(function(section) {
+            section.addEventListener('toggle', function(e) {
+                if (e.target.open && window.umami) {
+                    const sectionName = e.target.getAttribute('data-wiki-section');
+                    window.umami.track('Wiki section expanded', { section: sectionName });
+                }
+            });
+        });
+    });
+    </script>
+    {% endif %}
 </body>
 </html>
