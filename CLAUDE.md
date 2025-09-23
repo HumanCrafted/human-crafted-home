@@ -313,6 +313,16 @@ git checkout -b hover-experiment
 - **Security**: Removed `.env.local` file containing GitHub access token
 - **File Organization**: Cleaned up project structure while preserving necessary Obsidian and Jekyll files
 
+### Analytics Implementation (September 23, 2025)
+- **Added Umami Analytics**: Integrated privacy-first, cookieless analytics using Umami Cloud
+- **No Google Analytics**: Verified no existing Google Analytics code was present (clean implementation)
+- **Production-Only Tracking**: Analytics only loads in production environment via `jekyll.environment` check
+- **Implementation Details**:
+  - Script URL: `https://cloud.umami.is/script.js`
+  - Website ID: `e3e47e77-adfa-4b94-9cd4-3161e8b948f8`
+  - Location: `_layouts/default.html` in `<head>` section
+  - Loading: Uses `defer` attribute for optimal page load performance
+
 ---
-*Last updated: July 22, 2025*
+*Last updated: September 23, 2025*
 *Claude Code session documentation*

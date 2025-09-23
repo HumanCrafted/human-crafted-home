@@ -13,6 +13,11 @@
     <script src="{{ '/assets/js/theme.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
     {% seo %}
     {% feed_meta %}
+
+    <!-- Umami Analytics -->
+    {% if jekyll.environment == "production" %}
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="e3e47e77-adfa-4b94-9cd4-3161e8b948f8"></script>
+    {% endif %}
 </head>
 <body>
     <div class="site-container">
