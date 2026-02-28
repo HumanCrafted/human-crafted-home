@@ -8,9 +8,9 @@ roast_level: Light
 harvest: "2024"
 elevation: 1900-2100 MASL
 date_purchased: 2025-06-06
-date_roasted: 
+date_roasted:
 price: $20.00 / 250g
-rating_1-5: "3"
+rating_1-5: "2"
 tasting_notes:
   - Strawberry
   - Lychee
