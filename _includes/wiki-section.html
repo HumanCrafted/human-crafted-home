@@ -31,21 +31,22 @@
   {% endif %}
   
   {% if include.auto == "tool_docs" %}
-    {% assign tool_docs = site.docs | where_exp: "doc", "doc.tag contains 'tool'" %}
+    {% assign tool_docs = site.docs | where_exp: "doc", "doc.draft != true" | where_exp: "doc", "doc.tag contains 'tool'" %}
     {% for tool in tool_docs limit:item_limit %}
       <li><a href="{{ tool.url | relative_url }}">{{ tool.title }}</a></li>
     {% endfor %}
   {% endif %}
   
   {% if include.auto == "process_docs" %}
-    {% assign process_docs = site.docs | where_exp: "doc", "doc.tag contains 'process'" %}
+    {% assign process_docs = site.docs | where_exp: "doc", "doc.draft != true" | where_exp: "doc", "doc.tag contains 'process'" %}
     {% for doc in process_docs limit:item_limit %}
       <li><a href="{{ doc.url | relative_url }}">{{ doc.title }}</a></li>
     {% endfor %}
   {% endif %}
   
   {% if include.auto == "all_docs" %}
-    {% for doc in site.docs limit:item_limit %}
+    {% assign all_docs_filtered = site.docs | where_exp: "doc", "doc.draft != true" %}
+    {% for doc in all_docs_filtered limit:item_limit %}
       <li><a href="{{ doc.url | relative_url }}">{{ doc.title }}</a></li>
     {% endfor %}
   {% endif %}

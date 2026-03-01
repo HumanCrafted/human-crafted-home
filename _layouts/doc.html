@@ -2,6 +2,11 @@
 layout: default
 ---
 
+{% if page.draft %}
+<div class="doc-content">
+    <p><em>This page is a draft and not yet published.</em></p>
+</div>
+{% else %}
 <div class="doc-content">
     <!-- Doc metadata section -->
     {% if page.tool_type or page.specs %}
@@ -39,3 +44,4 @@ layout: default
     </div>
     {% endif %}
 </div>
+{% endif %}

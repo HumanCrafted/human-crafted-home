@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Pour Over
+title: Pour Over Coffee
 slug: pour-over
 main_image:
 featured: false
