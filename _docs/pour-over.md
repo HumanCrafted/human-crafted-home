@@ -17,13 +17,13 @@ My go-to pour over recipes.[^1]
 ### Equipment
 
 - [Fellow Stagg EKG Electric Kettle](https://amzn.to/40nU1tH)
-- Fellow Ode Grinder (Gen 1)
-- Hario V60 Drip Scale
+- [Fellow Ode Grinder (Gen 1)](https://amzn.to/4kZyiS2)
+- [Hario V60 Drip Scale](https://amzn.to/3MVQFuw)
 - OEM filters for each dripper
 
 ---
 
-### V60 / Kalita Wave
+### V60 / Kalita Wave Recipe
 
 
 | Detail          | Spec                    |
@@ -50,7 +50,7 @@ My go-to pour over recipes.[^1]
 
 ---
 
-### Chemex
+### Chemex Recipe
 
 
 | Detail          | Spec                     |
