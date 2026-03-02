@@ -11,7 +11,7 @@ gallery_images:
 version:
 draft: false
 ---
-**Specs:** 24" x 48" cutting area, X-Carve Pro
+**Specs:** 24" x 48" cutting area, X-Carve Pro  
 **Materials:** Wood, plywood, MDF, acrylic, foam
 
 ### Capabilities
@@ -27,11 +27,10 @@ draft: false
 - **Plywood** - Baltic birch and cabinet-grade for structural parts and enclosures
 - **MDF** - Templates, jigs, and painted finished parts
 - **Acrylic** - Signs, displays, and precision-cut components
-- **Foam** - Packaging inserts and prototyping
 
 ### Process
 
-1. **Design** in Fusion 360
+1. **Design** in Fusion 360, Illustrator, Affinity, or Figma
 2. **CAM** - Generate toolpaths and optimize for material
 3. **Setup** - Secure stock, set zero, verify tool
 4. **Cut** with optimized feeds and speeds
