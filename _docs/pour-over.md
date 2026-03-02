@@ -26,18 +26,18 @@ My go-to pour over recipes.[^1]
 ### V60 / Kalita Wave Recipe
 
 
-| Detail          | Spec                    |
-| --------------- | ----------------------- |
-| Coffee          | 21g                     |
-| Water           | 350g                    |
-| Ratio           | 1:16.7                  |
-| Grind           | ~5.3 (Fellow Ode Gen 1) |
-| Water Temp      | 93-96°C                 |
-| Total Brew Time | ~3:00 - 3:30            |
+| Detail          | Spec                                 |
+| --------------- | ------------------------------------ |
+| Coffee          | 21g                                  |
+| Water           | 350g (plus more for rinsing/warming) |
+| Ratio           | 1:16.7                               |
+| Grind           | ~5.3 (Fellow Ode Gen 1)              |
+| Water Temp      | 93-96°C                              |
+| Total Brew Time | ~3:00 - 3:30                         |
 
 **Process:**
 1. **Wet/Warm Filter** — With dripper over sink or prepping cup, pour enough water around filter to wet it.
-2. **Add Coffee** — Make a depression / hole in the middle without compacting the grounds.
+2. **Add Coffee** — Level the grounds, then make a depression / hole in the middle without compacting the grounds.
 3. **Bloom** — 0:00 to 0:45. Pour 50g of water, swirl gently to saturate all grounds. Let it bloom and degas.
 4. **First pour** — 0:45 to 1:15. Pour slowly in circles to 150g total. Aim for an even bed.
 5. **Second pour** — 1:15 to 1:45. Pour in circles to 250g total.
@@ -50,25 +50,25 @@ My go-to pour over recipes.[^1]
 
 ---
 
-### Chemex Recipe
+### Chemex Recipe (2 cups)
 
 
-| Detail          | Spec                     |
-| --------------- | ------------------------ |
-| Coffee          | 42g                      |
-| Water           | 720g (2 cups)            |
-| Ratio           | 1:17.1                   |
-| Grind           | ~6.67 (Fellow Ode Gen 1) |
-| Water Temp      | 93-96°C                  |
-| Total Brew Time | ~6:00 - 7:00             |
+| Detail          | Spec                                 |
+| --------------- | ------------------------------------ |
+| Coffee          | 42g                                  |
+| Water           | 720g (plus more for rinsing/warming) |
+| Ratio           | 1:17.1                               |
+| Grind           | ~6.67 (Fellow Ode Gen 1)             |
+| Water Temp      | 93-96°C                              |
+| Total Brew Time | ~6:00 - 7:00                         |
 
 **Process:**
 1. **Warm Filter** — Pour enough water around filter to warm it and the vessel up. Drain water in sink.
-2. **Add Coffee** — Make a depression / hole in the middle without compacting the grounds.
-3. **Bloom** — 0:00 to 0:45. Pour 100g of water over grounds. Give a gentle stir or swirl to make sure everything is wet.
-4. **First pour** — 0:45 to 1:45. Pour slowly in circles to 320g total. Keep the stream steady and avoid the edges of the filter.
-5. **Second pour** — 1:45 to 3:00. Continue pouring in circles to 520g total.
-6. **Third pour** — 3:00 to 4:00. Pour to 720g total.
+2. **Add Coffee** — Level the grounds, then make a depression / hole in the middle without compacting the grounds.
+3. **Bloom** — 0:00 to 1:00. Pour 100g of water over grounds. Give a gentle stir or swirl to make sure everything is wet.
+4. **First pour** — 1:00 to 2:30. Pour slowly in circles to 320g total. Keep the stream steady and avoid the edges of the filter.
+5. **Second pour** — 2:30 to 4:00. Continue pouring in circles to 520g total.
+6. **Third pour** — 4:00 to 4:30. Pour to 720g total.
 7. **Drawdown** — Let it drain completely. Should finish around 6:00 - 7:00.
 
 **Notes:** 
