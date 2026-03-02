@@ -16,10 +16,10 @@ This is a collection of all the tools and software I use in my design and fabric
 | **Type**                              | **Spec**                                                        |
 | ------------------------------------- | --------------------------------------------------------------- |
 | [Laser Cutter]({{ "/laser-cutter/" | relative_url }}) | 1300mm x 900mm 150 Watt CO2                                     |
-| CNC Router                            | 24 in x 48 in X-Carve Pro                                       |
+| [CNC Router]({{ "/cnc-router/" | relative_url }}) | 24 in x 48 in X-Carve Pro                                       |
 | Digital mockups                       | Figma, Illustrator,                                             |
 | Web design                            | Static Page Sites, Framer, Notion + Super, Webflow, Squarespace |
-| 3D Printer                            | 7 in x 7 in x 7 in, Prusa MINI+                                 |
+| [3D Printer]({{ "/3d-printer/" | relative_url }}) | 7 in x 7 in x 7 in, Prusa MINI+                                 |
 | CAD Design                            | [Fusion360]({{ "/fusion360/" | relative_url }})                                 |
 | Electronics mockups                   | Arduino, Raspberry Pi, IoT                                      |
 | Organization                          | Notion, Airtable, Mural, Figjam                                 |
