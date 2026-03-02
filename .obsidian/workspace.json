@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "more.md",
+                "file": "_docs/tools.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "more"
+              "title": "tools"
             }
           }
         ]
@@ -194,6 +194,7 @@
   },
   "active": "e4c86f238bfa9abf",
   "lastOpenFiles": [
+    "more.md",
     "_docs/3d-printer.md",
     "_docs/cnc-router.md",
     "_projects/scout.md",
@@ -219,7 +220,6 @@
     "_projects/wave-soap-tray.md",
     "_projects/water-wall-toys.md",
     "_projects/tissue-dispenser.md",
-    "_projects/svg-pattern-generator.md",
     "assets/images/PERC_ColombiaDiegoBermudezDecaf_Web1_2025.jpg",
     "assets/images/PERC_ColombiaDiegoBermudezDecaf_Web1_2025.jpg.webp",
     "assets/images/Colombia-LaderasEstateWashed.jpg",
