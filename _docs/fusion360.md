@@ -38,11 +38,13 @@ draft: false
 - **Product Design** - Consumer goods with aesthetic and functional requirements
 - **Technical Parts** - Precision components for mechanical systems
 
+{% assign fusion_projects = site.projects | where_exp: "project", "project.tools contains 'fusion360'" | sort: "published_date" | reverse %}
+{% if fusion_projects.size > 0 %}
 ## Recent Projects
 
-{% assign fusion_projects = site.projects | where_exp: "project", "project.tools contains 'fusion360'" | sort: "published_date" | reverse %}
 {% for project in fusion_projects limit: 8 %}
 - [{{ project.title }}]({{ project.url | relative_url }})
 {% endfor %}
 
 ---
+{% endif %}

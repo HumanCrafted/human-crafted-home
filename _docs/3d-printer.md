@@ -11,7 +11,7 @@ gallery_images:
 version:
 draft: false
 ---
-**Specs:** 7" x 7" x 7" build volume, Prusa MINI+
+**Specs:** 7" x 7" x 7" build volume, Prusa MINI
 **Materials:** PLA, PETG, ABS
 
 ### Capabilities
@@ -34,11 +34,14 @@ draft: false
 3. **Print** with tuned parameters for the material
 4. **Finishing** - support removal, sanding, assembly
 
+{% assign printer_projects = site.projects | where_exp: "project", "project.tools contains '3d-printer'" | sort: "published_date" | reverse %}
+{% if printer_projects.size > 0 %}
 ### Recent Projects
 
-{% assign printer_projects = site.projects | where_exp: "project", "project.tools contains '3d-printer'" | sort: "published_date" | reverse %}
 {% for project in printer_projects limit: 8 %}
 - [{{ project.title }}]({{ project.url | relative_url }})
 {% endfor %}
+- [View all 3D printing projects →](/?category=3d+printing#archive)
 
 ---
+{% endif %}

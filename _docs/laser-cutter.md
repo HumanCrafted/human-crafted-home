@@ -36,11 +36,14 @@ draft: false
 3. **Production** with optimized parameters
 4. **Finishing** - sanding, assembly, quality check
 
+{% assign laser_projects = site.projects | where_exp: "project", "project.tools contains 'laser-cutter'" | sort: "published_date" | reverse %}
+{% if laser_projects.size > 0 %}
 ### Recent Projects
 
-{% assign laser_projects = site.projects | where_exp: "project", "project.tools contains 'laser-cutter'" | sort: "published_date" | reverse %}
 {% for project in laser_projects limit: 8 %}
 - [{{ project.title }}]({{ project.url | relative_url }})
 {% endfor %}
+- [View all laser projects →](/?category=laser#archive)
 
 ---
+{% endif %}
