@@ -13,7 +13,7 @@ gallery_images:
 headline: 
 version: "1.0"
 tools:
-  - 3D printer
+  - 3d-printer
 process:
   - 3D printing
 ---

@@ -14,6 +14,7 @@ gallery_images:
 headline: A place for tacos
 version: "1.0"
 tools:
+  - 3d-printer
 process:
 ---
 

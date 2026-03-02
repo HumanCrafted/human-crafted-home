@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_docs/coffee-beans.md",
+                "file": "_docs/3d-printer.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "coffee-beans"
+              "title": "3d-printer"
             }
           }
         ]
@@ -194,15 +194,24 @@
   },
   "active": "e4c86f238bfa9abf",
   "lastOpenFiles": [
+    "_projects/bath-container.md",
+    "_docs/3d-printer.md",
+    "_projects/modern-doll-house.md",
+    "_projects/led-open-sign.md",
+    "_projects/abc-blocks.md",
+    "_projects/acrylic-trees.md",
+    "_projects/acrylic-deer-and-snowman.md",
+    "_projects/acrylic-robin.md",
+    "writing.md",
+    "more.md",
+    "_docs/about-me.md",
+    "_docs/coffee-beans.md",
     "_docs/espresso.md",
     "_docs/pour-over.md",
     "_docs/perc-columbia-huila-decaf.md",
-    "_docs/coffee-beans.md",
     "perc-columbia-huila-decaf.md",
     "_docs/perc-perc-up.md",
-    "more.md",
     "_docs/perc-uganda-nagasire.md",
-    "_docs/about-me.md",
     "_docs/voice-guide.md",
     "_docs/process.md",
     "_docs/tools.md",
@@ -215,16 +224,7 @@
     "_docs/swroasting-columbia-popayan-decaf.md",
     "assets/images/Colombia-LaderasEstateWashed.jpg",
     "assets/images/concrete-trays-thumbnail.svg",
-    "_docs/rogue-wave-granja-paradiso-decaf.md",
-    "_docs/coffee-roaster-swroasting.md",
-    "_docs/rogue-wave-huila-community-decaf.md",
-    "_docs/rogue-wave-yellow-sunset-decaf.md",
-    "_docs/expertise.md",
-    "_docs/synth-patches.md",
     "sitemap.xml",
-    "_docs/website.md",
-    "_docs/coffee-roaster-rogue-wave.md",
-    "_docs/perc-brazil-legender.md",
     "_docs/coffee-roaster-rogue-wave.md.tmp.16781.1757010638627",
     "assets/images/PERC_PercUp_2025.jpg",
     "assets/images/PERC_DecafColombiaHuila_2025.jpg",

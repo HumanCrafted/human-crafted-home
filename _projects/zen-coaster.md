@@ -13,6 +13,7 @@ gallery_images:
 headline: 
 version: "1.0"
 tools:
+  - 3d-printer
 process:
 ---
 
