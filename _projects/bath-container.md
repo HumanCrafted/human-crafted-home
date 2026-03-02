@@ -15,6 +15,7 @@ headline:
 version: "1.0"
 tools:
   - laser-cutter
+  - cnc-router
 process:
 ---
 

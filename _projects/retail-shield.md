@@ -7,10 +7,11 @@ featured: false
 categories:
   - laser
   - retail
+  - sheet metal
 published_date: 2020-05-14
 draft: false
-gallery_images: 
-headline: 
+gallery_images:
+headline:
 version: "1.0"
 tools:
   - laser-cutter

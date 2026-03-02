@@ -11,7 +11,7 @@ gallery_images:
 version:
 draft: false
 ---
-**Specs:** 7" x 7" x 7" build volume, Prusa MINI
+**Specs:** 7" x 7" x 7" build volume, Prusa MINI+
 **Materials:** PLA, PETG, ABS
 
 ### Capabilities
