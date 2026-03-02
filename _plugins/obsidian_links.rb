@@ -49,22 +49,27 @@ Jekyll::Hooks.register [:pages, :documents], :pre_render do |item|
       "![](#{baseurl}/assets/images/#{filename})"
     end
 
-    # Convert [[page-name|Display Text]] wiki-links in doc layouts
-    # Negative lookbehind for ' to avoid matching inside Liquid string arguments
-    item.content = item.content.gsub(/(?<!')\[\[([^\|\]]+)\|([^\]]+)\]\]/) do |match|
-      page_name = $1.strip
-      display_text = $2.strip
-      baseurl = item.site.config['baseurl'] || ''
-      "[#{display_text}](#{baseurl}/#{page_name}/)"
-    end
-
-    # Convert [[page-name]] wiki-links in doc layouts
-    # Negative lookbehind for ' to avoid matching inside Liquid string arguments
-    item.content = item.content.gsub(/(?<!')\[\[([^\]]+)\]\]/) do |match|
-      page_name = $1.strip
-      baseurl = item.site.config['baseurl'] || ''
-      "[#{page_name}](#{baseurl}/#{page_name}/)"
-    end
+    # Convert wiki-links in doc layouts, processing line by line
+    # to safely skip any lines containing Liquid tags
+    baseurl = item.site.config['baseurl'] || ''
+    item.content = item.content.lines.map do |line|
+      if line.include?('{%') || line.include?('{{')
+        line  # Leave Liquid lines untouched
+      else
+        # Convert [[page-name|Display Text]]
+        line = line.gsub(/\[\[([^\|\]]+)\|([^\]]+)\]\]/) do
+          page_name = $1.strip
+          display_text = $2.strip
+          "[#{display_text}](#{baseurl}/#{page_name}/)"
+        end
+        # Convert [[page-name]]
+        line = line.gsub(/(?<!!)\[\[([^\]]+)\]\]/) do
+          page_name = $1.strip
+          "[#{page_name}](#{baseurl}/#{page_name}/)"
+        end
+        line
+      end
+    end.join
   else
     # Full processing for simple markdown files without templates
     # Convert [[page-name|Display Text]] to [Display Text]({{ "/page-name/" | relative_url }})
