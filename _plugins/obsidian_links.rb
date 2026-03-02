@@ -50,7 +50,8 @@ Jekyll::Hooks.register [:pages, :documents], :pre_render do |item|
     end
 
     # Convert [[page-name|Display Text]] wiki-links in doc layouts
-    item.content = item.content.gsub(/\[\[([^\|\]]+)\|([^\]]+)\]\]/) do |match|
+    # Negative lookbehind for ' to avoid matching inside Liquid string arguments
+    item.content = item.content.gsub(/(?<!')\[\[([^\|\]]+)\|([^\]]+)\]\]/) do |match|
       page_name = $1.strip
       display_text = $2.strip
       baseurl = item.site.config['baseurl'] || ''
@@ -58,7 +59,8 @@ Jekyll::Hooks.register [:pages, :documents], :pre_render do |item|
     end
 
     # Convert [[page-name]] wiki-links in doc layouts
-    item.content = item.content.gsub(/\[\[([^\]]+)\]\]/) do |match|
+    # Negative lookbehind for ' to avoid matching inside Liquid string arguments
+    item.content = item.content.gsub(/(?<!')\[\[([^\]]+)\]\]/) do |match|
       page_name = $1.strip
       baseurl = item.site.config['baseurl'] || ''
       "[#{page_name}](#{baseurl}/#{page_name}/)"
