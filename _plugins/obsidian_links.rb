@@ -42,11 +42,26 @@ Jekyll::Hooks.register [:pages, :documents], :pre_render do |item|
       "[#{display_text}](#{baseurl}/#{filename}/)"
     end
     
-    # Convert Obsidian image syntax ![[image.ext]] to Jekyll format (for template files)
+    # Convert Obsidian image syntax ![[image.ext]] to Jekyll format (must run before wiki-link conversion)
     item.content = item.content.gsub(/!\[\[([^\]]+\.(jpg|jpeg|png|gif|svg|webp))\]\]/i) do |match|
       filename = $1.strip
       baseurl = item.site.config['baseurl'] || ''
       "![](#{baseurl}/assets/images/#{filename})"
+    end
+
+    # Convert [[page-name|Display Text]] wiki-links in doc layouts
+    item.content = item.content.gsub(/\[\[([^\|\]]+)\|([^\]]+)\]\]/) do |match|
+      page_name = $1.strip
+      display_text = $2.strip
+      baseurl = item.site.config['baseurl'] || ''
+      "[#{display_text}](#{baseurl}/#{page_name}/)"
+    end
+
+    # Convert [[page-name]] wiki-links in doc layouts
+    item.content = item.content.gsub(/\[\[([^\]]+)\]\]/) do |match|
+      page_name = $1.strip
+      baseurl = item.site.config['baseurl'] || ''
+      "[#{page_name}](#{baseurl}/#{page_name}/)"
     end
   else
     # Full processing for simple markdown files without templates
