@@ -15,7 +15,7 @@ This is a collection of all the tools and software I use in my design and fabric
 
 | **Type**                           | **Spec**                                                        |                                                             |
 | ---------------------------------- | --------------------------------------------------------------- | ----------------------------------------------------------- |
-| [Laser Cutter]({{ "/laser-cutter/" | relative_url }})                                                | 1300mm x 900mm 150 Watt CO2                                 |
+| [Laser Cutter]({{ "/laser-cutter/" | relative_url }})                                                | 1300mm x 900mm 150 Watt CO2, LightBurn                      |
 | [CNC Router]({{ "/cnc-router/"     | relative_url }})                                                | 24 in x 48 in X-Carve Pro                                   |
 | Digital mockups                    | Figma, Affinity, Illustrator                                    |                                                             |
 | Web design                         | Static Page Sites, Framer, Notion + Super, Webflow, Squarespace |                                                             |
