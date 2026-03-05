@@ -14,11 +14,15 @@ draft: false
 
 My go-to pour over recipes.[^1]
 
+![](../assets/images/coffee-bar-photo.jpeg)
+
 ### Equipment
 
 - [Fellow Stagg EKG Electric Kettle](https://amzn.to/40nU1tH)
 - [Fellow Ode Grinder (Gen 1)](https://amzn.to/4kZyiS2)
 - [Hario V60 Drip Scale](https://amzn.to/3MVQFuw)
+- Hario V60 Ceramic
+- Chemex Clear
 - OEM filters for each dripper
 
 ---

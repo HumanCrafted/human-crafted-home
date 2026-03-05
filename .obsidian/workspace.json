@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_docs/espresso.md",
+                "file": "_docs/pour-over.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "espresso"
+              "title": "pour-over"
             }
           }
         ]
@@ -194,8 +194,12 @@
   },
   "active": "e4c86f238bfa9abf",
   "lastOpenFiles": [
-    "_docs/perc-columbia-diego-bermudez-decaf.md",
+    "assets/images/coffee-bar-photo.jpeg",
+    "_docs/pour-over.md",
+    "assets/images/IMG_2430.jpeg",
+    "assets/images/IMG_2430.jpeg.sb-b51948f8-i10JFO",
     "_docs/espresso.md",
+    "_docs/perc-columbia-diego-bermudez-decaf.md",
     "_docs/perc-columbia-huila-decaf.md",
     "_docs/tools.md",
     "more.md",
@@ -218,8 +222,6 @@
     "_projects/everthine-jewelry-stand.md",
     "_projects/fellow-brush-stand.md",
     "_projects/espresso-accessories.md",
-    "_projects/zen-coaster.md",
-    "_projects/concentric-coaster.md",
     "assets/images/PERC_ColombiaDiegoBermudezDecaf_Web1_2025.jpg",
     "assets/images/PERC_ColombiaDiegoBermudezDecaf_Web1_2025.jpg.webp",
     "assets/images/Colombia-LaderasEstateWashed.jpg",
@@ -234,11 +236,8 @@
     "_plugins/obsidian_links.rb",
     "_site/synth-patches/index.html",
     "_site/synth-patches",
-    "assets/images/Apple.svg",
     "_site/espresso-accessories/index.html",
     "_site/espresso-accessories",
-    "_site/scout/index.html",
-    "_site/scout",
-    "_site/favicon.svg"
+    "_site/scout/index.html"
   ]
 }
