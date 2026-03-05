@@ -21,8 +21,9 @@ My go-to pour over recipes.[^1]
 - [Fellow Stagg EKG Electric Kettle](https://amzn.to/40nU1tH)
 - [Fellow Ode Grinder (Gen 1)](https://amzn.to/4kZyiS2)
 - [Hario V60 Drip Scale](https://amzn.to/3MVQFuw)
-- Hario V60 Ceramic
-- Chemex Clear
+- [Hario V60 Dripper 02](https://amzn.to/47sooCT) 
+- [Kalita Wave Series 185](https://amzn.to/4aRRZIh) 
+- [Chemex - Glass Handle Series](https://amzn.to/4sof9vB)
 - OEM filters for each dripper
 
 ---
