@@ -5,12 +5,12 @@ origin: Limu, Ethiopia
 process:
   - Washed
 roast_level: Light
-harvest: 
+harvest:
 elevation: 1850 MASL
 date_purchased: 2025-07-18
 date_roasted: 2025-07-17
 price: $19.00 / 12oz
-rating_1-5: "4"
+rating_1-5: "3"
 tasting_notes:
   - Baking Spices
   - Toffee
