@@ -34,8 +34,13 @@ views:
       - fat
       - fiber
       - sugar
+    sort:
+      - property: file.name
+        direction: ASC
     summaries:
       calories: Sum
       protein: Sum
       carbs: Sum
       fat: Sum
+      fiber: Sum
+      sugar: Sum
