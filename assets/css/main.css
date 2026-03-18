@@ -1232,6 +1232,23 @@ hr {
   border-bottom: none;
 }
 
+.food-copy-btn {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  background: transparent;
+  border: 1px solid var(--foreground);
+  color: var(--foreground);
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.food-copy-btn:hover {
+  background: var(--foreground);
+  color: var(--background);
+}
+
 @media (max-width: 768px) {
   .nutrition-table {
     font-size: 0.8rem;

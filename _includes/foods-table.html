@@ -5,6 +5,7 @@
   <table class="nutrition-table">
     <thead>
       <tr>
+        <th></th>
         <th>Food</th>
         <th>Brand</th>
         <th>Category</th>
@@ -19,6 +20,13 @@
     <tbody>
       {% for food in foods %}
       <tr>
+        <td>
+          <button
+            class="food-copy-btn"
+            data-text="{{ food.title }} ({{ food.serving }}): {{ food.calories }} cal | {{ food.protein }}g protein | {{ food.carbs }}g carbs | {{ food.fat }}g fat | {{ food.fiber }}g fiber"
+            title="Copy to clipboard"
+          >copy</button>
+        </td>
         <td>{{ food.title }}</td>
         <td>{{ food.brand }}</td>
         <td>{{ food.category }}</td>
@@ -31,7 +39,18 @@
       </tr>
       {% endfor %}
     </tbody>
-
   </table>
 </div>
+
+<script>
+  document.querySelectorAll('.food-copy-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var text = btn.getAttribute('data-text');
+      navigator.clipboard.writeText(text).then(function() {
+        btn.textContent = '✓';
+        setTimeout(function() { btn.textContent = 'copy'; }, 1500);
+      });
+    });
+  });
+</script>
 {% endif %}
