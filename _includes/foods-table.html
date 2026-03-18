@@ -5,7 +5,6 @@
   <table class="nutrition-table">
     <thead>
       <tr>
-        <th></th>
         <th>Food</th>
         <th>Brand</th>
         <th>Category</th>
@@ -15,18 +14,12 @@
         <th>Carbs</th>
         <th>Fat</th>
         <th>Fiber</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
       {% for food in foods %}
       <tr>
-        <td>
-          <button
-            class="food-copy-btn"
-            data-text="{{ food.title }} ({{ food.serving }}): {{ food.calories }} cal | {{ food.protein }}g protein | {{ food.carbs }}g carbs | {{ food.fat }}g fat | {{ food.fiber }}g fiber"
-            title="Copy to clipboard"
-          >copy</button>
-        </td>
         <td>{{ food.title }}</td>
         <td>{{ food.brand }}</td>
         <td>{{ food.category }}</td>
@@ -36,6 +29,21 @@
         <td>{{ food.carbs }}g</td>
         <td>{{ food.fat }}g</td>
         <td>{{ food.fiber }}g</td>
+        <td>
+          <button
+            class="food-copy-btn"
+            data-text="{{ food.title }} ({{ food.serving }}): {{ food.calories }} cal | {{ food.protein }}g protein | {{ food.carbs }}g carbs | {{ food.fat }}g fat | {{ food.fiber }}g fiber"
+            title="Copy to clipboard"
+          >
+            <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="2" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </button>
+        </td>
       </tr>
       {% endfor %}
     </tbody>
@@ -47,8 +55,12 @@
     btn.addEventListener('click', function() {
       var text = btn.getAttribute('data-text');
       navigator.clipboard.writeText(text).then(function() {
-        btn.textContent = '✓';
-        setTimeout(function() { btn.textContent = 'copy'; }, 1500);
+        btn.querySelector('.copy-icon').style.display = 'none';
+        btn.querySelector('.check-icon').style.display = 'inline';
+        setTimeout(function() {
+          btn.querySelector('.copy-icon').style.display = 'inline';
+          btn.querySelector('.check-icon').style.display = 'none';
+        }, 1500);
       });
     });
   });

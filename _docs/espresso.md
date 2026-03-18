@@ -47,4 +47,14 @@ An espresso shot log (not a professional, just tracking so I can go back to what
 - **Dose:** 18g → **Yield:** 43g → **Time:** 23s
 - Thin flow, limited channeling.  Good flavor.
 
+**03/15/2026** — [[perc-columbia-diego-bermudez-decaf|Colombia Diego Bermudez Decaf]]
+- **Grinder:** 1Zpresso J-Ultra @ 1.1.5
+- **Dose:** 18g → **Yield:** g → **Time:** s
+- Good flow, limited channeling.  Good flavor.
+
+**03/18/2026** — [[perc-columbia-huila-decaf|Colombia Huila Decaf]]
+- **Grinder:** 1Zpresso J-Ultra @ 1.2.5
+- **Dose:** 18g → **Yield:** g → **Time:** s
+- Thin flow, limited channeling, more sour flavor
+
 [^1]: Some links on this page are affiliate links. I earn a small commission if you purchase through them, at no extra cost to you.
