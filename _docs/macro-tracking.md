@@ -9,10 +9,8 @@ tags:
 published_date: 2026-03-18
 draft: false
 ---
-This is where I track the foods I eat regularly — macros per serving so I can build meals without doing math in my head every time.
+This is where I store the foods I eat regularly and their macros per serving.  I will be using this Obsidian Base and its source folder of food markdown files as the working directory for Claude Cowork so I can have it's assistance calculating daily macros.
 
-### How it works
-
-Each food is a note with frontmatter storing the nutritional data — calories, protein, carbs, fat per serving. The database view in Obsidian pulls all of them together in one table.
+### Foods with Macros
 
 ![[foods.base]]

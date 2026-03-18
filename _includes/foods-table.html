@@ -31,26 +31,7 @@
       </tr>
       {% endfor %}
     </tbody>
-    <tfoot>
-      {% assign total_cal = 0 %}
-      {% assign total_protein = 0 %}
-      {% assign total_carbs = 0 %}
-      {% assign total_fat = 0 %}
-      {% for food in foods %}
-        {% assign total_cal = total_cal | plus: food.calories %}
-        {% assign total_protein = total_protein | plus: food.protein %}
-        {% assign total_carbs = total_carbs | plus: food.carbs %}
-        {% assign total_fat = total_fat | plus: food.fat %}
-      {% endfor %}
-      <tr class="nutrition-totals">
-        <td colspan="4">Total ({{ foods.size }} foods)</td>
-        <td>{{ total_cal }}</td>
-        <td>{{ total_protein }}g</td>
-        <td>{{ total_carbs }}g</td>
-        <td>{{ total_fat }}g</td>
-        <td>—</td>
-      </tr>
-    </tfoot>
+
   </table>
 </div>
 {% endif %}
