@@ -1236,17 +1236,18 @@ hr {
   background: transparent;
   border: none;
   padding: 0.25rem;
-  color: var(--muted-foreground);
+  color: var(--foreground);
+  opacity: 0.45;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 3px;
-  transition: color 0.15s;
+  transition: opacity 0.15s;
 }
 
 .food-copy-btn:hover {
-  color: var(--foreground);
+  opacity: 1;
 }
 
 .food-copy-btn .check-icon {
