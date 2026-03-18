@@ -1,0 +1,41 @@
+filters: file.inFolder("_nutrition/foods")
+properties:
+  file.name:
+    displayName: Food
+  brand:
+    displayName: Brand
+  category:
+    displayName: Category
+  serving:
+    displayName: Serving
+  calories:
+    displayName: Calories
+  protein:
+    displayName: Protein (g)
+  carbs:
+    displayName: Carbs (g)
+  fat:
+    displayName: Fat (g)
+  fiber:
+    displayName: Fiber (g)
+  sugar:
+    displayName: Sugar (g)
+views:
+  - type: table
+    name: All Foods
+    order:
+      - file.name
+      - brand
+      - category
+      - serving
+      - calories
+      - protein
+      - carbs
+      - fat
+      - fiber
+      - sugar
+    summaries:
+      calories: Sum
+      protein: Sum
+      carbs: Sum
+      fat: Sum

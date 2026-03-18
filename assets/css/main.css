@@ -1196,6 +1196,53 @@ hr {
   }
 }
 
+/* Nutrition Table Styling */
+.nutrition-table-wrap {
+  margin: 2rem 0;
+  overflow-x: auto;
+}
+
+.nutrition-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.nutrition-table th,
+.nutrition-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--muted);
+  white-space: nowrap;
+}
+
+.nutrition-table th {
+  font-weight: 700;
+  background-color: rgba(223, 215, 200, 0.3);
+  border-bottom: 2px solid var(--foreground);
+}
+
+[data-theme="dark"] .nutrition-table th {
+  background-color: rgba(51, 51, 51, 0.3);
+}
+
+.nutrition-table tfoot td {
+  font-weight: 700;
+  border-top: 2px solid var(--foreground);
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .nutrition-table {
+    font-size: 0.8rem;
+  }
+
+  .nutrition-table th,
+  .nutrition-table td {
+    padding: 0.5rem;
+  }
+}
+
 /* Footnotes styling */
 .footnotes {
   margin-top: 3rem;

@@ -1,0 +1,56 @@
+{% assign foods = site.nutrition | where_exp: "item", "item.relative_path contains 'foods/'" | sort: "category" %}
+
+{% if foods.size > 0 %}
+<div class="nutrition-table-wrap">
+  <table class="nutrition-table">
+    <thead>
+      <tr>
+        <th>Food</th>
+        <th>Brand</th>
+        <th>Category</th>
+        <th>Serving</th>
+        <th>Cal</th>
+        <th>Protein</th>
+        <th>Carbs</th>
+        <th>Fat</th>
+        <th>Fiber</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for food in foods %}
+      <tr>
+        <td>{{ food.title }}</td>
+        <td>{{ food.brand }}</td>
+        <td>{{ food.category }}</td>
+        <td>{{ food.serving }}</td>
+        <td>{{ food.calories }}</td>
+        <td>{{ food.protein }}g</td>
+        <td>{{ food.carbs }}g</td>
+        <td>{{ food.fat }}g</td>
+        <td>{{ food.fiber }}g</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+    <tfoot>
+      {% assign total_cal = 0 %}
+      {% assign total_protein = 0 %}
+      {% assign total_carbs = 0 %}
+      {% assign total_fat = 0 %}
+      {% for food in foods %}
+        {% assign total_cal = total_cal | plus: food.calories %}
+        {% assign total_protein = total_protein | plus: food.protein %}
+        {% assign total_carbs = total_carbs | plus: food.carbs %}
+        {% assign total_fat = total_fat | plus: food.fat %}
+      {% endfor %}
+      <tr class="nutrition-totals">
+        <td colspan="4">Total ({{ foods.size }} foods)</td>
+        <td>{{ total_cal }}</td>
+        <td>{{ total_protein }}g</td>
+        <td>{{ total_carbs }}g</td>
+        <td>{{ total_fat }}g</td>
+        <td>—</td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+{% endif %}

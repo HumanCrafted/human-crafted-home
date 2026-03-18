@@ -42,6 +42,12 @@ Jekyll::Hooks.register [:pages, :documents], :pre_render do |item|
       "[#{display_text}](#{baseurl}/#{filename}/)"
     end
     
+    # Convert ![[filename.base]] embeds to Jekyll includes
+    item.content = item.content.gsub(/!\[\[([^\]]+)\.base\]\]/) do |match|
+      base_name = $1.strip
+      "{% include #{base_name}-table.html %}"
+    end
+
     # Convert Obsidian image syntax ![[image.ext]] to Jekyll format (must run before wiki-link conversion)
     item.content = item.content.gsub(/!\[\[([^\]]+\.(jpg|jpeg|png|gif|svg|webp))\]\]/i) do |match|
       filename = $1.strip

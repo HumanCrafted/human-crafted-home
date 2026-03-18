@@ -17,6 +17,7 @@ plugins:
 # Exclude from processing
 exclude:
   - .obsidian/
+  - "**/*.base"
   - Gemfile
   - Gemfile.lock
   - node_modules
@@ -36,6 +37,8 @@ collections:
   projects:
     output: true
     permalink: /:slug/
+  nutrition:
+    output: false
 
 # Obsidian-friendly settings
 kramdown:
