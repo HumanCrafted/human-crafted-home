@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_docs/macro-tracking.md",
+                "file": "_docs/dog-food.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "macro-tracking"
+              "title": "dog-food"
             }
           }
         ]
@@ -194,13 +194,20 @@
   },
   "active": "e4c86f238bfa9abf",
   "lastOpenFiles": [
+    "_docs/macro-tracking.md",
+    "_docs/dog-food.md",
+    "_includes/dog-food-table.html",
+    "obsidian-templates/dog - food.md",
+    "_dog/dog-food.base",
+    "_dog/food/purina-pro-plan-small-breed-shredded-chicken.md",
+    "_dog/food",
+    "_dog",
     "_nutrition/foods/pb-cookie-energy-bites.md",
     "_nutrition/foods/werthers-original-candy.md",
     "_nutrition/foods/espresso-latte-small.md",
     "_nutrition/foods/homemade-espresso-latte-small.md",
     "_nutrition/foods/fairlife-core-power-26g-strawberry-banana.md",
     "_docs/espresso.md",
-    "_docs/macro-tracking.md",
     "_includes/foods-table.html",
     "_docs/laser-cutter.md",
     "_includes/nutrition-table.html",
@@ -213,8 +220,6 @@
     "_docs/nutrition/foods.base",
     "_docs/nutrition/foods/_food-template.md",
     "_docs/nutrition/foods/kodiak-peak-oatmeal-maple-brown-sugar.md",
-    "_docs/nutrition/foods",
-    "_docs/nutrition",
     "_docs/pour-over.md",
     "obsidian-templates/link - web link.md",
     "obsidian-templates/post - article coming soon....md",
@@ -222,20 +227,15 @@
     "obsidian-templates/project - properties.md",
     "assets/images/coffee-bar-photo.jpeg",
     "assets/images/IMG_2430.jpeg",
-    "assets/images/IMG_2430.jpeg.sb-b51948f8-i10JFO",
     "_docs/perc-columbia-diego-bermudez-decaf.md",
     "_docs/perc-columbia-huila-decaf.md",
     "_docs/tools.md",
     "more.md",
     "_docs/3d-printer.md",
-    "_docs/cnc-router.md",
-    "_projects/scout.md",
-    "_projects/retail-shield.md",
     "assets/images/PERC_ColombiaDiegoBermudezDecaf_Web1_2025.jpg",
     "assets/images/PERC_ColombiaDiegoBermudezDecaf_Web1_2025.jpg.webp",
     "assets/images/Colombia-LaderasEstateWashed.jpg",
     "assets/images/concrete-trays-thumbnail.svg",
-    "sitemap.xml",
     "assets/images/PERC_PercUp_2025.jpg",
     "assets/images/PERC_DecafColombiaHuila_2025.jpg",
     "assets/images/PERC_UgandaNagasire_2025.jpg",

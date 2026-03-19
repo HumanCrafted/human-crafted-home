@@ -1,0 +1,27 @@
+filters: file.inFolder("_dog/food")
+properties:
+  file.name:
+    displayName: Food
+  brand:
+    displayName: Brand
+  qty:
+    displayName: Qty (g)
+  kcal_per_gram:
+    displayName: kcal/g
+  kcal_per_kg:
+    displayName: kcal/kg
+  kcal_per_cup:
+    displayName: kcal/cup
+views:
+  - type: table
+    name: Dog Food
+    order:
+      - file.name
+      - brand
+      - qty
+      - kcal_per_gram
+      - kcal_per_kg
+      - kcal_per_cup
+    sort:
+      - property: file.name
+        direction: ASC

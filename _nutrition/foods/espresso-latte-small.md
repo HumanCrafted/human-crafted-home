@@ -2,7 +2,7 @@
 title: Espresso Latte (Small)
 brand: Homemade
 category: beverage
-serving: "1 latte (2 shots espresso + 125g 2% milk)"
+serving: 1 latte (g)
 calories: 67
 protein: 5
 carbs: 7

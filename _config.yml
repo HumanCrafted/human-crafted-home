@@ -39,6 +39,8 @@ collections:
     permalink: /:slug/
   nutrition:
     output: false
+  dog:
+    output: false
 
 # Obsidian-friendly settings
 kramdown:
