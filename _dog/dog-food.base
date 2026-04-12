@@ -12,6 +12,8 @@ properties:
     displayName: kcal/kg
   kcal_per_cup:
     displayName: kcal/cup
+  kcal_per_treat:
+    displayName: kcal/treat
 views:
   - type: table
     name: Dog Food
@@ -22,6 +24,7 @@ views:
       - kcal_per_gram
       - kcal_per_kg
       - kcal_per_cup
+      - kcal_per_treat
     sort:
       - property: file.name
         direction: ASC
