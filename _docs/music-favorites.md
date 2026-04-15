@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: Favorite Tracks
-slug: music-favorites
+title: Music
+slug: music
 main_image:
 featured: false
 tags:
@@ -12,7 +12,7 @@ draft: false
 
 A running list of tracks that have stuck — ambient, electronic, and otherwise. Maintained here so it lives outside Apple Music.
 
-{% assign tracks = site.music | sort: "artist" %}
+{% assign tracks = site.music | where_exp: "item", "item.artist != nil" | sort: "artist" %}
 {% if tracks.size > 0 %}
 <table class="music-table">
   <thead>
