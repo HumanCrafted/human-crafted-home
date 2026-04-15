@@ -41,6 +41,8 @@ collections:
     output: false
   dog:
     output: false
+  music:
+    output: false
 
 # Obsidian-friendly settings
 kramdown:

@@ -1,0 +1,5 @@
+---
+title: MINING
+name:
+origin:
+---

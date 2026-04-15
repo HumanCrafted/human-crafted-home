@@ -11,14 +11,13 @@
             "id": "e4c86f238bfa9abf",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "bases",
               "state": {
-                "file": "_docs/dog-food.md",
-                "mode": "source",
-                "source": false
+                "file": "_music/tracks.base",
+                "viewName": "Favorite Tracks"
               },
-              "icon": "lucide-file",
-              "title": "dog-food"
+              "icon": "lucide-table",
+              "title": "tracks"
             }
           }
         ]
@@ -194,6 +193,18 @@
   },
   "active": "e4c86f238bfa9abf",
   "lastOpenFiles": [
+    "_music/artists.base",
+    "_music/tracks.base",
+    "_music/artists/dj-koze.md",
+    "_music/artists/stubbleman.md",
+    "_music/artists/mining.md",
+    "_music/artists/four-tet.md",
+    "_music/artists/jon-hopkins.md",
+    "_music/artists/kelly-moran.md",
+    "_music/artists/lawrence-english.md",
+    "_music/artists/loscil.md",
+    "_music/artists",
+    "_docs/dog-food.md",
     "_dog/food/kong-easy-treat-bacon-cheese.md",
     "_dog/food/crumps-freeze-dried-beef-liver-mini-trainers.md",
     "_dog/food/bocces-peanut-butter-banana-soft-chewy.md",
@@ -209,27 +220,15 @@
     "_dog/food/purina-one-classic-ground-chicken-brown-rice.md",
     "_dog/food/fromm-crunchy-os-peanut-butter-jammers.md",
     "_docs/macro-tracking.md",
-    "_docs/dog-food.md",
     "_includes/dog-food-table.html",
     "obsidian-templates/dog - food.md",
     "_dog/dog-food.base",
-    "_dog/food/purina-pro-plan-small-breed-shredded-chicken.md",
     "_dog/food",
     "_dog",
-    "_nutrition/foods/pb-cookie-energy-bites.md",
-    "_nutrition/foods/werthers-original-candy.md",
-    "_nutrition/foods/espresso-latte-small.md",
-    "_nutrition/foods/homemade-espresso-latte-small.md",
-    "_nutrition/foods/fairlife-core-power-26g-strawberry-banana.md",
-    "_docs/espresso.md",
     "_includes/foods-table.html",
-    "_docs/laser-cutter.md",
     "_includes/nutrition-table.html",
-    "obsidian-templates/nutrition - food.md",
     "_nutrition/foods.base",
     "_nutrition/foods",
-    "_nutrition",
-    "_docs/nutrition/foods.base",
     "assets/images/coffee-bar-photo.jpeg",
     "assets/images/IMG_2430.jpeg",
     "assets/images/PERC_ColombiaDiegoBermudezDecaf_Web1_2025.jpg",

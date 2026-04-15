@@ -1,0 +1,23 @@
+filters: file.inFolder("_music/tracks")
+properties:
+  file.name:
+    displayName: File
+  title:
+    displayName: Title
+  artist:
+    displayName: Artist
+  album:
+    displayName: Album
+  year:
+    displayName: Year
+views:
+  - type: table
+    name: Favorite Tracks
+    order:
+      - title
+      - artist
+      - album
+      - year
+    sort:
+      - property: artist
+        direction: ASC

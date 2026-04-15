@@ -1,0 +1,20 @@
+filters: file.inFolder("_music/artists")
+properties:
+  file.name:
+    displayName: File
+  title:
+    displayName: Artist
+  name:
+    displayName: Real Name
+  origin:
+    displayName: Origin
+views:
+  - type: table
+    name: Artists
+    order:
+      - title
+      - name
+      - origin
+    sort:
+      - property: title
+        direction: ASC
