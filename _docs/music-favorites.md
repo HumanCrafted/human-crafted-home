@@ -35,5 +35,3 @@ A running list of tracks that have stuck — ambient, electronic, and otherwise.
   </tbody>
 </table>
 {% endif %}
-
-![[tracks.base]]

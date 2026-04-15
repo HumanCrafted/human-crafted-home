@@ -11,13 +11,14 @@
             "id": "e4c86f238bfa9abf",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "_music/tracks.base",
-                "viewName": "Favorite Tracks"
+                "file": "_docs/music-favorites.md",
+                "mode": "preview",
+                "source": false
               },
-              "icon": "lucide-table",
-              "title": "tracks"
+              "icon": "lucide-file",
+              "title": "music-favorites"
             }
           }
         ]
@@ -193,8 +194,10 @@
   },
   "active": "e4c86f238bfa9abf",
   "lastOpenFiles": [
-    "_music/artists.base",
+    "_docs/dog-food.md",
+    "_docs/music-favorites.md",
     "_music/tracks.base",
+    "_music/artists.base",
     "_music/artists/dj-koze.md",
     "_music/artists/stubbleman.md",
     "_music/artists/mining.md",
@@ -204,7 +207,6 @@
     "_music/artists/lawrence-english.md",
     "_music/artists/loscil.md",
     "_music/artists",
-    "_docs/dog-food.md",
     "_dog/food/kong-easy-treat-bacon-cheese.md",
     "_dog/food/crumps-freeze-dried-beef-liver-mini-trainers.md",
     "_dog/food/bocces-peanut-butter-banana-soft-chewy.md",
@@ -228,7 +230,6 @@
     "_includes/foods-table.html",
     "_includes/nutrition-table.html",
     "_nutrition/foods.base",
-    "_nutrition/foods",
     "assets/images/coffee-bar-photo.jpeg",
     "assets/images/IMG_2430.jpeg",
     "assets/images/PERC_ColombiaDiegoBermudezDecaf_Web1_2025.jpg",
