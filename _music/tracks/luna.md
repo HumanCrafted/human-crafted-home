@@ -1,6 +1,12 @@
 ---
 title: "Luna"
 artist: "Perko"
-album: ""
-year: 
+album: "The City Rings"
+year: 2020
+genre: ambient
+mood: minimal
+tags:
+  - ambient
+  - electronic
+  - minimal
 ---

@@ -1,6 +1,12 @@
 ---
 title: "Obsolescence"
 artist: "Feater"
-album: ""
-year: 
+album: "Obsolescence"
+year: 2025
+genre: downtempo
+mood: dark
+tags:
+  - electronic
+  - downtempo
+  - experimental
 ---

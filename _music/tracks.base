@@ -10,6 +10,12 @@ properties:
     displayName: Album
   year:
     displayName: Year
+  genre:
+    displayName: Genre
+  mood:
+    displayName: Mood
+  tags:
+    displayName: Tags
 views:
   - type: table
     name: Favorite Tracks
@@ -18,6 +24,13 @@ views:
       - artist
       - album
       - year
+      - genre
+      - mood
+      - tags
     sort:
       - property: artist
         direction: ASC
+    columnSize:
+      note.artist: 198
+      note.album: 252
+      note.year: 67

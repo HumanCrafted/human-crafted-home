@@ -1,6 +1,12 @@
 ---
 title: "Lion (Jamie XX Remix)"
 artist: "Four Tet"
-album: ""
-year: 
+album: "Pink Remixes"
+year: 2014
+genre: IDM
+mood: rhythmic
+tags:
+  - electronic
+  - IDM
+  - rhythmic
 ---

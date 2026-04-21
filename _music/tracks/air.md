@@ -1,6 +1,11 @@
 ---
 title: "Air"
 artist: "Jessie Marcella"
-album: ""
-year: 
+album: "Air"
+year: 2025
+genre: neo-classical
+mood: meditative
+tags:
+  - neo-classical
+  - ambient
 ---

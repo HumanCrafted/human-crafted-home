@@ -1,6 +1,12 @@
 ---
 title: "Middens to Skyscrapers"
 artist: "JWPaton"
-album: ""
-year: 
+album: "Submerged"
+year: 2024
+genre: drone
+mood: textural
+tags:
+  - ambient
+  - drone
+  - experimental
 ---
