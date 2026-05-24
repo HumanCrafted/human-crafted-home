@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_projects/cord-keeper.md",
+                "file": "_docs/pour-over.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "cord-keeper"
+              "title": "pour-over"
             }
           }
         ]
@@ -194,6 +194,13 @@
   },
   "active": "050d360083c9938e",
   "lastOpenFiles": [
+    "_docs/rogue-wave-huila-community-decaf.md",
+    "_docs/rogue-wave-granja-paradiso-decaf.md",
+    "_docs/rogue-wave-columbia-laderas-estate.md",
+    "_docs/rogue-wave-yellow-sunset-decaf.md",
+    "_docs/swroasting-columbia-popayan-decaf.md",
+    "_docs/coffee-beans.md",
+    "_projects/cord-keeper.md",
     "_music/Untitled.base",
     "_music/tracks.base",
     "_music/tracks/flutter.md",
@@ -216,12 +223,6 @@
     "_music/artists/james-holden.md",
     "_music/artists/masayoshi-fujita-jan-jelinek.md",
     "_music/artists/actress.md",
-    "_music/artists/thomas-brinkmann.md",
-    "_music/artists/automatisme.md",
-    "_music/artists/catching-flies.md",
-    "_music/artists/honne.md",
-    "_music/artists/m83.md",
-    "_music/artists/mux-mool.md",
     "_music/artists",
     "_includes/dog-food-table.html",
     "_dog/dog-food.base",
@@ -229,7 +230,6 @@
     "_dog",
     "_includes/foods-table.html",
     "_includes/nutrition-table.html",
-    "_nutrition/foods.base",
     "assets/images/coffee-bar-photo.jpeg",
     "assets/images/IMG_2430.jpeg",
     "assets/images/PERC_ColombiaDiegoBermudezDecaf_Web1_2025.jpg",

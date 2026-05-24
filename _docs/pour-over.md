@@ -37,7 +37,7 @@ My go-to pour over recipes.[^1]
 | Coffee          | 21g                                  |
 | Water           | 350g (plus more for rinsing/warming) |
 | Ratio           | 1:16.7                               |
-| Grind           | ~5.3 (Fellow Ode Gen 1)              |
+| Grind           | ~5.3 (Fellow Ode Gen 1) / 3.0.0 (1ZPresso J-Ultra) |
 | Water Temp      | 93-96°C                              |
 | Total Brew Time | ~3:00 - 3:30                         |
 
@@ -53,6 +53,7 @@ My go-to pour over recipes.[^1]
 **Notes:** 
 - I warm the dripper over / on top of the kettle while the water is preheating.
 - If brew time runs long, grind coarser. If it drains too fast, go finer.
+- 1ZPresso J-Ultra: 3.0.0 worked well for a half caff. Bump to 3.0.5–3.1.0 if drawdown runs a little slow.
 
 ---
 
