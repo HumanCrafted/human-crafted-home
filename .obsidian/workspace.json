@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_docs/pour-over.md",
+                "file": "_docs/perc-peru-el-palto.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "pour-over"
+              "title": "perc-peru-el-palto"
             }
           }
         ]
@@ -194,6 +194,10 @@
   },
   "active": "050d360083c9938e",
   "lastOpenFiles": [
+    "_docs/pour-over.md",
+    "assets/images/PERC_PeruElPalto_2026.webp",
+    "assets/images/PERC_PeruElPalto_Shop1_2026.jpg.webp",
+    "_docs/perc-peru-el-palto.md",
     "_docs/rogue-wave-huila-community-decaf.md",
     "_docs/rogue-wave-granja-paradiso-decaf.md",
     "_docs/rogue-wave-columbia-laderas-estate.md",
@@ -221,8 +225,6 @@
     "_music/artists/the-naked-and-famous.md",
     "_music/artists/marian-hill.md",
     "_music/artists/james-holden.md",
-    "_music/artists/masayoshi-fujita-jan-jelinek.md",
-    "_music/artists/actress.md",
     "_music/artists",
     "_includes/dog-food-table.html",
     "_dog/dog-food.base",
@@ -237,8 +239,6 @@
     "assets/images/Colombia-LaderasEstateWashed.jpg",
     "assets/images/concrete-trays-thumbnail.svg",
     "assets/images/PERC_PercUp_2025.jpg",
-    "assets/images/PERC_DecafColombiaHuila_2025.jpg",
-    "assets/images/PERC_UgandaNagasire_2025.jpg",
-    "assets/images/PERC_BrazilLegender_2025.jpg"
+    "assets/images/PERC_DecafColombiaHuila_2025.jpg"
   ]
 }
