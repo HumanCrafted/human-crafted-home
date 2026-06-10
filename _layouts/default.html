@@ -24,22 +24,18 @@
         <header class="site-header">
             <div class="header-content">
                 <a href="{{ '/' | relative_url }}" class="site-title" data-umami-event="Logo click">
-                    <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="{{ site.title }}" class="site-logo svg-darkmode">
+                    <span>human</span><span class="slash">/</span><span>crafted</span>
                 </a>
                 <nav class="site-nav">
                     <a href="{{ '/more/' | relative_url }}"{% if page.url contains '/more/' %} class="active"{% endif %} data-umami-event="More nav">More</a>
                     <div class="colab-link-wrapper">
-                        {% if page.url == "/" %}
-                            <a href="{{ '/lab/' | relative_url }}" class="btn colab-btn{% if page.url contains '/lab/' %} active{% endif %}" data-umami-event="Colab CTA button">
-                                Let's co/lab
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M5 12h14"/>
-                                    <path d="M12 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        {% else %}
-                            <a href="{{ '/lab/' | relative_url }}"{% if page.url contains '/lab/' %} class="active"{% endif %} data-umami-event="Colab nav">Let's co/lab</a>
-                        {% endif %}
+                        <a href="{{ '/lab/' | relative_url }}" class="btn colab-btn{% if page.url contains '/lab/' %} active{% endif %}" data-umami-event="Colab CTA button">
+                            Let's co/lab
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"/>
+                                <path d="M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
                     </div>
                     <button class="theme-toggle" aria-label="Toggle theme" data-umami-event="Theme toggle">
                         <svg class="theme-icon theme-icon-light" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

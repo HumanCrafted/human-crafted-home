@@ -1,23 +1,29 @@
 /* Human Crafted Design System */
 
 /* Import fonts */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Work+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&display=swap');
 
-/* CSS Variables - Figma Design Colors */
+/* CSS Variables - Human Crafted Design System tokens
+   Legacy names kept as canonical; --surface / --border added.
+   Source of truth: human-crafted-design-system/tokens.css */
 :root {
-  --background: #dfd7c8; /* Tan from Figma */
-  --foreground: #333333; /* Almost Black from Figma */
-  --accent: #ffff00; /* Yellow from Figma */
-  --muted: #999999;
-  --muted-foreground: #666666;
+  --background: #FAF7F2;        /* paper — web bg */
+  --foreground: #2A2824;        /* ink — primary text */
+  --accent: #E8C84A;            /* brand yellow */
+  --muted: #948F87;             /* border — rules / dividers / dimmed */
+  --muted-foreground: #736356;  /* ink-muted — secondary text */
+  --surface: #ECE3CE;           /* paper-warm — warm section / callout */
+  --border: #948F87;            /* rules / dividers */
 }
 
 [data-theme="dark"] {
-  --background: #333333;
-  --foreground: #dfd7c8;
-  --accent: #ffff00;
-  --muted: #666666;
-  --muted-foreground: #999999;
+  --background: #2A2824;        /* paper (dark) */
+  --foreground: #ECE3CE;        /* ink (cream) */
+  --accent: #C9A832;            /* mustard — calmer than yellow on dark */
+  --muted: #736356;             /* border (dark) */
+  --muted-foreground: #948F87;  /* ink-muted (dark) */
+  --surface: #3A3733;           /* raised surface */
+  --border: #736356;
 }
 
 /* Reset and base styles */
@@ -31,7 +37,7 @@ html {
 
 body {
   font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
   color: var(--foreground);
   background-color: var(--background);
@@ -75,13 +81,13 @@ body {
   z-index: 50;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  background-color: rgba(223, 215, 200, 0.8);
+  background-color: rgba(250, 247, 242, 0.8);
   padding: 2.5rem 0;
   width: 100%;
 }
 
 [data-theme="dark"] .site-header {
-  background-color: rgba(51, 51, 51, 0.8);
+  background-color: rgba(42, 40, 36, 0.8);
 }
 
 .header-content {
@@ -102,30 +108,28 @@ body {
 }
 
 .site-title {
-  font-size: 1.25rem;
-  font-weight: 400;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
   color: var(--foreground);
   text-decoration: none;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.04em;
   line-height: 1.1;
   text-transform: lowercase;
   cursor: pointer;
+  white-space: nowrap;
+}
+
+.site-title .slash {
+  color: var(--muted-foreground);
+  margin: 0 0.15em;
+  font-weight: 700;
 }
 
 .site-title:hover {
-  color: var(--muted);
-  transition: color 150ms ease;
-}
-
-.site-logo {
-  height: 3.5rem;
-  width: auto;
-  transition: opacity 150ms ease;
-  cursor: pointer;
-}
-
-.site-title:hover .site-logo {
-  opacity: 0.7;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: var(--foreground);
 }
 
 /* Navigation */
@@ -265,7 +269,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 3rem;
   font-weight: 400;
-  margin-bottom: 10rem;
+  margin-bottom: 3rem;
   margin-top: 0;
   line-height: 1.1;
 }
@@ -396,6 +400,34 @@ hr {
   margin-bottom: 2rem;
 }
 
+/* Doc / Note section headings — ruled, Plex Sans (design-system rhythm).
+   Child combinator so it never touches nested .wiki-section-title labels. */
+.doc-content > h2 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.33px;
+  border-top: 1px solid var(--border);
+  padding-top: 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.doc-content > h2:first-child {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.doc-content > h3 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
 /* Archive section */
 .archive-header {
   margin-bottom: 0.5rem;
@@ -458,9 +490,15 @@ hr {
 /* Project grid */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 5rem 2rem;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4rem 2rem;
   margin-bottom: 5rem;
+}
+
+@media (max-width: 1024px) {
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .project-card {
@@ -546,31 +584,82 @@ hr {
 
 .social-links {
   display: flex;
-  gap: 1.5rem;
   align-items: center;
+  justify-content: flex-end;
+}
+
+/* "socials" disclosure — collapsed by default, expands to the link list */
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.footer-socials summary {
+  list-style: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--foreground);
+  user-select: none;
+  transition: text-decoration 150ms ease;
+}
+
+.footer-socials summary::-webkit-details-marker {
+  display: none;
+}
+
+.footer-socials summary::after {
+  content: " +";
+  color: var(--muted-foreground);
+}
+
+.footer-socials[open] summary::after {
+  content: " –";
+}
+
+.footer-socials summary:hover {
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: var(--foreground);
+}
+
+.social-links-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+/* Smooth reveal when the disclosure opens — a slow, graceful fade */
+@keyframes socials-reveal {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.footer-socials[open] .social-links-list {
+  animation: socials-reveal 550ms ease;
+}
+
+.footer-socials summary::after {
+  transition: color 150ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-socials[open] .social-links-list { animation: none; }
 }
 
 .social-links a {
   color: var(--foreground);
-  transition: color 150ms ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  height: 20px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: text-decoration 150ms ease;
 }
 
 .social-links a:hover {
-  color: var(--muted);
-}
-
-.social-links svg {
-  color: var(--foreground);
-  transition: color 150ms ease;
-}
-
-.social-links a:hover svg {
-  color: var(--muted);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: var(--foreground);
 }
 
 /* Utility classes for margin-bottom based on Figma frames */
@@ -650,9 +739,9 @@ hr {
   }
   
   .project-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .project-meta {
     flex-direction: column;
     align-items: flex-start;
@@ -809,7 +898,7 @@ hr {
   max-width: 100%;
   height: auto;
   border-radius: 0.5rem;
-  box-shadow: 0 4px 12px rgba(51, 51, 51, 0.1);
+  box-shadow: 0 4px 12px rgba(42, 40, 36, 0.1);
 }
 
 .project-content {
@@ -895,7 +984,7 @@ hr {
   right: 2rem;
   background: rgba(255, 255, 255, 0.1);
   border: none;
-  color: #dfd7c8;
+  color: var(--surface);
   font-size: 2rem;
   cursor: pointer;
   width: 3rem;
@@ -948,7 +1037,7 @@ hr {
   text-decoration: none !important;
   font-size: 22px !important;
   font-weight: 700 !important;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   letter-spacing: -0.33px;
   transition: all 150ms ease;
   display: inline-flex;
@@ -963,7 +1052,7 @@ hr {
 }
 
 [data-theme="dark"] .btn:hover {
-  background: rgba(255, 255, 0, 0.3);
+  background: var(--accent);
   color: var(--foreground) !important;
 }
 
@@ -1088,14 +1177,19 @@ hr {
 .wiki-section .wiki-two-column,
 .page-content .wiki-two-column {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-bottom: 2rem;
+  grid-template-columns: 180px 1fr;
+  gap: 0 3rem;
+  padding: 2rem 0;
+  margin: 0;
+  border-top: 1px solid var(--border);
 }
 
 .wiki-section-title {
-  /* Let h3 default styles take precedence */
-  margin-top: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0;
 }
 
 .wiki-comma-list {
@@ -1137,6 +1231,134 @@ hr {
   }
 }
 
+/* ── The system page (living style guide) ── */
+.system-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Color swatches */
+.system-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.system-chip {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 96px;
+  cursor: pointer;
+}
+
+.system-chip:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.system-chip.copied .chip-hex {
+  color: var(--foreground);
+  font-weight: 500;
+}
+
+.system-chip .chip-box {
+  width: 96px;
+  height: 96px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+.system-chip .chip-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--foreground);
+  line-height: 1.2;
+}
+
+.system-chip .chip-hex {
+  font-size: 13px;
+  color: var(--muted-foreground);
+  line-height: 1.2;
+}
+
+.system-note {
+  font-size: 14px;
+  color: var(--muted-foreground);
+  margin: 0.5rem 0 0 0;
+}
+
+/* Typography specimens */
+.system-type-row {
+  display: flex;
+  align-items: baseline;
+  gap: 2rem;
+}
+
+.system-type-row .type-label {
+  flex: 0 0 130px;
+  font-size: 13px;
+  color: var(--muted-foreground);
+  white-space: nowrap;
+}
+
+.system-type-row .type-specimen {
+  color: var(--foreground);
+  min-width: 0;
+}
+
+.ts-hero    { font-family: 'IBM Plex Mono', monospace; font-size: 48px; line-height: 1; font-weight: 400; }
+.ts-title   { font-family: 'IBM Plex Sans', sans-serif; font-size: 30px; line-height: 1.2; font-weight: 700; letter-spacing: -1.2px; }
+.ts-eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 18px; font-weight: 500; }
+.ts-body    { font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 400; }
+.ts-caption { font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 400; letter-spacing: -0.21px; }
+
+/* Spacing bars */
+.system-space-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.system-space-row .space-label {
+  flex: 0 0 70px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.system-space-row .space-meta {
+  flex: 0 0 110px;
+  font-size: 13px;
+  color: var(--muted-foreground);
+}
+
+.system-space-row .space-bar {
+  height: 16px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.system-components {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .system-type-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .system-type-row .type-label {
+    flex-basis: auto;
+  }
+
+  /* Scale down the large specimens so they fit narrow screens */
+  .ts-hero  { font-size: 30px; }
+  .ts-title { font-size: 24px; }
+}
+
 /* Coffee Database Table Styling */
 .coffee-database {
   margin: 2rem 0;
@@ -1158,12 +1380,12 @@ hr {
 
 .coffee-database th {
   font-weight: 700;
-  background-color: rgba(223, 215, 200, 0.3);
+  background-color: rgba(236, 227, 206, 0.3);
   border-bottom: 2px solid var(--foreground);
 }
 
 [data-theme="dark"] .coffee-database th {
-  background-color: rgba(51, 51, 51, 0.3);
+  background-color: rgba(58, 55, 51, 0.3);
 }
 
 .coffee-database td img {
@@ -1218,12 +1440,12 @@ hr {
 
 .nutrition-table th {
   font-weight: 700;
-  background-color: rgba(223, 215, 200, 0.3);
+  background-color: rgba(236, 227, 206, 0.3);
   border-bottom: 2px solid var(--foreground);
 }
 
 [data-theme="dark"] .nutrition-table th {
-  background-color: rgba(51, 51, 51, 0.3);
+  background-color: rgba(58, 55, 51, 0.3);
 }
 
 .nutrition-table tfoot td {
