@@ -11,6 +11,7 @@
     <link rel="apple-touch-icon" href="{{ '/favicon.png' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
     <script src="{{ '/assets/js/theme.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+    <script defer src="{{ '/assets/js/wordmark.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
     {% seo %}
     {% feed_meta %}
 
@@ -23,13 +24,11 @@
     <div class="site-container">
         <header class="site-header">
             <div class="header-content">
-                <a href="{{ '/' | relative_url }}" class="site-title" data-umami-event="Logo click">
-                    <span>human</span><span class="slash">/</span><span>crafted</span>
-                </a>
+                {% include wordmark.html %}
                 <nav class="site-nav">
-                    <a href="{{ '/more/' | relative_url }}"{% if page.url contains '/more/' %} class="active"{% endif %} data-umami-event="More nav">More</a>
+                    <a href="{{ '/re/' | relative_url }}"{% if page.url contains '/re/' %} class="active"{% endif %} data-umami-event="More nav">More</a>
                     <div class="colab-link-wrapper">
-                        <a href="{{ '/lab/' | relative_url }}" class="btn colab-btn{% if page.url contains '/lab/' %} active{% endif %}" data-umami-event="Colab CTA button">
+                        <a href="{{ '/lab/' | relative_url }}" class="btn colab-btn" data-umami-event="Colab CTA button">
                             Let's co/lab
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M5 12h14"/>

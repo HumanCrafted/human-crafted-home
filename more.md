@@ -1,7 +1,9 @@
 ---
 layout: default
 title: More.
-permalink: /more/
+permalink: /re/
+redirect_from:
+  - /more/
 ---
 
 Engineering my own path. Hi, I'm Jon, a creative engineer. I started Human Crafted in 2016 as a boutique product design studio and solo design brand after having worked across agencies and corporate OEM's for the previous 15 years. Setting sail as an entrepreneur and freelance designer wasn't an easy decision, but taking the path less traveled has become a trend that I've learned to embrace.

@@ -1,0 +1,26 @@
+{%- comment -%}
+  Breadcrumb wordmark. Three states driven by page.url:
+    home      "/"            -> human / crafted   (plain wordmark, links home)
+    hub       /lab/ /re/ /ops/ -> humancrafted.co/<section>   (prefix dim -> home)
+    sub-page  everything else  -> humancrafted.co/re/<slug>   (prefix dim -> home, co/re -> hub)
+  Real URLs are unchanged; the nested path is a display-only breadcrumb.
+  Stable hooks for the on-load morph (wordmark.js): .wm-human .wm-crafted .wm-tail .wm-slash .wm-back
+{%- endcomment -%}
+{%- if page.url == "/" -%}
+  <a href="{{ '/' | relative_url }}" class="site-title" data-umami-event="Logo click"><span class="wm-human">human</span><span class="wm-slash wm-slash--home">/</span><span class="wm-crafted">crafted</span></a>
+{%- elsif page.url == "/lab/" or page.url == "/re/" or page.url == "/ops/" -%}
+  {%- assign parts = page.url | split: "/" -%}
+  {%- assign section = parts | last -%}
+  {%- if section == "" -%}{%- assign section = parts[parts.size | minus: 2] -%}{%- endif -%}
+  <span class="site-title site-title--crumb" data-wm-state="hub">
+    <a href="{{ '/' | relative_url }}" class="wm-back" data-umami-event="Wordmark home"><span class="wm-human">human</span><span class="wm-crafted">crafted</span></a><span class="wm-tail"><span class="wm-dot">.</span><span class="wm-new"><span class="wm-current">co<span class="wm-slash">/</span>{{ section }}</span></span></span>
+  </span>
+{%- else -%}
+  {%- assign clean = page.url | remove: ".html" -%}
+  {%- assign parts = clean | split: "/" -%}
+  {%- assign slug = parts | last -%}
+  {%- if slug == "" -%}{%- assign slug = parts[parts.size | minus: 2] -%}{%- endif -%}
+  <span class="site-title site-title--crumb" data-wm-state="sub">
+    <a href="{{ '/' | relative_url }}" class="wm-back" data-umami-event="Wordmark home"><span class="wm-human">human</span><span class="wm-crafted">crafted</span></a><span class="wm-tail"><span class="wm-dot">.</span><a href="{{ '/re/' | relative_url }}" class="wm-hub" data-umami-event="Wordmark hub">co<span class="wm-slash">/</span>re</a><span class="wm-new"><span class="wm-sep">/</span><span class="wm-current">{{ slug }}</span></span></span>
+  </span>
+{%- endif -%}

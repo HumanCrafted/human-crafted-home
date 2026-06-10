@@ -33,6 +33,9 @@
 
 html {
   color-scheme: light dark;
+  /* Always reserve the scrollbar gutter so short pages (no scrollbar) and
+     long pages (scrollbar) center identically — no width/shift difference. */
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -116,20 +119,62 @@ body {
   letter-spacing: -0.04em;
   line-height: 1.1;
   text-transform: lowercase;
-  cursor: pointer;
   white-space: nowrap;
 }
 
-.site-title .slash {
+/* Home wordmark — anchor with a muted middle slash */
+a.site-title {
+  cursor: pointer;
+}
+
+.wm-slash--home {
   color: var(--muted-foreground);
   margin: 0 0.15em;
   font-weight: 700;
 }
 
-.site-title:hover {
-  text-decoration: underline;
-  text-decoration-style: wavy;
-  text-decoration-color: var(--foreground);
+/* No underline on the wordmark — override the global a:hover. */
+a.site-title:hover {
+  text-decoration: none;
+}
+
+/* Breadcrumb wordmark (hub + sub-page) */
+.site-title--crumb {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+/* Dim, navigable prefix segments */
+.site-title--crumb .wm-back,
+.site-title--crumb .wm-hub {
+  color: var(--foreground);
+  text-decoration: none;
+  opacity: 0.25;
+  transition: opacity 150ms ease;
+}
+
+.site-title--crumb .wm-back:hover,
+.site-title--crumb .wm-hub:hover {
+  opacity: 1;
+}
+
+/* Dim separators that live outside the link segments */
+.site-title--crumb .wm-dot,
+.site-title--crumb .wm-sep {
+  opacity: 0.25;
+}
+
+/* Bright current segment */
+.site-title--crumb .wm-current {
+  color: var(--foreground);
+}
+
+/* Keep the tail on one line during reveal */
+.site-title--crumb .wm-tail,
+.site-title--crumb .wm-new {
+  display: inline-flex;
+  align-items: baseline;
+  white-space: nowrap;
 }
 
 /* Navigation */
@@ -703,10 +748,17 @@ hr {
     align-items: flex-start;
   }
   
-  .site-logo {
-    height: 2.5rem;
+  .site-title {
+    font-size: 1.125rem;
   }
-  
+
+  /* Sub-page crumbs drop the long "humancrafted." prefix on mobile so
+     co/re/<slug> fits beside the nav; home stays reachable via co/re. */
+  .site-title--crumb[data-wm-state="sub"] .wm-back,
+  .site-title--crumb[data-wm-state="sub"] .wm-dot {
+    display: none;
+  }
+
   .site-nav {
     flex-direction: row;
     align-items: center;

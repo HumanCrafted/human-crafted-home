@@ -56,7 +56,7 @@ The site's colors, typography, spacing, and components are documented in the [De
 - Two-column layout: a section label beside an auto-populated, comma-separated list
 - Pulls live from Jekyll collections (projects, notes, tools, posts)
 - Manual item lists with optional links and configurable limits
-- Used on the [More](/more/) page and the [Design System]({{ "/design-system/" | relative_url }}) note
+- Used on the [More](/re/) page and the [Design System]({{ "/design-system/" | relative_url }}) note
 
 #### Obsidian Integration Plugin
 - Seamless conversion of `[[page-name]]` links
