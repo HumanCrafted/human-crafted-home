@@ -14,10 +14,10 @@ Below you can learn more [about me](_docs/about-me.md), explore my [past work](/
 
 {% include wiki-two-column.html title="Projects" auto="projects" show_all_link="/#archive" show_all_text="View all projects" %}
 
+{% include wiki-two-column.html title="Notes" auto="note_docs" %}
+
 {% include wiki-two-column.html title="Tools" auto="tool_docs" show_all_link="/tools/" show_all_text="View all tools" %}
 
 {% include wiki-two-column.html title="Expertise" items="CAD design and engineering,User testing,Limited low run production,Product strategy,Production support,Concept development,Rapid prototyping,Design for manufacturing, Fabrication" auto="expertise_docs" %}
-
-{% include wiki-two-column.html title="Notes" auto="note_docs" %}
 
 {% include wiki-two-column.html title="Writing" auto="posts" show_all_link="/writing/" show_all_text="View all posts" %}
