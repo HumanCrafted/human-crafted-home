@@ -1,7 +1,7 @@
 ---
 name: Colombia Diego Bermudez Decaf
 roaster: "[[coffee-roaster-perc|Perc]]"
-origin: Columbia
+origin: Colombia
 process:
   - Thermal Shock Washed
 roast_level: Light
@@ -21,7 +21,7 @@ image: "![[PERC_ColombiaDiegoBermudezDecaf_Web1_2025.jpg]]"
 tags:
   - coffee
 layout: doc
-slug: perc-columbia-diego-bermudez-decaf
+slug: perc-colombia-diego-bermudez-decaf
 version: "1.0"
 draft: false
 ---
@@ -44,5 +44,5 @@ Espresso: 16g - 40g, 0:22 time
 Can taste the strawberry.  Very flavorful, yet blends with other flavors.  Excellent.
 
 ## Links
-- Website: [Perc Columbia Diego Bermudez Decaf](https://perccoffee.com/products/decaf-colombia-diego-bermudez?variant=52199267205434)
+- Website: [Perc Colombia Diego Bermudez Decaf](https://perccoffee.com/products/decaf-colombia-diego-bermudez?variant=52199267205434)
 - Roaster: [Perc](_docs/coffee-roaster-perc.md)

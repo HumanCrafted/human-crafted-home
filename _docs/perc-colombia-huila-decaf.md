@@ -1,7 +1,7 @@
 ---
 name: Colombia Huila Decaf
 roaster: "[[coffee-roaster-perc|Perc]]"
-origin: Columbia
+origin: Colombia
 process:
   - EA Sugarcane
 roast_level: Light
@@ -18,7 +18,7 @@ image: "![[PERC_DecafColombiaHuila_2025.jpg]]"
 tags:
   - coffee
 layout: doc
-slug: perc-columbia-huila-decaf
+slug: perc-colombia-huila-decaf
 version: "1.0"
 draft: false
 ---
@@ -38,5 +38,5 @@ Espresso:
 Slightly darker than Rogue Wave's Huila, but not bad
 
 ## Links
-- Website: [Perc Columbia Huila Decaf](https://perccoffee.com/products/decaf?variant=44057029869882)
+- Website: [Perc Colombia Huila Decaf](https://perccoffee.com/products/decaf?variant=44057029869882)
 - Roaster: [Perc](_docs/coffee-roaster-perc.md)

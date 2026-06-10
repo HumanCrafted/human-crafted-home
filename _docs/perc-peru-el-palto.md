@@ -7,9 +7,9 @@ process:
 roast_level: Light
 harvest:
 elevation: 1800 MASL
-date_purchased: 2026-03-13
+date_purchased: 2026-03-26
 date_roasted: 2026-03-11
-price: $28.00 / 12oz
+price: $26.00 / 12oz
 rating_1-5: "4"
 tasting_notes:
   - Blood Orange

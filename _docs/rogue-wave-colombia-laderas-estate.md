@@ -1,7 +1,7 @@
 ---
 name: Colombia - Laderas Estate | Rodrigo Pelaez
 roaster: "[[coffee-roaster-rogue-wave|Rogue Wave]]"
-origin: Columbia
+origin: Colombia
 process:
   - Washed
 roast_level: Light
@@ -21,7 +21,7 @@ image: "![[Colombia-LaderasEstateWashed.jpg]]"
 tags:
   - coffee
 layout: doc
-slug: rogue-wave-columbia-laderas-estate
+slug: rogue-wave-colombia-laderas-estate
 version: "1.0"
 draft: false
 ---

@@ -1,7 +1,7 @@
 ---
 name: Colombia Popayan EA Decaf
 roaster: "[[coffee-roaster-swroasting|SW Roasting]]"
-origin: Columbia
+origin: Colombia
 process:
   - EA Sugarcane
 roast_level: Light
@@ -18,7 +18,7 @@ image:
 tags:
   - coffee
 layout: doc
-slug: swroasting-columbia-popayan-decaf
+slug: swroasting-colombia-popayan-decaf
 version: "1.0"
 draft: false
 ---
