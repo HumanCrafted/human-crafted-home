@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <title>{% if page.title and page.url != "/" %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    {% assign title_lower = page.title | downcase %}{% assign site_lower = site.title | downcase %}<title>{% if page.title and page.url != "/" %}{% if title_lower contains site_lower %}{{ page.title }}{% else %}{{ page.title }} | {{ site.title }}{% endif %}{% else %}{{ site.title }}{% endif %}</title>
     <link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
     <link rel="icon" type="image/png" href="{{ '/favicon.png' | relative_url }}">
     <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}">
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
     <script src="{{ '/assets/js/theme.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
     <script defer src="{{ '/assets/js/wordmark.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
-    {% seo %}
+    {% seo title=false %}
     {% feed_meta %}
 
     <!-- Umami Analytics -->
@@ -26,7 +26,13 @@
             <div class="header-content">
                 {% include wordmark.html %}
                 <nav class="site-nav">
-                    <a href="{{ '/re/' | relative_url }}"{% if page.url contains '/re/' %} class="active"{% endif %} data-umami-event="More nav">More</a>
+                    {% if page.url == "/" %}
+                    <a href="{{ '/re/' | relative_url }}" class="core-link" aria-label="co/re — about &amp; archive" data-umami-event="Core nav">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M3 6h18M3 12h18M3 18h18"/>
+                        </svg>
+                    </a>
+                    {% endif %}
                     <div class="colab-link-wrapper">
                         <a href="{{ '/lab/' | relative_url }}" class="btn colab-btn" data-umami-event="Colab CTA button">
                             Let's co/lab

@@ -9,7 +9,11 @@
 // No-JS / reduced-motion / hidden-tab loads just get the final static state.
 (function () {
   var EASE = 'cubic-bezier(0.22, 0.61, 0.36, 1)';
-  var DURATION = 700;
+  // Home separation uses ease-in-out so the small gap spreads evenly across the
+  // timeline (a strong ease-out front-loads the move and the words snap apart).
+  var SLIDE_EASE = 'cubic-bezier(0.65, 0, 0.35, 1)';
+  var DURATION = 700;       // breadcrumb segment wipe
+  var HOME_DURATION = 1200; // home "human / crafted" reassemble — slower so it reads
 
   function reducedMotion() {
     return window.matchMedia &&
@@ -48,7 +52,7 @@
         { transform: 'translateX(' + (-gap) + 'px)' },
         { transform: 'translateX(0)' }
       ],
-      { duration: DURATION, easing: EASE }
+      { duration: HOME_DURATION, easing: SLIDE_EASE }
     );
     slash.animate(
       [
@@ -56,7 +60,7 @@
         { opacity: 0, transform: 'translateY(-3px)', offset: 0.25 },
         { opacity: 1, transform: 'translateY(0)' }
       ],
-      { duration: DURATION, easing: EASE }
+      { duration: HOME_DURATION, easing: EASE }
     );
   }
 

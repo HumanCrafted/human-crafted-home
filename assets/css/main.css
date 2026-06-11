@@ -204,6 +204,29 @@ a.site-title:hover {
   text-decoration-style: wavy;
 }
 
+/* co/re hamburger link — icon button matching the theme toggle */
+.site-nav .core-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: var(--foreground);
+  transition: color 150ms ease;
+}
+
+.site-nav .core-link:hover {
+  color: var(--muted);
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.site-nav .core-link svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
 /* Co/lab button styling */
 .site-nav .colab-btn {
   /* Inherits from .btn base styles - just need overrides for navigation specificity */
