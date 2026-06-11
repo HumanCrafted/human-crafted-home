@@ -41,25 +41,25 @@ The Human Crafted design system. Tokens, components, and patterns I use across h
 <div class="wiki-two-column system-row">
   <h3 class="wiki-section-title">Typography</h3>
   <div class="system-content">
-    <div class="system-type-row">
-      <span class="type-label">hero / 48 / Reg</span>
-      <span class="type-specimen ts-hero">A product design studio.</span>
+    <div class="spec-row">
+      <span class="spec-label">hero / 48 / Reg</span>
+      <span class="spec-body ts-hero">A product design studio.</span>
     </div>
-    <div class="system-type-row">
-      <span class="type-label">title / 30 / Bol</span>
-      <span class="type-specimen ts-title">human / crafted</span>
+    <div class="spec-row">
+      <span class="spec-label">title / 30 / Bol</span>
+      <span class="spec-body ts-title">human / crafted</span>
     </div>
-    <div class="system-type-row">
-      <span class="type-label">eyebrow / 18 / M</span>
-      <span class="type-specimen ts-eyebrow">The Archive ↓</span>
+    <div class="spec-row">
+      <span class="spec-label">eyebrow / 18 / M</span>
+      <span class="spec-body ts-eyebrow">The Archive ↓</span>
     </div>
-    <div class="system-type-row">
-      <span class="type-label">body / 16 / Reg</span>
-      <span class="type-specimen ts-body">around the house · 3d printing · kitchen</span>
+    <div class="spec-row">
+      <span class="spec-label">body / 16 / Reg</span>
+      <span class="spec-body ts-body">around the house · 3d printing · kitchen</span>
     </div>
-    <div class="system-type-row">
-      <span class="type-label">caption / 14 / R</span>
-      <span class="type-specimen ts-caption">© 2025 Human Crafted LLC.</span>
+    <div class="spec-row">
+      <span class="spec-label">caption / 14 / R</span>
+      <span class="spec-body ts-caption">© 2025 Human Crafted LLC.</span>
     </div>
   </div>
 </div>
@@ -67,11 +67,11 @@ The Human Crafted design system. Tokens, components, and patterns I use across h
 <div class="wiki-two-column system-row">
   <h3 class="wiki-section-title">Spacing</h3>
   <div class="system-content">
-    <div class="system-space-row"><span class="space-label">space-1</span><span class="space-meta">1rem · 16px</span><span class="space-bar" style="width:16px"></span></div>
-    <div class="system-space-row"><span class="space-label">space-2</span><span class="space-meta">2rem · 32px</span><span class="space-bar" style="width:32px"></span></div>
-    <div class="system-space-row"><span class="space-label">space-4</span><span class="space-meta">4rem · 64px</span><span class="space-bar" style="width:64px"></span></div>
-    <div class="system-space-row"><span class="space-label">space-5</span><span class="space-meta">5rem · 80px</span><span class="space-bar" style="width:80px"></span></div>
-    <div class="system-space-row"><span class="space-label">space-6</span><span class="space-meta">6rem · 96px</span><span class="space-bar" style="width:96px"></span></div>
+    <div class="spec-row spec-row--center"><span class="spec-label">space-1<span class="spec-sub">1rem · 16px</span></span><span class="space-bar" style="width:16px"></span></div>
+    <div class="spec-row spec-row--center"><span class="spec-label">space-2<span class="spec-sub">2rem · 32px</span></span><span class="space-bar" style="width:32px"></span></div>
+    <div class="spec-row spec-row--center"><span class="spec-label">space-4<span class="spec-sub">4rem · 64px</span></span><span class="space-bar" style="width:64px"></span></div>
+    <div class="spec-row spec-row--center"><span class="spec-label">space-5<span class="spec-sub">5rem · 80px</span></span><span class="space-bar" style="width:80px"></span></div>
+    <div class="spec-row spec-row--center"><span class="spec-label">space-6<span class="spec-sub">6rem · 96px</span></span><span class="space-bar" style="width:96px"></span></div>
   </div>
 </div>
 
@@ -79,20 +79,20 @@ The Human Crafted design system. Tokens, components, and patterns I use across h
   <h3 class="wiki-section-title">Layout</h3>
   <div class="system-content">
     <p class="system-note" style="margin-top:0">The project archive is a responsive grid; long-form Notes use a fixed two-column rhythm. A <code>scrollbar-gutter: stable</code> gutter reserves space for the scrollbar so short and long pages center identically.</p>
-    <div class="layout-row">
-      <span class="layout-label">archive · desktop<br><span class="layout-sub">5 columns · gap 4rem/2rem</span></span>
+    <div class="spec-row spec-row--center">
+      <span class="spec-label">archive · desktop<span class="spec-sub">5 columns · gap 4rem/2rem</span></span>
       <div class="layout-demo layout-demo--5"><span class="cell"></span><span class="cell"></span><span class="cell"></span><span class="cell"></span><span class="cell"></span></div>
     </div>
-    <div class="layout-row">
-      <span class="layout-label">archive · ≤1024px<br><span class="layout-sub">3 columns</span></span>
+    <div class="spec-row spec-row--center">
+      <span class="spec-label">archive · ≤1024px<span class="spec-sub">3 columns</span></span>
       <div class="layout-demo layout-demo--3"><span class="cell"></span><span class="cell"></span><span class="cell"></span></div>
     </div>
-    <div class="layout-row">
-      <span class="layout-label">archive · ≤768px<br><span class="layout-sub">2 columns</span></span>
+    <div class="spec-row spec-row--center">
+      <span class="spec-label">archive · ≤768px<span class="spec-sub">2 columns</span></span>
       <div class="layout-demo layout-demo--2"><span class="cell"></span><span class="cell"></span></div>
     </div>
-    <div class="layout-row">
-      <span class="layout-label">Notes · two-column<br><span class="layout-sub">180px label · 1fr body</span></span>
+    <div class="spec-row spec-row--center">
+      <span class="spec-label">Notes · two-column<span class="spec-sub">180px label · 1fr body</span></span>
       <div class="layout-demo layout-demo--doc"><span class="cell cell--label"></span><span class="cell"></span></div>
     </div>
   </div>
@@ -102,21 +102,21 @@ The Human Crafted design system. Tokens, components, and patterns I use across h
   <h3 class="wiki-section-title">Links &amp; underlines</h3>
   <div class="system-content">
     <p class="system-note" style="margin-top:0">Links never borrow the accent color — emphasis comes from a hand-drawn <strong>wavy underline</strong> on hover, paired with a step up to medium weight. Hover each specimen to see the transition.</p>
-    <div class="system-link-row">
-      <span class="link-label">content link</span>
-      <span class="link-specimen"><a href="{{ '/design-system/' | relative_url }}">solid underline at rest</a></span>
+    <div class="spec-row">
+      <span class="spec-label">content link</span>
+      <span class="spec-body"><a href="{{ '/design-system/' | relative_url }}">solid underline at rest</a></span>
     </div>
-    <div class="system-link-row">
-      <span class="link-label">on hover →</span>
-      <span class="link-specimen"><span class="demo-static-wavy">wavy underline, medium weight</span></span>
+    <div class="spec-row">
+      <span class="spec-label">on hover →</span>
+      <span class="spec-body"><span class="demo-static-wavy">wavy underline, medium weight</span></span>
     </div>
-    <div class="system-link-row">
-      <span class="link-label">nav link</span>
-      <span class="link-specimen"><a href="{{ '/design-system/' | relative_url }}" class="demo-navlink">no underline until hover</a></span>
+    <div class="spec-row">
+      <span class="spec-label">nav link</span>
+      <span class="spec-body"><a href="{{ '/design-system/' | relative_url }}" class="demo-navlink">no underline until hover</a></span>
     </div>
-    <div class="system-link-row">
-      <span class="link-label">external</span>
-      <span class="link-specimen"><a href="https://example.com">trails an arrow glyph</a></span>
+    <div class="spec-row">
+      <span class="spec-label">external</span>
+      <span class="spec-body"><a href="https://example.com">trails an arrow glyph</a></span>
     </div>
   </div>
 </div>
@@ -126,25 +126,25 @@ The Human Crafted design system. Tokens, components, and patterns I use across h
   <div class="system-content">
     <p class="system-note" style="margin-top:0"><strong>Interface icons — Lucide</strong> (the maintained fork of Feather Icons). A 24×24 grid with 2px strokes and round caps. They inherit <code>currentColor</code>, so they recolor for dark mode with no second asset.</p>
     <div class="system-icon-list">
-      <div class="icon-row">
+      <div class="spec-row spec-row--center">
+        <span class="spec-label">menu</span>
         <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></span>
-        <span class="icon-name">menu</span>
-        <span class="icon-use">co/re nav</span>
+        <span class="spec-meta">co/re nav</span>
       </div>
-      <div class="icon-row">
+      <div class="spec-row spec-row--center">
+        <span class="spec-label">sun</span>
         <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></span>
-        <span class="icon-name">sun</span>
-        <span class="icon-use">theme · light</span>
+        <span class="spec-meta">theme · light</span>
       </div>
-      <div class="icon-row">
+      <div class="spec-row spec-row--center">
+        <span class="spec-label">moon</span>
         <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
-        <span class="icon-name">moon</span>
-        <span class="icon-use">theme · dark</span>
+        <span class="spec-meta">theme · dark</span>
       </div>
-      <div class="icon-row">
+      <div class="spec-row spec-row--center">
+        <span class="spec-label">arrow-right</span>
         <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></span>
-        <span class="icon-name">arrow-right</span>
-        <span class="icon-use">co/lab CTA</span>
+        <span class="spec-meta">co/lab CTA</span>
       </div>
     </div>
   </div>
@@ -153,13 +153,12 @@ The Human Crafted design system. Tokens, components, and patterns I use across h
 <div class="wiki-two-column system-row">
   <h3 class="wiki-section-title">Illustration</h3>
   <div class="system-content">
+    <p class="system-note" style="margin-top:0">Every project is cataloged with a single-color SVG thumbnail — a CAD or illustration artifact of the object design with a specific visual style.</p>
     <div class="system-illustration">
       <figure class="illo-figure">
-        <img src="{{ '/assets/images/tissue-dispenser-thumbnail.svg' | relative_url }}" alt="Tissue dispenser — single-color isometric line illustration used as a project thumbnail" width="200" height="200" loading="lazy">
-        <figcaption>project thumbnail</figcaption>
+        <img src="{{ '/assets/images/tissue-dispenser-thumbnail.svg' | relative_url }}" alt="Tissue dispenser — single-color isometric line illustration used as a project thumbnail" width="280" height="280" loading="lazy">
       </figure>
       <div class="illo-notes">
-        <p>Every project is cataloged with a single-color SVG thumbnail — a CAD or illustration artifact of the object design with a specific visual style.</p>
         <ul class="system-spec-list">
           <li>One color, no shading — a vector illustration, not a render or image</li>
           <li>1000 × 1000 viewBox, centered with generous margin</li>
@@ -176,16 +175,16 @@ The Human Crafted design system. Tokens, components, and patterns I use across h
   <div class="system-content">
     <p class="system-note" style="margin-top:0">The header wordmark is a live breadcrumb built on the <code>.co</code> domain and doubles as back-navigation when visiting core and sub-pages. Dim segments link to home or up a level; the bright segment is the current page. Hover a dim segment to see it light up.</p>
     <div class="wm-specimen-list">
-      <div class="wm-specimen-row">
-        <span class="wm-state-label">home</span>
+      <div class="spec-row">
+        <span class="spec-label">home</span>
         <span class="site-title wm-specimen"><span class="wm-human">human</span><span class="wm-slash--home">/</span><span class="wm-crafted">crafted</span></span>
       </div>
-      <div class="wm-specimen-row">
-        <span class="wm-state-label">core page</span>
+      <div class="spec-row">
+        <span class="spec-label">core page</span>
         <span class="site-title site-title--crumb wm-specimen"><span class="wm-back">humancrafted</span><span class="wm-tail"><span class="wm-dot">.</span><span class="wm-current">co<span class="wm-slash">/</span>lab</span></span></span>
       </div>
-      <div class="wm-specimen-row">
-        <span class="wm-state-label">sub-page</span>
+      <div class="spec-row">
+        <span class="spec-label">sub-page</span>
         <span class="site-title site-title--crumb wm-specimen"><span class="wm-back">humancrafted</span><span class="wm-tail"><span class="wm-dot">.</span><span class="wm-hub">co<span class="wm-slash">/</span>re</span><span class="wm-new"><span class="wm-sep">/</span><span class="wm-current">Design System</span></span></span></span>
       </div>
     </div>
