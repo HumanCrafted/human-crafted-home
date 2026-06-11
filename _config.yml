@@ -38,11 +38,7 @@ collections:
   projects:
     output: true
     permalink: /:slug/
-  nutrition:
-    output: false
-  dog:
-    output: false
-  music:
+music:
     output: false
 
 # Obsidian-friendly settings
