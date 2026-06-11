@@ -10,7 +10,9 @@ gallery_images:
 version: 
 draft: false
 ---
-Hi, I'm Jon. I am an engineer, designer, and maker. For over 25 years I have fine tuned the craft of bringing ideas to life with a super-wide range of skills that I can adapt to any new challenge. I have worked for agencies and corporate OEM’s, and as an entrepreneur built a successful solo design brand and boutique product design studio. I specialize in rapidly building solutions to test, informing future steps, and above all… making progress.
+Hi, I'm Jon, a creative engineer. I started Human Crafted in 2016 as a boutique product design studio and solo design brand after having worked across agencies and corporate OEM's for the previous 15 years. I specialize in rapidly building solutions to test, informing future steps, and above all… making progress.
+
+Setting sail as an entrepreneur and freelance designer wasn't an easy decision, but taking the path less traveled has become a trend that I've learned to embrace. Throughout this site you will find a diversified range of projects and products, each starting with an idea to [make something better]({{ "/writing/2016/06/30/made-better.html" | relative_url }}) at its [core]({{ "/re/" | relative_url }}). This pursuit of better has driven me to fine tune my craft for speed and efficiency, developing [expertise](app://obsidian.md/_docs/expertise.md) that spans creative design and technical engineering so I can adapt to a new need at any moment. I coined the term "Creative Engineer" to describe this unique combination. I am proud of this wide range, and I've come to appreciate it as my super power. 🦸🏻‍♂️
 
 ### Experience
 
