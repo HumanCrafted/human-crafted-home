@@ -22,7 +22,7 @@ Setting sail as an entrepreneur and freelance designer wasn't an easy decision, 
 	- Lead product development from concept through manufacturing for consumer and B2B clients
 	- Technical co-founding, core skills in getting started, product-market fit, and building from 0-1.
 	- Executive leadership advisor, consulting on Brand, Design, Innovation, Product Strategy, Business design, Business tools and process
-- Expertise in industrial design, mechanical engineering, business strategy, product design and development, brand development, user experience design, business tools, and rapid hardware/software prototyping
+- Expertise in industrial design, mechanical engineering, business strategy, product design and development, brand development, user experience design, business tools, and rapid hardware/software prototyping, and building with AI (Claude).
 - Established a thriving e-commerce brand that manufactured and sold products nationally while exhibiting at the NY NOW trade show as well as regional retail markets.
 
 

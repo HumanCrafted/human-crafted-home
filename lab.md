@@ -1,6 +1,6 @@
 ---
 layout: default
-title: .Co/Lab
+title: Co/Lab.
 permalink: /lab/
 ---
 
