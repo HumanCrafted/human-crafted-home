@@ -5,7 +5,7 @@ slug: about-me
 main_image:
 featured: false
 tags:
-  - note
+  - about
 published_date: 2025-06-12
 gallery_images:
 version: "1.1"

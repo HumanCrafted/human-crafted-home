@@ -7,7 +7,7 @@ redirect_from:
 ---
 You've made it to the [core]({{ "/re/" | relative_url }}) of Human Crafted, a boutique product design studio and solo design brand run by Jon Alling. Below you can learn more [about me](_docs/about-me.md), explore my [past work](/#archive), dig into my [process](_docs/process.md), reference the [tools](_docs/tools.md) that help me bring ideas to life, and peek behind the scenes at [the website](_docs/website.md) itself. If you want to collab, get in touch [here]({{ "/lab/" | relative_url }}).
 
-{% include wiki-two-column.html title="About" items="About me:/about-me/,Process:/process/,Socials:/socials/" %}
+{% include wiki-two-column.html title="About" auto="about_docs" %}
 
 {% include wiki-two-column.html title="Notes" auto="note_docs" %}
 

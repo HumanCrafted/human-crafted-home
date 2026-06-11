@@ -5,7 +5,7 @@ slug: socials
 main_image:
 featured: false
 tags:
-  - note
+  - about
 published_date: 2026-06-10
 gallery_images:
 version: "1.0"
