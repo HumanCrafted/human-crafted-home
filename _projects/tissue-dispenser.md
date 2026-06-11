@@ -2,7 +2,7 @@
 layout: project
 title: Tissue Dispenser
 slug: tissue-dispenser
-main_image: "![[tisue-dispenser-thumbnail.svg]]"
+main_image: "![[tissue-dispenser-thumbnail.svg]]"
 featured: false
 categories:
   - laser

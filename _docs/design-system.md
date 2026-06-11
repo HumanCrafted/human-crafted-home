@@ -155,7 +155,7 @@ The Human Crafted design system. Tokens, components, and patterns I use across h
   <div class="system-content">
     <div class="system-illustration">
       <figure class="illo-figure">
-        <img src="{{ '/assets/images/tisue-dispenser-thumbnail.svg' | relative_url }}" alt="Tissue dispenser — single-color isometric line illustration used as a project thumbnail" width="200" height="200" loading="lazy">
+        <img src="{{ '/assets/images/tissue-dispenser-thumbnail.svg' | relative_url }}" alt="Tissue dispenser — single-color isometric line illustration used as a project thumbnail" width="200" height="200" loading="lazy">
         <figcaption>project thumbnail</figcaption>
       </figure>
       <div class="illo-notes">
