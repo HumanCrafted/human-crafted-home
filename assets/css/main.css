@@ -1332,8 +1332,204 @@ hr {
   border-radius: 2px;
 }
 
-.system-components {
+/* Layout — responsive column demos */
+.layout-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.layout-row .layout-label {
+  flex: 0 0 150px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--foreground);
+  line-height: 1.4;
+}
+
+.layout-row .layout-sub {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--muted-foreground);
+}
+
+.layout-demo {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.layout-demo--5 { grid-template-columns: repeat(5, 1fr); }
+.layout-demo--3 { grid-template-columns: repeat(3, 1fr); }
+.layout-demo--2 { grid-template-columns: repeat(2, 1fr); }
+.layout-demo--doc { grid-template-columns: 90px 1fr; }
+
+.layout-demo .cell {
+  height: 34px;
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+.layout-demo .cell--label {
+  background: var(--border);
+}
+
+/* Links & underlines specimens */
+.system-link-row {
+  display: flex;
+  align-items: baseline;
+  gap: 2rem;
+}
+
+.system-link-row .link-label {
+  flex: 0 0 130px;
+  font-size: 13px;
+  color: var(--muted-foreground);
+  white-space: nowrap;
+}
+
+.system-link-row .link-specimen {
+  color: var(--foreground);
+  min-width: 0;
+}
+
+.demo-static-wavy {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-underline-offset: 0.2rem;
+  font-weight: 500;
+}
+
+.system-content a.demo-navlink {
+  text-decoration: none;
+}
+
+.system-content a.demo-navlink:hover {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  font-weight: 500;
+}
+
+/* Iconography — one row per icon: [glyph] name · usage */
+.system-icon-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.icon-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.icon-box {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--foreground);
+}
+
+.icon-box svg {
+  width: 22px;
+  height: 22px;
+}
+
+.icon-name {
+  flex: 0 0 130px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+.icon-use {
+  font-size: 13px;
+  color: var(--muted-foreground);
+}
+
+/* Illustration */
+.system-illustration {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.illo-figure {
   margin: 0;
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.illo-figure img {
+  width: 200px;
+  height: 200px;
+  display: block;
+}
+
+.illo-figure figcaption {
+  font-size: 12px;
+  color: var(--muted-foreground);
+  margin-top: 0.75rem;
+}
+
+[data-theme="dark"] .illo-figure img {
+  filter: invert(91%) sepia(17%) saturate(166%) hue-rotate(1deg) brightness(94%) contrast(88%);
+}
+
+.illo-notes {
+  flex: 1;
+  min-width: 240px;
+}
+
+.illo-notes p {
+  margin-top: 0;
+}
+
+.system-spec-list {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.system-spec-list li {
+  color: var(--foreground);
+  line-height: 1.7;
+}
+
+/* Wordmark specimens */
+.wm-specimen-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.wm-specimen-row {
+  display: flex;
+  align-items: baseline;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.wm-specimen-row .wm-state-label {
+  flex: 0 0 130px;
+  font-size: 13px;
+  color: var(--muted-foreground);
+  white-space: nowrap;
+}
+
+.wm-specimen {
+  font-size: 1.25rem;
+}
+
+.wm-specimen.site-title--crumb .wm-back,
+.wm-specimen.site-title--crumb .wm-hub {
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -1349,6 +1545,23 @@ hr {
   /* Scale down the large specimens so they fit narrow screens */
   .ts-hero  { font-size: 30px; }
   .ts-title { font-size: 24px; }
+
+  /* Stack specimen rows on narrow screens */
+  .system-link-row,
+  .layout-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .system-link-row .link-label,
+  .layout-row .layout-label {
+    flex-basis: auto;
+  }
+
+  .wm-specimen-row {
+    gap: 0.5rem;
+  }
 }
 
 /* Coffee Database Table Styling */
