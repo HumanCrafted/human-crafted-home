@@ -20,19 +20,18 @@ layout: default
 <div class="project-header">
   <h1>{{ page.title }}</h1>
   
+  {% if page.categories %}
   <div class="project-meta">
-    <a href="javascript:void(0)" onclick="goBack()" class="back-link">← Go Back</a>
-    {% if page.categories %}
-      <div class="project-categories">
-        <span class="categories-label">Categories:</span>
-        <div class="meta-links">
-          {% for category in page.categories %}
-            <a href="{{ '/' | relative_url }}?category={{ category | url_encode }}#archive" class="meta-link">{{ category }}</a>
-          {% endfor %}
-        </div>
+    <div class="project-categories">
+      <span class="categories-label">Categories:</span>
+      <div class="meta-links">
+        {% for category in page.categories %}
+          <a href="{{ '/' | relative_url }}?category={{ category | url_encode }}#archive" class="meta-link">{{ category }}</a>
+        {% endfor %}
       </div>
-    {% endif %}
+    </div>
   </div>
+  {% endif %}
 </div>
 
 <div class="project-content">

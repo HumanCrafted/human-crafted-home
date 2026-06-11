@@ -12,7 +12,7 @@ Throughout this site you will find a diversified range of projects and products,
 
 Below you can learn more [about me](_docs/about-me.md), explore my [past work](/#archive), dig into my [process](_docs/process.md), reference the [tools](_docs/tools.md) that help me bring ideas to life, and peek behind the scenes at [the website](_docs/website.md) itself. If you want to talk further, get in touch [here]({{ "/lab/" | relative_url }}).
 
-{% include wiki-two-column.html title="About" items="About me:/about-me/,Process:/process/" %}
+{% include wiki-two-column.html title="About" items="About me:/about-me/,Process:/process/,Socials:/socials/" %}
 
 {% include wiki-two-column.html title="Projects" auto="projects" show_all_link="/#archive" show_all_text="View all projects" %}
 

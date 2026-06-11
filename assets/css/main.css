@@ -650,86 +650,6 @@ hr {
   letter-spacing: -0.21px;
 }
 
-.social-links {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-/* "socials" disclosure — collapsed by default, expands to the link list */
-.footer-socials {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-}
-
-.footer-socials summary {
-  list-style: none;
-  cursor: pointer;
-  font-size: 14px;
-  color: var(--foreground);
-  user-select: none;
-  transition: text-decoration 150ms ease;
-}
-
-.footer-socials summary::-webkit-details-marker {
-  display: none;
-}
-
-.footer-socials summary::after {
-  content: " +";
-  color: var(--muted-foreground);
-}
-
-.footer-socials[open] summary::after {
-  content: " –";
-}
-
-.footer-socials summary:hover {
-  font-weight: 500;
-  text-decoration: underline;
-  text-decoration-style: wavy;
-  text-decoration-color: var(--foreground);
-}
-
-.social-links-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.25rem;
-}
-
-/* Smooth reveal when the disclosure opens — a slow, graceful fade */
-@keyframes socials-reveal {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-.footer-socials[open] .social-links-list {
-  animation: socials-reveal 550ms ease;
-}
-
-.footer-socials summary::after {
-  transition: color 150ms ease;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .footer-socials[open] .social-links-list { animation: none; }
-}
-
-.social-links a {
-  color: var(--foreground);
-  font-size: 14px;
-  text-decoration: none;
-  transition: text-decoration 150ms ease;
-}
-
-.social-links a:hover {
-  font-weight: 500;
-  text-decoration: underline;
-  text-decoration-style: wavy;
-  text-decoration-color: var(--foreground);
-}
-
 /* Utility classes for margin-bottom based on Figma frames */
 .margin-bottom-1rem {
   margin-bottom: 1rem;
@@ -821,10 +741,6 @@ hr {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem !important;
-  }
-  
-  .back-link {
-    align-self: flex-start;
   }
   
   .project-tags,
@@ -995,29 +911,6 @@ hr {
 .project-footer {
   border-top: 1px solid var(--muted);
   padding-top: 2rem;
-}
-
-.back-link {
-  color: var(--foreground);
-  text-decoration: none;
-  font-size: 0.875rem;
-  transition: text-decoration 150ms ease;
-}
-
-.back-link:hover {
-  font-weight: 500;
-  text-decoration: underline;
-  text-decoration-style: wavy;
-}
-
-/* Override page-content link styling for back-link */
-.page-content .back-link {
-  text-decoration: none;
-}
-
-.page-content .back-link:hover {
-  text-decoration: underline;
-  text-decoration-style: wavy;
 }
 
 /* Lightbox */
