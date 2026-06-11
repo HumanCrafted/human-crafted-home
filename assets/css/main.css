@@ -227,6 +227,12 @@ a.site-title:hover {
   flex-shrink: 0;
 }
 
+/* Floating co/lab button — mobile only (desktop has the nav pill).
+   a.colab-fab outranks the .btn { display: inline-flex } it also carries. */
+a.colab-fab {
+  display: none;
+}
+
 /* Co/lab button styling */
 .site-nav .colab-btn {
   /* Inherits from .btn base styles - just need overrides for navigation specificity */
@@ -709,7 +715,25 @@ hr {
   }
   
   .colab-link-wrapper {
-    display: none; /* Hide Let's co/lab on mobile */
+    display: none; /* Hide Let's co/lab on mobile — the floating FAB takes over */
+  }
+
+  a.colab-fab {
+    display: inline-flex;
+    position: fixed;
+    right: 1rem;
+    bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+    z-index: 90;
+    height: 2.25rem;
+    padding: 0 1.1rem;
+    font-size: 16px !important;
+    gap: 0.3rem;
+  }
+
+  .colab-fab svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
   }
   
   .page-content {
