@@ -13,7 +13,7 @@ date_roasted:
 price: $31.00 / 12oz
 rating_1-5:
 tasting_notes:
-image: "![[PERC_ColombiaSebastianRamirezRedFruitsDecaf_2026.jpg]]"
+image: "![[PERC_ColombiaSebastianRamirezRedFruitsDecaf_Shop1_2026.webp]]"
 tags:
   - coffee
 layout: doc
@@ -22,7 +22,7 @@ version: "1.0"
 draft: false
 featured: false
 ---
-![[PERC_ColombiaSebastianRamirezRedFruitsDecaf_2026.jpg]]
+![[PERC_ColombiaSebastianRamirezRedFruitsDecaf_Shop1_2026.webp]]
 
 ## Tasting Notes
 
