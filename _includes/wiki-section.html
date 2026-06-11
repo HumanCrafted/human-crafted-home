@@ -25,7 +25,8 @@
   {% assign item_limit = include.limit | default: 999 %}
   
   {% if include.auto == "projects" %}
-    {% for project in site.projects limit:item_limit %}
+    {% assign published_projects = site.projects | where_exp: "project", "project.draft != true" %}
+    {% for project in published_projects limit:item_limit %}
       <li><a href="{{ project.url | relative_url }}">{{ project.title }}</a></li>
     {% endfor %}
   {% endif %}
