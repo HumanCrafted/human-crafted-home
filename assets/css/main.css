@@ -694,11 +694,11 @@ hr {
   
   .header-content {
     padding: 0 5%;
-    align-items: flex-start;
+    align-items: center;
   }
-  
+
   .site-title {
-    font-size: 1.125rem;
+    font-size: 1.3125rem;
   }
 
   /* Sub-page crumbs drop the long "humancrafted." prefix on mobile so

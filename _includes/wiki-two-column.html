@@ -3,6 +3,7 @@
 <div class="wiki-two-column">
   <h3 class="wiki-section-title">{{ include.title }}</h3>
   <div class="wiki-comma-list">
+    {%- capture list -%}
     {% comment %} Manual items {% endcomment %}
     {% if include.items %}
       {% assign item_list = include.items | split: ',' %}
@@ -66,10 +67,9 @@
         {% endfor %}
       {% endif %}
     {% endif %}
-
-    {% comment %} Show all link {% endcomment %}
-    {% if include.show_all_link %}
-      {% if include.items or include.auto %},{% endif %} <a href="{{ include.show_all_link | relative_url }}">{{ include.show_all_text | default: "View all" }}</a>
-    {% endif %}
+    {%- endcapture -%}
+    {{- list | strip -}}
+    {%- comment %} Show all link — hug the comma to the last item (no stray space) {% endcomment -%}
+    {%- if include.show_all_link -%}{%- if include.items or include.auto -%},{%- endif %} <a href="{{ include.show_all_link | relative_url }}">{{ include.show_all_text | default: "View all" }}</a>{%- endif -%}
   </div>
 </div>
