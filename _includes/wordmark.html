@@ -20,7 +20,9 @@
   {%- assign parts = clean | split: "/" -%}
   {%- assign slug = parts | last -%}
   {%- if slug == "" -%}{%- assign slug = parts[parts.size | minus: 2] -%}{%- endif -%}
+  {%- comment -%} Display-only crumb: show the page's display name, not the URL slug {%- endcomment -%}
+  {%- if page.title and page.title != "" -%}{%- assign crumb = page.title -%}{%- else -%}{%- assign crumb = slug | replace: "-", " " -%}{%- endif -%}
   <span class="site-title site-title--crumb" data-wm-state="sub">
-    <a href="{{ '/' | relative_url }}" class="wm-back" data-umami-event="Wordmark home"><span class="wm-human">human</span><span class="wm-crafted">crafted</span></a><span class="wm-tail"><span class="wm-dot">.</span><a href="{{ '/re/' | relative_url }}" class="wm-hub" data-umami-event="Wordmark hub">co<span class="wm-slash">/</span>re</a><span class="wm-new"><span class="wm-sep">/</span><span class="wm-current">{{ slug }}</span></span></span>
+    <a href="{{ '/' | relative_url }}" class="wm-back" data-umami-event="Wordmark home"><span class="wm-human">human</span><span class="wm-crafted">crafted</span></a><span class="wm-tail"><span class="wm-dot">.</span><a href="{{ '/re/' | relative_url }}" class="wm-hub" data-umami-event="Wordmark hub">co<span class="wm-slash">/</span>re</a><span class="wm-new"><span class="wm-sep">/</span><span class="wm-current">{{ crumb }}</span></span></span>
   </span>
 {%- endif -%}
