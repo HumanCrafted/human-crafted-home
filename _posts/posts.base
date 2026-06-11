@@ -1,0 +1,43 @@
+filters: file.inFolder("_posts")
+properties:
+  title:
+    displayName: Title
+  date:
+    displayName: Date
+  categories:
+    displayName: Categories
+  tags:
+    displayName: Tags
+  draft:
+    displayName: Draft
+views:
+  - type: table
+    name: All Posts
+    order:
+      - title
+      - date
+      - categories
+      - tags
+      - draft
+    sort:
+      - property: date
+        direction: DESC
+  - type: table
+    name: Published
+    filters: draft != true
+    order:
+      - title
+      - date
+      - categories
+      - tags
+    sort:
+      - property: date
+        direction: DESC
+  - type: table
+    name: Drafts
+    filters: draft = true
+    order:
+      - title
+      - date
+      - categories
+      - tags

@@ -1,5 +1,5 @@
 ---
-name: Colombia Sebastian Ramirez Red Fruits Decaf
+title: Colombia Sebastian Ramirez Red Fruits Decaf
 roaster: "[[coffee-roaster-perc|Perc]]"
 origin: Fincas El Placer, Quindio, Colombia
 process:
@@ -20,6 +20,7 @@ layout: doc
 slug: perc-colombia-sebastian-ramirez-red-fruits-decaf
 version: "1.0"
 draft: false
+featured: false
 ---
 ![[PERC_ColombiaSebastianRamirezRedFruitsDecaf_2026.jpg]]
 

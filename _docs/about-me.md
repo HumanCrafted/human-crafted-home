@@ -2,12 +2,13 @@
 layout: doc
 title: About me
 slug: about-me
-main_image: 
+main_image:
 featured: false
-tags: 
+tags:
+  - note
 published_date: 2025-06-12
-gallery_images: 
-version: 
+gallery_images:
+version: "1.1"
 draft: false
 ---
 Hi, I'm Jon, a creative engineer. I started Human Crafted in 2016 as a boutique product design studio and solo design brand after having worked across agencies and corporate OEM's for the previous 15 years. I specialize in rapidly building solutions to test, informing future steps, and above all… making progress.

@@ -8,6 +8,7 @@ tags:
   - note
 published_date: 2026-04-14
 draft: false
+version: "1.0"
 ---
 
 A running list of tracks that have stuck — ambient, electronic, and otherwise. Maintained here so it lives outside Apple Music.

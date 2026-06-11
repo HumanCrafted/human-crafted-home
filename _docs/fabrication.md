@@ -2,13 +2,13 @@
 layout: doc
 title: Fabrication
 slug: fabrication
-main_image: 
+main_image:
 featured: false
 tags:
   - manufacturing
 published_date: 2025-06-12
-gallery_images: 
-version: 
+gallery_images:
+version: "1.0"
 draft: false
 ---
 Tools and projects related to physical fabrication and making.

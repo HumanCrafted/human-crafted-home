@@ -1,5 +1,5 @@
 ---
-name: Colombia Young Producers
+title: Colombia Young Producers
 roaster: "[[coffee-roaster-perc|Perc]]"
 origin: Antioquia, Colombia
 process:
@@ -22,6 +22,7 @@ layout: doc
 slug: perc-colombia-young-producers
 version: "1.0"
 draft: false
+featured: false
 ---
 ![[PERC_ColombiaYoungProducers_2026.webp]]
 

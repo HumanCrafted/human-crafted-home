@@ -1,5 +1,5 @@
 ---
-name: Peru El Palto
+title: Peru El Palto
 roaster: "[[coffee-roaster-perc|Perc]]"
 origin: Juan Marco El Palto, Amazonian Andes, Peru
 process:
@@ -22,6 +22,7 @@ layout: doc
 slug: perc-peru-el-palto
 version: "1.0"
 draft: false
+featured: false
 ---
 ![[PERC_PeruElPalto_2026.webp]]
 

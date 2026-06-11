@@ -1,5 +1,5 @@
 ---
-name: Colombia Diego Bermudez Decaf
+title: Colombia Diego Bermudez Decaf
 roaster: "[[coffee-roaster-perc|Perc]]"
 origin: Colombia
 process:
@@ -24,6 +24,7 @@ layout: doc
 slug: perc-colombia-diego-bermudez-decaf
 version: "1.0"
 draft: false
+featured: false
 ---
 
 ![[PERC_ColombiaDiegoBermudezDecaf_Web1_2025.jpg]]

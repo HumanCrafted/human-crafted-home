@@ -2,12 +2,12 @@
 layout: doc
 title: Design System
 slug: design-system
-main_image: 
+main_image:
 featured: false
 tags:
   - note
 published_date: 2026-06-10
-version: "0.1"
+version: "1.0"
 draft: false
 ---
 

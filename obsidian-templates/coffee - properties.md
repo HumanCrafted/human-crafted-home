@@ -1,5 +1,5 @@
 ---
-name: Coffee Name
+title: Coffee Name
 roaster: Roaster Name
 origin: Country/Region
 process:
@@ -18,6 +18,7 @@ layout: doc
 slug: 
 version: "1.0"
 draft: false
+featured: false
 ---
 
 ![[filename.jpg]]

@@ -1,5 +1,5 @@
 ---
-name: Colombia - Huila Community Decaf
+title: Colombia - Huila Community Decaf
 roaster: "[[coffee-roaster-rogue-wave|Rogue Wave]]"
 origin: Columbia
 process:
@@ -23,6 +23,7 @@ layout: doc
 slug: rogue-wave-huila-decaf
 version: "1.0"
 draft: false
+featured: false
 ---
 
 ![[Colombia_Huila_Decaf_2025_340g_BAG.jpg]]

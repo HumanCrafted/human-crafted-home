@@ -2,13 +2,13 @@
 layout: doc
 title: Tools
 slug: tools
-main_image: 
+main_image:
 featured: false
 tags:
   - index
-published_date: 
-gallery_images: 
-version: 
+published_date:
+gallery_images:
+version: "1.0"
 draft: false
 ---
 This is a collection of all the tools and software I use in my design and fabrication process.
@@ -22,9 +22,9 @@ This is a collection of all the tools and software I use in my design and fabric
 | [3D Printer]({{ "/3d-printer/"     | relative_url }})                                                | 7 in x 7 in x 7 in, Prusa MINI+, PrusaSlicer, Prusa Connect |
 | CAD Design                         | [Fusion360]({{ "/fusion360/"                                    | relative_url }})                                            |
 | Electronics mockups                | Arduino, Raspberry Pi, IoT                                      |                                                             |
-| Organization                       | Notion, Obsidian, Airtable, Mural, Figjam, VS Code              |                                                             |
-| Business Operations                | Toggl, Xero, Ramp, Tally.so                                     |                                                             |
-| AI Tools                           | Claude Code, Claude AI, ChatGPT, Vercel v0                      |                                                             |
+| Organization                       | Notion, Obsidian, Airtable, Mural, Figjam                       |                                                             |
+| Business Operations                | Toggl, Xero, Ramp, Tally.so, Obsidian, Umami, Loops             |                                                             |
+| AI Tools                           | Claude Desktop, Claude Cowork, Claude Code                      |                                                             |
 
 ---
 

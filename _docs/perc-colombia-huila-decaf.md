@@ -1,5 +1,5 @@
 ---
-name: Colombia Huila Decaf
+title: Colombia Huila Decaf
 roaster: "[[coffee-roaster-perc|Perc]]"
 origin: Colombia
 process:
@@ -21,6 +21,7 @@ layout: doc
 slug: perc-colombia-huila-decaf
 version: "1.0"
 draft: false
+featured: false
 ---
 
 ![[PERC_DecafColombiaHuila_2025.jpg]]

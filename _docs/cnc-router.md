@@ -8,7 +8,7 @@ tags:
   - tools
 published_date: 2025-06-12
 gallery_images:
-version:
+version: "1.0"
 draft: false
 ---
 **Specs:** 24" x 48" cutting area, X-Carve Pro  

@@ -1,5 +1,5 @@
 ---
-name: Colombia - Laderas Estate | Rodrigo Pelaez
+title: Colombia - Laderas Estate | Rodrigo Pelaez
 roaster: "[[coffee-roaster-rogue-wave|Rogue Wave]]"
 origin: Colombia
 process:
@@ -24,6 +24,7 @@ layout: doc
 slug: rogue-wave-colombia-laderas-estate
 version: "1.0"
 draft: false
+featured: false
 ---
 
 ![[Colombia-LaderasEstateWashed.jpg]]

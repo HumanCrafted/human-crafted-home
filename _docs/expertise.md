@@ -2,13 +2,13 @@
 layout: doc
 title: Expertise
 slug: expertise
-main_image: 
+main_image:
 featured: false
 tags:
   - index
 published_date: 2025-06-12
-gallery_images: 
-version: 
+gallery_images:
+version: "1.0"
 draft: false
 ---
 ![](../assets/images/vennExpertise.svg)

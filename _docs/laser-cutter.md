@@ -2,13 +2,13 @@
 layout: doc
 title: Laser Cutter
 slug: laser-cutter
-main_image: 
+main_image:
 featured: false
 tags:
   - tools
 published_date: 2025-06-12
-gallery_images: 
-version: 
+gallery_images:
+version: "1.0"
 draft: false
 ---
 **Specs:** 1300mm x 900mm 150 Watt CO2  

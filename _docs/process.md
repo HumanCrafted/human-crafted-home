@@ -2,12 +2,13 @@
 layout: doc
 title: Process
 slug: process
-main_image: 
+main_image:
 featured: false
-tags: 
+tags:
+  - note
 published_date: 2025-06-12
-gallery_images: 
-version: 
+gallery_images:
+version: "1.0"
 draft: false
 ---
 ![](../assets/images/vennColab.svg)

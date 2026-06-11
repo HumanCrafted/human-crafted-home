@@ -34,10 +34,10 @@ A collection of coffee beans I've tried, rated, and reviewed.
         <td>
           {% if coffee.image %}
             {% assign image_filename = coffee.image | replace: '![[', '' | replace: ']]', '' %}
-            <img src="{{ '/assets/images/' | append: image_filename | relative_url }}" alt="{{ coffee.name }}" style="width: 50px; height: auto;">
+            <img src="{{ '/assets/images/' | append: image_filename | relative_url }}" alt="{{ coffee.title }}" style="width: 50px; height: auto;">
           {% endif %}
         </td>
-        <td><a href="{{ coffee.url | relative_url }}">{{ coffee.name }}</a></td>
+        <td><a href="{{ coffee.url | relative_url }}">{{ coffee.title }}</a></td>
         <td>
           {% if coffee.roaster contains '[[' %}
             {% assign roaster_parts = coffee.roaster | replace: '[[', '' | replace: ']]', '' | split: '|' %}

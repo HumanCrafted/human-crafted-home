@@ -8,7 +8,7 @@ tags:
   - tools
 published_date: 2025-06-12
 gallery_images:
-version:
+version: "1.0"
 draft: false
 ---
 **Specs:** 7" x 7" x 7" build volume, Prusa MINI+  

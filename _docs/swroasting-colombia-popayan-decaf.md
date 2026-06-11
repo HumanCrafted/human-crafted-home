@@ -1,5 +1,5 @@
 ---
-name: Colombia Popayan EA Decaf
+title: Colombia Popayan EA Decaf
 roaster: "[[coffee-roaster-swroasting|SW Roasting]]"
 origin: Colombia
 process:
@@ -21,6 +21,7 @@ layout: doc
 slug: swroasting-colombia-popayan-decaf
 version: "1.0"
 draft: false
+featured: false
 ---
 
 ## Tasting Notes

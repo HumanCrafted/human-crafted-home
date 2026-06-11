@@ -1,5 +1,5 @@
 ---
-name: Roaster Name
+title: Roaster Name
 location: City, State/Country
 founded: ""
 website: https://roasterwebsite.com
@@ -14,6 +14,7 @@ layout: doc
 slug: 
 version: "1.0"
 draft: false
+featured: false
 ---
 ## Coffees I've Tried
 
@@ -32,7 +33,7 @@ draft: false
     <tbody>
       {% for coffee in roaster_coffees %}
       <tr>
-        <td><a href="{{ coffee.url | relative_url }}">{{ coffee.name }}</a></td>
+        <td><a href="{{ coffee.url | relative_url }}">{{ coffee.title }}</a></td>
         <td>{{ coffee.origin }}</td>
         <td>{{ coffee.rating_1-5 }}/5</td>
       </tr>

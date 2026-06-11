@@ -1,5 +1,5 @@
 ---
-name: Rogue Wave
+title: Rogue Wave
 location: 1322 119 St NWEdmonton, Alberta, CanadaT5G 2X4
 founded: ""
 website: https://roguewavecoffee.ca
@@ -14,6 +14,7 @@ layout: doc
 slug: coffee-roaster-rogue-wave
 version: "1.0"
 draft: false
+featured: false
 ---
 
 ## Coffees I've Tried
@@ -33,7 +34,7 @@ draft: false
     <tbody>
       {% for coffee in roaster_coffees %}
       <tr>
-        <td><a href="{{ coffee.url | relative_url }}">{{ coffee.name }}</a></td>
+        <td><a href="{{ coffee.url | relative_url }}">{{ coffee.title }}</a></td>
         <td>{{ coffee.origin }}</td>
         <td>{{ coffee.rating_1-5 }}/5</td>
       </tr>

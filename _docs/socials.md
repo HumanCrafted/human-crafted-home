@@ -2,12 +2,13 @@
 layout: doc
 title: Socials
 slug: socials
-main_image: 
+main_image:
 featured: false
-tags: 
+tags:
+  - note
 published_date: 2026-06-10
-gallery_images: 
-version: 
+gallery_images:
+version: "1.0"
 draft: false
 ---
 

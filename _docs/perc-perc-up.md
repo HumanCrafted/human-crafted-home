@@ -1,5 +1,5 @@
 ---
-name: Perc Up
+title: Perc Up
 roaster: "[[coffee-roaster-perc|Perc]]"
 origin: Limu, Ethiopia
 process:
@@ -21,6 +21,7 @@ layout: doc
 slug: perc-perc-up
 version: "1.0"
 draft: false
+featured: false
 ---
 ![[PERC_PercUp_2025.jpg]]
 

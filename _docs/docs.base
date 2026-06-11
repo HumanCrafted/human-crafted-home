@@ -1,0 +1,47 @@
+filters:
+  and:
+    - file.inFolder("_docs")
+properties:
+  title:
+    displayName: Title
+  tags:
+    displayName: Tags
+  published_date:
+    displayName: Date
+  draft:
+    displayName: Draft
+  featured:
+    displayName: Featured
+  version:
+    displayName: Version
+views:
+  - type: table
+    name: All Docs
+    order:
+      - title
+      - tags
+      - published_date
+      - draft
+      - featured
+      - version
+    sort:
+      - property: published_date
+        direction: DESC
+  - type: table
+    name: Published
+    filters: draft != true
+    order:
+      - title
+      - tags
+      - published_date
+      - featured
+    sort:
+      - property: published_date
+        direction: DESC
+  - type: table
+    name: Drafts
+    filters: draft = true
+    order:
+      - title
+      - tags
+      - published_date

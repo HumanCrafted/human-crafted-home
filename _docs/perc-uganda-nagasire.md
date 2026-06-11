@@ -1,5 +1,5 @@
 ---
-name: Uganda Nagasire
+title: Uganda Nagasire
 roaster: "[[coffee-roaster-perc|Perc]]"
 origin: Nagasire, Kapchorwa
 process:
@@ -23,6 +23,7 @@ layout: doc
 slug: perc-uganda-nagasire
 version: "1.0"
 draft: false
+featured: false
 ---
 ![[PERC_UgandaNagasire_2025.jpg]]
 

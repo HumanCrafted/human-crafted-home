@@ -2,15 +2,15 @@
 layout: doc
 title: Fusion 360
 slug: fusion360
-main_image: 
+main_image:
 featured: false
 tags:
   - tools
   - CAD
   - design
 published_date: 2025-06-12
-gallery_images: 
-version: 
+gallery_images:
+version: "1.0"
 draft: false
 ---
 **Software:** Autodesk Fusion360 Professional  

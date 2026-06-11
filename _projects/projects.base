@@ -1,0 +1,58 @@
+filters: file.inFolder("_projects")
+properties:
+  title:
+    displayName: Title
+  categories:
+    displayName: Categories
+  tools:
+    displayName: Tools
+  published_date:
+    displayName: Date
+  draft:
+    displayName: Draft
+  featured:
+    displayName: Featured
+  headline:
+    displayName: Headline
+  version:
+    displayName: Version
+views:
+  - type: table
+    name: All Projects
+    order:
+      - title
+      - categories
+      - tools
+      - published_date
+      - draft
+      - version
+      - headline
+      - featured
+    sort:
+      - property: draft
+        direction: DESC
+      - property: published_date
+        direction: DESC
+  - type: table
+    name: Published
+    filters: draft != true
+    order:
+      - title
+      - categories
+      - tools
+      - published_date
+      - featured
+      - headline
+      - version
+    sort:
+      - property: published_date
+        direction: DESC
+  - type: table
+    name: Drafts
+    filters: draft = true
+    order:
+      - title
+      - categories
+      - tools
+      - headline
+      - version

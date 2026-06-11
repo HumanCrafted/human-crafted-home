@@ -1,5 +1,5 @@
 ---
-name: Brazil Legender
+title: Brazil Legender
 roaster: "[[coffee-roaster-perc|Perc]]"
 origin: Minas Gerais, Brazil
 process:
@@ -21,6 +21,7 @@ layout: doc
 slug: perc-brazil-legender
 version: "1.0"
 draft: false
+featured: false
 ---
 ![[PERC_BrazilLegender_2025.jpg]]
 
