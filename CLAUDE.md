@@ -4,9 +4,13 @@
 Jekyll website for Human Crafted LLC, implementing a Figma design with exact color matching and layout specifications, based on markdown files managed in Obsidian.
 
 ## Design System
-- **Colors**: Tan background (#dfd7c8), Dark text (#333333), Yellow highlights (#ffff00)
-- **Fonts**: IBM Plex Mono (primary), Work Sans (buttons)
-- **Layout**: Fixed navigation, 20vh top padding, 40vh hero section
+Source of truth: the `human-crafted-design-system` repo (`tokens.css`, `DESIGN.md`) + the Figma file `HCd – Design System` (key `nHIcjHP7MZOQRSB4lptWu4`). Live reference page: `/design-system/` (the `_docs/design-system.md` Note).
+- **Colors (light)**: paper `#FAF7F2`, ink `#2A2824`, ink-muted `#736356`, border `#948F87`, accent `#E8C84A`. **Dark**: paper `#2A2824`, ink `#ECE3CE`, accent `#C9A832`. Tokens live as CSS vars in `main.css` (`--background`/`--foreground`/`--accent`/`--muted`/`--muted-foreground`/`--surface`/`--border`).
+- **Fonts**: IBM Plex Mono (body/nav/hero), **IBM Plex Sans Bold** (wordmark + CTA only). Body 16px.
+- **Interactions**: wavy-underline on hover for content/nav links (no accent color in links); the header wordmark is the exception (no underline).
+- **Layout**: Fixed navigation, 20vh top padding, 40vh hero, `scrollbar-gutter: stable` so short and long pages center identically.
+
+> Older notes below this point may reference the **pre-2026 palette** (tan `#dfd7c8` / `#333333` / pure `#ffff00`, Work Sans). That was migrated to the design-system tokens above in June 2026 — see "Design System Refresh".
 
 ## Recent Changes Made
 
@@ -77,11 +81,13 @@ Jekyll website for Human Crafted LLC, implementing a Figma design with exact col
 
 ### How to Start Local Server
 ```bash
-# Navigate to project
-cd /Users/nginear/Documents/GitHub/human-crafted-home
+# Working dir is the iCloud Obsidian vault (NOT Documents/GitHub):
+cd "/Users/nginear/Library/Mobile Documents/iCloud~md~obsidian/Documents/human-crafted-home"
 
-# Start server with Homebrew Ruby
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH" && nohup bundle exec jekyll serve --host 127.0.0.1 --port 4000 > jekyll.log 2>&1 &
+# Start server with Homebrew Ruby. Ruby 3.4.7 + a stale Gemfile.lock pin means
+# the 2.6.9 bundler binstub fails — call bundler 2.7.2 explicitly. Run
+# `bundle _2.7.2_ install` first if gems are missing or a gem was just added.
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH" && nohup bundle _2.7.2_ exec jekyll serve --host 127.0.0.1 --port 4000 > jekyll.log 2>&1 &
 
 # Check if running
 ps aux | grep -v grep | grep jekyll
@@ -342,6 +348,29 @@ git checkout -b hover-experiment
   - JavaScript event listeners for dynamic interactions (wiki sections)
   - All tracking only active in production environment
 
+## Design System Refresh & Breadcrumb Wordmark (June 2026)
+
+Branch `design-system-refresh` (merge to `main` to ship).
+
+### Design-system migration
+- Migrated off the old ad-hoc palette/fonts onto the documented tokens (see Design System above): paper/ink/accent, **IBM Plex Sans** for wordmark + CTA, body 16px, retuned dark-mode SVG invert filter.
+- **Project grid → 5 columns** (3 on tablet ≤1024px, 2 on mobile ≤768px).
+- **Footer social → a collapsible "socials" disclosure** of lowercase text links (`<details>` in `footer-social.liquid`, data-driven from `_data/social.yml`), with a graceful fade-in.
+- **New living style guide**: `_docs/design-system.md` (a Note, `/design-system/`) — color swatches with **click-to-copy hex**, type/spacing/component specimens. Reuses the `.wiki-two-column` rhythm.
+- **Doc/Note section headings** now ruled + Plex Sans Bold (`.doc-content > h2/h3`).
+
+### Breadcrumb wordmark (`_includes/wordmark.html` + `assets/js/wordmark.js`)
+- Header wordmark is a breadcrumb reinforcing the `.co` play and doubling as back-nav:
+  - Home → `human / crafted` (unchanged, links home).
+  - Hubs `/lab/`, `/re/` → `humancrafted.co/lab` · `co/re` — `humancrafted.` dims to 25% (links home), `co/<section>` is bright/current.
+  - Sub-pages → nested display-only crumb `humancrafted.co/re/<slug>` (`humancrafted`→home, `co/re`→hub, slug current). **Real URLs stay flat** — the nesting is visual only, no SEO/URL migration.
+- **Renamed the hub `/more/` → `/re/`** (co/re = "core", the body of work) via **`jekyll-redirect-from`** (added to `Gemfile` + `_config.yml`); old `/more/` redirects. Nav label stays "More".
+- "Let's co/lab" pill shows on **all** pages now.
+- On-load motion (Web Animations API; skipped for `prefers-reduced-motion` or hidden/backgrounded tabs): breadcrumb pages **wipe in only the newest path segment**; home **reassembles** (`humancrafted` splits, the `/` drops into the gap) only when arriving from an internal page (`document.referrer` same-origin).
+
+### Dev environment note
+Ruby was upgraded to 3.4.7; use `bundle _2.7.2_ exec …` (see Jekyll Development Server). `Gemfile.lock`, `.DS_Store`, `jekyll.log`, `.obsidian/workspace.json`, and `.claude/` are gitignored. The Obsidian git-sync plugin can switch the working-tree branch mid-session.
+
 ---
-*Last updated: September 23, 2025*
+*Last updated: June 10, 2026*
 *Claude Code session documentation*

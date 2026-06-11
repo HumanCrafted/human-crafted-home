@@ -29,33 +29,13 @@ This website was built with the help of Claude Code, and inspired by [Steph Ango
 - **Git** - Version control with detailed commit history
 
 ### Development Tools
-- **Claude Code** - AI-powered development assistant for implementation, edits, and content prototyping.
-- **Figma** - Design reference and specifications
-- **VS Code** - Code editor
+- **Claude Code and Cowork** - AI-powered development assistant for implementation, edits, and content prototyping.
+- **Figma** - Design prototyping, reference and specifications. Collaborating with Claude using the Figma MCP
+- **Umami** - Privacy-first, cookieless analytics, loaded in production only
 
 ## Design System
 
-### Color Palette
-
-#### Light Mode
-- **Background**: Tan (#dfd7c8)
-- **Text**: Almost Black (#333333)
-- **Highlights**: Yellow (#ffff00)
-- **Navigation**: Semi-transparent tan with backdrop blur
-
-#### Dark Mode
-- **Background**: Almost Black (#333333)
-- **Text**: Tan (#dfd7c8)
-- **Highlights**: Yellow (#ffff00)
-- **Navigation**: Semi-transparent black with backdrop blur
-
-### Typography
-- **Primary Font**: IBM Plex Mono
-- **Button Font**: Work Sans (700 weight)
-
-### Interactive Elements
-- **Hover Effects**: Wavy underline on links using `text-decoration-style: wavy`
-- **SVG Filter**: Dark mode applies CSS filter to convert black SVGs to tan color: `filter: invert(91%) sepia(17%) saturate(166%) hue-rotate(1deg) brightness(94%) contrast(88%)`
+The site's colors, typography, spacing, and components are documented in the [Design System]({{ "/design-system/" | relative_url }}) note — the single source of truth shared across humancrafted.co and sub-brand tools. In short: IBM Plex Mono for text and IBM Plex Sans for the wordmark and calls to action, a warm paper/ink palette with a yellow brand accent, and a wavy-underline pattern for every interactive link.
 
 ### Project Thumbnail Creation
 1. **Fusion 360 Drawing**: Create technical drawing and export as DXF
@@ -72,11 +52,11 @@ This website was built with the help of Claude Code, and inspired by [Steph Ango
 
 ### Custom Features
 
-#### Wiki Section System
-- Collapsible content sections using HTML details/summary elements
-- Auto-population from Jekyll collections
-- Manual item lists with optional links
-- Configurable limits and expansion states
+#### Reference Sections
+- Two-column layout: a section label beside an auto-populated, comma-separated list
+- Pulls live from Jekyll collections (projects, notes, tools, posts)
+- Manual item lists with optional links and configurable limits
+- Used on the [More](/re/) page and the [Design System]({{ "/design-system/" | relative_url }}) note
 
 #### Obsidian Integration Plugin
 - Seamless conversion of `[[page-name]]` links
