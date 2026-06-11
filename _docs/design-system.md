@@ -174,7 +174,7 @@ The Human Crafted design system. Tokens, components, and patterns I use across h
 <div class="wiki-two-column system-row">
   <h3 class="wiki-section-title">Wordmark</h3>
   <div class="system-content">
-    <p class="system-note" style="margin-top:0">The header wordmark is a live breadcrumb built on the <code>.co</code> domain — it reads as <code>humancrafted.co/&lt;section&gt;</code> and doubles as back-navigation. Dim segments link to home or up a level; the bright segment is the current page. Hover a dim segment to see it light up.</p>
+    <p class="system-note" style="margin-top:0">The header wordmark is a live breadcrumb built on the <code>.co</code> domain and doubles as back-navigation when visiting core and sub-pages. Dim segments link to home or up a level; the bright segment is the current page. Hover a dim segment to see it light up.</p>
     <div class="wm-specimen-list">
       <div class="wm-specimen-row">
         <span class="wm-state-label">home</span>
