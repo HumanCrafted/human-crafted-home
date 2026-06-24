@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "The Core."
+title: "re: Human Crafted"
 permalink: /re/
 redirect_from:
   - /more/

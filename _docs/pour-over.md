@@ -25,6 +25,8 @@ My go-to pour over recipes.[^1]
 - [Hario V60 Metal Dripper, 02 Matte Black](https://amzn.to/46HvGCv)
 - [Kalita Wave Series 185](https://amzn.to/4aRRZIh) 
 - [Chemex - Glass Handle Series](https://amzn.to/4sof9vB)
+- [1Zpresso J-Ultra](https://amzn.to/4rnSmiR)
+- [Wacaco Travel Scale](https://amzn.to/4oG3IyS)
 - OEM filters for each dripper
 
 ---
