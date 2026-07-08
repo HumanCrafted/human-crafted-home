@@ -43,4 +43,4 @@ Most everything we took out couldn't be saved, aside from countless curbside giv
 
 This house, [[shop-v3|the shop]], and a subsequent bed/bath addition has eaten up or been the source of nearly all Human Crafted making efforts since the purchase, a side effect or benefit depending on how you look at it. It's been a rewarding process, and almost certainly not the last.  
 
-If you have architectural design or remodel assistance needs, [[lab|let's chat]].
+**If you have architectural design dreams or remodel assistance needs, [[lab|let's chat]].**

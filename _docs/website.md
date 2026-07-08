@@ -56,7 +56,7 @@ The site's colors, typography, spacing, and components are documented in the [[d
 - Two-column layout: a section label beside an auto-populated, comma-separated list
 - Pulls live from Jekyll collections (projects, notes, tools, posts)
 - Manual item lists with optional links and configurable limits
-- Used on the [[core|More]] page and the [[design-system|Design System]] note
+- Used on the [[core|Core]] page and the [[design-system|Design System]] note
 
 #### Obsidian Integration Plugin
 - Seamless conversion of `[[page-name]]` links
