@@ -7,6 +7,7 @@ featured: false
 categories:
   - around the house
   - around the shop
+  - architectural design
 published_date: 2023-01-31
 draft: false
 gallery_images:
