@@ -2,7 +2,7 @@
 layout: project
 title: Sherman Court
 slug: sherman-court
-main_image: "![[Sherman_Ct.svg]]"
+main_image: "![[sherman-ct.svg]]"
 featured: false
 categories:
   - around the house
