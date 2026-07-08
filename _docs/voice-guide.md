@@ -208,11 +208,10 @@ process:
 
 ### Linking conventions
 
-- Use Obsidian wiki-links where possible: `[[page-name|Display Text]]`
-- For images: `![[image-filename.ext]]`
-- For links to docs from other docs: `[Display Text](_docs/filename.md)`
-- For linking to the homepage: `[text](../index.md)` or `[text](/index.md)`
-- The Obsidian plugin handles conversion to Jekyll URLs at build time
+- Internal links — always Obsidian wiki-links: `[[slug|Display Text]]` (or `[[slug]]`). `slug` is the target note's filename without `.md`.
+- Images: `![[image-filename.ext]]` (files live in `assets/images/`)
+- Don't hand-write `[Display Text](path.md)` links — the wiki-link form is the one convention, and stray markdown links to non-existent notes can create phantom files
+- The Obsidian plugin converts wiki-links to Jekyll URLs at build time (filename → `/slug/`; hub pages like `core` → `/re/` are aliased)
 
 ### Heading levels
 

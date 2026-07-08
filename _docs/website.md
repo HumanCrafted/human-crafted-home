@@ -35,7 +35,7 @@ This website was built with the help of Claude Code, and inspired by [Steph Ango
 
 ## Design System
 
-The site's colors, typography, spacing, and components are documented in the [Design System]({{ "/design-system/" | relative_url }}) note — the single source of truth shared across humancrafted.co and sub-brand tools. In short: IBM Plex Mono for text and IBM Plex Sans for the wordmark and calls to action, a warm paper/ink palette with a yellow brand accent, and a wavy-underline pattern for every interactive link.
+The site's colors, typography, spacing, and components are documented in the [[design-system|Design System]] note — the single source of truth shared across humancrafted.co and sub-brand tools. In short: IBM Plex Mono for text and IBM Plex Sans for the wordmark and calls to action, a warm paper/ink palette with a yellow brand accent, and a wavy-underline pattern for every interactive link.
 
 ### Project Thumbnail Creation
 1. **Fusion 360 Drawing**: Create technical drawing and export as DXF
@@ -56,7 +56,7 @@ The site's colors, typography, spacing, and components are documented in the [De
 - Two-column layout: a section label beside an auto-populated, comma-separated list
 - Pulls live from Jekyll collections (projects, notes, tools, posts)
 - Manual item lists with optional links and configurable limits
-- Used on the [More](/re/) page and the [Design System]({{ "/design-system/" | relative_url }}) note
+- Used on the [[core|More]] page and the [[design-system|Design System]] note
 
 #### Obsidian Integration Plugin
 - Seamless conversion of `[[page-name]]` links

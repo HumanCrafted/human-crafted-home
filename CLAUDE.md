@@ -3,6 +3,17 @@
 ## Project Overview
 Jekyll website for Human Crafted LLC, implementing a Figma design with exact color matching and layout specifications, based on markdown files managed in Obsidian.
 
+## Linking convention (ONE style — use it everywhere)
+Authored in Obsidian, built by Jekyll/GitHub Actions. Both understand exactly one internal-link style:
+
+- **Internal links:** `[[slug|Display Text]]` (or `[[slug]]`). `slug` is the target note's filename without `.md` — e.g. `[[shop-v3|the new shop]]`. Works in Obsidian AND resolves on the built site.
+- **Images:** `![[file.ext]]` — files live in `assets/images/`. (Alt text: `![[file.ext|alt]]`.)
+- **Do NOT** hand-write `[text](path.md)` markdown links. They only ever converted for `_docs/` targets, silently broke for `_projects/`/root paths, and — worse — typing one to a note that doesn't exist yet makes Obsidian auto-create an empty `.md` file, which used to crash the whole build.
+
+How it resolves (`_plugins/obsidian_links.rb`): the wiki-link target is slugified (lowercased, spaces/underscores → hyphens), so `[[Shop V3]]`, `[[shop_v3]]`, `[[shop-v3]]` all map to `/shop-v3/`. Every project and doc is `/:slug/`. Hub pages whose permalink differs from their filename are aliased in `PERMALINK_ALIASES` (currently `core`/`re`/`more` → `/re/`, `index`/`home` → `/`); add to that map if a new custom-permalink page appears. The plugin still converts stray `[text](path.md)` links as a best-effort fallback, but don't rely on it.
+
+**Safety net:** `_plugins/co_re_redirects.rb` now skips non-document (StaticFile) entries, so an empty/front-matter-less `.md` can no longer take down the build — worst case is one dead link. If a build ever fails, first check for 0-byte files: `find . -name '*.md' -size 0`.
+
 ## Design System
 Source of truth: the `human-crafted-design-system` repo (`tokens.css`, `DESIGN.md`) + the Figma file `HCd – Design System` (key `nHIcjHP7MZOQRSB4lptWu4`). Live reference page: `/design-system/` (the `_docs/design-system.md` Note).
 - **Colors (light)**: paper `#FAF7F2`, ink `#2A2824`, ink-muted `#736356`, border `#948F87`, accent `#E8C84A`. **Dark**: paper `#2A2824`, ink `#ECE3CE`, accent `#C9A832`. Tokens live as CSS vars in `main.css` (`--background`/`--foreground`/`--accent`/`--muted`/`--muted-foreground`/`--surface`/`--border`).

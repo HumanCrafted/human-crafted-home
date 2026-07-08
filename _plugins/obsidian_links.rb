@@ -1,125 +1,119 @@
+require "cgi"
+
+# Obsidian -> Jekyll link & image conversion.
+#
+# ONE authoring convention (see CLAUDE.md "Linking convention"):
+#   * Internal links : [[slug|Display Text]]   (or [[slug]])
+#   * Images         : ![[file.ext]]           (files live in assets/images/)
+#   * Do NOT hand-write [text](path.md) links. They're only converted here as a
+#     best-effort fallback, and typing them in Obsidian can spawn phantom empty
+#     notes that break the build.
+#
+# "slug" is the target note's filename without .md. Every project and doc maps
+# 1:1 to its URL (/:slug/), so [[shop-v3]] -> /shop-v3/. The handful of hub
+# pages whose permalink differs from their filename are aliased in
+# PERMALINK_ALIASES below. Targets are slugified (lowercased, spaces/underscores
+# -> hyphens), so [[Shop V3]] and [[shop_v3]] resolve the same as [[shop-v3]].
+module ObsidianLinks
+  # Images embedded with ![[ ]] (by extension).
+  IMAGE_RE      = /!\[\[([^\|\]]+\.(?:jpg|jpeg|png|gif|svg|webp))(?:\|([^\]]+))?\]\]/i
+  # Obsidian .base embeds -> Jekyll include.
+  BASE_RE       = /!\[\[([^\]]+)\.base\]\]/
+  # Wiki links: [[target|Display]] or [[target]] (not preceded by "!").
+  WIKI_RE       = /(?<!!)\[\[([^\|\]]+)(?:\|([^\]]+))?\]\]/
+  # Fallback markdown links to a .md file: [Display](some/path.md).
+  MD_LINK_RE    = /\[([^\]]+)\]\(([^)\s]+\.md)\)/
+
+  # Pages whose URL is NOT "/#{filename}/". Keyed by slugified filename.
+  PERMALINK_ALIASES = {
+    "core"  => "/re/",  # core.md -> /re/
+    "re"    => "/re/",
+    "more"  => "/re/",  # legacy /more/ label, redirects to /re/
+    "index" => "/",     # homepage
+    "home"  => "/",
+  }.freeze
+
+  # Normalize a wiki-link target to a URL slug.
+  def self.slugify(raw)
+    CGI.unescape(raw.to_s.strip).downcase.gsub(/[\s_]+/, "-").gsub(/[^a-z0-9\-]/, "")
+  end
+
+  # Resolve any target (filename, slug, title, or path.md) to a site-root path,
+  # e.g. "/shop-v3/". Honors PERMALINK_ALIASES.
+  def self.target_path(raw)
+    base = raw.to_s.strip
+              .sub(/[#?].*\z/, "")          # drop #anchor / ?query
+              .sub(/\.md\z/i, "")           # drop .md
+              .split("/").reject(&:empty?).last.to_s  # basename if a path slipped in
+    slug = slugify(base)
+    PERMALINK_ALIASES[slug] || "/#{slug}/"
+  end
+
+  # Convert ![[image.ext]] / ![[image.ext|alt]] -> ![alt](baseurl/assets/images/..)
+  def self.convert_images(text, baseurl)
+    text.gsub(IMAGE_RE) do
+      filename = $1.strip
+      alt      = $2 ? $2.strip : ""
+      "![#{alt}](#{baseurl}/assets/images/#{filename})"
+    end
+  end
+
+  # Convert ![[name.base]] -> {% include name-table.html %}
+  def self.convert_base_embeds(text)
+    text.gsub(BASE_RE) { "{% include #{$1.strip}-table.html %}" }
+  end
+end
+
 Jekyll::Hooks.register [:pages, :documents], :pre_render do |item|
   next unless item.path.end_with?('.md')
   next unless item.content
-  
-  # Debug logging
-  if item.path.include?('rogue-wave') && item.path.include?('yellow-sunset')
-    puts "DEBUG: Processing #{item.path}, layout: #{item.data['layout']}"
-    puts "DEBUG: Content preview: #{item.content[0..100]}"
-    puts "DEBUG: Image processing branch: #{(item.data['layout'] == 'doc') ? 'doc layout path' : 'normal path'}"
-  end
-  
-  # Convert Obsidian image syntax in frontmatter 'image' field for SEO metadata
+
+  baseurl = item.site.config['baseurl'] || ''
+
+  # ---- Frontmatter image (SEO metadata): ![[img.ext]] -> /assets/images/img.ext
   if item.data['image'] && item.data['image'].match(/!\[\[([^\]]+\.(jpg|jpeg|png|gif|svg|webp))\]\]/i)
-    filename = $1.strip
-    item.data['image'] = "/assets/images/#{filename}"
+    item.data['image'] = "/assets/images/#{$1.strip}"
   end
-  
-  # Also set description from content if first line is just an image
-  if item.content && item.content.strip.match(/^!\[\[([^\]]+\.(jpg|jpeg|png|gif|svg|webp))\]\]/)
-    # If first line is just an image, use the image filename as description instead
-    filename = $1.strip
-    item.data['description'] = "Coffee review with tasting notes and brewing recommendations"
+
+  # If the first content line is just an image, give coffee notes a sane description.
+  if item.content.strip.match(/^!\[\[([^\]]+\.(jpg|jpeg|png|gif|svg|webp))\]\]/)
+    item.data['description'] ||= "Coffee review with tasting notes and brewing recommendations"
   end
-  
-  # Skip processing if content contains complex Liquid template blocks (avoid interfering with templates)
-  # But allow simple relative_url usage which is created by our own processing
-  if item.content && (item.content.include?('{% if') || (item.data['layout'] == 'doc'))
-    # Only process simple Obsidian links, avoid complex template areas
-    # Convert [text](/index.md) and [text](../index.md) to homepage link (safest conversion)
-    item.content = item.content.gsub(/\[([^\]]+)\]\((\.\.\/)?index\.md\)/) do |match|
-      display_text = $1.strip
-      "[#{display_text}]({{ \"/\" | relative_url }})"
-    end
-    
-    # Convert [text](_docs/filename.md) to Jekyll-style links (in text content only)
-    item.content = item.content.gsub(/\[([^\]]+)\]\(_docs\/([^)]+)\.md\)/) do |match|
-      display_text = $1.strip
-      filename = $2.strip
-      # Handle URL encoding (e.g., %20 for spaces) and convert to Jekyll-friendly format
-      filename = CGI.unescape(filename).downcase.gsub(/\s+/, '-').gsub(/[^a-z0-9\-_]/, '')
-      baseurl = item.site.config['baseurl'] || ''
-      "[#{display_text}](#{baseurl}/#{filename}/)"
-    end
-    
-    # Convert ![[filename.base]] embeds to Jekyll includes
-    item.content = item.content.gsub(/!\[\[([^\]]+)\.base\]\]/) do |match|
-      base_name = $1.strip
-      "{% include #{base_name}-table.html %}"
-    end
 
-    # Convert Obsidian image syntax ![[image.ext]] to Jekyll format (must run before wiki-link conversion)
-    item.content = item.content.gsub(/!\[\[([^\]]+\.(jpg|jpeg|png|gif|svg|webp))\]\]/i) do |match|
-      filename = $1.strip
-      baseurl = item.site.config['baseurl'] || ''
-      "![](#{baseurl}/assets/images/#{filename})"
-    end
+  # ---- Conversions, in a safe order:
+  #   1. .base embeds  2. images  3. markdown .md links  4. wiki links
+  # (Images before wiki links so ![[img]] is never mistaken for a [[link]].)
+  item.content = ObsidianLinks.convert_base_embeds(item.content)
+  item.content = ObsidianLinks.convert_images(item.content, baseurl)
 
-    # Convert wiki-links in doc layouts, processing line by line
-    # to safely skip any lines containing Liquid tags
-    baseurl = item.site.config['baseurl'] || ''
+  if item.content.include?('{% if') || (item.data['layout'] == 'doc')
+    # Files that carry their own Liquid: convert per line, leaving any line that
+    # already contains a Liquid tag untouched.
     item.content = item.content.lines.map do |line|
-      if line.include?('{%') || line.include?('{{')
-        line  # Leave Liquid lines untouched
-      else
-        # Convert [[page-name|Display Text]]
-        line = line.gsub(/\[\[([^\|\]]+)\|([^\]]+)\]\]/) do
-          page_name = $1.strip
-          display_text = $2.strip
-          "[#{display_text}](#{baseurl}/#{page_name}/)"
-        end
-        # Convert [[page-name]]
-        line = line.gsub(/(?<!!)\[\[([^\]]+)\]\]/) do
-          page_name = $1.strip
-          "[#{page_name}](#{baseurl}/#{page_name}/)"
-        end
-        line
+      next line if line.include?('{%') || line.include?('{{')
+
+      line = line.gsub(ObsidianLinks::MD_LINK_RE) do
+        disp, path = $1.strip, $2.strip
+        path.include?('://') ? "[#{disp}](#{path})" :
+          "[#{disp}](#{baseurl}#{ObsidianLinks.target_path(path)})"
+      end
+      line.gsub(ObsidianLinks::WIKI_RE) do
+        target = $1.strip
+        disp   = $2 ? $2.strip : target
+        "[#{disp}](#{baseurl}#{ObsidianLinks.target_path(target)})"
       end
     end.join
   else
-    # Full processing for simple markdown files without templates
-    # Convert [[page-name|Display Text]] to [Display Text]({{ "/page-name/" | relative_url }})
-    item.content = item.content.gsub(/\[\[([^\|\]]+)\|([^\]]+)\]\]/) do |match|
-      page_name = $1.strip
-      display_text = $2.strip
-      "[#{display_text}]({{ \"/#{page_name}/\" | relative_url }})"
+    # Simple markdown files: emit relative_url so baseurl is applied at render.
+    item.content = item.content.gsub(ObsidianLinks::MD_LINK_RE) do
+      disp, path = $1.strip, $2.strip
+      path.include?('://') ? "[#{disp}](#{path})" :
+        "[#{disp}]({{ \"#{ObsidianLinks.target_path(path)}\" | relative_url }})"
     end
-    
-    # Convert [[page-name]] to [page-name]({{ "/page-name/" | relative_url }})
-    item.content = item.content.gsub(/\[\[([^\]]+)\]\]/) do |match|
-      page_name = $1.strip
-      "[#{page_name}]({{ \"/#{page_name}/\" | relative_url }})"
-    end
-    
-    # Convert [text](_docs/filename.md) to Jekyll-style links
-    item.content = item.content.gsub(/\[([^\]]+)\]\(_docs\/([^)]+)\.md\)/) do |match|
-      display_text = $1.strip
-      filename = $2.strip
-      # Handle URL encoding (e.g., %20 for spaces) and convert to Jekyll-friendly format
-      filename = CGI.unescape(filename).downcase.gsub(/\s+/, '-').gsub(/[^a-z0-9\-_]/, '')
-      baseurl = item.site.config['baseurl'] || ''
-      "[#{display_text}](#{baseurl}/#{filename}/)"
-    end
-    
-    # Convert [text](/index.md) and [text](../index.md) to homepage link
-    item.content = item.content.gsub(/\[([^\]]+)\]\((\.\.\/)?index\.md\)/) do |match|
-      display_text = $1.strip
-      "[#{display_text}]({{ \"/\" | relative_url }})"
-    end
-    
-    # Convert Obsidian image syntax ![[image.ext]] to Jekyll format
-    item.content = item.content.gsub(/!\[\[([^\]]+\.(jpg|jpeg|png|gif|svg|webp))\]\]/i) do |match|
-      filename = $1.strip
-      baseurl = item.site.config['baseurl'] || ''
-      "![](#{baseurl}/assets/images/#{filename})"
-    end
-    
-    # Convert Obsidian image syntax with alt text ![[image.ext|alt text]]
-    item.content = item.content.gsub(/!\[\[([^\|\]]+\.(jpg|jpeg|png|gif|svg|webp))\|([^\]]+)\]\]/i) do |match|
-      filename = $1.strip
-      alt_text = $3.strip
-      baseurl = item.site.config['baseurl'] || ''
-      "![#{alt_text}](#{baseurl}/assets/images/#{filename})"
+    item.content = item.content.gsub(ObsidianLinks::WIKI_RE) do
+      target = $1.strip
+      disp   = $2 ? $2.strip : target
+      "[#{disp}]({{ \"#{ObsidianLinks.target_path(target)}\" | relative_url }})"
     end
   end
 end

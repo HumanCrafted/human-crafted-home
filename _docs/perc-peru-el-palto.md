@@ -36,4 +36,4 @@ Natural-processed coffee from Asociación de Productores Cafetaleros Juan Marco 
 
 ## Links
 - Website: [Perc Peru El Palto](https://perccoffee.com/products/peru-el-palto)
-- Roaster: [Perc](_docs/coffee-roaster-perc.md)
+- Roaster: [[coffee-roaster-perc|Perc]]

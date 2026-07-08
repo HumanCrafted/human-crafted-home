@@ -38,4 +38,4 @@ Espresso: Don't be afraid to push it hard! Incredibly slow 1:2-1:3 shots are ver
 
 ## Links
 - Website: [SW Roasting Colombia Popayan Decaf](https://www.swroasting.coffee/product/colombia-popayan-ea-decaf/74?cp=true&sa=false&sbp=false&q=false&category_id=2)
-- Roaster: [SW Roasting](_docs/coffee-roaster-swroasting.md)
+- Roaster: [[coffee-roaster-swroasting|SW Roasting]]

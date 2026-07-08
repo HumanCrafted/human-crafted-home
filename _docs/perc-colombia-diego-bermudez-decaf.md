@@ -46,4 +46,4 @@ Can taste the strawberry.  Very flavorful, yet blends with other flavors.  Excel
 
 ## Links
 - Website: [Perc Colombia Diego Bermudez Decaf](https://perccoffee.com/products/decaf-colombia-diego-bermudez?variant=52199267205434)
-- Roaster: [Perc](_docs/coffee-roaster-perc.md)
+- Roaster: [[coffee-roaster-perc|Perc]]

@@ -44,5 +44,5 @@ None
 
 ## Links
 - Website: [Colombia - Laderas Estate Rodrigo Pelaez](https://roguewavecoffee.ca/products/colombia-laderas-del-tapias-estate-lot-washed?srsltid=AfmBOopG3i2padtYJffEOnC3oGOSoBMKO9DZTkn-bFvXjA2LznD4_oWd)
-- Roaster: [Rogue Wave](_docs/coffee-roaster-rogue-wave.md)
+- Roaster: [[coffee-roaster-rogue-wave|Rogue Wave]]
 

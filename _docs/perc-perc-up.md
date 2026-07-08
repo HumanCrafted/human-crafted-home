@@ -39,4 +39,4 @@ Espresso: Grind - 9, Dose - 16, Water - 40, Time - 0:22, TDS - 7.81
 
 ## Links
 - Website: [Perc Perc Up](https://perccoffee.com/products/perc-up?variant=44057097503034)
-- Roaster: [Perc](_docs/coffee-roaster-perc.md)
+- Roaster: [[coffee-roaster-perc|Perc]]

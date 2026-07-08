@@ -44,5 +44,5 @@ This coffee is too floral in my opinion.  The tart Lychee, almost lemon, comes t
 
 ## Links
 - Website: [Colombia - Granja Paraiso 92 Natural EA DECAF Red Bourbon](https://roguewavecoffee.ca/products/colombia-granja-paraiso-92-natural-ea-decaf-red-bourbon-1?srsltid=AfmBOoozdOWD9AoEZDWfEjKiYAeKNu_YokyxcYWRam1PVrw52YH5zcfC)
-- Roaster: [Rogue Wave](_docs/coffee-roaster-rogue-wave.md)
+- Roaster: [[coffee-roaster-rogue-wave|Rogue Wave]]
 

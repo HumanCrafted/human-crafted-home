@@ -37,4 +37,4 @@ Currently in the freezer — unopened as of 2026-06-01. Sebastian Ramirez Red Fr
 
 ## Links
 - Website: [Perc Decaf Colombia Sebastian Ramirez Red Fruits](https://perccoffee.com/products/decaf-colombia-sebastian-ramirez-red-fruits)
-- Roaster: [Perc](_docs/coffee-roaster-perc.md)
+- Roaster: [[coffee-roaster-perc|Perc]]

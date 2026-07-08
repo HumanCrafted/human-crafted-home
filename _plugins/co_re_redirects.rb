@@ -55,7 +55,12 @@ module CoReRedirects
       html_pages = site.pages.select { |p| p.output_ext == ".html" }
       # Only collections that actually output pages — skip output:false ones
       # (music/dog/nutrition), whose docs have URLs but produce no real page.
-      docs = site.documents.select { |d| d.collection.write? }
+      # Guard against non-documents: an empty / front-matter-less .md dropped in
+      # a collection folder is read as a StaticFile (no #collection). Skip those
+      # rather than crash the whole build. (See CLAUDE.md "Linking convention".)
+      docs = site.documents.select do |d|
+        d.respond_to?(:collection) && d.collection && d.collection.write?
+      end
 
       (docs + html_pages).each do |doc|
         url = doc.url
