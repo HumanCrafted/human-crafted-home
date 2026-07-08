@@ -14,7 +14,7 @@ draft: false
 
 An espresso shot log (not a professional, just tracking so I can go back to what works)[^1]
 
-![](../assets/images/coffee-bar-photo.jpeg)
+![[coffee-bar-photo.jpeg]]
 
 ### Equipment
 

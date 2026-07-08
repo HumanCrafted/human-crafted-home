@@ -2,7 +2,7 @@
 layout: project
 title: Shop v3
 slug: shop-v3
-main_image: "![](../assets/images/shop-v3-thumbnail.svg)"
+main_image: "![[shop-v3-thumbnail.svg]]"
 featured: false
 categories:
   - around the house
