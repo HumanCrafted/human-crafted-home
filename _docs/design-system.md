@@ -5,7 +5,7 @@ slug: design-system
 main_image:
 featured: false
 tags:
-  - note
+  - about
 published_date: 2026-06-10
 version: "1.0"
 draft: false
