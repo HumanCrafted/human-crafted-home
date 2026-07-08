@@ -39,6 +39,6 @@ The house had good bones, but we updated basically everything:
 - roof and gutters (helped by a major hail storm)
 - and finally landscaping
 
-Most everything we took out couldn't be saved, aside from countless curbside giveaways, but we did keep a vintage picture window that found a second life as the end window in [the new shop](_projects/shop-v3.md). We also still use some of the original owners mid-century furniture pieces.
+Most everything we took out couldn't be saved, aside from countless curbside giveaways, but we did keep a vintage picture window that found a second life as the end window in [[shop-v3|the new shop]]. We also still use some of the original owners mid-century furniture pieces.
 
 A lot more images and details to come...
