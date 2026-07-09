@@ -10,7 +10,27 @@ categories:
 published_date: 2021-10-01
 draft: false
 gallery_images:
-  - "![[ShermanCt_1970s.png]]"
+  - "![[sherman-court-23.jpg]]"
+  - "![[sherman-court-07.jpg]]"
+  - "![[sherman-court-04.jpg]]"
+  - "![[sherman-court-05.jpg]]"
+  - "![[sherman-court-02.jpg]]"
+  - "![[sherman-court-03.jpg]]"
+  - "![[sherman-court-06.jpg]]"
+  - "![[sherman-court-08.jpg]]"
+  - "![[sherman-court-09.jpg]]"
+  - "![[sherman-court-10.jpg]]"
+  - "![[sherman-court-11.jpg]]"
+  - "![[sherman-court-12.jpg]]"
+  - "![[sherman-court-15.jpg]]"
+  - "![[sherman-court-13.jpg]]"
+  - "![[sherman-court-14.jpg]]"
+  - "![[sherman-court-16.jpg]]"
+  - "![[sherman-court-17.jpg]]"
+  - "![[sherman-court-18.jpg]]"
+  - "![[sherman-court-19.jpg]]"
+  - "![[sherman-court-21.jpg]]"
+  - "![[sherman-court-22.jpg]]"
 headline: A 1950 ranch, back in the town we grew up in
 version: "1.0"
 tools:
@@ -28,6 +48,7 @@ The house had good bones, but we updated basically everything:
 - driveway
 - exterior entryways
 - insulation (abated asbestos in the attic)
+- sewer line
 - siding
 - windows
 - doors
