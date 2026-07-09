@@ -10,7 +10,7 @@ categories:
 published_date: 2021-10-01
 draft: false
 gallery_images:
-  - "![[sherman-court-23.jpg]]"
+  - "![[sherman-court-22.jpg]]"
   - "![[sherman-court-07.jpg]]"
   - "![[sherman-court-04.jpg]]"
   - "![[sherman-court-05.jpg]]"
@@ -30,7 +30,8 @@ gallery_images:
   - "![[sherman-court-18.jpg]]"
   - "![[sherman-court-19.jpg]]"
   - "![[sherman-court-21.jpg]]"
-  - "![[sherman-court-22.jpg]]"
+  - "![[sherman-court-23.jpg]]"
+ 
 headline: A 1950 ranch, back in the town we grew up in
 version: "1.0"
 tools:
