@@ -2,7 +2,7 @@
 # Small web tools I've written and host on humancrafted.co subdomains.
 # These aren't projects or notes — just links. Set enabled: false to hide one.
 
-- name: Illustrated Thumbnail
+- name: Illustrated Thumbnails
   url: "https://thumbs.humancrafted.co"
   enabled: true
 
