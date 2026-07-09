@@ -1,0 +1,11 @@
+# Hosted Utilities
+# Small web tools I've written and host on humancrafted.co subdomains.
+# These aren't projects or notes — just links. Set enabled: false to hide one.
+
+- name: Illustrated Thumbnail
+  url: "https://thumbs.humancrafted.co"
+  enabled: true
+
+- name: DXF to SVG
+  url: "https://dxftosvg.humancrafted.co"
+  enabled: true

@@ -11,6 +11,8 @@ This is the [[core]] of Human Crafted, a boutique design studio and product desi
 
 {% include wiki-two-column.html title="Notes" auto="note_docs" %}
 
+{% include wiki-two-column.html title="Utilities" auto="utilities" %}
+
 {% include wiki-two-column.html title="Projects" auto="projects" show_all_link="/#archive" show_all_text="View all projects" %}
 
 {% include wiki-two-column.html title="Tools" auto="tool_docs" show_all_link="/tools/" show_all_text="View all tools" %}
