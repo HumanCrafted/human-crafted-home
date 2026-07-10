@@ -40,11 +40,18 @@ module ObsidianLinks
 
   # Resolve any target (filename, slug, title, or path.md) to a site-root path,
   # e.g. "/shop-v3/". Honors PERMALINK_ALIASES.
+  #
+  # Posts live in _posts as YYYY-MM-DD-title.md but are served at /:slug/ (see
+  # _config.yml). Obsidian resolves post links by that dated filename, so strip a
+  # leading date prefix here — [[2016-06-30-made-better]] -> /made-better/ — so a
+  # filename wiki-link (the form Obsidian creates and always resolves) still maps
+  # to the post's real URL on the built site.
   def self.target_path(raw)
     base = raw.to_s.strip
               .sub(/[#?].*\z/, "")          # drop #anchor / ?query
               .sub(/\.md\z/i, "")           # drop .md
               .split("/").reject(&:empty?).last.to_s  # basename if a path slipped in
+              .sub(/\A\d{4}-\d{2}-\d{2}-/, "")        # drop _posts date prefix
     slug = slugify(base)
     PERMALINK_ALIASES[slug] || "/#{slug}/"
   end
