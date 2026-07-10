@@ -7,6 +7,10 @@ categories:
   - writing
 tags:
   - design
+aliases:
+  - made-better
+redirect_from:
+  - /writing/2016/06/30/made-better.html
 ---
 Two words that perfectly describe Human Crafted’s mission.
 

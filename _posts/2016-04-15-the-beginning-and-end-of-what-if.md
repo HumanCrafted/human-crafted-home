@@ -7,6 +7,10 @@ categories:
   - writing
 tags:
   - business
+aliases:
+  - the-beginning-and-end-of-what-if
+redirect_from:
+  - /writing/2016/04/15/the-beginning-and-end-of-what-if.html
 ---
 About a month ago, I left my day job to pursue a side project full time.
 

@@ -7,5 +7,9 @@ categories:
   - writing
 tags:
   - design
+aliases:
+  - hierarchy-of-experience
+redirect_from:
+  - /writing/2014/11/29/hierarchy-of-experience.html
 ---
 This article coming soon...
