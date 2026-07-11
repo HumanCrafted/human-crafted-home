@@ -13,7 +13,7 @@ draft: false
 ---
 A collection of coffee beans I've tried, rated, and reviewed. 
 
-{% assign coffee_docs = site.docs | where_exp: "doc", "doc.tags contains 'coffee'" | sort: "date_tried" | reverse %}
+{% assign coffee_docs = site.docs | where_exp: "doc", "doc.tags contains 'coffee'" | sort: "rating_1-5" | reverse %}
 
 {% if coffee_docs.size > 0 %}
 <div class="coffee-database">
@@ -33,7 +33,8 @@ A collection of coffee beans I've tried, rated, and reviewed.
       <tr>
         <td>
           {% if coffee.image %}
-            {% assign image_filename = coffee.image | replace: '![[', '' | replace: ']]', '' %}
+            {% comment %} Handle both raw ![[file]] and the plugin-rewritten /assets/images/file form; take just the basename. {% endcomment %}
+            {% assign image_filename = coffee.image | replace: '![[', '' | replace: ']]', '' | split: '/' | last %}
             <img src="{{ '/assets/images/' | append: image_filename | relative_url }}" alt="{{ coffee.title }}" style="width: 50px; height: auto;">
           {% endif %}
         </td>
