@@ -59,10 +59,13 @@ The site's colors, typography, spacing, and components are documented in the [[d
 - Used on the [[core|Core]] page and the [[design-system|Design System]] note
 
 #### Obsidian Integration Plugin
-- Seamless conversion of `[[page-name]]` links
-- Support for display text: `[[page|Display Text]]`
-- Image embedding with `![[image.ext]]` syntax
-- Works across all collections and pages
+One linking convention, authored in Obsidian and resolved to Jekyll URLs at build time:
+- Internal links are `[[slug|Display Text]]` (or `[[slug]]`) — a note's filename is its URL, so `[[shop-v3]]` becomes `/shop-v3/`
+- Targets are normalized, so `[[Shop V3]]`, `[[shop_v3]]`, and `[[shop-v3]]` all land on the same page
+- Hub pages with custom URLs are aliased (`[[core]]` → `/re/`), and post links drop their date prefix
+- Images embed with `![[image.ext]]`
+- The same links work in Obsidian's editor and graph view and on the live site
+- A build-time safeguard skips stray or empty notes, so a broken link can't take down the site
 
 ## Key Decisions
 

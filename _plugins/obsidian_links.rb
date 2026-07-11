@@ -14,6 +14,9 @@ require "cgi"
 # pages whose permalink differs from their filename are aliased in
 # PERMALINK_ALIASES below. Targets are slugified (lowercased, spaces/underscores
 # -> hyphens), so [[Shop V3]] and [[shop_v3]] resolve the same as [[shop-v3]].
+#
+# Links inside `inline code` or ```fenced blocks``` are left untouched, so a doc
+# can show literal [[slug]] / ![[img]] examples without them becoming live links.
 module ObsidianLinks
   # Images embedded with ![[ ]] (by extension).
   IMAGE_RE      = /!\[\[([^\|\]]+\.(?:jpg|jpeg|png|gif|svg|webp))(?:\|([^\]]+))?\]\]/i
@@ -23,6 +26,9 @@ module ObsidianLinks
   WIKI_RE       = /(?<!!)\[\[([^\|\]]+)(?:\|([^\]]+))?\]\]/
   # Fallback markdown links to a .md file: [Display](some/path.md).
   MD_LINK_RE    = /\[([^\]]+)\]\(([^)\s]+\.md)\)/
+  # Private-use sentinel for masked code — never appears in content, matches no
+  # link/image regex above.
+  CODE_SENTINEL = ""
 
   # Pages whose URL is NOT "/#{filename}/". Keyed by slugified filename.
   PERMALINK_ALIASES = {
@@ -69,6 +75,21 @@ module ObsidianLinks
   def self.convert_base_embeds(text)
     text.gsub(BASE_RE) { "{% include #{$1.strip}-table.html %}" }
   end
+
+  # Stash code (fenced blocks + inline spans) behind sentinels so the conversions
+  # can't rewrite example syntax. Returns [masked_text, store]; pair with
+  # restore_code after converting.
+  def self.mask_code(text)
+    store = []
+    stash = ->(m) { store << m; "#{CODE_SENTINEL}#{store.size - 1}#{CODE_SENTINEL}" }
+    text = text.gsub(/^[ \t]*```[^\n]*\n.*?^[ \t]*```[ \t]*$/m) { stash.call($&) }
+    text = text.gsub(/`[^`\n]*`/) { stash.call($&) }
+    [text, store]
+  end
+
+  def self.restore_code(text, store)
+    text.gsub(/#{CODE_SENTINEL}(\d+)#{CODE_SENTINEL}/) { store[$1.to_i] }
+  end
 end
 
 Jekyll::Hooks.register [:pages, :documents], :pre_render do |item|
@@ -86,6 +107,9 @@ Jekyll::Hooks.register [:pages, :documents], :pre_render do |item|
   if item.content.strip.match(/^!\[\[([^\]]+\.(jpg|jpeg|png|gif|svg|webp))\]\]/)
     item.data['description'] ||= "Coffee review with tasting notes and brewing recommendations"
   end
+
+  # Hide code spans/blocks so example syntax inside them is never converted.
+  item.content, code = ObsidianLinks.mask_code(item.content)
 
   # ---- Conversions, in a safe order:
   #   1. .base embeds  2. images  3. markdown .md links  4. wiki links
@@ -123,4 +147,7 @@ Jekyll::Hooks.register [:pages, :documents], :pre_render do |item|
       "[#{disp}]({{ \"#{ObsidianLinks.target_path(target)}\" | relative_url }})"
     end
   end
+
+  # Put the untouched code back.
+  item.content = ObsidianLinks.restore_code(item.content, code)
 end
