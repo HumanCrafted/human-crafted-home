@@ -41,6 +41,7 @@ The Human Crafted design system. Tokens, components, and patterns I use across h
 <div class="wiki-two-column system-row">
   <h3 class="wiki-section-title">Typography</h3>
   <div class="system-content">
+    <p class="system-note" style="margin-top:0">Two families, both <strong>IBM Plex</strong>, loaded from Google Fonts at weights 400 / 500 / 700. <strong>Plex Mono</strong> is the workhorse — hero, eyebrow, body, and captions. <strong>Plex Sans Bold</strong> is reserved for the <code>human / crafted</code> wordmark and the co/lab CTA.</p>
     <div class="spec-row">
       <span class="spec-label">hero / 48 / Reg</span>
       <span class="spec-body ts-hero">A product design studio.</span>

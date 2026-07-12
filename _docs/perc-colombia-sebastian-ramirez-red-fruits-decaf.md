@@ -25,7 +25,8 @@ featured: false
 ![[PERC_ColombiaSebastianRamirezRedFruitsDecaf_Shop1_2026.webp]]
 
 ## Tasting Notes
-
+- Raspberry
+- Marshmallow
 
 ## Brewing Recommendation (manufacturer)
 Resting Time : For best results, rest washed coffees for 5–10 days
