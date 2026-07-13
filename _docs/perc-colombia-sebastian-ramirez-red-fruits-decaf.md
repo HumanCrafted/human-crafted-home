@@ -13,6 +13,8 @@ date_roasted:
 price: $31.00 / 12oz
 rating_1-5: 5
 tasting_notes:
+  - Raspberry
+  - Marshmallow
 image: "![[PERC_ColombiaSebastianRamirezRedFruitsDecaf_Shop1_2026.webp]]"
 tags:
   - coffee
