@@ -29,6 +29,10 @@ My go-to pour over recipes.[^1]
 - [Wacaco Travel Scale](https://amzn.to/4oG3IyS)
 - OEM filters for each dripper
 
+### Coffee
+
+A [[coffee-beans|list of recent coffee's]] I've tried and my ratings.
+
 ---
 
 ### V60 / Kalita Wave Recipe
