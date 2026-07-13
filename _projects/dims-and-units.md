@@ -24,13 +24,13 @@ A CAD-style dimension annotation tool. Drop a well-formatted callout — line, a
 
 Every dimension is built from standard Figma vectors and frames. No custom rendering. Each one is an auto-layout frame, so Figma stretches it in both axes as you drag and the label recomputes on its own. Eight variants — horizontal and vertical, standard and inline label, plus flip — from a grid of one-click drop buttons. Adjustable arrow styles, stroke, font, and witness-line spacing.
 
-![[Dims_Thumbnail.png]]
+![[dims-thumbnail.png]]
 
 ### Units
 
 Draw a box or line, type a width and/or height in a real-world unit at a chosen DPI and scale, and Units converts to pixels and resizes the node. Set both dimensions or just one. Lock the aspect ratio and scale the other axis proportionally. Works on any resizable node — shapes, groups, frames — and reads a line's width as its geometric length.
 
-![[Units_Thumbnail.png]]
+![[units-thumbnail.png]]
 
 Both handle in, ft, mm, cm, and m, with a configurable DPI and drawing scale (enter `1`, `0.25`, or a fraction like `1/4`).
 
