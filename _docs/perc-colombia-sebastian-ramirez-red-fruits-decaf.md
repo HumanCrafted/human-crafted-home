@@ -9,7 +9,7 @@ roast_level: Light
 harvest:
 elevation: 1744 MASL
 date_purchased: 2026-03-26
-date_roasted:
+date_roasted: 2026-03-12
 price: $31.00 / 12oz
 rating_1-5: 5
 tasting_notes:
