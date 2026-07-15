@@ -68,11 +68,11 @@
         {% endfor %}
       {% endif %}
       
-      {% if include.auto == "utilities" %}
-        {% assign utilities = site.data.utilities | where: "enabled", true %}
-        {% if include.items and utilities.size > 0 %}, {% endif %}
-        {% for utility in utilities limit:item_limit %}
-          <a href="{{ utility.url }}" target="_blank" rel="noopener">{{ utility.name }}</a>{% unless forloop.last %}, {% endunless %}
+      {% if include.auto == "resources" %}
+        {% assign resources = site.data.resources | where: "enabled", true %}
+        {% if include.items and resources.size > 0 %}, {% endif %}
+        {% for resource in resources limit:item_limit %}
+          <a href="{{ resource.url }}" target="_blank" rel="noopener">{{ resource.name }}</a>{% unless forloop.last %}, {% endunless %}
         {% endfor %}
       {% endif %}
 

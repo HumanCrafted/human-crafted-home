@@ -1,5 +1,6 @@
-# Hosted Utilities
-# Small web tools I've written and host on humancrafted.co subdomains.
+# Resources
+# Small web tools I've written and host on humancrafted.co subdomains,
+# plus public repos/archives worth linking.
 # These aren't projects or notes — just links. Set enabled: false to hide one.
 
 - name: Illustrated Thumbnails
@@ -8,4 +9,8 @@
 
 - name: DXF to SVG
   url: "https://dxftosvg.humancrafted.co"
+  enabled: true
+
+- name: xyz fyi - a 3D file archive
+  url: "https://github.com/HumanCrafted/xyz-fyi"
   enabled: true

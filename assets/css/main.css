@@ -403,7 +403,7 @@ a:hover {
   line-height: 1;
 }
 
-/* Utilities open in a new tab — show the arrow even on humancrafted.co subdomains */
+/* Resources open in a new tab — show the arrow even on humancrafted.co subdomains */
 .wiki-comma-list a[target="_blank"]::after {
   content: "↗";
   font-size: 0.85em;
