@@ -44,7 +44,12 @@ layout: default
     {% for gallery_image in page.gallery_images %}
       {% if gallery_image contains '![[' %}
         {% assign image_filename = gallery_image | replace: '![[', '' | replace: ']]', '' %}
-        <img src="{{ '/assets/images/' | append: image_filename | relative_url }}" alt="{{ page.title }} gallery image" class="gallery-image" />
+        {% assign gallery_ext = image_filename | split: '.' | last | downcase %}
+        {% if gallery_ext == 'mp4' or gallery_ext == 'webm' or gallery_ext == 'mov' %}
+          <video class="gallery-video" src="{{ '/assets/images/' | append: image_filename | relative_url }}" autoplay loop muted playsinline preload="metadata"></video>
+        {% else %}
+          <img src="{{ '/assets/images/' | append: image_filename | relative_url }}" alt="{{ page.title }} gallery image" class="gallery-image" />
+        {% endif %}
       {% elsif gallery_image contains '../assets/images/' %}
         {% assign image_filename = gallery_image | replace: '![](', '' | replace: ')', '' | replace: '../assets/images/', '' %}
         <img src="{{ '/assets/images/' | append: image_filename | relative_url }}" alt="{{ page.title }} gallery image" class="gallery-image" />

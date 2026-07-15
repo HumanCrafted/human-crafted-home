@@ -1,0 +1,166 @@
+{%- comment -%}
+  Human Crafted — animated "made" wordmark. Self-contained (inline SVG + vanilla JS,
+  no dependencies). Themes itself via the site design tokens (--foreground / --background
+  / --accent) and follows the [data-theme] toggle. Falls back to the finished static frame
+  for prefers-reduced-motion. Safe to include more than once on a page.
+
+  Usage:  {% raw %}{% include made-animation.html %}{% endraw %}
+{%- endcomment -%}
+<style>
+  .made-anim{ width:100%; max-width:680px; margin:0 auto; }
+  .made-anim svg{ width:100%; height:auto; display:block; overflow:visible; }
+</style>
+<div class="made-anim" role="img" aria-label="made">
+  <svg viewBox="-8 -8 100 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="mkSmoke" x="-140%" y="-140%" width="380%" height="380%"><feGaussianBlur stdDeviation="0.5"></feGaussianBlur></filter>
+      <filter id="mkSmoke2" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="0.8"></feGaussianBlur></filter>
+    </defs>
+    <rect class="mk-ps" width="0" height="0" fill="var(--foreground)"></rect>
+    <rect class="mk-pa" width="0" height="0" fill="var(--accent)"></rect>
+
+    <!-- m : 3D-printed sliced layers -->
+    <g class="mk-mbeads" fill="var(--foreground)"></g>
+
+    <!-- a : thin core + smoke halo -->
+    <g class="mk-smoke1" stroke="var(--foreground)" stroke-width="4.2" stroke-linecap="round" filter="url(#mkSmoke2)" opacity="0.54">
+      <path class="mk-abs" style="opacity:0" d="M46.748 16.3816C42.7442 24.3897 37.0371 31.2309 34.4284 30.6524C32.2606 29.9403 32.4296 29.3992 33.7459 22.1757C34.3542 18.8378 37.2507 16.3816 40.6436 16.3816L46.7453 16.3816"></path>
+      <path class="mk-ass" style="opacity:0" d="M46.7479 16.4543L44.2383 30.6868"></path>
+    </g>
+    <g class="mk-smoke2" stroke="var(--foreground)" stroke-width="2" stroke-linecap="round" filter="url(#mkSmoke)" opacity="0.68">
+      <path class="mk-abs2" style="opacity:0" d="M46.748 16.3816C42.7442 24.3897 37.0371 31.2309 34.4284 30.6524C32.2606 29.9403 32.4296 29.3992 33.7459 22.1757C34.3542 18.8378 37.2507 16.3816 40.6436 16.3816L46.7453 16.3816"></path>
+      <path class="mk-ass2" style="opacity:0" d="M46.7479 16.4543L44.2383 30.6868"></path>
+    </g>
+    <g class="mk-core" stroke="var(--foreground)" stroke-width="1" stroke-linecap="round">
+      <path class="mk-abowl" style="opacity:0" d="M46.748 16.3816C42.7442 24.3897 37.0371 31.2309 34.4284 30.6524C32.2606 29.9403 32.4296 29.3992 33.7459 22.1757C34.3542 18.8378 37.2507 16.3816 40.6436 16.3816L46.7453 16.3816"></path>
+      <path class="mk-astem" style="opacity:0" d="M46.7479 16.4543L44.2383 30.6868"></path>
+    </g>
+
+    <!-- d : solid line -->
+    <g class="mk-d" stroke="var(--foreground)" stroke-width="4.16887" stroke-linecap="round">
+      <path class="mk-dasc" style="opacity:0" d="M62.8408 30.8235L67.9082 2.08478"></path>
+      <path class="mk-dbowl" style="opacity:0" d="M65.375 16.3173C61.3711 24.3254 55.664 31.1665 53.0554 30.588C50.8875 29.876 51.0566 29.3348 52.3729 22.1114C52.9812 18.7734 55.8776 16.3173 59.2705 16.3173L65.3722 16.3173"></path>
+    </g>
+
+    <!-- e : pixel field -->
+    <g class="mk-epix"></g>
+
+    <!-- tracers (background-colored pinpoints) -->
+    <circle class="mk-atr" r="0.5" fill="var(--background)" opacity="0"></circle>
+    <circle class="mk-dtr" r="1.6" fill="var(--background)" opacity="0"></circle>
+  </svg>
+</div>
+
+<script>
+(function(){
+  document.querySelectorAll('.made-anim').forEach(initMade);
+
+  function initMade(root){
+    if(root.__made) return; root.__made=true;
+    const NS='http://www.w3.org/2000/svg', SW=4.16887;
+    const BUILD=3400, HOLD=1500, CYCLE=BUILD+HOLD;
+    const q=s=>root.querySelector(s);
+    const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+    const easeInOut=x=>x<0.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+    const easeOutBack=x=>{const c1=1.70158,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2);};
+    const mix=(a,b,t)=>`rgb(${a.map((v,i)=>Math.round(v+(b[i]-v)*t)).join(',')})`;
+    const readRGB=el=>{const m=getComputedStyle(el).fill.match(/[\d.]+/g);return m?m.slice(0,3).map(x=>Math.round(+x)):[42,40,36];};
+
+    // give this instance unique filter ids so multiple copies don't clash
+    const uid='_'+Math.random().toString(36).slice(2,8);
+    root.querySelectorAll('filter').forEach(f=>{const o=f.id,n=o+uid;f.id=n;
+      root.querySelectorAll('[filter="url(#'+o+')"]').forEach(e=>e.setAttribute('filter','url(#'+n+')'));});
+
+    const probeS=q('.mk-ps'), probeA=q('.mk-pa');
+    let INK=readRGB(probeS), ACCENT=readRGB(probeA);
+
+    function raster(dList,lineW,minX,minY,maxX,maxY,k){
+      const W=Math.ceil((maxX-minX)*k),H=Math.ceil((maxY-minY)*k);
+      const cv=document.createElement('canvas');cv.width=W;cv.height=H;const ctx=cv.getContext('2d');
+      ctx.setTransform(k,0,0,k,-minX*k,-minY*k);ctx.lineWidth=lineW;ctx.lineCap='round';ctx.lineJoin='round';ctx.strokeStyle='#000';
+      for(const d of dList)ctx.stroke(new Path2D(d));
+      const img=ctx.getImageData(0,0,W,H).data;
+      return {W,H,a:(px,py)=>(px<0||py<0||px>=W||py>=H)?0:img[(py*W+px)*4+3]};
+    }
+    const M_D=["M2.08594 30.6866C6.08981 22.6785 11.7969 15.8374 14.4056 16.4158C17.0492 17.2842 16.2176 17.8984 14.0682 30.6866","M14.1465 30.6866C18.1504 22.6785 23.8575 15.8374 26.4661 16.4158C29.1097 17.2842 28.2781 17.8984 26.1287 30.6866","M4.64182 16.2446L2.08398 30.7508"];
+    const mMinX=-3,mMinY=13,mMaxX=31,mMaxY=33.5,mK=8,LH=1.05,sweepMinX=0.5,sweepMaxX=28.2,sweepW=sweepMaxX-sweepMinX;
+    const mr=raster(M_D,SW,mMinX,mMinY,mMaxX,mMaxY,mK),nLay=Math.floor((mMaxY-mMinY)/LH);
+    const mGroup=q('.mk-mbeads'),mLayers=[];
+    for(let li=0;li<nLay;li++){
+      const rank=(nLay-1)-li,dir=rank%2,uy=mMinY+li*LH,pyMid=Math.round((uy+LH/2-mMinY)*mK);
+      const runs=[];let inRun=false,startPx=0;
+      for(let px=0;px<=mr.W;px++){
+        const on=px<mr.W&&mr.a(px,pyMid)>128;
+        if(on&&!inRun){inRun=true;startPx=px;}
+        else if(!on&&inRun){inRun=false;const xa=mMinX+startPx/mK,xb=mMinX+px/mK;const r=document.createElementNS(NS,'rect');
+          r.setAttribute('y',(uy+LH*0.09).toFixed(2));r.setAttribute('height',(LH*0.82).toFixed(2));r.setAttribute('rx',(LH*0.34).toFixed(2));r.setAttribute('x',xa.toFixed(2));r.setAttribute('width','0');r.style.opacity=0;mGroup.appendChild(r);
+          runs.push({el:r,xa,xb});}
+      }
+      mLayers.push({rank,dir,runs,state:''});
+    }
+    function reversedD(el,step=0.5){const L=el.getTotalLength();let d='';for(let s=L;s>0;s-=step){const p=el.getPointAtLength(s);d+=(d?'L':'M')+p.x.toFixed(3)+' '+p.y.toFixed(3);}const p0=el.getPointAtLength(0);return d+'L'+p0.x.toFixed(3)+' '+p0.y.toFixed(3);}
+    const aBowl=q('.mk-abowl'),aStem=q('.mk-astem'),dAsc=q('.mk-dasc'),dBowl=q('.mk-dbowl');
+    const aBowlS=q('.mk-abs'),aStemS=q('.mk-ass'),aBowlS2=q('.mk-abs2'),aStemS2=q('.mk-ass2');
+    const aTracer=q('.mk-atr'),dTracer=q('.mk-dtr');
+    dBowl.setAttribute('d',reversedD(dBowl));
+    [aBowl,aStem,dAsc,dBowl,aBowlS,aStemS,aBowlS2,aStemS2].forEach(el=>{el.__len=el.getTotalLength();el.style.strokeLinejoin='round';el.style.opacity=0;});
+    aBowl.__twins=[aBowlS,aBowlS2];aStem.__twins=[aStemS,aStemS2];
+    const aPlan=[{el:aBowl,from:0,to:aBowl.__len},{el:aStem,from:0,to:aStem.__len}];
+    const dPlan=[{el:dAsc,from:0,to:dAsc.__len/2},{el:dBowl,from:0,to:dBowl.__len},{el:dAsc,from:dAsc.__len/2,to:dAsc.__len}];
+    const aTot=aBowl.__len+aStem.__len,dTot=dAsc.__len+dBowl.__len;
+    function set1(el,v){if(v<=0.03){el.style.opacity=0;return;}el.style.opacity=1;el.style.strokeDasharray=v.toFixed(2)+' '+(el.__len+1).toFixed(2);el.style.strokeDashoffset='0';}
+    function draw(el,v){set1(el,v);if(el.__twins)for(const t of el.__twins)set1(t,v);}
+    function trace(plan,dist){
+      const drawn=new Map();for(const st of plan)if(!drawn.has(st.el))drawn.set(st.el,0);
+      let acc=0,head=null;
+      for(const st of plan){const stepLen=st.to-st.from;
+        if(dist>=acc+stepLen){if(st.to>drawn.get(st.el))drawn.set(st.el,st.to);}
+        else if(dist>acc){const d2=st.from+(dist-acc);head=st.el.getPointAtLength(d2);if(d2>drawn.get(st.el))drawn.set(st.el,d2);}
+        acc+=stepLen;}
+      for(const [el,dr] of drawn)draw(el,dr);
+      return head;
+    }
+    const E_D="M80.2323 30.4767H74.1878C71.7687 30.4767 69.9359 28.2925 70.356 25.9101L70.453 25.3598M70.453 25.3598L71.0884 21.7565C71.6505 18.5687 74.4202 16.2446 77.6572 16.2446H78.8535C80.6698 16.2446 81.8179 18.1058 80.6738 19.5165C78.0075 22.804 73.9674 25.3598 70.453 25.3598Z";
+    const eMinX=67,eMinY=13,eMaxX=83,eMaxY=33,eK=8,EG=0.9,EPX=0.76;
+    const er=raster([E_D],SW,eMinX,eMinY,eMaxX,eMaxY,eK),eGroup=q('.mk-epix'),ePix=[];
+    for(let gx=eMinX;gx<=eMaxX;gx+=EG)for(let gy=eMinY;gy<=eMaxY;gy+=EG){
+      const px=Math.round((gx+EG/2-eMinX)*eK),py=Math.round((gy+EG/2-eMinY)*eK);
+      if(er.a(px,py)>110){const r=document.createElementNS(NS,'rect');r.setAttribute('x',(gx+(EG-EPX)/2).toFixed(2));r.setAttribute('y',(gy+(EG-EPX)/2).toFixed(2));r.setAttribute('width',EPX);r.setAttribute('height',EPX);r.setAttribute('rx',0.14);r.style.transformBox='fill-box';r.style.transformOrigin='center';eGroup.appendChild(r);ePix.push({el:r,thr:Math.random()});}
+    }
+
+    function update(p){
+      const pe=easeInOut(p),gl=pe*nLay,curRank=Math.floor(gl),sweep=gl-curRank;
+      for(const L of mLayers){
+        const want=L.rank<curRank?'full':(L.rank>curRank?'hidden':'active');
+        if(want==='full'){if(L.state!=='full'){for(const r of L.runs){r.el.setAttribute('x',r.xa.toFixed(2));r.el.setAttribute('width',(r.xb-r.xa).toFixed(2));r.el.style.opacity=1;r.el.style.fill='var(--foreground)';}L.state='full';}}
+        else if(want==='hidden'){if(L.state!=='hidden'){for(const r of L.runs)r.el.style.opacity=0;L.state='hidden';}}
+        else{L.state='active';
+          for(const r of L.runs){let x,w,fresh;
+            if(L.dir===0){const front=sweepMinX+sweep*sweepW;x=r.xa;w=clamp(front,r.xa,r.xb)-r.xa;fresh=front<r.xb?1:Math.max(0,1-((front-r.xb)/sweepW)*6);}
+            else{const front=sweepMaxX-sweep*sweepW;const from=clamp(front,r.xa,r.xb);x=from;w=r.xb-from;fresh=front>r.xa?1:Math.max(0,1-((r.xa-front)/sweepW)*6);}
+            if(w<=0.01){r.el.style.opacity=0;}else{r.el.setAttribute('x',x.toFixed(2));r.el.setAttribute('width',w.toFixed(2));r.el.style.opacity=1;r.el.style.fill=mix(INK,ACCENT,fresh*0.6);}}
+        }
+      }
+      const da=aTot*pe,dd=dTot*pe;
+      const ap=trace(aPlan,da);
+      if(ap){aTracer.setAttribute('cx',ap.x);aTracer.setAttribute('cy',ap.y);aTracer.setAttribute('opacity',1);}else aTracer.setAttribute('opacity',0);
+      const dp=trace(dPlan,dd);
+      if(dp){dTracer.setAttribute('cx',dp.x);dTracer.setAttribute('cy',dp.y);dTracer.setAttribute('opacity',1);}else dTracer.setAttribute('opacity',0);
+      for(const px of ePix){const pp=clamp((pe-px.thr*0.8)/0.2);px.el.style.opacity=Math.min(1,pp*1.4);px.el.style.transform=`scale(${Math.max(0,easeOutBack(pp))})`;px.el.style.fill=mix(ACCENT,INK,pp);}
+    }
+
+    // reduced motion → render the finished frame, no loop
+    if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches){ update(1); return; }
+
+    let start=performance.now(), prevT=0;
+    function frame(now){
+      const t=(now-start)%CYCLE;
+      if(t<prevT){ INK=readRGB(probeS); ACCENT=readRGB(probeA); }  // new cycle → refresh theme colours
+      prevT=t;
+      update(t<BUILD?t/BUILD:1);
+      requestAnimationFrame(frame);
+    }
+    update(0); requestAnimationFrame(frame);
+  }
+})();
+</script>
