@@ -61,19 +61,17 @@ The site's colors, typography, spacing, and components are documented in the [[d
 
 #### Obsidian Integration Plugin
 One linking convention, authored in Obsidian and resolved to Jekyll URLs at build time:
-- Internal links are `[[slug|Display Text]]` (or `[[slug]]`) — a note's filename is its URL, so `[[shop-v3]]` becomes `/shop-v3/`
+- Internal links are `[[slug|Display Text]]` (or `[[slug]]`) — a note's filename is its URL
 - Targets are normalized, so `[[Shop V3]]`, `[[shop_v3]]`, and `[[shop-v3]]` all land on the same page
-- Hub pages with custom URLs are aliased (`[[core]]` → `/re/`), and post links drop their date prefix
 - Images embed with `![[image.ext]]`
-- 3D models embed the same way — `![[model.stl]]` becomes a spinnable viewer (see below)
+- 3D models embed the same way — `![[model.stl]]` becomes a spinnable viewer 
 - The same links work in Obsidian's editor and graph view and on the live site
 - A build-time safeguard skips stray or empty notes, so a broken link can't take down the site
 
 #### 3D Model Viewer
-Some project pages show a real 3D model you can grab and spin, rendered right in the browser — no plugin, no third-party embed. The [[cord-keeper|Cord Keeper]] is the first:
-- Authored just like an image — `![[cord-keeper.stl]]` — with the model kept alongside the photos
+Some project pages show a real 3D model you can grab and spin, rendered right in the browser
+- Authored just like an image — `![[cord-keeper.stl]]` 
 - Drag to rotate, pinch to zoom; it turns slowly on its own until you touch it
-- It floats on the paper, lit from the site's own colors, and follows the light/dark toggle
 - The 3D library loads only on pages that have a model, and only once you scroll it into view, so every other page stays light
 
 ## Key Decisions
