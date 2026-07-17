@@ -6,6 +6,13 @@ description: >-
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://humancrafted.co" # the base hostname & protocol for your site, e.g. http://example.com
 
+# Loops signup (see _includes/subscribe-form.html)
+# loops_form_id: from Loops → Forms → Settings. The form renders only once this is set.
+# loops_list_id: the list signups join. Must be Public in Loops — form endpoints
+#                cannot subscribe contacts to a private list.
+loops_form_id: "cm1uuwuwg001esmbmj9jxzdct"
+loops_list_id: "cmrnq2xrf0hdy0j2367qs5udx" # Newsletter
+
 # Build settings
 markdown: kramdown
 highlighter: rouge

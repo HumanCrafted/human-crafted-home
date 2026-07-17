@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
     <script src="{{ '/assets/js/theme.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
     <script defer src="{{ '/assets/js/wordmark.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+    <script defer src="{{ '/assets/js/subscribe.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
     {% seo title=false %}
     {% feed_meta %}
 
@@ -81,6 +82,7 @@
         <footer class="site-footer">
             <div class="footer-content">
                 <p>&copy; {{ 'now' | date: "%Y" }} Human Crafted LLC. All rights reserved.</p>
+                <a href="{{ '/follow/' | relative_url }}" class="footer-follow" data-umami-event="Follow footer">follow along!</a>
             </div>
         </footer>
     </div>

@@ -364,12 +364,13 @@ git checkout -b hover-experiment
 
 ## Design System Refresh & Breadcrumb Wordmark (June 2026)
 
-Branch `design-system-refresh` (merge to `main` to ship).
+Shipped — merged to `main` June 2026. (The `design-system-refresh` branch is fully
+merged but still exists locally; safe to delete.)
 
 ### Design-system migration
 - Migrated off the old ad-hoc palette/fonts onto the documented tokens (see Design System above): paper/ink/accent, **IBM Plex Sans** for wordmark + CTA, body 16px, retuned dark-mode SVG invert filter.
 - **Project grid → 5 columns** (3 on tablet ≤1024px, 2 on mobile ≤768px).
-- **Footer social → a collapsible "socials" disclosure** of lowercase text links (`<details>` in `footer-social.liquid`, data-driven from `_data/social.yml`), with a graceful fade-in.
+- **Footer social → a collapsible "socials" disclosure** of lowercase text links (`<details>` in `footer-social.liquid`, data-driven from `_data/social.yml`), with a graceful fade-in. **Superseded** — `fdd05b0` deleted `footer-social.liquid` and moved the links to a standalone page instead. That page is now `_docs/follow.md` (`/follow/`), reached from a plain "follow along!" link in the footer; `_data/social.yml` still drives the list.
 - **New living style guide**: `_docs/design-system.md` (a Note, `/design-system/`) — color swatches with **click-to-copy hex**, type/spacing/component specimens. Reuses the `.wiki-two-column` rhythm.
 - **Doc/Note section headings** now ruled + Plex Sans Bold (`.doc-content > h2/h3`).
 

@@ -24,14 +24,15 @@ This website was built with the help of Claude Code, and inspired by [Steph Ango
 - **GitHub Pages** - Free hosting with automatic builds on push to main branch
 
 ### Content Management
-- **Obsidian** - Primary markdown editor for content creation
+- **[Obsidian](https://obsidian.md)** - Primary markdown editor for content creation
 - **Custom Obsidian Plugin** - Converts `[[wiki-links]]` to Jekyll-compatible URLs
 - **Git** - Version control with detailed commit history
 
 ### Development Tools
 - **Claude Code and Cowork** - AI-powered development assistant for implementation, edits, and content prototyping.
-- **Figma** - Design prototyping, reference and specifications. Collaborating with Claude using the Figma MCP
-- **Umami** - Privacy-first, cookieless analytics, loaded in production only
+- **[Figma](https://figma.com)** - Design prototyping, reference and specifications. Collaborating with Claude using the Figma MCP
+- **[Umami](https://umami.is)** - Privacy-first, cookieless analytics
+- **[Loops](https://loops.so)** - Email newsletter, the signup form on the [[follow|Follow]] page, and audience/contact management
 
 ## Design System
 
