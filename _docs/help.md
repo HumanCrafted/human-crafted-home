@@ -92,3 +92,25 @@ No blank line (same line or back-to-back) → same paragraph → side by side, s
 ```
 
 If the column can't fit both, the second wraps below. For a reliable side-by-side with a controlled gap, wrap them in a flex container instead of relying on inline behavior.
+
+## 3D models
+
+`![[file.stl]]` embeds a drag-to-spin 3D viewer — same shape as an image embed, but the file lives in `assets/models/` (not `assets/images/`). Drop the `.stl` there and reference it by name. Obsidian's editor shows it as an unresolved embed (it can't render STLs), but it's valid — it comes alive on the built site.
+
+Options go after the filename as `|`-separated segments, in any order:
+
+| Segment | Does | Values |
+| --- | --- | --- |
+| `A label` | screen-reader label (not shown on the page) | any text |
+| `spin=` | which way it idly turns, seen from above | `ccw` (default), `cw`, `off` |
+| `up=` | which of the model's own axes points up | `+y` (default), `+z`, `-x`, … (bare `z` = `+z`) |
+
+Examples:
+
+```
+![[cord-keeper.stl]]
+![[cord-keeper.stl|spin=off]]
+![[widget.stl|A brass widget|up=+z|spin=cw]]
+```
+
+`up=` is the one to remember. Most CAD exports (Fusion) are Z-up and come in lying on their side — add `up=+z` to stand them upright. If the model already sits right, leave it off (`+y` is the default). Everything else is optional: a bare `![[file.stl]]` just works.

@@ -5,6 +5,7 @@ require "cgi"
 # ONE authoring convention (see CLAUDE.md "Linking convention"):
 #   * Internal links : [[slug|Display Text]]   (or [[slug]])
 #   * Images         : ![[file.ext]]           (files live in assets/images/)
+#   * 3D models      : ![[file.stl]]           (files live in assets/models/)
 #   * Do NOT hand-write [text](path.md) links. They're only converted here as a
 #     best-effort fallback, and typing them in Obsidian can spawn phantom empty
 #     notes that break the build.
@@ -20,6 +21,12 @@ require "cgi"
 module ObsidianLinks
   # Images embedded with ![[ ]] (by extension).
   IMAGE_RE      = /!\[\[([^\|\]]+\.(?:jpg|jpeg|png|gif|svg|webp))(?:\|([^\]]+))?\]\]/i
+  # 3D models embedded with ![[ ]] -> an interactive viewer. Everything after the
+  # filename is captured as one blob and split on "|" in convert_models.
+  MODEL_RE      = /!\[\[([^\|\]]+\.stl)((?:\|[^\|\]]*)*)\]\]/i
+  # Options a model embed accepts, as key=value pipe segments. Each becomes a
+  # data-<key> attribute; anything else is ignored rather than passed through.
+  MODEL_OPTS    = %w[spin up].freeze
   # Obsidian .base embeds -> Jekyll include.
   BASE_RE       = /!\[\[([^\]]+)\.base\]\]/
   # Wiki links: [[target|Display]] or [[target]] (not preceded by "!").
@@ -76,6 +83,50 @@ module ObsidianLinks
     text.gsub(BASE_RE) { "{% include #{$1.strip}-table.html %}" }
   end
 
+  # Convert ![[model.stl]] / ![[model.stl|Caption]] -> a viewer div.
+  #
+  # Obsidian shows these as an unresolved embed in preview (it has no STL
+  # renderer), but the note stays plain markdown — no raw HTML to author — and
+  # the built site renders the model.
+  #
+  # The <script> that drives the viewer is NOT emitted here: kramdown escapes and
+  # smart-quotes a script tag that comes out of markdown. Instead the hook sets
+  # page.has_model and _layouts/default.html emits the tag. That also keeps the
+  # ~170KB three.js payload off every page that has no model.
+  # Pipe segments after the filename, in any order:
+  #   ![[m.stl]]                        bare
+  #   ![[m.stl|A label]]                first plain segment -> aria-label
+  #   ![[m.stl|A label|spin=ccw]]       label + option
+  #   ![[m.stl|spin=off]]               option only
+  #
+  # The plain segment feeds the accessible label only; it is not rendered as
+  # visible caption text. The visible affordance is the rotate-3d icon that
+  # stl-viewer.js injects (see .stl-viewer-hint).
+  def self.convert_models(text)
+    text.gsub(MODEL_RE) do
+      filename = $1.strip
+      caption  = ""
+      opts     = {}
+
+      $2.to_s.split("|").map(&:strip).reject(&:empty?).each do |part|
+        if (kv = part.match(/\A([a-z][a-z0-9-]*)\s*=\s*(.+)\z/i))
+          key = kv[1].downcase
+          opts[key] = kv[2].strip if MODEL_OPTS.include?(key)
+        elsif caption.empty?
+          caption = part
+        end
+      end
+
+      label = caption.empty? ? "3D model — drag to rotate" : caption
+      src   = "{{ \"/assets/models/#{filename}\" | relative_url }}"
+
+      html = +%(<div class="stl-viewer" data-src="#{src}" data-label="#{CGI.escapeHTML(label)}")
+      opts.each { |k, v| html << %( data-#{k}="#{CGI.escapeHTML(v)}") }
+      html << %(><span class="stl-viewer-fallback">Loading 3D model…</span></div>)
+      html
+    end
+  end
+
   # Stash code (fenced blocks + inline spans) behind sentinels so the conversions
   # can't rewrite example syntax. Returns [masked_text, store]; pair with
   # restore_code after converting.
@@ -112,9 +163,13 @@ Jekyll::Hooks.register [:pages, :documents], :pre_render do |item|
   item.content, code = ObsidianLinks.mask_code(item.content)
 
   # ---- Conversions, in a safe order:
-  #   1. .base embeds  2. images  3. markdown .md links  4. wiki links
+  #   1. .base embeds  2. models  3. images  4. markdown .md links  5. wiki links
   # (Images before wiki links so ![[img]] is never mistaken for a [[link]].)
   item.content = ObsidianLinks.convert_base_embeds(item.content)
+
+  # Flag pages embedding a 3D model so the layout can pull in the viewer script.
+  item.data['has_model'] = true if item.content.match?(ObsidianLinks::MODEL_RE)
+  item.content = ObsidianLinks.convert_models(item.content)
   item.content = ObsidianLinks.convert_images(item.content, baseurl)
 
   if item.content.include?('{% if') || (item.data['layout'] == 'doc')

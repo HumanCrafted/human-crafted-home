@@ -37,6 +37,8 @@ Human Crafted started with this piece. In 2016, my partner Phil Stankard and I e
 
 The cord keeper came from a simple problem. Before magnetic and wireless charging, device cables slid off the desk the moment you unplugged. The fix was just as simple — use the weight of concrete to hold the cord in place.
 
+![[cord-keeper.stl]]
+
 ### Making it
 
 The first molds were PVC pipe sections with a piece of steel bar stock laid across the top to create the cable slot. Pour concrete, let it cure, pop it out. The form was basically dictated by the materials — a cylinder with a notch. Later I made a proper silicone mold to speed up production and get cleaner, more consistent results. Each piece got sanded smooth by hand.

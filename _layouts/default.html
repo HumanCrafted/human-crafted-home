@@ -12,6 +12,13 @@
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
     <script src="{{ '/assets/js/theme.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
     <script defer src="{{ '/assets/js/wordmark.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+    {% comment %}
+      Only pages embedding ![[model.stl]] load the viewer — it pulls in three.js
+      (~170KB gzipped). page.has_model is set by _plugins/obsidian_links.rb.
+    {% endcomment %}
+    {% if page.has_model %}
+    <script type="module" src="{{ '/assets/js/stl-viewer.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+    {% endif %}
     <script defer src="{{ '/assets/js/subscribe.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
     {% seo title=false %}
     {% feed_meta %}
