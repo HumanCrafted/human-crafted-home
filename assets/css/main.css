@@ -441,6 +441,29 @@ img {
   height: auto;
 }
 
+/* Image rows — a note line of 2+ ![[...]] embeds with a column= option becomes
+   an equal-column grid; extra images wrap into new rows
+   (emitted by _plugins/obsidian_links.rb convert_image_rows, --cols = column=N) */
+.image-row {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 2), 1fr);
+  align-items: start;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.image-row img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .image-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
 /* Lists */
 ul, ol {
   margin-bottom: 1.5rem;

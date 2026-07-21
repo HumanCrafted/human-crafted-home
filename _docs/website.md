@@ -63,7 +63,7 @@ The site's colors, typography, spacing, and components are documented in the [[d
 One linking convention, authored in Obsidian and resolved to Jekyll URLs at build time:
 - Internal links are `[[slug|Display Text]]` (or `[[slug]]`) — a note's filename is its URL
 - Targets are normalized, so `[[Shop V3]]`, `[[shop_v3]]`, and `[[shop-v3]]` all land on the same page
-- Images embed with `![[image.ext]]`
+- Images embed with `![[image.ext]]`, with options as pipe segments — `![[plan.svg|width=500]]` sets a display width, and `![[a.svg|column=3]]![[b.svg]]![[c.svg]]` lays a line of embeds out as an equal-column grid (stacking to one column on phones)
 - 3D models embed the same way — `![[model.stl]]` becomes a spinnable viewer 
 - The same links work in Obsidian's editor and graph view and on the live site
 - A build-time safeguard skips stray or empty notes, so a broken link can't take down the site

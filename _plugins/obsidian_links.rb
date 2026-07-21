@@ -21,12 +21,22 @@ require "cgi"
 module ObsidianLinks
   # Images embedded with ![[ ]] (by extension).
   IMAGE_RE      = /!\[\[([^\|\]]+\.(?:jpg|jpeg|png|gif|svg|webp))(?:\|([^\]]+))?\]\]/i
+  # A line that is nothing but 2+ image embeds — a candidate image row; it
+  # becomes one only if an embed carries column=N (see convert_image_rows).
+  IMAGE_ROW_RE  = /^[ \t]*(?:!\[\[[^\|\]]+\.(?:jpg|jpeg|png|gif|svg|webp)(?:\|[^\]]+)?\]\][ \t]*){2,}$/i
   # 3D models embedded with ![[ ]] -> an interactive viewer. Everything after the
   # filename is captured as one blob and split on "|" in convert_models.
   MODEL_RE      = /!\[\[([^\|\]]+\.stl)((?:\|[^\|\]]*)*)\]\]/i
   # Options a model embed accepts, as key=value pipe segments. Each becomes a
   # data-<key> attribute; anything else is ignored rather than passed through.
   MODEL_OPTS    = %w[spin up].freeze
+  # Options an image embed accepts, as key=value pipe segments (same pattern as
+  # MODEL_OPTS). Values must be numeric. Short aliases are tolerated, but the
+  # full words are the documented syntax.
+  IMAGE_OPTS    = {
+    "width"  => :width,  "w"   => :width,
+    "column" => :column, "col" => :column, "c" => :column,
+  }.freeze
   # Obsidian .base embeds -> Jekyll include.
   BASE_RE       = /!\[\[([^\]]+)\.base\]\]/
   # Wiki links: [[target|Display]] or [[target]] (not preceded by "!").
@@ -69,12 +79,67 @@ module ObsidianLinks
     PERMALINK_ALIASES[slug] || "/#{slug}/"
   end
 
+  # Convert a line of 2+ adjacent image embeds carrying a column= option into an
+  # equal-column grid row:
+  #   ![[a.svg|column=3]]![[b.svg]]![[c.svg]]  ->  three columns, side by side
+  # The option can sit on any embed of the line (first found wins) and the grid
+  # wraps, so six embeds with column=3 make two rows of three. A line of
+  # adjacent embeds WITHOUT column= is left alone — no silent layout.
+  # Emitted as raw HTML because markdown alone can't force equal columns; must
+  # run BEFORE convert_images, which would otherwise consume the embeds.
+  def self.convert_image_rows(text, baseurl)
+    text.gsub(IMAGE_ROW_RE) do |line|
+      embeds = line.scan(IMAGE_RE).map { |filename, blob| [filename.strip, parse_image_segments(blob)] }
+      cols   = embeds.filter_map { |_, o| o[:column] }.first
+      next line unless cols
+
+      imgs = embeds.map do |filename, o|
+        %(<img src="#{baseurl}/assets/images/#{filename}" alt="#{CGI.escapeHTML(o[:alt])}">)
+      end
+      %(<div class="image-row" style="--cols: #{cols}">#{imgs.join}</div>)
+    end
+  end
+
+  # Split an embed's pipe blob ("caption|width=500", "column=3", ...) into
+  # { alt:, width:, column: }. key=value segments are matched against
+  # IMAGE_OPTS (numeric values only); the first plain segment is the alt text.
+  # A bare numeric segment ("500" or "500x300") is Obsidian's drag-resize
+  # width syntax — honored as width= so a resize in Obsidian isn't read as alt.
+  def self.parse_image_segments(blob)
+    opts = { alt: "" }
+    blob.to_s.split("|").map(&:strip).reject(&:empty?).each do |part|
+      if (m = part.match(/\A(\d+)(?:x\d+)?\z/))
+        opts[:width] ||= m[1]
+      elsif (kv = part.match(/\A([a-z]+)\s*=\s*(\d+)\z/i))
+        key = IMAGE_OPTS[kv[1].downcase]
+        opts[key] = kv[2] if key
+      elsif opts[:alt].empty?
+        opts[:alt] = part
+      end
+    end
+    opts
+  end
+
   # Convert ![[image.ext]] / ![[image.ext|alt]] -> ![alt](baseurl/assets/images/..)
+  #
+  # Pipe segments after the filename, in any order:
+  #   ![[img.svg|A caption]]             first plain segment -> alt text
+  #   ![[img.svg|width=500]]             display width in px on the built site
+  #   ![[img.svg|alt text|width=500]]    alt + width together
+  #   ![[img.svg|500]]                   what Obsidian writes when an image is
+  #                                      drag-resized in the editor; same as width=
+  # A sized image is emitted as an <img> tag (markdown can't carry a width);
+  # the base img CSS (max-width:100%) still shrinks it on narrow screens.
   def self.convert_images(text, baseurl)
     text.gsub(IMAGE_RE) do
       filename = $1.strip
-      alt      = $2 ? $2.strip : ""
-      "![#{alt}](#{baseurl}/assets/images/#{filename})"
+      o        = parse_image_segments($2)
+
+      if o[:width]
+        %(<img src="#{baseurl}/assets/images/#{filename}" alt="#{CGI.escapeHTML(o[:alt])}" width="#{o[:width]}">)
+      else
+        "![#{o[:alt]}](#{baseurl}/assets/images/#{filename})"
+      end
     end
   end
 
@@ -170,6 +235,7 @@ Jekyll::Hooks.register [:pages, :documents], :pre_render do |item|
   # Flag pages embedding a 3D model so the layout can pull in the viewer script.
   item.data['has_model'] = true if item.content.match?(ObsidianLinks::MODEL_RE)
   item.content = ObsidianLinks.convert_models(item.content)
+  item.content = ObsidianLinks.convert_image_rows(item.content, baseurl)
   item.content = ObsidianLinks.convert_images(item.content, baseurl)
 
   if item.content.include?('{% if') || (item.data['layout'] == 'doc')
