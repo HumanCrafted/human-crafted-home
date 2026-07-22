@@ -11,7 +11,6 @@ categories:
 published_date: 2017-06-09
 draft: false
 gallery_images:
-  - "![[elevations-clock-full-front.jpg]]"
   - "![[elevations-clock-black-and-gold.jpg]]"
   - "![[elevations-clock-turquoise-18in.jpg]]"
   - "![[elevations-clock-yellow-numerals.jpg]]"
@@ -21,6 +20,7 @@ gallery_images:
   - "![[elevations-clock-five-oclock.jpg]]"
   - "![[elevations-clock-green-preview.jpg]]"
   - "![[elevations-clock-bare-face.jpg]]"
+  - "![[elevations-clock-full-front.jpg]]"
   - "![[elevations-clock-market-booth.jpg]]"
 headline: A laser-cut birch clock with hour markers drawn as stacked bars, like a topographic map.
 version: "1.0"
