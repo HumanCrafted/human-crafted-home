@@ -70,7 +70,7 @@ One linking convention, authored in Obsidian and resolved to Jekyll URLs at buil
 
 #### 3D Model Viewer
 Some project pages show a real 3D model you can grab and spin, rendered right in the browser
-- Authored just like an image — `![[cord-keeper.stl]]` 
+- Authored just like an image — `![[cord-keeper.stl]]` — with the same `width=` option to size the viewer
 - Drag to rotate, pinch to zoom; it turns slowly on its own until you touch it
 - The 3D library loads only on pages that have a model, and only once you scroll it into view, so every other page stays light
 

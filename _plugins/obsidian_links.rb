@@ -29,7 +29,14 @@ module ObsidianLinks
   MODEL_RE      = /!\[\[([^\|\]]+\.stl)((?:\|[^\|\]]*)*)\]\]/i
   # Options a model embed accepts, as key=value pipe segments. Each becomes a
   # data-<key> attribute; anything else is ignored rather than passed through.
+  # (width= is handled separately in convert_models — it sizes the viewer box
+  # itself rather than becoming a data- attribute.)
   MODEL_OPTS    = %w[spin up].freeze
+  # Default viewer box is 30rem (480px) wide by 330px tall (see .stl-viewer in
+  # main.css). A width= option scales the whole box at this ratio: the model's
+  # on-screen size tracks the box HEIGHT (vertical-axis fit), so growing only
+  # the width would leave the model the same size.
+  MODEL_ASPECT  = 330.0 / 480.0
   # Options an image embed accepts, as key=value pipe segments (same pattern as
   # MODEL_OPTS). Values must be numeric. Short aliases are tolerated, but the
   # full words are the documented syntax.
@@ -163,6 +170,8 @@ module ObsidianLinks
   #   ![[m.stl|A label]]                first plain segment -> aria-label
   #   ![[m.stl|A label|spin=ccw]]       label + option
   #   ![[m.stl|spin=off]]               option only
+  #   ![[m.stl|width=700]]              viewer box 700px wide, height scaled to
+  #                                     match (MODEL_ASPECT) so the model grows too
   #
   # The plain segment feeds the accessible label only; it is not rendered as
   # visible caption text. The visible affordance is the rotate-3d icon that
@@ -171,10 +180,13 @@ module ObsidianLinks
     text.gsub(MODEL_RE) do
       filename = $1.strip
       caption  = ""
+      width    = nil
       opts     = {}
 
       $2.to_s.split("|").map(&:strip).reject(&:empty?).each do |part|
-        if (kv = part.match(/\A([a-z][a-z0-9-]*)\s*=\s*(.+)\z/i))
+        if (m = part.match(/\A(?:w(?:idth)?\s*=\s*)?(\d+)\z/i))
+          width = m[1].to_i
+        elsif (kv = part.match(/\A([a-z][a-z0-9-]*)\s*=\s*(.+)\z/i))
           key = kv[1].downcase
           opts[key] = kv[2].strip if MODEL_OPTS.include?(key)
         elsif caption.empty?
@@ -184,8 +196,9 @@ module ObsidianLinks
 
       label = caption.empty? ? "3D model — drag to rotate" : caption
       src   = "{{ \"/assets/models/#{filename}\" | relative_url }}"
+      style = width ? %( style="max-width: #{width}px; height: #{(width * MODEL_ASPECT).round}px") : ""
 
-      html = +%(<div class="stl-viewer" data-src="#{src}" data-label="#{CGI.escapeHTML(label)}")
+      html = +%(<div class="stl-viewer"#{style} data-src="#{src}" data-label="#{CGI.escapeHTML(label)}")
       opts.each { |k, v| html << %( data-#{k}="#{CGI.escapeHTML(v)}") }
       html << %(><span class="stl-viewer-fallback">Loading 3D model…</span></div>)
       html
