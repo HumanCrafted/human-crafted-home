@@ -16,11 +16,11 @@ gallery_images:
   - "![[concentric-coaster-gin-and-lime.jpg]]"
   - "![[concentric-coaster-coffee-desk.jpg]]"
   - "![[concentric-coaster-cappuccino.jpg]]"
+  - "![[concentric-coaster-market-booth.jpg]]"
   - "![[concentric-coaster-painted-set.jpg]]"
   - "![[concentric-coaster-color-blocks.jpg]]"
   - "![[concentric-coaster-white-and-gold.jpg]]"
   - "![[concentric-coaster-in-molds.jpg]]"
-  - "![[concentric-coaster-market-booth.jpg]]"
   - "![[concentric-coaster-packaging.jpg]]"
   - "![[concentric-coaster-blueprint.jpg]]"
   - "![[concentric-coaster-line-drawing.jpg]]"
@@ -33,7 +33,7 @@ process:
   - concrete casting
 ---
 
-The Concentric Coaster is a cast concrete drink coaster. The top is a field of concentric grooves, and the grooves do the work. Condensation from a cold glass runs down into them and gets held there instead of pooling out onto the table. It's heavy enough to stay put when you lift your glass, instead of coming up stuck to the bottom.
+The Concentric Coaster is a cast concrete drink coaster. The top is a field of concentric grooves, and the grooves do the work. Condensation from a cold glass runs down into them and gets held there instead of pooling out onto the table, slowly soaking in and evaporating. A bonus, it's heavy enough to stay put when you lift your glass, instead of coming up stuck to the bottom.
 
 It grew out of the same concrete work as the [[cord-keeper|Cord Keeper]]. Casting one simple object taught me the material, and this was the next thing to try. Sold as a set of four.
 
@@ -45,4 +45,4 @@ The ridge pattern started as a 3D print. I modeled the concentric texture, print
 
 The first runs were natural grey concrete and white. Then Annie at Seed & Arrow started hand-painting color blocks across the tops of some. Those became a limited edition we brought to Renegade Craft in Chicago and Good Day Market here in Madison. 
 
-It sold at markets and shops and got a writeup in Madison Magazine. 
+It was a popular product, sold as a set of four at markets and shops and got a writeup in Madison Magazine. 
