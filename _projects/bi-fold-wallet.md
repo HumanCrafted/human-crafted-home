@@ -9,6 +9,15 @@ categories:
 published_date: 2017-06-08
 draft: false
 gallery_images:
+  - "![[bi-fold-wallet-render.jpg]]"
+  - "![[bi-fold-wallet-black-open-and-folded.jpg]]"
+  - "![[bi-fold-wallet-black-open.jpg]]"
+  - "![[bi-fold-wallet-thin-empty.jpg]]"
+  - "![[bi-fold-wallet-thin-loaded.jpg]]"
+  - "![[bi-fold-wallet-lifestyle.jpg]]"
+  - "![[bi-fold-wallet-three-colors.jpg]]"
+  - "![[bi-fold-wallet-packaging-sleeve.jpg]]"
+  - "![[bi-fold-wallet-packaging-print.jpg]]"
 headline: A minimal bi-fold wallet made from bonded nylon instead of stitching, so it stays thin.
 version: "1.0"
 tools:

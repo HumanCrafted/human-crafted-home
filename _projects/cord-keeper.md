@@ -11,6 +11,8 @@ categories:
 published_date: 2016-01-25
 draft: false
 gallery_images:
+  - "![[cord-keeper-clean-iso.jpg]]"
+  - "![[cord-keeper-clean-top.jpg]]"
   - "![[cord-keeper-in-use.jpg]]"
   - "![[cord-keeper-overhead.jpg]]"
   - "![[cord-keeper-phone-dock.jpg]]"

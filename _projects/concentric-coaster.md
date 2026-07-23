@@ -11,6 +11,7 @@ categories:
 published_date: 2017-04-05
 draft: false
 gallery_images:
+  - "![[concentric-coaster-sunlit.jpeg]]"
   - "![[concentric-coaster-white-on-deck.jpg]]"
   - "![[concentric-coaster-water-dropping.mp4]]"
   - "![[concentric-coaster-concrete-stack.jpg]]"
