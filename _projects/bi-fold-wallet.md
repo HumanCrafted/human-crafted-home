@@ -6,6 +6,7 @@ main_image: "![[bi-fold-wallet-thumbnail.svg]]"
 featured: false
 categories:
   - around the house
+  - every day carry
 published_date: 2017-06-08
 draft: false
 gallery_images:
