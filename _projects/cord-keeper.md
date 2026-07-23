@@ -13,6 +13,8 @@ draft: false
 gallery_images:
   - "![[cord-keeper-in-use.jpg]]"
   - "![[cord-keeper-overhead.jpg]]"
+  - "![[cord-keeper-overhead-ipad.jpg]]"
+  - "![[cord-keeper-overhead-glasses.jpg]]"
   - "![[cord-keeper-phone-dock.jpg]]"
   - "![[cord-keeper-grid.jpg]]"
   - "![[cord-keeper-colors-display.jpg]]"
@@ -23,6 +25,8 @@ gallery_images:
   - "![[cord-keeper-curing.jpg]]"
   - "![[cord-keeper-batch-curing.jpg]]"
   - "![[cord-keeper-packaged.jpg]]"
+  - "![[cord-keeper-packaged-screenprint.jpg]]"
+  - "![[cord-keeper-packaged-old.jpg]]"
   - "![[cord-keeper-exhibit-packaging.jpg]]"
   - "![[cord-keeper-mmoca-exhibit.jpg]]"
 headline: "A concrete cable weight born from a museum exhibit — and the first Human Crafted product."
@@ -47,4 +51,4 @@ The first molds were PVC pipe sections with a piece of steel bar stock laid acro
 
 The cord keeper became the first Human Crafted product. I produced it in natural concrete and a range of colors, and had a few artist-painted special editions. It sold in shops around the country and at craft shows — packaged in a variety of experimental and fun ways over the years.
 
-It's a small thing. But it's the one that got everything started.
+It's a small thing. But it's the one that got everything started. It was also the beginning of so many experiments in making, packaging, marketing, selling.  It's been a journey.
