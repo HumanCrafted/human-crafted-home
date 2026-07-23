@@ -22,6 +22,7 @@ gallery_images:
   - "![[elevations-clock-bare-face.jpg]]"
   - "![[elevations-clock-full-front.jpg]]"
   - "![[elevations-clock-market-booth.jpg]]"
+  - "![[elevations-clock-built-exhibit.jpg]]"
 headline: A laser-cut birch clock with hour markers drawn as stacked bars, like a topographic map.
 version: "1.0"
 tools:
@@ -40,4 +41,4 @@ It runs on a Seiko quartz movement, and came in two sizes: 12 inch and 18 inch. 
 
 The round face is CNC-routed from baltic birch. In the model, each slot required thickness adjustments to accommodate slight variations in acrylic thickness. The numeral bars are laser-cut acrylic and pressed into the precise slots. The hands were also laser cut from a thinner stock, and included a slot that allowed the hands to be pressed onto the movement. Over the run I made numerals in natural, black, black and gold, fluorescent yellow and green, with hands that matched or set against them. 
 
-Made to order, a few at a time. They sold at markets like Good Day Market and Renegade Craft, online, and showed at WantedDesign as part of New York Design Week. 
+Made to order, a few at a time. They sold at markets like Good Day Market and Renegade Craft, online, and was selected to be part of the BUILT showcase during NYCxDesign 2018 at the Canal Street Market.
