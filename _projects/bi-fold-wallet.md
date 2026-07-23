@@ -24,14 +24,17 @@ tools:
 process:
 ---
 
-The Bi-Fold Wallet is about as simple as a wallet gets. It's made from 200 denier nylon with bonded seams instead of stitching, which keeps it thin. It holds around six cards, four business cards, and four bills, and it's still slim when it's full.
+The Bi-Fold Wallet started as a project to make myself a tyvek wallet.  Tyvek was a building material I was familiar with from past Summer jobs in construction, but I also had sitting around as excess USPS shipping envelopes. I was able to laser cut the material which was great, but I tried sewing wallets together and never was happy with the result. Also the tyvek wallets I made began to pill and shred quickly.  
 
-Everything you need, nothing you don't.
+Then I came across heat-sealable nylon, which is used in outdoor gear to make water-proof joints. It turns out its very laserable too, so I made lots of test patterns and finally arrived at one I really liked, and bonded the parts together with an iron (no stitching). I started using it and haven't stopped since that original design. At some point in the last ten years (as I write this in 2026) I switched to a newer color, but otherwise the same exact wallet has been in my back pocket since then.  I went on to sell quite a few, and have many friends that are still faithful users.  
+
 
 ### Making it
 
-The nylon is adventure-grade, the same kind of fabric that goes into packs and gear. Light, and it takes a beating. The seams are bonded rather than sewn, so there are no needle holes and no thread adding bulk.
+It's made from 200 denier nylon (the same kind of fabric that goes into outdoor packs and gear) with heat-bonded seams instead of stitching, which keeps it thin and simple. It has six slots which is good for six to eight cards, and a spot for bills. As long as you don't overpack it, it's super slim, goes in and out of your pocket easily. 
+
+I was proud of the packaging design as well which went through a couple of subtle changes over the time I sold it.
 
 ### Colors
 
-The first run was black. I brought it back later in three colors: a green, a navy, and a tan. It sold for $25, online and at markets like Good Day Market.
+The first run was black. I brought it back later in three colors: a green, a grey, and a tan. It sold online and at markets.
