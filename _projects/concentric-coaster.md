@@ -12,6 +12,7 @@ published_date: 2017-04-05
 draft: false
 gallery_images:
   - "![[concentric-coaster-white-on-deck.jpg]]"
+  - "![[concentric-coaster-water-dropping.mp4]]"
   - "![[concentric-coaster-concrete-stack.jpg]]"
   - "![[concentric-coaster-gin-and-lime.jpg]]"
   - "![[concentric-coaster-coffee-desk.jpg]]"
@@ -21,9 +22,10 @@ gallery_images:
   - "![[concentric-coaster-color-blocks.jpg]]"
   - "![[concentric-coaster-white-and-gold.jpg]]"
   - "![[concentric-coaster-in-molds.jpg]]"
-  - "![[concentric-coaster-packaging.jpg]]"
+  - "![[concentric-coaster-packaging-iso.jpg]]"
   - "![[concentric-coaster-blueprint.jpg]]"
   - "![[concentric-coaster-line-drawing.jpg]]"
+  - "![[concentric-coaster-packaging-illustration.jpg]]"
 headline: A cast concrete drink coaster with concentric grooves that pull condensation off the table.
 version: "1.0"
 tools:
