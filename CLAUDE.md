@@ -398,6 +398,7 @@ merged but still exists locally; safe to delete.)
   - Home → `human / crafted` (unchanged, links home).
   - Hubs `/lab/`, `/re/` → `humancrafted.co/lab` · `co/re` — `humancrafted.` dims to 25% (links home), `co/<section>` is bright/current.
   - Sub-pages → nested display-only crumb `humancrafted.co/re/<slug>` (`humancrafted`→home, `co/re`→hub, slug current). **Real URLs stay flat** — the nesting is visual only, no SEO/URL migration.
+  - **Crumb text** (July 2026): explicit front-matter `crumb:` wins, then `title:`, then the de-hyphenated slug. Any post/doc/page with a long descriptive title (e.g. shop-notes posts) should set a short `crumb:` — first used on `_posts/2026-07-31-shop-notes-…​.md` (`crumb: shop notes`).
 - **Renamed the hub `/more/` → `/re/`** (co/re = "core", the body of work) via **`jekyll-redirect-from`** (added to `Gemfile` + `_config.yml`); old `/more/` redirects. Nav label stays "More".
 - "Let's co/lab" pill shows on **all** pages now.
 - On-load motion (Web Animations API; skipped for `prefers-reduced-motion` or hidden/backgrounded tabs): breadcrumb pages **wipe in only the newest path segment**; home **reassembles** (`humancrafted` splits, the `/` drops into the gap) only when arriving from an internal page (`document.referrer` same-origin).

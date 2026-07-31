@@ -59,6 +59,17 @@ How it resolves: the target gets slugified (lowercased, spaces/underscores → h
 
 To show a literal `[[slug]]` or `![[img]]` as an example (like right here), wrap it in `inline code` or a fenced block. The plugin leaves anything inside code untouched.
 
+## Short breadcrumbs
+
+The header breadcrumb (`humancrafted.co/re/…`) shows the page's `title:` by default. For a page with a long descriptive title — shop-notes posts, mostly — add a `crumb:` line to the front matter and the breadcrumb uses that instead:
+
+```
+title: Shop Notes, Milwaukee Packout, 3D Printing Colors + NFC
+crumb: shop notes
+```
+
+The page itself still shows the full title everywhere else; `crumb:` only changes the header. No `crumb:` → the title is used, same as always.
+
 ## Inline images
 
 `![[file.svg]]` renders as a plain `<img>`. No width in the markdown — the image lays out at its own natural size.

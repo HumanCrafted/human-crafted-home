@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Shop Notes, Milwaukee Packout, 3D Printing Colors + NFC
+crumb: 2026-07-31 shop notes
 date: 2026-07-31
 draft: false
 categories:
