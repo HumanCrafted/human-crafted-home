@@ -18,5 +18,3 @@ So here is what I've been working on:
 - Over the last few days I have been 3D printing [little color samples](https://github.com/HumanCrafted/xyz-fyi/tree/main/xyz-block) of filaments I've had as well as whole bunch of new samples I ordered from [Protopasta](https://proto-pasta.com). I think there are some fun ones that I'll order larger rolls of.  Nerding out a little, I embedded little RFID/NFC tags in each one so when I hold it up to my phone a little message pops up with the maker and color.  If you are curious about how I did this, let me know.  
   ![[3d-printing-color-range.jpg | column=2]]![[3d-printing-color-rfid.jpg]]
 - A fun side-project I did this week was design a simple brand and website for our local music boosters organization. It's not live yet, but will link to it in a future Shop Note. I really flexed Claude.ai's muscles on this design and web project. I have a pretty refined process for designing and launching simple (free hosted) websites now that includes Claude, Figma, Astro, and Vercel for hosting.  If you would like to learn more or have a project you want help with, let me know.   
-
---
