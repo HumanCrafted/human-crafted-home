@@ -200,6 +200,6 @@ The need for sustainable fitness solutions is not a trend that will fade.
 
 _End_
 
-A work by the Advanced Development Group, a curious division of Johnson Health Tech Inc., written by these real people: [Jon Alling](https://www.linkedin.com/in/alling), [Hanna Tsuhara](https://www.linkedin.com/pub/hanna-tsuhara/50/932/9a0), and [Jennifer Garrett](https://www.linkedin.com/in/jenniferenglegarrett), with help from many others.
+A work by the Advanced Development Group, a curious division of Johnson Health Tech Inc., written and illustrated by these real people: [Jon Alling](https://www.linkedin.com/in/alling), [Hanna Tsuhara](https://www.linkedin.com/pub/hanna-tsuhara/50/932/9a0), and [Jennifer Garrett](https://www.linkedin.com/in/jenniferenglegarrett), with help from many others.
 
 ![[fitter-future-team.jpeg|The Advanced Development Group team]]

@@ -29,5 +29,3 @@ It immediately seemed more functional. Working from the bottom up, you can try t
 ![[hierarchy-of-experience-stage-1.jpeg|Stage one of the hierarchy over time|column=3]]![[hierarchy-of-experience-stage-2.jpeg|Stage two of the hierarchy over time]]![[hierarchy-of-experience-stage-3.jpeg|Stage three of the hierarchy over time]]
 
 At any stage of development, there is always a component of each experience need. Then when you’ve reached your desired functionality you can test that, but also test if you are on target to reach that next goal. That stays true until you (hopefully) reach your ultimate goal.
-
-Let me know what you think. I’m excited to experiment with it more. I’d love to hear your comments (in this post or on [twitter](https://twitter.com/jonalling)).
