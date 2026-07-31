@@ -8,7 +8,8 @@ A collection of thoughts, insights, and reflections on design, engineering, and 
 
 ---
 
-{% for post in site.posts %}
+{% assign published_posts = site.posts | where_exp: "post", "post.draft != true" %}
+{% for post in published_posts %}
   <div class="post-item">
     <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
     <p class="post-meta">
@@ -23,6 +24,6 @@ A collection of thoughts, insights, and reflections on design, engineering, and 
   </div>
 {% endfor %}
 
-{% if site.posts.size == 0 %}
+{% if published_posts.size == 0 %}
   <p>No posts yet. Check back soon!</p>
 {% endif %}

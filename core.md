@@ -20,3 +20,5 @@ This is the [[core]] of Human Crafted, a boutique design studio and product desi
 {% include wiki-two-column.html title="Expertise" items="CAD design and engineering,User testing,Limited low run production,Product strategy,Production support,Concept development,Rapid prototyping,Design for manufacturing, Fabrication" auto="expertise_docs" %}
 
 {% include wiki-two-column.html title="Writing" auto="posts" show_all_link="/writing/" show_all_text="View all posts" %}
+
+{% include wiki-two-column.html title="Shop Notes" auto="shop_notes_posts" show_all_link="/writing/" show_all_text="View all writing" %}
