@@ -19,14 +19,16 @@ require "cgi"
 # Links inside `inline code` or ```fenced blocks``` are left untouched, so a doc
 # can show literal [[slug]] / ![[img]] examples without them becoming live links.
 module ObsidianLinks
-  # Images embedded with ![[ ]] (by extension).
-  IMAGE_RE      = /!\[\[([^\|\]]+\.(?:jpg|jpeg|png|gif|svg|webp))(?:\|([^\]]+))?\]\]/i
+  # Images embedded with ![[ ]] (by extension). Whitespace is tolerated between
+  # the filename and the first pipe — "![[file.jpg | column=2]]" is natural to
+  # type and must parse the same as "![[file.jpg|column=2]]".
+  IMAGE_RE      = /!\[\[([^\|\]]+\.(?:jpg|jpeg|png|gif|svg|webp))[ \t]*(?:\|([^\]]+))?\]\]/i
   # A line that is nothing but 2+ image embeds — a candidate image row; it
   # becomes one only if an embed carries column=N (see convert_image_rows).
-  IMAGE_ROW_RE  = /^[ \t]*(?:!\[\[[^\|\]]+\.(?:jpg|jpeg|png|gif|svg|webp)(?:\|[^\]]+)?\]\][ \t]*){2,}$/i
+  IMAGE_ROW_RE  = /^[ \t]*(?:!\[\[[^\|\]]+\.(?:jpg|jpeg|png|gif|svg|webp)[ \t]*(?:\|[^\]]+)?\]\][ \t]*){2,}$/i
   # 3D models embedded with ![[ ]] -> an interactive viewer. Everything after the
   # filename is captured as one blob and split on "|" in convert_models.
-  MODEL_RE      = /!\[\[([^\|\]]+\.stl)((?:\|[^\|\]]*)*)\]\]/i
+  MODEL_RE      = /!\[\[([^\|\]]+\.stl)[ \t]*((?:\|[^\|\]]*)*)\]\]/i
   # Options a model embed accepts, as key=value pipe segments. Each becomes a
   # data-<key> attribute; anything else is ignored rather than passed through.
   # (width= is handled separately in convert_models — it sizes the viewer box
@@ -103,7 +105,10 @@ module ObsidianLinks
       imgs = embeds.map do |filename, o|
         %(<img src="#{baseurl}/assets/images/#{filename}" alt="#{CGI.escapeHTML(o[:alt])}">)
       end
-      %(<div class="image-row" style="--cols: #{cols}">#{imgs.join}</div>)
+      # Keep the line's indentation: an indented row (inside a list item) must
+      # stay indented, or kramdown reads the div as ending the list.
+      indent = line[/\A[ \t]*/]
+      %(#{indent}<div class="image-row" style="--cols: #{cols}">#{imgs.join}</div>)
     end
   end
 
