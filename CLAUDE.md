@@ -287,7 +287,7 @@ git checkout -b hover-experiment
 
 **Item Formatting:**
 - Plain text: `items="CNC Router,3D Printer"`
-- With links: `items="About me:/about-me/,Expertise:/expertise/"`
+- With links: `items="About me:/about-me/,Process:/process/"`
 - Mixed: `items="CNC Router,Fusion 360:/fusion360/,3D Printer"`
 
 **Auto-Population Types:**

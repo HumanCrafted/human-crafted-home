@@ -36,14 +36,6 @@
         {% endfor %}
       {% endif %}
       
-      {% if include.auto == "expertise_docs" %}
-        {% assign expertise_docs = site.docs | where_exp: "doc", "doc.draft != true" | where_exp: "doc", "doc.tag contains 'expertise' or doc.tags contains 'expertise'" %}
-        {% if include.items and expertise_docs.size > 0 %}, {% endif %}
-        {% for doc in expertise_docs limit:item_limit %}
-          <a href="{{ doc.url | relative_url }}">{{ doc.title }}</a>{% unless forloop.last %}, {% endunless %}
-        {% endfor %}
-      {% endif %}
-      
       {% if include.auto == "services_docs" %}
         {% assign services_docs = site.docs | where_exp: "doc", "doc.draft != true" | where_exp: "doc", "doc.tag contains 'services' or doc.tags contains 'services'" %}
         {% if include.items and services_docs.size > 0 %}, {% endif %}
