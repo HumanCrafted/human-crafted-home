@@ -1,18 +1,19 @@
 ---
 layout: doc
-title: Help
-slug: help
+title: Syntax Help
+slug: syntax-help
 main_image:
 featured: false
 tags:
-  - about
-published_date: 2026-07-10
+  - note
+  - web-development
+published_date: 2026-08-01
 gallery_images:
 version: "1.0"
-draft: true
+draft: false
 ---
 
-Notes to myself for writing and building pages on this site — a working cheat sheet, not a published page.
+A cheat sheet for writing pages on this site. Everyday markdown, plus the few conventions this site adds on top: one linking style, image options, and 3D model embeds. For how the site is actually built, see [[website|the website note]].
 
 ## Markdown basics
 
