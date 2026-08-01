@@ -27,4 +27,4 @@ This is what I take on for clients. Human Crafted is a one-person studio, so the
 
 ---
 
-Not sure which one you need, or need something that isn't on the list? Get in touch through [[lab|co/lab]] and we can talk it through.
+Not sure which one you need, or need something that isn't on the list? [[lab|Get in touch]] and we can talk it through.
