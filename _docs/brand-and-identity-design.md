@@ -29,4 +29,4 @@ New businesses that need a first identity, and existing ones with an aging ident
 
 ## What it costs
 
-Depends on how far the system needs to go, and what came before it: a mark and a basic palette can be a few hundred, with a full identity and assets extends into the thousands. [[lab|Get in touch]] and we will plan it out together.
+Depends on how far the system needs to go, and what came before it: a mark and a basic palette can be a few hundred, with a full identity and assets extending into the thousands. [[lab|Get in touch]] and we will plan it out together.
