@@ -2,6 +2,7 @@
 layout: doc
 title: Website Development
 slug: website-development
+weight: 40
 crumb: website development
 summary: Small, fast sites that YOU own. Static pages, no CMS subscription, no annual price increases.
 main_image:

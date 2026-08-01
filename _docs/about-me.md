@@ -59,7 +59,7 @@ Setting sail as an entrepreneur and freelance designer wasn't an easy decision, 
 
 **Brand:** Identity, packaging, signage and wayfinding, retail and tradeshow
 
-**Strategy:** Product strategy, 0-to-1 technical co-founding, executive advisory, cross-functional leadership, manufacturing partner management
+**Strategy:** Business design, Product strategy, 0-to-1 technical co-founding, start-up advising, cross-functional leadership, manufacturing partner management
 
 ## Education
 
