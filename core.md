@@ -13,7 +13,7 @@ This is the [[core]] of Human Crafted, a boutique design studio and product desi
 
 {% include wiki-two-column.html title="Resources" auto="resources" %}
 
-{% include wiki-two-column.html title="Notes" auto="note_docs" %}
+{% include wiki-two-column.html title="Notes" auto="note_docs" show_all_link="/notes/" show_all_text="View all notes" %}
 
 {% include wiki-two-column.html title="Projects" auto="projects" show_all_link="/#archive" show_all_text="View all projects" %}
 
