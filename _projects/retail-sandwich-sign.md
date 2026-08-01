@@ -11,8 +11,8 @@ categories:
   - laser
 published_date: 2018-09-17
 draft: false
-gallery_images: 
-headline: 
+gallery_images:
+headline:
 version: "1.0"
 tools:
   - laser-cutter
@@ -20,4 +20,6 @@ tools:
 process:
 ---
 
-More project details coming soon!
+The Retail Sandwich Sign was a one-off build for the first Good Day Shop pop-up. It was made from birch plywood and acrylic letters that slid in and out of grooves.
+
+![[retail-sandwich-sign.jpg|w=500]]
