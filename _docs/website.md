@@ -55,7 +55,7 @@ The site's colors, typography, spacing, and components are documented in the [[d
 
 #### Reference Sections
 - Two-column layout: a section label beside an auto-populated, comma-separated list
-- Pulls live from Jekyll collections (projects, notes, tools, posts)
+- Pulls live from Jekyll collections (projects, notes, tools, services, posts)
 - Manual item lists with optional links and configurable limits
 - Used on the [[core|Core]] page and the [[design-system|Design System]] note
 

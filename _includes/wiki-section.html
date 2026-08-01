@@ -38,6 +38,13 @@
     {% endfor %}
   {% endif %}
   
+  {% if include.auto == "services_docs" %}
+    {% assign services_docs = site.docs | where_exp: "doc", "doc.draft != true" | where_exp: "doc", "doc.tags contains 'services'" %}
+    {% for doc in services_docs limit:item_limit %}
+      <li><a href="{{ doc.url | relative_url }}">{{ doc.title }}</a></li>
+    {% endfor %}
+  {% endif %}
+
   {% if include.auto == "process_docs" %}
     {% assign process_docs = site.docs | where_exp: "doc", "doc.draft != true" | where_exp: "doc", "doc.tag contains 'process'" %}
     {% for doc in process_docs limit:item_limit %}
