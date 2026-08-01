@@ -801,14 +801,16 @@ hr {
   }
   
   .project-tags,
-  .project-categories {
+  .project-categories,
+  .project-date {
     flex-direction: row;
     align-items: flex-start;
     align-self: flex-start;
   }
-  
+
   .tags-label,
-  .categories-label {
+  .categories-label,
+  .date-label {
     align-self: flex-start;
   }
   
@@ -1013,6 +1015,25 @@ hr {
   color: var(--foreground);
   font-size: 0.875rem;
   margin-right: 0.5rem;
+}
+
+.project-date {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.date-label {
+  color: var(--foreground);
+  font-size: 0.875rem;
+  margin-right: 0.5rem;
+}
+
+.meta-date {
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+  white-space: nowrap;
 }
 
 
