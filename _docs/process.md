@@ -2,6 +2,7 @@
 layout: doc
 title: Process
 slug: process
+weight: 30
 main_image:
 featured: false
 tags:

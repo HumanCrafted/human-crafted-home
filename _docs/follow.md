@@ -2,6 +2,7 @@
 layout: doc
 title: Follow
 slug: follow
+weight: 20
 redirect_from:
   - /socials/
 main_image:

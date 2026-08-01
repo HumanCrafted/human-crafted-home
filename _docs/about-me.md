@@ -2,6 +2,7 @@
 layout: doc
 title: About me
 slug: about-me
+weight: 10
 redirect_from:
   - /expertise/
 main_image:

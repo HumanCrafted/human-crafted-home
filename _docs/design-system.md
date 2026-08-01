@@ -2,6 +2,7 @@
 layout: doc
 title: Design System
 slug: design-system
+weight: 40
 main_image:
 featured: false
 tags:
