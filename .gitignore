@@ -41,3 +41,9 @@ jekyll.log
 # Claude Code local config
 .claude/
 
+
+# iCloud Drive sync-conflict duplicates ("cart 2.md", "shop 2.css").
+# The vault lives in iCloud, and switching branches makes files appear and
+# disappear underneath it, which iCloud sometimes resolves by leaving a copy.
+# They're byte-identical junk — never commit them.
+*\ [0-9].*
