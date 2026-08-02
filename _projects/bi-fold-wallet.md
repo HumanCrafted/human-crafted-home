@@ -21,18 +21,25 @@ gallery_images:
   - "![[bi-fold-wallet-packaging-print.jpg]]"
 headline: A minimal bi-fold wallet made from bonded nylon instead of stitching, so it stays thin.
 # --- shop: PLACEHOLDER price/SKU/stock — replace with real values ---
+# `price:` here is the default. A variant may override it with its own `price:`;
+# the header price, the cart line and the totals all follow the SELECTED variant.
+# (The odd numbers below are deliberate placeholders that exercise the cases:
+# an override on the first variant, one variant falling back to the default,
+# and an override on a sold-out variant.)
 shop_status: available
 price: 25.00
 ships_in: 3–5 business days
 variants:
   - name: Black
     sku: BFW-BLK
+    price: 27.00
     stock: 2
   - name: Natural
     sku: BFW-NAT
     stock: 7
   - name: Oxblood
     sku: BFW-OXB
+    price: 32.00
     stock: 0
 # --- /shop ---
 version: "1.0"
