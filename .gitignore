@@ -1,6 +1,7 @@
 # Jekyll
 _site/
-_site-shop/   # local shop-preview build (see _config.shop.yml)
+# local shop-preview build (see _config.shop.yml)
+_site-shop/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
