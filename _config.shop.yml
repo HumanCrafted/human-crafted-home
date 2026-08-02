@@ -1,0 +1,21 @@
+# Local-only override: turns the shop ON for a dev server.
+#
+# Layered on top of _config.yml at runtime, so the committed switch stays
+# `shop_enabled: false` and there is nothing to remember to flip back:
+#
+#   bundle _2.7.2_ exec jekyll serve --config _config.yml,_config.shop.yml
+#
+# or use the "jekyll-shop" preview configuration in .claude/launch.json, which
+# runs exactly that on port 4001.
+#
+# Do NOT move this value into _config.yml to work locally. The Obsidian
+# github-sync plugin commits and pushes on load (isSyncOnLoad: true), so a
+# _config.yml left switched on can publish the shop without anyone doing
+# anything. Keeping the override in its own file makes that impossible —
+# this file changes nothing about what gets built by GitHub Actions.
+shop_enabled: true
+
+# Build somewhere else. Both dev servers otherwise write to _site and clobber
+# each other — the shop-off server deletes the shop pages the shop-on server
+# just wrote, so port 4001 served 404s for /cart/ while claiming to be enabled.
+destination: _site-shop

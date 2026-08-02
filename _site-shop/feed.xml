@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4001/" rel="alternate" type="text/html" /><updated>2026-08-02T17:26:59-05:00</updated><id>http://localhost:4001/feed.xml</id><title type="html">human crafted</title><subtitle>A product design studio specializing in the rapid realization of ideas.</subtitle><entry><title type="html">Shop Notes, Milwaukee Packout, 3D Printing Colors + NFC</title><link href="http://localhost:4001/shop-notes-milwaukee-packout-3d-printing-nfc/" rel="alternate" type="text/html" title="Shop Notes, Milwaukee Packout, 3D Printing Colors + NFC" /><published>2026-07-31T00:00:00-05:00</published><updated>2026-07-31T00:00:00-05:00</updated><id>http://localhost:4001/shop-notes-milwaukee-packout-3d-printing-nfc</id><content type="html" xml:base="http://localhost:4001/shop-notes-milwaukee-packout-3d-printing-nfc/"><![CDATA[<p>Today I am starting a series called <strong>Shop Notes</strong>, a semi-regular collection of posts about what I am working on and the details behind them. These will mostly be text and links, with occasional images, and I will be archiving them <a href="https://humancrafted.co/writing/">here</a> so you can reference them later.</p>
+
+<p>So here is what I’ve been working on:</p>
+
+<ul>
+  <li>I am starting to go back through the project archive and update the website with pics and project descriptions, and then posting those on Instagram.  The plan is to go through them all so I have the full archive captured (finally).</li>
+  <li>Last week I 3D printed lots of small inserts to go inside these <a href="https://www.milwaukeetool.com/products/storage-solutions/packout/packout-organizers">Milwaukee Packout organizers</a>. They further divide the included bins so you can store smaller quantities or smaller sized items. This has been a long term project in the shop that I never got around to, but found time last weekend to organize a lot of my screws, nuts and bolts.  I designed these inserts a while ago, and have them posted here in my <a href="https://github.com/HumanCrafted/xyz-fyi/tree/main/packout-inserts">XYZFYI archive</a> if you want to print some for yourself.
+    <div class="image-row" style="--cols: 2"><img src="/assets/images/packout-inserts-top.jpeg" alt="" /><img src="/assets/images/packout-inserts-iso.jpeg" alt="" /></div>
+  </li>
+  <li>Over the last few days I have been 3D printing <a href="https://github.com/HumanCrafted/xyz-fyi/tree/main/xyz-block">little color samples</a> of filaments I’ve had as well as whole bunch of new samples I ordered from <a href="https://proto-pasta.com">Protopasta</a>. I think there are some fun ones that I’ll order larger rolls of.  Nerding out a little, I embedded little RFID/NFC tags in each one so when I hold it up to my phone a little message pops up with the maker and color.  If you are curious about how I did this, let me know.
+    <div class="image-row" style="--cols: 2"><img src="/assets/images/3d-printing-color-range.jpg" alt="" /><img src="/assets/images/3d-printing-color-rfid.jpg" alt="" /></div>
+  </li>
+  <li>A fun side-project I did this week was design a simple brand and website for our local music boosters organization. It’s not live yet, but will link to it in a future Shop Note. I really flexed Claude.ai’s muscles on this design and web project. I have a pretty refined process for designing and launching simple (free hosted) websites now that includes Claude, Figma, Astro, and Vercel for hosting.  If you would like to learn more or have a project you want help with, let me know.</li>
+</ul>]]></content><author><name></name></author><category term="shop-notes" /><summary type="html"><![CDATA[Today I am starting a series called Shop Notes, a semi-regular collection of posts about what I am working on and the details behind them. These will mostly be text and links, with occasional images, and I will be archiving them here so you can reference them later.]]></summary></entry><entry><title type="html">Made Better</title><link href="http://localhost:4001/made-better/" rel="alternate" type="text/html" title="Made Better" /><published>2016-06-30T00:00:00-05:00</published><updated>2016-06-30T00:00:00-05:00</updated><id>http://localhost:4001/made-better</id><content type="html" xml:base="http://localhost:4001/made-better/"><![CDATA[<p>Two words that perfectly describe Human Crafted’s mission.</p>
+
+<p>Human Crafted is a product design studio in Madison, Wisconsin originally founded as a side-project by Philip Stankard and Jon Alling in 2013. In 2016, <a href="https://medium.com/@jonalling/the-beginning-and-end-of-what-if-9ba36649d408#.ixne2u2zp">Jon turned that side-project into a full-time adventure</a>. Now Human Crafted designs and produces our own products with the mission to make our everyday lives a bit better. We also help larger companies let loose, act small, and regain some of that can-do, maker spirit.</p>
+
+<blockquote>
+  <p>“OK fine, but what is Made. Better.” -them</p>
+</blockquote>
+
+<h3 id="made">Made.</h3>
+
+<p>Product design is serious business, but sometimes maybe a bit too serious. Complicated by layers of management, silos, titles, degrees, egos, roadmaps, and SOPs. More often than not, no matter how large or small your company is, it’s best to just let loose and make something.</p>
+
+<blockquote>
+  <p>“But it’s not actually that easy” -them</p>
+
+  <p>“No, really it is” -us</p>
+</blockquote>
+
+<p>We believe that an idea only becomes something of value when you finally try making it.</p>
+
+<blockquote>
+  <p>“But what if you’re that person who doesn’t work for the right company, in the right department, have the right degree, or have the plan all worked out.” -them</p>
+</blockquote>
+
+<p>Even the best of us hold back from making an idea so we can think about it a little more, or worse we wait to show it to anyone until it’s perfect. <strong>Newsflash… there is no perfect.</strong></p>
+
+<p>At Human Crafted we use what ever means possible to make an idea as fast and as early as possible. No fancy show models or highly polished samples, we mean something quick you can use and get someone else to use. Product version 1.0. This is how we conduct our own product design process and how we help other individuals and companies to do the same. Even the products that we sell are really just experiments, albeit versions 2, 3, or even higher. And it’s no surprise that not everything works out like we thought, but it’s how we learn, and learning is the most important step in making something better.</p>
+
+<h3 id="better">Better.</h3>
+
+<p>There are new products, good looking products, and well made products. We covet them as much as anyone. But at Human Crafted, we also want to make better products. <strong>To us, better means it creates more value.</strong> It’s a product that does just what it needs to. It solves that annoying little problem, or makes something go a bit smoother, or makes your space more enjoyable. The trouble is, what a person values is complicated, and it’s almost certain to be different than what many others value. But we do our best to understand a person, and then make them something that helps, so we can quickly learn if it adds value. The faster we repeat that process, the more we reduce risk. And the more often we repeat that process, the closer we get to better.</p>]]></content><author><name></name></author><category term="writing" /><category term="design" /><summary type="html"><![CDATA[Two words that perfectly describe Human Crafted’s mission.]]></summary></entry><entry><title type="html">The Beginning and End Of What If</title><link href="http://localhost:4001/the-beginning-and-end-of-what-if/" rel="alternate" type="text/html" title="The Beginning and End Of What If" /><published>2016-04-15T00:00:00-05:00</published><updated>2016-04-15T00:00:00-05:00</updated><id>http://localhost:4001/the-beginning-and-end-of-what-if</id><content type="html" xml:base="http://localhost:4001/the-beginning-and-end-of-what-if/"><![CDATA[<p>About a month ago, I left my day job to pursue a side project full time.</p>
+
+<p>For those that don’t know me, I have been an engineer and consumer product designer for over 15 years. I’ve only worked for two companies since college. I have a house and a family including a three month old daughter. And although I may be known as a person who carves his own path, I’m certainly not a person who typically self-inflicts this kind of change. But the question of “What If” has been on my mind for quite a while now.</p>
+
+<p><em>What if I spent more time on my side projects, could I make them a success?</em></p>
+
+<p><em>What if they wouldn’t let me support my family?</em></p>
+
+<p><em>What if I ran my own business, would I be happier?</em></p>
+
+<p><em>What if I wasn’t entrepreneur material?</em></p>
+
+<p><em>What if I regret missing out on time with my daughters as they grow up?</em></p>
+
+<p><em>What if I leave behind a career but can’t ever break back in?</em></p>
+
+<p>In complete contrast, I spent my day job pushing engineers, designers, and product managers to break through barriers, to question, and most of all to experiment. Why should the question of “What If” be so debilitating outside of the comfort of the day job? What was so different?</p>
+
+<p>It’s obvious… I was playing someone else’s hand. There was just about zero risk and it was easy by comparison. So on the morning of that fateful day when I gave notice of my resignation, I invested in myself. I took on 100% of the risk.</p>
+
+<h3 id="in-the-business-of-what-if">In The Business Of “What If”</h3>
+
+<p>There is only one way to answer “What If”, and there is only one way to reduce risk… <strong>to learn</strong>. In other words, you need to see, to do, to make, to try, to experience. So today I am officially launching <a href="/">Human Crafted</a>, a product design business guided by that principle.</p>
+
+<p>We will be making and testing products that try to make our lives better, one tiny bit at a time. Everything we make will be an experiment. No assumptions taken for granted. No guaranteed successes, only guaranteed learning. And we will try to pass on as much of that learning as we can through the process.</p>
+
+<p>We will also be selectively helping other businesses learn fast, and reduce risk in the development of their own better products or services. We will use the same maker mentality to rapidly experiment and dig for real customer value. The kind of value that builds stories and markets itself.</p>
+
+<p>Leaving the comfort of my day job to start something new may have been the end of a few “What If’s”, but what I am about to start is the beginning of a life long pursuit in answering that question over and over again. Here we go!</p>]]></content><author><name></name></author><category term="writing" /><category term="business" /><summary type="html"><![CDATA[About a month ago, I left my day job to pursue a side project full time.]]></summary></entry><entry><title type="html">Innovating Innovation</title><link href="http://localhost:4001/innovating-innovation/" rel="alternate" type="text/html" title="Innovating Innovation" /><published>2015-09-23T00:00:00-05:00</published><updated>2015-09-23T00:00:00-05:00</updated><id>http://localhost:4001/innovating-innovation</id><content type="html" xml:base="http://localhost:4001/innovating-innovation/"><![CDATA[<p>Long range strategy in the “now” minded business environment.</p>
+
+<p>Prioritizing long range thinking over the challenges we face today is always hard. You may be familiar with tools, experts, and even entire industries dedicated to helping us with long range financial planning or building healthy eating habits. So why does it seem like long range business innovation strategy is a guessing game at best, or at it’s worst pushed to the back burner or forgotten entirely.</p>
+
+<p>Of course there is already a massive movement in startups around the world using lean innovation tools, business model design, and customer development to fine tune their short term innovation strategy. The momentum is accelerating thanks to the efforts of Eric Ries, Steve Blank, Clayton Christensen, Alexander Osterwalder, Ash Maurya, and many more.</p>
+
+<p>Giff Constable, Jeff Gothelf, and Cindy Alvarez are among a few experts with their focus on helping teams at large businesses innovate like startups. Eric Ries has also acknowledged that the next frontier for the Lean movement is big business (and government) in his new Leader’s Guide project. And let’s not forget that corporations have long benefited from relationships with innovative consulting businesses like IDEO, Frog, Doblin, Smart, and Fjord who practice and teach Design Thinking methods.</p>
+
+<p><em>As an aside, if any of the names I mentioned above aren’t familiar to you, you owe it to yourself and your business to follow them on twitter or Medium and read everything they have written.</em></p>
+
+<p>So even with all of this fire power, sustainable innovation strategy at established businesses, large and small, seems a long ways off. Steve Blank has really highlighted the reality of this gap in a few recents writings.</p>
+
+<blockquote>
+  <p>I’ve spent this year working with corporations and government agencies that are adopting and adapting Lean Methodologies. The biggest surprise for me was getting schooled on how extremely difficult it is to be an innovator inside a company of executors. <a href="http://steveblank.com/2015/08/25/why-corporate-entrepreneurs-are-extraordinary-the-rebel-alliance/">-Steve Blank</a></p>
+</blockquote>
+
+<p>In the shadow of all of this great thinking I don’t have a lot to add, except to give you the perspective of how I have tried to make sense of it all, and how I’ve tried to put it into practice as a single engineer and product designer trying to influence the innovation strategy of a large global product manufacturer. I haven’t come across anyone trying to tie all of these concepts together in a simple way, so hopefully this helps you as much as it has me.</p>
+
+<h3 id="the-innovation-process">The Innovation Process</h3>
+
+<p>As of today, this is the best way I’ve been able to summarize how everything I mentioned above informs my approach to innovation. In some later posts I’ll dive deeper, but for now I’ll cover the highlights.</p>
+
+<p><img src="/assets/images/innovation-process.png" alt="The innovation process: discover why, then spiral outward through build-measure-learn toward exit" /></p>
+
+<h3 id="discover-why">Discover Why</h3>
+
+<p>This first phase is what Cindy Alvarez would call Customer Development, or practicing design thinkers would call Understand and Observe. The bottom line is to pinpoint WHY someone needs your help. Why a user does what they do. Why existing solutions don’t work or aren’t available. Why they are frustrated. Why a new solution should exist and why you should create it. And of course why they would pay for it. Five Why’s? How about seven.</p>
+
+<p><img src="/assets/images/innovation-discover-why.png" alt="Discover why: the need and the context build the story" /></p>
+
+<p>Going a little deeper… I like to think about the WHY having two parts, the need and the context. The need is what you solve, but the context changes your solution. A while ago I wrote about looking for new ideas by <a href="/building-a-scene/">building a scene</a> and I think it’s still a great model to follow. A story is defined by the character, their background, their struggle, and the setting. Discovering why is just about building your story.</p>
+
+<p>I’ll be writing more on this topic in the future, but for now here is some other reading…</p>
+
+<ul>
+  <li>Read Cindy Alvarez’s book <a href="http://shop.oreilly.com/product/0636920028253.do">Lean Customer Development</a> or participate in one of her workshops.</li>
+  <li>Read <a href="https://blog.intercom.io/author/des/">anything</a> by Dez Traynor, co-founder of Intercom.io. These are good examples on this topic: <a href="https://blog.intercom.io/5-mistakes-we-all-make-with-product-feedback/">article 1</a>, <a href="https://blog.intercom.io/when-personas-fail-you/">article 2</a>, <a href="https://blog.intercom.io/get-to-know-your-users/">article 3</a>.</li>
+  <li>Read <a href="http://www.talkingtohumans.com/">Talking to Humans</a> by Giff Constable, CEO of Neo.</li>
+</ul>
+
+<h3 id="build-measure-learn">Build-Measure-Learn</h3>
+
+<p>This next stage is where you separate your ideas about the story from the real story. So much has been written about the build-measure-learn loop and Lean Startup, so I probably don’t need to explain much. The concept is simple; test the riskiest assumptions about your story by making a quick prototype of your solution and seeing if it works for your customer. What you prototype depends on the trickiest question, or your biggest fear (admit it, you have them).</p>
+
+<p>In practice, the build-measure-learn loop is where it is the easiest to get distracted. Maybe you didn’t discover the underlying customer problem as well as you should have and find yourself confused by the response to your solution. Or other common problem is wavering on the quality of your prototype. If you are like me, you might go too far before showing it, or maybe you get discouraged when your customers aren’t responding to your simple mock-up because it doesn’t actually represent anything valuable. Then there’s the even bigger question of what and how to measure.</p>
+
+<p>Some ways you might limit the distraction…</p>
+
+<ul>
+  <li>Use an experiment map or tracking tool like <a href="http://www.movestheneedle.com/lean-entrepreneur-experiment-map/">Moves the Needles’ version</a> or <a href="https://www.leanstartupmachine.com/validationboard/">Lean Startup Machine’s version</a>. But I just like to make a similar version using post it notes on a wall. Make it big so you and others can see it all the time.</li>
+  <li>Use Giff Constable’s <a href="https://s3.amazonaws.com/TalkingtoHumans/Talking+to+Humans+Assumptions+Exercise.pdf">Assumptions Exercise</a> to test yours.</li>
+  <li>Set a release calendar that forces action.</li>
+  <li>Establish or change your KPI’s to reflect outcomes of the build-measure-learn loop. Like number of prototypes shown to customers or number of experiments run.</li>
+</ul>
+
+<h3 id="increasing-customer-value">Increasing Customer Value</h3>
+
+<p>What I am trying to capture with the spiral shape of the build-measure-learn loop is that each time you run it you should be trying to find more and more customer value. The loop should radiate outwards. If you keep running tests but aren’t increasing how much your customer values the solution, then you aren’t moving anywhere.</p>
+
+<p><img src="/assets/images/innovation-customer-value.png" alt="The build-measure-learn spiral radiating outward toward increasing customer value" /></p>
+
+<p>How you measure value is up to you and your experiments, and because of this it is an area I’ve struggled with. What ultimately determines the value of clicking a link, or giving up an email address, or spending some time, or changing a routine, or making a recommendation, or paying money? You will have to decide that scale within the constraints of your project.</p>
+
+<p>More on the topic…</p>
+
+<ul>
+  <li>I first began thinking about customer value at the 2014 Lean Startup Conference after attending a <a href="http://www.slideshare.net/dbinetti/innovation-accounting-42546516">workshop by David Binetti</a>. He is also developing the <a href="https://medium.com/@dbinetti">Innovation Options Framework</a> that is trying to attach financial metrics to the discovery of customer value.</li>
+</ul>
+
+<h3 id="exit">Exit</h3>
+
+<p>This is the hard part, the part that seems to be the biggest gap. Asking when a solution is ready to “graduate” into production at a corporation, is only made harder when asking who should be working on it in the first place.</p>
+
+<p>Again thanks to David Binetti, I was introduced to the <a href="http://www.mckinsey.com/insights/strategy/enduring_ideas_the_three_horizons_of_growth">Three Horizons Model</a>. I even <a href="/accounting-for-disruption/">wrote a little bit about it</a> the night after the workshop, so you can read that if you want more background.</p>
+
+<p><img src="/assets/images/innovation-three-horizons.png" alt="The Three Horizons: core business now, emerging business growth, and new business future" /></p>
+
+<p>The Model suggests there are three types of work that need to be done concurrently; core business, the business of now; emerging business, the business of growth; and new business, the business of the future. <em>For my purposes I like to think about these horizons in reverse.</em> Future business is what most think of when they hear the word disruptive, and by proxy innovative. But of course we all know that innovations can and should exist in all three phases.</p>
+
+<p>So whose job is it to innovate or disrupt? Can disruption come from outside the “traditional” product department, like business model disruption from marketing, sales, ops, or finance? Should secret labs exist isolated from the core, or would that cause a vacuum of creative free thinking? And should ideas really “graduate” or should they just continue to grow on the path they’re on and supported by the teams who create them?</p>
+
+<p>I am planning to explore some thoughts on these questions in future posts, but for some more reading by the real experts check out…</p>
+
+<ul>
+  <li><a href="http://neo.com/2015/09/17/where-innovation-labs-fail-the-handoff/">Where Innovation Labs Fail</a>, a new article by Jeff Gothelf.</li>
+  <li>A great summary on <a href="http://steveblank.com/2015/06/26/lean-innovation-management-making-corporate-innovation-work/">Lean Innovation Management</a> by Steve Blank.</li>
+  <li>And <a href="https://hbr.org/2007/07/to-succeed-in-the-long-term-focus-on-the-middle-term">some great insights</a> by Geoffrey A. Moore in the Harvard Business Review on succeeding the three horizons.</li>
+  <li>Another article about <a href="http://www.dtelepathy.com/blog/business/jeff-gothelf-can-you-mvp-a-legacy-product">MVP’s for Legacy Products</a> by Jeff Gothelf.</li>
+</ul>]]></content><author><name></name></author><category term="writing" /><category term="design" /><category term="innovation" /><category term="business" /><summary type="html"><![CDATA[Long range strategy in the “now” minded business environment.]]></summary></entry><entry><title type="html">A Fitter Future</title><link href="http://localhost:4001/a-fitter-future/" rel="alternate" type="text/html" title="A Fitter Future" /><published>2015-07-23T00:00:00-05:00</published><updated>2015-07-23T00:00:00-05:00</updated><id>http://localhost:4001/a-fitter-future</id><content type="html" xml:base="http://localhost:4001/a-fitter-future/"><![CDATA[<p>All signs point to maybe?</p>
+
+<p><img src="/assets/images/fitter-future-hero.jpeg" alt="A runner on an open road" /></p>
+
+<h3 id="current-state">Current State</h3>
+
+<p>Fitness is full of opportunity — monetary and otherwise. At this time, more so than ever, fitness is sparking people’s attention. Products, services and even entertainment reflect our obsession with food, weight and body size. Televisions shows like “The Biggest Loser” draw millions of viewers. Fitbits and Fuelbands fly off the shelves. Your friends post every meal to Instagram, every workout to Facebook, every calorie to MyFitnessPal. You can follow a different diet every day of the week. South Beach Sunday. Paleo Tuesday. Gluten-Free Thursday. Fasting Friday. Looking beyond basic trends, something more lasting is brewing that could indefinitely enrich people’s lives — if only, as an industry, we can pull them in.</p>
+
+<p>The athlete’s practice of eating well and training in a variety of ways to excel in a specific sport is becoming more common for the average fitness consumer. Classes that combine movements like Piloxing (Pilates and boxing) are more widespread as the demand for a fresh fitness experience increases.</p>
+
+<p>Despite all of the attention and commerce, the needles on the scales continue to creep. According to the most recent data from the U.S. Centers for Disease Control and Prevention, 78.6 million Americans — more than a third of U.S. adults — are obese. Four of five adults do not meet recommendations for aerobic and strength training, and a full quarter of us get no exercise at all. This inactivity can, at worst, double risks for cardiovascular disease and increase chances of cancer related mortality up to 29% <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1402378/">according to the University of British Columbia</a>. The only bright spot — if it is one — is that just over half of us get at least enough aerobic exercise, amounting to 2.5 hours of moderate and 1.25 hours of vigorous activity, per week.</p>
+
+<p>Globally the outlook is no brighter. The <a href="http://www.nejm.org/doi/full/10.1056/NEJMoa042135#t">World Health Organization reports</a> that obesity rates have doubled since 1980, and the most recent data suggests that 35% of adults are overweight and 11% are obese. Exercise rates are a bit better — 69% of adults meet WHO’s less-stringent recommendations of 2.5 hours of moderate activity per week. Even so, obesity continues to challenge nations worldwide and contribute to the burden of diseases including diabetes, arthritis and some cancers.</p>
+
+<p><img src="/assets/images/fitter-future-exercise.jpeg" alt="A group exercise class" /></p>
+
+<blockquote>
+  <p>It is well established and widely accepted that regular exercise is a component of a healthy lifestyle.</p>
+</blockquote>
+
+<p>Yet huge portions of the world’s population struggle to achieve the recommended minimum activity levels or are overweight. Many are both.</p>
+
+<p>Yes, there are plenty of products and services already on the market, but the stubborn health data suggests that none of them is making much of an impact. If we are going to make a dent in the worldwide obesity epidemic how would we do it?</p>
+
+<p>First, let’s take a closer look at what’s going on.</p>
+
+<h3 id="data">Data</h3>
+
+<p>Exercise data is not new. Athletes logged their training in notebooks before computer spreadsheets came along. Runners counted their cadences in their heads and used their watches to calculate their paces and splits. Pedometers counted steps. Heart-rate monitors recorded exertion levels.</p>
+
+<p>Plotting all that data and drawing conclusions was not impossible. But it was cumbersome. So only professional athletes and serious amateurs bothered to do it.</p>
+
+<p>Now everyone from your neighbor to your grandma is tracking their workouts with a gadget or device. Recent estimates show that one in ten Americans has some kind of wearable to capture fitness data.</p>
+
+<p><strong><em>So what has changed?</em></strong></p>
+
+<p>First, thanks to phone apps and wearables, you can collect all sorts of data at the tap of a finger. In an instant, the once-time-consuming, manual process became a passive service. You can have your data without really doing anything to get it. In other words, it’s easy now.</p>
+
+<p>Second, the same apps and wearables have features that deliver the data in visually appealing charts and graphs. They recognize achievements and milestones with badges. Some even offer supporting content to provide context and help you interpret your results. And the race is on for who will be the central hub for all of this data, i.e. Google and Apple. As you can imagine there are some pretty powerful insights to be gained with Big Data.</p>
+
+<p><img src="/assets/images/fitter-future-data.jpeg" alt="Fitness data visualized on a phone" /></p>
+
+<p>By making data collection more effortless, these tools increased access to the process. By making the results more meaningful and relevant, the experience of tracking becomes more worthwhile. The result is that individuals who wouldn’t have bothered to collect and analyze data before do it now because it’s not a bother.</p>
+
+<p>Plus, people are willing to pay for the increased ease and experience. A dime-store stopwatch or a dollar-store pedometer can capture some of the same information that the hundred-dollar wearables do. They are not, however, crafted into fashion statements by some of the world’s most popular designers. The best of the wearables, on the other hand, have elevated both form and function, and more people are tracking more fitness metrics than ever before.</p>
+
+<p><strong><em>But there are some caveats.</em></strong></p>
+
+<p>First, although Americans are quick to rush into relationships with data-collection tools, we’re not so great with long-term commitment.</p>
+
+<p>While humorist <a href="http://www.newyorker.com/magazine/2014/06/30/stepping-out-3">David Sedaris documented</a> the instant love affair he developed with his Fitbit — one that propelled him to log tens of thousands of steps, or the equivalent of 25 miles, every day — most of us do not remain enamored with our devices. Industry reports have found that half of current device owners no longer use their gadgets, and a third had abandoned their efforts within six months of purchase.</p>
+
+<p>The novelty wears off, and we’re back to where we started: The people tracking their fitness with devices are pretty much the same folks who were tracking their fitness without them — either manually or in their heads.</p>
+
+<p>The new ways to capture and present data definitely improved part of the experience, but not enough to inspire long-lasting behavior change.</p>
+
+<blockquote>
+  <p>Clearly capturing and presenting data isn’t enough alone, no matter how easy the capture or how stunning the presentation. Data has to do more.</p>
+</blockquote>
+
+<p><a href="http://www.nytimes.com/2013/01/07/business/media/at-disney-parks-a-bracelet-meant-to-build-loyalty-and-sales.html">Consider Disney and their MagicBands.</a> These are all-inclusive wearables — adjustable, removable wristbands — that store all of the information you need for a visit to a theme park or resort. Your park passes. Your meal plan. Your credit card. Your room key. Your FastPasses to shorter lines for rides. Many of the experiences are accessed with a tap at a touch point, but some register automatically via radio frequency. Add a fingerprint scan, and that gets you into the park. Add a PIN code and you can charge purchases (and send them immediately back to your resort so you don’t have to carry them with you) or access your meal plan when you’re ready for a snack.</p>
+
+<p>MagicBands update in real time so they always contain accurate balances. They also communicate relevant personal information so you get personalized experiences. On-ride cameras can take your photos, which are delivered automatically to your account. Theme park characters know your name.</p>
+
+<p><img src="/assets/images/fitter-future-magicband.jpeg" alt="A Disney MagicBand on a wrist" /></p>
+
+<p>Plus, the bands eliminate some of the most common inconveniences of the park experience. Paper tickets that could be lost or stolen? Gone. Same for wallets. Meal vouchers? They’re gone, too. Bags of souvenirs? You get the picture.</p>
+
+<p>A wearable might seem like a departure for the entertainment company until you consider how much the MagicBands can transform a park or resort visit. Disney shows the power of merging data sources and employing live updating and personalization to deliver a vastly improved experience. Because that is what they are selling.</p>
+
+<blockquote>
+  <p>Not rides. Not souvenirs. An experience. Ultimately, that is what entertainment is, and what Disney is great at. Disney’s experiment can teach every industry about the power of digital integration, including the fitness industry.</p>
+</blockquote>
+
+<h3 id="connected-consumer">Connected Consumer</h3>
+
+<p>Health and fitness tracking starts with data, but it doesn’t end there. While wireless technology enables the connectivity that links user activity to some kind of device and then again to an Internet- or app-based service, there is also another kind of connectivity built into these tools that may be just as powerful, particularly in the realm of nutrition and fitness.</p>
+
+<blockquote>
+  <p>In addition to connecting users to their data, these tools also connect users to each other.</p>
+</blockquote>
+
+<p>They can share their achievements and activity with their existing social networks, such as Facebook or Twitter. They can do it selectively, choosing to post certain results to certain networks. Or they can do it automatically by choosing settings that enable the services to communicate user data with other apps, networks and services.</p>
+
+<p>The services also usually contain their own communities as well. Some users choose one or the other. Some rely on both.</p>
+
+<p>This social element is critical in that it creates a support network, encourages accountability and fosters friendly competition. This element of community — either through general social networks or through dedicated fitness ones — is proving to be a powerful ingredient in successful outcomes. MyFitnessPal even has the research to back it up. Earlier this year they published their Fitness Tribes Report, which found that people who engage with each other socially lose twice as much weight as those who don’t.</p>
+
+<p>This social element is proving so powerful that some emerging services are solely social. Fitocracy, for example, is a popular fitness-focused social network. Users, or Fitocrats, cheer other’s accomplishments, create positive peer pressure and offer encouragement after setbacks.</p>
+
+<p>But this connectivity doesn’t just link us with peers. It can also link us with experts that help filter the vast amounts of information available so that we know how to access just what we need. Plus, it can connect us directly to those individuals who can guide us to a goal, whether it’s losing weight or running a faster 5K. All that’s necessary is a mobile device to facilitate the relationship, which usually happens through texting, app messaging, video calls, or email. Other tracking tools are helpful, but not always required.</p>
+
+<p><img src="/assets/images/fitter-future-connected.jpeg" alt="A remote coaching session over a mobile device" /></p>
+
+<p>Retrofit, for example, combines behavioral, exercise and nutrition coaching, and it emphasizes the accountability that comes with checking in with experts on a regular basis. Syncing with digital scales and activity trackers eliminates the need to spend time sharing information — all of the interactions are hard-working and tooled for results. Plus, the experts and the clients can be anywhere. A teacher in a remote Alaskan town can benefit from the guidance of a trainer in Chicago or a behavioral coach in Atlanta.</p>
+
+<blockquote>
+  <p>This is where data, connectivity and accountability converge.</p>
+</blockquote>
+
+<p>And it’s not just the specialty services that are getting in on it. MyFitnessPal is going to start offering its 65 million users access to personal athletic coaching delivered via mobile devices and facilitated by apps and wearables.</p>
+
+<p>The reason? According to MyFitnessPal, the data isn’t meaningful until we layer context and interpretation onto it. The vast connectivity that characterizes much emerging technology makes that easier and easier to do.</p>
+
+<h3 id="studio-lifestyle">Studio Lifestyle</h3>
+
+<p>At the same time this virtual experience is gaining foothold, an on-the-ground fitness equivalent is taking shape as well. Self-selecting communities are working out together under the tutelage of a charismatic expert every day in the boutique gyms and niche fitness studios cropping up on corners and strip malls throughout the country.</p>
+
+<p><img src="/assets/images/fitter-future-yoga.jpeg" alt="A yoga class in a studio" /></p>
+
+<p>Consider yoga, which has matured from the new-age fringe into the suburban mainstream. The ancient discipline is now a multi-billion-dollar global industry, with some 20 million Americans among its practitioners.</p>
+
+<p>And it’s not just yoga. In 2005 there were just 13 CrossFit affiliated gyms in the entire world. By 2014 that number had swelled to 9,500. Interval-workout chain Orangetheory Fitness has opened 400 studios in the past four years. And Americans can now endure the Pure Barre’s intense ballet-inspired workouts in one of 200 studios that have opened since 2009.</p>
+
+<p>These fitness experiences are in many ways quite different from traditional gym experiences. The smaller size enables the owners and instructors to cultivate greater intimacy with members. Also, since class options are intentionally limited, instructors can specialize and pursue advanced training within a narrower discipline range than they could if employed at a gym that would expect them to teach everything from Pilates to Zumba to TRX. This gives members access to more advanced training and insights. Class participants are self-selected, so they inherently share similar fitness interests and sensibilities in instruction style and even music. Relationships forged in class often extend beyond the studio and become true social networks, not simply virtual ones.</p>
+
+<p><img src="/assets/images/fitter-future-studio.jpeg" alt="A boutique fitness studio session" /></p>
+
+<p>For many individuals, it is a rich rewarding experience. And one that delivers results for many. It is not, however, inexpensive. Crossfit memberships can easily cost $200 a month, and it isn’t uncommon for boutique classes to ring in around $40 each. Even though <a href="http://www.ihrsa.org/profiles">IHRSA reports</a> that consumers say expense is a barrier to exercise, boutique gyms are proliferating. There must be something in the combination of quality, personalization, intimacy and socialization that creates an experience that trumps cost.</p>
+
+<p>It is clear from the growth that boutique fitness is something that a segment of consumers want and they will pay a premium for it. What is unclear is who comprises this segment of consumers. Are these studios attracting individuals new to fitness or are they simply drawing high-end customers interested in a specialized luxury experience away from traditional health clubs?</p>
+
+<p>Whether that matters depends on what we’re trying to do. If we are trying to create products and services for people who already like to exercise, the lesson is clearly that a high-quality experience in an intimate, social setting can trump high expense. The lessons are murkier if we’re trying to create products or services that convince people who don’t exercise to give it a try. Will people begin their exercise journeys with expensive boutique experiences or do they find their way there after they sample broadly and refine their preferences?</p>
+
+<p>What if there is a way to deliver the experience without the expense? Since social connections are so critical, is there a way to capitalize on existing communities rather than creating new ones? There is another benefit of taking the experience where the groups already exist. Breaking into the boutique communities can be difficult and take time. Some individuals give up before they break through. By bringing niche fitness to existing groups, individuals can discover exercise in a safe environment where they already belong.</p>
+
+<h3 id="rise-of-the-corner-gym">Rise Of The Corner Gym</h3>
+
+<p>During roughly the same time period that we’ve seen the rise of the boutique studio (and the boutique class price), we’ve witnessed a proliferation of “corner gyms,” which now punctuate cities and towns across the country. These are at once the antithesis of both niche studios and large health clubs. While there are several different franchises, they seem to be variations on a theme: A small footprint packed with equipment that’s available around the clock, and often minimally staffed.</p>
+
+<p>If you haven’t noticed them, you haven’t been paying attention. Two of the largest small-footprint franchises, Anytime Fitness and Snap Fitness, have over 4,200 clubs combined worldwide. Another leader, PlanetFitness, has tripled in size in the past five years.</p>
+
+<blockquote>
+  <p>The appeal for most of these is that they offer low-price, low-judgment, low-risk memberships.</p>
+</blockquote>
+
+<p>PlanetFitness advertises a $10 monthly fee with no long-term contracts to sign. That’s certainly appealing to the U.S. consumers who cite cost as their main barrier to health club membership.</p>
+
+<p>The 24-hour corner gyms, tucked conveniently between the bank and the dry cleaners, also appeal to individuals looking for greater convenience and flexibility. A workout is never more than ten minutes away.</p>
+
+<p><img src="/assets/images/fitter-future-corner-gym.jpeg" alt="A small 24-hour corner gym" /></p>
+
+<p>In one sense, this is what consumers have been asking for all along: greater access through increased convenience and decreased price.</p>
+
+<p>And yet it’s still not enough for many of us. According to recent industry data, retention rates average around 58%, so just over half of the members stick around for the long-term. The traditional multi-service clubs still do better by holding onto 74% of their members.</p>
+
+<p>However, the fact that many clubs lock members into long-term contracts for favorable pricing may explain the gap. Only 47% of traditional health club members are considered “core” members, or those who visit their clubs around twice a week. In other words, there are twice as many members on the roster than members who actually set foot in the gym. And if you do the math this way, big gyms may not be any better at maintaining membership levels.</p>
+
+<p>Access alone may not be enough. Planet Fitness’s success suggests that experience still matters, even at low-cost gyms. The Planet Fitness brand is built around its Judgement Free Zone. Here, exercise is a risk-free, accessible and non-intimidating experience, which should appeal to individuals who are hesitant to invest in membership and who may feel insecure about their abilities. Intimidation is not an insignificant obstacle for many people new to exercise. Planet Fitness promotes ways of removing both barriers of cost and comfort to offer a better experience for that market segment.</p>
+
+<h3 id="the-best-of-all-worlds">The Best Of All Worlds</h3>
+
+<p>What most of the trends show is that appealing to one sensibility or removing one barrier can create interest in a product or service, but it cannot sustain it. Highly designed wearables are attractive and we buy them, but we don’t use them. Corner gyms are close but we don’t go. Boutique fitness classes are great but they’re really expensive and can feel exclusive.</p>
+
+<p><img src="/assets/images/fitter-future-best-of-all.jpeg" alt="Combining the best of data, connection, studio experience, and convenience" /></p>
+
+<p>But what if you could combine the best features of all these trends? What if you could blend the power of data, the enrichment of connection, the experience of studio fitness and the affordability of the convenient corner gym?</p>
+
+<p>That’s where we might be able to deliver a product or service that makes a real impact and helps reverse some of the dangerous health trajectories we are on.</p>
+
+<blockquote>
+  <p>And it might look like a real-time, personalized solution that helps individuals embrace their own versions of fitness but without incurring excessive expense. You know, the best of all worlds.</p>
+</blockquote>
+
+<p>It’s not at all impossible. The reality is that technology has already vastly democratized luxury. Who needs a chauffeur with Lyft and Uber? Who needs a personal shopper when there’s Zappos and Amazon Prime?</p>
+
+<p>Service is taken to another level with Fabletics or Trunk Club, two online retailers that send you monthly selections of clothing and accessories tailored to your size and preferences. You don’t have to search hundreds of sites, or read the reviews. The perfect outfits arrive before you even know you need them.</p>
+
+<p>You can even forget the personal banker. Skip straight to your very own cadre of angel investors with Kickstarter, the crowdsourcing start-up that lets you generate financial support for your great ideas. It’s already connected more than 70,000 projects with $1.3 billion in pledges, and you don’t have to have a minimum net worth to get through the door. There’s not even a door — just an app.</p>
+
+<p>In fact, these low-cost, high-service and personally tailored services and retailers are fast becoming the norm, not the exception. And when their experiences fall short, there’s a new start-up ready to move in and take over.</p>
+
+<p>Not convinced? You must not be a cab driver.</p>
+
+<p><img src="/assets/images/fitter-future-taxi.jpeg" alt="A row of taxis" /></p>
+
+<h3 id="the-future">The Future</h3>
+
+<p>The barriers preventing lasting behavior change can be broken down, and it’s happening right in front of our eyes. Data is making it easier to see what it means to be healthy or fit. Wider awareness of credible information and instruction is growing. And new conveniences are being introduced every day, largely with the help of technology.</p>
+
+<p>But to truly make any progress we need to overcome our own inertia. We need to internalize our motivation and make exercise something we choose to do over our other daily responsibilities. We need exercise to be fun.</p>
+
+<p>We need to be mindful, and the evidence stands, that the future of the industry is probably not going to revolve around a new wearable gadget, a better treadmill belt or even a new machine or exercise craze. It’s going to be better fitness experiences delivered in a new ways and to wider audiences. Exercise is always going to take effort, but if we can make these experiences easier to access and truly pleasurable at the same time, then we may finally be able to see that needle move.</p>
+
+<p><img src="/assets/images/fitter-future-experience.jpeg" alt="A better fitness experience" /></p>
+
+<h3 id="just-how-big-is-this-opportunity">Just How Big Is This Opportunity?</h3>
+
+<p><a href="http://www.who.int/mediacentre/factsheets/fs311/en/">The World Health Organization reports</a> 1.4 billion adults are overweight and more than 40 million children under five are overweight or obese. <a href="http://www.cdc.gov/features/diabetesfactsheet/">The CDC says</a> that type-two diabetes is on the rise in all age groups. Exercise is critical to battling these and a host of other ailments and afflictions.</p>
+
+<p>And in many ways society’s economic progress may be working against us. Between <a href="http://www.mayoclinic.org/healthy-living/nutrition-and-healthy-eating/expert-blog/sitting-disease/bgp-20056238">50 and 70% of Americans</a> spend six or more hours a day just sitting, something that undermines our fitness efforts and shortens our lives. The research is mounting and the findings are startling. For example, every hour of sitting <a href="http://www.runnersworld.com/health/how-much-does-sitting-negate-your-workout-benefits">erases 16% of the gains</a> we make through moderate exercise. And if you don’t exercise? The damage of prolonged sitting is even worse.</p>
+
+<p>On top of that <a href="http://www.census.gov/prod/2010pubs/p25-1138.pdf">US census data shows</a> our population is rapidly aging. In just 15 years there will be 71 million American senior citizens — an increase of 73 percent since 2010 — and they will live, on average, two years longer than their parents. The number of people using long-term care services is <a href="http://www.aging.senate.gov/press-releases/senate-aging-committee-examines-ways-to-prevent-medicare-fraud-protect-american-taxpayers">expected to double by 2050</a>. During this same time period the number of <a href="http://www.alz.org/downloads/facts_figures_2014.pdf">patients with dementia will triple</a>. Exercise can maintain independence as we age. Some studies show it can even help delay the onset of dementia.</p>
+
+<p>It’s clear that the opportunity for products and services that redress obesity and maintain fitness has gotten the attention of the technology industry. Health technology accelerator <a href="http://rockhealth.com/resources/rock-reports/">Rock Health estimates</a> that venture funding for digital health exceeded $4 billion in 2014. That’s more than 100% year-over-year growth. Many of the world’s tech giants — including Google, GE, Apple, Samsung, Qualcomm and Intel — have acquired or invested significantly in digital health products in this past year.</p>
+
+<p>The need for sustainable fitness solutions is not a trend that will fade.</p>
+
+<p><img src="/assets/images/fitter-future-opportunity.jpeg" alt="The scale of the fitness opportunity" /></p>
+
+<p><em>End</em></p>
+
+<p>A work by the Advanced Development Group, a curious division of Johnson Health Tech Inc., written and illustrated by these real people: <a href="https://www.linkedin.com/in/alling">Jon Alling</a>, <a href="https://www.linkedin.com/pub/hanna-tsuhara/50/932/9a0">Hanna Tsuhara</a>, and <a href="https://www.linkedin.com/in/jenniferenglegarrett">Jennifer Garrett</a>, with help from many others.</p>
+
+<p><img src="/assets/images/fitter-future-team.jpeg" alt="The Advanced Development Group team" /></p>]]></content><author><name></name></author><category term="writing" /><category term="fitness" /><summary type="html"><![CDATA[All signs point to maybe?]]></summary></entry><entry><title type="html">Triple Top Line</title><link href="http://localhost:4001/triple-top-line/" rel="alternate" type="text/html" title="Triple Top Line" /><published>2015-06-25T00:00:00-05:00</published><updated>2015-06-25T00:00:00-05:00</updated><id>http://localhost:4001/triple-top-line</id><content type="html" xml:base="http://localhost:4001/triple-top-line/"><![CDATA[<p>The Generic Product Design Version.</p>
+
+<p>Maybe you’re familiar with the sustainable business concept of the Triple Bottom Line, often referred to as People, Planet, and Profit. The triple bottom lines enable an organization to evaluate their performance on a broader basis, beyond just financial metrics. The idea is that those broader impacts could negatively (or positively) affect the true performance of the company, so they should be given equal weight when it comes to making critical business decisions.</p>
+
+<p>You may not be as familiar with the work of <a href="http://www.mcdonough.com/">William McDonough</a>, who flips the equation on its head and suggests that we should consider a <a href="http://www.mcdonough.com/speaking-writing/design-for-the-triple-top-line/#.VYyqlBNVhHw">Triple Top Line</a> instead. Focusing on the design of solutions that result in changes to the triple bottom line, instead of getting caught up in just trying to limit the damage. I like this approach even more.</p>
+
+<p>Curiously I was reminded of this concept as I was doing some thinking about my approach to product development. I had been trying to characterize a balance I have been trying to strike between Design, Engineering, and Business. I settled on this simple diagram and description:</p>
+
+<p><img src="/assets/images/triple-top-line-diagram.png" alt="Design, Engineering, and Business as three overlapping functions working in unison" /></p>
+
+<p><em>DESIGN, ENGINEERING, AND BUSINESS should not be mutually exclusive or siloed efforts. One does not automatically come before the other, or take priority. My focus is on practicing ways to bring these usually separate enterprise functions together to work in unison. Better products and businesses are the result.</em></p>
+
+<p>I define these three functions like this:</p>
+
+<p><strong>DESIGN</strong> = matching a solution to a discovered customer need</p>
+
+<p><strong>ENGINEERING</strong> = solving technical challenges in materializing the solution</p>
+
+<p><strong>BUSINESS</strong> = able to sustainably (not just the green kind) offer the solution</p>
+
+<p>Although these functions or disciplines rarely operate completely in unison in today’s enterprises, I believe the concept (although more generic than McDonough’s) has just as much relevance as the sustainable Triple Top or Bottom Line. I’m doing what I can to make it even more relevant.</p>
+
+<h3 id="an-aside">An aside…</h3>
+
+<p><img src="/assets/images/design-in-tech-hierarchy.png" alt="Bob Baxley’s hierarchy of how businesses compete, from the 2015 Design in Tech event" /></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Kleiner Perkins Caufield &amp; Byers</td>
+      <td>2015 Design in Tech Event</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>On a related note, I recently came across a <a href="https://www.youtube.com/watch?v=02VWKgNI1p4">short video</a> of Bob Baxley, Head of Product Design at Pinterest, describing a hierarchy of how businesses often compete. He points out in early stages of industries they compete on technology, and then they move to competing on business models, before finally some of the elite compete on design. He considers this to be similar to Maslow’s hierarchy of needs (basic needs ascending to creative thought).</p>
+
+<p>I was intrigued by his association, especially since I wrote a bit about my interpretation of <a href="/hierarchy-of-experience/">the UX hierarchy of needs</a> last year. And historically, he might be right, but as I wrote in that previous post, and as I described above, I really think we need to be considering aspects of each of the needs/functions/disciplines along the way.</p>
+
+<p><img src="/assets/images/hierarchy-of-experience-pyramids.jpeg" alt="The traditional UX Hierarchy of Needs pyramid next to the reimagined version" /></p>
+
+<p>You might say that reliability can’t come before function, and pleasurability can’t come before either. But you can at least consider the direction you’re headed toward pleasurability at that early functional stage, right? And hey, you might even be able to test a fraction of it while simultaneously testing your functional prototype.</p>
+
+<p>Considering Baxley’s historical example though, can you really say design can’t come before technology or business model innovation? I don’t think so. I think each is perfectly relevant at any time, and in most cases you should be considering all three (or five if you add in McDonough’s Ecology and Equity pillars).</p>]]></content><author><name></name></author><category term="writing" /><category term="innovation" /><category term="business" /><summary type="html"><![CDATA[The Generic Product Design Version.]]></summary></entry><entry><title type="html">Accounting for Disruption</title><link href="http://localhost:4001/accounting-for-disruption/" rel="alternate" type="text/html" title="Accounting for Disruption" /><published>2014-12-10T00:00:00-06:00</published><updated>2014-12-10T00:00:00-06:00</updated><id>http://localhost:4001/accounting-for-disruption</id><content type="html" xml:base="http://localhost:4001/accounting-for-disruption/"><![CDATA[<p>This is a short summary of a theme that stood out to me from the Innovation Account workshop led by <a href="https://twitter.com/dbinetti">David Binetti</a> on day one of Lean Startup Conference 2014.</p>
+
+<p>David introduced the Three Horizons model, developed by McKinsey&amp;Company, as a strategy for companies to manage their innovation pipeline.</p>
+
+<p><img src="/assets/images/three-horizons-model.png" alt="The McKinsey Three Horizons model" /></p>
+
+<p>There is a ton of information out on the web about this framework, including a similar model we use at my company, the <a href="https://hbr.org/2012/05/managing-your-innovation-portfolio">Innovation Ambition Matrix from the Monitor Group</a>.</p>
+
+<p><img src="/assets/images/innovation-ambition-matrix.gif" alt="The Monitor Group Innovation Ambition Matrix" /></p>
+
+<p>The point David made was that traditional accounting metrics can be used in the first two types of innovation projects (H1 and H2), but Horizon 3 requires different metrics (different everything really, but maybe that’ll be another post sometime).</p>
+
+<p>OK, so what metrics?</p>
+
+<p>Well the answer is in the other two horizons. <strong>The goal of H3 projects is to become H2 and then H1 projects.</strong> Obvious right? But eyeopening for me.</p>
+
+<p><em>One aside that I had never thought about was that startups are H3 projects without the presence of H2 and H1. They do however have H2 and H1 responsibilities to worry about, like supporting a family or keeping a marriage together. So while startups are free from many of the roadblocks in traditional organizations, they still have to grow and produce value in a timely manner, or move from H3 to H2 and H1.</em></p>
+
+<p>David proposed the following framework for measurement.</p>
+
+<p><strong>H3: Reduce risk</strong></p>
+
+<p><strong>H2: Identify growth engine</strong></p>
+
+<p><strong>H1: Create value</strong></p>
+
+<p>Since we know H3 projects need to grow up sometime, the goal is to reduce risk, BUT ALSO show progress toward growth and value. The point when a project can move from H3 to H2, is when you’ve sufficiently reduced the risk and shown your solution has the potential to grow and provide value. David calls this “optionality,” or when an investor or organization has the option to continue. This image came to mind as he talked about the concept.</p>
+
+<p><img src="/assets/images/innovation-optionality.jpeg" alt="A young plant growing — the moment of optionality" /></p>
+
+<p>Risk is reduced by using the build, measure, learn loop. By testing. You can’t reduce risk by buying a trend report (another eyeopening moment). They are great for ideas, but as David says “risk can only be validated in the market.” The metrics to aim for with those loops are indications toward growth and value. Plenty of time is spent in The Lean Startup on growth engines, so David didn’t go into great depth. But we did spend some more time on Value.</p>
+
+<p>David says <strong>VALUE is BENEFIT over COST</strong>. What is a customer willing to give up to get some benefit? Do they give up their time, or their privacy, or better yet, spend actual money? But at the end of the day, it comes down to the ability to generate profits, so earn actual money. List of users can be valuable, and show promise, but a paying customer is always best. Should be plenty more to learn on this topic throughout the rest of the conference, so I’m looking forward to continuing this story.</p>]]></content><author><name></name></author><category term="writing" /><category term="innovation" /><category term="business" /><summary type="html"><![CDATA[This is a short summary of a theme that stood out to me from the Innovation Account workshop led by David Binetti on day one of Lean Startup Conference 2014.]]></summary></entry><entry><title type="html">Hierarchy of Experience</title><link href="http://localhost:4001/hierarchy-of-experience/" rel="alternate" type="text/html" title="Hierarchy of Experience" /><published>2014-11-29T00:00:00-06:00</published><updated>2014-11-29T00:00:00-06:00</updated><id>http://localhost:4001/hierarchy-of-experience</id><content type="html" xml:base="http://localhost:4001/hierarchy-of-experience/"><![CDATA[<p><img src="/assets/images/hierarchy-of-experience-pyramids.jpeg" alt="The traditional UX Hierarchy of Needs pyramid next to the reimagined version" /></p>
+
+<p>I might be treading in territory I don’t belong with this one, but after being introduced to Technical Debt and the UX Hierarchy of Needs by <a href="http://www.linkedin.com/in/martinjamesf">James Martin</a>, I couldn’t stop thinking about the traditional graphic representation. I’m an engineer, so I look for function in everything, and although the underlying concepts were interesting, the stacked pyramid just wasn’t very useful.</p>
+
+<p><img src="/assets/images/hierarchy-of-experience-stacked.jpeg" alt="The UX Hierarchy of Needs as a stacked pyramid: function, reliability, usability, proficiency, pleasurability" /></p>
+
+<p>I have also been thinking a lot about lean startup method lately. Any design process or methodology should always include opportunities to test, and the hierarchy of needs didn’t seem any different. But the first question I wrestled with was do you really start with <strong>Function</strong> and then move onto <strong>Reliability</strong> and so on, or do you need a little bit of everything right from the start. So to solve my curiosity, I turned the graph on its side.</p>
+
+<p><img src="/assets/images/hierarchy-of-experience-sideways.jpeg" alt="The hierarchy turned on its side, with every level present from the start" /></p>
+
+<p>It immediately seemed more functional. Working from the bottom up, you can try to achieve the desired functionality, but still maintain sight of higher level goals. It also seemed to solve my desire to include tests along the way.</p>
+
+<p><img src="/assets/images/hierarchy-of-experience-tests.jpeg" alt="The sideways hierarchy with test points marked along the way" /></p>
+
+<div class="image-row" style="--cols: 3"><img src="/assets/images/hierarchy-of-experience-stage-1.jpeg" alt="Stage one of the hierarchy over time" /><img src="/assets/images/hierarchy-of-experience-stage-2.jpeg" alt="Stage two of the hierarchy over time" /><img src="/assets/images/hierarchy-of-experience-stage-3.jpeg" alt="Stage three of the hierarchy over time" /></div>
+
+<p>At any stage of development, there is always a component of each experience need. Then when you’ve reached your desired functionality you can test that, but also test if you are on target to reach that next goal. That stays true until you (hopefully) reach your ultimate goal.</p>]]></content><author><name></name></author><category term="writing" /><category term="design" /><summary type="html"><![CDATA[![[hierarchy-of-experience-pyramids.jpeg The traditional UX Hierarchy of Needs pyramid next to the reimagined version]]]]></summary></entry><entry><title type="html">Building a Scene</title><link href="http://localhost:4001/building-a-scene/" rel="alternate" type="text/html" title="Building a Scene" /><published>2014-11-20T00:00:00-06:00</published><updated>2014-11-20T00:00:00-06:00</updated><id>http://localhost:4001/building-a-scene</id><content type="html" xml:base="http://localhost:4001/building-a-scene/"><![CDATA[<p>Need new ideas? First build your scene.</p>
+
+<p><img src="/assets/images/building-a-scene-hero.jpeg" alt="A film scene being set up" /></p>
+
+<h3 id="what">What?</h3>
+
+<p>Actually that should read, Where? Who? When? What? How? Those simple questions are all you need to fill a whiteboard with compelling ideas for your next product or feature. And as we’ve all heard so often these days, our features and products need stories or a point of view. Answer those questions, and you’ll not only get a bunch of ideas, you’ll be building your story at the same time. What a bargin right!</p>
+
+<h3 id="genre">Genre</h3>
+
+<p>So films and books can be about anything, but they usually fall into some higher level category (whether or not the author or film maker likes it). Genre’s make it a little easier for the audience to know what they are getting into, but in this case you are the audience so a genre will just help narrow the field a little. So before we begin <em>building a scene</em> for your product, you should try to pick a genre or theme. For the purposes of this article let’s say our genre is <strong>grocery shopping</strong>.</p>
+
+<h3 id="grocery-shopping-where">Grocery Shopping: Where?</h3>
+
+<p>Let’s dive into our first W? question: <strong>Where.</strong></p>
+
+<p>Our goal with this first question is to start brainstorming a list of wheres. So image we hadn’t picked a genre or theme, our list of wheres could include:</p>
+
+<ul>
+  <li><strong>Movie Theater, House, Busy Street, Car, Wisconsin, Outer Space</strong></li>
+</ul>
+
+<p>Not very helpful huh. Well, maybe those wheres are part of someones cool genre, but today we want to be more specific. Maybe our list could look like this:</p>
+
+<ul>
+  <li><strong>Big Box Store, Corner Market, Farm Stand, Convenience Store</strong></li>
+</ul>
+
+<p>Well that’s a nice list, but it’s not very creative and really only just starts to describe the scene. I think we can do better.</p>
+
+<ul>
+  <li><strong>TYPE: Big Box Store, Corner Market, Farm Stand, Convenience Store</strong></li>
+  <li><strong>LOCATION: Urban, Suburban, Countryside, Familiar City, Unfamiliar Place, [insert your relevant Cities, States, or Countries]</strong></li>
+  <li><strong>PRICE POINT: Upscale, Budget</strong></li>
+  <li><strong>AREA: Parking Lot, Entryway, Aisle, Produce, Dairy, Checkout Line, Service Counter</strong></li>
+</ul>
+
+<p>Hopefully you get the point. For you marketing or product manager’s out there, you probably already know this as a segmentation analysis or something similar. We’re certainly not breaking ground here.</p>
+
+<p>You can go as crazy or as narrow as you want. Maybe you have a very specific problem you are trying to solve? Or maybe you are trying to reimagine an existing product? Or maybe you have no idea what you want to build and are starting from scratch? I suggest going all in for all cases, even if you don’t think it relates to what you hoped your ideas would look like. Besides, this is just a good exercise to go through from time to time if you are that product or marketing person. It’ll also come in handy later on [hint].</p>
+
+<h3 id="grocery-shopping-who">Grocery Shopping: Who?</h3>
+
+<p>So you might be thinking <em>why am I going through all of this work?</em> Well lets start thinking about our next W? question: <strong>Who.</strong></p>
+
+<p>So imagine this is you (or your customer) going about his grocery shopping.</p>
+
+<p><img src="/assets/images/building-a-scene-shopper-1.png" alt="A lone shopper pushing a cart" /></p>
+
+<p>Now imagine THIS is you (or your customer).</p>
+
+<p><img src="/assets/images/building-a-scene-shopper-2.png" alt="The same shopper pushing a cart with kids in tow" /></p>
+
+<p>See the difference? Any parents out there?</p>
+
+<p>So everything on our list is just a way of twisting the scene. A way of changing the point of view. Maybe you didn’t have a point of view to start with, but if you did, this is a great way to expand your thinking. New ideas will emerge if you change your point of view, even slightly.</p>
+
+<p>Now back to our whos list. Remember, be creative:</p>
+
+<ul>
+  <li><strong>DEMOGRAPHICS: High Wage, Low Wage, Single, Married, With Kids, Elderly, Commuter, Home Owner, Apartment Renter</strong></li>
+  <li><strong>PSYCHOGRAPHICS: Dietary Restriction, Environmentally Conscience, Organic, Coupon Cutter, Label Reader, Brand Affinity</strong></li>
+  <li><strong>ROLE: Primary Shopper, Running An Errand For Someone, Tagging Along, Fellow Shopper, Shop Employee, Cashier, Bagger, Stock Person, Delivery Person, Maintenance Person, Store Owner, Corporate Staff</strong></li>
+</ul>
+
+<p>See how you can get crazy in a short period of time? And this might even just be scratching the surface. If you are feeling burned out, go ahead and stop here then skip past WHEN. No one will tell on you, I promise. Besides, you really only need two W? questions to set a scene.</p>
+
+<h3 id="grocery-shopping-when">Grocery Shopping: When?</h3>
+
+<p>Our last W? question: <strong>When.</strong></p>
+
+<p>This list is all about describing the situation as it relates to time. Again, be creative:</p>
+
+<ul>
+  <li><strong>TIME OF DAY: Morning, Noon, After Work, Night, Late Night</strong></li>
+  <li><strong>DAY: Weekday, Weekend, Before Holiday, On Holiday</strong></li>
+  <li><strong>OTHER SPECIFICS: Quick In And Out, In A Hurry, Relaxed, On Your Way To [Blank], A Few Items, A Long List</strong></li>
+</ul>
+
+<p>The list can go on and on.</p>
+
+<h3 id="now-what">Now What?</h3>
+
+<p>Great question. No really, that’s exactly the question we want to ask next: <strong>What.</strong></p>
+
+<p>But first, let’s look at our lists.</p>
+
+<p><img src="/assets/images/building-a-scene-lists.jpeg" alt="The Where, Who, and When lists side by side" /></p>
+
+<p>Our goal is to build a scene, so we really only need one thing from each list (or just two of the lists if you stopped early). We need to make some decisions. How you do this is up to you and your situation. You could have some other business constraints or conditions that allow you to filter the lists? Or you might have some idea of market opportunity? Or maybe you have a particular skillset or technology to use? But if you’re starting from scratch, just pick some that sound like fun. You can always refine your lists later (or more likely… add to them). And you can even combine items on a list if you want to be really specific.</p>
+
+<p>So let’s say we pick: <strong>Big Box Store, With Kids, and Weekend</strong></p>
+
+<p><img src="/assets/images/building-a-scene-picks.jpeg" alt="The chosen scene: Big Box Store, With Kids, Weekend" /></p>
+
+<p>Wait, notice what just happened? You just described the scene to your story. It’s the start to your elevator pitch (it also sounds a little like the board game Clue).</p>
+
+<p>Don’t get too excited though, you still have more thinking to do. You need to ask the question, <strong>What.</strong></p>
+
+<p><em>What is unique about a Big Box Store? What are it’s important attributes? What do parents feel like when they have their kids along? What do kids feel like when they are dragged to the store? What happens on weekends in a grocery store? What do people generally have happening on the weekends? What else?</em></p>
+
+<p><img src="/assets/images/building-a-scene-mind-map.jpeg" alt="A mind map expanding the scene with What questions" /></p>
+
+<p>I chose to illustrate an example of our new questions in a mind map, but you can just continue making lists or use another organization method (I happen to be partial to post it notes!). Notice what question we didn’t ask though? We didn’t ask <em>what solution could exist</em>. We are just trying to further describe the scene. So make sure your map doesn’t include solutions or ideas. Only facts or assumed facts.</p>
+
+<h3 id="ideas">Ideas</h3>
+
+<p>The time has finally come to generate ideas, but make sure you’re in the right mindset. If you are a visual person, it might help to imagine yourself in the scene you created. If you are artistic (scribbles are just fine) you could draw out your scene. Or it may even be an option to go find your scene somewhere and experience it first hand.</p>
+
+<p>Once you find your scene, start imagining: <em>How it could be better. How could you change it? How could you help? How would your idea be better than what others have tried? How could you make money? How could someone find out about your solution?</em></p>
+
+<p>Or even better, ask: <em>How can this solution affect others in my scene, or other scenes?</em></p>
+
+<p>Notice a trend. You’re asking <strong>How.</strong></p>
+
+<h3 id="why">Why?</h3>
+
+<p>Why is really the combination of all of these questions.</p>
+
+<p><strong>Why = Who + Where + When + What + How</strong></p>
+
+<p>This is your story. You may have to create several scenes to fully describe the opportunity. But the deeper you go, the more rich your story will be. Short stories are great. So are full length novels. You pick the right amount of depth for your story/product/idea. It can also be fun to just flip one detail at a time in even the most well developed stories. You never know what connections you’ll find. Bottom line: just try it, you can always add more or change things later.</p>]]></content><author><name></name></author><category term="writing" /><category term="design" /><summary type="html"><![CDATA[Need new ideas? First build your scene.]]></summary></entry><entry><title type="html">Innovation and the NPD Wave</title><link href="http://localhost:4001/innovation-and-the-npd-wave/" rel="alternate" type="text/html" title="Innovation and the NPD Wave" /><published>2014-09-03T00:00:00-05:00</published><updated>2014-09-03T00:00:00-05:00</updated><id>http://localhost:4001/innovation-and-the-npd-wave</id><content type="html" xml:base="http://localhost:4001/innovation-and-the-npd-wave/"><![CDATA[<p>After talking with a co-worker the other day about trying to get out in front of the NPD wave (being able to spend time planning and thinking about the future), I sketched this up to illustrate the idea.</p>
+
+<p><img src="/assets/images/npd-wave.png" alt="Sketch of the NPD wave, with dreaming ahead of the wave, innovation at its leading edge, and quality control in the trough behind it" /></p>
+
+<p>Everyone is probably familiar with getting caught up in the wave that is New Product Development. Or perhaps you have even spent some time in the trough cleaning up after the wave… aka Quality Control. But the analogy also helped when thinking about being in front of the wave. Dreaming is what happens when you are free to think without any consideration for NPD. That’s definitely necessary to imagine “what could be.” I think the most important point however, is at the leading edge of the wave. That’s where innovation occurs. Tied just closely enough to implementation, but leading the way. Just as a real wave, the ride is difficult to sustain so make the best of it.</p>]]></content><author><name></name></author><category term="writing" /><category term="design" /><category term="business" /><category term="innovation" /><summary type="html"><![CDATA[After talking with a co-worker the other day about trying to get out in front of the NPD wave (being able to spend time planning and thinking about the future), I sketched this up to illustrate the idea.]]></summary></entry></feed>

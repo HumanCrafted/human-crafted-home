@@ -1,0 +1,1904 @@
+/* Human Crafted Design System */
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&display=swap');
+
+/* CSS Variables - Human Crafted Design System tokens
+   Legacy names kept as canonical; --surface / --border added.
+   Source of truth: human-crafted-design-system/tokens.css */
+:root {
+  --background: #FAF7F2;        /* paper — web bg */
+  --foreground: #2A2824;        /* ink — primary text */
+  --accent: #E8C84A;            /* brand yellow */
+  --muted: #948F87;             /* border — rules / dividers / dimmed */
+  --muted-foreground: #736356;  /* ink-muted — secondary text */
+  --surface: #ECE3CE;           /* paper-warm — warm section / callout */
+  --border: #948F87;            /* rules / dividers */
+}
+
+[data-theme="dark"] {
+  --background: #2A2824;        /* paper (dark) */
+  --foreground: #ECE3CE;        /* ink (cream) */
+  --accent: #C9A832;            /* mustard — calmer than yellow on dark */
+  --muted: #736356;             /* border (dark) */
+  --muted-foreground: #948F87;  /* ink-muted (dark) */
+  --surface: #3A3733;           /* raised surface */
+  --border: #736356;
+}
+
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light dark;
+  /* Always reserve the scrollbar gutter so short pages (no scrollbar) and
+     long pages (scrollbar) center identically — no width/shift difference. */
+  scrollbar-gutter: stable;
+}
+
+body {
+  font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--foreground);
+  background-color: var(--background);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: all 150ms ease;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'kern' 1;
+  text-rendering: optimizeLegibility;
+}
+
+/* Layout */
+.site-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20vh 8% 0 8%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1280px) {
+  .site-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20vh 0 0 0;
+  }
+}
+
+/* Header */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  background-color: rgba(250, 247, 242, 0.8);
+  padding: 2.5rem 0;
+  width: 100%;
+}
+
+[data-theme="dark"] .site-header {
+  background-color: rgba(42, 40, 36, 0.8);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1280px) {
+  .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+.site-title {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--foreground);
+  text-decoration: none;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  text-transform: lowercase;
+  white-space: nowrap;
+}
+
+/* Home wordmark — anchor with a muted middle slash */
+a.site-title {
+  cursor: pointer;
+}
+
+.wm-slash--home {
+  color: var(--muted-foreground);
+  margin: 0 0.15em;
+  font-weight: 700;
+}
+
+/* No underline on the wordmark — override the global a:hover. */
+a.site-title:hover {
+  text-decoration: none;
+}
+
+/* Breadcrumb wordmark (hub + sub-page) */
+.site-title--crumb {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+/* Dim, navigable prefix segments */
+.site-title--crumb .wm-back,
+.site-title--crumb .wm-hub {
+  color: var(--foreground);
+  text-decoration: none;
+  opacity: 0.25;
+  transition: opacity 150ms ease;
+}
+
+.site-title--crumb .wm-back:hover,
+.site-title--crumb .wm-hub:hover {
+  opacity: 1;
+}
+
+/* Dim separators that live outside the link segments */
+.site-title--crumb .wm-dot,
+.site-title--crumb .wm-sep {
+  opacity: 0.25;
+}
+
+/* Bright current segment */
+.site-title--crumb .wm-current {
+  color: var(--foreground);
+}
+
+/* Keep the tail on one line during reveal */
+.site-title--crumb .wm-tail,
+.site-title--crumb .wm-new {
+  display: inline-flex;
+  align-items: baseline;
+  white-space: nowrap;
+}
+
+/* Navigation */
+.site-nav {
+  display: flex;
+  gap: 2.625rem;
+  align-items: center;
+}
+
+.site-nav a {
+  color: var(--foreground);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  transition: text-decoration 150ms ease;
+}
+
+.site-nav a:hover {
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
+
+.site-nav a.active {
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
+
+/* co/re hamburger link — icon button matching the theme toggle */
+.site-nav .core-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: var(--foreground);
+  transition: color 150ms ease;
+}
+
+.site-nav .core-link:hover {
+  color: var(--muted);
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.site-nav .core-link svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* Floating co/lab button — mobile only (desktop has the nav pill).
+   a.colab-fab outranks the .btn { display: inline-flex } it also carries. */
+a.colab-fab {
+  display: none;
+}
+
+/* Co/lab button styling */
+.site-nav .colab-btn {
+  /* Inherits from .btn base styles - just need overrides for navigation specificity */
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+/* Removed - now inherits from .btn:hover */
+
+.site-nav .colab-btn.active {
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
+
+/* Removed - now inherits from [data-theme="dark"] .btn:hover */
+
+
+.site-nav .colab-btn svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--foreground);
+  cursor: pointer;
+  padding: 0;
+  border-radius: 0.375rem;
+  transition: color 150ms ease;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.theme-toggle:hover {
+  color: var(--muted);
+}
+
+.theme-toggle svg {
+  width: 24px;
+  height: 24px;
+}
+
+.theme-icon {
+  transition: opacity 150ms ease;
+}
+
+/* Show sun icon in light mode, hide moon */
+.theme-icon-light {
+  display: block;
+}
+
+.theme-icon-dark {
+  display: none;
+}
+
+/* Show moon icon in dark mode, hide sun */
+[data-theme="dark"] .theme-icon-light {
+  display: none;
+}
+
+[data-theme="dark"] .theme-icon-dark {
+  display: block;
+}
+
+/* Dark mode SVG filter */
+[data-theme="dark"] .svg-darkmode,
+[data-theme="dark"] .page-content img[src$=".svg"],
+[data-theme="dark"] .project-image img[src$=".svg"],
+[data-theme="dark"] .project-image svg {
+  filter: invert(91%) sepia(17%) saturate(166%) hue-rotate(1deg) brightness(94%) contrast(88%);
+  will-change: auto;
+}
+
+/* Main content */
+.page-content {
+  flex: 1;
+  padding: 0;
+}
+
+.page-content a {
+  color: var(--foreground);
+  text-decoration: underline;
+  text-decoration-style: solid;
+  transition: text-decoration 150ms ease;
+}
+
+.page-content a:hover {
+  font-weight: 500;
+  text-decoration-style: wavy;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--foreground);
+  margin: 0;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+  margin-top: 0;
+  line-height: 1.1;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 6rem;
+  margin-top: 0;
+  line-height: 1.1;
+  max-width: 60%;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  margin-top: 2.5rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  color: var(--foreground);
+  line-height: 1.625;
+}
+
+/* Links */
+a {
+  color: var(--foreground);
+  text-decoration: none;
+  text-underline-offset: 0.2rem;
+  transition: text-decoration 150ms ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
+
+/* External links indicator - exclude social media icons */
+.page-content a[href^="http"]:not([href*="127.0.0.1"]):not([href*="localhost"]):not([href*="humancrafted"]):not([href*="human-crafted"])::after {
+  content: "↗";
+  font-size: 0.85em;
+  margin-left: 0.2em;
+  opacity: 0.7;
+  vertical-align: super;
+  line-height: 1;
+}
+
+/* Resources open in a new tab — show the arrow even on humancrafted.co subdomains */
+.wiki-comma-list a[target="_blank"]::after {
+  content: "↗";
+  font-size: 0.85em;
+  margin-left: 0.2em;
+  opacity: 0.7;
+  vertical-align: super;
+  line-height: 1;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--muted);
+}
+
+th {
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+td {
+  color: var(--muted-foreground);
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Image rows — a note line of 2+ ![[...]] embeds with a column= option becomes
+   an equal-column grid; extra images wrap into new rows
+   (emitted by _plugins/obsidian_links.rb convert_image_rows, --cols = column=N) */
+.image-row {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 2), 1fr);
+  align-items: start;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.image-row img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .image-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Lists */
+ul, ol {
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  color: var(--foreground);
+}
+
+/* Code */
+code {
+  font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
+  background-color: rgba(153, 153, 153, 0.1);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid var(--foreground);
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: var(--muted-foreground);
+}
+
+/* HR */
+hr {
+  border: none;
+  border-top: 1px solid var(--foreground);
+  margin: 4rem 0;
+}
+
+.section-divider {
+  border: none;
+  border-top: 1px solid var(--foreground);
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+/* Doc / Note section headings — ruled, Plex Sans (design-system rhythm).
+   Child combinator so it never touches nested .wiki-section-title labels. */
+.doc-content > h2 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.33px;
+  border-top: 1px solid var(--border);
+  padding-top: 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.doc-content > h2:first-child {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.doc-content > h3 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Archive section */
+.archive-header {
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.archive-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--foreground);
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  scroll-margin-top: 200px;
+}
+
+.archive-title::after {
+  content: "↓";
+  font-size: 1rem;
+}
+
+/* Tag filtering */
+.tag-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+
+.tag-filter {
+  background: none;
+  border: none;
+  color: var(--foreground);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  transition: text-decoration 150ms ease;
+}
+
+.tag-filter.active {
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
+
+.tag-filter:hover {
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
+
+/* Project grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4rem 2rem;
+  margin-bottom: 5rem;
+}
+
+@media (max-width: 1024px) {
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.project-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+}
+
+.project-card:hover {
+  color: inherit;
+}
+
+/* Override page-content link styling for project cards */
+.page-content .project-card {
+  text-decoration: none;
+}
+
+.page-content .project-card:hover {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  font-weight: 500;
+}
+
+.project-image {
+  width: 100%;
+  aspect-ratio: 1;
+  background: var(--background);
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 150ms ease, background-color 150ms ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: translateZ(0);
+}
+
+.project-image svg {
+  max-width: 80%;
+  max-height: 80%;
+  transform: translateZ(0);
+}
+
+
+.project-title {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--foreground);
+  margin: 0;
+  text-align: center;
+}
+
+/* Footer */
+.site-footer {
+  padding: 3rem 0;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-footer p {
+  color: var(--foreground);
+  font-size: 14px;
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: -0.21px;
+}
+
+/* Utility classes for margin-bottom based on Figma frames */
+.margin-bottom-1rem {
+  margin-bottom: 1rem;
+}
+
+.margin-bottom-2rem {
+  margin-bottom: 2rem;
+}
+
+.margin-bottom-3rem {
+  margin-bottom: 3rem;
+}
+
+.margin-bottom-4rem {
+  margin-bottom: 4rem;
+}
+
+.margin-bottom-6rem {
+  margin-bottom: 6rem;
+}
+
+.margin-bottom-8rem {
+  margin-bottom: 8rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .site-container {
+    padding: 0 5%;
+    padding-top: 25vh;
+  }
+  
+  .site-header {
+    padding: 2rem 0 1rem 0;
+  }
+  
+  .header-content {
+    padding: 0 5%;
+    align-items: center;
+  }
+
+  .site-title {
+    font-size: 1.3125rem;
+  }
+
+  /* Sub-page crumbs drop the long "humancrafted." prefix on mobile so
+     co/re/<slug> fits beside the nav; home stays reachable via co/re. */
+  .site-title--crumb[data-wm-state="sub"] .wm-back,
+  .site-title--crumb[data-wm-state="sub"] .wm-dot {
+    display: none;
+  }
+
+  .site-nav {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .colab-link-wrapper {
+    display: none; /* Hide Let's co/lab on mobile — the floating FAB takes over */
+  }
+
+  a.colab-fab {
+    display: inline-flex;
+    position: fixed;
+    right: 1rem;
+    bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+    z-index: 90;
+    height: 2.25rem;
+    padding: 0 1.1rem;
+    font-size: 16px !important;
+    gap: 0.3rem;
+  }
+
+  .colab-fab svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+  
+  .page-content {
+    padding: 0;
+  }
+  
+  .hero-title {
+    font-size: 2.25rem;
+    margin-top: 0;
+    height: 30vh;
+    max-width: 100%;
+  }
+  
+  h1 {
+    font-size: 2.25rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem !important;
+  }
+  
+  .project-tags,
+  .project-categories,
+  .project-date {
+    flex-direction: row;
+    align-items: flex-start;
+    align-self: flex-start;
+  }
+
+  .tags-label,
+  .categories-label,
+  .date-label {
+    align-self: flex-start;
+  }
+  
+  .meta-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .project-categories .meta-link {
+    align-self: flex-start;
+  }
+  
+  .meta-link {
+    padding: 0 !important;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .tag-filter.active::before {
+    left: -100px;
+    width: 100px;
+  }
+  
+  .archive-header {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Project detail pages */
+.project-thumbnail {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.project-thumbnail img {
+  width: 50%;
+  height: 50vh;
+  border-radius: 0.5rem;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.project-gallery h3 {
+  grid-column: 1 / -1;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.project-gallery img,
+.project-gallery .gallery-video {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  display: block;
+}
+
+/* STL viewer — authored in a note as ![[model.stl]], see _plugins/obsidian_links.rb */
+/* No panel or frame — the model floats directly on the page. The renderer is
+   created with alpha, so the canvas is transparent and the paper shows through. */
+.stl-viewer {
+  position: relative;
+  width: 100%;
+  max-width: 30rem;            /* left-anchored block, not a full-width band */
+  height: 330px;
+  margin: 2.5rem 0 0;
+  cursor: grab;
+  touch-action: none;          /* we handle drag/pinch ourselves */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.stl-viewer.is-grabbing {
+  cursor: grabbing;
+}
+
+.stl-viewer:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.stl-viewer canvas {
+  display: block;
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+
+.stl-viewer.is-ready canvas {
+  opacity: 1;
+}
+
+.stl-viewer-fallback,
+.stl-viewer.is-error {
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+}
+
+/* Rotate-affordance icon (injected by stl-viewer.js), top-left above the model
+   in place of a text caption. Subtle by default, brightens when the viewer is
+   hovered or focused, fades in with the model. */
+.stl-viewer-hint {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--muted-foreground);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 400ms ease;
+}
+
+.stl-viewer.is-ready .stl-viewer-hint {
+  opacity: 0.4;
+}
+
+.stl-viewer.is-ready:hover .stl-viewer-hint,
+.stl-viewer.is-ready:focus-visible .stl-viewer-hint {
+  opacity: 0.75;
+}
+
+.stl-viewer-hint svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .stl-viewer {
+    height: 300px;
+  }
+}
+
+.project-header {
+  margin-bottom: 3rem;
+}
+
+.project-header h1 {
+  margin-bottom: 2rem;
+}
+
+.project-meta {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin-bottom: 3rem;
+}
+
+.project-tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tags-label {
+  color: var(--foreground);
+  font-size: 0.875rem;
+  margin-right: 0.5rem;
+}
+
+.meta-link {
+  color: var(--foreground);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  transition: text-decoration 150ms ease;
+}
+
+.meta-link:hover {
+  font-weight: 500;
+  text-decoration-style: wavy;
+}
+
+.project-categories {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.categories-label {
+  color: var(--foreground);
+  font-size: 0.875rem;
+  margin-right: 0.5rem;
+}
+
+.project-date {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.date-label {
+  color: var(--foreground);
+  font-size: 0.875rem;
+  margin-right: 0.5rem;
+}
+
+.meta-date {
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+
+.project-hero {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.project-hero img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(42, 40, 36, 0.1);
+}
+
+.project-content {
+  margin-bottom: 3rem;
+}
+
+.project-content a {
+  color: var(--foreground);
+  text-decoration: underline;
+  text-decoration-style: solid;
+  transition: text-decoration 150ms ease;
+}
+
+.project-content a:hover {
+  font-weight: 500;
+  text-decoration-style: wavy;
+}
+
+.project-footer {
+  border-top: 1px solid var(--muted);
+  padding-top: 2rem;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  cursor: pointer;
+  animation: fadeIn 150ms ease;
+}
+
+.lightbox.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  animation: scaleIn 150ms ease;
+}
+
+.lightbox img[src$=".svg"] {
+  filter: invert(91%) sepia(17%) saturate(166%) hue-rotate(1deg) brightness(94%) contrast(88%);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: var(--surface);
+  font-size: 2rem;
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 150ms ease;
+  line-height: 1;
+  font-family: Arial, sans-serif;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { 
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to { 
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Gallery images cursor */
+.project-gallery img {
+  cursor: pointer;
+  transition: transform 150ms ease;
+}
+
+.project-gallery img:hover {
+  transform: scale(1.02);
+}
+
+/* Base Button Style */
+.btn {
+  background: var(--foreground);
+  color: var(--background) !important;
+  padding: 0 1.375rem;
+  border-radius: 1.875rem;
+  text-decoration: none !important;
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  font-family: 'IBM Plex Sans', sans-serif;
+  letter-spacing: -0.33px;
+  transition: all 150ms ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  height: 2.5rem;
+}
+
+.btn:hover {
+  background: var(--accent);
+  color: var(--foreground) !important;
+}
+
+[data-theme="dark"] .btn:hover {
+  background: var(--accent);
+  color: var(--foreground) !important;
+}
+
+/* Contact button specific */
+.contact-btn {
+  margin-top: 2rem;
+}
+
+/* Subscribe form (Loops signup) */
+.subscribe-form {
+  margin-top: 1.5rem;
+}
+
+/* The field is unlabelled on screen — the placeholder isn't an accessible name,
+   so this hidden label is the only one screen readers get. Don't drop it. */
+.subscribe-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.subscribe-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.subscribe-input {
+  flex: 1 1 auto;
+  max-width: 22rem;
+  height: 2.5rem;
+  padding: 0 1rem;
+  border: 1px solid var(--border);
+  border-radius: 1.875rem;
+  background: transparent;
+  color: var(--foreground);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 16px;
+  transition: border-color 150ms ease;
+}
+
+.subscribe-input::placeholder {
+  color: var(--muted-foreground);
+}
+
+.subscribe-input:focus-visible,
+.subscribe-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.subscribe-btn {
+  flex: 0 0 auto;
+  border: none;
+  cursor: pointer;
+}
+
+.subscribe-btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.subscribe-status {
+  margin: 0.75rem 0 0;
+  font-size: 14px;
+  min-height: 1.25rem;
+}
+
+.subscribe-status:empty {
+  margin-top: 0;
+  min-height: 0;
+}
+
+/* No red in the palette — errors lean on full-contrast ink, success recedes. */
+.subscribe-status.is-success {
+  color: var(--muted-foreground);
+}
+
+.subscribe-status.is-error {
+  color: var(--foreground);
+}
+
+/* Footer follow link */
+.footer-follow {
+  color: var(--foreground);
+  font-size: 14px;
+  letter-spacing: -0.21px;
+  text-decoration: none;
+}
+
+.footer-follow:hover {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  font-weight: 500;
+}
+
+/* Wiki/Collapsible Sections */
+.wiki-section {
+  margin-top: 2rem;
+}
+
+.wiki-item {
+  margin-bottom: 1.5rem;
+  border: none;
+}
+
+.wiki-header {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--foreground);
+  cursor: pointer;
+  padding: 0.75rem 0;
+  margin: 0;
+  list-style: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  transition: color 150ms ease;
+}
+
+.wiki-header:hover {
+  color: var(--muted);
+}
+
+.wiki-header::before {
+  content: "▶";
+  margin-right: 0.75rem;
+  transition: transform 150ms ease;
+  font-size: 0.875rem;
+}
+
+.wiki-item[open] .wiki-header::before {
+  transform: rotate(90deg);
+}
+
+.wiki-content {
+  padding-left: 1.75rem;
+  margin-top: 0.5rem;
+}
+
+.wiki-content ul {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.wiki-content li {
+  margin-bottom: 0.375rem;
+  color: var(--foreground);
+}
+
+.wiki-content a {
+  color: var(--foreground);
+  text-decoration: underline;
+  text-decoration-style: solid;
+  transition: text-decoration 150ms ease;
+}
+
+.wiki-content a:hover {
+  font-weight: 500;
+  text-decoration-style: wavy;
+}
+
+/* Mobile wiki sections */
+@media (max-width: 768px) {
+  .wiki-header {
+    font-size: 1.125rem;
+    padding: 0.5rem 0;
+  }
+  
+  .wiki-content {
+    padding-left: 1.25rem;
+  }
+}
+
+/* Writing/Posts Index */
+.post-item {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(153, 153, 153, 0.2);
+}
+
+.post-item:last-child {
+  border-bottom: none;
+}
+
+.post-item h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.post-item h3 a {
+  color: var(--foreground);
+  text-decoration: none;
+  transition: text-decoration 150ms ease;
+}
+
+.post-item h3 a:hover {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  font-weight: 500;
+}
+
+.post-meta {
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+/* Two Column Wiki Layout - Only for wiki sections */
+.wiki-section .wiki-two-column,
+.page-content .wiki-two-column {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 0 3rem;
+  padding: 2rem 0;
+  margin: 0;
+  border-top: 1px solid var(--border);
+}
+
+.wiki-section-title {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.wiki-comma-list {
+  /* Use default body/p styling */
+}
+
+.wiki-comma-list a {
+  color: var(--foreground);
+  text-decoration: underline;
+  text-decoration-style: solid;
+  transition: text-decoration 150ms ease;
+}
+
+.wiki-comma-list a:hover {
+  font-weight: 500;
+  text-decoration-style: wavy;
+}
+
+/* Tablet and Mobile two column */
+@media (max-width: 1024px) {
+  .wiki-two-column {
+    grid-template-columns: 200px 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .wiki-section .wiki-two-column,
+  .page-content .wiki-two-column {
+    display: block;
+  }
+  
+  .wiki-section-title {
+    margin-bottom: 1rem;
+  }
+  
+  .wiki-comma-list {
+    margin-bottom: 2rem;
+  }
+}
+
+/* ── The system page (living style guide) ── */
+.system-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Color swatches */
+.system-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.system-chip {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 96px;
+  cursor: pointer;
+}
+
+.system-chip:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.system-chip.copied .chip-hex {
+  color: var(--foreground);
+  font-weight: 500;
+}
+
+.system-chip .chip-box {
+  width: 96px;
+  height: 96px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+.system-chip .chip-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--foreground);
+  line-height: 1.2;
+}
+
+.system-chip .chip-hex {
+  font-size: 13px;
+  color: var(--muted-foreground);
+  line-height: 1.2;
+}
+
+.system-note {
+  font-size: 14px;
+  color: var(--muted-foreground);
+  margin: 0.5rem 0 0 0;
+}
+
+/* ── Shared specimen row: [label] · [specimen] · [optional meta] ──
+   One primitive for every label/specimen list on the page, so every
+   specimen aligns to the same left edge. Add --center for rows whose
+   specimen is a block (bars, demos, icon glyphs) rather than text. */
+.spec-row {
+  display: flex;
+  align-items: baseline;
+  gap: 2rem;
+}
+
+.spec-row--center {
+  align-items: center;
+}
+
+.spec-label {
+  flex: 0 0 140px;
+  font-size: 13px;
+  color: var(--muted-foreground);
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.spec-label .spec-sub {
+  display: block;
+  white-space: normal;
+}
+
+.spec-body {
+  color: var(--foreground);
+  min-width: 0;
+}
+
+.spec-meta {
+  font-size: 13px;
+  color: var(--muted-foreground);
+}
+
+/* Typography specimens */
+.ts-hero    { font-family: 'IBM Plex Mono', monospace; font-size: 48px; line-height: 1; font-weight: 400; }
+.ts-title   { font-family: 'IBM Plex Sans', sans-serif; font-size: 30px; line-height: 1.2; font-weight: 700; letter-spacing: -1.2px; }
+.ts-eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 18px; font-weight: 500; }
+.ts-body    { font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 400; }
+.ts-caption { font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 400; letter-spacing: -0.21px; }
+
+/* Spacing bars */
+.space-bar {
+  height: 16px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* Layout — responsive column demos */
+.layout-demo {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.layout-demo--5 { grid-template-columns: repeat(5, 1fr); }
+.layout-demo--3 { grid-template-columns: repeat(3, 1fr); }
+.layout-demo--2 { grid-template-columns: repeat(2, 1fr); }
+.layout-demo--doc { grid-template-columns: 90px 1fr; }
+
+.layout-demo .cell {
+  height: 34px;
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+.layout-demo .cell--label {
+  background: var(--border);
+}
+
+/* Links & underlines specimens */
+.demo-static-wavy {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-underline-offset: 0.2rem;
+  font-weight: 500;
+}
+
+.system-content a.demo-navlink {
+  text-decoration: none;
+}
+
+.system-content a.demo-navlink:hover {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  font-weight: 500;
+}
+
+/* Iconography — one row per icon: [glyph] name · usage */
+.system-icon-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.icon-box {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--foreground);
+}
+
+.icon-box svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Illustration */
+.system-illustration {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.illo-figure {
+  margin: 0;
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.illo-figure img {
+  width: 280px;
+  height: 280px;
+  display: block;
+}
+
+[data-theme="dark"] .illo-figure img {
+  filter: invert(91%) sepia(17%) saturate(166%) hue-rotate(1deg) brightness(94%) contrast(88%);
+}
+
+.illo-notes {
+  flex: 1;
+  min-width: 240px;
+}
+
+.system-spec-list {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.system-spec-list li {
+  color: var(--muted-foreground);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Wordmark specimens */
+.wm-specimen-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.wm-specimen {
+  font-size: 1.25rem;
+}
+
+.wm-specimen.site-title--crumb .wm-back,
+.wm-specimen.site-title--crumb .wm-hub {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  /* Stack every specimen row on narrow screens */
+  .spec-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .spec-label {
+    flex-basis: auto;
+  }
+
+  /* Scale down the large specimens so they fit narrow screens */
+  .ts-hero  { font-size: 30px; }
+  .ts-title { font-size: 24px; }
+}
+
+/* Coffee Database Table Styling */
+.coffee-database {
+  margin: 2rem 0;
+  overflow-x: auto;
+}
+
+.coffee-database table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.coffee-database th,
+.coffee-database td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--muted);
+}
+
+.coffee-database th {
+  font-weight: 700;
+  background-color: rgba(236, 227, 206, 0.3);
+  border-bottom: 2px solid var(--foreground);
+}
+
+[data-theme="dark"] .coffee-database th {
+  background-color: rgba(58, 55, 51, 0.3);
+}
+
+.coffee-database td img {
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.coffee-database a {
+  color: var(--foreground);
+  text-decoration: underline;
+}
+
+.coffee-database a:hover {
+  text-decoration-style: wavy;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .coffee-database {
+    font-size: 0.8rem;
+  }
+  
+  .coffee-database th,
+  .coffee-database td {
+    padding: 0.5rem;
+  }
+  
+  .coffee-database td img {
+    width: 30px;
+  }
+}
+
+/* Nutrition Table Styling */
+.nutrition-table-wrap {
+  margin: 2rem 0;
+  overflow-x: auto;
+}
+
+.nutrition-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.nutrition-table th,
+.nutrition-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--muted);
+  white-space: nowrap;
+}
+
+.nutrition-table th {
+  font-weight: 700;
+  background-color: rgba(236, 227, 206, 0.3);
+  border-bottom: 2px solid var(--foreground);
+}
+
+[data-theme="dark"] .nutrition-table th {
+  background-color: rgba(58, 55, 51, 0.3);
+}
+
+.nutrition-table tfoot td {
+  font-weight: 700;
+  border-top: 2px solid var(--foreground);
+  border-bottom: none;
+}
+
+.food-copy-btn {
+  background: transparent;
+  border: none;
+  padding: 0.25rem;
+  color: var(--foreground);
+  opacity: 0.45;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  transition: opacity 0.15s;
+}
+
+.food-copy-btn:hover {
+  opacity: 1;
+}
+
+.food-copy-btn .check-icon {
+  color: var(--foreground);
+}
+
+@media (max-width: 768px) {
+  .nutrition-table {
+    font-size: 0.8rem;
+  }
+
+  .nutrition-table th,
+  .nutrition-table td {
+    padding: 0.5rem;
+  }
+
+  /* Stack the field over the button — side by side leaves neither room to breathe. */
+  .subscribe-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .subscribe-input {
+    max-width: none;
+  }
+
+  .subscribe-btn {
+    justify-content: center;
+  }
+}
+
+/* Footnotes styling */
+.footnotes {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.footnotes::before {
+  content: "Footnotes";
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--foreground);
+  font-size: 0.9rem;
+}
+
+.footnotes ol {
+  padding-left: 1.5rem;
+}
+
+.footnotes li {
+  margin-bottom: 0.5rem;
+}
+
+.footnotes p {
+  margin: 0;
+  display: inline;
+}
+
+/* Footnote reference in text */
+sup[role="doc-noteref"],
+sup {
+  font-size: 0.75rem;
+  vertical-align: super;
+  line-height: 0;
+}
+
+sup[role="doc-noteref"] a,
+sup a {
+  color: var(--foreground);
+  text-decoration: none !important;
+  padding: 0 0.1rem;
+}
+
+sup[role="doc-noteref"] a:hover,
+sup a:hover {
+  text-decoration: none !important;
+  font-weight: 500;
+}
+
+/* Back to reference link */
+.reversefootnote {
+  text-decoration: none;
+  margin-left: 0.25rem;
+  font-size: 0.75rem;
+}
+
+.reversefootnote:hover {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
