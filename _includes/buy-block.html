@@ -1,0 +1,194 @@
+{%- comment -%}
+  Buy block for a project that has shop data.
+
+  There is no separate shop — a project note joins the shop by adding
+  `shop_status:`, a `price:`, and `variants:` to its existing front matter:
+
+    shop_status: available       # available | archived | off
+    price: 32.00
+    shop_type: physical          # or `digital` (no qty, no shipping)
+    ships_in: 2–3 business days  # or `delivery:` for digital
+    variants:
+      - name: Natural
+        sku: CK-NAT
+        stock: 14
+      - name: Charcoal
+        sku: CK-CHR
+        price: 36.00             # optional per-variant override
+        stock: 0                 # 0 renders as sold out
+
+  The three states:
+
+    available  live buy block; "$" mark on the homepage archive card
+    archived   sold once, not again. Price and variants still render as a
+               record of what the thing was, but nothing is selectable and the
+               button is a dead "Archived". No "$" mark.
+    off        out of the shop entirely. The page renders as if the front
+               matter weren't there, so the data can sit on disk — half-written,
+               or retired — without appearing anywhere.
+
+  Only `available` and `archived` render this block or reach /catalog.json
+  (see _layouts/project.html). Both `off` and archived products are dropped
+  from any cart still holding them by reconcile() in cart.js.
+
+  Rendered by _layouts/project.html; wired up by assets/js/cart.js.
+{%- endcomment -%}
+
+{%- assign low_at = site.data.shop.low_stock_at | default: 5 -%}
+{%- assign pslug = page.slug | default: page.title | slugify -%}
+{%- assign is_digital = false -%}
+{%- if page.shop_type == "digital" %}{% assign is_digital = true %}{% endif -%}
+{%- assign is_archived = false -%}
+{%- if page.shop_status == "archived" %}{% assign is_archived = true %}{% endif -%}
+
+{%- comment -%} Total stock across variants — zero means the whole thing is out. {%- endcomment -%}
+{%- assign in_stock = 0 -%}
+{%- for v in page.variants -%}
+  {%- if is_digital -%}{%- assign in_stock = 999 -%}
+  {%- else -%}{%- assign in_stock = in_stock | plus: v.stock -%}{%- endif -%}
+{%- endfor -%}
+
+<section class="buy-block{% if is_archived %} is-archived{% elsif in_stock == 0 %} is-soldout{% endif %}"
+         aria-label="{% if is_archived %}Archived product details for{% else %}Buy{% endif %} {{ page.title }}">
+
+  {%- comment -%}
+    Price shown on load must be the price of the variant the form will have
+    SELECTED — i.e. the first one that isn't sold out, whose `price:` may
+    override the product's. Rendering page.price here instead made an overridden
+    first variant flash the wrong price until cart.js re-priced it, and show the
+    wrong price outright with JS off.
+  {%- endcomment -%}
+  {%- comment -%}
+    Do the variants cost different amounts? If so EVERY row shows its price —
+    otherwise only the overridden ones do, and a list reading "Black $27.00 /
+    Natural / Oxblood $32.00" makes the un-priced row look free or identical to
+    the one above it. If they all cost the same, no row shows a price (the
+    header already says it).
+  {%- endcomment -%}
+  {%- assign vmin = page.variants[0].price | default: page.price -%}
+  {%- assign vmax = vmin -%}
+  {%- for v in page.variants -%}
+    {%- assign vp = v.price | default: page.price -%}
+    {%- if vp < vmin %}{% assign vmin = vp %}{% endif -%}
+    {%- if vp > vmax %}{% assign vmax = vp %}{% endif -%}
+  {%- endfor -%}
+  {%- assign prices_vary = false -%}
+  {%- if vmin != vmax %}{% assign prices_vary = true %}{% endif -%}
+
+  {%- assign initial_price = page.price -%}
+  {%- assign picked = false -%}
+  {%- for v in page.variants -%}
+    {%- unless picked -%}
+      {%- if is_digital or v.stock > 0 -%}
+        {%- assign initial_price = v.price | default: page.price -%}
+        {%- assign picked = true -%}
+      {%- endif -%}
+    {%- endunless -%}
+  {%- endfor -%}
+
+  <div class="buy-head">
+    {%- comment -%} id is read by cart.js to re-price on variant change. {%- endcomment -%}
+    <p class="buy-price" id="product-price">
+      {%- if is_archived -%}{% include money.html amount=page.price %}
+      {%- else -%}{% include money.html amount=initial_price %}{%- endif -%}
+    </p>
+    {%- if is_archived %}
+    <span class="buy-tag buy-tag--archived">archived</span>
+    {%- elsif is_digital %}
+    <span class="buy-tag">digital download</span>
+    {%- endif %}
+  </div>
+
+  {%- if is_archived %}
+
+    {%- comment -%}
+      No <form>: there is nothing to submit. The variants render as a plain
+      disabled list so the record of what was offered survives, and the button
+      is inert — disabled, not a link, so it can't be tabbed into or clicked.
+    {%- endcomment -%}
+    {%- if page.variants and page.variants.size > 0 %}
+    <div class="product-variants" role="group" aria-label="Options once offered">
+      <p class="product-label">{% if page.variants.size > 1 %}options{% else %}option{% endif %} once offered</p>
+      {%- for v in page.variants %}
+      <div class="variant is-disabled">
+        <span class="variant-name">{{ v.name }}</span>
+        {%- if prices_vary %}
+        {%- assign v_price = v.price | default: page.price %}
+        <span class="variant-price">{% include money.html amount=v_price %}</span>
+        {%- endif %}
+      </div>
+      {%- endfor %}
+    </div>
+    {%- endif %}
+
+    <div class="product-actions">
+      <button type="button" class="btn add-to-cart" disabled aria-disabled="true">Archived</button>
+    </div>
+    <p class="buy-fineprint">No longer made. Kept here as part of the archive.</p>
+
+  {%- elsif in_stock == 0 %}
+    <p class="buy-soldout">Sold out for now. <a href="{{ '/lab/' | relative_url }}">Ask me about a restock →</a></p>
+
+  {%- else %}
+
+  <form class="product-form"
+        data-product="{{ pslug }}"
+        data-title="{{ page.title | escape }}"
+        data-type="{% if is_digital %}digital{% else %}physical{% endif %}"
+        data-url="{{ page.url | relative_url }}"
+        data-image="{% include img-src.html raw=page.main_image %}">
+
+    {%- if page.variants and page.variants.size > 1 %}
+    <fieldset class="product-variants">
+      <legend class="product-label">{% if is_digital %}package{% else %}option{% endif %}</legend>
+      {%- assign first_available = true -%}
+      {%- for v in page.variants %}
+        {%- assign v_price = v.price | default: page.price -%}
+        {%- assign sold_out = false -%}
+        {%- unless is_digital %}{% if v.stock == 0 %}{% assign sold_out = true %}{% endif %}{% endunless -%}
+        <label class="variant{% if sold_out %} is-soldout{% endif %}">
+          <input type="radio" name="variant" value="{{ v.sku }}"
+                 data-price="{{ v_price }}"
+                 data-name="{{ v.name | escape }}"
+                 data-stock="{% if is_digital %}999{% else %}{{ v.stock | default: 0 }}{% endif %}"
+                 {% if sold_out %}disabled{% elsif first_available %}checked{% assign first_available = false %}{% endif %}>
+          <span class="variant-name">{{ v.name }}</span>
+          {%- if prices_vary %}
+          <span class="variant-price">{% include money.html amount=v_price %}</span>
+          {%- endif %}
+          {%- if sold_out %}<span class="variant-flag">sold out</span>{% endif %}
+        </label>
+      {%- endfor %}
+    </fieldset>
+    {%- else %}
+      {%- comment -%} Single variant: no picker, but the radio still carries the data. {%- endcomment -%}
+      {%- assign v = page.variants[0] -%}
+      <input type="radio" name="variant" value="{{ v.sku }}" checked hidden
+             data-price="{{ v.price | default: page.price }}"
+             data-name="{{ v.name | default: page.title | escape }}"
+             data-stock="{% if is_digital %}999{% else %}{{ v.stock | default: 0 }}{% endif %}">
+    {%- endif %}
+
+    <p class="product-stock" id="product-stock" data-low-at="{{ low_at }}"></p>
+
+    <div class="product-actions">
+      {%- unless is_digital %}
+      <div class="qty-stepper">
+        <button type="button" class="qty-btn" data-step="-1" aria-label="Decrease quantity">−</button>
+        <input type="number" class="qty-input" name="qty" value="1" min="1" step="1" aria-label="Quantity">
+        <button type="button" class="qty-btn" data-step="1" aria-label="Increase quantity">+</button>
+      </div>
+      {%- endunless %}
+      <button type="submit" class="btn add-to-cart" data-umami-event="Add to cart">Add to cart</button>
+    </div>
+
+    <p class="buy-fineprint">
+      {%- if is_digital -%}
+        {{ page.delivery | default: "Instant download after checkout." }}
+      {%- else -%}
+        Ships in {{ page.ships_in | default: "3–5 business days" }}.
+      {%- endif -%}
+    </p>
+  </form>
+  {%- endif %}
+</section>

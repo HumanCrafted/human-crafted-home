@@ -1,0 +1,6 @@
+{%- comment -%}
+  Resolve a product's Obsidian-style image reference to a URL.
+  Usage: {% include product-img.html raw=page.main_image %}
+{%- endcomment -%}
+{%- assign f = include.raw | replace: '![[', '' | replace: ']]', '' | strip -%}
+{{- '/assets/images/' | append: f | relative_url -}}

@@ -42,6 +42,19 @@ layout: default
   {% endif %}
 </div>
 
+{% comment %}
+  A project gets a buy block only for the two shop states that render one.
+  Anything else — `off`, a blank value, or a typo like "availabe" — renders the
+  page exactly as it was before the shop existed, keeping the front matter on
+  disk untouched.
+
+  Deliberately an allow-list, not `!= "off"`: failing closed means a mistyped
+  status hides the product, rather than silently putting it on sale.
+{% endcomment %}
+{% if site.shop_enabled and page.shop_status == "available" or site.shop_enabled and page.shop_status == "archived" %}
+  {% include buy-block.html %}
+{% endif %}
+
 <div class="project-content">
   {{ content }}
 </div>

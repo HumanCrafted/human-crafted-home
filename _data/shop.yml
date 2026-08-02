@@ -1,0 +1,34 @@
+# Made — store-wide settings.
+# Everything the shop needs that isn't per-product lives here. Edit this file
+# and the storefront, cart and checkout all follow.
+
+currency: USD
+symbol: "$"
+
+# Orders at or above this subtotal ship free. Set to null to always charge.
+free_shipping_over: 75
+
+# Flat shipping rates by region. `code` is what the checkout form submits and
+# what the cart JS looks up — don't rename one without the other.
+# A cart of only digital items skips shipping entirely.
+shipping:
+  - code: US
+    region: United States
+    rate: 6.00
+    note: 3–5 business days
+  - code: CA
+    region: Canada
+    rate: 16.00
+    note: 7–14 business days
+  - code: INTL
+    region: Everywhere else
+    rate: 28.00
+    note: 10–21 business days, duties not included
+
+# Flat estimate shown at checkout. Real tax gets calculated by whatever
+# payment processor this lands on — this is a prototype placeholder.
+tax_rate: 0.055
+tax_note: Wisconsin sales tax, estimated
+
+# Below this remaining stock a variant shows a "only N left" nudge.
+low_stock_at: 5

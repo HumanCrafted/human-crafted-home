@@ -44,7 +44,34 @@ title:
           </svg>
         {% endif %}
       </div>
-      <h3 class="project-title">{{ project.title }}</h3>
+      <h3 class="project-title">
+        {%- comment -%}
+          Only currently-available projects get the "$" mark. Archived ones keep
+          their price/variants on the detail page but read as ordinary archive
+          entries here.
+        {%- endcomment -%}
+        {%- if site.shop_enabled and project.shop_status == "available" -%}
+          {%- comment -%}
+            Keep the "$" disc welded to the last word: an atomic inline box gets
+            bumped to its own line when the title fills the column, which left
+            the disc stranded under mobile cards. Last word + disc go in one
+            nowrap span so they wrap together.
+          {%- endcomment -%}
+          {%- assign _words = project.title | split: " " -%}
+          {%- if _words.size > 1 -%}
+            {%- assign _head_len = _words.size | minus: 1 -%}
+            {%- comment -%}
+              The trailing space is appended to the STRING, not left as template
+              whitespace — the surrounding whitespace-trimming tags would eat a
+              literal one and glue the last word on ("Bi-FoldWallet").
+            {%- endcomment -%}
+            {{ _words | slice: 0, _head_len | join: " " | append: " " }}
+          {%- endif -%}
+          <span class="title-tail">{{ _words | last }}{% include for-sale-icon.html %}</span>
+        {%- else -%}
+          {{ project.title }}
+        {%- endif -%}
+      </h3>
     </a>
   {% endfor %}
 </div>
