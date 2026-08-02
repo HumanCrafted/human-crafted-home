@@ -16,6 +16,15 @@ gallery_images:
   - "![[acrylic-robin-packaging.jpg]]"
   - "![[acrylic-robin-with-cactus.jpg]]"
 headline: A flat laser-cut acrylic robin that stands on two thin legs, read entirely from its profile.
+# --- shop: PLACEHOLDER price/SKU/stock — replace with real values ---
+shop_status: available
+price: 25.00
+ships_in: 3–5 business days
+variants:
+  - name: Standard
+    sku: ACR-ROB-STD
+    stock: 10
+# --- /shop ---
 version: "1.0"
 tools:
   - laser-cutter

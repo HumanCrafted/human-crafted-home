@@ -1,0 +1,13 @@
+{%- comment -%}
+  Format a number as money with exactly two decimals.
+
+  Liquid has no currency filter and `round: 2` drops trailing zeros — 32.00
+  renders as "32.0" — so split into whole/cents and pad by hand.
+
+  Usage: {% include money.html amount=page.price %}
+{%- endcomment -%}
+{%- assign _sym = site.data.shop.symbol | default: "$" -%}
+{%- assign _c = include.amount | times: 100.0 | round -%}
+{%- assign _whole = _c | divided_by: 100 -%}
+{%- assign _frac = _c | modulo: 100 -%}
+{{- _sym }}{{ _whole }}.{% if _frac < 10 %}0{% endif %}{{ _frac -}}

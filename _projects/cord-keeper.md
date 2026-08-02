@@ -32,6 +32,14 @@ gallery_images:
   - "![[cord-keeper-batch-curing.jpg]]"
   - "![[cord-keeper-mmoca-exhibit.jpg]]"
 headline: "A concrete cable weight born from a museum exhibit — and the first Human Crafted product."
+# --- shop: PLACEHOLDER price/SKU/stock — replace with real values ---
+shop_status: archived
+price: 25.00
+variants:
+  - name: Standard
+    sku: COR-KEE-STD
+    stock: 10
+# --- /shop ---
 version: "1.0"
 tools:
 process:

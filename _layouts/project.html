@@ -42,6 +42,14 @@ layout: default
   {% endif %}
 </div>
 
+{% comment %}
+  A project that carries `shop_status:` (available or archived) gets a buy block
+  right under its meta. Everything else renders exactly as before.
+{% endcomment %}
+{% if page.shop_status %}
+  {% include buy-block.html %}
+{% endif %}
+
 <div class="project-content">
   {{ content }}
 </div>

@@ -24,6 +24,14 @@ gallery_images:
   - "![[elevations-clock-market-booth.jpg]]"
   - "![[elevations-clock-built-exhibit.jpg]]"
 headline: A laser-cut birch clock with hour markers drawn as stacked bars, like a topographic map.
+# --- shop: PLACEHOLDER price/SKU/stock — replace with real values ---
+shop_status: archived
+price: 25.00
+variants:
+  - name: Standard
+    sku: ELE-CLO-STD
+    stock: 10
+# --- /shop ---
 version: "1.0"
 tools:
   - laser-cutter

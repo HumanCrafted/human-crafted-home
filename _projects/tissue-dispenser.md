@@ -25,6 +25,15 @@ gallery_images:
   - "![[tissue-dispenser-black-bathroom.jpg]]"
   - "![[tissue-dispenser-illustration.jpg]]"
 headline: A translucent acrylic tray with a solid maple plate that rides down the stack as the tissues go.
+# --- shop: PLACEHOLDER price/SKU/stock — replace with real values ---
+shop_status: available
+price: 25.00
+ships_in: 3–5 business days
+variants:
+  - name: Standard
+    sku: TIS-DIS-STD
+    stock: 10
+# --- /shop ---
 version: "1.0"
 tools:
   - laser-cutter

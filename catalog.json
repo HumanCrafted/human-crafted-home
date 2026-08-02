@@ -1,0 +1,63 @@
+---
+permalink: /catalog.json
+layout: null
+sitemap: false
+---
+{%- comment -%}
+  Machine-readable catalog for the cart JS — prices, variants and live stock,
+  so a cart restored from localStorage can be re-priced and re-checked against
+  what the front matter says today.
+
+  There is no separate product list: this is built from the projects that carry
+  a `shop_status:`. Add that plus `variants:` to any _projects note and it joins
+  the shop. Regenerated on every build.
+
+  Archived projects are included, carrying status "archived", rather than being
+  filtered out — that way a cart still holding one gets the accurate "no longer
+  available" notice from reconcile() instead of silently losing the line.
+{%- endcomment -%}
+{%- assign for_sale = site.projects | where_exp: "p", "p.shop_status" -%}
+{
+  "generated": "{{ site.time | date_to_xmlschema }}",
+  "settings": {
+    "symbol": {{ site.data.shop.symbol | jsonify }},
+    "currency": {{ site.data.shop.currency | jsonify }},
+    "free_shipping_over": {{ site.data.shop.free_shipping_over | default: 0 }},
+    "tax_rate": {{ site.data.shop.tax_rate | default: 0 }},
+    "tax_note": {{ site.data.shop.tax_note | jsonify }},
+    "low_stock_at": {{ site.data.shop.low_stock_at | default: 5 }}
+  },
+  "shipping": [
+    {%- for s in site.data.shop.shipping %}
+    {
+      "code": {{ s.code | jsonify }},
+      "region": {{ s.region | jsonify }},
+      "rate": {{ s.rate }},
+      "note": {{ s.note | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ],
+  "products": [
+    {%- for p in for_sale %}
+    {
+      "slug": {{ p.slug | default: p.title | slugify | jsonify }},
+      "title": {{ p.title | jsonify }},
+      "type": {{ p.shop_type | default: "physical" | jsonify }},
+      "status": {{ p.shop_status | jsonify }},
+      "price": {{ p.price | default: 0 }},
+      "url": {{ p.url | relative_url | jsonify }},
+      "image": {% capture img %}{% include img-src.html raw=p.main_image %}{% endcapture %}{{ img | strip | jsonify }},
+      "variants": [
+        {%- for v in p.variants %}
+        {
+          "sku": {{ v.sku | jsonify }},
+          "name": {{ v.name | jsonify }},
+          "price": {{ v.price | default: p.price }},
+          "stock": {% if p.shop_type == "digital" %}null{% else %}{{ v.stock | default: 0 }}{% endif %}
+        }{% unless forloop.last %},{% endunless %}
+        {%- endfor %}
+      ]
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ]
+}
