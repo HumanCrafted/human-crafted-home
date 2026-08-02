@@ -4,6 +4,7 @@ title: Your cart
 crumb: cart
 permalink: /cart/
 shop: true
+shop_page: true   # withheld entirely when shop_enabled is false
 ---
 
 <a href="{{ '/#archive' | relative_url }}" class="back-link">← Keep looking</a>

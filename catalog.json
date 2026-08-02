@@ -2,6 +2,7 @@
 permalink: /catalog.json
 layout: null
 sitemap: false
+shop_page: true   # withheld entirely when shop_enabled is false
 ---
 {%- comment -%}
   Machine-readable catalog for the cart JS — prices, variants and live stock,
@@ -21,8 +22,16 @@ sitemap: false
   reach the catalog. `off` (or a typo) drops out entirely, so a cart still
   holding that product gets removed by reconcile() rather than staying buyable.
 {%- endcomment -%}
+{%- comment -%}
+  shop_toggle.rb withholds this file entirely when the shop is off; the guard
+  below is a second line of defence so it can never list products if it somehow
+  did get built.
+{%- endcomment -%}
+{%- assign for_sale = "" | split: "" -%}
+{%- if site.shop_enabled -%}
 {%- assign for_sale = site.projects
       | where_exp: "p", "p.shop_status == 'available' or p.shop_status == 'archived'" -%}
+{%- endif -%}
 {
   "generated": "{{ site.time | date_to_xmlschema }}",
   "settings": {

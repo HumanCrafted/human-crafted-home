@@ -51,7 +51,7 @@ layout: default
   Deliberately an allow-list, not `!= "off"`: failing closed means a mistyped
   status hides the product, rather than silently putting it on sale.
 {% endcomment %}
-{% if page.shop_status == "available" or page.shop_status == "archived" %}
+{% if site.shop_enabled and page.shop_status == "available" or site.shop_enabled and page.shop_status == "archived" %}
   {% include buy-block.html %}
 {% endif %}
 

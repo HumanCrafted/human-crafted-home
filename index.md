@@ -50,7 +50,7 @@ title:
           their price/variants on the detail page but read as ordinary archive
           entries here.
         {%- endcomment -%}
-        {%- if project.shop_status == "available" -%}
+        {%- if site.shop_enabled and project.shop_status == "available" -%}
           {%- comment -%}
             Keep the "$" disc welded to the last word: an atomic inline box gets
             bumped to its own line when the title fills the column, which left

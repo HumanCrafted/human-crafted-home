@@ -4,6 +4,7 @@ title: Checkout
 crumb: checkout
 permalink: /checkout/
 shop: true
+shop_page: true   # withheld entirely when shop_enabled is false
 ---
 
 <a href="{{ '/cart/' | relative_url }}" class="back-link">← Back to cart</a>

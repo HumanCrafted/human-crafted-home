@@ -10,6 +10,9 @@
     <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}">
     <link rel="apple-touch-icon" href="{{ '/favicon.png' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+    {% if site.shop_enabled %}
+    <link rel="stylesheet" href="{{ '/assets/css/shop.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+    {% endif %}
     <script src="{{ '/assets/js/theme.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
     <script defer src="{{ '/assets/js/wordmark.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
     {% comment %}
@@ -21,9 +24,11 @@
     {% endif %}
     <script defer src="{{ '/assets/js/subscribe.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
     {% comment %}
-      Made (the shop). cart.js loads everywhere so the nav badge is right on any
-      page, but it only does work when it finds something to bind to.
+      The shop. cart.js loads on every page so the nav badge is right anywhere,
+      but only when the shop is switched on (see shop_enabled in _config.yml) —
+      otherwise no shop JS, no /catalog.json fetch, nothing in the markup.
     {% endcomment %}
+    {% if site.shop_enabled %}
     <script>
       window.HC_SHOP_PATHS = {
         catalog:  "{{ '/catalog.json' | relative_url }}",
@@ -34,6 +39,7 @@
       };
     </script>
     <script defer src="{{ '/assets/js/cart.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+    {% endif %}
     {% seo title=false %}
     {% feed_meta %}
 
@@ -46,7 +52,7 @@
   shop-page: cart/checkout/thanks and any for-sale project. Only affects whether
   the nav cart icon shows while the cart is empty (see .cart-link.is-empty).
 {%- endcomment -%}
-<body{% if page.shop or page.shop_status == "available" %} class="shop-page"{% endif %}>
+<body{% if site.shop_enabled and page.shop or site.shop_enabled and page.shop_status == "available" %} class="shop-page"{% endif %}>
     <div class="site-container">
         <header class="site-header">
             <div class="header-content">
@@ -63,6 +69,7 @@
                       Cart. Hidden while empty on non-shop pages (CSS .cart-link.is-empty),
                       so it only shows up once it's relevant. cart.js sets the count.
                     {% endcomment %}
+                    {% if site.shop_enabled %}
                     <button type="button" class="cart-link is-empty" data-cart-open
                             aria-label="Open cart" data-umami-event="Cart open">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -72,6 +79,7 @@
                         </svg>
                         <span class="cart-badge" data-cart-badge>0</span>
                     </button>
+                    {% endif %}
                     <div class="colab-link-wrapper">
                         <a href="{{ '/lab/' | relative_url }}" class="btn colab-btn" data-umami-event="Colab CTA button">
                             Let's co/lab
@@ -125,7 +133,7 @@
         </footer>
     </div>
 
-    {% include cart-drawer.html %}
+    {% if site.shop_enabled %}{% include cart-drawer.html %}{% endif %}
 
     {% unless page.url == "/lab/" %}
     <a href="{{ '/lab/' | relative_url }}" class="btn colab-fab" data-umami-event="Colab FAB" aria-label="Let's co/lab">

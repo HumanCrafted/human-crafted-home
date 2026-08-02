@@ -6,6 +6,23 @@ description: >-
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://humancrafted.co" # the base hostname & protocol for your site, e.g. http://example.com
 
+# ---------------------------------------------------------------------------
+# Shop kill switch. THE single switch — nothing else needs changing to go live.
+#
+#   false  the shop does not exist on the built site. No buy blocks, no "$"
+#          marks, and the cart/checkout/thanks pages and /catalog.json are not
+#          generated at all — so they're absent from the sitemap and from the
+#          /re/<slug>/ redirect stubs too. No cart button, drawer or cart.js on
+#          any page. Verified byte-identical to a build with the shop code
+#          removed entirely.
+#   true   the shop renders, driven per-product by `shop_status:` front matter
+#          (available | archived | off) on the _projects notes.
+#
+# Enforced by _plugins/shop_toggle.rb (drops the shop-only pages) plus
+# `site.shop_enabled` guards in _layouts/default.html, _layouts/project.html
+# and index.md.
+shop_enabled: false
+
 # Loops signup (see _includes/subscribe-form.html)
 # loops_form_id: from Loops → Forms → Settings. The form renders only once this is set.
 # loops_list_id: the list signups join. Must be Public in Loops — form endpoints

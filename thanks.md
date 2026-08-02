@@ -4,6 +4,7 @@ title: Thank you
 crumb: thanks
 permalink: /thanks/
 shop: true
+shop_page: true   # withheld entirely when shop_enabled is false
 sitemap: false
 ---
 
