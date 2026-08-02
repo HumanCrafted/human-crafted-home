@@ -4,7 +4,7 @@
   There is no separate shop — a project note joins the shop by adding
   `shop_status:`, a `price:`, and `variants:` to its existing front matter:
 
-    shop_status: available       # available | archived
+    shop_status: available       # available | archived | off
     price: 32.00
     shop_type: physical          # or `digital` (no qty, no shipping)
     ships_in: 2–3 business days  # or `delivery:` for digital
@@ -17,11 +17,19 @@
         price: 36.00             # optional per-variant override
         stock: 0                 # 0 renders as sold out
 
-  `shop_status: archived` is for things that were sold once and won't be again.
-  The price and variants still render — they're part of the record of what the
-  thing was — but nothing is selectable and the button is a dead "Archived".
-  Archived projects also get no "$" mark on the homepage (see index.md) and are
-  dropped from any cart that still holds them (see reconcile() in cart.js).
+  The three states:
+
+    available  live buy block; "$" mark on the homepage archive card
+    archived   sold once, not again. Price and variants still render as a
+               record of what the thing was, but nothing is selectable and the
+               button is a dead "Archived". No "$" mark.
+    off        out of the shop entirely. The page renders as if the front
+               matter weren't there, so the data can sit on disk — half-written,
+               or retired — without appearing anywhere.
+
+  Only `available` and `archived` render this block or reach /catalog.json
+  (see _layouts/project.html). Both `off` and archived products are dropped
+  from any cart still holding them by reconcile() in cart.js.
 
   Rendered by _layouts/project.html; wired up by assets/js/cart.js.
 {%- endcomment -%}

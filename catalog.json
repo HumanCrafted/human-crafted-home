@@ -16,7 +16,13 @@ sitemap: false
   filtered out — that way a cart still holding one gets the accurate "no longer
   available" notice from reconcile() instead of silently losing the line.
 {%- endcomment -%}
-{%- assign for_sale = site.projects | where_exp: "p", "p.shop_status" -%}
+{%- comment -%}
+  Allow-list, matching _layouts/project.html: only `available` and `archived`
+  reach the catalog. `off` (or a typo) drops out entirely, so a cart still
+  holding that product gets removed by reconcile() rather than staying buyable.
+{%- endcomment -%}
+{%- assign for_sale = site.projects
+      | where_exp: "p", "p.shop_status == 'available' or p.shop_status == 'archived'" -%}
 {
   "generated": "{{ site.time | date_to_xmlschema }}",
   "settings": {

@@ -43,10 +43,15 @@ layout: default
 </div>
 
 {% comment %}
-  A project that carries `shop_status:` (available or archived) gets a buy block
-  right under its meta. Everything else renders exactly as before.
+  A project gets a buy block only for the two shop states that render one.
+  Anything else — `off`, a blank value, or a typo like "availabe" — renders the
+  page exactly as it was before the shop existed, keeping the front matter on
+  disk untouched.
+
+  Deliberately an allow-list, not `!= "off"`: failing closed means a mistyped
+  status hides the product, rather than silently putting it on sale.
 {% endcomment %}
-{% if page.shop_status %}
+{% if page.shop_status == "available" or page.shop_status == "archived" %}
   {% include buy-block.html %}
 {% endif %}
 
