@@ -23,6 +23,14 @@ gallery_images:
   - "![[elevations-lake-michigan-render.jpg]]"
   - "![[elevations-terrain-render.jpg]]"
 headline: States drawn as their own topography, sliced into acrylic bars and set into a birch panel.
+# --- shop: PLACEHOLDER price/SKU/stock — replace with real values ---
+shop_status: archived
+price: 25.00
+variants:
+  - name: Standard
+    sku: ELE-STD
+    stock: 10
+# --- /shop ---
 version: "1.0"
 tools:
   - laser-cutter

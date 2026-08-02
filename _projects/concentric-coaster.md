@@ -28,6 +28,14 @@ gallery_images:
   - "![[concentric-coaster-line-drawing.jpg]]"
   - "![[concentric-coaster-packaging-illustration.jpg]]"
 headline: A cast concrete drink coaster with concentric grooves that pull condensation off the table.
+# --- shop: PLACEHOLDER price/SKU/stock — replace with real values ---
+shop_status: archived
+price: 25.00
+variants:
+  - name: Standard
+    sku: CON-COA-STD
+    stock: 10
+# --- /shop ---
 version: "1.0"
 tools:
 process:

@@ -22,6 +22,14 @@ gallery_images:
   - "![[concrete-tray-with-coaster.jpg]]"
   - "![[concrete-tray-detail.jpg]]"
 headline: A pair of cast concrete trays, one round and one rectangular, for the small stuff by the sink or on a desk.
+# --- shop: PLACEHOLDER price/SKU/stock — replace with real values ---
+shop_status: archived
+price: 25.00
+variants:
+  - name: Standard
+    sku: CON-TRA-STD
+    stock: 10
+# --- /shop ---
 version: "1.0"
 tools:
 process:
