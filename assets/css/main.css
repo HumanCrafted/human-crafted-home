@@ -435,6 +435,13 @@ td {
   color: var(--muted-foreground);
 }
 
+/* The Music note's table runs five columns, which is wider than a phone. Scroll
+   it inside its own box so the page itself never scrolls sideways. */
+.music-table {
+  display: block;
+  overflow-x: auto;
+}
+
 /* Images */
 img {
   max-width: 100%;

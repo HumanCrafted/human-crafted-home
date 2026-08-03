@@ -50,6 +50,7 @@ The site's colors, typography, spacing, and components are documented in the [[d
 - **_projects/** - Portfolio items with image galleries and lightbox functionality
 - **_docs/** - Documentation pages including tools, processes, and notes
 - **_posts/** - Blog-style content (if needed)
+- **_music/** - Track and artist notes, front matter only, `output: false` (no per-track pages). The [[music|Music]] note renders them as one table straight from `site.music`. The `.base` files beside them drive Obsidian's own table view and are excluded from the build, so the two are maintained separately.
 
 ### Custom Features
 
