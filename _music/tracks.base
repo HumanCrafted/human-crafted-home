@@ -8,6 +8,8 @@ properties:
     displayName: Artist
   album:
     displayName: Album
+  apple_music_url:
+    displayName: Apple Music
   year:
     displayName: Year
   genre:
@@ -23,11 +25,14 @@ views:
       - title
       - artist
       - album
+      - apple_music_url
       - year
       - genre
       - mood
       - tags
     sort:
+      - property: year
+        direction: DESC
       - property: artist
         direction: ASC
     columnSize:
