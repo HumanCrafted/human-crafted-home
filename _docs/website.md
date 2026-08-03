@@ -52,6 +52,13 @@ The site's colors, typography, spacing, and components are documented in the [[d
 - **_posts/** - Blog-style content (if needed)
 - **_music/** - Track and artist notes, front matter only, `output: false` (no per-track pages). The [[music|Music]] note renders them as one table straight from `site.music`. The `.base` files beside them drive Obsidian's own table view and are excluded from the build, so the two are maintained separately.
 
+#### Track previews
+Tracks with an `apple_music_url` get a play button in the Music table — a thirty-second preview, the same one Apple's own embed would give a listener who isn't signed in. Full playback would mean MusicKit JS, a paid developer membership, and each visitor authenticating with their own Apple Music subscription, so it isn't on the table.
+
+The `i=` parameter in an `apple_music_url` is the track's iTunes id, so `script/fetch-previews.py` can look up preview links with no searching or matching and write `preview_url:` into each note. Re-run it after adding tracks, or when previews go stale — they're CDN assets and the links do rot. It rewrites only that one line, and `--dry-run` reports what it would change.
+
+Playback is a plain `<audio>` element in `assets/js/music-player.js`, loaded only on pages whose front matter sets `has_audio: true`. One shared element means starting a track stops whatever was playing. The play/pause icons are injected by the JS rather than written into the note, for the same reason the STL viewer injects its hint icon: kramdown escapes inline SVG that comes out of markdown.
+
 ### Custom Features
 
 #### Reference Sections

@@ -22,6 +22,12 @@
     {% if page.has_model %}
     <script type="module" src="{{ '/assets/js/stl-viewer.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
     {% endif %}
+    {% comment %}
+      Track previews on the Music note. Front matter opts in with has_audio: true.
+    {% endcomment %}
+    {% if page.has_audio %}
+    <script defer src="{{ '/assets/js/music-player.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+    {% endif %}
     <script defer src="{{ '/assets/js/subscribe.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
     {% comment %}
       The shop. cart.js loads on every page so the nav badge is right anywhere,
