@@ -18,7 +18,9 @@ from pathlib import Path
 TRACKS = Path(__file__).resolve().parent.parent / "_music" / "tracks"
 BATCH = 100  # the lookup endpoint accepts many ids per call; keep it polite
 
-url_re = re.compile(r'^apple_music_url:\s*"([^"]+)"', re.M)
+# The quotes are optional — Obsidian will happily save a bare URL if one is
+# pasted in by hand, and an unquoted link is still a link.
+url_re = re.compile(r'^apple_music_url:\s*"?(\S+?)"?\s*$', re.M)
 preview_re = re.compile(r'^preview_url:.*\n', re.M)
 
 
