@@ -1,0 +1,14 @@
+{% comment %}
+  Emits the places collection as JSON for the Leaflet map (assets/js/places-map.js).
+  Only places with coordinates are included. Loaded from default.html when the
+  page opts in with has_map: true. Note: where_exp can't use `or`/`and` here
+  (GitHub Pages Liquid), hence the chained filters.
+{% endcomment %}
+{% assign mapped = site.places | where_exp: "p", "p.lat" | where_exp: "p", "p.lng" %}
+<script type="application/json" id="places-data">
+[
+{%- for p in mapped -%}
+{"name":{{ p.name | jsonify }},"type":{{ p.type | jsonify }},"city":{{ p.city | jsonify }},"state":{{ p.state | jsonify }},"lat":{{ p.lat }},"lng":{{ p.lng }},"status":{{ p.status | jsonify }},"visited":{{ p.visited | jsonify }},"sources":{{ p.sources | jsonify }},"wf_episode":{{ p.wf_episode | jsonify }},"wf_video":{{ p.wf_video | jsonify }},"tc_season":{{ p.tc_season | jsonify }},"tc_contestant":{{ p.tc_contestant | jsonify }},"jb_award":{{ p.jb_award | jsonify }},"jb_result":{{ p.jb_result | jsonify }},"jb_year":{{ p.jb_year | jsonify }},"note":{{ p.map_note | jsonify }}}{% unless forloop.last %},{% endunless %}
+{%- endfor -%}
+]
+</script>

@@ -51,6 +51,7 @@ The site's colors, typography, spacing, and components are documented in the [[d
 - **_docs/** - Documentation pages including tools, processes, and notes
 - **_posts/** - Blog-style content (if needed)
 - **_music/** - Track and artist notes, front matter only, `output: false` (no per-track pages). The [[music|Music]] note renders them as one table straight from `site.music`. The `.base` files beside them drive Obsidian's own table view and are excluded from the build, so the two are maintained separately.
+- **_places/** - One note per place worth visiting (restaurants, breweries, farms, coffee shops, shops, stays), front matter only, `output: false` — same pattern as music. The [[places|Places]] note renders them as pins on a map. `places.base` gives Obsidian its own table, to-visit, and map views.
 
 #### Track previews
 Tracks with an `apple_music_url` get a play button in the Music table — a thirty-second preview, the same one Apple's own embed would give a listener who isn't signed in. Full playback would mean MusicKit JS, a paid developer membership, and each visitor authenticating with their own Apple Music subscription, so it isn't on the table.
@@ -81,6 +82,15 @@ Some project pages show a real 3D model you can grab and spin, rendered right in
 - Authored just like an image — `![[cord-keeper.stl]]` — with the same `width=` option to size the viewer
 - Drag to rotate, pinch to zoom; it turns slowly on its own until you touch it
 - The 3D library loads only on pages that have a model, and only once you scroll it into view, so every other page stays light
+
+#### Places Map
+The [[places|Places]] note plots the `_places` collection on an interactive map — every pin a place featured on Wisconsin Foodie, opened by a Top Chef contestant, recognized by the James Beard Foundation, or simply visited and liked. A place is one note; shows and awards are just fields on it, so a spot with three claims to fame is one pin with three source lines, each linking out (a Wisconsin Foodie pin links to the episode on their YouTube channel — timestamped to the moment the place appears, using the chapter markers the show publishes on its own uploads — the site is an unofficial index that points at the owners' own video, never a copy of it).
+- [Leaflet](https://leafletjs.com) vendored in `assets/js/lib/leaflet/` (same `.gitignore` reason as three.js: not `vendor/`), no API key. Tiles are Carto Positron — near-greyscale, so a CSS sepia filter on `.leaflet-tile-pane` pulls them toward the paper tone; dark mode inverts first, then warms. Markers and popups sit in other panes, so the filter never touches them
+- Pins are `circleMarker`s colored from the design tokens (`--accent` fill, `--foreground` ring) read at runtime — a MutationObserver on `data-theme` restyles them the moment the theme flips
+- A filter bar above the map (built by the JS from whatever sources exist in the data) toggles each source on and off; places with no source count as "personal", and a multi-source place stays visible while any of its sources is on
+- Pages opt in with `has_map: true` front matter; `_includes/places-data.html` emits the collection's front matter as JSON and `assets/js/places-map.js` builds the map from it
+- Wheel-zoom needs ctrl/meta, matching the STL viewer — plain page scroll is never hijacked
+- Per-source detail rides in flat front-matter keys (`wf_episode`, `tc_season`, `jb_award`, …) beside a simple `sources:` list — deliberately not nested YAML, so Obsidian Bases and Liquid can both filter on it
 
 ## Key Decisions
 

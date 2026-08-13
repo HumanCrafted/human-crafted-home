@@ -1,0 +1,66 @@
+filters: file.inFolder("_places")
+formulas:
+  location: 'city + ", " + state'
+  visited_icon: 'if(visited, "✓", "")'
+properties:
+  name:
+    displayName: Name
+  type:
+    displayName: Type
+  formula.location:
+    displayName: Location
+  sources:
+    displayName: Sources
+  wf_episode:
+    displayName: WF Episode
+  status:
+    displayName: Status
+  formula.visited_icon:
+    displayName: Visited
+views:
+  - type: table
+    name: All Places
+    order:
+      - name
+      - type
+      - formula.location
+      - sources
+      - status
+      - formula.visited_icon
+    sort:
+      - property: state
+        direction: ASC
+      - property: city
+        direction: ASC
+  - type: table
+    name: To Visit
+    filters:
+      and:
+        - 'visited != true'
+        - 'status != "closed"'
+    order:
+      - name
+      - type
+      - formula.location
+      - sources
+    sort:
+      - property: state
+        direction: ASC
+      - property: city
+        direction: ASC
+  - type: table
+    name: Wisconsin Foodie
+    filters:
+      and:
+        - 'sources.contains("wisconsin-foodie")'
+    order:
+      - name
+      - type
+      - formula.location
+      - wf_episode
+      - formula.visited_icon
+    sort:
+      - property: wf_episode
+        direction: ASC
+  - type: map
+    name: Map

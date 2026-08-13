@@ -66,6 +66,8 @@ collections:
     permalink: /:slug/
   music:
     output: false
+  places:
+    output: false
 
 # Obsidian-friendly settings
 kramdown:
