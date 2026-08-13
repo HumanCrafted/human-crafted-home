@@ -1,0 +1,141 @@
+filters:
+  and:
+    - file.hasTag("coffee")
+    - file.inFolder("_docs")
+formulas:
+  rating: if(note["rating_1-5"], number(note["rating_1-5"]), "")
+  stars: if(note["rating_1-5"], "★".repeat(number(note["rating_1-5"])), "—")
+  is_decaf: if(title, title.lower().contains("decaf"), false) || if(process, process.join(" ").lower().contains("decaf"), false)
+  notes: if(tasting_notes, tasting_notes.join(", "), "")
+  coffee: file.asLink(title)
+properties:
+  note.title:
+    displayName: Coffee
+  note.roaster:
+    displayName: Roaster
+  note.origin:
+    displayName: Origin
+  note.process:
+    displayName: Process
+  note.roast_level:
+    displayName: Roast
+  note.elevation:
+    displayName: Elevation
+  note.harvest:
+    displayName: Harvest
+  note.price:
+    displayName: Price
+  note.date_purchased:
+    displayName: Purchased
+  note.date_roasted:
+    displayName: Roasted
+  formula.rating:
+    displayName: Rating
+  formula.stars:
+    displayName: Score
+  formula.coffee:
+    displayName: Coffee
+  formula.notes:
+    displayName: Tasting Notes
+  formula.is_decaf:
+    displayName: Decaf
+views:
+  - type: table
+    name: All Beans
+    order:
+      - formula.coffee
+      - roaster
+      - origin
+      - process
+      - formula.notes
+      - formula.stars
+      - formula.rating
+      - price
+      - date_purchased
+    sort:
+      - property: formula.rating
+        direction: DESC
+      - property: date_purchased
+        direction: DESC
+    summaries:
+      formula.rating: Average
+    columnSize:
+      formula.coffee: 326
+      formula.notes: 260
+  - type: table
+    name: By Roaster
+    groupBy:
+      property: roaster
+      direction: ASC
+    order:
+      - formula.coffee
+      - origin
+      - process
+      - formula.stars
+      - formula.rating
+      - price
+    sort:
+      - property: formula.rating
+        direction: DESC
+    summaries:
+      formula.rating: Average
+  - type: table
+    name: Decaf
+    filters:
+      and:
+        - formula.is_decaf == true
+    order:
+      - formula.coffee
+      - roaster
+      - origin
+      - process
+      - formula.notes
+      - formula.stars
+      - formula.rating
+    sort:
+      - property: formula.rating
+        direction: DESC
+  - type: table
+    name: Caffeinated
+    filters:
+      and:
+        - formula.is_decaf == false
+    order:
+      - formula.coffee
+      - roaster
+      - origin
+      - process
+      - formula.notes
+      - formula.stars
+      - formula.rating
+    sort:
+      - property: formula.rating
+        direction: DESC
+  - type: table
+    name: Recent Bags
+    order:
+      - formula.coffee
+      - roaster
+      - date_roasted
+      - date_purchased
+      - formula.stars
+      - price
+    sort:
+      - property: date_purchased
+        direction: DESC
+    limit: 15
+  - type: table
+    name: Details
+    order:
+      - formula.coffee
+      - roaster
+      - origin
+      - elevation
+      - harvest
+      - roast_level
+      - process
+      - date_roasted
+      - price
+    sort:
+      - property: formula.coffee
+        direction: ASC
