@@ -1,7 +1,7 @@
 ---
 title: Colombia - Las Palmas Yellow Sunset | Fruit Fermented EA DECAF
 roaster: "[[coffee-roaster-rogue-wave|Rogue Wave]]"
-origin: Columbia
+origin: Colombia
 process:
   - Fruit Fermented EA Decaf
 roast_level: Light

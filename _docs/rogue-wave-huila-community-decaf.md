@@ -1,7 +1,7 @@
 ---
 title: Colombia - Huila Community Decaf
 roaster: "[[coffee-roaster-rogue-wave|Rogue Wave]]"
-origin: Columbia
+origin: Colombia
 process:
   - Washed EA Decaf
 roast_level: Light

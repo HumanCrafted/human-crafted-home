@@ -1,7 +1,7 @@
 ---
 title: Colombia - Granja Paraiso 92 | Natural EA DECAF Red Bourbon
 roaster: "[[coffee-roaster-rogue-wave|Rogue Wave]]"
-origin: Columbia
+origin: Colombia
 process:
   - Natural EA Decaf
 roast_level: Light
