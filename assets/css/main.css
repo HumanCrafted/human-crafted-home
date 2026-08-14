@@ -1953,8 +1953,11 @@ sup a:hover {
 }
 
 /* ---- Places map (/places/, assets/js/places-map.js) ---- */
+/* Scales with viewport height (not just a fixed 480px) so a tall desktop
+   window gets real vertical space instead of a letterboxed strip; the
+   480px/820px bounds keep it sane on very short or very tall screens. */
 .places-map {
-  height: 480px;
+  height: clamp(480px, 65vh, 820px);
   max-width: 100%;
   border: 1px solid var(--border);
   margin: 2rem 0 1rem;
@@ -1997,16 +2000,6 @@ body.places-map-open {
 .places-expand-btn svg {
   width: 16px;
   height: 16px;
-}
-
-/* Carto Positron tiles are near-greyscale; a sepia nudge pulls them toward
-   the paper tone. Dark theme inverts first, then warms — filtering the tile
-   pane (not .places-map) keeps markers/popups untouched. */
-.places-map .leaflet-tile-pane {
-  filter: sepia(0.22) saturate(0.65) brightness(1.02);
-}
-[data-theme="dark"] .places-map .leaflet-tile-pane {
-  filter: invert(1) hue-rotate(180deg) brightness(0.82) contrast(0.92) sepia(0.18);
 }
 
 .places-map .leaflet-popup-content-wrapper,

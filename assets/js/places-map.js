@@ -1,9 +1,11 @@
 /**
  * Places map — renders the _places collection on a Leaflet map.
  * Data comes from #places-data (JSON emitted by _includes/places-data.html).
- * Tiles are Carto Positron (minimal, near-greyscale) tinted toward the paper
- * tone in CSS; markers are circleMarkers colored from the design tokens, so
- * theme switches restyle them live (see the data-theme MutationObserver).
+ * Tiles are Esri's Gray Canvas + Reference pair (light/dark) — a neutral
+ * gray basemap with state/country boundaries and labels baked into the
+ * theme itself, swapped wholesale on theme flip rather than filtered.
+ * Markers are circleMarkers colored from the design tokens, restyled live
+ * on the same flip (see the data-theme MutationObserver).
  */
 (function () {
   'use strict';
@@ -34,15 +36,15 @@
     };
   }
 
-  function stateBoundaryStyle() {
-    return {
-      color: token('--foreground'),
-      weight: 1,
-      opacity: 0.3,
-      fill: false,
-      interactive: false // decorative only — clicks/hover pass through to pins and tiles
-    };
-  }
+  // Esri's free, keyless "Canvas" basemap family. Base alone already bakes
+  // in state-level boundaries + labels — deliberately NOT pairing it with
+  // Esri's own Reference layer, which adds county lines, city dots, and
+  // (at closer zoom) roads on top; that's the "too much detail" clutter.
+  var TILE_SETS = {
+    light: 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',
+    dark: 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}'
+  };
+  var TILE_ATTRIBUTION = 'Tiles &copy; Esri &mdash; Esri, HERE, Garmin, © OpenStreetMap contributors, and the GIS user community';
 
   function init() {
     var el = document.getElementById('places-map');
@@ -56,28 +58,24 @@
       return;
     }
 
-    var map = L.map(el, { scrollWheelZoom: false }).setView([44.6, -89.8], 6);
+    // Esri's gray canvas is flat and clean at state-wide zoom, but past
+    // z~11 it starts rendering real street grids — capping maxZoom keeps
+    // the map from ever reaching that, in both directions (auto-fit and
+    // manual scroll/pinch), while still allowing enough zoom to separate
+    // pins clustered in one city.
+    var MAX_ZOOM = 10;
+    var map = L.map(el, { scrollWheelZoom: false, maxZoom: MAX_ZOOM }).setView([44.6, -89.8], 6);
 
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-      maxZoom: 19,
-      subdomains: 'abcd',
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-    }).addTo(map);
-
-    // US state boundaries — Positron's baked-in lines are too faint to read.
-    // Vendored GeoJSON (assets/data/us-states.json), fetched at runtime since
-    // it's static geometry, not a Jekyll collection. Added before the marker
-    // loop, but the fetch resolves after it, so bringToBack() puts it under
-    // the pins once it lands rather than covering them.
-    var statesLayer = null;
-    var statesPath = el.dataset.statesPath;
-    if (statesPath) {
-      fetch(statesPath).then(function (r) { return r.ok ? r.json() : null; }).then(function (geo) {
-        if (!geo) return;
-        statesLayer = L.geoJSON(geo, { style: stateBoundaryStyle }).addTo(map);
-        statesLayer.bringToBack();
-      }).catch(function () {});
+    // Tiles swap wholesale on theme flip (see the MutationObserver below)
+    // rather than being filtered — a genuinely different tile set, not a
+    // light one inverted to fake a dark one.
+    var activeTileLayer = null;
+    function setTileTheme(isDark) {
+      if (activeTileLayer) map.removeLayer(activeTileLayer);
+      var url = isDark ? TILE_SETS.dark : TILE_SETS.light;
+      activeTileLayer = L.tileLayer(url, { maxZoom: MAX_ZOOM, attribution: TILE_ATTRIBUTION }).addTo(map);
     }
+    setTileTheme(document.documentElement.getAttribute('data-theme') === 'dark');
 
     // ---- Fullscreen toggle ----
     var isFullscreen = false;
@@ -184,17 +182,17 @@
       var core = bounds.filter(function (b) {
         return Math.abs(b[0] - mid[0]) < 4 && Math.abs(b[1] - mid[1]) < 5;
       });
-      map.fitBounds(core.length > 1 ? core : bounds, { padding: [40, 40], maxZoom: 12 });
+      map.fitBounds(core.length > 1 ? core : bounds, { padding: [40, 40], maxZoom: MAX_ZOOM });
     } else if (bounds.length === 1) {
-      map.setView(bounds[0], 11);
+      map.setView(bounds[0], MAX_ZOOM);
     }
 
-    // Restyle markers and boundaries when the theme flips (theme.js toggles
+    // Restyle markers and swap tiles when the theme flips (theme.js toggles
     // data-theme on <html>).
     new MutationObserver(function () {
       var style = markerStyle();
       markers.forEach(function (e) { e.marker.setStyle(style); });
-      if (statesLayer) statesLayer.setStyle(stateBoundaryStyle());
+      setTileTheme(document.documentElement.getAttribute('data-theme') === 'dark');
     }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 
     // ---- Source filter bar ----
