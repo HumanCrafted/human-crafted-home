@@ -15,6 +15,11 @@
     'personal': 'personal'
   };
 
+  // Lucide maximize/minimize — same inline-SVG convention as the STL viewer's
+  // rotate-3d hint, kept out of markdown so kramdown never touches it.
+  var EXPAND_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>';
+  var COMPRESS_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v3a2 2 0 0 1-2 2H3"/><path d="M21 8h-3a2 2 0 0 1-2-2V3"/><path d="M3 16h3a2 2 0 0 1 2 2v3"/><path d="M16 21v-3a2 2 0 0 1 2-2h3"/></svg>';
+
   function token(name) {
     return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
   }
@@ -49,10 +54,44 @@
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
     }).addTo(map);
 
+    // ---- Fullscreen toggle ----
+    var isFullscreen = false;
+    var expandBtn;
+    var ExpandControl = L.Control.extend({
+      options: { position: 'topright' },
+      onAdd: function () {
+        expandBtn = L.DomUtil.create('button', 'places-expand-btn');
+        expandBtn.type = 'button';
+        expandBtn.setAttribute('aria-label', 'Expand map to full screen');
+        expandBtn.innerHTML = EXPAND_ICON;
+        L.DomEvent.disableClickPropagation(expandBtn);
+        L.DomEvent.on(expandBtn, 'click', toggleFullscreen);
+        return expandBtn;
+      }
+    });
+    map.addControl(new ExpandControl());
+
+    function toggleFullscreen() {
+      isFullscreen = !isFullscreen;
+      el.classList.toggle('is-fullscreen', isFullscreen);
+      document.body.classList.toggle('places-map-open', isFullscreen);
+      expandBtn.innerHTML = isFullscreen ? COMPRESS_ICON : EXPAND_ICON;
+      expandBtn.setAttribute('aria-label', isFullscreen ? 'Exit full screen' : 'Expand map to full screen');
+      // Let the layout settle into its new size before Leaflet re-measures,
+      // or tiles render for the old (smaller) box and leave gray gaps.
+      setTimeout(function () { map.invalidateSize(); }, 60);
+    }
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && isFullscreen) toggleFullscreen();
+    });
+
     // Match the STL viewer's convention: plain page scroll is never hijacked —
     // zoom needs ctrl/meta (what a trackpad pinch sends) or the +/- controls.
+    // In fullscreen there's no page scroll to protect (body is scroll-locked),
+    // so plain wheel zooms directly there.
     el.addEventListener('wheel', function (e) {
-      if (e.ctrlKey || e.metaKey) {
+      if (isFullscreen || e.ctrlKey || e.metaKey) {
         e.preventDefault();
         map.scrollWheelZoom.enable();
       } else {

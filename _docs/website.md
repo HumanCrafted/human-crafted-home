@@ -89,8 +89,9 @@ The [[places|Places]] note plots the `_places` collection on an interactive map 
 - Pins are `circleMarker`s colored from the design tokens (`--accent` fill, `--foreground` ring) read at runtime — a MutationObserver on `data-theme` restyles them the moment the theme flips
 - A filter bar above the map (built by the JS from whatever sources exist in the data) toggles each source on and off; places with no source count as "personal", and a multi-source place stays visible while any of its sources is on
 - Pages opt in with `has_map: true` front matter; `_includes/places-data.html` emits the collection's front matter as JSON and `assets/js/places-map.js` builds the map from it
-- Wheel-zoom needs ctrl/meta, matching the STL viewer — plain page scroll is never hijacked
+- Wheel-zoom needs ctrl/meta, matching the STL viewer — plain page scroll is never hijacked. Fullscreen is the exception: there's no page scroll to protect there (body is scroll-locked), so plain wheel zooms directly
 - Per-source detail rides in flat front-matter keys (`wf_episode`, `tc_season`, `jb_award`, …) beside a simple `sources:` list — deliberately not nested YAML, so Obsidian Bases and Liquid can both filter on it
+- A fullscreen toggle sits top-right next to the zoom control (Leaflet `L.Control`, Lucide maximize/minimize icons). It's a fixed-position overlay (`inset: 0`), not the Fullscreen API, since iOS Safari won't fullscreen arbitrary elements — Escape or the button exits, and `body` scroll locks while it's open. Leaflet sets `container.style.position = "relative"` inline at map init, which beats any stylesheet rule short of `!important`, so the `.is-fullscreen` override needs one. `map.invalidateSize()` fires ~60ms after the class toggle so tiles redraw at the new size instead of leaving gray gaps
 
 ## Key Decisions
 

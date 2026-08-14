@@ -1958,6 +1958,44 @@ sup a:hover {
   background: var(--muted);
 }
 
+/* Fullscreen toggle — a fixed overlay rather than the Fullscreen API, so it
+   works the same on iOS Safari (which won't fullscreen arbitrary elements).
+   !important is required: Leaflet sets container.style.position = "relative"
+   inline at map init, which otherwise beats any stylesheet rule. */
+.places-map.is-fullscreen {
+  position: fixed !important;
+  inset: 0;
+  z-index: 1000;
+  height: 100vh;
+  height: 100dvh;
+  max-width: none;
+  margin: 0;
+  border: none;
+}
+body.places-map-open {
+  overflow: hidden;
+}
+.places-expand-btn {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background);
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  color: var(--foreground);
+  cursor: pointer;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+}
+.places-expand-btn:hover {
+  background: var(--muted);
+}
+.places-expand-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
 /* Carto Positron tiles are near-greyscale; a sepia nudge pulls them toward
    the paper tone. Dark theme inverts first, then warms — filtering the tile
    pane (not .places-map) keeps markers/popups untouched. */
