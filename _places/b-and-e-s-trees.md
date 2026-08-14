@@ -3,9 +3,8 @@ name: "B&E's Trees"
 type: producer
 city: "Viroqua"
 state: WI
-lat: 43.53
-lng: -90.83
-coords_approx: true
+lat: 43.57178
+lng: -90.88745
 status: open
 visited: false
 sources:

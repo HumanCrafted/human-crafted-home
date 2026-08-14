@@ -3,9 +3,8 @@ name: "La Petite Grocery"
 type: restaurant
 city: "New Orleans"
 state: "LA"
-lat: 29.9511
-lng: -90.0715
-coords_approx: true
+lat: 29.9209
+lng: -90.09952
 status: open
 visited: false
 sources:

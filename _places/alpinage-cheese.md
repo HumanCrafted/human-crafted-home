@@ -3,9 +3,8 @@ name: "Alpinage Cheese"
 type: producer
 city: "Oak Creek"
 state: WI
-lat: 42.9146
-lng: -87.9004
-coords_approx: true
+lat: 42.88727
+lng: -87.86353
 status: open
 visited: false
 sources:

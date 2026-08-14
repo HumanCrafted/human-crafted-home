@@ -3,9 +3,8 @@ name: "Scales Family Farm"
 type: farm
 city: "Mequon"
 state: WI
-lat: 43.2211
-lng: -87.9962
-coords_approx: true
+lat: 43.21986
+lng: -88.02357
 status: open
 visited: false
 sources:

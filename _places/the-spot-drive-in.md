@@ -3,9 +3,8 @@ name: "The Spot Drive-In"
 type: restaurant
 city: "Kenosha"
 state: WI
-lat: 42.5594
-lng: -87.8445
-coords_approx: true
+lat: 42.56586
+lng: -87.83442
 status: open
 visited: false
 sources:

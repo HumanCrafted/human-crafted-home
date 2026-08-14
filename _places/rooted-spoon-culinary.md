@@ -3,9 +3,8 @@ name: "Rooted Spoon Culinary"
 type: restaurant
 city: "Viroqua"
 state: WI
-lat: 43.5551
-lng: -90.889
-coords_approx: true
+lat: 43.55447
+lng: -90.88993
 status: closed
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: "Good Stuff Eatery"
 type: restaurant
 city: "Washington"
 state: "DC"
-lat: 38.8853
-lng: -77.0035
-coords_approx: true
+lat: 38.8866
+lng: -77.0018
 status: open
 visited: false
 sources:

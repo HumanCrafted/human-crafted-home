@@ -3,9 +3,8 @@ name: "The Tandem"
 type: restaurant
 city: "Milwaukee"
 state: WI
-lat: 43.0577
-lng: -87.9366
-coords_approx: true
+lat: 43.0585
+lng: -87.93596
 status: closed
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: "Juniper & Ivy"
 type: restaurant
 city: "San Diego"
 state: "CA"
-lat: 32.7248
-lng: -117.1699
-coords_approx: true
+lat: 32.72739
+lng: -117.1709
 status: open
 visited: false
 sources:

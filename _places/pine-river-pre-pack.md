@@ -3,9 +3,8 @@ name: "Pine River Pre-Pack"
 type: producer
 city: "Newton"
 state: WI
-lat: 44.03
-lng: -87.775
-coords_approx: true
+lat: 44.00119
+lng: -87.79799
 status: open
 visited: false
 sources:

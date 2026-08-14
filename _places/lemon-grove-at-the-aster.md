@@ -3,9 +3,8 @@ name: "Lemon Grove at The Aster"
 type: restaurant
 city: "Los Angeles"
 state: "CA"
-lat: 34.1016
-lng: -118.3269
-coords_approx: true
+lat: 34.10239
+lng: -118.32714
 status: open
 visited: false
 sources:

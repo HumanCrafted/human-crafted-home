@@ -3,9 +3,8 @@ name: "Aba"
 type: restaurant
 city: "Chicago"
 state: "IL"
-lat: 41.8865
-lng: -87.6489
-coords_approx: true
+lat: 41.88702
+lng: -87.64887
 status: open
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: "Big Star Drive-In"
 type: restaurant
 city: "Kenosha"
 state: WI
-lat: 42.6012
-lng: -87.838
-coords_approx: true
+lat: 42.59894
+lng: -87.82803
 status: open
 visited: false
 sources:

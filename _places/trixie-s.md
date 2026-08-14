@@ -1,11 +1,10 @@
 ---
 name: "Trixie's"
 type: restaurant
-city: "Ellison Bay"
+city: "Ephraim"
 state: WI
-lat: 45.2557
-lng: -87.0777
-coords_approx: true
+lat: 45.15631
+lng: -87.17048
 status: closed
 visited: false
 sources:

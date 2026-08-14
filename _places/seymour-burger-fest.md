@@ -3,9 +3,8 @@ name: "Seymour Burger Fest"
 type: festival
 city: "Seymour"
 state: WI
-lat: 44.515
-lng: -88.32
-coords_approx: true
+lat: 44.51241
+lng: -88.32872
 status: open
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: "Graffiato"
 type: restaurant
 city: "Washington"
 state: "DC"
-lat: 38.9072
-lng: -77.0369
-coords_approx: true
+lat: 38.89845
+lng: -77.01983
 status: closed
 visited: false
 sources:

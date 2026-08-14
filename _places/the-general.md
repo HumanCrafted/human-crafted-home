@@ -3,9 +3,8 @@ name: "The General"
 type: restaurant
 city: "New York"
 state: "NY"
-lat: 40.7226
-lng: -73.9925
-coords_approx: true
+lat: 40.7211
+lng: -73.99365
 status: closed
 visited: false
 sources:

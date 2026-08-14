@@ -3,9 +3,8 @@ name: "Mullins Cheese"
 type: producer
 city: "Mosinee"
 state: WI
-lat: 44.6875
-lng: -89.6446
-coords_approx: true
+lat: 44.71616
+lng: -89.67996
 status: open
 visited: false
 sources:

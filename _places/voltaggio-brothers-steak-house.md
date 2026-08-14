@@ -3,9 +3,8 @@ name: "Voltaggio Brothers Steak House"
 type: restaurant
 city: "National Harbor"
 state: "MD"
-lat: 38.7788
-lng: -77.0075
-coords_approx: true
+lat: 38.79443
+lng: -77.00919
 status: open
 visited: false
 sources:

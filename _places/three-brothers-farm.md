@@ -3,9 +3,8 @@ name: "Three Brothers Farm"
 type: farm
 city: "Oconomowoc"
 state: WI
-lat: 43.1116
-lng: -88.4993
-coords_approx: true
+lat: 43.1786
+lng: -88.42132
 status: open
 visited: false
 sources:

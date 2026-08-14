@@ -3,9 +3,8 @@ name: "Owl Farm"
 type: farm
 city: "Viroqua"
 state: WI
-lat: 43.5569
-lng: -90.8885
-coords_approx: true
+lat: 43.55633
+lng: -90.89022
 status: open
 visited: false
 sources:

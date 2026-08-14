@@ -3,9 +3,8 @@ name: "Lac du Flambeau Wild Rice Harvest"
 type: landmark
 city: "Lac du Flambeau"
 state: WI
-lat: 45.9697
-lng: -89.8907
-coords_approx: true
+lat: 45.974
+lng: -89.8885
 status: open
 visited: false
 sources:

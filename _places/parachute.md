@@ -3,9 +3,8 @@ name: "Parachute"
 type: restaurant
 city: "Chicago"
 state: "IL"
-lat: 41.8781
-lng: -87.6298
-coords_approx: true
+lat: 41.94472
+lng: -87.7065
 status: open
 visited: false
 sources:

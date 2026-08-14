@@ -3,9 +3,8 @@ name: "Discourse Coffee"
 type: cafe
 city: "Sister Bay"
 state: WI
-lat: 45.1904
-lng: -87.1148
-coords_approx: true
+lat: 45.18414
+lng: -87.12736
 status: closed
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: "J. Henry & Sons"
 type: producer
 city: "Dane"
 state: WI
-lat: 43.2461
-lng: -89.504
-coords_approx: true
+lat: 43.28345
+lng: -89.42208
 status: open
 visited: false
 sources:

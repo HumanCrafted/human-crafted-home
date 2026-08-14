@@ -3,9 +3,8 @@ name: "Anejo"
 type: restaurant
 city: "New York"
 state: "NY"
-lat: 40.7128
-lng: -74.006
-coords_approx: true
+lat: 40.71939
+lng: -74.00435
 status: open
 visited: false
 sources:

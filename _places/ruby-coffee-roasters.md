@@ -1,11 +1,10 @@
 ---
 name: "Ruby Coffee Roasters"
 type: producer
-city: "Amherst Junction"
+city: "Nelsonville"
 state: WI
-lat: 44.4936
-lng: -89.3193
-coords_approx: true
+lat: 44.49438
+lng: -89.31003
 status: open
 visited: false
 sources:

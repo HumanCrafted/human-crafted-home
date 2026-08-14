@@ -3,9 +3,8 @@ name: "Tapped Maple Syrup"
 type: producer
 city: "Stevens Point"
 state: WI
-lat: 44.5236
-lng: -89.5746
-coords_approx: true
+lat: 44.5014
+lng: -89.53501
 status: open
 visited: false
 sources:

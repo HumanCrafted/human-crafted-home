@@ -3,9 +3,8 @@ name: "The Cider Farm"
 type: winery
 city: "Mineral Point"
 state: WI
-lat: 42.8608
-lng: -90.1799
-coords_approx: true
+lat: 42.84212
+lng: -89.95308
 status: open
 visited: false
 sources:

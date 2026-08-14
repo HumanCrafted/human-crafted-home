@@ -3,9 +3,8 @@ name: "Folktable"
 type: restaurant
 city: "Sonoma"
 state: "CA"
-lat: 38.2465
-lng: -122.4229
-coords_approx: true
+lat: 38.22437
+lng: -122.45705
 status: closed
 visited: false
 sources:

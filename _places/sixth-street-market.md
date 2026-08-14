@@ -3,9 +3,8 @@ name: "Sixth Street Market"
 type: shop
 city: "Ashland"
 state: WI
-lat: 46.5882
-lng: -90.9021
-coords_approx: true
+lat: 46.58075
+lng: -90.89699
 status: closed
 visited: false
 sources:

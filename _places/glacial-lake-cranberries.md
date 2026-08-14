@@ -3,9 +3,8 @@ name: "Glacial Lake Cranberries"
 type: farm
 city: "Wisconsin Rapids"
 state: WI
-lat: 44.321
-lng: -89.944
-coords_approx: true
+lat: 44.33479
+lng: -90.03828
 status: open
 visited: false
 sources:

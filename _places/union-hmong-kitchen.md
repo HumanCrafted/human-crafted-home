@@ -3,9 +3,8 @@ name: "Union Hmong Kitchen"
 type: restaurant
 city: "Minneapolis"
 state: MN
-lat: 44.9866
-lng: -93.274
-coords_approx: true
+lat: 44.98486
+lng: -93.27745
 status: open
 visited: false
 sources:

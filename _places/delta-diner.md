@@ -3,9 +3,8 @@ name: "Delta Diner"
 type: restaurant
 city: "Delta"
 state: WI
-lat: 46.5566
-lng: -91.3385
-coords_approx: true
+lat: 46.47453
+lng: -91.27389
 status: closed
 visited: false
 sources:

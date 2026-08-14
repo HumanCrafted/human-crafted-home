@@ -3,9 +3,8 @@ name: "Highly Likely"
 type: restaurant
 city: "Los Angeles"
 state: "CA"
-lat: 34.0295
-lng: -118.3184
-coords_approx: true
+lat: 34.0253
+lng: -118.34334
 status: open
 visited: false
 sources:

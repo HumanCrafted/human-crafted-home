@@ -3,9 +3,8 @@ name: "Good Hot Fish"
 type: restaurant
 city: "Asheville"
 state: "NC"
-lat: 35.5951
-lng: -82.5515
-coords_approx: true
+lat: 35.5885
+lng: -82.55396
 status: open
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: "Wye Oak Tavern"
 type: restaurant
 city: "Frederick"
 state: "MD"
-lat: 39.4149
-lng: -77.4105
-coords_approx: true
+lat: 39.4152
+lng: -77.40727
 status: open
 visited: false
 sources:

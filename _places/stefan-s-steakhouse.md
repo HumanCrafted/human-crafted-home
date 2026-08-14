@@ -3,9 +3,8 @@ name: "Stefan's Steakhouse"
 type: restaurant
 city: "Helsinki"
 state: "Finland"
-lat: 60.1633
-lng: 24.9438
-coords_approx: true
+lat: 60.16569
+lng: 24.94454
 status: open
 visited: false
 sources:

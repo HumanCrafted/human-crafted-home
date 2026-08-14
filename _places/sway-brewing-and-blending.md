@@ -3,9 +3,8 @@ name: "Sway Brewing + Blending"
 type: brewery
 city: "Baileys Harbor"
 state: WI
-lat: 45.068
-lng: -87.149
-coords_approx: true
+lat: 45.06668
+lng: -87.1277
 status: open
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: "Blackbelly"
 type: restaurant
 city: "Boulder"
 state: "CO"
-lat: 40.0119
-lng: -105.2408
-coords_approx: true
+lat: 40.01501
+lng: -105.22728
 status: open
 visited: false
 sources:

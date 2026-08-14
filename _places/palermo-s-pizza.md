@@ -3,9 +3,8 @@ name: "Palermo's Pizza"
 type: producer
 city: "Milwaukee"
 state: WI
-lat: 43.0333
-lng: -87.954
-coords_approx: true
+lat: 43.02716
+lng: -87.9563
 status: open
 visited: false
 sources:

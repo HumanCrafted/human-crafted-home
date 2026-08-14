@@ -3,9 +3,8 @@ name: "Siren Shrub Company"
 type: producer
 city: "Stevens Point"
 state: WI
-lat: 44.5236
-lng: -89.5746
-coords_approx: true
+lat: 44.50764
+lng: -89.52858
 status: open
 visited: false
 sources:

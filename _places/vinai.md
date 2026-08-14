@@ -3,9 +3,8 @@ name: "Vinai"
 type: restaurant
 city: "Minneapolis"
 state: MN
-lat: 45.0064
-lng: -93.256
-coords_approx: true
+lat: 45.00104
+lng: -93.26635
 status: open
 visited: false
 sources:

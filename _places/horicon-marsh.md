@@ -3,9 +3,8 @@ name: "Horicon Marsh"
 type: landmark
 city: "Horicon"
 state: WI
-lat: 43.4666
-lng: -88.622
-coords_approx: true
+lat: 43.47442
+lng: -88.59707
 status: open
 visited: false
 sources:

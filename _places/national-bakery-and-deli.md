@@ -3,9 +3,8 @@ name: "National Bakery & Deli"
 type: bakery
 city: "Milwaukee"
 state: WI
-lat: 42.9959
-lng: -87.9327
-coords_approx: true
+lat: 42.98643
+lng: -87.93362
 status: open
 visited: false
 sources:

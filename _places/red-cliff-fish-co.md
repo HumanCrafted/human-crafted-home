@@ -3,9 +3,8 @@ name: "Red Cliff Fish Co."
 type: producer
 city: "Red Cliff"
 state: WI
-lat: 46.8494
-lng: -90.789
-coords_approx: true
+lat: 46.85028
+lng: -90.79025
 status: open
 visited: false
 sources:

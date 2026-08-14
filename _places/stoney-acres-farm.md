@@ -3,9 +3,8 @@ name: "Stoney Acres Farm"
 type: farm
 city: "Athens"
 state: WI
-lat: 45.01
-lng: -90.07
-coords_approx: true
+lat: 45.08447
+lng: -90.07912
 status: open
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: "Wisco Pop!"
 type: producer
 city: "Viroqua"
 state: WI
-lat: 43.5545
-lng: -90.8886
-coords_approx: true
+lat: 43.57178
+lng: -90.88745
 status: open
 visited: false
 sources:

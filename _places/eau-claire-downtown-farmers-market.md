@@ -3,9 +3,8 @@ name: "Eau Claire Downtown Farmers Market"
 type: market
 city: "Eau Claire"
 state: WI
-lat: 44.8146
-lng: -91.503
-coords_approx: true
+lat: 44.81548
+lng: -91.50441
 status: open
 visited: false
 sources:

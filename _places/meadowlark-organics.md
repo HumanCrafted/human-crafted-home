@@ -3,9 +3,8 @@ name: "Meadowlark Organics"
 type: farm
 city: "Ridgeway"
 state: WI
-lat: 42.9231
-lng: -89.9926
-coords_approx: true
+lat: 43.01147
+lng: -90.02536
 status: open
 visited: false
 sources:

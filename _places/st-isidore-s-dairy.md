@@ -3,9 +3,8 @@ name: "St. Isidore's Dairy"
 type: farm
 city: "Osseo"
 state: WI
-lat: 44.573
-lng: -91.2277
-coords_approx: true
+lat: 44.50058
+lng: -91.23892
 status: open
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: "Black Garlic North America"
 type: producer
 city: "La Farge"
 state: WI
-lat: 43.5747
-lng: -90.6318
-coords_approx: true
+lat: 43.6165
+lng: -90.52865
 status: open
 visited: false
 sources:

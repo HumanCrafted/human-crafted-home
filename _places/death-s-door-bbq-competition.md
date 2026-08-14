@@ -3,9 +3,8 @@ name: "Death's Door BBQ Competition"
 type: festival
 city: "Washington Island"
 state: WI
-lat: 45.38
-lng: -86.925
-coords_approx: true
+lat: 45.3884
+lng: -86.92325
 status: closed
 visited: false
 sources:

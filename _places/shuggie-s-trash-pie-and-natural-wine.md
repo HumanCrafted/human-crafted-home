@@ -3,9 +3,8 @@ name: "Shuggie's Trash Pie + Natural Wine"
 type: restaurant
 city: "San Francisco"
 state: "CA"
-lat: 37.7749
-lng: -122.4194
-coords_approx: true
+lat: 37.7537
+lng: -122.41961
 status: open
 visited: false
 sources:

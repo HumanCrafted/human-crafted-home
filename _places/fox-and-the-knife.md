@@ -3,9 +3,8 @@ name: "Fox & the Knife"
 type: restaurant
 city: "South Boston"
 state: "MA"
-lat: 42.3389
-lng: -71.0453
-coords_approx: true
+lat: 42.34273
+lng: -71.05649
 status: open
 visited: false
 sources:

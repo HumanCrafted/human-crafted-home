@@ -3,9 +3,8 @@ name: "Kickapoo Country Fair"
 type: festival
 city: "La Farge"
 state: WI
-lat: 43.5754
-lng: -90.6387
-coords_approx: true
+lat: 43.58291
+lng: -90.63677
 status: open
 visited: false
 sources:

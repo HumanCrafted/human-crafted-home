@@ -3,9 +3,8 @@ name: "Jahnke Family Farm"
 type: farm
 city: "Lancaster"
 state: WI
-lat: 42.8467
-lng: -90.7107
-coords_approx: true
+lat: 42.87563
+lng: -90.68692
 status: open
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: "Elmaro Vineyard"
 type: winery
 city: "Trempealeau"
 state: WI
-lat: 44.038
-lng: -91.435
-coords_approx: true
+lat: 44.05262
+lng: -91.50583
 status: open
 visited: false
 sources:

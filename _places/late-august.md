@@ -3,9 +3,8 @@ name: "Late August"
 type: restaurant
 city: "Houston"
 state: "TX"
-lat: 29.7383
-lng: -95.3877
-coords_approx: true
+lat: 29.73521
+lng: -95.38204
 status: open
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: "Siena Tavern"
 type: restaurant
 city: "Chicago"
 state: "IL"
-lat: 41.8895
-lng: -87.6298
-coords_approx: true
+lat: 41.88908
+lng: -87.62983
 status: open
 visited: false
 sources:

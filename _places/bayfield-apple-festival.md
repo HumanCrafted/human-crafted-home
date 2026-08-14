@@ -3,9 +3,8 @@ name: "Bayfield Apple Festival"
 type: festival
 city: "Bayfield"
 state: WI
-lat: 46.811
-lng: -90.818
-coords_approx: true
+lat: 46.80985
+lng: -90.81697
 status: open
 visited: false
 sources:

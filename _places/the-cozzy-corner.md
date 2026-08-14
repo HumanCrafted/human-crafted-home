@@ -3,9 +3,8 @@ name: "The Cozzy Corner"
 type: restaurant
 city: "Appleton"
 state: WI
-lat: 44.2635
-lng: -88.4095
-coords_approx: true
+lat: 44.26192
+lng: -88.41215
 status: open
 visited: false
 sources:

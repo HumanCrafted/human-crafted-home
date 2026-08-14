@@ -3,9 +3,8 @@ name: "Enos Farms"
 type: farm
 city: "Spring Green"
 state: WI
-lat: 43.1756
-lng: -90.0679
-coords_approx: true
+lat: 43.17958
+lng: -90.12587
 status: open
 visited: false
 sources:

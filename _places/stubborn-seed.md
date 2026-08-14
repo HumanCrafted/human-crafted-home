@@ -3,9 +3,8 @@ name: "Stubborn Seed"
 type: restaurant
 city: "Miami Beach"
 state: "FL"
-lat: 25.7658
-lng: -80.1329
-coords_approx: true
+lat: 25.76996
+lng: -80.1351
 status: open
 visited: false
 sources:

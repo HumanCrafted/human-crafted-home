@@ -3,9 +3,8 @@ name: "DAMA"
 type: restaurant
 city: "Los Angeles"
 state: "CA"
-lat: 34.0522
-lng: -118.2437
-coords_approx: true
+lat: 34.03571
+lng: -118.25303
 status: open
 visited: false
 sources:

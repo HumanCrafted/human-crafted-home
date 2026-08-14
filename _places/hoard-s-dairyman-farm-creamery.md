@@ -3,9 +3,8 @@ name: "Hoard's Dairyman Farm Creamery"
 type: producer
 city: "Fort Atkinson"
 state: WI
-lat: 42.9436
-lng: -88.829
-coords_approx: true
+lat: 42.92691
+lng: -88.83744
 status: open
 visited: false
 sources:

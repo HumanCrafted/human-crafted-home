@@ -1,11 +1,10 @@
 ---
 name: "Bulldog Barbecue"
 type: restaurant
-city: "North Miami"
+city: "North Miami Beach"
 state: "FL"
-lat: 25.9425
-lng: -80.1614
-coords_approx: true
+lat: 25.9256
+lng: -80.15396
 status: closed
 visited: false
 sources:

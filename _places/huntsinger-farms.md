@@ -3,9 +3,8 @@ name: "Huntsinger Farms"
 type: farm
 city: "Eau Claire"
 state: WI
-lat: 44.757
-lng: -91.525
-coords_approx: true
+lat: 44.83924
+lng: -91.54634
 status: open
 visited: false
 sources:

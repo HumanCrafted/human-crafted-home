@@ -3,9 +3,8 @@ name: "Honeybelle"
 type: restaurant
 city: "Palm Beach Gardens"
 state: "FL"
-lat: 26.8234
-lng: -80.0937
-coords_approx: true
+lat: 26.83649
+lng: -80.15961
 status: open
 visited: false
 sources:

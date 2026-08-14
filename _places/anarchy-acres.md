@@ -3,9 +3,8 @@ name: "Anarchy Acres"
 type: farm
 city: "Mount Pleasant"
 state: WI
-lat: 42.697
-lng: -87.895
-coords_approx: true
+lat: 42.74924
+lng: -87.84612
 status: open
 visited: false
 sources:

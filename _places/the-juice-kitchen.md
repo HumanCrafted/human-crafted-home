@@ -3,9 +3,8 @@ name: "The Juice Kitchen"
 type: cafe
 city: "Milwaukee"
 state: WI
-lat: 43.0603
-lng: -87.9331
-coords_approx: true
+lat: 43.06038
+lng: -87.93293
 status: closed
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: "Deliciouser"
 type: producer
 city: "Madison"
 state: WI
-lat: 43.073
-lng: -89.401
-coords_approx: true
+lat: 43.08181
+lng: -89.37164
 status: open
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: "Deer District Farmers Market"
 type: market
 city: "Milwaukee"
 state: WI
-lat: 43.0451
-lng: -87.9172
-coords_approx: true
+lat: 43.04501
+lng: -87.91749
 status: open
 visited: false
 sources:

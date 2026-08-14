@@ -3,9 +3,8 @@ name: "Henning's Wisconsin Cheese"
 type: producer
 city: "Kiel"
 state: WI
-lat: 43.955
-lng: -87.855
-coords_approx: true
+lat: 43.96375
+lng: -87.969
 status: open
 visited: false
 sources:

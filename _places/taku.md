@@ -3,9 +3,8 @@ name: "Taku"
 type: restaurant
 city: "Seattle"
 state: "WA"
-lat: 47.6231
-lng: -122.3193
-coords_approx: true
+lat: 47.61411
+lng: -122.32324
 status: closed
 visited: false
 sources:

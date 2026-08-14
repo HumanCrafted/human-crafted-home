@@ -3,9 +3,8 @@ name: "Cedar Grove Cheese"
 type: producer
 city: "Plain"
 state: WI
-lat: 43.2794
-lng: -90.0421
-coords_approx: true
+lat: 43.28122
+lng: -90.02406
 status: open
 visited: false
 sources:

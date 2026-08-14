@@ -3,9 +3,8 @@ name: "Silver Oak Winery Culinary Program"
 type: other
 city: "Oakville"
 state: "CA"
-lat: 38.4368
-lng: -122.4088
-coords_approx: true
+lat: 38.44044
+lng: -122.38092
 status: open
 visited: false
 sources:

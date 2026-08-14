@@ -3,9 +3,8 @@ name: Tornado Steak House
 type: restaurant
 city: Madison
 state: WI
-lat: 43.0716
-lng: -89.3872
-coords_approx: true
+lat: 43.07258
+lng: -89.38462
 status: open
 visited: true
 sources:

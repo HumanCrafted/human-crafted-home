@@ -3,9 +3,8 @@ name: "Hsu's Ginseng Enterprises"
 type: farm
 city: "Wausau"
 state: WI
-lat: 45.014
-lng: -89.641
-coords_approx: true
+lat: 45.02612
+lng: -89.61939
 status: open
 visited: false
 sources:

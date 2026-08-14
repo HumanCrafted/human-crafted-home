@@ -3,9 +3,8 @@ name: "Hotel Washington"
 type: hotel
 city: "Washington Island"
 state: WI
-lat: 45.352
-lng: -86.913
-coords_approx: true
+lat: 45.34367
+lng: -86.90901
 status: open
 visited: false
 sources:

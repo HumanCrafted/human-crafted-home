@@ -3,9 +3,8 @@ name: "The Dörr Hotel"
 type: hotel
 city: "Sister Bay"
 state: WI
-lat: 45.191
-lng: -87.123
-coords_approx: true
+lat: 45.18885
+lng: -87.12215
 status: open
 visited: false
 sources:

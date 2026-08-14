@@ -3,9 +3,8 @@ name: "Beef-A-Rama"
 type: festival
 city: "Minocqua"
 state: WI
-lat: 45.8711
-lng: -89.7093
-coords_approx: true
+lat: 45.8707
+lng: -89.70968
 status: open
 visited: false
 sources:

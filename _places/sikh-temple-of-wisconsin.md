@@ -3,9 +3,8 @@ name: "Sikh Temple of Wisconsin"
 type: landmark
 city: "Oak Creek"
 state: WI
-lat: 42.9018
-lng: -87.9106
-coords_approx: true
+lat: 42.90801
+lng: -87.90852
 status: open
 visited: false
 sources:

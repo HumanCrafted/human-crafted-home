@@ -3,9 +3,8 @@ name: "Maybe Lately's"
 type: restaurant
 city: "Viroqua"
 state: WI
-lat: 43.5567
-lng: -90.8888
-coords_approx: true
+lat: 43.55645
+lng: -90.88925
 status: open
 visited: false
 sources:

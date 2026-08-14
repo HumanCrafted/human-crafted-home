@@ -3,9 +3,8 @@ name: "Serbian Fest"
 type: festival
 city: "Racine"
 state: WI
-lat: 42.7307
-lng: -87.796
-coords_approx: true
+lat: 42.73195
+lng: -87.79011
 status: open
 visited: false
 sources:

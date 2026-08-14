@@ -3,9 +3,8 @@ name: "Keewaydin Farms"
 type: farm
 city: "Viola"
 state: WI
-lat: 43.507
-lng: -90.664
-coords_approx: true
+lat: 43.51599
+lng: -90.5676
 status: open
 visited: false
 sources:

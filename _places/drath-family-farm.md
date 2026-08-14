@@ -3,9 +3,8 @@ name: "Drath Family Farm"
 type: farm
 city: "Ogdensburg"
 state: WI
-lat: 44.4527
-lng: -88.999
-coords_approx: true
+lat: 44.45691
+lng: -89.06215
 status: open
 visited: false
 sources:

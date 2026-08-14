@@ -3,9 +3,8 @@ name: "Kikkoman Foods"
 type: producer
 city: "Walworth"
 state: WI
-lat: 42.5522
-lng: -88.62
-coords_approx: true
+lat: 42.54167
+lng: -88.61919
 status: open
 visited: false
 sources:

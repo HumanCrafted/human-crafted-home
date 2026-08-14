@@ -3,9 +3,8 @@ name: "Farmhouse"
 type: restaurant
 city: "La Pointe"
 state: WI
-lat: 46.7799
-lng: -90.7885
-coords_approx: true
+lat: 46.78043
+lng: -90.78901
 status: open
 visited: false
 sources:

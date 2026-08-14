@@ -3,9 +3,8 @@ name: "Widmer's Cheese Cellars"
 type: producer
 city: "Theresa"
 state: WI
-lat: 43.5178
-lng: -88.4513
-coords_approx: true
+lat: 43.51744
+lng: -88.45316
 status: open
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: "Savory Accents"
 type: farm
 city: "Verona"
 state: WI
-lat: 42.9908
-lng: -89.5332
-coords_approx: true
+lat: 42.96802
+lng: -89.52332
 status: open
 visited: false
 sources:

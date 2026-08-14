@@ -3,9 +3,8 @@ name: "Gunshow"
 type: restaurant
 city: "Atlanta"
 state: "GA"
-lat: 33.7423
-lng: -84.3527
-coords_approx: true
+lat: 33.74069
+lng: -84.35781
 status: open
 visited: false
 sources:

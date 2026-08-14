@@ -3,9 +3,8 @@ name: "Spice Finch"
 type: restaurant
 city: "Philadelphia"
 state: "PA"
-lat: 39.9496
-lng: -75.1723
-coords_approx: true
+lat: 39.94924
+lng: -75.16931
 status: open
 visited: false
 sources:

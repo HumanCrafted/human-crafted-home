@@ -3,9 +3,8 @@ name: "Superior Fresh"
 type: farm
 city: "Hixton"
 state: WI
-lat: 44.39
-lng: -91.0
-coords_approx: true
+lat: 44.4519
+lng: -91.09312
 status: open
 visited: false
 sources:

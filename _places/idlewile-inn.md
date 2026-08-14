@@ -3,9 +3,8 @@ name: "Idlewile Inn"
 type: restaurant
 city: "St. Cloud"
 state: WI
-lat: 43.823
-lng: -88.169
-coords_approx: true
+lat: 43.82378
+lng: -88.16694
 status: open
 visited: false
 sources:

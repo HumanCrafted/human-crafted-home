@@ -3,9 +3,8 @@ name: "Briess Malt & Ingredients"
 type: producer
 city: "Chilton"
 state: WI
-lat: 44.025
-lng: -88.159
-coords_approx: true
+lat: 44.02578
+lng: -88.14291
 status: open
 visited: false
 sources:

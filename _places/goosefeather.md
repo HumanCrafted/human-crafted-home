@@ -3,9 +3,8 @@ name: "Goosefeather"
 type: restaurant
 city: "Tarrytown"
 state: "NY"
-lat: 41.0762
-lng: -73.8571
-coords_approx: true
+lat: 41.04977
+lng: -73.85792
 status: open
 visited: false
 sources:

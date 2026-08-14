@@ -3,9 +3,8 @@ name: "Muscoda Morel Mushroom Festival"
 type: festival
 city: "Muscoda"
 state: WI
-lat: 43.1911
-lng: -90.4437
-coords_approx: true
+lat: 43.18667
+lng: -90.443
 status: open
 visited: false
 sources:

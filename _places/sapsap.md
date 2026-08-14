@@ -1,11 +1,10 @@
 ---
 name: "SapSap"
 type: restaurant
-city: "Racine"
+city: "Mount Pleasant"
 state: WI
-lat: 42.7261
-lng: -87.7829
-coords_approx: true
+lat: 42.69954
+lng: -87.79247
 status: open
 visited: false
 sources:

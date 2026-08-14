@@ -3,9 +3,8 @@ name: "Mozza Bistro"
 type: restaurant
 city: "Madrid"
 state: "Spain"
-lat: 40.4168
-lng: -3.7038
-coords_approx: true
+lat: 40.43131
+lng: -3.675
 status: open
 visited: false
 sources:

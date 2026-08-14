@@ -3,9 +3,8 @@ name: "Baron's Gelato"
 type: producer
 city: "Sheboygan"
 state: WI
-lat: 43.7803
-lng: -87.7524
-coords_approx: true
+lat: 43.78591
+lng: -87.7628
 status: open
 visited: false
 sources:

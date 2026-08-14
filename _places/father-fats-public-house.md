@@ -3,9 +3,8 @@ name: "Father Fats Public House"
 type: restaurant
 city: "Stevens Point"
 state: WI
-lat: 44.5232
-lng: -89.5766
-coords_approx: true
+lat: 44.52237
+lng: -89.58503
 status: open
 visited: false
 sources:

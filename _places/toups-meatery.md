@@ -3,9 +3,8 @@ name: "Toups' Meatery"
 type: restaurant
 city: "New Orleans"
 state: "LA"
-lat: 29.9741
-lng: -90.0879
-coords_approx: true
+lat: 29.98057
+lng: -90.09456
 status: open
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: "Bootleggers Lodge"
 type: restaurant
 city: "Tomahawk"
 state: WI
-lat: 45.578
-lng: -89.7
-coords_approx: true
+lat: 45.56194
+lng: -89.71152
 status: open
 visited: false
 sources:

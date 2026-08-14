@@ -3,9 +3,8 @@ name: "Roots Southern Table"
 type: restaurant
 city: "Farmers Branch"
 state: "TX"
-lat: 32.9265
-lng: -96.8903
-coords_approx: true
+lat: 32.92324
+lng: -96.89538
 status: open
 visited: false
 sources:

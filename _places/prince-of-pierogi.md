@@ -3,9 +3,8 @@ name: "Prince of Pierogi"
 type: restaurant
 city: "Sturgeon Bay"
 state: WI
-lat: 44.8342
-lng: -87.377
-coords_approx: true
+lat: 44.84374
+lng: -87.36986
 status: open
 visited: false
 sources:

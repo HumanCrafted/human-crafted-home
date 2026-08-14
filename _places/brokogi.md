@@ -3,9 +3,8 @@ name: "BroKogi"
 type: restaurant
 city: "Stevens Point"
 state: WI
-lat: 44.5236
-lng: -89.5746
-coords_approx: true
+lat: 44.53359
+lng: -89.57548
 status: open
 visited: false
 sources:

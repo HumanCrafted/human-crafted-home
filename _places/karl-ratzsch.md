@@ -3,9 +3,8 @@ name: "Karl Ratzsch"
 type: restaurant
 city: "Milwaukee"
 state: WI
-lat: 43.0392
-lng: -87.9067
-coords_approx: true
+lat: 43.03996
+lng: -87.90765
 status: closed
 visited: false
 sources:

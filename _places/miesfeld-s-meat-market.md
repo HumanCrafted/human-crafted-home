@@ -3,9 +3,8 @@ name: "Miesfeld's Meat Market"
 type: shop
 city: "Sheboygan"
 state: WI
-lat: 43.7889
-lng: -87.7402
-coords_approx: true
+lat: 43.79819
+lng: -87.77205
 status: open
 visited: false
 sources:

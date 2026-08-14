@@ -3,9 +3,8 @@ name: "Sterling Farms"
 type: farm
 city: "Grand Marsh"
 state: WI
-lat: 43.9058
-lng: -89.7004
-coords_approx: true
+lat: 43.9523
+lng: -89.69119
 status: open
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: Liliana's Restaurant
 type: restaurant
 city: Fitchburg
 state: WI
-lat: 42.9989
-lng: -89.4331
-coords_approx: true
+lat: 43.01533
+lng: -89.43003
 status: closed
 visited: true
 sources:

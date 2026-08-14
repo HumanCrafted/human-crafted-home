@@ -3,9 +3,8 @@ name: "Food + Farm Exploration Center"
 type: museum
 city: "Plover"
 state: WI
-lat: 44.4586
-lng: -89.5443
-coords_approx: true
+lat: 44.44537
+lng: -89.52105
 status: open
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: "Mabel Gray"
 type: restaurant
 city: "Hazel Park"
 state: "MI"
-lat: 42.4645
-lng: -83.0972
-coords_approx: true
+lat: 42.46752
+lng: -83.10449
 status: open
 visited: false
 sources:

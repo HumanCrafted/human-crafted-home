@@ -3,9 +3,8 @@ name: "Tree-Ripe Fruit Co."
 type: producer
 city: "Johnson Creek"
 state: WI
-lat: 43.08
-lng: -88.7746
-coords_approx: true
+lat: 43.08978
+lng: -88.76178
 status: open
 visited: false
 sources:

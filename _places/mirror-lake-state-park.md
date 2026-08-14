@@ -3,9 +3,8 @@ name: "Mirror Lake State Park"
 type: landmark
 city: "Lake Delton"
 state: WI
-lat: 43.562
-lng: -89.818
-coords_approx: true
+lat: 43.56191
+lng: -89.80731
 status: open
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: "Cultured"
 type: bakery
 city: "Sister Bay"
 state: WI
-lat: 45.1876
-lng: -87.1096
-coords_approx: true
+lat: 45.15642
+lng: -87.13616
 status: open
 visited: false
 sources:

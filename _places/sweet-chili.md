@@ -3,9 +3,8 @@ name: "Sweet Chili"
 type: restaurant
 city: "Brooklyn"
 state: "NY"
-lat: 40.7024
-lng: -73.9257
-coords_approx: true
+lat: 40.70412
+lng: -73.93043
 status: closed
 visited: false
 sources:

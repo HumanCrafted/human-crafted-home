@@ -3,9 +3,8 @@ name: "Time and Tide"
 type: restaurant
 city: "New York"
 state: "NY"
-lat: 40.7075
-lng: -74.0021
-coords_approx: true
+lat: 40.7424
+lng: -73.98585
 status: closed
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: O&H Danish Bakery
 type: bakery
 city: Racine
 state: WI
-lat: 42.7213
-lng: -87.8552
-coords_approx: true
+lat: 42.71912
+lng: -87.85155
 status: open
 visited: true
 sources:

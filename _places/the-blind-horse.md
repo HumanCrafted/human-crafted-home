@@ -3,9 +3,8 @@ name: "The Blind Horse"
 type: winery
 city: "Kohler"
 state: WI
-lat: 43.7414
-lng: -87.7889
-coords_approx: true
+lat: 43.76122
+lng: -87.78543
 status: open
 visited: false
 sources:

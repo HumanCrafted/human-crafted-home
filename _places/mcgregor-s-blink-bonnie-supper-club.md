@@ -3,9 +3,8 @@ name: "McGregor's Blink Bonnie Supper Club"
 type: restaurant
 city: "St. Germain"
 state: WI
-lat: 45.9086
-lng: -89.4854
-coords_approx: true
+lat: 45.91712
+lng: -89.54963
 status: open
 visited: false
 sources:

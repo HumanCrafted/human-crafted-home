@@ -3,9 +3,8 @@ name: "Hook's Cheese Company"
 type: producer
 city: "Mineral Point"
 state: WI
-lat: 42.8619
-lng: -90.1786
-coords_approx: true
+lat: 42.85994
+lng: -90.17725
 status: open
 visited: false
 sources:

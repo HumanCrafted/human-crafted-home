@@ -3,9 +3,8 @@ name: "Loui's Pizza"
 type: restaurant
 city: "Hazel Park"
 state: MI
-lat: 42.4735
-lng: -83.0829
-coords_approx: true
+lat: 42.4638
+lng: -83.08443
 status: open
 visited: false
 sources:

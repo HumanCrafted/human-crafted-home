@@ -3,9 +3,8 @@ name: "Meister Cheese"
 type: producer
 city: "Muscoda"
 state: WI
-lat: 43.193
-lng: -90.44
-coords_approx: true
+lat: 43.18569
+lng: -90.42974
 status: open
 visited: false
 sources:

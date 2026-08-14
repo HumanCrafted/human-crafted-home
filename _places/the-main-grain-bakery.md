@@ -3,9 +3,8 @@ name: "The Main Grain Bakery"
 type: bakery
 city: "Stevens Point"
 state: WI
-lat: 44.525
-lng: -89.5722
-coords_approx: true
+lat: 44.52611
+lng: -89.58662
 status: open
 visited: false
 sources:

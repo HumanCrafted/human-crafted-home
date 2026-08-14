@@ -3,9 +3,8 @@ name: "Two Girls and a Farm"
 type: farm
 city: "Big Bend"
 state: WI
-lat: 42.8817
-lng: -88.2076
-coords_approx: true
+lat: 42.89367
+lng: -88.23189
 status: open
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: "New Glarus Oktoberfest"
 type: festival
 city: "New Glarus"
 state: WI
-lat: 42.8147
-lng: -89.6351
-coords_approx: true
+lat: 42.81679
+lng: -89.63412
 status: open
 visited: false
 sources:

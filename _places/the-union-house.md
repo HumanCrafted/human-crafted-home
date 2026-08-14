@@ -3,9 +3,8 @@ name: "The Union House"
 type: restaurant
 city: "Genesee Depot"
 state: WI
-lat: 42.9605
-lng: -88.377
-coords_approx: true
+lat: 42.96677
+lng: -88.37138
 status: open
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: "Broadway by Amar Santana"
 type: restaurant
 city: "Laguna Beach"
 state: "CA"
-lat: 33.5427
-lng: -117.7854
-coords_approx: true
+lat: 33.54275
+lng: -117.78238
 status: open
 visited: false
 sources:

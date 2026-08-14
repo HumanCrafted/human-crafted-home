@@ -3,9 +3,8 @@ name: "Tatiana by Kwame Onwuachi"
 type: restaurant
 city: "New York"
 state: "NY"
-lat: 40.7725
-lng: -73.9835
-coords_approx: true
+lat: 40.77104
+lng: -73.98148
 status: open
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: "Death's Door Spirits"
 type: producer
 city: "Middleton"
 state: WI
-lat: 43.1046
-lng: -89.5125
-coords_approx: true
+lat: 43.09863
+lng: -89.52784
 status: closed
 visited: false
 sources:

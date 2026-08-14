@@ -3,9 +3,8 @@ name: "Carla Hall's Southern Kitchen"
 type: restaurant
 city: "Brooklyn"
 state: "NY"
-lat: 40.6782
-lng: -73.9442
-coords_approx: true
+lat: 40.68782
+lng: -74.0012
 status: closed
 visited: false
 sources:

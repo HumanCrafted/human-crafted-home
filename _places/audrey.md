@@ -3,9 +3,8 @@ name: "Audrey"
 type: restaurant
 city: "Nashville"
 state: "TN"
-lat: 36.1627
-lng: -86.7816
-coords_approx: true
+lat: 36.18489
+lng: -86.76825
 status: open
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: "KBC"
 type: restaurant
 city: "Dothan"
 state: "AL"
-lat: 31.2232
-lng: -85.3905
-coords_approx: true
+lat: 31.22439
+lng: -85.39227
 status: open
 visited: false
 sources:

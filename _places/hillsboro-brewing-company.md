@@ -3,9 +3,8 @@ name: "Hillsboro Brewing Company"
 type: brewery
 city: "Hillsboro"
 state: WI
-lat: 43.6522
-lng: -90.341
-coords_approx: true
+lat: 43.65237
+lng: -90.33422
 status: open
 visited: false
 sources:

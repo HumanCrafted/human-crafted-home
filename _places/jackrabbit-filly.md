@@ -3,9 +3,8 @@ name: "Jackrabbit Filly"
 type: restaurant
 city: "North Charleston"
 state: "SC"
-lat: 32.8998
-lng: -79.9895
-coords_approx: true
+lat: 32.88146
+lng: -79.97767
 status: open
 visited: false
 sources:

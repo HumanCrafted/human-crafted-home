@@ -3,9 +3,8 @@ name: "Elegant Foods"
 type: bakery
 city: "Madison"
 state: WI
-lat: 43.1
-lng: -89.33
-coords_approx: true
+lat: 43.08951
+lng: -89.31154
 status: open
 visited: false
 sources:

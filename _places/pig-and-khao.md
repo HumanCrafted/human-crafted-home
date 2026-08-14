@@ -3,9 +3,8 @@ name: "Pig & Khao"
 type: restaurant
 city: "New York"
 state: "NY"
-lat: 40.7847
-lng: -73.9762
-coords_approx: true
+lat: 40.78419
+lng: -73.97731
 status: open
 visited: false
 sources:

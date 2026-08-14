@@ -3,9 +3,8 @@ name: "Ayden Kitchen & Bar"
 type: restaurant
 city: "Saskatoon"
 state: "Saskatchewan, Canada"
-lat: 52.1332
-lng: -106.67
-coords_approx: true
+lat: 52.12577
+lng: -106.66378
 status: open
 visited: false
 sources:

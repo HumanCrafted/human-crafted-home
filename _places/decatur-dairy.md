@@ -3,9 +3,8 @@ name: Decatur Dairy
 type: producer
 city: Brodhead
 state: WI
-lat: 42.627
-lng: -89.407
-coords_approx: true
+lat: 42.62695
+lng: -89.44406
 status: open
 visited: true
 sources:

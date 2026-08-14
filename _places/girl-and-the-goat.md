@@ -3,9 +3,8 @@ name: "Girl & the Goat"
 type: restaurant
 city: "Chicago"
 state: "IL"
-lat: 41.8846
-lng: -87.6486
-coords_approx: true
+lat: 41.88411
+lng: -87.64794
 status: open
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: "Aldo Leopold Shack and Farm"
 type: landmark
 city: "Baraboo"
 state: WI
-lat: 43.556
-lng: -89.674
-coords_approx: true
+lat: 43.55787
+lng: -89.63983
 status: open
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: "Mayana Chocolate"
 type: producer
 city: "Spooner"
 state: WI
-lat: 45.8225
-lng: -91.8893
-coords_approx: true
+lat: 45.81051
+lng: -91.89835
 status: open
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: "Johnston's Saltbox"
 type: restaurant
 city: "San Carlos"
 state: "CA"
-lat: 37.5049
-lng: -122.2605
-coords_approx: true
+lat: 37.49412
+lng: -122.24645
 status: open
 visited: false
 sources:

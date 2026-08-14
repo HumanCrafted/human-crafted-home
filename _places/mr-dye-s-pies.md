@@ -3,9 +3,8 @@ name: "Mr. Dye's Pies"
 type: bakery
 city: "Milwaukee"
 state: WI
-lat: 43.0387
-lng: -87.9153
-coords_approx: true
+lat: 43.03814
+lng: -87.91484
 status: open
 visited: false
 sources:

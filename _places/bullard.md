@@ -3,9 +3,8 @@ name: "Bullard"
 type: restaurant
 city: "Portland"
 state: "OR"
-lat: 45.5152
-lng: -122.6784
-coords_approx: true
+lat: 45.52058
+lng: -122.6805
 status: open
 visited: false
 sources:

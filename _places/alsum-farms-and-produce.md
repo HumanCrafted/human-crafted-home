@@ -3,9 +3,8 @@ name: "Alsum Farms & Produce"
 type: producer
 city: "Friesland"
 state: WI
-lat: 43.5892
-lng: -89.0704
-coords_approx: true
+lat: 43.60126
+lng: -89.06722
 status: open
 visited: false
 sources:

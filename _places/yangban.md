@@ -3,9 +3,8 @@ name: "Yangban"
 type: restaurant
 city: "Los Angeles"
 state: "CA"
-lat: 34.0224
-lng: -118.2325
-coords_approx: true
+lat: 34.03399
+lng: -118.2298
 status: closed
 visited: false
 sources:

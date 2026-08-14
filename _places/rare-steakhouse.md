@@ -3,9 +3,8 @@ name: "Rare Steakhouse"
 type: restaurant
 city: "Milwaukee"
 state: WI
-lat: 43.0384
-lng: -87.9021
-coords_approx: true
+lat: 43.03768
+lng: -87.90108
 status: closed
 visited: false
 sources:

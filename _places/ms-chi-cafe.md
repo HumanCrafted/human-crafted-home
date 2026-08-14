@@ -3,9 +3,8 @@ name: "Ms Chi Cafe"
 type: restaurant
 city: "Culver City"
 state: "CA"
-lat: 34.0034
-lng: -118.4327
-coords_approx: true
+lat: 34.02485
+lng: -118.39467
 status: closed
 visited: false
 sources:

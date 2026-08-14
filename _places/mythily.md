@@ -3,9 +3,8 @@ name: "Mythily"
 type: restaurant
 city: "Brooklyn, New York"
 state: "NY"
-lat: 40.7304
-lng: -73.9522
-coords_approx: true
+lat: 40.7294
+lng: -73.95744
 status: open
 visited: false
 sources:

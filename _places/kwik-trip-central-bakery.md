@@ -3,9 +3,8 @@ name: "Kwik Trip Central Bakery"
 type: producer
 city: "La Crosse"
 state: WI
-lat: 43.8654
-lng: -91.2378
-coords_approx: true
+lat: 43.85577
+lng: -91.2278
 status: open
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: "Herb & Wood"
 type: restaurant
 city: "San Diego"
 state: "CA"
-lat: 32.7245
-lng: -117.1698
-coords_approx: true
+lat: 32.72727
+lng: -117.171
 status: open
 visited: false
 sources:

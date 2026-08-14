@@ -3,9 +3,8 @@ name: "Emmi Roth"
 type: producer
 city: "Monroe"
 state: WI
-lat: 42.6011
-lng: -89.6385
-coords_approx: true
+lat: 42.61018
+lng: -89.65261
 status: open
 visited: false
 sources:

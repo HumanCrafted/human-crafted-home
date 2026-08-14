@@ -3,9 +3,8 @@ name: "Dominion Valley Farm"
 type: farm
 city: "Allenton"
 state: WI
-lat: 43.418
-lng: -88.348
-coords_approx: true
+lat: 43.49594
+lng: -88.36228
 status: closed
 visited: false
 sources:

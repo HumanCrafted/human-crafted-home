@@ -3,9 +3,8 @@ name: "Norske Nook"
 type: restaurant
 city: "Osseo"
 state: WI
-lat: 44.5735
-lng: -91.2237
-coords_approx: true
+lat: 44.57725
+lng: -91.22304
 status: open
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: "Tin Roof"
 type: restaurant
 city: "Kahului"
 state: "HI"
-lat: 20.8893
-lng: -156.4729
-coords_approx: true
+lat: 20.88503
+lng: -156.45372
 status: open
 visited: false
 sources:

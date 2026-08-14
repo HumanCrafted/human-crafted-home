@@ -3,9 +3,8 @@ name: Vitruvian Farms
 type: farm
 city: McFarland
 state: WI
-lat: 43.02
-lng: -89.31
-coords_approx: true
+lat: 42.99353
+lng: -89.3074
 status: open
 visited: true
 sources:

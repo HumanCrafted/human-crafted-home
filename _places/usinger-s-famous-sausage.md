@@ -3,9 +3,8 @@ name: "Usinger's Famous Sausage"
 type: producer
 city: "Milwaukee"
 state: WI
-lat: 43.0446
-lng: -87.9146
-coords_approx: true
+lat: 43.04368
+lng: -87.91404
 status: open
 visited: false
 sources:

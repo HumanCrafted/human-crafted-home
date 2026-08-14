@@ -3,9 +3,8 @@ name: "Cameron Park Farmers Market"
 type: market
 city: "La Crosse"
 state: WI
-lat: 43.8103
-lng: -91.2537
-coords_approx: true
+lat: 43.80993
+lng: -91.2516
 status: open
 visited: false
 sources:

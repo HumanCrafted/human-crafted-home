@@ -1,11 +1,10 @@
 ---
 name: "Kingston Creamery Co-op"
 type: producer
-city: "Kingston"
+city: "Cambria"
 state: WI
-lat: 43.69
-lng: -89.132
-coords_approx: true
+lat: 43.64633
+lng: -89.10613
 status: open
 visited: false
 sources:

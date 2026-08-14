@@ -3,9 +3,8 @@ name: "Clario Farmstead Pasta"
 type: producer
 city: "Sturgeon Bay"
 state: WI
-lat: 44.8342
-lng: -87.377
-coords_approx: true
+lat: 44.83443
+lng: -87.37661
 status: open
 visited: false
 sources:

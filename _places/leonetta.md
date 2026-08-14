@@ -3,9 +3,8 @@ name: "Leonetta"
 type: restaurant
 city: "New York"
 state: "NY"
-lat: 40.7128
-lng: -74.006
-coords_approx: true
+lat: 40.74455
+lng: -73.9809
 status: open
 visited: false
 sources:

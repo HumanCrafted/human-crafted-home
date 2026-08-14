@@ -3,9 +3,8 @@ name: "The Diplomat"
 type: restaurant
 city: "Milwaukee"
 state: WI
-lat: 43.053
-lng: -87.8965
-coords_approx: true
+lat: 43.05292
+lng: -87.90198
 status: open
 visited: false
 sources:

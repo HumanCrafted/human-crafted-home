@@ -1,11 +1,10 @@
 ---
 name: "Foliepop's"
 type: bakery
-city: "Austin"
+city: "Bee Cave"
 state: "TX"
-lat: 30.2672
-lng: -97.7431
-coords_approx: true
+lat: 30.30948
+lng: -97.93937
 status: open
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: "LaClare Family Creamery"
 type: producer
 city: "Malone"
 state: WI
-lat: 43.9333
-lng: -88.3255
-coords_approx: true
+lat: 43.92131
+lng: -88.30744
 status: open
 visited: false
 sources:

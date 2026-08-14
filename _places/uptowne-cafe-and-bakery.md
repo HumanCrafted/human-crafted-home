@@ -3,9 +3,8 @@ name: "Uptowne Cafe & Bakery"
 type: cafe
 city: "La Crosse"
 state: WI
-lat: 43.8296
-lng: -91.2465
-coords_approx: true
+lat: 43.84093
+lng: -91.24698
 status: closed
 visited: false
 sources:

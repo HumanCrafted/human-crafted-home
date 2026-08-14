@@ -3,9 +3,8 @@ name: "Flour Girl & Flame"
 type: restaurant
 city: "West Allis"
 state: WI
-lat: 43.0167
-lng: -88.007
-coords_approx: true
+lat: 43.01037
+lng: -88.0138
 status: open
 visited: false
 sources:

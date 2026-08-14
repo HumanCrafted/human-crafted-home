@@ -3,9 +3,8 @@ name: "Deer Creek Cheese"
 type: producer
 city: "Sheboygan"
 state: WI
-lat: 43.749
-lng: -87.71
-coords_approx: true
+lat: 43.74745
+lng: -87.7112
 status: open
 visited: false
 sources:

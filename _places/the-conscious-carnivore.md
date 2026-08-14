@@ -3,9 +3,8 @@ name: "The Conscious Carnivore"
 type: shop
 city: "Madison"
 state: WI
-lat: 43.0736
-lng: -89.4442
-coords_approx: true
+lat: 43.07531
+lng: -89.44317
 status: open
 visited: false
 sources:

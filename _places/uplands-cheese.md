@@ -3,9 +3,8 @@ name: "Uplands Cheese"
 type: producer
 city: "Dodgeville"
 state: WI
-lat: 43.07
-lng: -90.13
-coords_approx: true
+lat: 43.0544
+lng: -90.14164
 status: open
 visited: false
 sources:

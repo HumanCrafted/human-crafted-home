@@ -3,9 +3,8 @@ name: "Elmina"
 type: restaurant
 city: "Washington"
 state: "DC"
-lat: 38.9169
-lng: -77.0322
-coords_approx: true
+lat: 38.91931
+lng: -77.03203
 status: open
 visited: false
 sources:

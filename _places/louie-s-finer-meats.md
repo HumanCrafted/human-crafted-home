@@ -3,9 +3,8 @@ name: "Louie's Finer Meats"
 type: producer
 city: "Cumberland"
 state: WI
-lat: 45.5422
-lng: -92.0196
-coords_approx: true
+lat: 45.54485
+lng: -92.01731
 status: open
 visited: false
 sources:

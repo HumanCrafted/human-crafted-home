@@ -1,11 +1,10 @@
 ---
 name: "Leona"
 type: restaurant
-city: "Los Angeles"
+city: "Venice"
 state: "CA"
-lat: 34.0522
-lng: -118.2437
-coords_approx: true
+lat: 33.98016
+lng: -118.46526
 status: open
 visited: false
 sources:

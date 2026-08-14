@@ -3,9 +3,8 @@ name: "Soulbelly BBQ"
 type: restaurant
 city: "Las Vegas"
 state: "NV"
-lat: 36.1543
-lng: -115.1447
-coords_approx: true
+lat: 36.15573
+lng: -115.15371
 status: open
 visited: false
 sources:

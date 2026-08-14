@@ -3,9 +3,8 @@ name: "Jun"
 type: restaurant
 city: "Houston"
 state: "TX"
-lat: 29.7979
-lng: -95.3986
-coords_approx: true
+lat: 29.80397
+lng: -95.3942
 status: open
 visited: false
 sources:

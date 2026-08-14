@@ -3,9 +3,8 @@ name: "The Crack Shack"
 type: restaurant
 city: "San Diego"
 state: "CA"
-lat: 32.7157
-lng: -117.1611
-coords_approx: true
+lat: 32.72772
+lng: -117.17104
 status: open
 visited: false
 sources:

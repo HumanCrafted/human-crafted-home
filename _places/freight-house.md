@@ -3,9 +3,8 @@ name: "Freight House"
 type: restaurant
 city: "Paducah"
 state: "KY"
-lat: 37.0797
-lng: -88.6014
-coords_approx: true
+lat: 37.08396
+lng: -88.59461
 status: open
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: "Whitefeather Organics"
 type: farm
 city: "Custer"
 state: WI
-lat: 44.5058
-lng: -89.4107
-coords_approx: true
+lat: 44.50706
+lng: -89.36543
 status: open
 visited: false
 sources:

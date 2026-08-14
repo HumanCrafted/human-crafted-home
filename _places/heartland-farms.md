@@ -3,9 +3,8 @@ name: "Heartland Farms"
 type: farm
 city: "Hancock"
 state: WI
-lat: 44.133
-lng: -89.523
-coords_approx: true
+lat: 44.12246
+lng: -89.6386
 status: open
 visited: false
 sources:

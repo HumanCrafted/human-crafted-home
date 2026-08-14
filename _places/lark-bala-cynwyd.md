@@ -3,9 +3,8 @@ name: "Lark"
 type: restaurant
 city: "Bala Cynwyd"
 state: "PA"
-lat: 40.0093
-lng: -75.2321
-coords_approx: true
+lat: 40.01579
+lng: -75.21412
 status: open
 visited: false
 sources:

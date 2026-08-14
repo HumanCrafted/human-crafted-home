@@ -3,9 +3,8 @@ name: "Island Bar & Grill"
 type: restaurant
 city: "Fort Atkinson"
 state: WI
-lat: 42.885
-lng: -88.91
-coords_approx: true
+lat: 42.89321
+lng: -88.91133
 status: open
 visited: false
 sources:

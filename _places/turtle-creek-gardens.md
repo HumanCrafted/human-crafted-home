@@ -3,9 +3,8 @@ name: "Turtle Creek Gardens"
 type: farm
 city: "Delavan"
 state: WI
-lat: 42.6725
-lng: -88.6626
-coords_approx: true
+lat: 42.677
+lng: -88.69866
 status: open
 visited: false
 sources:

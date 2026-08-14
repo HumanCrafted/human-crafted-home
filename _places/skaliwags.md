@@ -3,9 +3,8 @@ name: "Skaliwags"
 type: restaurant
 city: "Algoma"
 state: WI
-lat: 44.6081
-lng: -87.433
-coords_approx: true
+lat: 44.60762
+lng: -87.43763
 status: closed
 visited: false
 sources:

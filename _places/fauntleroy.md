@@ -3,9 +3,8 @@ name: "Fauntleroy"
 type: restaurant
 city: "Milwaukee"
 state: WI
-lat: 43.0338
-lng: -87.9067
-coords_approx: true
+lat: 43.03445
+lng: -87.90567
 status: closed
 visited: false
 sources:

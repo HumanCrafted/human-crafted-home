@@ -3,9 +3,8 @@ name: "Giant Jones Brewing Company"
 type: brewery
 city: "Madison"
 state: WI
-lat: 43.0803
-lng: -89.3697
-coords_approx: true
+lat: 43.08213
+lng: -89.3706
 status: open
 visited: false
 sources:

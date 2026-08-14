@@ -3,9 +3,8 @@ name: "House of Birds + Drop Biscuits"
 type: restaurant
 city: "Miami"
 state: "FL"
-lat: 25.7617
-lng: -80.1918
-coords_approx: true
+lat: 25.72893
+lng: -80.23508
 status: open
 visited: false
 sources:

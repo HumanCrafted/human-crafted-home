@@ -3,9 +3,8 @@ name: "Arlo Grey"
 type: restaurant
 city: "Austin"
 state: "TX"
-lat: 30.2672
-lng: -97.7431
-coords_approx: true
+lat: 30.26271
+lng: -97.74387
 status: open
 visited: false
 sources:

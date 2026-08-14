@@ -3,9 +3,8 @@ name: "Hinchley's Dairy Farm"
 type: farm
 city: "Cambridge"
 state: WI
-lat: 43.036
-lng: -89.041
-coords_approx: true
+lat: 43.00364
+lng: -89.07012
 status: open
 visited: false
 sources:

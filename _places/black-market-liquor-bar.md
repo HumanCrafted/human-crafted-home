@@ -3,9 +3,8 @@ name: "Black Market Liquor Bar"
 type: bar
 city: "Studio City"
 state: "CA"
-lat: 34.1398
-lng: -118.3997
-coords_approx: true
+lat: 34.14289
+lng: -118.3911
 status: open
 visited: false
 sources:

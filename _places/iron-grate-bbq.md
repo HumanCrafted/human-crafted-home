@@ -3,9 +3,8 @@ name: "Iron Grate BBQ"
 type: restaurant
 city: "Milwaukee"
 state: WI
-lat: 42.9536
-lng: -87.9043
-coords_approx: true
+lat: 42.96944
+lng: -87.90987
 status: closed
 visited: false
 sources:

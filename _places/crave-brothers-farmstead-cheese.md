@@ -3,9 +3,8 @@ name: "Crave Brothers Farmstead Cheese"
 type: producer
 city: "Waterloo"
 state: WI
-lat: 43.1666
-lng: -88.984
-coords_approx: true
+lat: 43.23422
+lng: -88.96937
 status: open
 visited: false
 sources:

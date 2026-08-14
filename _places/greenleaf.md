@@ -3,9 +3,8 @@ name: "Greenleaf"
 type: restaurant
 city: "Milford"
 state: "NH"
-lat: 42.8342
-lng: -71.6495
-coords_approx: true
+lat: 42.83559
+lng: -71.64813
 status: open
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: "Ahan"
 type: restaurant
 city: "Madison"
 state: WI
-lat: 43.0894
-lng: -89.3452
-coords_approx: true
+lat: 43.07809
+lng: -89.37204
 status: open
 visited: false
 sources:

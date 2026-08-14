@@ -3,9 +3,8 @@ name: "Henriksen Fisheries"
 type: producer
 city: "Ellison Bay"
 state: WI
-lat: 45.256
-lng: -87.077
-coords_approx: true
+lat: 45.25667
+lng: -87.07026
 status: open
 visited: false
 sources:

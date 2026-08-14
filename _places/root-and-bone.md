@@ -3,9 +3,8 @@ name: "Root & Bone"
 type: restaurant
 city: "South Miami"
 state: "FL"
-lat: 25.7062
-lng: -80.2967
-coords_approx: true
+lat: 25.703
+lng: -80.29073
 status: open
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: "Tortilleria Zepeda"
 type: producer
 city: "Lone Rock"
 state: WI
-lat: 43.1839
-lng: -90.1996
-coords_approx: true
+lat: 43.18204
+lng: -90.19823
 status: open
 visited: false
 sources:

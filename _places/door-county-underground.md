@@ -3,9 +3,8 @@ name: "Door County Underground"
 type: restaurant
 city: "Sister Bay"
 state: WI
-lat: 45.2
-lng: -87.11
-coords_approx: true
+lat: 45.21216
+lng: -87.11983
 status: open
 visited: false
 sources:

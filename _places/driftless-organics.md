@@ -3,9 +3,8 @@ name: "Driftless Organics"
 type: farm
 city: "Soldiers Grove"
 state: WI
-lat: 43.3939
-lng: -90.7748
-coords_approx: true
+lat: 43.38758
+lng: -90.92496
 status: open
 visited: false
 sources:

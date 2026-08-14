@@ -3,9 +3,8 @@ name: "Bos Meadery"
 type: producer
 city: "Madison"
 state: WI
-lat: 43.0827
-lng: -89.3699
-coords_approx: true
+lat: 43.08157
+lng: -89.37415
 status: closed
 visited: false
 sources:

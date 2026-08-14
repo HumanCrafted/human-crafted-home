@@ -3,9 +3,8 @@ name: "Kickapoo Coffee Roasters"
 type: cafe
 city: "Viroqua"
 state: WI
-lat: 43.556
-lng: -90.8884
-coords_approx: true
+lat: 43.57178
+lng: -90.88745
 status: open
 visited: false
 sources:

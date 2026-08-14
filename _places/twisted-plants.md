@@ -3,9 +3,8 @@ name: "Twisted Plants"
 type: restaurant
 city: "Cudahy"
 state: WI
-lat: 42.9497
-lng: -87.8613
-coords_approx: true
+lat: 42.95522
+lng: -87.86011
 status: open
 visited: false
 sources:

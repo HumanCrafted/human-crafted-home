@@ -3,9 +3,8 @@ name: "Michael Fields Agricultural Institute"
 type: venue
 city: "East Troy"
 state: WI
-lat: 42.7847
-lng: -88.4051
-coords_approx: true
+lat: 42.80974
+lng: -88.44465
 status: open
 visited: false
 sources:

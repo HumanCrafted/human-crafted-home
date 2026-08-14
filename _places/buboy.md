@@ -3,9 +3,8 @@ name: "Buboy"
 type: restaurant
 city: "Houston"
 state: "TX"
-lat: 29.7604
-lng: -95.3698
-coords_approx: true
+lat: 29.75765
+lng: -95.37057
 status: open
 visited: false
 sources:

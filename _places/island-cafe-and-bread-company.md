@@ -3,9 +3,8 @@ name: "Island Cafe and Bread Company"
 type: cafe
 city: "Washington Island"
 state: WI
-lat: 45.3672
-lng: -86.9226
-coords_approx: true
+lat: 45.37513
+lng: -86.93054
 status: closed
 visited: false
 sources:

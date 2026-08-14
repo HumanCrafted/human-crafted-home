@@ -3,9 +3,8 @@ name: "Rose Mary"
 type: restaurant
 city: "Chicago"
 state: "IL"
-lat: 41.8864
-lng: -87.6537
-coords_approx: true
+lat: 41.88694
+lng: -87.65119
 status: open
 visited: false
 sources:

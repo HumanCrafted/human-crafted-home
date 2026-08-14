@@ -3,9 +3,8 @@ name: "Three Waters Reserve"
 type: venue
 city: "Brodhead"
 state: WI
-lat: 42.616
-lng: -89.383
-coords_approx: true
+lat: 42.64897
+lng: -89.40753
 status: open
 visited: false
 sources:

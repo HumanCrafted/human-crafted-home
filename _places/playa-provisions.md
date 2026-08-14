@@ -3,9 +3,8 @@ name: "Playa Provisions"
 type: restaurant
 city: "Playa del Rey"
 state: "CA"
-lat: 33.955
-lng: -118.4487
-coords_approx: true
+lat: 33.95801
+lng: -118.44975
 status: open
 visited: false
 sources:

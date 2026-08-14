@@ -3,9 +3,8 @@ name: "Anaway Place"
 type: hotel
 city: "Richland Center"
 state: WI
-lat: 43.3347
-lng: -90.3868
-coords_approx: true
+lat: 43.26974
+lng: -90.44156
 status: open
 visited: false
 sources:

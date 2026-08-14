@@ -3,9 +3,8 @@ name: "Red Cabin at Green Acres"
 type: restaurant
 city: "Fond du Lac"
 state: WI
-lat: 43.7566
-lng: -88.335
-coords_approx: true
+lat: 43.75406
+lng: -88.35861
 status: open
 visited: false
 sources:

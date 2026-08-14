@@ -3,9 +3,8 @@ name: "Cluck N Cleaver"
 type: restaurant
 city: "Calgary"
 state: "Alberta, Canada"
-lat: 51.0375
-lng: -114.0719
-coords_approx: true
+lat: 51.03907
+lng: -114.09504
 status: open
 visited: false
 sources:

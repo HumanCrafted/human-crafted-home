@@ -3,9 +3,8 @@ name: "Hauser's Superior View Farm"
 type: farm
 city: "Bayfield"
 state: WI
-lat: 46.856
-lng: -90.859
-coords_approx: true
+lat: 46.825
+lng: -90.84296
 status: open
 visited: false
 sources:

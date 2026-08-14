@@ -3,9 +3,8 @@ name: "Bacalar"
 type: restaurant
 city: "Austin"
 state: "TX"
-lat: 30.2672
-lng: -97.7431
-coords_approx: true
+lat: 30.25599
+lng: -97.73903
 status: closed
 visited: false
 sources:

@@ -3,9 +3,8 @@ name: "Knowlton House Distillery"
 type: producer
 city: "Mosinee"
 state: WI
-lat: 44.688
-lng: -89.66
-coords_approx: true
+lat: 44.72526
+lng: -89.68103
 status: open
 visited: false
 sources:

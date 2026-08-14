@@ -3,9 +3,8 @@ name: "The Del-Bar"
 type: restaurant
 city: "Lake Delton"
 state: WI
-lat: 43.591
-lng: -89.786
-coords_approx: true
+lat: 43.59937
+lng: -89.79318
 status: open
 visited: false
 sources:

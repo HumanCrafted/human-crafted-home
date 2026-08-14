@@ -3,9 +3,8 @@ name: "Osteria Tre Tassi"
 type: restaurant
 city: "Ellison Bay"
 state: WI
-lat: 45.2561
-lng: -87.077
-coords_approx: true
+lat: 45.25294
+lng: -87.07103
 status: open
 visited: false
 sources:

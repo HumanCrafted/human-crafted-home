@@ -3,9 +3,8 @@ name: "Agni"
 type: restaurant
 city: "Columbus"
 state: "OH"
-lat: 39.9522
-lng: -83.0022
-coords_approx: true
+lat: 39.94752
+lng: -82.99748
 status: open
 visited: false
 sources:

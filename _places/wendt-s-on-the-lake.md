@@ -3,9 +3,8 @@ name: "Wendt's on the Lake"
 type: restaurant
 city: "Van Dyne"
 state: WI
-lat: 43.904
-lng: -88.445
-coords_approx: true
+lat: 43.89321
+lng: -88.46864
 status: open
 visited: false
 sources:

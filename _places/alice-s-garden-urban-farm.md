@@ -3,9 +3,8 @@ name: "Alice's Garden Urban Farm"
 type: farm
 city: "Milwaukee"
 state: WI
-lat: 43.0605
-lng: -87.9385
-coords_approx: true
+lat: 43.05816
+lng: -87.93877
 status: open
 visited: false
 sources:

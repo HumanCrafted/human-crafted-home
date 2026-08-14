@@ -3,9 +3,8 @@ name: "Church and Union"
 type: restaurant
 city: "Charleston"
 state: "SC"
-lat: 32.7847
-lng: -79.9354
-coords_approx: true
+lat: 32.78139
+lng: -79.92773
 status: open
 visited: false
 sources:

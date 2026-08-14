@@ -3,9 +3,8 @@ name: "Central Waters Brewing"
 type: brewery
 city: "Amherst"
 state: WI
-lat: 44.4515
-lng: -89.2891
-coords_approx: true
+lat: 44.44219
+lng: -89.27974
 status: open
 visited: false
 sources:

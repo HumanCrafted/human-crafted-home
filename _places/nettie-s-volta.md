@@ -3,9 +3,8 @@ name: "Nettie's Volta"
 type: restaurant
 city: "Plum City"
 state: WI
-lat: 44.635
-lng: -92.191
-coords_approx: true
+lat: 44.63023
+lng: -92.19258
 status: open
 visited: false
 sources:

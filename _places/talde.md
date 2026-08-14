@@ -3,9 +3,8 @@ name: "Talde"
 type: restaurant
 city: "Brooklyn"
 state: "NY"
-lat: 40.6782
-lng: -73.9442
-coords_approx: true
+lat: 40.66561
+lng: -73.98256
 status: open
 visited: false
 sources:

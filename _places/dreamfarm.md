@@ -3,9 +3,8 @@ name: "Dreamfarm"
 type: producer
 city: "Cross Plains"
 state: WI
-lat: 43.144
-lng: -89.655
-coords_approx: true
+lat: 43.14389
+lng: -89.67521
 status: open
 visited: false
 sources:
