@@ -13,6 +13,6 @@ draft: false
 ---
 A map of places for my own reference, but open to everyone. Starting with some "foodie" spots.
 
-<div id="places-map" class="places-map" data-marker-path="{{ '/assets/js/lib/leaflet/images/' | relative_url }}"></div>
+<div id="places-map" class="places-map" data-marker-path="{{ '/assets/js/lib/leaflet/images/' | relative_url }}" data-states-path="{{ '/assets/data/us-states.json' | relative_url }}"></div>
 
 {% assign mapped = site.places | where_exp: "p", "p.lat" %}

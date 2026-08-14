@@ -34,6 +34,16 @@
     };
   }
 
+  function stateBoundaryStyle() {
+    return {
+      color: token('--foreground'),
+      weight: 1,
+      opacity: 0.3,
+      fill: false,
+      interactive: false // decorative only — clicks/hover pass through to pins and tiles
+    };
+  }
+
   function init() {
     var el = document.getElementById('places-map');
     var dataEl = document.getElementById('places-data');
@@ -53,6 +63,21 @@
       subdomains: 'abcd',
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
     }).addTo(map);
+
+    // US state boundaries — Positron's baked-in lines are too faint to read.
+    // Vendored GeoJSON (assets/data/us-states.json), fetched at runtime since
+    // it's static geometry, not a Jekyll collection. Added before the marker
+    // loop, but the fetch resolves after it, so bringToBack() puts it under
+    // the pins once it lands rather than covering them.
+    var statesLayer = null;
+    var statesPath = el.dataset.statesPath;
+    if (statesPath) {
+      fetch(statesPath).then(function (r) { return r.ok ? r.json() : null; }).then(function (geo) {
+        if (!geo) return;
+        statesLayer = L.geoJSON(geo, { style: stateBoundaryStyle }).addTo(map);
+        statesLayer.bringToBack();
+      }).catch(function () {});
+    }
 
     // ---- Fullscreen toggle ----
     var isFullscreen = false;
@@ -164,10 +189,12 @@
       map.setView(bounds[0], 11);
     }
 
-    // Restyle markers when the theme flips (theme.js toggles data-theme on <html>).
+    // Restyle markers and boundaries when the theme flips (theme.js toggles
+    // data-theme on <html>).
     new MutationObserver(function () {
       var style = markerStyle();
       markers.forEach(function (e) { e.marker.setStyle(style); });
+      if (statesLayer) statesLayer.setStyle(stateBoundaryStyle());
     }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 
     // ---- Source filter bar ----
