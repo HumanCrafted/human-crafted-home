@@ -24,6 +24,7 @@ node_modules
 .obsidian/workspace
 .obsidian/hotkeys.json
 .obsidian/graph.json
+.obsidian/app.json
 
 # Debug logs
 npm-debug.log*
