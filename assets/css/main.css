@@ -802,7 +802,10 @@ hr {
     position: fixed;
     right: 1rem;
     bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
-    z-index: 90;
+    /* Leaflet's own CSS puts its control corners (.leaflet-top/.leaflet-bottom,
+       holding the zoom and places-map expand buttons) at z-index: 1000 — this
+       has to clear that or the map control corner covers the FAB on scroll. */
+    z-index: 1001;
     height: 2.25rem;
     padding: 0 1.1rem;
     font-size: 16px !important;
