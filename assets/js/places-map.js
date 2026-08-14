@@ -108,8 +108,18 @@
       bounds.push([p.lat, p.lng]);
     });
 
+    // Frame the dense cluster, not the outliers — one far-away pin (a Georgia
+    // peach farm) shouldn't zoom the whole map out to half the country. Median
+    // center, then keep pins within ~4° (~450km); the rest are reachable by
+    // panning/zooming out.
     if (bounds.length > 1) {
-      map.fitBounds(bounds, { padding: [40, 40], maxZoom: 12 });
+      var lats = bounds.map(function (b) { return b[0]; }).sort(function (a, b) { return a - b; });
+      var lngs = bounds.map(function (b) { return b[1]; }).sort(function (a, b) { return a - b; });
+      var mid = [lats[Math.floor(lats.length / 2)], lngs[Math.floor(lngs.length / 2)]];
+      var core = bounds.filter(function (b) {
+        return Math.abs(b[0] - mid[0]) < 4 && Math.abs(b[1] - mid[1]) < 5;
+      });
+      map.fitBounds(core.length > 1 ? core : bounds, { padding: [40, 40], maxZoom: 12 });
     } else if (bounds.length === 1) {
       map.setView(bounds[0], 11);
     }

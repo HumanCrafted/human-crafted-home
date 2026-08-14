@@ -17,3 +17,5 @@ tags:
   - place
 ---
 Featured on Wisconsin Foodie S16E03 — "Kingston Creamery Co-op, Owl Farm Dinner". [Watch the episode](https://www.youtube.com/watch?v=Sl_PccinQ9E&t=744s).
+
+Also the show's recurring outdoor kitchen — e.g. the S14E02 carne asada cook with Tortilleria Zepeda's tortillas ([watch](https://www.youtube.com/watch?v=WkO8193DG9M)).

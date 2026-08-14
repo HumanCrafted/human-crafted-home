@@ -1,18 +1,18 @@
 ---
-name: "Vitruvian Farms"
+name: Vitruvian Farms
 type: farm
-city: "McFarland"
+city: McFarland
 state: WI
 lat: 43.02
 lng: -89.31
 coords_approx: true
 status: open
-visited: false
+visited: true
 sources:
   - wisconsin-foodie
 wf_episode: S16E08
 wf_video: https://www.youtube.com/watch?v=DB5BbNJnX3M&t=360s
-map_note: "Luke and Sean harvest oyster mushrooms and peak-season produce at this organic farm that supplies Mint Mark's kitchen."
+map_note: Luke and Sean harvest oyster mushrooms and peak-season produce at this organic farm that supplies Mint Mark's kitchen.
 tags:
   - place
 ---

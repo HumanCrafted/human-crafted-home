@@ -17,3 +17,5 @@ tags:
   - place
 ---
 Featured on Wisconsin Foodie S16E05 — "Stoney Acres Pizza Farm, Casimir Gold Maple Syrup, BroKogi". [Watch the episode](https://www.youtube.com/watch?v=_fI6os13FUM&t=36s).
+
+First featured back in S06E07, when the pizza-farm nights were just getting going ([watch](https://www.youtube.com/watch?v=DW0TK9yeBKE)).

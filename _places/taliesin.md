@@ -16,3 +16,5 @@ tags:
   - place
 ---
 Featured on Wisconsin Foodie S16E09 — "The Art of Cheese Festival". [Watch the episode](https://www.youtube.com/watch?v=IPy2P4hMeBo&t=25s).
+
+Also visited in S10E06 — "Lombardino's | Taliesin" — for chef Patrick O'Halloran's 100-guest farm dinner ([watch](https://www.youtube.com/watch?v=9riGnKWfbv8&t=505s)).
