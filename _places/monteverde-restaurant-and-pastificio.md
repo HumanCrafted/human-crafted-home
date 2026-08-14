@@ -17,4 +17,4 @@ map_note: "Grueneberg's pasta-focused Monteverde has become one of Chicago's mos
 tags:
   - place
 ---
-Sarah Grueneberg was runner-up on Season 9 (Texas).
+Sarah Grueneberg was runner-up on Season 9 (Texas). Bailey Sullivan, a chef at the restaurant, was also runner-up on Season 22 (Destination Canada).
