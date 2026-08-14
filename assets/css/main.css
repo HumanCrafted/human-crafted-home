@@ -2048,12 +2048,32 @@ body.places-map-open {
   font-size: 0.9rem;
 }
 
+/* "Categories" label above the filter bar — matches the homepage's "The
+   Archive" heading (font-size/weight/color from .archive-title), written
+   as a self-contained rule rather than sharing that class: .doc-content >
+   h2 (ruled, bold Plex Sans, its own margins) outranks a single class by
+   specificity and would otherwise win. */
+.doc-content > .places-categories-title {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--foreground);
+  border-top: none;
+  padding-top: 0;
+  margin: 2rem 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 /* Source filter bar (injected above the map by places-map.js) */
 .places-filters {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
   margin: 2rem 0 0;
+}
+.places-categories-title + .places-filters {
+  margin-top: 0;
 }
 .places-filters + .places-map {
   margin-top: 0.75rem;

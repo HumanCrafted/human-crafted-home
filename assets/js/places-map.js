@@ -11,8 +11,8 @@
   'use strict';
 
   var SOURCE_LABELS = {
-    'wisconsin-foodie': 'Wisconsin Foodie',
-    'top-chef': 'Top Chef',
+    'wisconsin-foodie': 'Wisconsin Foodie Spots',
+    'top-chef': 'Top Chef Restaurants',
     'james-beard': 'James Beard',
     'personal': 'personal'
   };
@@ -59,12 +59,14 @@
     }
 
     // Esri's gray canvas is flat and clean at state-wide zoom, but past
-    // z~11 it starts rendering real street grids — capping maxZoom keeps
-    // the map from ever reaching that, in both directions (auto-fit and
-    // manual scroll/pinch), while still allowing enough zoom to separate
-    // pins clustered in one city.
-    var MAX_ZOOM = 10;
-    var map = L.map(el, { scrollWheelZoom: false, maxZoom: MAX_ZOOM }).setView([44.6, -89.8], 6);
+    // z~11 it starts rendering real street grids. DEFAULT_ZOOM_CAP keeps
+    // the *auto-framed* view (fitBounds / single-pin setView, below) from
+    // ever landing there uninvited — it does NOT limit the map overall,
+    // so a reader can still scroll/pinch/+ deeper to pull apart pins
+    // packed into one city; street grids showing up at that point is fine
+    // since the reader chose to zoom in that far.
+    var DEFAULT_ZOOM_CAP = 10;
+    var map = L.map(el, { scrollWheelZoom: false }).setView([44.6, -89.8], 6);
 
     // Tiles swap wholesale on theme flip (see the MutationObserver below)
     // rather than being filtered — a genuinely different tile set, not a
@@ -73,7 +75,7 @@
     function setTileTheme(isDark) {
       if (activeTileLayer) map.removeLayer(activeTileLayer);
       var url = isDark ? TILE_SETS.dark : TILE_SETS.light;
-      activeTileLayer = L.tileLayer(url, { maxZoom: MAX_ZOOM, attribution: TILE_ATTRIBUTION }).addTo(map);
+      activeTileLayer = L.tileLayer(url, { maxZoom: 16, attribution: TILE_ATTRIBUTION }).addTo(map);
     }
     setTileTheme(document.documentElement.getAttribute('data-theme') === 'dark');
 
@@ -182,9 +184,9 @@
       var core = bounds.filter(function (b) {
         return Math.abs(b[0] - mid[0]) < 4 && Math.abs(b[1] - mid[1]) < 5;
       });
-      map.fitBounds(core.length > 1 ? core : bounds, { padding: [40, 40], maxZoom: MAX_ZOOM });
+      map.fitBounds(core.length > 1 ? core : bounds, { padding: [40, 40], maxZoom: DEFAULT_ZOOM_CAP });
     } else if (bounds.length === 1) {
-      map.setView(bounds[0], MAX_ZOOM);
+      map.setView(bounds[0], DEFAULT_ZOOM_CAP);
     }
 
     // Restyle markers and swap tiles when the theme flips (theme.js toggles
@@ -236,6 +238,10 @@
       });
       bar.appendChild(btn);
     });
+    var title = document.createElement('h2');
+    title.className = 'places-categories-title';
+    title.textContent = 'Categories';
+    el.parentNode.insertBefore(title, el);
     el.parentNode.insertBefore(bar, el);
   }
 
