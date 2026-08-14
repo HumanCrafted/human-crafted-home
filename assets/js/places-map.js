@@ -81,7 +81,8 @@
             ? '<a href="' + esc(p.wf_video) + '" target="_blank" rel="noopener">' + label + '</a>'
             : label);
         } else if (s === 'top-chef') {
-          badges.push('Top Chef' + (p.tc_season ? ' S' + esc(p.tc_season) : '') + (p.tc_contestant ? ' · ' + esc(p.tc_contestant) : ''));
+          var tcResult = p.tc_result && p.tc_result !== 'contestant' ? ' (' + esc(p.tc_result) + ')' : '';
+          badges.push('Top Chef' + (p.tc_season ? ' S' + esc(p.tc_season) : '') + (p.tc_contestant ? ' · ' + esc(p.tc_contestant) : '') + tcResult);
         } else if (s === 'james-beard') {
           badges.push('James Beard' + (p.jb_result ? ' ' + esc(p.jb_result) : '') + (p.jb_year ? ' ' + esc(p.jb_year) : '') + (p.jb_award ? ' · ' + esc(p.jb_award) : ''));
         } else {

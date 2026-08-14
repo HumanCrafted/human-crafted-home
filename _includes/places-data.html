@@ -8,7 +8,7 @@
 <script type="application/json" id="places-data">
 [
 {%- for p in mapped -%}
-{"name":{{ p.name | jsonify }},"type":{{ p.type | jsonify }},"city":{{ p.city | jsonify }},"state":{{ p.state | jsonify }},"lat":{{ p.lat }},"lng":{{ p.lng }},"status":{{ p.status | jsonify }},"visited":{{ p.visited | jsonify }},"sources":{{ p.sources | jsonify }},"wf_episode":{{ p.wf_episode | jsonify }},"wf_video":{{ p.wf_video | jsonify }},"tc_season":{{ p.tc_season | jsonify }},"tc_contestant":{{ p.tc_contestant | jsonify }},"jb_award":{{ p.jb_award | jsonify }},"jb_result":{{ p.jb_result | jsonify }},"jb_year":{{ p.jb_year | jsonify }},"note":{{ p.map_note | jsonify }}}{% unless forloop.last %},{% endunless %}
+{"name":{{ p.name | jsonify }},"type":{{ p.type | jsonify }},"city":{{ p.city | jsonify }},"state":{{ p.state | jsonify }},"lat":{{ p.lat }},"lng":{{ p.lng }},"status":{{ p.status | jsonify }},"visited":{{ p.visited | jsonify }},"sources":{{ p.sources | jsonify }},"wf_episode":{{ p.wf_episode | jsonify }},"wf_video":{{ p.wf_video | jsonify }},"tc_season":{{ p.tc_season | jsonify }},"tc_contestant":{{ p.tc_contestant | jsonify }},"tc_result":{{ p.tc_result | jsonify }},"jb_award":{{ p.jb_award | jsonify }},"jb_result":{{ p.jb_result | jsonify }},"jb_year":{{ p.jb_year | jsonify }},"note":{{ p.map_note | jsonify }}}{% unless forloop.last %},{% endunless %}
 {%- endfor -%}
 ]
 </script>
