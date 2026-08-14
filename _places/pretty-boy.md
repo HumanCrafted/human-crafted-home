@@ -6,6 +6,7 @@ state: "GA"
 lat: 33.9603
 lng: -83.383
 status: open
+color: yellow
 visited: false
 sources:
   - top-chef

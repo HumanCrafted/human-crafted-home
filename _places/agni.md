@@ -6,6 +6,7 @@ state: "OH"
 lat: 39.94752
 lng: -82.99748
 status: open
+color: yellow
 visited: false
 sources:
   - top-chef

@@ -6,6 +6,7 @@ state: "TX"
 lat: 30.26271
 lng: -97.74387
 status: open
+color: yellow
 visited: false
 sources:
   - top-chef

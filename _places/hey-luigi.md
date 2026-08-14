@@ -6,6 +6,7 @@ state: "OR"
 lat: 45.5309
 lng: -122.6989
 status: open
+color: yellow
 visited: false
 sources:
   - top-chef

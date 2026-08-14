@@ -6,6 +6,7 @@ state: "AL"
 lat: 31.22439
 lng: -85.39227
 status: open
+color: yellow
 visited: false
 sources:
   - top-chef

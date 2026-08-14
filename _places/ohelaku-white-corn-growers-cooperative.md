@@ -7,6 +7,7 @@ lat: 44.4986
 lng: -88.1832
 coords_approx: true
 status: open
+color: olive
 visited: false
 sources:
   - wisconsin-foodie

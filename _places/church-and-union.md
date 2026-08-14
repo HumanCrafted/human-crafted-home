@@ -6,6 +6,7 @@ state: "SC"
 lat: 32.78139
 lng: -79.92773
 status: open
+color: yellow
 visited: false
 sources:
   - top-chef

@@ -6,6 +6,7 @@ state: Germany
 lat: 48.1376
 lng: 11.5799
 status: open
+color: olive
 visited: false
 sources:
   - wisconsin-foodie

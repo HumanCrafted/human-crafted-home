@@ -6,6 +6,7 @@ state: "MI"
 lat: 42.46752
 lng: -83.10449
 status: open
+color: yellow
 visited: false
 sources:
   - top-chef

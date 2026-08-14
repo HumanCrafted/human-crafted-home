@@ -6,6 +6,7 @@ state: "NV"
 lat: 36.0281
 lng: -115.0631
 status: open
+color: yellow
 visited: false
 sources:
   - top-chef

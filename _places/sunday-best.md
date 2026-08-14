@@ -7,6 +7,7 @@ lat: 40.8116
 lng: -73.9465
 coords_approx: true
 status: open
+color: yellow
 visited: false
 sources:
   - top-chef

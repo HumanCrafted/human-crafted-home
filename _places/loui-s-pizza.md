@@ -6,6 +6,7 @@ state: MI
 lat: 42.4638
 lng: -83.08443
 status: open
+color: olive
 visited: false
 sources:
   - wisconsin-foodie

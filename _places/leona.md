@@ -6,6 +6,7 @@ state: "CA"
 lat: 33.98016
 lng: -118.46526
 status: open
+color: yellow
 visited: false
 sources:
   - top-chef

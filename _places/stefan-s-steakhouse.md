@@ -6,6 +6,7 @@ state: "Finland"
 lat: 60.16569
 lng: 24.94454
 status: open
+color: yellow
 visited: false
 sources:
   - top-chef

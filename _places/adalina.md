@@ -6,6 +6,7 @@ state: "IL"
 lat: 41.8989
 lng: -87.6285
 status: open
+color: yellow
 visited: false
 sources:
   - top-chef

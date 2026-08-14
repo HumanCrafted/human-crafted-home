@@ -6,6 +6,7 @@ state: "FL"
 lat: 25.76996
 lng: -80.1351
 status: open
+color: yellow
 visited: false
 sources:
   - top-chef

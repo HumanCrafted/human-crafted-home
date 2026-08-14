@@ -6,6 +6,7 @@ state: "HI"
 lat: 21.2836
 lng: -157.8103
 status: open
+color: yellow
 visited: false
 sources:
   - top-chef

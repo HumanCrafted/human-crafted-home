@@ -6,6 +6,7 @@ state: IA
 lat: 43.3467
 lng: -91.8135
 status: open
+color: olive
 visited: false
 sources:
   - wisconsin-foodie

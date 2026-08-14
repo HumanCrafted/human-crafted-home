@@ -6,6 +6,7 @@ state: "NC"
 lat: 35.9019
 lng: -78.8792
 status: open
+color: yellow
 visited: false
 sources:
   - top-chef

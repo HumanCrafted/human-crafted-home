@@ -14,6 +14,15 @@
   --muted-foreground: #736356;  /* ink-muted — secondary text */
   --surface: #ECE3CE;           /* paper-warm — warm section / callout */
   --border: #948F87;            /* rules / dividers */
+
+  /* Design-system accent hues — used to color-code Places map pins by
+     category/status (see _docs/design-system.md and places-map.js). Each
+     swaps to its "deep" variant under dark below, like --accent does. */
+  --ds-yellow: #E8C84A;
+  --ds-gold:   #C78A2E;
+  --ds-olive:  #8A8030;
+  --ds-slate:  #3B4B59;
+  /* "gray" (closed pins) reuses the neutral --muted token, not a new hue. */
 }
 
 [data-theme="dark"] {
@@ -24,6 +33,11 @@
   --muted-foreground: #948F87;  /* ink-muted (dark) */
   --surface: #3A3733;           /* raised surface */
   --border: #736356;
+
+  --ds-yellow: #C9A832;         /* yellow-deep */
+  --ds-gold:   #9A6720;         /* gold-deep */
+  --ds-olive:  #736B1E;         /* olive-deep */
+  --ds-slate:  #2C3A47;         /* slate-deep */
 }
 
 /* Reset and base styles */
@@ -2087,6 +2101,18 @@ body.places-map-open {
   border: none;
   cursor: pointer;
   text-decoration: none;
+}
+/* Category color key: a dot in the pin's own hue (--dot set by places-map.js,
+   holds a var(--ds-*) so it swaps light/deep on theme flip). */
+.places-filter.has-dot::before {
+  content: '';
+  display: inline-block;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: var(--dot);
+  margin-right: 0.45rem;
+  vertical-align: middle;
 }
 .places-filter.is-on {
   color: var(--foreground);

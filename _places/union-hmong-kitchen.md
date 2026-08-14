@@ -6,6 +6,7 @@ state: MN
 lat: 44.98486
 lng: -93.27745
 status: open
+color: olive
 visited: false
 sources:
   - wisconsin-foodie

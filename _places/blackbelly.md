@@ -6,6 +6,7 @@ state: "CO"
 lat: 40.01501
 lng: -105.22728
 status: open
+color: yellow
 visited: false
 sources:
   - top-chef

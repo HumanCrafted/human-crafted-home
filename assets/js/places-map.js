@@ -26,10 +26,34 @@
     return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
   }
 
-  function markerStyle() {
+  // Design-system accent hues (main.css --ds-* tokens), keyed by the names a
+  // place's `color:` frontmatter accepts. Resolving through the token keeps
+  // pins theme-aware — each hue swaps to its "deep" variant on dark flip.
+  var DS_COLORS = {
+    yellow: '--ds-yellow',
+    gold: '--ds-gold',
+    olive: '--ds-olive',
+    slate: '--ds-slate',
+    gray: '--muted',   // closed pins — the neutral, not a design-system hue
+    grey: '--muted'
+  };
+
+  // A place's color as a CSS var() when it names a design-system hue (so the
+  // theme swap follows the token), else the literal value.
+  function colorVar(c) {
+    var key = String(c == null ? '' : c).toLowerCase().trim();
+    return DS_COLORS[key] ? 'var(' + DS_COLORS[key] + ')' : c;
+  }
+  function resolveColor(c) {
+    var key = String(c).toLowerCase().trim();
+    if (DS_COLORS[key]) return token(DS_COLORS[key]);
+    return c; // literal CSS color (e.g. a hex) — used as-is, no theme swap
+  }
+
+  function markerStyle(fill) {
     return {
       radius: 7,
-      fillColor: token('--accent'),
+      fillColor: fill || token('--accent'),
       color: token('--foreground'),
       weight: 1.5,
       fillOpacity: 0.9
@@ -164,12 +188,19 @@
       return (p.sources && p.sources.length) ? p.sources : ['personal'];
     }
 
-    var markers = [];   // { marker, sources, latlng }
+    // Pin fill comes straight from the place's `color` frontmatter (a
+    // design-system hue name or a literal color); no color rules live here.
+    // Places without one fall back to the brand accent.
+    function fillFor(p) {
+      return p.color ? resolveColor(p.color) : token('--accent');
+    }
+
+    var markers = [];   // { marker, sources, latlng, place }
     var bounds = [];
     places.forEach(function (p) {
       if (typeof p.lat !== 'number' || typeof p.lng !== 'number') return;
-      var m = L.circleMarker([p.lat, p.lng], markerStyle()).addTo(map).bindPopup(popupHtml(p));
-      markers.push({ marker: m, sources: sourcesOf(p), latlng: [p.lat, p.lng] });
+      var m = L.circleMarker([p.lat, p.lng], markerStyle(fillFor(p))).addTo(map).bindPopup(popupHtml(p));
+      markers.push({ marker: m, sources: sourcesOf(p), latlng: [p.lat, p.lng], place: p });
       bounds.push([p.lat, p.lng]);
     });
 
@@ -192,8 +223,7 @@
     // Restyle markers and swap tiles when the theme flips (theme.js toggles
     // data-theme on <html>).
     new MutationObserver(function () {
-      var style = markerStyle();
-      markers.forEach(function (e) { e.marker.setStyle(style); });
+      markers.forEach(function (e) { e.marker.setStyle(markerStyle(fillFor(e.place))); });
       setTileTheme(document.documentElement.getAttribute('data-theme') === 'dark');
     }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 
@@ -213,6 +243,18 @@
     });
     if (present.length < 2) return; // nothing to filter
 
+    // Most common `color` among a source's places — drives its legend dot.
+    function dominantColor(source) {
+      var counts = {}, best = null, n = 0;
+      markers.forEach(function (e) {
+        if (e.sources.indexOf(source) === -1 || !e.place.color) return;
+        var c = String(e.place.color).toLowerCase().trim();
+        counts[c] = (counts[c] || 0) + 1;
+        if (counts[c] > n) { n = counts[c]; best = c; }
+      });
+      return best;
+    }
+
     var enabled = {};
     var bar = document.createElement('div');
     bar.className = 'places-filters';
@@ -223,6 +265,14 @@
       btn.className = 'places-filter is-on';
       btn.textContent = SOURCE_LABELS[s] || s.replace(/-/g, ' ');
       btn.setAttribute('aria-pressed', 'true');
+      // Color key: a dot in this category's dominant pin color, read from the
+      // data (no source→color rule here — the frontmatter decides). Set as a
+      // var() when it's a design-system hue so it swaps on theme flip.
+      var dom = dominantColor(s);
+      if (dom) {
+        btn.style.setProperty('--dot', colorVar(dom));
+        btn.classList.add('has-dot');
+      }
       btn.addEventListener('click', function () {
         enabled[s] = !enabled[s];
         btn.classList.toggle('is-on', enabled[s]);

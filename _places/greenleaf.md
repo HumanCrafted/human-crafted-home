@@ -6,6 +6,7 @@ state: "NH"
 lat: 42.83559
 lng: -71.64813
 status: open
+color: yellow
 visited: false
 sources:
   - top-chef

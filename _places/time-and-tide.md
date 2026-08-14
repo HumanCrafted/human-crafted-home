@@ -6,6 +6,7 @@ state: "NY"
 lat: 40.7424
 lng: -73.98585
 status: closed
+color: gray
 visited: false
 sources:
   - top-chef

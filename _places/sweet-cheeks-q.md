@@ -6,6 +6,7 @@ state: "MA"
 lat: 42.3467
 lng: -71.0972
 status: open
+color: yellow
 visited: false
 sources:
   - top-chef

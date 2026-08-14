@@ -6,6 +6,7 @@ state: "Alberta, Canada"
 lat: 51.03907
 lng: -114.09504
 status: open
+color: yellow
 visited: false
 sources:
   - top-chef

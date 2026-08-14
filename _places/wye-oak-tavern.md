@@ -6,6 +6,7 @@ state: "MD"
 lat: 39.4152
 lng: -77.40727
 status: open
+color: yellow
 visited: false
 sources:
   - top-chef

@@ -6,6 +6,7 @@ state: "DC"
 lat: 38.89845
 lng: -77.01983
 status: closed
+color: gray
 visited: false
 sources:
   - top-chef

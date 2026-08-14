@@ -6,6 +6,7 @@ state: "KY"
 lat: 38.2527
 lng: -85.7585
 status: open
+color: yellow
 visited: false
 sources:
   - top-chef

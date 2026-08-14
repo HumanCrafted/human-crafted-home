@@ -6,6 +6,7 @@ state: WI
 lat: 44.00119
 lng: -87.79799
 status: open
+color: olive
 visited: false
 sources:
   - wisconsin-foodie

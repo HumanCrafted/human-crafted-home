@@ -6,6 +6,7 @@ state: "LA"
 lat: 29.9209
 lng: -90.09952
 status: open
+color: yellow
 visited: false
 sources:
   - top-chef

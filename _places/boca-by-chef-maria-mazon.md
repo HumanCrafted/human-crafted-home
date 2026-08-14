@@ -6,6 +6,7 @@ state: "AZ"
 lat: 32.228
 lng: -110.9647
 status: open
+color: yellow
 visited: false
 sources:
   - top-chef

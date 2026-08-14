@@ -6,6 +6,7 @@ state: "TN"
 lat: 36.18489
 lng: -86.76825
 status: open
+color: yellow
 visited: false
 sources:
   - top-chef

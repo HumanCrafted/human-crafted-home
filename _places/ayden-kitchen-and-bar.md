@@ -6,6 +6,7 @@ state: "Saskatchewan, Canada"
 lat: 52.12577
 lng: -106.66378
 status: open
+color: yellow
 visited: false
 sources:
   - top-chef

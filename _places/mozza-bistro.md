@@ -6,6 +6,7 @@ state: "Spain"
 lat: 40.43131
 lng: -3.675
 status: open
+color: yellow
 visited: false
 sources:
   - top-chef

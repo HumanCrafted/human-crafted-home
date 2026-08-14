@@ -6,6 +6,7 @@ state: "WA"
 lat: 47.61411
 lng: -122.32324
 status: closed
+color: gray
 visited: false
 sources:
   - top-chef

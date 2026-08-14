@@ -6,6 +6,7 @@ state: "PA"
 lat: 40.01579
 lng: -75.21412
 status: open
+color: yellow
 visited: false
 sources:
   - top-chef

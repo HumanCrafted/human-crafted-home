@@ -1,20 +1,21 @@
 ---
-name: "DanDan"
+name: DanDan
 type: restaurant
-city: "Milwaukee"
+city: Milwaukee
 state: WI
 lat: 43.0345
 lng: -87.9053
 status: open
+color: yellow
 visited: false
 sources:
   - wisconsin-foodie
   - top-chef
 wf_episode: S08E07
 tc_season: 21
-tc_contestant: "Dan Jacobs"
+tc_contestant: Dan Jacobs
 tc_result: runner-up
-map_note: "Dan Jacobs and Dan Van Rite's Third Ward Chinese-American spot, the home base behind their roving Plate Collective dinner series with potter Kate Riley."
+map_note: Dan Jacobs and Dan Van Rite's Third Ward Chinese-American spot, the home base behind their roving Plate Collective dinner series with potter Kate Riley.
 tags:
   - place
 ---
