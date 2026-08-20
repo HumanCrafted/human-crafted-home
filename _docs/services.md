@@ -27,4 +27,4 @@ Need a little help (or a lot)?  Human Crafted is an [[about-me|experienced]] one
 
 ---
 
-Not sure which one you need, or need something that isn't on the list? [[lab|Get in touch]] and we can talk it through.
+View [[index#archive|the project archive]] for examples of work I have done. Not sure which service you need, or need something that isn't on the list? [[lab|Get in touch]] and we can talk it through. 
