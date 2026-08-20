@@ -79,13 +79,14 @@ module ObsidianLinks
   # filename wiki-link (the form Obsidian creates and always resolves) still maps
   # to the post's real URL on the built site.
   def self.target_path(raw)
-    base = raw.to_s.strip
-              .sub(/[#?].*\z/, "")          # drop #anchor / ?query
+    stripped = raw.to_s.strip.sub(/\?.*\z/, "")  # drop ?query
+    anchor = stripped[/#.*\z/, 0].to_s           # keep #anchor, e.g. "#archive"
+    base = stripped.sub(/#.*\z/, "")
               .sub(/\.md\z/i, "")           # drop .md
               .split("/").reject(&:empty?).last.to_s  # basename if a path slipped in
               .sub(/\A\d{4}-\d{2}-\d{2}-/, "")        # drop _posts date prefix
     slug = slugify(base)
-    PERMALINK_ALIASES[slug] || "/#{slug}/"
+    "#{PERMALINK_ALIASES[slug] || "/#{slug}/"}#{anchor}"
   end
 
   # Convert a line of 2+ adjacent image embeds carrying a column= option into an
