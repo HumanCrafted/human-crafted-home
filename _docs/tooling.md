@@ -20,32 +20,26 @@ Databse of cutting tooling — what it is, where it came from, and the feeds and
   <table>
     <thead>
       <tr>
-        <th>Bit</th>
         <th>ID</th>
         <th>Tool</th>
         <th>Geometry</th>
         <th markdown="span">Dia[^1]</th>
         <th>Flutes</th>
         <th>LOC</th>
+        <th>Best for</th>
         <th>Vendor</th>
       </tr>
     </thead>
     <tbody>
       {% for bit in bits %}
       <tr>
-        <td>
-          {% if bit.image %}
-            {% comment %} Handle both raw ![[file]] and the plugin-rewritten /assets/images/file form; take just the basename. {% endcomment %}
-            {% assign image_filename = bit.image | replace: '![[', '' | replace: ']]', '' | split: '/' | last %}
-            <img src="{{ '/assets/images/' | append: image_filename | relative_url }}" alt="{{ bit.title }}" style="width: 50px; height: auto;">
-          {% endif %}
-        </td>
         <td>{{ bit.serial }}</td>
         <td><a href="{{ bit.url | relative_url }}">{{ bit.title }}</a></td>
         <td>{{ bit.geometry }}</td>
         <td>{{ bit.cutting_diameter }}</td>
         <td>{{ bit.flutes }}</td>
         <td>{{ bit.cutting_length }}</td>
+        <td>{{ bit.best_for }}</td>
         <td>
           {% if bit.purchase_url %}
             <a href="{{ bit.purchase_url }}">{{ bit.vendor }}</a>

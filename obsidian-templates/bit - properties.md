@@ -20,6 +20,7 @@ date_purchased:
 purchase_url: 
 in_fusion_library: false
 status: in service
+best_for: ""
 image: "![[filename.jpg]]"
 tags:
   - bit
