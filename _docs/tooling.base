@@ -1,0 +1,142 @@
+filters:
+  and:
+    - file.hasTag("bit")
+    - file.inFolder("_docs")
+formulas:
+  bit: file.asLink(title)
+  dia: if(cutting_diameter, number(cutting_diameter), "")
+  loc: if(cutting_length, number(cutting_length), "")
+  oal: if(overall_length, number(overall_length), "")
+  needs_attention: if(status, status.lower() != "in service", false)
+properties:
+  note.serial:
+    displayName: ID
+  note.title:
+    displayName: Tool
+  note.vendor:
+    displayName: Vendor
+  note.part_number:
+    displayName: Part No.
+  note.tool_type:
+    displayName: Type
+  note.geometry:
+    displayName: Geometry
+  note.flutes:
+    displayName: Flutes
+  note.shank_diameter:
+    displayName: Shank
+  note.coating:
+    displayName: Coating
+  note.material:
+    displayName: Material
+  note.price:
+    displayName: Price
+  note.date_purchased:
+    displayName: Purchased
+  note.status:
+    displayName: Status
+  note.purchase_url:
+    displayName: Buy
+  note.in_fusion_library:
+    displayName: In Fusion
+  formula.bit:
+    displayName: Tool
+  formula.dia:
+    displayName: Dia
+  formula.loc:
+    displayName: LOC
+  formula.oal:
+    displayName: OAL
+  formula.needs_attention:
+    displayName: Needs Attention
+views:
+  - type: table
+    name: All Bits
+    order:
+      - serial
+      - formula.bit
+      - tool_type
+      - geometry
+      - formula.dia
+      - flutes
+      - formula.loc
+      - formula.oal
+      - vendor
+      - status
+    sort:
+      - property: formula.dia
+        direction: ASC
+      - property: serial
+        direction: ASC
+    columnSize:
+      formula.bit: 300
+  - type: table
+    name: By Diameter
+    groupBy:
+      property: cutting_diameter
+      direction: ASC
+    order:
+      - serial
+      - formula.bit
+      - geometry
+      - flutes
+      - formula.loc
+      - status
+    sort:
+      - property: serial
+        direction: ASC
+  - type: table
+    name: By Geometry
+    groupBy:
+      property: geometry
+      direction: ASC
+    order:
+      - serial
+      - formula.bit
+      - formula.dia
+      - flutes
+      - formula.loc
+      - vendor
+    sort:
+      - property: formula.dia
+        direction: ASC
+  - type: table
+    name: Needs Attention
+    filters:
+      and:
+        - formula.needs_attention == true
+    order:
+      - serial
+      - formula.bit
+      - status
+      - date_purchased
+      - price
+      - purchase_url
+    sort:
+      - property: serial
+        direction: ASC
+  - type: table
+    name: Reorder
+    order:
+      - serial
+      - formula.bit
+      - vendor
+      - part_number
+      - price
+      - purchase_url
+      - status
+    sort:
+      - property: vendor
+        direction: ASC
+  - type: table
+    name: Fusion Library
+    order:
+      - serial
+      - formula.bit
+      - in_fusion_library
+      - formula.dia
+      - flutes
+      - formula.loc
+    sort:
+      - property: serial
+        direction: ASC

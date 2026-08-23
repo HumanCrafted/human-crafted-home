@@ -94,6 +94,14 @@ The [[places|Places]] note plots the `_places` collection on an interactive map 
 - Per-source detail rides in flat front-matter keys (`wf_episode`, `tc_season`, `jb_award`, …) beside a simple `sources:` list — deliberately not nested YAML, so Obsidian Bases and Liquid can both filter on it
 - A fullscreen toggle sits top-right next to the zoom control (Leaflet `L.Control`, Lucide maximize/minimize icons). It's a fixed-position overlay (`inset: 0`), not the Fullscreen API, since iOS Safari won't fullscreen arbitrary elements — Escape or the button exits, and `body` scroll locks while it's open. Leaflet sets `container.style.position = "relative"` inline at map init, which beats any stylesheet rule short of `!important`, so the `.is-fullscreen` override needs one. `map.invalidateSize()` fires ~60ms after the class toggle so tiles redraw at the new size instead of leaving gray gaps
 
+#### Tooling Catalog
+The [[tooling|Tooling]] note is a catalogue of every cutter that goes in a spindle — one note per bit, tagged `bit`, rendered as a single table straight from `site.docs`. Same shape as the coffee notes: structured front matter drives both the public table and Obsidian's own view.
+- Deliberately distinct from [[tools|Tools]], which lists *machines and software*. Tools are what the shop owns; tooling is what it consumes
+- Each bit carries a short sharpie serial (`U01`, `C02`, …) — a geometry letter plus a sequence number, so a loose bit in a drawer is identifiable without calipers. The letter encodes the one property you can't see by looking: **U**pcut, **D**owncut, **C**ompression, **V**-bit, **B**allnose, **S**traight
+- Feeds and speeds live in a table in each note's body and mirror the presets stored on that tool in the Fusion **hub** library (`hub://Human Crafted`), so the site and the CAM software agree. Fusion's own API can read and write that library but cannot create new ones — `importToolLibrary` fails on the current build, so libraries are made in the Fusion UI and populated from there
+- `tooling.base` gives Obsidian its own views: all bits, grouped by diameter, grouped by geometry, a *Needs Attention* filter for anything not `in service`, and a *Reorder* view carrying vendor, part number, price, and purchase link
+- Vendor is a plain field plus a `purchase_url`, not a linked note — unlike coffee roasters, there aren't enough vendors to justify their own pages
+
 ## Key Decisions
 
 ### Why Jekyll?
