@@ -9,8 +9,9 @@ layout: default
 {% else %}
 <div class="doc-content">
     <!-- Doc metadata section -->
-    {% if page.tool_type or page.specs %}
+    {% if page.tool_type or page.specs or page.serial %}
     <div class="doc-meta">
+        {% if page.serial %}<p><strong>ID:</strong> {{ page.serial }}</p>{% endif %}
         {% if page.specs %}<p><strong>Specs:</strong> {{ page.specs }}</p>{% endif %}
         {% if page.tool_type %}<p><strong>Type:</strong> {{ page.tool_type }}</p>{% endif %}
         {% if page.applications %}<p><strong>Applications:</strong> {{ page.applications }}</p>{% endif %}

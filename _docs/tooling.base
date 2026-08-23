@@ -21,6 +21,8 @@ properties:
     displayName: Type
   note.geometry:
     displayName: Geometry
+  note.best_for:
+    displayName: Best for
   note.flutes:
     displayName: Flutes
   note.shank_diameter:
@@ -61,6 +63,7 @@ views:
       - flutes
       - formula.loc
       - formula.oal
+      - best_for
       - vendor
       - status
     sort:
@@ -81,6 +84,7 @@ views:
       - geometry
       - flutes
       - formula.loc
+      - best_for
       - status
     sort:
       - property: serial
@@ -96,6 +100,7 @@ views:
       - formula.dia
       - flutes
       - formula.loc
+      - best_for
       - vendor
     sort:
       - property: formula.dia
