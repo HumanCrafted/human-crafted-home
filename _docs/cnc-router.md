@@ -12,7 +12,7 @@ version: "1.0"
 draft: false
 ---
 **Specs:** 24" x 48" cutting area, X-Carve Pro  
-**Materials:** Wood, plywood, MDF, acrylic, foam
+**Materials:** Wood, plywood, MDF, acrylic, foam  
 **Tooling:** [[tooling|Documented here]]
 
 ### Capabilities
