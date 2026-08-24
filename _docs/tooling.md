@@ -11,7 +11,7 @@ gallery_images:
 version: "1.0"
 draft: false
 ---
-Databse of cutting tooling — what it is, where it came from, and the feeds and speeds to run it at. For local reference, each bit is marked in sharpie with the ID in the first column. The letter is the geometry: **U**pcut, **D**owncut, **C**ompression, **V**-bit, **B**allnose, **S**traight.
+Database of cutting tooling for the [[cnc-router|CNC router]] — what it is, where it came from, and the feeds and speeds to run it at. For local reference, each bit is marked in sharpie with the ID in the first column. The letter is the geometry: **U**pcut, **D**owncut, **C**ompression, **V**-bit, **B**allnose, **S**traight.
 
 {% assign bits = site.docs | where_exp: "doc", "doc.tags contains 'bit'" | where_exp: "doc", "doc.draft != true" | sort: "cutting_diameter" %}
 
