@@ -1,7 +1,9 @@
 filters:
   and:
-    - file.hasTag("bit")
     - file.inFolder("_docs")
+    - or:
+        - file.hasTag("bit")
+        - file.hasTag("router-bit")
 formulas:
   bit: file.asLink(title)
   dia: if(cutting_diameter, number(cutting_diameter), "")
@@ -23,6 +25,16 @@ properties:
     displayName: Geometry
   note.best_for:
     displayName: Best for
+  note.profile:
+    displayName: Profile
+  note.radius:
+    displayName: Radius
+  note.small_diameter:
+    displayName: Pilot
+  note.bearing:
+    displayName: Bearing
+  note.max_rpm:
+    displayName: Max RPM
   note.flutes:
     displayName: Flutes
   note.shank_diameter:
@@ -54,6 +66,9 @@ properties:
 views:
   - type: table
     name: All Bits
+    filters:
+      and:
+        - file.hasTag("bit")
     order:
       - serial
       - formula.bit
@@ -75,6 +90,9 @@ views:
       formula.bit: 300
   - type: table
     name: By Diameter
+    filters:
+      and:
+        - file.hasTag("bit")
     groupBy:
       property: cutting_diameter
       direction: ASC
@@ -91,6 +109,9 @@ views:
         direction: ASC
   - type: table
     name: By Geometry
+    filters:
+      and:
+        - file.hasTag("bit")
     groupBy:
       property: geometry
       direction: ASC
@@ -135,6 +156,9 @@ views:
         direction: ASC
   - type: table
     name: Fusion Library
+    filters:
+      and:
+        - file.hasTag("bit")
     order:
       - serial
       - formula.bit
@@ -145,3 +169,24 @@ views:
     sort:
       - property: serial
         direction: ASC
+  - type: table
+    name: Router Bits
+    filters:
+      and:
+        - file.hasTag("router-bit")
+    order:
+      - serial
+      - formula.bit
+      - profile
+      - radius
+      - formula.dia
+      - shank_diameter
+      - bearing
+      - best_for
+      - vendor
+      - status
+    sort:
+      - property: serial
+        direction: ASC
+    columnSize:
+      formula.bit: 300
