@@ -5,7 +5,7 @@ slug: acrylic-colors
 main_image:
 featured: false
 tags:
-  - index
+  - tools
 published_date: 2026-08-26
 gallery_images:
 version: "1.0"
