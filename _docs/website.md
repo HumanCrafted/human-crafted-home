@@ -102,6 +102,15 @@ The [[tooling|Tooling]] note is a catalogue of every cutter that goes in a spind
 - `tooling.base` gives Obsidian its own views: all bits, grouped by diameter, grouped by geometry, a *Needs Attention* filter for anything not `in service`, and a *Reorder* view carrying vendor, part number, price, and purchase link
 - Vendor is a plain field plus a `purchase_url`, not a linked note — unlike coffee roasters, there aren't enough vendors to justify their own pages
 
+#### Acrylic Colors
+The [[acrylic-colors|Acrylic Colors]] note is the same database shape applied to laser-cutter sheet stock — one note per color, tagged `acrylic`, rendered as a single table from `site.docs`. It absorbed the old standalone `acrylic-colors` GitHub Pages app (humancrafted.github.io/acrylic-colors), which is being sunset; the palette-builder feature did not come along, just the database.
+- Front matter per color: `vendor`, `finish`, `sheet_size`, `price` (quoted string, so "18.90" doesn't render as "18.9"), `price_scale`, `in_inventory`, `purchase_url`, `image`
+- Swatch images live in `assets/images/` as `acrylic-<color>.png/jpg`, carried in an `image:` field so the hub table can render thumbnails (`.acrylic-swatch` in `main.css`; the table scrolls in its own box like the music table)
+- `finish` (opaque / transparent / fluorescent / frosted / glitter / flake / glimmer / pearl) is taken straight from the vendor's product names, added as a groupable property
+- No serials, unlike bits — a color identifies itself; the swatch and name are the ID
+- `acrylic-colors.base` gives Obsidian views: all colors, by vendor, by finish, an *In Inventory* filter, and a *Reorder* view with prices and purchase links
+- Each color carries a `palettes:` list (curated sets, assigned in Obsidian; a color can be in several). The hub renders a homepage-style `.tag-filter` bar above the table — buttons collected by Liquid from all `palettes` values, rows tagged `data-palettes`, shown/hidden by the same inline-script pattern as the project grid, with `?palette=<name>` deep links. The bar and script render only when at least one color has a palette. This replaces the old app's palette-builder: palettes are authored in front matter, not assembled in the browser
+
 ## Key Decisions
 
 ### Why Jekyll?

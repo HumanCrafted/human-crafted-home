@@ -1,0 +1,114 @@
+filters:
+  and:
+    - file.inFolder("_docs")
+    - file.hasTag("acrylic")
+formulas:
+  color: file.asLink(title)
+  cost: if(price, "$" + price, "")
+properties:
+  note.title:
+    displayName: Color
+  note.vendor:
+    displayName: Vendor
+  note.finish:
+    displayName: Finish
+  note.sheet_size:
+    displayName: Sheet
+  note.price:
+    displayName: Price
+  note.price_scale:
+    displayName: Scale
+  note.in_inventory:
+    displayName: In Inventory
+  note.palettes:
+    displayName: Palettes
+  note.purchase_url:
+    displayName: Buy
+  formula.color:
+    displayName: Color
+  formula.cost:
+    displayName: Price
+views:
+  - type: table
+    name: All Colors
+    order:
+      - formula.color
+      - finish
+      - palettes
+      - vendor
+      - sheet_size
+      - formula.cost
+      - price_scale
+      - in_inventory
+    sort:
+      - property: vendor
+        direction: ASC
+      - property: title
+        direction: ASC
+    columnSize:
+      formula.color: 260
+  - type: table
+    name: By Vendor
+    groupBy:
+      property: vendor
+      direction: ASC
+    order:
+      - formula.color
+      - finish
+      - sheet_size
+      - formula.cost
+      - price_scale
+      - in_inventory
+    sort:
+      - property: title
+        direction: ASC
+    columnSize:
+      formula.color: 260
+  - type: table
+    name: By Finish
+    groupBy:
+      property: finish
+      direction: ASC
+    order:
+      - formula.color
+      - vendor
+      - sheet_size
+      - formula.cost
+      - in_inventory
+    sort:
+      - property: title
+        direction: ASC
+    columnSize:
+      formula.color: 260
+  - type: table
+    name: In Inventory
+    filters:
+      and:
+        - in_inventory == true
+    order:
+      - formula.color
+      - finish
+      - vendor
+      - sheet_size
+      - formula.cost
+    sort:
+      - property: title
+        direction: ASC
+    columnSize:
+      formula.color: 260
+  - type: table
+    name: Reorder
+    order:
+      - formula.color
+      - vendor
+      - formula.cost
+      - price_scale
+      - purchase_url
+      - in_inventory
+    sort:
+      - property: vendor
+        direction: ASC
+      - property: title
+        direction: ASC
+    columnSize:
+      formula.color: 260

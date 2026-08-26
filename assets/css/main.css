@@ -456,6 +456,20 @@ td {
   overflow-x: auto;
 }
 
+/* Acrylic colors database (/acrylic-colors/). Seven columns is wider than a
+   phone; scroll the table inside its own box like the music table. */
+.acrylic-database {
+  overflow-x: auto;
+}
+
+.acrylic-swatch {
+  display: block;
+  width: 2.75rem;
+  height: 2.75rem;
+  object-fit: cover;
+  border-radius: 0.25rem;
+}
+
 /* Preview play buttons (assets/js/music-player.js). The gutter is reserved by
    padding on every title cell and the button is placed into it, so titles align
    whether or not a track has a preview — most don't, and a bare-text title is
