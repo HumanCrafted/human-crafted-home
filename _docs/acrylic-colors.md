@@ -95,6 +95,16 @@ document.addEventListener('DOMContentLoaded', function() {
         row.style.display = rowPalettes.includes(filterValue) ? '' : 'none';
       }
     });
+
+    // Keep the address bar in sync so a filtered view can be shared by
+    // copying the URL.
+    const url = new URL(window.location);
+    if (filterValue === 'all') {
+      url.searchParams.delete('palette');
+    } else {
+      url.searchParams.set('palette', filterValue);
+    }
+    history.replaceState(null, '', url);
   }
 
   const urlParams = new URLSearchParams(window.location.search);
