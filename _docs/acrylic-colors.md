@@ -11,7 +11,7 @@ gallery_images:
 version: "1.0"
 draft: false
 ---
-Database of acrylic sheet colors for the [[laser-cutter|laser cutter]] — one note per color, with a swatch, the vendor, and what a sheet costs. Prices are per sheet, as last recorded. Grouped by vendor.
+Database of acrylic sheet colors for the [[laser-cutter|laser cutter]] — one note per color, with a swatch, the vendor, and what a sheet costs. Prices are raw retail costs per sheet, as last recorded. Grouped by vendor.
 
 {% assign unsorted_colors = site.docs | where_exp: "doc", "doc.tags contains 'acrylic'" | where_exp: "doc", "doc.draft != true" %}
 {% assign colors = "" | split: "" %}
@@ -22,14 +22,14 @@ Database of acrylic sheet colors for the [[laser-cutter|laser cutter]] — one n
 Liquid 4 has no array push, so build a delimited string and split it. {% endcomment %}
 {% assign palette_names = unsorted_colors | map: "palettes" | join: "," | split: "," | uniq | sort %}
 {% assign palette_str = "" %}
-{% for p in palette_names %}{% unless p == blank %}{% assign palette_str = palette_str | append: p | append: "," %}{% endunless %}{% endfor %}
+{% for p in palette_names %}{% assign p_stripped = p | strip %}{% if p_stripped != "" %}{% assign palette_str = palette_str | append: p_stripped | append: "," %}{% endif %}{% endfor %}
 {% assign palettes = palette_str | split: "," %}
 
 {% if palettes.size > 0 %}
 <div class="tag-filters">
   <button class="tag-filter active" data-filter="all">all</button>
   {% for palette in palettes %}
-    <button class="tag-filter" data-filter="{{ palette | strip }}">{{ palette | strip }}</button>
+    <button class="tag-filter" data-filter="{{ palette | strip | slugify }}">{{ palette | strip }}</button>
   {% endfor %}
 </div>
 {% endif %}
@@ -50,7 +50,7 @@ Liquid 4 has no array push, so build a delimited string and split it. {% endcomm
     </thead>
     <tbody>
       {% for color in colors %}
-      <tr data-palettes="{{ color.palettes | join: ',' }}">
+      <tr data-palettes="{% for p in color.palettes %}{{ p | slugify }}{% unless forloop.last %},{% endunless %}{% endfor %}">
         <td><a href="{{ color.url | relative_url }}"><img class="acrylic-swatch" src="{{ '/assets/images/' | append: color.image | relative_url }}" alt="{{ color.title }} acrylic swatch" loading="lazy"></a></td>
         <td><a href="{{ color.url | relative_url }}">{{ color.title }}</a></td>
         <td>{{ color.finish }}</td>
@@ -107,10 +107,14 @@ document.addEventListener('DOMContentLoaded', function() {
     history.replaceState(null, '', url);
   }
 
+  // Palette values in the DOM and the URL are slugs (Liquid's slugify).
+  // Slugify the incoming param the same way so older links that carried the
+  // display name ("?palette=2025%20Good%20Day%20Shop") keep working.
+  const slugify = s => s.toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
   const urlParams = new URLSearchParams(window.location.search);
   const paletteParam = urlParams.get('palette');
   if (paletteParam) {
-    applyFilter(paletteParam);
+    applyFilter(slugify(paletteParam));
   }
 
   filters.forEach(filter => {
