@@ -466,6 +466,10 @@ td {
   display: block;
   width: 2.75rem;
   height: 2.75rem;
+  /* The global img { max-width: 100% } gives the image a zero min-content
+     width inside the auto-layout table, so the swatch column collapses to
+     nothing once the table overflows a narrow screen. Opt out of it. */
+  max-width: none;
   object-fit: cover;
   border-radius: 0.25rem;
 }
