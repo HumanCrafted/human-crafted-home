@@ -4,9 +4,9 @@ vendor: Canal Plastics
 finish: transparent
 sheet_size: 18x24
 price: "18.90"
-price_scale: "$"
+price_scale: $
 in_inventory: false
-palettes: []
+palettes:
 purchase_url: https://www.canalplastic.com/products/2069-light-blue-transparent-acrylic-sheet?variant=32917837582
 image: acrylic-light-blue-transparent.png
 tags:
