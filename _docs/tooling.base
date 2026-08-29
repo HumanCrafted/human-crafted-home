@@ -4,6 +4,7 @@ filters:
     - or:
         - file.hasTag("bit")
         - file.hasTag("router-bit")
+        - file.hasTag("drill-bit")
 formulas:
   bit: file.asLink(title)
   dia: if(cutting_diameter, number(cutting_diameter), "")
@@ -33,6 +34,16 @@ properties:
     displayName: Pilot
   note.bearing:
     displayName: Bearing
+  note.bit_size:
+    displayName: Size
+  note.decimal_equivalent:
+    displayName: Decimal
+  note.point_type:
+    displayName: Point
+  note.length_class:
+    displayName: Length Class
+  note.max_drilling_depth:
+    displayName: Max Depth
   note.max_rpm:
     displayName: Max RPM
   note.flutes:
@@ -182,6 +193,28 @@ views:
       - formula.dia
       - shank_diameter
       - bearing
+      - best_for
+      - vendor
+      - status
+    sort:
+      - property: serial
+        direction: ASC
+    columnSize:
+      formula.bit: 300
+  - type: table
+    name: Drill Bits
+    filters:
+      and:
+        - file.hasTag("drill-bit")
+    order:
+      - serial
+      - formula.bit
+      - bit_size
+      - decimal_equivalent
+      - point_type
+      - length_class
+      - formula.oal
+      - max_drilling_depth
       - best_for
       - vendor
       - status

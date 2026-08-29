@@ -11,7 +11,7 @@ gallery_images:
 version: "1.0"
 draft: false
 ---
-Database of cutting tooling — what it is, where it came from, and how to run it. CNC bits first, hand router bits after. For local reference, each bit is marked in sharpie with the ID in the first column.
+Database of cutting tooling — what it is, where it came from, and how to run it. CNC bits first, hand router bits, then drill bits. For local reference, each bit is marked in sharpie with the ID in the first column.
 
 ## CNC router
 
@@ -110,6 +110,53 @@ Profile bits for the handheld router. One series, **H**, numbered in the order t
 </div>
 {% else %}
 <p><em>No router bits catalogued yet. Add a document with the 'router-bit' tag to see it here.</em></p>
+{% endif %}
+
+## Drill bits
+
+Twist bits for the drill press and cordless drill — a different machine and a different geometry from anything above, so they get their own series rather than stretching the CNC letters or the router-bit series to cover them. One flat series, **T**, numbered in the order they arrive.
+
+{% assign dbits = site.docs | where_exp: "doc", "doc.tags contains 'drill-bit'" | where_exp: "doc", "doc.draft != true" | sort: "serial" %}
+
+{% if dbits.size > 0 %}
+<div class="tooling-database">
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Bit</th>
+        <th>Size</th>
+        <th>Point</th>
+        <th>Length Class</th>
+        <th>OAL</th>
+        <th>Best for</th>
+        <th>Vendor</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for bit in dbits %}
+      <tr>
+        <td>{{ bit.serial }}</td>
+        <td><a href="{{ bit.url | relative_url }}">{{ bit.title }}</a></td>
+        <td>{{ bit.bit_size }}</td>
+        <td>{{ bit.point_type }}</td>
+        <td>{{ bit.length_class }}</td>
+        <td>{{ bit.overall_length }}</td>
+        <td>{{ bit.best_for }}</td>
+        <td>
+          {% if bit.purchase_url %}
+            <a href="{{ bit.purchase_url }}">{{ bit.vendor }}</a>
+          {% else %}
+            {{ bit.vendor }}
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% else %}
+<p><em>No drill bits catalogued yet. Add a document with the 'drill-bit' tag to see it here.</em></p>
 {% endif %}
 
 [^1]: Cutting diameter in inches. Shank diameter and overall length are on each bit's own page.
