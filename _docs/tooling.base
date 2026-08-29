@@ -2,14 +2,14 @@ filters:
   and:
     - file.inFolder("_docs")
     - or:
-        - file.hasTag("bit")
-        - file.hasTag("router-bit")
-        - file.hasTag("drill-bit")
+        - tags.contains("bit")
+        - tags.contains("router-bit")
+        - tags.contains("drill-bit")
 formulas:
   bit: file.asLink(title)
-  dia: if(cutting_diameter, number(cutting_diameter), "")
-  loc: if(cutting_length, number(cutting_length), "")
-  oal: if(overall_length, number(overall_length), "")
+  dia: if(cutting_diameter, if(cutting_diameter.toString().contains("mm"), (number(cutting_diameter.toString().replace("mm", "").trim()) / 25.4).round(4), number(cutting_diameter)), "")
+  loc: if(cutting_length, if(cutting_length.toString().contains("mm"), (number(cutting_length.toString().replace("mm", "").trim()) / 25.4).round(3), number(cutting_length)), "")
+  oal: if(overall_length, if(overall_length.toString().contains("mm"), (number(overall_length.toString().replace("mm", "").trim()) / 25.4).round(3), number(overall_length)), "")
   needs_attention: if(status, status.lower() != "in service", false)
 properties:
   note.serial:
@@ -44,6 +44,8 @@ properties:
     displayName: Length Class
   note.max_drilling_depth:
     displayName: Max Depth
+  note.overall_length:
+    displayName: OAL
   note.max_rpm:
     displayName: Max RPM
   note.flutes:
@@ -77,9 +79,6 @@ properties:
 views:
   - type: table
     name: All Bits
-    filters:
-      and:
-        - file.hasTag("bit")
     order:
       - serial
       - formula.bit
@@ -103,7 +102,7 @@ views:
     name: By Diameter
     filters:
       and:
-        - file.hasTag("bit")
+        - tags.contains("bit")
     groupBy:
       property: cutting_diameter
       direction: ASC
@@ -122,7 +121,7 @@ views:
     name: By Geometry
     filters:
       and:
-        - file.hasTag("bit")
+        - tags.contains("bit")
     groupBy:
       property: geometry
       direction: ASC
@@ -154,6 +153,9 @@ views:
         direction: ASC
   - type: table
     name: Reorder
+    filters:
+      and:
+        - formula.needs_attention == true
     order:
       - serial
       - formula.bit
@@ -169,7 +171,7 @@ views:
     name: Fusion Library
     filters:
       and:
-        - file.hasTag("bit")
+        - tags.contains("bit")
     order:
       - serial
       - formula.bit
@@ -184,7 +186,7 @@ views:
     name: Router Bits
     filters:
       and:
-        - file.hasTag("router-bit")
+        - tags.contains("router-bit")
     order:
       - serial
       - formula.bit
@@ -205,7 +207,7 @@ views:
     name: Drill Bits
     filters:
       and:
-        - file.hasTag("drill-bit")
+        - tags.contains("drill-bit")
     order:
       - serial
       - formula.bit
@@ -213,7 +215,7 @@ views:
       - decimal_equivalent
       - point_type
       - length_class
-      - formula.oal
+      - overall_length
       - max_drilling_depth
       - best_for
       - vendor

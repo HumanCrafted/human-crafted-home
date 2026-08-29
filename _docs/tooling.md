@@ -65,7 +65,7 @@ Bits for the [[cnc-router|X-Carve Pro]], each with feeds and speeds matching its
 
 ## Hand router
 
-Profile bits for the handheld router. One series, **H**, numbered in the order they arrive — the profile is right there to see, so the letter doesn't need to encode it. No Fusion entries and no feed tables; these run by ear.
+Profile bits for the handheld router. One series, **H**, numbered in the order they arrive. No Fusion entries and no feed tables; these run by ear.
 
 {% assign rbits = site.docs | where_exp: "doc", "doc.tags contains 'router-bit'" | where_exp: "doc", "doc.draft != true" | sort: "serial" %}
 
@@ -114,7 +114,7 @@ Profile bits for the handheld router. One series, **H**, numbered in the order t
 
 ## Drill bits
 
-Twist bits for the drill press and cordless drill — a different machine and a different geometry from anything above, so they get their own series rather than stretching the CNC letters or the router-bit series to cover them. One flat series, **T**, numbered in the order they arrive.
+Twist bits for the drill press and cordless drill. One flat series, **T**, numbered in the order they arrive.
 
 {% assign dbits = site.docs | where_exp: "doc", "doc.tags contains 'drill-bit'" | where_exp: "doc", "doc.draft != true" | sort: "serial" %}
 
