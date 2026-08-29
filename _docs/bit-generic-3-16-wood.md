@@ -28,7 +28,7 @@ version: "1.0"
 draft: false
 featured: false
 ---
-No brand, no part number, just "3/16" engraved on the shank. Long compared to the McMaster bits in the drawer: at 3.314" overall with 2" of usable depth, this one reaches where the short-length T-series bits can't.
+At 3.314" overall with 2" of usable depth, this one reaches where the short-length T-series bits can't.
 
 ## Specifications
 

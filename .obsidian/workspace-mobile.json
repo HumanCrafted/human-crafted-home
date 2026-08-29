@@ -11,14 +11,13 @@
             "id": "4ef47e1f08672c10",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "bases",
               "state": {
-                "file": "_docs/espresso.md",
-                "mode": "preview",
-                "source": false
+                "file": "_docs/acrylic-colors.base",
+                "viewName": "All Colors"
               },
-              "icon": "lucide-file",
-              "title": "espresso"
+              "icon": "lucide-table",
+              "title": "acrylic-colors"
             }
           }
         ]
@@ -37,7 +36,9 @@
           "type": "file-explorer",
           "state": {
             "sortOrder": "alphabetical",
-            "autoReveal": false
+            "autoReveal": false,
+            "showSearch": false,
+            "searchQuery": ""
           },
           "icon": "lucide-folder-closed",
           "title": "Files"
@@ -167,6 +168,9 @@
   },
   "active": "4ef47e1f08672c10",
   "lastOpenFiles": [
+    "_docs/espresso.md",
+    "_docs/acrylic-colors.md",
+    "_docs/acrylic-colors.base",
     "_docs/perc-perc-up.md",
     "_docs/perc-brazil-legender.md",
     "_docs/coffee-roaster-perc.md",
