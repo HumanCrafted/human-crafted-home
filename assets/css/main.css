@@ -2231,8 +2231,13 @@ body.places-map-open {
   font-size: 0.9375rem;
   font-variant-numeric: tabular-nums;
 }
-/* 64ths step up in weight so alternating rows scan, per the source chart */
-.dec-row--d64 .dec-in {
+/* Common fractions (16ths and coarser) step up in weight so the values
+   you actually reach for scan first; 64ths/32nds stay regular. */
+.dec-row--d16 .dec-in,
+.dec-row--d8 .dec-in,
+.dec-row--d4 .dec-in,
+.dec-row--d2 .dec-in,
+.dec-row--d1 .dec-in {
   font-weight: 500;
 }
 @media (max-width: 768px) {
