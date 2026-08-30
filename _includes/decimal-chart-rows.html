@@ -1,0 +1,30 @@
+{%- comment -%}
+One column of the decimal-equivalents chart. Params: from, to (row numbers,
+each row n is n/64"). Everything is computed — reduced fraction, decimal
+inches, millimeters — so there's no table data to keep correct by hand.
+{%- endcomment -%}
+{%- for n in (include.from..include.to) -%}
+{%- assign num = n -%}
+{%- assign den = 64 -%}
+{%- for i in (1..6) -%}
+{%- assign rem = num | modulo: 2 -%}
+{%- if rem == 0 -%}
+{%- assign num = num | divided_by: 2 -%}
+{%- assign den = den | divided_by: 2 -%}
+{%- endif -%}
+{%- endfor -%}
+{%- assign dec = n | times: 1.0 | divided_by: 64 -%}
+{%- assign mm = n | times: 0.396875 | round: 3 -%}
+<div class="dec-row dec-row--d{{ den }}">
+<span class="dec-frac" aria-label="{{ num }}/{{ den }} inch">
+{%- if den == 1 -%}
+<span class="dec-one">1</span>
+{%- else -%}
+<span class="dec-num">{{ num }}</span><span class="dec-den">{{ den }}</span>
+{%- endif -%}
+</span>
+<span class="dec-lead" aria-hidden="true"></span>
+<span class="dec-in">{% if n == 64 %}1{% else %}{{ dec | replace_first: '0.', '.' }}{% endif %}</span>
+<span class="dec-mm">{{ mm }}</span>
+</div>
+{%- endfor -%}

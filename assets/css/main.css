@@ -2151,3 +2151,94 @@ body.places-map-open {
     height: 360px;
   }
 }
+
+/* ============================================
+   Decimal equivalents chart (/decimal-chart/)
+   Machinist-poster style: fraction badge, leader
+   line, decimal inches, mm. Rows come from
+   _includes/decimal-chart{,-rows}.html — all
+   values are computed in Liquid, none hand-typed.
+   ============================================ */
+.dec-chart {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4rem;
+  max-width: 52rem;
+  margin: 2.5rem 0 3rem;
+}
+.dec-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.dec-head {
+  display: flex;
+  justify-content: flex-end;
+  color: var(--muted-foreground);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.4rem;
+}
+.dec-row {
+  display: flex;
+  align-items: center;
+  min-height: 2.1rem;
+}
+/* Badge scale by denominator — halves big, 64ths small. All circles
+   right-align to a shared 3.4rem edge so the leader lines start together. */
+.dec-row--d64 { --dec-size: 2.05rem; --dec-font: 0.58rem; }
+.dec-row--d32 { --dec-size: 2.35rem; --dec-font: 0.64rem; }
+.dec-row--d16 { --dec-size: 2.65rem; --dec-font: 0.7rem; }
+.dec-row--d8  { --dec-size: 2.95rem; --dec-font: 0.78rem; }
+.dec-row--d4  { --dec-size: 3.2rem;  --dec-font: 0.85rem; }
+.dec-row--d2  { --dec-size: 3.4rem;  --dec-font: 0.9rem; }
+.dec-row--d1  { --dec-size: 3.4rem;  --dec-font: 1.15rem; }
+.dec-frac {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: var(--dec-size);
+  height: var(--dec-size);
+  margin-left: calc(3.4rem - var(--dec-size));
+  border-radius: 50%;
+  background: var(--foreground);
+  color: var(--background);
+  font-size: var(--dec-font);
+  font-weight: 500;
+  line-height: 1.3;
+}
+.dec-num {
+  border-bottom: 1px solid var(--background);
+  padding: 0 0.25em;
+}
+.dec-lead {
+  flex: 1;
+  min-width: 0.75rem;
+  height: 1px;
+  background: var(--border);
+  margin: 0 0.75rem 0 0.5rem;
+}
+.dec-in {
+  width: 4.9rem;
+  font-variant-numeric: tabular-nums;
+}
+.dec-mm {
+  width: 4rem;
+  margin-left: 1rem;
+  color: var(--muted-foreground);
+  font-size: 0.9375rem;
+  font-variant-numeric: tabular-nums;
+}
+/* 64ths step up in weight so alternating rows scan, per the source chart */
+.dec-row--d64 .dec-in {
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .dec-chart {
+    grid-template-columns: 1fr;
+    row-gap: 0.35rem;
+  }
+}

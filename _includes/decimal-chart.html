@@ -1,0 +1,14 @@
+{%- comment -%}
+Decimal equivalents chart — fraction / decimal inch / mm for every 64th.
+Two columns on desktop, one on mobile. Styled in main.css (.dec-chart).
+{%- endcomment -%}
+<div class="dec-chart">
+<div class="dec-col">
+<div class="dec-head" aria-hidden="true"><span class="dec-in">in</span><span class="dec-mm">mm</span></div>
+{% include decimal-chart-rows.html from=1 to=32 %}
+</div>
+<div class="dec-col">
+<div class="dec-head" aria-hidden="true"><span class="dec-in">in</span><span class="dec-mm">mm</span></div>
+{% include decimal-chart-rows.html from=33 to=64 %}
+</div>
+</div>

@@ -11,7 +11,7 @@ This is the [[core]] of Human Crafted, a boutique design studio and product desi
 
 {% include wiki-two-column.html title="Services" auto="services_docs" show_all_link="/services/" show_all_text="View all services" %}
 
-{% include wiki-two-column.html title="Resources" auto="resources" %}
+{% include wiki-two-column.html title="Resources" items="Decimal Equivalents:/decimal-chart/" auto="resources" %}
 
 {% include wiki-two-column.html title="Notes" auto="note_docs" show_all_link="/notes/" show_all_text="View all notes" %}
 
