@@ -2162,8 +2162,7 @@ body.places-map-open {
 .dec-chart {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 4rem;
-  max-width: 52rem;
+  column-gap: 6rem;
   margin: 2.5rem 0 3rem;
 }
 .dec-col {
