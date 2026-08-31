@@ -2237,8 +2237,13 @@ body.places-map-open {
 .dec-row--d8 .dec-in,
 .dec-row--d4 .dec-in,
 .dec-row--d2 .dec-in,
-.dec-row--d1 .dec-in {
-  font-weight: 500;
+.dec-row--d1 .dec-in,
+.dec-row--d16 .dec-mm,
+.dec-row--d8 .dec-mm,
+.dec-row--d4 .dec-mm,
+.dec-row--d2 .dec-mm,
+.dec-row--d1 .dec-mm {
+  font-weight: 700;
 }
 @media (max-width: 768px) {
   .dec-chart {
