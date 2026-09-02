@@ -25,15 +25,6 @@ Liquid 4 has no array push, so build a delimited string and split it. {% endcomm
 {% for p in palette_names %}{% assign p_stripped = p | strip %}{% if p_stripped != "" %}{% assign palette_str = palette_str | append: p_stripped | append: "," %}{% endif %}{% endfor %}
 {% assign palettes = palette_str | split: "," %}
 
-{% if palettes.size > 0 %}
-<div class="tag-filters">
-  <button class="tag-filter active" data-filter="all">all</button>
-  {% for palette in palettes %}
-    <button class="tag-filter" data-filter="{{ palette | strip | slugify }}">{{ palette | strip }}</button>
-  {% endfor %}
-</div>
-{% endif %}
-
 {% if colors.size > 0 %}
 <div class="acrylic-database">
   <table>
@@ -74,6 +65,13 @@ Liquid 4 has no array push, so build a delimited string and split it. {% endcomm
 {% endif %}
 
 {% if palettes.size > 0 %}
+<div class="tag-filters">
+  <button class="tag-filter active" data-filter="all">all</button>
+  {% for palette in palettes %}
+    <button class="tag-filter" data-filter="{{ palette | strip | slugify }}">{{ palette | strip }}</button>
+  {% endfor %}
+</div>
+
 <script>
 // Palette filtering — same pattern as the homepage project grid (index.md).
 document.addEventListener('DOMContentLoaded', function() {
