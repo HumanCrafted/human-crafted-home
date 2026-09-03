@@ -5,6 +5,7 @@ filters:
         - tags.contains("bit")
         - tags.contains("router-bit")
         - tags.contains("drill-bit")
+        - tags.contains("hole-cutter")
 formulas:
   bit: file.asLink(title)
   dia: if(cutting_diameter, if(cutting_diameter.toString().contains("mm"), (number(cutting_diameter.toString().replace("mm", "").trim()) / 25.4).round(4), number(cutting_diameter)), "")
@@ -46,6 +47,18 @@ properties:
     displayName: Max Depth
   note.overall_length:
     displayName: OAL
+  note.cutting_diameter:
+    displayName: Diameter
+  note.cut_depth:
+    displayName: Cut Depth
+  note.teeth:
+    displayName: Teeth
+  note.shank_type:
+    displayName: Shank Type
+  note.mfr_model:
+    displayName: Mfr. Model
+  note.arbor:
+    displayName: Arbor
   note.max_rpm:
     displayName: Max RPM
   note.flutes:
@@ -217,6 +230,27 @@ views:
       - length_class
       - overall_length
       - max_drilling_depth
+      - best_for
+      - vendor
+      - status
+    sort:
+      - property: serial
+        direction: ASC
+    columnSize:
+      formula.bit: 300
+  - type: table
+    name: Hole Cutters
+    filters:
+      and:
+        - tags.contains("hole-cutter")
+    order:
+      - serial
+      - formula.bit
+      - cutting_diameter
+      - cut_depth
+      - teeth
+      - shank_type
+      - mfr_model
       - best_for
       - vendor
       - status

@@ -11,7 +11,7 @@ gallery_images:
 version: "1.0"
 draft: false
 ---
-Database of cutting tooling — what it is, where it came from, and how to run it. CNC bits first, hand router bits, then drill bits. For local reference, each bit is marked in sharpie with the ID in the first column.
+Database of cutting tooling — what it is, where it came from, and how to run it. CNC bits first, hand router bits, drill bits, then hole cutters. For local reference, each bit is marked in sharpie with the ID in the first column.
 
 ## CNC router
 
@@ -157,6 +157,53 @@ Twist bits for the drill press and cordless drill. One flat series, **T**, numbe
 </div>
 {% else %}
 <p><em>No drill bits catalogued yet. Add a document with the 'drill-bit' tag to see it here.</em></p>
+{% endif %}
+
+## Hole cutters
+
+Carbide-tipped hole cutters for the drill press and hand drill — a built-in arbor with a step-center pilot, not a twist bit. One flat series, **K**, numbered in the order they arrive (every letter that spells something — H, T, C, S — was already taken by a closer fit).
+
+{% assign kbits = site.docs | where_exp: "doc", "doc.tags contains 'hole-cutter'" | where_exp: "doc", "doc.draft != true" | sort: "serial" %}
+
+{% if kbits.size > 0 %}
+<div class="tooling-database">
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Cutter</th>
+        <th>Diameter</th>
+        <th>Cut Depth</th>
+        <th>Teeth</th>
+        <th>Shank</th>
+        <th>Best for</th>
+        <th>Vendor</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for bit in kbits %}
+      <tr>
+        <td>{{ bit.serial }}</td>
+        <td><a href="{{ bit.url | relative_url }}">{{ bit.title }}</a></td>
+        <td>{{ bit.cutting_diameter }}</td>
+        <td>{{ bit.cut_depth }}</td>
+        <td>{{ bit.teeth }}</td>
+        <td>{{ bit.shank_type }}</td>
+        <td>{{ bit.best_for }}</td>
+        <td>
+          {% if bit.purchase_url %}
+            <a href="{{ bit.purchase_url }}">{{ bit.vendor }}</a>
+          {% else %}
+            {{ bit.vendor }}
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% else %}
+<p><em>No hole cutters catalogued yet. Add a document with the 'hole-cutter' tag to see it here.</em></p>
 {% endif %}
 
 [^1]: Cutting diameter in inches. Shank diameter and overall length are on each bit's own page.
