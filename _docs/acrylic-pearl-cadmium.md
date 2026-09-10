@@ -6,7 +6,7 @@ sheet_size: 12x19
 price: "18.00"
 price_scale: "$$$"
 in_inventory: false
-palettes: ["2025 Good Day Shop"]
+palettes: ["Fall 2025"]
 purchase_url: https://www.cohnacrylics.com/products/1-8-pearl-cadmium-acrylic-sheets?variant=46558225367096
 image: acrylic-pearl-cadmium.jpg
 tags:

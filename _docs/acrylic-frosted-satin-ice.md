@@ -6,7 +6,7 @@ sheet_size: 18x24
 price: "31.30"
 price_scale: "$$"
 in_inventory: true
-palettes: ["2025 Good Day Shop"]
+palettes: ["Fall 2025"]
 purchase_url: https://www.canalplastic.com/products/0d010-df-frosted-satin-ice-acrylic-sheet?variant=32918345230
 image: acrylic-frosted-satin-ice.png
 tags:

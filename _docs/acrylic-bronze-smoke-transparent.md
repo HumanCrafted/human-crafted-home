@@ -6,7 +6,7 @@ sheet_size: 18x24
 price: "18.90"
 price_scale: "$"
 in_inventory: true
-palettes: ["2025 Good Day Shop"]
+palettes: ["Fall 2025"]
 purchase_url: https://www.canalplastic.com/products/2370-bronze-smoke-acrylic-sheet?variant=32914727630
 image: acrylic-bronze-smoke-transparent.png
 tags:

@@ -6,7 +6,7 @@ sheet_size: 18x24
 price: "18.90"
 price_scale: "$"
 in_inventory: false
-palettes: ["2025 Good Day Shop"]
+palettes: ["Fall 2025"]
 purchase_url: https://www.canalplastic.com/products/2423-red-transparent-acrylic-sheet?variant=32917835726
 image: acrylic-red-transparent.png
 tags:

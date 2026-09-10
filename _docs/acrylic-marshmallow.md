@@ -6,7 +6,7 @@ sheet_size: 18x24
 price: "27.00"
 price_scale: "$$"
 in_inventory: false
-palettes: ["2025 Good Day Shop"]
+palettes: ["Fall 2025"]
 purchase_url: https://www.cohnacrylics.com/products/1-8-marshmallow-pastel-acrylic?variant=46558233690168
 image: acrylic-marshmallow.jpg
 tags:
