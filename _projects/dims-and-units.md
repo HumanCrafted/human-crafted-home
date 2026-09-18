@@ -26,7 +26,7 @@ Every dimension is built from standard Figma vectors and frames. No custom rende
 
 ![[dims-thumbnail.png]]
 
-[### Units](https://www.figma.com/community/plugin/1658247715857063514)
+### [Units](https://www.figma.com/community/plugin/1658247715857063514)
 
 Draw a box or line, type a width and/or height in a real-world unit at a chosen DPI and scale, and Units converts to pixels and resizes the node. Set both dimensions or just one. Lock the aspect ratio and scale the other axis proportionally. Works on any resizable node — shapes, groups, frames — and reads a line's width as its geometric length.
 
