@@ -241,6 +241,118 @@ a.site-title:hover {
   flex-shrink: 0;
 }
 
+/* Quick-access menu — floats under the co/re hamburger (homepage, desktop
+   only). Items come from _data/quick_menu.yml. Pure CSS, and deliberately
+   slow: it only appears after the cursor dwells on the icon for
+   --quick-menu-dwell, so a passing hover never shows it (easter-egg feel).
+   Keyboard focus opens it immediately. The ::before strip bridges the gap
+   between icon and panel so the cursor can cross without it closing; close is
+   delayed slightly to forgive a wobble. Left-aligned with the icon and kept
+   clear of the co/lab pill by the vertical gap. Removed on touch devices and
+   below 769px so a tap just navigates to /re/ as before. */
+.site-nav .core-menu {
+  --quick-menu-dwell: 1000ms;   /* hover time before the panel appears */
+  --quick-menu-gap: 1.5rem;     /* vertical clearance below the icon */
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.site-nav .core-menu-panel {
+  position: absolute;
+  top: calc(100% + var(--quick-menu-gap));
+  left: 0;
+  z-index: 60;
+  min-width: 13rem;
+  padding: 0.75rem 0 0.5rem;
+  background-color: var(--background);
+  border-radius: 4px;
+  box-shadow: 0 6px 18px rgba(42, 40, 36, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 150ms ease 120ms, transform 150ms ease 120ms, visibility 0s linear 270ms;
+}
+
+/* invisible hover bridge across the gap above the panel */
+.site-nav .core-menu-panel::before {
+  content: "";
+  position: absolute;
+  top: calc(-1 * var(--quick-menu-gap));
+  left: 0;
+  right: 0;
+  height: var(--quick-menu-gap);
+}
+
+.site-nav .core-menu:hover .core-menu-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: opacity 200ms ease var(--quick-menu-dwell), transform 200ms ease var(--quick-menu-dwell), visibility 0s linear var(--quick-menu-dwell);
+}
+
+.site-nav .core-menu:focus-within .core-menu-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition-delay: 0s, 0s, 0s;
+}
+
+/* keep the icon in its hover tone while the menu is open */
+.site-nav .core-menu:hover .core-link,
+.site-nav .core-menu:focus-within .core-link {
+  color: var(--muted);
+}
+
+.site-nav .core-menu-title {
+  display: block;
+  padding: 0 1rem 0.4rem;
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+.site-nav .core-menu-panel ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav .core-menu-panel li {
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav .core-menu-panel a {
+  display: block;
+  padding: 0.4rem 1rem;
+  font-size: 16px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+[data-theme="dark"] .site-nav .core-menu-panel {
+  background-color: var(--surface); /* raised surface reads better on dark paper */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+@media (hover: none), (max-width: 768px) {
+  .site-nav .core-menu-panel {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-nav .core-menu-panel {
+    transform: none;
+  }
+  .site-nav .core-menu:hover .core-menu-panel {
+    transition: opacity 0s linear var(--quick-menu-dwell), visibility 0s linear var(--quick-menu-dwell);
+  }
+}
+
 /* Floating co/lab button — mobile only (desktop has the nav pill).
    a.colab-fab outranks the .btn { display: inline-flex } it also carries. */
 a.colab-fab {

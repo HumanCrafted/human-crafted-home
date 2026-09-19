@@ -1,0 +1,16 @@
+# Quick-access menu — the small floating list that appears when hovering the
+# co/re hamburger icon in the homepage nav. Each entry is a shortcut into co/re.
+# `url` is a site path (/slug/) or a full https:// link (opens in a new tab).
+# Order here is display order. Set enabled: false to hide one without deleting it.
+
+- name: Decimal Equivalents
+  url: /decimal-chart/
+  enabled: true
+
+- name: DXF to SVG
+  url: "https://dxftosvg.humancrafted.co"
+  enabled: true
+
+- name: Tooling
+  url: /tooling/
+  enabled: true

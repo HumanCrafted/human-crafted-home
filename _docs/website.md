@@ -68,6 +68,9 @@ Playback is a plain `<audio>` element in `assets/js/music-player.js`, loaded onl
 - Manual item lists with optional links and configurable limits
 - Used on the [[core|Core]] page and the [[design-system|Design System]] note
 
+#### Quick-access Menu
+A small easter egg on the homepage and on co/re itself: dwelling the cursor on the co/re hamburger icon for about a second floats a "Quick links" panel of shortcuts into co/re (currently Decimal Equivalents, DXF to SVG, and Tooling). A passing hover never shows it. The list is data-driven from `_data/quick_menu.yml` — each entry is a name plus a site path or external link, in display order, with an `enabled` switch. It is pure CSS (hover after a dwell, or keyboard focus immediately; no JavaScript) and is desktop only — on touch devices and narrow screens the panel is removed, and tapping the icon simply goes to co/re as before.
+
 #### Obsidian Integration Plugin
 One linking convention, authored in Obsidian and resolved to Jekyll URLs at build time:
 - Internal links are `[[slug|Display Text]]` (or `[[slug]]`) — a note's filename is its URL

@@ -403,6 +403,9 @@ merged but still exists locally; safe to delete.)
 - "Let's co/lab" pill shows on **all** pages now.
 - On-load motion (Web Animations API; skipped for `prefers-reduced-motion` or hidden/backgrounded tabs): breadcrumb pages **wipe in only the newest path segment**; home **reassembles** (`humancrafted` splits, the `/` drops into the gap) only when arriving from an internal page (`document.referrer` same-origin).
 
+### Quick-access menu (Sept 2026)
+Dwelling on the co/re hamburger in the nav (shown on home and on `/re/` itself, where it carries `aria-current="page"`) floats a "Quick links" panel of shortcuts into co/re — an easter egg, not primary nav. Data-driven from `_data/quick_menu.yml` (name + site path or `https://` link, `enabled` switch, file order = display order); external links open in a new tab. Markup in `_layouts/default.html` (`.core-menu` wraps the existing `.core-link`, which still links to `/re/`; panel is `.core-menu-panel` with a `.core-menu-title` + `ul`); styles in `main.css`. Pure CSS: `:hover` opens it only after `--quick-menu-dwell` (1000ms, set on `.core-menu` — the one knob for "how long before it appears"); `:focus-within` opens immediately for keyboard users; `--quick-menu-gap` (1.5rem) is the vertical clearance and also sizes the `::before` hover bridge; close is delayed ~120ms. Panel is borderless with a soft shadow, on `--background` in light (`--surface` was rejected as too dark on light paper) and `--surface` in dark; anchored `left: 0` to the icon. Desktop only: removed under `@media (hover: none), (max-width: 768px)` so a tap navigates to co/re. Umami: `Quick menu` event with an `item` property.
+
 ### Dev environment note
 Ruby was upgraded to 3.4.7; use `bundle _2.7.2_ exec …` (see Jekyll Development Server). `Gemfile.lock`, `.DS_Store`, `jekyll.log`, `.obsidian/workspace.json`, and `.claude/` are gitignored. The Obsidian git-sync plugin can switch the working-tree branch mid-session.
 

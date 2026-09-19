@@ -75,12 +75,33 @@
             <div class="header-content">
                 {% include wordmark.html %}
                 <nav class="site-nav">
-                    {% if page.url == "/" %}
-                    <a href="{{ '/re/' | relative_url }}" class="core-link" aria-label="co/re — about &amp; archive" data-umami-event="Core nav">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M3 6h18M3 12h18M3 18h18"/>
-                        </svg>
-                    </a>
+                    {% if page.url == "/" or page.url == "/re/" %}
+                    {% comment %}
+                      co/re hamburger, shown on home and on co/re itself.
+                      Hovering (or keyboard-focusing) it floats a
+                      quick-access list of shortcuts into co/re, driven by
+                      _data/quick_menu.yml. The icon itself still links to /re/.
+                      Desktop only: hidden on touch devices and below 769px, so a
+                      tap navigates. Opens only after a dwell (--quick-menu-dwell).
+                    {% endcomment %}
+                    {%- assign quick_items = site.data.quick_menu | where_exp: "item", "item.enabled != false" -%}
+                    <div class="core-menu">
+                        <a href="{{ '/re/' | relative_url }}" class="core-link" aria-label="co/re — about &amp; archive"{% if page.url == "/re/" %} aria-current="page"{% endif %} data-umami-event="Core nav">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M3 6h18M3 12h18M3 18h18"/>
+                            </svg>
+                        </a>
+                        {% if quick_items.size > 0 %}
+                        <div class="core-menu-panel">
+                            <span class="core-menu-title" id="core-menu-title">Quick links</span>
+                            <ul aria-labelledby="core-menu-title">
+                                {% for item in quick_items %}
+                                <li>{% if item.url contains "://" %}<a href="{{ item.url }}" target="_blank" rel="noopener" data-umami-event="Quick menu" data-umami-event-item="{{ item.name }}">{{ item.name }}</a>{% else %}<a href="{{ item.url | relative_url }}" data-umami-event="Quick menu" data-umami-event-item="{{ item.name }}">{{ item.name }}</a>{% endif %}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        {% endif %}
+                    </div>
                     {% endif %}
                     {% comment %}
                       Cart. Hidden while empty on non-shop pages (CSS .cart-link.is-empty),
