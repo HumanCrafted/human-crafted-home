@@ -2366,7 +2366,7 @@ body.places-map-open {
 
 /* ============================================
    Hardware design chart (/hardware-design/)
-   Six sections, each a small line drawing with
+   Seven sections, each a small line drawing with
    letter callouts beside a table keyed to those
    letters. Values come from _data/hardware.yml via
    _includes/hardware-chart{,-head,-row}.html.

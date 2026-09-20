@@ -1,6 +1,6 @@
 {%- comment -%}
 Hardware design chart — hole and pocket sizes for metric hardware in printed
-parts, M3–M10. Six sections. Values come from _data/hardware.yml; each section is a small
+parts, M3–M10. Seven sections. Values come from _data/hardware.yml; each section is a small
 inline SVG (letter callouts) beside a table whose rows key to the letters.
 Countersink chamfer and counterbore+washer depth are computed here, not typed.
 Styled in main.css (.hw-section, .hw-fig, .hw-table).
@@ -82,6 +82,31 @@ Styled in main.css (.hw-section, .hw-fig, .hw-table).
 <tbody>
 {% include hardware-chart-row.html key="A" label="Slot width (nut thickness, slip)" field="sq_thick" %}
 {% include hardware-chart-row.html key="B" label="Slot depth and length, slip" field="sq_vert" %}
+</tbody></table></div></div>
+</div>
+
+<h3>Hex head pocket</h3>
+<div class="hw-section">
+<svg class="hw-fig" viewBox="0 0 190 100" role="img" aria-label="Plan view of a hexagonal pocket for a bolt head with its across-flats width marked A, and a section showing its depth marked B and the through hole marked C">
+  <polygon points="60,20 80.8,32 80.8,56 60,68 39.2,56 39.2,32"/>
+  <line class="ext" x1="39.2" y1="56" x2="39.2" y2="94"/><line class="ext" x1="80.8" y1="56" x2="80.8" y2="94"/>
+  <line class="dim" x1="39.2" y1="88" x2="80.8" y2="88"/>
+  <circle class="dot" cx="60" cy="88" r="7"/><text x="60" y="88">A</text>
+  <path d="M104,24 H116 V46 H125 V68 H104 Z"/><path d="M158,24 H146 V46 H137 V68 H158 Z"/>
+  <line class="ext" x1="146" y1="24" x2="182" y2="24"/><line class="ext" x1="146" y1="46" x2="182" y2="46"/>
+  <line class="dim" x1="176" y1="24" x2="176" y2="46"/>
+  <circle class="dot" cx="176" cy="35" r="7"/><text x="176" y="35">B</text>
+  <line class="ext" x1="125" y1="68" x2="125" y2="90"/><line class="ext" x1="137" y1="68" x2="137" y2="90"/>
+  <line class="dim" x1="125" y1="84" x2="137" y2="84"/>
+  <circle class="dot" cx="131" cy="84" r="7"/><text x="131" y="84">C</text>
+</svg>
+<div class="hw-body"><div class="hw-table"><table>
+{% include hardware-chart-head.html %}
+<tbody>
+{% include hardware-chart-row.html key="A" label="Press fit, across flats" field="head_press" %}
+{% include hardware-chart-row.html key="A" label="Slip fit, across flats" field="head_slip" %}
+{% include hardware-chart-row.html key="B" label="Depth (head height)" field="head_depth" %}
+{% include hardware-chart-row.html key="C" label="Through hole Ø (bolt slip fit)" field="bolt_slip" %}
 </tbody></table></div></div>
 </div>
 
