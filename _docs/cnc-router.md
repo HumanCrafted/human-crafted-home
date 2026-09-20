@@ -45,13 +45,6 @@ Rated by Inventables for hardwoods, softwoods, plywood, MDF, plastics (HDPE, Del
 - **MDF** - Templates, jigs, and painted finished parts
 - **Acrylic** - Signs, displays, and precision-cut components
 
-### Process
-
-1. **Design** in Fusion 360, Illustrator, Affinity, or Figma
-2. **CAM** - Generate toolpaths and optimize for material
-3. **Setup** - Secure stock, set zero, verify tool
-4. **Cut** with optimized feeds and speeds
-5. **Finishing** - sanding, assembly, quality check
 
 {% assign cnc_projects = site.projects | where_exp: "project", "project.tools contains 'cnc-router'" | sort: "published_date" | reverse %}
 {% if cnc_projects.size > 0 %}
