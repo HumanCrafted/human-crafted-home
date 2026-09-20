@@ -1,0 +1,102 @@
+# Metric hardware design dimensions (mm) for 3D-printed parts — rendered by
+# _includes/hardware-chart.html on /hardware-design/. Source: alch.shop's
+# hardware design boards. One entry per bolt size; keys map to chart rows.
+#   nut_press / nut_slip   hex nut pocket, across flats
+#   nut_thick              hex nut thickness = pocket depth
+#   sq_press / sq_slip     square nut pocket width
+#   sq_thick               square nut slip thickness = pocket depth / slot width
+#   sq_vert                square nut vertical slot width and depth
+#   bolt_slip              bolt clearance hole
+#   cb_dia / cb_depth      counterbore
+#   cs_dia / cs_depth      countersink (chamfer is computed)
+#   washer_dia / washer_thick
+- name: M3
+  nut_press: 5.5
+  nut_slip: 5.7
+  nut_thick: 2.5
+  sq_press: 5.4
+  sq_slip: 5.8
+  sq_thick: 2.1
+  sq_vert: 6.3
+  bolt_slip: 3.3
+  cb_dia: 5.6
+  cb_depth: 3.1
+  cs_dia: 6.3
+  cs_depth: 2.1
+  washer_dia: 7.3
+  washer_thick: 0.6
+- name: M4
+  nut_press: 6.9
+  nut_slip: 7.2
+  nut_thick: 3.2
+  sq_press: 6.8
+  sq_slip: 7.2
+  sq_thick: 2.4
+  sq_vert: 7.6
+  bolt_slip: 4.3
+  cb_dia: 7.3
+  cb_depth: 4.1
+  cs_dia: 8.2
+  cs_depth: 2.4
+  washer_dia: 9.1
+  washer_thick: 0.9
+- name: M5
+  nut_press: 7.9
+  nut_slip: 8.2
+  nut_thick: 4.1
+  sq_press: 7.9
+  sq_slip: 8.3
+  sq_thick: 2.9
+  sq_vert: 8.7
+  bolt_slip: 5.3
+  cb_dia: 8.9
+  cb_depth: 5.2
+  cs_dia: 10.2
+  cs_depth: 3.2
+  washer_dia: 10.4
+  washer_thick: 1.1
+- name: M6
+  nut_press: 9.9
+  nut_slip: 10.3
+  nut_thick: 5.1
+  sq_press: 9.9
+  sq_slip: 10.4
+  sq_thick: 3.5
+  sq_vert: 10.9
+  bolt_slip: 6.3
+  cb_dia: 10.4
+  cb_depth: 6.3
+  cs_dia: 12.3
+  cs_depth: 3.6
+  washer_dia: 12.3
+  washer_thick: 1.7
+- name: M8
+  nut_press: 12.8
+  nut_slip: 13.2
+  nut_thick: 6.5
+  sq_press: 12.9
+  sq_slip: 13.4
+  sq_thick: 4.4
+  sq_vert: 13.9
+  bolt_slip: 8.3
+  cb_dia: 13.2
+  cb_depth: 8.2
+  cs_dia: 16.2
+  cs_depth: 5.0
+  washer_dia: 16.2
+  washer_thick: 1.7
+- name: M10
+  nut_press: 16.9
+  nut_slip: 17.2
+  nut_thick: 8.1
+  sq_press: 17.1
+  sq_slip: 17.3
+  sq_thick: 5.3
+  sq_vert: 17.8
+  bolt_slip: 10.3
+  cb_dia: 16.3
+  cb_depth: 10.0
+  cs_dia: 20.2
+  cs_depth: 5.7
+  washer_dia: 20.2
+  washer_thick: 2.1

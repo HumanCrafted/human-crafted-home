@@ -1,0 +1,137 @@
+{%- comment -%}
+Hardware design chart — hole and pocket sizes for metric hardware in printed
+parts, M3–M10. Six sections. Values come from _data/hardware.yml; each section is a small
+inline SVG (letter callouts) beside a table whose rows key to the letters.
+Countersink chamfer and counterbore+washer depth are computed here, not typed.
+Styled in main.css (.hw-section, .hw-fig, .hw-table).
+{%- endcomment -%}
+
+<h3>Bolt hole</h3>
+<div class="hw-section">
+<svg class="hw-fig" viewBox="0 0 160 110" role="img" aria-label="Plan view of a round hole with its diameter marked A">
+  <circle cx="80" cy="44" r="24"/>
+  <line class="ext" x1="56" y1="44" x2="56" y2="94"/><line class="ext" x1="104" y1="44" x2="104" y2="94"/>
+  <line class="dim" x1="56" y1="88" x2="104" y2="88"/>
+  <circle class="dot" cx="80" cy="88" r="7"/><text x="80" y="88">A</text>
+</svg>
+<div class="hw-body"><div class="hw-table"><table>
+{% include hardware-chart-head.html %}
+<tbody>
+{% include hardware-chart-row.html key="A" label="Slip fit Ø" field="bolt_slip" %}
+</tbody></table></div></div>
+</div>
+
+<h3>Hex nut pocket</h3>
+<div class="hw-section">
+<svg class="hw-fig" viewBox="0 0 190 110" role="img" aria-label="Plan view of a hexagonal pocket with its across-flats width marked A, and a section showing its depth marked B">
+  <polygon points="60,20 80.8,32 80.8,56 60,68 39.2,56 39.2,32"/>
+  <circle cx="60" cy="44" r="10"/>
+  <line class="ext" x1="39.2" y1="56" x2="39.2" y2="94"/><line class="ext" x1="80.8" y1="56" x2="80.8" y2="94"/>
+  <line class="dim" x1="39.2" y1="88" x2="80.8" y2="88"/>
+  <circle class="dot" cx="60" cy="88" r="7"/><text x="60" y="88">A</text>
+  <path d="M104,24 H116 V46 H146 V24 H158 V68 H104 Z"/>
+  <line class="ext" x1="146" y1="24" x2="182" y2="24"/><line class="ext" x1="146" y1="46" x2="182" y2="46"/>
+  <line class="dim" x1="176" y1="24" x2="176" y2="46"/>
+  <circle class="dot" cx="176" cy="35" r="7"/><text x="176" y="35">B</text>
+</svg>
+<div class="hw-body"><div class="hw-table"><table>
+{% include hardware-chart-head.html %}
+<tbody>
+{% include hardware-chart-row.html key="A" label="Press fit, across flats" field="nut_press" %}
+{% include hardware-chart-row.html key="A" label="Slip fit, across flats" field="nut_slip" %}
+{% include hardware-chart-row.html key="B" label="Depth (nut thickness)" field="nut_thick" %}
+</tbody></table></div></div>
+</div>
+
+<h3>Square nut pocket</h3>
+<div class="hw-section">
+<svg class="hw-fig" viewBox="0 0 190 110" role="img" aria-label="Plan view of a square pocket with its width marked A, and a section showing its depth marked B">
+  <rect x="39" y="23" width="42" height="42"/>
+  <circle cx="60" cy="44" r="10"/>
+  <line class="ext" x1="39" y1="65" x2="39" y2="94"/><line class="ext" x1="81" y1="65" x2="81" y2="94"/>
+  <line class="dim" x1="39" y1="88" x2="81" y2="88"/>
+  <circle class="dot" cx="60" cy="88" r="7"/><text x="60" y="88">A</text>
+  <path d="M104,24 H116 V40 H146 V24 H158 V68 H104 Z"/>
+  <line class="ext" x1="146" y1="24" x2="182" y2="24"/><line class="ext" x1="146" y1="40" x2="182" y2="40"/>
+  <line class="dim" x1="176" y1="24" x2="176" y2="40"/>
+  <circle class="dot" cx="176" cy="32" r="7"/><text x="176" y="32">B</text>
+</svg>
+<div class="hw-body"><div class="hw-table"><table>
+{% include hardware-chart-head.html %}
+<tbody>
+{% include hardware-chart-row.html key="A" label="Press fit width" field="sq_press" %}
+{% include hardware-chart-row.html key="A" label="Slip fit width" field="sq_slip" %}
+{% include hardware-chart-row.html key="B" label="Depth (nut thickness, slip)" field="sq_thick" %}
+</tbody></table></div></div>
+</div>
+
+<h3>Square nut vertical slot</h3>
+<div class="hw-section">
+<svg class="hw-fig" viewBox="0 0 160 120" role="img" aria-label="Section of a slot entered from the top edge, with its width marked A and its depth marked B; a dashed bolt hole crosses it">
+  <path d="M30,30 H74 V96 H96 V30 H140 V110 H30 Z"/>
+  <line class="ext" x1="30" y1="60" x2="140" y2="60" stroke-dasharray="3 3"/><line class="ext" x1="30" y1="74" x2="140" y2="74" stroke-dasharray="3 3"/>
+  <line class="ext" x1="74" y1="30" x2="74" y2="10"/><line class="ext" x1="96" y1="30" x2="96" y2="10"/>
+  <line class="dim" x1="74" y1="16" x2="96" y2="16"/>
+  <circle class="dot" cx="85" cy="16" r="7"/><text x="85" y="16">A</text>
+  <line class="ext" x1="96" y1="30" x2="156" y2="30"/><line class="ext" x1="96" y1="96" x2="156" y2="96"/>
+  <line class="dim" x1="150" y1="30" x2="150" y2="96"/>
+  <circle class="dot" cx="150" cy="63" r="7"/><text x="150" y="63">B</text>
+</svg>
+<div class="hw-body"><div class="hw-table"><table>
+{% include hardware-chart-head.html %}
+<tbody>
+{% include hardware-chart-row.html key="A" label="Slot width (nut thickness, slip)" field="sq_thick" %}
+{% include hardware-chart-row.html key="B" label="Slot depth and length, slip" field="sq_vert" %}
+</tbody></table></div></div>
+</div>
+
+<h3>Counterbore</h3>
+<div class="hw-section">
+<svg class="hw-fig" viewBox="0 0 160 125" role="img" aria-label="Section of a counterbored hole: counterbore diameter marked A, counterbore depth marked B, through hole marked C">
+  <path d="M30,30 H50 V58 H68 V100 H30 Z"/><path d="M130,30 H110 V58 H92 V100 H130 Z"/>
+  <line class="ext" x1="50" y1="30" x2="50" y2="12"/><line class="ext" x1="110" y1="30" x2="110" y2="12"/>
+  <line class="dim" x1="50" y1="18" x2="110" y2="18"/>
+  <circle class="dot" cx="80" cy="18" r="7"/><text x="80" y="18">A</text>
+  <line class="ext" x1="110" y1="30" x2="152" y2="30"/><line class="ext" x1="110" y1="58" x2="152" y2="58"/>
+  <line class="dim" x1="146" y1="30" x2="146" y2="58"/>
+  <circle class="dot" cx="146" cy="44" r="7"/><text x="146" y="44">B</text>
+  <line class="ext" x1="68" y1="100" x2="68" y2="118"/><line class="ext" x1="92" y1="100" x2="92" y2="118"/>
+  <line class="dim" x1="68" y1="112" x2="92" y2="112"/>
+  <circle class="dot" cx="80" cy="112" r="7"/><text x="80" y="112">C</text>
+</svg>
+<div class="hw-body"><div class="hw-table"><table>
+{% include hardware-chart-head.html %}
+<tbody>
+{% include hardware-chart-row.html key="A" label="Counterbore Ø" field="cb_dia" %}
+{% include hardware-chart-row.html key="B" label="Counterbore depth" field="cb_depth" %}
+{% include hardware-chart-row.html key="C" label="Through hole Ø (bolt slip fit)" field="bolt_slip" %}
+{% include hardware-chart-row.html label="Counterbore Ø with washer" field="washer_dia" %}
+<tr><th scope="row"><span class="hw-key hw-key--blank"></span>Counterbore depth with washer</th>{% for s in site.data.hardware %}{% assign dw = s.cb_depth | plus: s.washer_thick | round: 1 %}<td>{{ dw }}</td>{% endfor %}</tr>
+</tbody></table></div>
+<p class="hw-note">With a washer: Ø = washer Ø, depth = counterbore depth + washer thickness.</p></div>
+</div>
+
+<h3>Countersink</h3>
+<div class="hw-section">
+<svg class="hw-fig" viewBox="0 0 160 125" role="img" aria-label="Section of a countersunk hole: countersink diameter marked A, depth marked B, chamfer width marked C">
+  <path d="M30,34 H50 L68,56 V104 H30 Z"/><path d="M130,34 H110 L92,56 V104 H130 Z"/>
+  <line class="ext" x1="50" y1="34" x2="50" y2="4"/><line class="ext" x1="110" y1="34" x2="110" y2="4"/>
+  <line class="dim" x1="50" y1="10" x2="110" y2="10"/>
+  <circle class="dot" cx="80" cy="10" r="7"/><text x="80" y="10">A</text>
+  <line class="ext" x1="68" y1="56" x2="68" y2="18"/>
+  <line class="dim" x1="50" y1="24" x2="68" y2="24"/>
+  <circle class="dot" cx="59" cy="24" r="7"/><text x="59" y="24">C</text>
+  <line class="ext" x1="110" y1="34" x2="152" y2="34"/><line class="ext" x1="92" y1="56" x2="152" y2="56"/>
+  <line class="dim" x1="146" y1="34" x2="146" y2="56"/>
+  <circle class="dot" cx="146" cy="45" r="7"/><text x="146" y="45">B</text>
+</svg>
+<div class="hw-body"><div class="hw-table"><table>
+{% include hardware-chart-head.html %}
+<tbody>
+{% include hardware-chart-row.html key="A" label="Countersink Ø" field="cs_dia" %}
+{% include hardware-chart-row.html key="B" label="Countersink depth" field="cs_depth" %}
+<tr><th scope="row"><span class="hw-key">C</span>Chamfer width</th>{% for s in site.data.hardware %}{% assign d = s.cs_dia | times: 10 | round %}{% assign b = s.bolt_slip | times: 10 | round %}{% assign c = d | minus: b | divided_by: 2.0 | round | divided_by: 10.0 %}<td>{{ c }}</td>{% endfor %}</tr>
+</tbody></table></div>
+<p class="hw-note">C = (A − bolt slip fit) ÷ 2. Through hole is the bolt slip fit Ø.</p></div>
+</div>
+

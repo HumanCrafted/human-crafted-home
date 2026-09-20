@@ -1,0 +1,7 @@
+{%- comment -%}
+One row of a hardware-chart table.
+  key    callout letter matching the illustration (optional)
+  label  row label
+  field  key in _data/hardware.yml to print for each size
+{%- endcomment -%}
+<tr><th scope="row"><span class="hw-key{% unless include.key %} hw-key--blank{% endunless %}">{{ include.key }}</span>{{ include.label }}</th>{% for s in site.data.hardware %}<td>{{ s[include.field] }}</td>{% endfor %}</tr>

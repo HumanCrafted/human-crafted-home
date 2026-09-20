@@ -2363,3 +2363,112 @@ body.places-map-open {
     row-gap: 0.35rem;
   }
 }
+
+/* ============================================
+   Hardware design chart (/hardware-design/)
+   Six sections, each a small line drawing with
+   letter callouts beside a table keyed to those
+   letters. Values come from _data/hardware.yml via
+   _includes/hardware-chart{,-head,-row}.html.
+   ============================================ */
+.hw-section {
+  display: grid;
+  grid-template-columns: 11rem minmax(0, 1fr);
+  gap: 1.25rem 2.5rem;
+  align-items: start;
+  margin: 1.25rem 0 2.75rem;
+}
+.hw-fig {
+  width: 100%;
+  max-width: 11rem;
+  color: var(--muted-foreground);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+/* Dimension and extension lines share one light weight; only the part
+   outline is heavy. */
+.hw-fig .dim,
+.hw-fig .ext,
+.hw-fig .dot { stroke-width: 0.75; }
+.hw-fig .dot { fill: var(--background); }
+.hw-fig text {
+  fill: var(--foreground);
+  stroke: none;
+  font-family: inherit;
+  font-size: 9px;
+  text-anchor: middle;
+  dominant-baseline: central;
+}
+/* Seven columns is wider than a phone; scroll the table inside its own box
+   like the music and acrylic tables. */
+.hw-table {
+  overflow-x: auto;
+}
+.hw-table table {
+  margin: 0;
+}
+.hw-table th,
+.hw-table td {
+  padding: 0.5rem 0.6rem;
+}
+.hw-table th[scope="row"] {
+  font-weight: 400;
+  color: var(--foreground);
+  min-width: 12rem;
+  /* Hanging indent: a wrapped label's second line starts after the badge. */
+  padding-left: 2.55rem;
+  text-indent: -1.95rem;
+}
+.hw-table th[scope="col"] {
+  text-align: right;
+  color: var(--muted-foreground);
+  font-size: 0.85rem;
+}
+.hw-table td {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.hw-key {
+  display: inline-flex;
+  flex: none;
+  vertical-align: middle;
+  text-indent: 0;
+  align-items: center;
+  justify-content: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  margin-right: 0.6rem;
+  border: 1px solid var(--muted-foreground);
+  border-radius: 50%;
+  font-size: 0.72rem;
+  line-height: 1;
+  color: var(--foreground);
+}
+.hw-key--blank {
+  border-color: transparent;
+}
+.hw-note {
+  margin: 0.75rem 0 0;
+  font-size: 0.85rem;
+  color: var(--muted-foreground);
+}
+/* Below tablet width the figure sits above its table so the seven columns
+   get the full measure. */
+@media (max-width: 1024px) {
+  .hw-section {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .hw-fig {
+    max-width: 10rem;
+  }
+}
+@media (max-width: 768px) {
+  .hw-table th[scope="row"] {
+    min-width: 9rem;
+  }
+}

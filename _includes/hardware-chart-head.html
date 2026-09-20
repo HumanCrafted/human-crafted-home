@@ -1,0 +1,2 @@
+{%- comment -%} Column header for a hardware-chart table: blank corner + one column per size. {%- endcomment -%}
+<thead><tr><th scope="col"></th>{% for s in site.data.hardware %}<th scope="col">{{ s.name }}</th>{% endfor %}</tr></thead>
