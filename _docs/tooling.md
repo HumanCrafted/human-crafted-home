@@ -5,7 +5,7 @@ slug: tooling
 main_image:
 featured: false
 tags:
-  - tools
+  - note
 published_date: 2026-08-23
 gallery_images:
 version: "1.0"
