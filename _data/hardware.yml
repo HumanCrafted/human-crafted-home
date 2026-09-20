@@ -3,8 +3,13 @@
 # hardware design boards. One entry per bolt size; keys map to chart rows.
 #   nut_press / nut_slip   hex nut pocket, across flats
 #   nut_thick              hex nut thickness = pocket depth
-#   head_press / head_slip hex head bolt pocket, across flats (same s as the nut)
-#   head_depth             hex head height = pocket depth
+#   head_press / head_slip hex head bolt pocket, across flats. Set from the
+#                          measured heads with the nut pockets' clearances
+#                          (press ≈ +0.1, slip ≈ +0.4); heads measure ~0.07
+#                          wider than the nuts, so these run 0.1 over nut_*.
+#   head_depth             pocket depth ≈ measured head height + 0.2. Heads
+#                          measure 0.2–0.4 taller than DIN 933 nominal.
+#                          M3 is extrapolated (no M3 bolt measured).
 #   sq_press / sq_slip     square nut pocket width
 #   sq_thick               square nut slip thickness = pocket depth / slot width
 #   sq_vert                square nut vertical slot width and depth
@@ -22,9 +27,9 @@
   nut_press: 5.5
   nut_slip: 5.7
   nut_thick: 2.5
-  head_press: 5.5
-  head_slip: 5.7
-  head_depth: 2.1
+  head_press: 5.6
+  head_slip: 5.8
+  head_depth: 2.4
   sq_press: 5.4
   sq_slip: 5.8
   sq_thick: 2.1
@@ -37,8 +42,8 @@
   washer_dia: 7.3
   washer_thick: 0.6
   measured:            # mm, blank until measured
-    nut_flats:         # hex nut across flats
-    nut_thick:
+    nut_flats: 5.45        # hex nut across flats
+    nut_thick: 2.35
     head_flats:        # hex head bolt across flats
     head_height:
     sq_width:          # square nut
@@ -54,9 +59,9 @@
   nut_press: 6.9
   nut_slip: 7.2
   nut_thick: 3.2
-  head_press: 6.9
-  head_slip: 7.2
-  head_depth: 2.9
+  head_press: 7.0
+  head_slip: 7.3
+  head_depth: 3.3
   sq_press: 6.8
   sq_slip: 7.2
   sq_thick: 2.4
@@ -69,13 +74,13 @@
   washer_dia: 9.1
   washer_thick: 0.9
   measured:            # mm, blank until measured
-    nut_flats:         # hex nut across flats
-    nut_thick:
-    head_flats:        # hex head bolt across flats
-    head_height:
+    nut_flats: 6.81        # hex nut across flats
+    nut_thick: 3.02
+    head_flats: 6.88       # hex head bolt across flats
+    head_height: 3.06
     sq_width:          # square nut
     sq_thick:
-    bolt_dia:          # thread major Ø
+    bolt_dia: 3.81         # thread major Ø
     cap_head_dia:      # socket head cap screw (counterbore)
     cap_head_height:
     csk_head_dia:      # countersunk screw (countersink)
@@ -86,9 +91,9 @@
   nut_press: 7.9
   nut_slip: 8.2
   nut_thick: 4.1
-  head_press: 7.9
-  head_slip: 8.2
-  head_depth: 3.6
+  head_press: 8.0
+  head_slip: 8.3
+  head_depth: 4.1
   sq_press: 7.9
   sq_slip: 8.3
   sq_thick: 2.9
@@ -101,13 +106,13 @@
   washer_dia: 10.4
   washer_thick: 1.1
   measured:            # mm, blank until measured
-    nut_flats:         # hex nut across flats
-    nut_thick:
-    head_flats:        # hex head bolt across flats
-    head_height:
+    nut_flats: 7.85        # hex nut across flats
+    nut_thick: 3.89
+    head_flats: 7.9       # hex head bolt across flats
+    head_height: 3.9
     sq_width:          # square nut
     sq_thick:
-    bolt_dia:          # thread major Ø
+    bolt_dia: 4.87         # thread major Ø
     cap_head_dia:      # socket head cap screw (counterbore)
     cap_head_height:
     csk_head_dia:      # countersunk screw (countersink)
@@ -118,9 +123,9 @@
   nut_press: 9.9
   nut_slip: 10.3
   nut_thick: 5.1
-  head_press: 9.9
-  head_slip: 10.3
-  head_depth: 4.1
+  head_press: 10.0
+  head_slip: 10.4
+  head_depth: 4.4
   sq_press: 9.9
   sq_slip: 10.4
   sq_thick: 3.5
@@ -133,13 +138,13 @@
   washer_dia: 12.3
   washer_thick: 1.7
   measured:            # mm, blank until measured
-    nut_flats:         # hex nut across flats
-    nut_thick:
-    head_flats:        # hex head bolt across flats
-    head_height:
+    nut_flats: 9.84        # hex nut across flats
+    nut_thick: 4.91
+    head_flats: 9.93       # hex head bolt across flats
+    head_height: 4.2
     sq_width:          # square nut
     sq_thick:
-    bolt_dia:          # thread major Ø
+    bolt_dia: 5.83         # thread major Ø
     cap_head_dia:      # socket head cap screw (counterbore)
     cap_head_height:
     csk_head_dia:      # countersunk screw (countersink)
@@ -150,9 +155,9 @@
   nut_press: 12.8
   nut_slip: 13.2
   nut_thick: 6.5
-  head_press: 12.8
-  head_slip: 13.2
-  head_depth: 5.4
+  head_press: 12.9
+  head_slip: 13.3
+  head_depth: 5.8
   sq_press: 12.9
   sq_slip: 13.4
   sq_thick: 4.4
@@ -165,13 +170,13 @@
   washer_dia: 16.2
   washer_thick: 1.7
   measured:            # mm, blank until measured
-    nut_flats:         # hex nut across flats
-    nut_thick:
-    head_flats:        # hex head bolt across flats
-    head_height:
+    nut_flats: 12.74        # hex nut across flats
+    nut_thick: 6.4
+    head_flats: 12.83       # hex head bolt across flats
+    head_height: 5.63
     sq_width:          # square nut
     sq_thick:
-    bolt_dia:          # thread major Ø
+    bolt_dia: 7.81         # thread major Ø
     cap_head_dia:      # socket head cap screw (counterbore)
     cap_head_height:
     csk_head_dia:      # countersunk screw (countersink)
@@ -182,9 +187,9 @@
   nut_press: 16.9
   nut_slip: 17.2
   nut_thick: 8.1
-  head_press: 16.9
-  head_slip: 17.2
-  head_depth: 6.5
+  head_press: 17.0
+  head_slip: 17.3
+  head_depth: 7.0
   sq_press: 17.1
   sq_slip: 17.3
   sq_thick: 5.3
@@ -197,13 +202,13 @@
   washer_dia: 20.2
   washer_thick: 2.1
   measured:            # mm, blank until measured
-    nut_flats:         # hex nut across flats
-    nut_thick:
-    head_flats:        # hex head bolt across flats
-    head_height:
+    nut_flats: 16.8        # hex nut across flats
+    nut_thick: 7.78
+    head_flats: 16.85       # hex head bolt across flats
+    head_height: 6.8
     sq_width:          # square nut
     sq_thick:
-    bolt_dia:          # thread major Ø
+    bolt_dia: 9.78         # thread major Ø
     cap_head_dia:      # socket head cap screw (counterbore)
     cap_head_height:
     csk_head_dia:      # countersunk screw (countersink)
