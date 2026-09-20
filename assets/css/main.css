@@ -725,6 +725,19 @@ hr {
   margin-bottom: 0.75rem;
 }
 
+/* Sub-heading inside a section (first used for per-size groups on
+   /hardware-design/): body mono, a step lighter than the h3 above it. */
+.doc-content > h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  margin-top: 1.75rem;
+  margin-bottom: 0.25rem;
+}
+.doc-content > h4 + table {
+  margin-top: 0.5rem;
+}
+
 /* Archive section */
 .archive-header {
   margin-bottom: 0.5rem;
