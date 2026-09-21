@@ -1363,7 +1363,15 @@ hr {
 .btn {
   background: var(--foreground);
   color: var(--background) !important;
-  padding: 0 1.375rem;
+  /* .btn goes on <button> too (Add to cart, Check out) — without this the
+     browser's 2px outset bevel shows as a pale ring around the ink pill. */
+  border: none;
+  appearance: none;
+  cursor: pointer;
+  /* 2px bottom padding lifts the label to optical centre: Plex Sans at this
+     size has ascenders and (in these labels) no descenders, so a box-centred
+     line reads low. Same trick as the "for sale" pill. */
+  padding: 0 1.375rem 2px;
   border-radius: 1.875rem;
   text-decoration: none !important;
   font-size: 22px !important;

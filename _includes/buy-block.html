@@ -140,7 +140,7 @@
 
     {%- if page.variants and page.variants.size > 1 %}
     <fieldset class="product-variants">
-      <legend class="product-label">{% if is_digital %}package{% else %}option{% endif %}</legend>
+      <legend class="product-label">{% if is_digital %}packages{% else %}options{% endif %}</legend>
       {%- assign first_available = true -%}
       {%- for v in page.variants %}
         {%- assign v_price = v.price | default: page.price -%}

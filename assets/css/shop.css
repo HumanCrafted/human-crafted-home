@@ -443,12 +443,12 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
   .tag-filter[data-filter="for sale"]:hover { transform: none; }
 }
 
-/* --- Buy block on a project page ----------------------------------------- */
+/* --- Buy block on a project page -----------------------------------------
+   No card: the block sits on the paper between the meta line and the body,
+   held together by whitespace, the same way the meta line sits. (The 1px
+   bordered --surface box was dropped Sept 2026 — see CLAUDE.md.) */
 .buy-block {
-  border: 1px solid var(--border);
-  background: var(--surface);
-  padding: 1.5rem;
-  margin: 0 0 3rem;
+  margin: 0 0 3.5rem;
   max-width: 30rem;
 }
 
@@ -466,13 +466,16 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
   font-weight: 700;
 }
 
+/* Small outlined pill beside the price: "digital download" / "archived". */
 .buy-tag {
+  font-family: 'IBM Plex Sans', sans-serif;
   font-size: 0.6875rem;
-  letter-spacing: 0.04em;
+  font-weight: 700;
+  line-height: 1;
   color: var(--muted-foreground);
-  border: 1px solid var(--border);
+  box-shadow: inset 0 0 0 1.5px var(--border);
   border-radius: 999px;
-  padding: 0.0625rem 0.5rem;
+  padding: 0.3125rem 0.5rem;
 }
 
 .buy-soldout { margin: 0; font-size: 0.9375rem; }
@@ -483,12 +486,18 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
   color: var(--muted-foreground);
 }
 
-/* Variant picker + qty stepper. On the buy block the variant rows sit on the
-   surface fill, so the selected row inverts to --background to read as raised. */
+/* --- Variant picker: pills -------------------------------------------------
+   The same control the homepage's "for sale" filter uses: outlined pill at
+   rest, solid ink when chosen, a 1px lift on hover. Each pill is the <label>
+   around a real radio, so keyboard and screen-reader behaviour is the native
+   radio group's; the radio itself is drawn off-screen. */
 .product-variants {
   border: none;
   padding: 0;
   margin: 0 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .product-label {
@@ -497,41 +506,78 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
   font-size: 0.8125rem;
   letter-spacing: 0.04em;
   margin-bottom: 0.5rem;
+  /* A <legend> can't be a flex item; take the full row instead. */
+  width: 100%;
+  float: left;
 }
 
 .variant {
-  display: flex;
+  position: relative;
+  display: inline-flex;
   align-items: center;
-  gap: 0.625rem;
-  padding: 0.5rem 0.75rem;
-  border: 1px solid var(--border);
-  margin-bottom: -1px;
+  gap: 0.375rem;
+  height: 2rem;
+  padding: 0 0.875rem 1px;
+  border-radius: 999px;
+  background: var(--background);
+  color: var(--foreground);
+  box-shadow: inset 0 0 0 1.5px var(--foreground);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1;
   cursor: pointer;
-  transition: background 150ms ease;
-  font-size: 0.9375rem;
+  transition: transform 150ms ease, background-color 150ms ease, color 150ms ease;
 }
 
-.variant:hover { background: var(--background); }
+.variant input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  pointer-events: none;
+}
+
+.variant:hover { transform: translateY(-1px); }
 
 .variant:has(input:checked) {
-  background: var(--background);
-  border-color: var(--foreground);
-  position: relative;
-  z-index: 1;
+  background: var(--foreground);
+  color: var(--background);
+  box-shadow: none;
 }
 
-.variant.is-soldout { opacity: 0.5; cursor: not-allowed; }
-.variant input { accent-color: var(--foreground); }
-.variant-name { flex: 1; }
-.variant-price { color: var(--muted-foreground); font-size: 0.875rem; }
+.variant:has(input:focus-visible) {
+  outline: 2px solid var(--foreground);
+  outline-offset: 2px;
+}
+
+.variant-price { font-weight: 400; }
+
+/* Sold out: muted ring and text, the name struck through. The "sold out"
+   flag stays in the markup for screen readers but isn't drawn — the strike
+   says it. */
+.variant.is-soldout {
+  color: var(--muted-foreground);
+  box-shadow: inset 0 0 0 1.5px var(--border);
+  cursor: not-allowed;
+}
+
+.variant.is-soldout:hover { transform: none; }
+.variant.is-soldout .variant-name { text-decoration: line-through; }
 
 .variant-flag {
-  font-size: 0.6875rem;
-  letter-spacing: 0.04em;
-  color: var(--muted-foreground);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 0 0.5rem;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .variant, .variant:hover { transform: none; transition: none; }
 }
 
 .product-stock {
@@ -591,34 +637,25 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
 .qty-stepper--sm .qty-btn { width: 1.75rem; font-size: 0.9375rem; }
 .qty-value { min-width: 1.5rem; text-align: center; font-size: 0.875rem; }
 
-@media (max-width: 768px) {
-  .buy-block { padding: 1.25rem; }
-}
-
 /* --- Archived product ----------------------------------------------------
-   Sold once, not again. The price and options still show — they're part of the
-   record — but nothing is interactive. Rendered on --background rather than
-   --surface so it reads as a record of the past rather than a live offer. */
-.buy-block.is-archived {
-  background: var(--background);
-  border-style: dashed;
-}
+   Sold once, not again. The price and options still show — they're part of
+   the record — but nothing is interactive: muted price, muted outlined pills
+   that don't respond, and a dead "Archived" button. */
+.buy-block.is-archived .buy-price { color: var(--muted-foreground); }
 
 .buy-tag--archived {
-  border-color: var(--foreground);
+  box-shadow: inset 0 0 0 1.5px var(--foreground);
   color: var(--foreground);
 }
 
-.buy-block.is-archived .buy-price { color: var(--muted-foreground); }
-
-/* Static rows, not labels: no radio, no pointer, nothing focusable. */
+/* Static pills, not labels: no radio, no pointer, nothing focusable. */
 .variant.is-disabled {
   cursor: default;
   color: var(--muted-foreground);
-  border-style: dashed;
+  box-shadow: inset 0 0 0 1.5px var(--border);
 }
 
-.variant.is-disabled:hover { background: none; }
+.variant.is-disabled:hover { transform: none; }
 
 .buy-block.is-archived .product-label {
   text-transform: none;

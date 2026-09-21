@@ -436,6 +436,16 @@ repo (`docs/ecommerce-research.md`, "Architecture A"):
   Stripe product images) and `countries` per region.
 - **Errors** come back as `400 { error, notices[] }` and render inline at the
   top of `/cart/` via `showCheckoutNotices()`, same voice as `reconcile()`.
+- **Buy block design (Sept 2026):** no card — the block sits on the paper
+  between the meta line and the body, whitespace only (the 1px bordered
+  `--surface` box is gone). Variants are **pills**, the same control as the
+  homepage "for sale" filter: outlined at rest (`box-shadow` inset ring, not a
+  border), solid ink when checked, 1px lift on hover, keyboard focus ring via
+  `:has(input:focus-visible)`; the real radio is drawn off-screen inside the
+  `<label>`. Sold out = muted ring, name struck, the "sold out" flag kept for
+  screen readers only. Archived = muted price, muted static pills, dead
+  button. Jon dislikes thin square outlines and full-pill *inputs*, so keep
+  the stepper and buttons pill-shaped and don't reintroduce bordered boxes.
 - **Homepage marks (Sept 2026):** an available project's card carries a small
   ink **"for sale" pill** pinned bottom-right *over the thumbnail box*
   (`_includes/for-sale-icon.html`, `.for-sale-mark` in shop.css; the old "$"
