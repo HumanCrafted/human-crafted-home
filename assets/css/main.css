@@ -111,6 +111,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* Floor between a long breadcrumb wordmark and the nav — space-between
+     alone lets the cart icon touch the crumb once the two no longer fit. */
+  gap: 2rem;
   padding: 0 8%;
   width: 100%;
   box-sizing: border-box;
@@ -196,6 +199,21 @@ a.site-title:hover {
   display: flex;
   gap: 2.625rem;
   align-items: center;
+  flex-shrink: 0;
+}
+
+/* Narrow desktop (a side panel, a half-width window): pull the nav items in
+   so the wordmark keeps its room. Phones restack the header separately. */
+@media (max-width: 1024px) {
+  .site-nav { gap: 1.5rem; }
+
+  /* And drop the dimmed "humancrafted." prefix on sub-pages, exactly as the
+     phone layout does — the longest crumbs ("toilet paper holder") otherwise
+     push the theme toggle out of the viewport around 800px. */
+  .site-title--crumb[data-wm-state="sub"] .wm-back,
+  .site-title--crumb[data-wm-state="sub"] .wm-dot {
+    display: none;
+  }
 }
 
 .site-nav a {
