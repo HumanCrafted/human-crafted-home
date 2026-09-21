@@ -17,6 +17,8 @@ Authored in Obsidian, built by Jekyll/GitHub Actions. Both understand exactly on
 
 How it resolves (`_plugins/obsidian_links.rb`): the wiki-link target is slugified (lowercased, spaces/underscores → hyphens), so `[[Shop V3]]`, `[[shop_v3]]`, `[[shop-v3]]` all map to `/shop-v3/`. Every project and doc is `/:slug/`. Post links drop their `YYYY-MM-DD-` filename prefix (`[[2016-06-30-made-better]]` → `/made-better/`). Hub pages whose permalink differs from their filename are aliased in `PERMALINK_ALIASES` (currently `core`/`re`/`more` → `/re/`, `index`/`home` → `/`); add to that map if a new custom-permalink page appears. The plugin still converts stray `[text](path.md)` links as a best-effort fallback, but don't rely on it. Links inside `` `inline code` `` or ```` ```fenced blocks``` ```` are left untouched, so a doc can show literal `[[slug]]`/`![[img]]` examples (that's how `/website/` and `voice-guide` document the syntax).
 
+**Gotcha — Liquid on the same line as a wiki-link:** in any file that carries `{% if` (or any `layout: doc` note), the plugin converts links *per line* and leaves every line containing `{%` or `{{` untouched. A `[[slug|Text]]` on such a line therefore reaches kramdown raw, and its `|` turns the whole paragraph into a table. Put the Liquid on its own line with trimming tags (`{%- … -%}`) so the surrounding prose still joins — see the "(or buy some)" fragment in `core.md`.
+
 **Safety net:** `_plugins/co_re_redirects.rb` now skips non-document (StaticFile) entries, so an empty/front-matter-less `.md` can no longer take down the build — worst case is one dead link. If a build ever fails, first check for 0-byte files: `find . -name '*.md' -size 0`.
 
 ## STL viewer (July 2026)
