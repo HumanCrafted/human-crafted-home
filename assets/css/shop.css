@@ -329,8 +329,9 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
 }
 
 /* --- Confirmation --------------------------------------------------------- */
+/* Body size, same as every other page — the old receipt page bumped this up. */
 .thanks-page { max-width: 34rem; margin-bottom: 6rem; }
-.thanks-lede { font-size: 1.125rem; margin-bottom: 1.5rem; }
+.thanks-lede { margin-bottom: 1.5rem; }
 
 /* --- Responsive ----------------------------------------------------------- */
 @media (max-width: 1024px) {
