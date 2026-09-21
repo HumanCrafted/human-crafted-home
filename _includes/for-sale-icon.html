@@ -1,20 +1,10 @@
 {%- comment -%}
-  "Available to buy" marker on an archive card: an ink disc with a paper "$".
+  "Available to buy" marker on an archive card: a small ink pill reading
+  "shop", pinned to the lower-right corner of the thumbnail box.
 
-  A text glyph rather than an SVG icon — at 18px a stroked bag reads as mush,
-  while a "$" stays legible because it's a real letterform being rendered at a
-  size the typeface was drawn for.
-
-  Rendered when a project has `for_sale: true`.
-
-  The caller must place this INSIDE a `.title-tail` (white-space: nowrap) span
-  together with the title's last word — see index.md. The disc is an atomic
-  inline box, so the browser will push it onto a line of its own when the title
-  fills its column (the "$" stranded alone under a mobile card). A word joiner
-  does NOT prevent that; only making the last word and the disc one unbreakable
-  inline does.
+  Sits over the image rather than inline with the title, so it never
+  interferes with how the title wraps and reads as a tag on the object.
+  Rendered by index.md inside `.project-image` when a project is
+  `shop_status: available`; styled in shop.css (.for-sale-mark).
 {%- endcomment -%}
-<span class="for-sale-mark" title="Available to buy">
-  <span class="for-sale-glyph" aria-hidden="true">$</span>
-  <span class="visually-hidden">Available to buy</span>
-</span>
+<span class="for-sale-mark" role="img" aria-label="Available to buy">shop</span>
