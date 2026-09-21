@@ -401,6 +401,48 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
 /* The card scales its thumbnail on hover; the pill rides along with it, which
    keeps it pinned to the same corner of the same box. Nothing extra needed. */
 
+/* The "for sale" filter in the tag bar is the same pill as the card marks, so
+   the filter and the marks read as one device. Resting state is the outline
+   (paper pill, ink text, thin ink ring — the ring keeps the silhouette on the
+   paper); selecting it fills to the solid ink pill the thumbnails wear. No
+   underline on hover, unlike the text filters: the pill lifts instead. Sits
+   among plain-text filters, so it's centred on the row rather than stretched. */
+.tag-filter[data-filter="for sale"] {
+  align-self: center;
+  background: var(--background);
+  color: var(--foreground);
+  box-shadow: inset 0 0 0 1.5px var(--foreground);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  height: 1.375rem;
+  padding: 0 0.625rem 1px;
+  border-radius: 999px;
+  transition: transform 150ms ease, background-color 150ms ease, color 150ms ease;
+}
+
+.tag-filter[data-filter="for sale"]:hover {
+  transform: translateY(-1px);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.tag-filter[data-filter="for sale"].active {
+  background: var(--foreground);
+  color: var(--background);
+  box-shadow: none;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tag-filter[data-filter="for sale"]:hover { transform: none; }
+}
+
 /* --- Buy block on a project page ----------------------------------------- */
 .buy-block {
   border: 1px solid var(--border);
