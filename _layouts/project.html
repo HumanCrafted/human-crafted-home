@@ -20,7 +20,15 @@ layout: default
 <div class="project-header">
   <h1>{{ page.title }}</h1>
   
-  {% if page.categories or page.published_date %}
+  {%- comment -%}
+    A project that's currently for sale gets a "for sale" link at the head of
+    its categories, into the homepage's "for sale" filter — same words as the
+    pill on its card. Only while the shop is on (an off build carries none of
+    this) and only for `available`, never `archived`.
+  {%- endcomment -%}
+  {%- assign for_sale = false -%}
+  {%- if site.shop_enabled and page.shop_status == "available" %}{% assign for_sale = true %}{% endif -%}
+  {% if page.categories or page.published_date or for_sale %}
   <div class="project-meta">
     {% if page.published_date %}
     <div class="project-date">
@@ -28,10 +36,13 @@ layout: default
       <span class="meta-date">{{ page.published_date | date: "%B %Y" }}</span>
     </div>
     {% endif %}
-    {% if page.categories %}
+    {% if page.categories or for_sale %}
     <div class="project-categories">
       <span class="categories-label">Categories:</span>
       <div class="meta-links">
+        {%- if for_sale %}
+        <a href="{{ '/' | relative_url }}?category=for+sale#projects" class="meta-link meta-link--for-sale">for sale</a>
+        {%- endif %}
         {% for category in page.categories %}
           <a href="{{ '/' | relative_url }}?category={{ category | url_encode }}#projects" class="meta-link">{{ category }}</a>
         {% endfor %}

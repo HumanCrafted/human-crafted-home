@@ -434,6 +434,16 @@ repo (`docs/ecommerce-research.md`, "Architecture A"):
   Stripe product images) and `countries` per region.
 - **Errors** come back as `400 { error, notices[] }` and render inline at the
   top of `/cart/` via `showCheckoutNotices()`, same voice as `reconcile()`.
+- **Homepage marks (Sept 2026):** an available project's card carries a small
+  ink **"for sale" pill** pinned bottom-right *over the thumbnail box*
+  (`_includes/for-sale-icon.html`, `.for-sale-mark` in shop.css; the old "$"
+  disc inline with the title is gone) and `data-shop="available"`. The filter
+  bar gets a **"for sale" filter** right after "all" (only while the shop is on
+  and ≥1 project is available); the inline script's `for sale` branch is
+  Liquid-guarded so an off build carries no trace. `?category=for+sale` works
+  like any category link; unknown filters fall back to "all". Available
+  project pages also lead their "Categories:" line with a "for sale" link
+  (`.meta-link--for-sale` in `_layouts/project.html`) into that filter.
 - **Local dev:** `jekyll-shop` preview on :4001 (`_config.shop.yml` overrides
   the endpoint to `http://127.0.0.1:3000/api/checkout`) plus, in the
   hcd-checkout repo, `cp .env.example .env.local` (Stripe **test** key,
