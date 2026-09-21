@@ -229,7 +229,7 @@
 
     if (!items.length) {
       body.innerHTML = '<p class="cart-empty">Your cart is empty.</p>';
-      foot.innerHTML = '<a class="btn" href="' + PATHS.shop + '">Browse the archive →</a>';
+      foot.innerHTML = '<a class="btn" href="' + PATHS.shop + '">Browse the projects →</a>';
       return;
     }
 
@@ -376,7 +376,7 @@
             noticesHtml(state.notices) +
             '<div class="cart-empty-state">' +
               '<p>Your cart is empty.</p>' +
-              '<a class="btn" href="' + PATHS.shop + '">Browse the archive →</a>' +
+              '<a class="btn" href="' + PATHS.shop + '">Browse the projects →</a>' +
             '</div>';
           return;
         }

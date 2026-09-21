@@ -739,13 +739,13 @@ hr {
 }
 
 /* Archive section */
-.archive-header {
+.projects-header {
   margin-bottom: 0.5rem;
   margin-top: 0;
   padding-top: 0;
 }
 
-.archive-title {
+.projects-title {
   font-size: 18px;
   font-weight: 500;
   color: var(--foreground);
@@ -757,7 +757,7 @@ hr {
   scroll-margin-top: 200px;
 }
 
-.archive-title::after {
+.projects-title::after {
   content: "↓";
   font-size: 1rem;
 }
@@ -1045,7 +1045,7 @@ hr {
     width: 100px;
   }
   
-  .archive-header {
+  .projects-header {
     margin-top: 0;
   }
 }
@@ -2205,8 +2205,8 @@ body.places-map-open {
   font-size: 0.9rem;
 }
 
-/* "Categories" label above the filter bar — matches the homepage's "The
-   Archive" heading (font-size/weight/color from .archive-title), written
+/* "Categories" label above the filter bar — matches the homepage's
+   "Projects" heading (font-size/weight/color from .projects-title), written
    as a self-contained rule rather than sharing that class: .doc-content >
    h2 (ruled, bold Plex Sans, its own margins) outranks a single class by
    specificity and would otherwise win. */

@@ -156,7 +156,7 @@ pkill -f "jekyll serve"
 ### Key Classes
 - `.hero-title` - Hero section styling (40vh height, centered text)
 - `.site-nav .colab-btn` - Co/lab button with high specificity
-- `.archive-header` - Project grid section
+- `.projects-header` - Project grid section
 - `.tag-filter.active::before` - Yellow highlight bars
 - `.footer-content` - Social links layout
 
@@ -310,7 +310,7 @@ git checkout -b hover-experiment
 
 {% include wiki-section.html title="Tools" items="CNC Router" auto="tool_docs" %}
 
-{% include wiki-section.html title="Projects" auto="projects" limit="10" show_all_link="/#archive" show_all_text="See all projects" %}
+{% include wiki-section.html title="Projects" auto="projects" limit="10" show_all_link="/#projects" show_all_text="See all projects" %}
 
 {% include wiki-section.html title="About" items="Bio:/about/" open="true" %}{% endraw %}
 ```

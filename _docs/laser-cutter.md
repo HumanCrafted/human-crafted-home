@@ -43,7 +43,7 @@ draft: false
 {% for project in laser_projects limit: 8 %}
 - [{{ project.title }}]({{ project.url | relative_url }})
 {% endfor %}
-- [View all laser projects →](/?category=laser#archive)
+- [View all laser projects →](/?category=laser#projects)
 
 ---
 {% endif %}

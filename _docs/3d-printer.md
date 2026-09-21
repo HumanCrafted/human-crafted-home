@@ -41,7 +41,7 @@ draft: false
 {% for project in printer_projects limit: 8 %}
 - [{{ project.title }}]({{ project.url | relative_url }})
 {% endfor %}
-- [View all 3D printing projects →](/?category=3d+printing#archive)
+- [View all 3D printing projects →](/?category=3d+printing#projects)
 
 ---
 {% endif %}

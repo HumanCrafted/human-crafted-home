@@ -7,7 +7,7 @@ shop: true
 shop_page: true   # withheld entirely when shop_enabled is false
 ---
 
-<a href="{{ '/#archive' | relative_url }}" class="back-link">← Keep looking</a>
+<a href="{{ '/#projects' | relative_url }}" class="back-link">← Keep looking</a>
 
 <div id="cart-page" class="cart-page" data-cart-page>
   <p class="cart-loading">Loading your cart…</p>

@@ -7,8 +7,8 @@ title:
 
 <hr class="section-divider">
 
-<div class="archive-header">
-  <h2 class="archive-title" id="archive">The Archive</h2>
+<div class="projects-header">
+  <h2 class="projects-title" id="projects">Projects</h2>
   
   <div class="tag-filters">
     <button class="tag-filter active" data-filter="all">all</button>

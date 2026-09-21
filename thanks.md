@@ -17,5 +17,5 @@ sitemap: false
 
 <div class="thanks-page" data-thanks-page>
   <p class="thanks-lede">Your order is in. Stripe is emailing the receipt now, and the shipping notice will follow from me.</p>
-  <a href="{{ '/#archive' | relative_url }}" class="btn">Back to the archive →</a>
+  <a href="{{ '/#projects' | relative_url }}" class="btn">Back to projects →</a>
 </div>

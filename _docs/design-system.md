@@ -53,7 +53,7 @@ The Human Crafted design system. Tokens, components, and patterns I use across h
     </div>
     <div class="spec-row">
       <span class="spec-label">eyebrow / 18 / M</span>
-      <span class="spec-body ts-eyebrow">The Archive ↓</span>
+      <span class="spec-body ts-eyebrow">Projects ↓</span>
     </div>
     <div class="spec-row">
       <span class="spec-label">body / 16 / Reg</span>
