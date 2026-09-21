@@ -406,6 +406,51 @@ merged but still exists locally; safe to delete.)
 ### Quick-access menu (Sept 2026)
 Dwelling on the co/re hamburger in the nav (shown on home and on `/re/` itself, where it carries `aria-current="page"`) floats a "Quick links" panel of shortcuts into co/re — an easter egg, not primary nav. Data-driven from `_data/quick_menu.yml` (name + site path or `https://` link, `enabled` switch, file order = display order); external links open in a new tab. Markup in `_layouts/default.html` (`.core-menu` wraps the existing `.core-link`, which still links to `/re/`; panel is `.core-menu-panel` with a `.core-menu-title` + `ul`); styles in `main.css`. Pure CSS: `:hover` opens it only after `--quick-menu-dwell` (1000ms, set on `.core-menu` — the one knob for "how long before it appears"); `:focus-within` opens immediately for keyboard users; `--quick-menu-gap` (1.5rem) is the vertical clearance and also sizes the `::before` hover bridge; close is delayed ~120ms. Panel is borderless with a soft shadow, on `--background` in light (`--surface` was rejected as too dark on light paper) and `--surface` in dark; anchored `left: 0` to the icon. Desktop only: removed under `@media (hover: none), (max-width: 768px)` so a tap navigates to co/re. Umami: `Quick menu` event with an `item` property.
 
+### Shop checkout: Stripe via hcd-checkout (Sept 2026)
+The shop is still dormant (`shop_enabled: false`), but checkout is now real
+code, not a faked receipt. Shape, per the July 2026 research in the `made-shop`
+repo (`docs/ecommerce-research.md`, "Architecture A"):
+
+- **Flow:** `assets/js/cart.js` holds the cart in localStorage. "Check out" on
+  `/cart/` POSTs `{ items: [{sku, qty}], region }` to `site.shop_checkout_endpoint`
+  → a Vercel function (**repo `HumanCrafted/hcd-checkout`**, local clone
+  `~/Documents/GitHub/hcd-checkout`, Vercel project `hcd-checkout`) that reads
+  the site's own `/catalog.json`, re-prices and stock-checks every SKU, creates
+  a Stripe Checkout Session, and answers `{ url }`. The browser goes to
+  Stripe's hosted page (address, shipping, payment incl. Link/Apple Pay, tax),
+  which returns to `/thanks/?session_id=…` (cart.js empties the cart) or
+  `/cart/` on cancel. The site never sees a card; the browser never sets a price.
+- **Gone:** `checkout.md` and the fake `placeOrder()`/receipt. `thanks.md` is
+  static copy (PLACEHOLDER wording). Tax estimate removed from `_data/shop.yml`
+  and `catalog.json` — Stripe calculates it (`STRIPE_TAX=1` on the function
+  once Stripe Tax is on in the Dashboard); the cart says "at checkout".
+- **Region picker on `/cart/`** (`.cart-region`, remembered in `hc-region`):
+  hosted Checkout shows *every* `shipping_options` entry to everyone, so the
+  shopper picks a region first and the function sends exactly one rate plus
+  that region's `countries:` as `allowed_countries`. Each region in
+  `_data/shop.yml` needs a `countries:` list (ISO codes; **quote `"NO"`** —
+  YAML reads bare `NO` as false) or the function refuses it. The INTL list is
+  a placeholder. `catalog.json` now also carries `site` (absolute origin, for
+  Stripe product images) and `countries` per region.
+- **Errors** come back as `400 { error, notices[] }` and render inline at the
+  top of `/cart/` via `showCheckoutNotices()`, same voice as `reconcile()`.
+- **Local dev:** `jekyll-shop` preview on :4001 (`_config.shop.yml` overrides
+  the endpoint to `http://127.0.0.1:3000/api/checkout`) plus, in the
+  hcd-checkout repo, `cp .env.example .env.local` (Stripe **test** key,
+  `CATALOG_URL=http://127.0.0.1:4001/catalog.json`, `SITE_URL=http://127.0.0.1:4001`)
+  and `npm run dev` (a Node shim, no Vercel CLI needed). `npm test` covers
+  `buildOrder()` without Stripe or the network.
+- **CORS:** the function allows humancrafted.co, www, and the two local
+  origins (`localhost:4001`, `127.0.0.1:4001`) — note the preview tab uses
+  `localhost`, so a cart added on `127.0.0.1` is a different origin's storage.
+- **Stock is still manual:** edit the note's `stock:` after a sale; the rebuilt
+  catalog makes the function refuse it. Oversell window = time to edit.
+- **Go-live checklist:** Jon adds `STRIPE_SECRET_KEY` (live) in the Vercel
+  project settings and deploys; real `price:`/`variants:`/`stock:` on the
+  first product (all current values are PLACEHOLDERs); flip `shop_enabled:
+  true`; then give `_docs/website.md` a shop section (deliberately not written
+  while the shop is invisible).
+
 ### Dev environment note
 Ruby was upgraded to 3.4.7; use `bundle _2.7.2_ exec …` (see Jekyll Development Server). `Gemfile.lock`, `.DS_Store`, `jekyll.log`, `.obsidian/workspace.json`, and `.claude/` are gitignored. The Obsidian git-sync plugin can switch the working-tree branch mid-session.
 

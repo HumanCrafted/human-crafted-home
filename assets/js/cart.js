@@ -3,9 +3,11 @@
 // The whole shop is static. There is no product collection: a project note in
 // _projects/ joins the shop by carrying `shop_status:`, `price:` and
 // `variants:` in its front matter, the build emits /catalog.json from those,
-// and this file holds the cart in localStorage. Nothing is sent anywhere.
-// `placeOrder` deliberately stops at a receipt — swapping in a real processor
-// means replacing that one function (see PLACE ORDER below) and nothing else.
+// and this file holds the cart in localStorage. The only thing ever sent
+// anywhere is the cart itself — SKUs and quantities — to the checkout function
+// (PATHS.checkout, the hcd-checkout repo), which re-prices it against the same
+// /catalog.json and hands back a Stripe Checkout URL. Stripe's hosted page does
+// address, shipping, payment and tax; it returns the shopper to /thanks/.
 //
 // Money is handled in integer cents everywhere and only formatted at the edges.
 (function () {
@@ -13,7 +15,8 @@
 
   var PATHS = window.HC_SHOP_PATHS || {};
   var KEY = 'hc-cart-v1';
-  var ORDER_KEY = 'hc-last-order';
+  // The shipping region picked on /cart/, remembered between visits.
+  var REGION_KEY = 'hc-region';
 
   // ---------------------------------------------------------------- storage
 
@@ -160,16 +163,28 @@
     return { cents: cents(region.rate), label: region.region + ' — ' + region.note };
   }
 
+  // Tax isn't estimated here — Stripe calculates it from the address it
+  // collects, so the cart only ever says "at checkout".
   function totals(items, cat, regionCode) {
     var sub = subtotalCents(items);
     var ship = shippingFor(items, cat, regionCode);
-    var tax = Math.round(sub * Number(cat.settings.tax_rate || 0));
     return {
       subtotal: sub,
       shipping: ship,
-      tax: tax,
-      total: sub + ship.cents + tax
+      total: sub + ship.cents
     };
+  }
+
+  function readRegion(cat) {
+    var saved = null;
+    try { saved = localStorage.getItem(REGION_KEY); } catch (e) {}
+    var known = cat.shipping.some(function (s) { return s.code === saved; });
+    if (known) return saved;
+    return cat.shipping.length ? cat.shipping[0].code : null;
+  }
+
+  function writeRegion(code) {
+    try { localStorage.setItem(REGION_KEY, code); } catch (e) {}
   }
 
   // ---------------------------------------------------------------- badge
@@ -366,7 +381,9 @@
           return;
         }
 
-        var t = totals(items, cat, null);
+        var physical = items.some(function (i) { return i.type !== 'digital'; });
+        var region = physical ? readRegion(cat) : null;
+        var t = totals(items, cat, region);
         root.innerHTML = '' +
           noticesHtml(state.notices) +
           '<div class="cart-grid">' +
@@ -390,9 +407,12 @@
             '<aside class="cart-summary">' +
               '<h2>Summary</h2>' +
               row('Subtotal', money(t.subtotal, cat.settings.symbol)) +
-              row('Shipping', t.shipping.unset ? 'At checkout' : money(t.shipping.cents, cat.settings.symbol)) +
+              (physical ? regionPicker(cat, region) : '') +
+              row('Shipping', t.shipping.cents === 0 ? esc(t.shipping.label) : money(t.shipping.cents, cat.settings.symbol)) +
               row('Tax', 'At checkout') +
-              '<a class="btn cart-checkout-btn" href="' + PATHS.checkout + '">Check out →</a>' +
+              row('Total', money(t.total, cat.settings.symbol) + (physical ? ' + tax' : ''), 'summary-row--total') +
+              '<button type="button" class="btn cart-checkout-btn" data-checkout data-umami-event="Checkout start">Check out →</button>' +
+              '<p class="cart-fineprint cart-fineprint--center">Address and payment on Stripe’s secure page.</p>' +
               '<a class="cart-keep" href="' + PATHS.shop + '">or keep looking</a>' +
             '</aside>' +
           '</div>';
@@ -400,6 +420,20 @@
 
       render();
       document.addEventListener('hc:cart-changed', render);
+
+      root.addEventListener('change', function (e) {
+        var sel = e.target.closest('[data-region]');
+        if (!sel) return;
+        writeRegion(sel.value);
+        render();
+      });
+
+      root.addEventListener('click', function (e) {
+        var btn = e.target.closest('[data-checkout]');
+        if (!btn) return;
+        var sel = root.querySelector('[data-region]');
+        startCheckout(cat, sel ? sel.value : null, btn, root);
+      });
     }).catch(function () {
       root.innerHTML = '<p class="cart-error">Couldn’t load the catalog. Reload the page?</p>';
     });
@@ -415,230 +449,89 @@
       notices.map(function (n) { return '<li>' + esc(n) + '</li>'; }).join('') + '</ul>';
   }
 
-  // ---------------------------------------------------------------- checkout
-
-  function initCheckout() {
-    var root = document.querySelector('[data-checkout-page]');
-    if (!root) return;
-
-    catalog().then(function (cat) {
-      var state = reconcile(cat);
-      if (!state.items.length) {
-        root.innerHTML =
-          '<div class="cart-empty-state"><p>Nothing to check out.</p>' +
-          '<a class="btn" href="' + PATHS.shop + '">Browse the archive →</a></div>';
-        return;
-      }
-
-      var physical = state.items.some(function (i) { return i.type !== 'digital'; });
-
-      root.innerHTML = '' +
-        noticesHtml(state.notices) +
-        '<form class="checkout-grid" id="checkout-form" novalidate>' +
-          '<div class="checkout-fields">' +
-            '<h2>Contact</h2>' +
-            field('email', 'Email', 'email', 'you@example.com', true) +
-            (physical ? '' +
-              '<h2>Ship to</h2>' +
-              field('name', 'Full name', 'text', '', true) +
-              field('address1', 'Address', 'text', '', true) +
-              field('address2', 'Apartment, suite (optional)', 'text', '', false) +
-              '<div class="field-row">' +
-                field('city', 'City', 'text', '', true) +
-                field('state', 'State / Province', 'text', '', true) +
-                field('zip', 'Postal code', 'text', '', true) +
-              '</div>' +
-              '<div class="field">' +
-                '<label for="region">Region</label>' +
-                '<select id="region" name="region" required>' +
-                  cat.shipping.map(function (s) {
-                    return '<option value="' + s.code + '">' + esc(s.region) + ' — ' +
-                      money(cents(s.rate), cat.settings.symbol) + ' · ' + esc(s.note) + '</option>';
-                  }).join('') +
-                '</select>' +
-              '</div>'
-              : '<p class="checkout-digital-note">Digital order — files are delivered to the email above, no address needed.</p>') +
-            '<h2>Payment</h2>' +
-            '<div class="checkout-payment-stub">' +
-              '<p>This is where the payment step goes. Nothing is collected here and no card fields exist on purpose.</p>' +
-            '</div>' +
-          '</div>' +
-
-          '<aside class="checkout-summary" id="checkout-summary"></aside>' +
-        '</form>';
-
-      var form = document.getElementById('checkout-form');
-      var summary = document.getElementById('checkout-summary');
-      var regionSel = form.querySelector('#region');
-
-      function renderSummary() {
-        var items = read();
-        var code = regionSel ? regionSel.value : null;
-        var t = totals(items, cat, code);
-
-        summary.innerHTML = '' +
-          '<h2>Order</h2>' +
-          '<div class="checkout-lines">' +
-            items.map(function (i) {
-              return '<div class="checkout-line">' +
-                '<img src="' + i.image + '" alt="">' +
-                '<span class="checkout-line-name">' + esc(i.title) + '<em>' + esc(i.variant) + '</em></span>' +
-                '<span class="checkout-line-qty">×' + i.qty + '</span>' +
-                '<span class="checkout-line-price">' + money(cents(i.price) * i.qty, cat.settings.symbol) + '</span>' +
-              '</div>';
-            }).join('') +
-          '</div>' +
-          row('Subtotal', money(t.subtotal, cat.settings.symbol)) +
-          row('Shipping', t.shipping.cents === 0 ? esc(t.shipping.label) : money(t.shipping.cents, cat.settings.symbol)) +
-          row(esc(cat.settings.tax_note), money(t.tax, cat.settings.symbol)) +
-          row('Total', money(t.total, cat.settings.symbol), 'summary-row--total') +
-          '<button type="submit" class="btn checkout-place">Place order</button>' +
-          '<p class="cart-fineprint">Prototype — no charge is made.</p>';
-      }
-
-      renderSummary();
-      if (regionSel) regionSel.addEventListener('change', renderSummary);
-      document.addEventListener('hc:cart-changed', renderSummary);
-
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        placeOrder(form, cat, regionSel ? regionSel.value : null);
-      });
-    }).catch(function () {
-      root.innerHTML = '<p class="cart-error">Couldn’t load the catalog. Reload the page?</p>';
-    });
-  }
-
-  function field(name, label, type, placeholder, required) {
-    return '<div class="field">' +
-      '<label for="' + name + '">' + label + '</label>' +
-      '<input id="' + name + '" name="' + name + '" type="' + type + '"' +
-        (placeholder ? ' placeholder="' + placeholder + '"' : '') +
-        (required ? ' required' : '') + '>' +
+  function regionPicker(cat, current) {
+    return '<div class="cart-region">' +
+      '<label for="cart-region">Ship to</label>' +
+      '<select id="cart-region" data-region>' +
+        cat.shipping.map(function (s) {
+          return '<option value="' + esc(s.code) + '"' + (s.code === current ? ' selected' : '') + '>' +
+            esc(s.region) + ' · ' + esc(s.note) + '</option>';
+        }).join('') +
+      '</select>' +
     '</div>';
   }
 
-  // ---------------------------------------------------------------- PLACE ORDER
+  // ---------------------------------------------------------------- checkout
   //
-  // The seam. Right now this writes a receipt to sessionStorage and forwards to
-  // /made/thanks/. A real shop replaces the body of this function with a call
-  // that hands `items` to a payment processor and redirects to its hosted page —
-  // everything above stays exactly as it is.
+  // The seam. Post the cart — SKUs and quantities only — to the checkout
+  // function and go wherever it says. It re-prices everything against
+  // /catalog.json, so nothing here decides what gets charged. A 400 comes back
+  // with shopper-facing notices (sold out, stale, over stock) which are shown
+  // above the cart, same place reconcile() puts its own.
 
-  function placeOrder(form, cat, regionCode) {
-    var missing = Array.prototype.filter.call(
-      form.querySelectorAll('[required]'),
-      function (el) { return !el.value.trim(); }
-    );
-    form.querySelectorAll('.field.has-error').forEach(function (f) { f.classList.remove('has-error'); });
-    if (missing.length) {
-      missing.forEach(function (el) {
-        var f = el.closest('.field');
-        if (f) f.classList.add('has-error');
-      });
-      missing[0].focus();
-      return;
-    }
-
+  function startCheckout(cat, regionCode, button, root) {
     var items = read();
-    var t = totals(items, cat, regionCode);
-    var data = {};
-    new FormData(form).forEach(function (v, k) { data[k] = v; });
+    if (!items.length || button.disabled) return;
 
-    var order = {
-      number: orderNumber(),
-      placed: new Date().toISOString(),
-      email: data.email,
-      ship_to: data.name ? {
-        name: data.name,
-        address1: data.address1,
-        address2: data.address2,
-        city: data.city,
-        state: data.state,
-        zip: data.zip
-      } : null,
-      region: regionCode,
-      symbol: cat.settings.symbol,
-      items: items,
-      totals: {
-        subtotal: t.subtotal,
-        shipping: t.shipping.cents,
-        shipping_label: t.shipping.label,
-        tax: t.tax,
-        tax_note: cat.settings.tax_note,
-        total: t.total
-      }
+    var label = button.textContent;
+    button.disabled = true;
+    button.textContent = 'Opening checkout…';
+
+    var payload = {
+      items: items.map(function (i) { return { sku: i.sku, qty: i.qty }; }),
+      region: regionCode
     };
 
-    try { sessionStorage.setItem(ORDER_KEY, JSON.stringify(order)); } catch (e) {}
-    write([]);
-    window.location.href = PATHS.thanks;
+    fetch(PATHS.checkout, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }).then(function (r) {
+      return r.json().then(function (data) { return { ok: r.ok, data: data }; },
+                           function () { return { ok: false, data: {} }; });
+    }).then(function (res) {
+      if (res.ok && res.data.url) {
+        window.location.href = res.data.url;
+        return;
+      }
+      var lines = (res.data.notices && res.data.notices.length)
+        ? res.data.notices
+        : [res.data.error || 'Couldn’t reach checkout. Try again in a moment.'];
+      showCheckoutNotices(root, lines);
+      button.disabled = false;
+      button.textContent = label;
+    }).catch(function () {
+      showCheckoutNotices(root, ['Couldn’t reach checkout. Check your connection and try again.']);
+      button.disabled = false;
+      button.textContent = label;
+    });
   }
 
-  // HC-YYMMDD-XXXX. Fine for a prototype receipt; a real shop takes the
-  // processor's order id instead.
-  function orderNumber() {
-    var d = new Date();
-    var p = function (n) { return String(n).padStart(2, '0'); };
-    var rand = Math.floor(1000 + Math.random() * 9000);
-    return 'HC-' + String(d.getFullYear()).slice(2) + p(d.getMonth() + 1) + p(d.getDate()) + '-' + rand;
+  function showCheckoutNotices(root, lines) {
+    var old = root.querySelector('.cart-notices');
+    if (old) old.remove();
+    root.insertAdjacentHTML('afterbegin', noticesHtml(lines));
+    var el = root.querySelector('.cart-notices');
+    if (el) el.scrollIntoView({ block: 'nearest' });
   }
 
   // ---------------------------------------------------------------- thanks
+  //
+  // Stripe's success_url is /thanks/?session_id=… — arriving with that
+  // parameter means the payment went through, so the cart is done. The page
+  // copy itself is static (thanks.md); the receipt comes from Stripe.
 
   function initThanks() {
     var root = document.querySelector('[data-thanks-page]');
     if (!root) return;
 
-    var order = null;
-    try { order = JSON.parse(sessionStorage.getItem(ORDER_KEY)); } catch (e) {}
+    var params = new URLSearchParams(window.location.search);
+    if (!params.get('session_id')) return;
 
-    if (!order) {
-      root.innerHTML =
-        '<div class="cart-empty-state"><p>No recent order to show.</p>' +
-        '<a class="btn" href="' + PATHS.shop + '">Browse the archive →</a></div>';
-      return;
-    }
-
-    var s = order.symbol || '$';
-    var digitalOnly = order.items.every(function (i) { return i.type === 'digital'; });
-
-    root.innerHTML = '' +
-      '<p class="thanks-lede">Order <strong>' + esc(order.number) + '</strong> is in. ' +
-      'A confirmation would go to <strong>' + esc(order.email) + '</strong>.</p>' +
-      '<p class="checkout-banner" role="note"><strong>Prototype.</strong> Nothing was charged and no order was actually placed.</p>' +
-
-      '<div class="thanks-grid">' +
-        '<div class="thanks-items">' +
-          '<h2>What you ordered</h2>' +
-          order.items.map(function (i) {
-            return '<div class="checkout-line">' +
-              '<img src="' + i.image + '" alt="">' +
-              '<span class="checkout-line-name">' + esc(i.title) + '<em>' + esc(i.variant) + '</em></span>' +
-              '<span class="checkout-line-qty">×' + i.qty + '</span>' +
-              '<span class="checkout-line-price">' + money(cents(i.price) * i.qty, s) + '</span>' +
-            '</div>';
-          }).join('') +
-          (digitalOnly
-            ? '<p class="thanks-download">Your download links would appear here.</p>'
-            : '') +
-        '</div>' +
-
-        '<aside class="thanks-summary">' +
-          '<h2>Totals</h2>' +
-          row('Subtotal', money(order.totals.subtotal, s)) +
-          row('Shipping', order.totals.shipping === 0 ? esc(order.totals.shipping_label) : money(order.totals.shipping, s)) +
-          row(esc(order.totals.tax_note), money(order.totals.tax, s)) +
-          row('Total', money(order.totals.total, s), 'summary-row--total') +
-          (order.ship_to ? '<h2>Shipping to</h2><address class="thanks-address">' +
-            esc(order.ship_to.name) + '<br>' +
-            esc(order.ship_to.address1) + '<br>' +
-            (order.ship_to.address2 ? esc(order.ship_to.address2) + '<br>' : '') +
-            esc(order.ship_to.city) + ', ' + esc(order.ship_to.state) + ' ' + esc(order.ship_to.zip) +
-            '</address>' : '') +
-          '<a class="btn" href="' + PATHS.shop + '">Back to the archive →</a>' +
-        '</aside>' +
-      '</div>';
+    write([]);
+    // Drop the id from the address bar so a reload or a shared link doesn't
+    // carry it around.
+    try { history.replaceState(null, '', window.location.pathname); } catch (e) {}
   }
 
   // ---------------------------------------------------------------- events
@@ -688,7 +581,6 @@
     initGlobal();
     initProductForm();
     initCartPage();
-    initCheckout();
     initThanks();
   }
 

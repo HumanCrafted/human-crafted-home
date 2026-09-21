@@ -227,9 +227,7 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
   margin-bottom: 4rem;
 }
 
-.cart-summary,
-.checkout-summary,
-.thanks-summary {
+.cart-summary {
   border: 1px solid var(--border);
   background: var(--surface);
   padding: 1.5rem;
@@ -237,9 +235,7 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
   top: 8rem;
 }
 
-.cart-summary h2,
-.checkout-summary h2,
-.thanks-summary h2 {
+.cart-summary h2 {
   margin: 0 0 1rem;
   font-size: 1rem;
 }
@@ -262,9 +258,7 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
   font-weight: 500;
 }
 
-.cart-summary .btn,
-.checkout-summary .btn,
-.thanks-summary .btn {
+.cart-summary .btn {
   width: 100%;
   justify-content: center;
   margin-top: 1.25rem;
@@ -297,168 +291,69 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
 .cart-notices li + li { margin-top: 0.5rem; }
 .cart-error { color: var(--muted-foreground); padding: 2rem 0; }
 
-/* --- Checkout ------------------------------------------------------------- */
-.checkout-banner {
-  border: 1px dashed var(--border);
-  background: var(--surface);
-  padding: 0.875rem 1.25rem;
-  font-size: 0.875rem;
-  margin-bottom: 2rem;
+/* --- Cart page: ship-to region -------------------------------------------
+   Picked before checkout because Stripe's hosted page shows every shipping
+   option to everyone — the region decides the one rate it gets offered. */
+.cart-region {
+  margin: 0.75rem 0 0.25rem;
 }
 
-.checkout-grid {
-  display: grid;
-  grid-template-columns: 1fr 19rem;
-  gap: 3rem;
-  align-items: start;
-  margin-bottom: 4rem;
-}
-
-.checkout-fields h2 {
-  font-size: 1rem;
-  margin: 2rem 0 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--border);
-}
-
-.checkout-fields h2:first-child { margin-top: 0; }
-
-.field { margin-bottom: 1rem; }
-
-.field label {
+.cart-region label {
   display: block;
   font-size: 0.8125rem;
   color: var(--muted-foreground);
   margin-bottom: 0.25rem;
 }
 
-.field input,
-.field select {
+.cart-region select {
   width: 100%;
-  padding: 0.625rem 0.75rem;
+  padding: 0.5rem 0.75rem;
   border: 1px solid var(--border);
   background: var(--background);
   color: var(--foreground);
   font-family: inherit;
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   border-radius: 0;
 }
 
-.field input:focus,
-.field select:focus {
+.cart-region select:focus {
   outline: none;
   border-color: var(--foreground);
 }
 
-.field.has-error input,
-.field.has-error select { border-color: #b3261e; }
+.cart-fineprint--center { text-align: center; margin: 0.75rem 0 0; }
 
-.field-row {
-  display: grid;
-  grid-template-columns: 2fr 1.25fr 1fr;
-  gap: 0.75rem;
+.cart-checkout-btn:disabled {
+  opacity: 0.6;
+  cursor: progress;
 }
-
-.checkout-payment-stub {
-  border: 1px dashed var(--border);
-  padding: 1.25rem;
-  color: var(--muted-foreground);
-  font-size: 0.875rem;
-}
-
-.checkout-payment-stub p { margin: 0; }
-
-.checkout-digital-note {
-  font-size: 0.875rem;
-  color: var(--muted-foreground);
-}
-
-.checkout-lines { margin-bottom: 1rem; }
-
-.checkout-line {
-  display: grid;
-  grid-template-columns: 2.5rem 1fr auto auto;
-  gap: 0.625rem;
-  align-items: center;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid var(--border);
-  font-size: 0.8125rem;
-}
-
-.checkout-line img {
-  width: 2.5rem;
-  height: 2.5rem;
-  object-fit: cover;
-  border: 1px solid var(--border);
-  display: block;
-}
-
-.checkout-line-name { display: flex; flex-direction: column; min-width: 0; }
-.checkout-line-name em { color: var(--muted-foreground); font-style: normal; font-size: 0.75rem; }
-.checkout-line-qty { color: var(--muted-foreground); }
-.checkout-line-price { white-space: nowrap; }
-
-.checkout-place { width: 100%; justify-content: center; margin-top: 1.25rem; }
 
 /* --- Confirmation --------------------------------------------------------- */
+.thanks-page { max-width: 34rem; margin-bottom: 6rem; }
 .thanks-lede { font-size: 1.125rem; margin-bottom: 1.5rem; }
-
-.thanks-grid {
-  display: grid;
-  grid-template-columns: 1fr 19rem;
-  gap: 3rem;
-  align-items: start;
-  margin-bottom: 4rem;
-}
-
-.thanks-items h2 { font-size: 1rem; margin: 0 0 1rem; }
-
-.thanks-download {
-  margin-top: 1.5rem;
-  padding: 1rem;
-  border: 1px dashed var(--border);
-  font-size: 0.875rem;
-  color: var(--muted-foreground);
-}
-
-.thanks-address {
-  font-style: normal;
-  font-size: 0.875rem;
-  line-height: 1.6;
-  margin-bottom: 0.5rem;
-}
 
 /* --- Responsive ----------------------------------------------------------- */
 @media (max-width: 1024px) {
 }
 
 @media (max-width: 900px) {
-  .cart-grid,
-  .checkout-grid,
-  .thanks-grid {
+  .cart-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 
-  .cart-summary,
-  .checkout-summary,
-  .thanks-summary { position: static; }
+  .cart-summary { position: static; }
 }
 
 @media (max-width: 768px) {
-  .field-row { grid-template-columns: 1fr; }
   .cart-drawer-panel { width: 100%; }
 }
 
 /* A summary box can carry more than one heading (Totals, then Shipping to) —
    only the first sits flush against the top of the box. */
-.cart-summary h2 + *,
-.checkout-summary h2 + *,
-.thanks-summary h2 + * { margin-top: 0; }
+.cart-summary h2 + * { margin-top: 0; }
 
-.cart-summary h2 ~ h2,
-.checkout-summary h2 ~ h2,
-.thanks-summary h2 ~ h2 {
+.cart-summary h2 ~ h2 {
   margin-top: 1.5rem;
   padding-top: 1rem;
   border-top: 1px solid var(--border);

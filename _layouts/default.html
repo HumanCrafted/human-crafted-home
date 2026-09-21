@@ -44,6 +44,8 @@
       The shop. cart.js loads on every page so the nav badge is right anywhere,
       but only when the shop is switched on (see shop_enabled in _config.yml) —
       otherwise no shop JS, no /catalog.json fetch, nothing in the markup.
+      `checkout` is the Stripe checkout function (shop_checkout_endpoint), not
+      a page on this site.
     {% endcomment %}
     {% if site.shop_enabled %}
     <script>
@@ -51,7 +53,7 @@
         catalog:  "{{ '/catalog.json' | relative_url }}",
         shop:     "{{ '/#archive' | relative_url }}",
         cart:     "{{ '/cart/' | relative_url }}",
-        checkout: "{{ '/checkout/' | relative_url }}",
+        checkout: {{ site.shop_checkout_endpoint | jsonify }},
         thanks:   "{{ '/thanks/' | relative_url }}"
       };
     </script>

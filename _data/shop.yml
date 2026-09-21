@@ -1,6 +1,6 @@
 # Made — store-wide settings.
 # Everything the shop needs that isn't per-product lives here. Edit this file
-# and the storefront, cart and checkout all follow.
+# and the cart, catalog and checkout all follow.
 
 currency: USD
 symbol: "$"
@@ -8,27 +8,35 @@ symbol: "$"
 # Orders at or above this subtotal ship free. Set to null to always charge.
 free_shipping_over: 75
 
-# Flat shipping rates by region. `code` is what the checkout form submits and
-# what the cart JS looks up — don't rename one without the other.
+# Flat shipping rates by region. The shopper picks a region on /cart/ before
+# checkout; the checkout function then offers Stripe exactly one rate and
+# restricts the address form to that region's `countries` (ISO 3166-1 codes).
+# Stripe's hosted page can't vary the rate by address on its own, which is why
+# the region is chosen up front. A region with no `countries` can't be checked
+# out — it stays listed on /cart/ but the function refuses it.
+# `code` is what the cart submits — don't rename one without the other.
 # A cart of only digital items skips shipping entirely.
 shipping:
   - code: US
     region: United States
     rate: 6.00
     note: 3–5 business days
+    countries: [US]
   - code: CA
     region: Canada
     rate: 16.00
     note: 7–14 business days
+    countries: [CA]
   - code: INTL
     region: Everywhere else
     rate: 28.00
     note: 10–21 business days, duties not included
+    # PLACEHOLDER list — trim or extend to where you're actually willing to ship.
+    # Quote "NO" (Norway): unquoted, YAML reads it as the boolean false.
+    countries: [GB, IE, FR, DE, NL, BE, ES, IT, PT, AT, CH, DK, SE, "NO", FI, AU, NZ, JP, SG, KR, MX]
 
-# Flat estimate shown at checkout. Real tax gets calculated by whatever
-# payment processor this lands on — this is a prototype placeholder.
-tax_rate: 0.055
-tax_note: Wisconsin sales tax, estimated
+# Sales tax is Stripe's job: set STRIPE_TAX=1 on the checkout function once
+# Stripe Tax is switched on in the Dashboard. The cart shows "at checkout".
 
 # Below this remaining stock a variant shows a "only N left" nudge.
 low_stock_at: 5

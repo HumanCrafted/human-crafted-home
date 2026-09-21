@@ -23,6 +23,12 @@ url: "https://humancrafted.co" # the base hostname & protocol for your site, e.g
 # and index.md.
 shop_enabled: false
 
+# Where "Check out" sends the cart when the shop is on. A small Vercel function
+# (repo: HumanCrafted/hcd-checkout) that re-prices the cart against
+# /catalog.json and opens a Stripe Checkout session — the site itself stays
+# static and never sees a card. _config.shop.yml overrides this for local dev.
+shop_checkout_endpoint: "https://hcd-checkout.vercel.app/api/checkout"
+
 # Loops signup (see _includes/subscribe-form.html)
 # loops_form_id: from Loops → Forms → Settings. The form renders only once this is set.
 # loops_list_id: the list signups join. Must be Public in Loops — form endpoints

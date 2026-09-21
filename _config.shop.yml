@@ -19,3 +19,6 @@ shop_enabled: true
 # each other — the shop-off server deletes the shop pages the shop-on server
 # just wrote, so port 4001 served 404s for /cart/ while claiming to be enabled.
 destination: _site-shop
+
+# Local copy of the checkout function (hcd-checkout repo, `npm run dev`).
+shop_checkout_endpoint: "http://127.0.0.1:3000/api/checkout"
