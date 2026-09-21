@@ -446,6 +446,15 @@ repo (`docs/ecommerce-research.md`, "Architecture A"):
   screen readers only. Archived = muted price, muted static pills, dead
   button. Jon dislikes thin square outlines and full-pill *inputs*, so keep
   the stepper and buttons pill-shaped and don't reintroduce bordered boxes.
+- **Cart page + drawer (Sept 2026):** same treatment — no hairlines. The
+  drawer panel is borderless with a soft shadow (like the quick-links panel),
+  its head/foot and the cart lines are separated by spacing only, thumbnails
+  float on the paper with no tile (a `--surface` tile was tried and rejected;
+  5rem in the drawer, 6.5rem on `/cart/`), the `/cart/` summary has no box,
+  the region `<select>` is a rounded `--surface` field with its own inset
+  chevron (`appearance: none` + SVG in `--cart-chevron`, swapped for dark;
+  the native arrow hugs the edge), ring only on `:focus-visible`, and notices are a rounded `--surface` panel. The qty
+  stepper keeps its outlined-pill look on purpose.
 - **Homepage marks (Sept 2026):** an available project's card carries a small
   ink **"for sale" pill** pinned bottom-right *over the thumbnail box*
   (`_includes/for-sale-icon.html`, `.for-sale-mark` in shop.css; the old "$"

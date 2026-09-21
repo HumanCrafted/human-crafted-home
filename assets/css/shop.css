@@ -89,7 +89,9 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
   bottom: 0;
   width: min(24rem, 100%);
   background: var(--background);
-  border-left: 1px solid var(--border);
+  /* Borderless, lifted off the page by a soft shadow — same treatment as the
+     quick-links panel. */
+  box-shadow: -12px 0 40px rgba(0, 0, 0, 0.14);
   display: flex;
   flex-direction: column;
   transform: translateX(100%);
@@ -107,8 +109,7 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.25rem 1.5rem;
-  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 1.5rem 0.75rem;
 }
 
 .cart-drawer-head h2 { margin: 0; font-size: 1.125rem; }
@@ -130,31 +131,35 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
 }
 
 .cart-drawer-foot {
-  padding: 1.25rem 1.5rem;
-  border-top: 1px solid var(--border);
+  padding: 0.75rem 1.5rem 1.5rem;
 }
 
 /* --- Cart lines (shared by drawer and cart page) -------------------------- */
 .cart-line {
   display: flex;
   gap: 0.875rem;
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 0;
   align-items: flex-start;
 }
 
-.cart-line:last-child { border-bottom: none; }
-
 .cart-line-image {
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
   flex: 0 0 auto;
-  border: 1px solid var(--border);
+  border-radius: 0.5rem;
   overflow: hidden;
-  background: var(--surface);
+  /* No tile: the line drawing floats on the paper, as it does on the
+     homepage grid. The box keeps its size so rows still line up. */
+  background: transparent;
 }
 
-.cart-line--lg .cart-line-image { width: 5.5rem; height: 5.5rem; }
+.cart-line--lg .cart-line-image { width: 6.5rem; height: 6.5rem; }
+
+/* The drawer lives outside .page-content, so main.css's dark-mode SVG invert
+   never reaches its thumbnails. Same filter, same reason. */
+[data-theme="dark"] .cart-line-image img[src$=".svg"] {
+  filter: invert(91%) sepia(17%) saturate(166%) hue-rotate(1deg) brightness(94%) contrast(88%);
+}
 .cart-line-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 .cart-line-body { flex: 1; min-width: 0; }
@@ -228,9 +233,6 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
 }
 
 .cart-summary {
-  border: 1px solid var(--border);
-  background: var(--surface);
-  padding: 1.5rem;
   position: sticky;
   top: 8rem;
 }
@@ -251,9 +253,7 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
 .summary-row span:last-child { text-align: right; white-space: nowrap; }
 
 .summary-row--total {
-  border-top: 1px solid var(--border);
-  margin-top: 0.5rem;
-  padding-top: 0.75rem;
+  margin-top: 0.75rem;
   font-size: 1.0625rem;
   font-weight: 500;
 }
@@ -283,7 +283,7 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
   list-style: none;
   padding: 1rem 1.25rem;
   margin: 0 0 2rem;
-  border: 1px solid var(--accent);
+  border-radius: 0.5rem;
   background: var(--surface);
   font-size: 0.875rem;
 }
@@ -307,18 +307,26 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
 
 .cart-region select {
   width: 100%;
-  padding: 0.5rem 0.75rem;
-  border: 1px solid var(--border);
-  background: var(--background);
+  padding: 0.5rem 2.5rem 0.5rem 0.75rem;
+  border: none;
+  /* Own chevron, inset from the edge — the native one is pinned to the
+     border regardless of padding. Ink in light, paper in dark. */
+  appearance: none;
+  background: var(--surface) var(--cart-chevron) no-repeat right 0.875rem center / 0.75rem 0.75rem;
   color: var(--foreground);
   font-family: inherit;
   font-size: 0.875rem;
-  border-radius: 0;
+  border-radius: 0.5rem;
+  --cart-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232A2824' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
 }
 
-.cart-region select:focus {
+[data-theme="dark"] .cart-region select {
+  --cart-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ECE3CE' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+}
+
+.cart-region select:focus-visible {
   outline: none;
-  border-color: var(--foreground);
+  box-shadow: inset 0 0 0 1.5px var(--foreground);
 }
 
 .cart-fineprint--center { text-align: center; margin: 0.75rem 0 0; }
@@ -350,15 +358,7 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
   .cart-drawer-panel { width: 100%; }
 }
 
-/* A summary box can carry more than one heading (Totals, then Shipping to) —
-   only the first sits flush against the top of the box. */
 .cart-summary h2 + * { margin-top: 0; }
-
-.cart-summary h2 ~ h2 {
-  margin-top: 1.5rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--border);
-}
 
 /* --- "Available to buy" mark on the homepage archive card ----------------
    The only signal that a project is buyable: an ink disc with a paper "$".
