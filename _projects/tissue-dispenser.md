@@ -25,10 +25,10 @@ gallery_images:
   - "![[tissue-dispenser-black-bathroom.jpg]]"
   - "![[tissue-dispenser-illustration.jpg]]"
 headline: A translucent acrylic tray with a solid maple plate that rides down the stack as the tissues go.
-# --- shop: PLACEHOLDER price/SKU/stock — replace with real values ---
+# --- shop: price/SKU/stock ---
 shop_status: available
 price: 54.00
-ships_in: 3–5 business days
+ships_in: 1–2 weeks (just starting production again, bear with me)
 # `color:` names the material note (_materials/acrylic-*.md) each variant is cut
 # from; the buy block reads its swatch from there.
 variants:
@@ -74,7 +74,7 @@ With a standard cardboard box of tissues, once half empty, you're reaching in to
 
 Fluorescent yellow and green came first. Gold, rose, translucent green, black, white, khaki, and frosted followed. With the translucent versions, so the color carries the light, shadows cast on the surrounding surfaces in a very interesting way.
 
-![[acrylic-black|Black|column=5]] ![[acrylic-frosted-satin-ice|Frosted]] ![[acrylic-light-green-transparent|Light Green]] ![[acrylic-gold-transparent|Gold]] ![[acrylic-rose-gold-transparent|Rose Gold]]
+![[acrylic-black|Black|column=5]] ![[acrylic-frosted-satin-ice|Frosted]] ![[acrylic-light-green-transparent|Light Green Transparent]] ![[acrylic-gold-transparent|Gold Transparent]] ![[acrylic-rose-gold-transparent|Rose Gold Transparent]]
 
 ### Making it
 
