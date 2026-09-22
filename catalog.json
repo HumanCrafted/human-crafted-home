@@ -70,7 +70,8 @@ shop_page: true   # withheld entirely when shop_enabled is false
         {%- for v in p.variants %}
         {
           "sku": {{ v.sku | jsonify }},
-          "name": {{ v.name | jsonify }},
+          {%- capture nm %}{% include variant-name.html v=v options=p.options %}{% endcapture %}
+          "name": {{ nm | strip | jsonify }},
           "price": {{ v.price | default: p.price }},
           "stock": {% if p.shop_type == "digital" %}null{% else %}{{ v.stock | default: 0 }}{% endif %}
         }{% unless forloop.last %},{% endunless %}

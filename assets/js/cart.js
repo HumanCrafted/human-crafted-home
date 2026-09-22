@@ -286,20 +286,98 @@
       return form.querySelector('input[name="variant"]:checked');
     }
 
+    // ---- Multi-option products (options: in front matter) ----------------
+    // The form carries every sellable combination as JSON; the axes are
+    // radio groups (fieldset[data-option]). Resolving the chosen values to a
+    // combination fills the one hidden `variant` radio, so everything below
+    // reads a multi-option product exactly like a single-axis one.
+    var combos = null;
+    try { combos = form.dataset.combos ? JSON.parse(form.dataset.combos) : null; } catch (e) { combos = null; }
+    var axes = Array.prototype.slice.call(form.querySelectorAll('fieldset[data-option]'));
+    if (combos && !axes.length) combos = null;
+
+    function chosen() {
+      return axes.map(function (fs) {
+        var r = fs.querySelector('input:checked');
+        return r ? r.value : null;
+      });
+    }
+
+    function comboFor(values) {
+      for (var i = 0; i < combos.length; i++) {
+        var c = combos[i], ok = true;
+        for (var j = 0; j < values.length; j++) {
+          if (c.values[j] !== values[j]) { ok = false; break; }
+        }
+        if (ok) return c;
+      }
+      return null;
+    }
+
+    function resolveCombo() {
+      if (!combos) return;
+      var values = chosen();
+
+      // Grey out any value that can't be reached from the current choices on
+      // the other axes. Still selectable — picking it explains itself.
+      axes.forEach(function (fs, axis) {
+        fs.querySelectorAll('label.variant').forEach(function (label) {
+          var input = label.querySelector('input');
+          var trial = values.slice();
+          trial[axis] = input.value;
+          var c = comboFor(trial);
+          var reachable = !!(c && c.stock > 0);
+          label.classList.toggle('is-soldout', !reachable);
+          var flag = label.querySelector('.variant-flag');
+          if (flag) flag.textContent = reachable ? '' : (c ? 'sold out' : 'not offered');
+        });
+      });
+
+      var v = selected();
+      var combo = comboFor(values);
+      v.value = combo ? combo.sku : '';
+      v.dataset.name = combo ? combo.name : values.join(' · ');
+      v.dataset.stock = combo ? combo.stock : 0;
+      v.dataset.missing = combo ? '' : '1';
+      if (combo) v.dataset.price = combo.price;
+    }
+
+    // Start on the first combination that's actually in stock rather than the
+    // first value of each axis, which might be a sold-out pairing.
+    if (combos) {
+      var firstOk = combos.filter(function (c) { return c.stock > 0; })[0] || combos[0];
+      if (firstOk) {
+        axes.forEach(function (fs, axis) {
+          fs.querySelectorAll('input').forEach(function (r) {
+            if (r.value === firstOk.values[axis]) r.checked = true;
+          });
+        });
+      }
+      resolveCombo();
+    }
+
     function sync() {
       var v = selected();
       if (!v) return;
       var stock = Number(v.dataset.stock);
+      var isDigital = form.dataset.type === 'digital';
+      var unavailable = !isDigital && !(stock > 0);
       if (priceEl) priceEl.textContent = money(cents(v.dataset.price));
+
+      var addBtn = form.querySelector('.add-to-cart');
+      if (addBtn) addBtn.disabled = unavailable;
 
       if (stockEl) {
         // Stock is per variant. With more than one on offer, say which one
         // the number belongs to — "Only 2 left" alone reads as the total.
-        var multi = form.querySelectorAll('input[name="variant"]').length > 1;
+        var multi = !!combos || form.querySelectorAll('input[name="variant"]').length > 1;
         var which = multi ? v.dataset.name : '';
-        if (form.dataset.type === 'digital') {
+        if (isDigital) {
           stockEl.textContent = 'Instant download';
           stockEl.className = 'product-stock is-digital';
+        } else if (unavailable) {
+          stockEl.textContent = (v.dataset.missing ? 'Not offered in ' : 'Sold out in ') + which;
+          stockEl.className = 'product-stock is-low';
         } else if (stock <= lowAt) {
           stockEl.textContent = 'Only ' + stock + ' left' + (which ? ' in ' + which : '');
           stockEl.className = 'product-stock is-low';
@@ -309,12 +387,16 @@
         }
       }
       if (qtyInput) {
-        qtyInput.max = stock;
-        if (Number(qtyInput.value) > stock) qtyInput.value = stock;
+        // Cap at what's in stock, but never below 1 — an unavailable pairing
+        // disables the button instead, and the box must still be valid once
+        // the shopper switches back to something in stock.
+        var cap = Math.max(1, stock);
+        qtyInput.max = cap;
+        if (Number(qtyInput.value) > cap || Number(qtyInput.value) < 1) qtyInput.value = Math.min(cap, Math.max(1, Number(qtyInput.value) || 1));
       }
     }
 
-    form.addEventListener('change', sync);
+    form.addEventListener('change', function () { resolveCombo(); sync(); });
 
     form.querySelectorAll('.qty-btn').forEach(function (btn) {
       btn.addEventListener('click', function () {
@@ -328,9 +410,10 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var v = selected();
-      if (!v) return;
+      if (!v || !v.value) return;
       var isDigital = form.dataset.type === 'digital';
       var stock = Number(v.dataset.stock);
+      if (!isDigital && !(stock > 0)) return;
       var qty = isDigital ? 1 : Math.max(1, Number(qtyInput ? qtyInput.value : 1));
 
       add({

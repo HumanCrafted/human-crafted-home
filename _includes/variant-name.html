@@ -1,0 +1,19 @@
+{%- comment -%}
+  A variant's display name. Single-axis products name each variant (`name:`);
+  multi-option products don't — the name is the chosen values joined with a
+  middle dot, in option order ("Large · Green").
+
+  Usage (capture it — includes can't return values):
+    {% capture nm %}{% include variant-name.html v=v options=page.options %}{% endcapture %}
+{%- endcomment -%}
+{%- if include.options and include.options.size > 0 -%}
+  {%- assign _parts = "" -%}
+  {%- for _opt in include.options -%}
+    {%- assign _key = _opt.name | downcase -%}
+    {%- assign _parts = _parts | append: include.v[_key] -%}
+    {%- unless forloop.last -%}{%- assign _parts = _parts | append: " · " -%}{%- endunless -%}
+  {%- endfor -%}
+  {{- _parts -}}
+{%- else -%}
+  {{- include.v.name -}}
+{%- endif -%}

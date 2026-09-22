@@ -17,6 +17,20 @@
         price: 36.00             # optional per-variant override
         stock: 0                 # 0 renders as sold out
 
+  Two axes (size × color, …) — see buy-options.html. `options:` declares the
+  axes; each variant is then one sellable COMBINATION naming a value from
+  every axis, with its own sku/price/stock. Names are derived ("Large · Green").
+
+    options:
+      - name: Size
+        values: [Small, Large]
+      - name: Color
+        values:
+          - { label: Green, material: acrylic-green }
+    variants:
+      - { sku: TRE-SM-GRN, size: Small, color: Green, price: 25.00, stock: 4 }
+      - { sku: TRE-LG-GRN, size: Large, color: Green, price: 40.00, stock: 2 }
+
   The three states:
 
     available  live buy block; "$" mark on the homepage archive card
@@ -106,7 +120,9 @@
       disabled list so the record of what was offered survives, and the button
       is inert — disabled, not a link, so it can't be tabbed into or clicked.
     {%- endcomment -%}
-    {%- if page.variants and page.variants.size > 0 %}
+    {%- if page.options and page.options.size > 0 %}
+      {%- include buy-options.html static=true %}
+    {%- elsif page.variants and page.variants.size > 0 %}
     <div class="product-variants" role="group" aria-label="Options once offered">
       <p class="product-label">{% if page.variants.size > 1 %}options{% else %}option{% endif %} once offered</p>
       {%- for v in page.variants %}
@@ -132,14 +148,35 @@
 
   {%- else %}
 
+  {%- comment -%}
+    Multi-option: every combination as JSON on the form, for cart.js to
+    resolve the chosen values against. Kept in the markup rather than fetched
+    so the picker works before /catalog.json loads.
+  {%- endcomment -%}
+  {%- assign has_options = false -%}
+  {%- if page.options and page.options.size > 0 %}{% assign has_options = true %}{% endif -%}
+  {%- if has_options -%}
+    {%- capture combos_json -%}
+      [{%- for v in page.variants -%}
+        {%- capture nm %}{% include variant-name.html v=v options=page.options %}{% endcapture -%}
+        {"sku":{{ v.sku | jsonify }},"name":{{ nm | strip | jsonify }},"values":[
+          {%- for opt in page.options -%}{%- assign k = opt.name | downcase -%}{{ v[k] | jsonify }}{%- unless forloop.last -%},{%- endunless -%}{%- endfor -%}
+        ],"price":{{ v.price | default: page.price }},"stock":{% if is_digital %}999{% else %}{{ v.stock | default: 0 }}{% endif %}}
+        {%- unless forloop.last -%},{%- endunless -%}
+      {%- endfor -%}]
+    {%- endcapture -%}
+  {%- endif -%}
   <form class="product-form"
         data-product="{{ pslug }}"
         data-title="{{ page.title | escape }}"
         data-type="{% if is_digital %}digital{% else %}physical{% endif %}"
         data-url="{{ page.url | relative_url }}"
-        data-image="{% include img-src.html raw=page.main_image %}">
+        data-image="{% include img-src.html raw=page.main_image %}"
+        {%- if has_options %} data-multi="1" data-combos="{{ combos_json | strip | escape }}"{% endif %}>
 
-    {%- if page.variants and page.variants.size > 1 %}
+    {%- if has_options %}
+      {%- include buy-options.html %}
+    {%- elsif page.variants and page.variants.size > 1 %}
     <fieldset class="product-variants">
       <legend class="product-label">{% if is_digital %}packages{% else %}options{% endif %}</legend>
       {%- assign first_available = true -%}

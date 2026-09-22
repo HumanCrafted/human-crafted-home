@@ -1,0 +1,53 @@
+{%- comment -%}
+  Multi-option picker: one row of pills per axis in `options:`, for a product
+  whose variants are combinations (see buy-block.html for the front matter).
+
+    options:
+      - name: Size
+        values: [Small, Large]
+      - name: Color
+        values:
+          - { label: Green, material: acrylic-green }   # material → swatch dot
+    variants:
+      - { sku: TRE-SM-GRN, size: Small, color: Green, price: 25.00, stock: 4 }
+
+  Live: each axis is a radio group (opt-0, opt-1, …) plus one hidden
+  `variant` radio that cart.js points at whichever combination the choices
+  resolve to — so the rest of the form (price, stock line, submit) reads it
+  exactly as it reads a single-axis product's chosen radio. Values that can't
+  be reached from the current choices are greyed by cart.js, not disabled, so
+  a shopper can still pick them and see why ("not offered" / "sold out").
+
+  include.static = the archived record: plain pills, nothing to submit.
+{%- endcomment -%}
+{%- for opt in page.options %}
+  {%- if include.static %}
+  <div class="product-variants" role="group" aria-label="{{ opt.name }} once offered">
+    <p class="product-label">{{ opt.name | downcase }} once offered</p>
+    {%- for val in opt.values %}
+      {%- if val.label %}{% assign _label = val.label %}{% assign _material = val.material %}{% else %}{% assign _label = val %}{% assign _material = nil %}{% endif %}
+    <div class="variant is-disabled">
+      {%- include variant-swatch.html color=_material %}
+      <span class="variant-name">{{ _label }}</span>
+    </div>
+    {%- endfor %}
+  </div>
+  {%- else %}
+  <fieldset class="product-variants" data-option="{{ forloop.index0 }}">
+    <legend class="product-label">{{ opt.name | downcase }}</legend>
+    {%- for val in opt.values %}
+      {%- if val.label %}{% assign _label = val.label %}{% assign _material = val.material %}{% else %}{% assign _label = val %}{% assign _material = nil %}{% endif %}
+    <label class="variant">
+      <input type="radio" name="opt-{{ forloop.parentloop.index0 }}" value="{{ _label | escape }}"{% if forloop.first %} checked{% endif %}>
+      {%- include variant-swatch.html color=_material %}
+      <span class="variant-name">{{ _label }}</span>
+      <span class="variant-flag"></span>
+    </label>
+    {%- endfor %}
+  </fieldset>
+  {%- endif %}
+{%- endfor %}
+{%- unless include.static %}
+  {%- comment -%} The resolved combination. cart.js fills value/data-* on load and on every change. {%- endcomment %}
+  <input type="radio" name="variant" value="" checked hidden data-price="{{ page.price }}" data-name="" data-stock="0">
+{%- endunless %}
