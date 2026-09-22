@@ -1,10 +1,8 @@
 {%- comment -%}
-  "Available to buy" marker on an archive card: a small ink pill reading
-  "for sale", pinned to the lower-right corner of the thumbnail box.
-
-  Sits over the image rather than inline with the title, so it never
-  interferes with how the title wraps and reads as a tag on the object.
-  Rendered by index.md inside `.project-image` when a project is
+  "Available to buy" marker on a homepage card: the Made wordmark on a small
+  ink pill, pinned to the lower-right corner of the thumbnail box. Made is the
+  sub-brand the products ship under, so the mark on the card is the same mark
+  as on the box. Rendered by index.md inside `.project-image` when a project is
   `shop_status: available`; styled in shop.css (.for-sale-mark).
 {%- endcomment -%}
-<span class="for-sale-mark" role="img" aria-label="Available to buy">for sale</span>
+<span class="for-sale-mark" role="img" aria-label="Made — available to buy">{% include made-wordmark.html %}</span>

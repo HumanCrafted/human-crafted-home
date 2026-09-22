@@ -13,18 +13,17 @@ title:
   <div class="tag-filters">
     <button class="tag-filter active" data-filter="all">all</button>
     {%- comment -%}
-      "for sale" filter: only the projects currently for sale. Rendered only
-      while the shop is on AND something is available, so a shop with nothing
-      listed doesn't advertise an empty filter. Same words as the pill on the
-      cards, so the two read as one thing ("shop" was rejected — it's the
-      workshop everywhere else on the site, including the "around the shop"
-      category). Not a category — the script matches it against data-shop on
-      each card instead of data-categories.
+      "made" filter: only the projects currently for sale, under the Made
+      sub-brand wordmark — the same mark the cards carry and the products ship
+      with. (Earlier: "for sale" text; "shop" before that, rejected because on
+      this site it means the workshop.) Rendered only while the shop is on AND
+      something is available. Not a category — the script matches it against
+      data-shop on each card instead of data-categories.
     {%- endcomment -%}
     {%- if site.shop_enabled -%}
       {%- assign for_sale_count = site.projects | where: "shop_status", "available" | where: "draft", false | size -%}
       {%- if for_sale_count > 0 %}
-    <button class="tag-filter" data-filter="for sale">for sale</button>
+    <button class="tag-filter tag-filter--made" data-filter="made" aria-label="Made — available to buy">{% include made-wordmark.html %}</button>
       {%- endif -%}
     {%- endif %}
     {% assign all_categories = site.projects | map: 'categories' | join: ',' | split: ',' | uniq | sort %}
@@ -90,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (filterValue === 'all') {
         project.style.display = 'block';
       {%- if site.shop_enabled %}
-      } else if (filterValue === 'for sale') {
+      } else if (filterValue === 'made') {
         // Not a category: the for-sale cards carry data-shop.
         project.style.display = project.dataset.shop === 'available' ? 'block' : 'none';
       {%- endif %}

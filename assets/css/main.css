@@ -1388,7 +1388,7 @@ hr {
   cursor: pointer;
   /* 2px bottom padding lifts the label to optical centre: Plex Sans at this
      size has ascenders and (in these labels) no descenders, so a box-centred
-     line reads low. Same trick as the "for sale" pill. */
+     line reads low. Same trick as the homepage card pill. */
   padding: 0 1.375rem 2px;
   border-radius: 1.875rem;
   text-decoration: none !important;

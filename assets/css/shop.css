@@ -384,59 +384,65 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
   position: absolute;
   right: 0.625rem;
   bottom: 0.625rem;
-  /* Ink pill, paper text — the .btn inversion, so it flips with the theme. */
+  /* Ink pill carrying the Made wordmark in paper — the .btn inversion, so it
+     flips with the theme. Sized so the mark's strokes stay ≥ ~2px. */
   background: var(--foreground);
   color: var(--background);
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  line-height: 1;
-  /* Fixed height + flex centring rather than padding: the lowercase word has
-     a descender, so a padded box centres the glyph box while the letters
-     themselves sit low. The 1px bottom padding lifts them to optical centre. */
   display: inline-flex;
   align-items: center;
-  height: 1.375rem;
-  padding: 0 0.625rem 1px;
+  height: 1.625rem;
+  padding: 0 0.75rem;
   border-radius: 999px;
   pointer-events: none;
+}
+
+/* The wordmark (inline SVG, currentColor) wherever it appears on a pill.
+   Explicit width (360:143) so both pills measure the same, and max-* reset
+   because the card pill sits inside .project-image, whose `svg { max-width:
+   80% }` rule is meant for the illustration and was shrinking the mark. The
+   bottom margin lifts the mark ~1.5px in the flex-centred pill: the "d"
+   ascender makes the box taller than the word's body, which otherwise sits
+   low. */
+.for-sale-mark .made-mark,
+.tag-filter .made-mark {
+  display: block;
+  height: 0.875rem;
+  width: 2.203rem;
+  max-width: none;
+  max-height: none;
+  margin-bottom: 0.1875rem;
 }
 
 /* The card scales its thumbnail on hover; the pill rides along with it, which
    keeps it pinned to the same corner of the same box. Nothing extra needed. */
 
-/* The "for sale" filter in the tag bar is the same pill as the card marks, so
-   the filter and the marks read as one device. Resting state is the outline
+/* The Made filter in the tag bar is the same pill as the card marks, so the
+   filter and the marks read as one device. Resting state is the outline
    (paper pill, ink text, thin ink ring — the ring keeps the silhouette on the
    paper); selecting it fills to the solid ink pill the thumbnails wear. No
    underline on hover, unlike the text filters: the pill lifts instead. Sits
    among plain-text filters, so it's centred on the row rather than stretched. */
-.tag-filter[data-filter="for sale"] {
+.tag-filter[data-filter="made"] {
   align-self: center;
   background: var(--background);
   color: var(--foreground);
   box-shadow: inset 0 0 0 1.5px var(--foreground);
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
   line-height: 1;
   display: inline-flex;
   align-items: center;
-  height: 1.375rem;
-  padding: 0 0.625rem 1px;
+  height: 1.625rem;
+  padding: 0 0.75rem;
   border-radius: 999px;
   transition: transform 150ms ease, background-color 150ms ease, color 150ms ease;
 }
 
-.tag-filter[data-filter="for sale"]:hover {
+.tag-filter[data-filter="made"]:hover {
   transform: translateY(-1px);
   font-weight: 700;
   text-decoration: none;
 }
 
-.tag-filter[data-filter="for sale"].active {
+.tag-filter[data-filter="made"].active {
   background: var(--foreground);
   color: var(--background);
   box-shadow: none;
@@ -445,7 +451,7 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .tag-filter[data-filter="for sale"]:hover { transform: none; }
+  .tag-filter[data-filter="made"]:hover { transform: none; }
 }
 
 /* --- Buy block on a project page -----------------------------------------
@@ -492,7 +498,7 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
 }
 
 /* --- Variant picker: pills -------------------------------------------------
-   The same control the homepage's "for sale" filter uses: outlined pill at
+   The same control the homepage's Made filter uses: outlined pill at
    rest, solid ink when chosen, a 1px lift on hover. Each pill is the <label>
    around a real radio, so keyboard and screen-reader behaviour is the native
    radio group's; the radio itself is drawn off-screen. */
