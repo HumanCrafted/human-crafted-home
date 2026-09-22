@@ -411,8 +411,8 @@ merged but still exists locally; safe to delete.)
 Dwelling on the co/re hamburger in the nav (shown on home and on `/re/` itself, where it carries `aria-current="page"`) floats a "Quick links" panel of shortcuts into co/re — an easter egg, not primary nav. Data-driven from `_data/quick_menu.yml` (name + site path or `https://` link, `enabled` switch, file order = display order); external links open in a new tab. Markup in `_layouts/default.html` (`.core-menu` wraps the existing `.core-link`, which still links to `/re/`; panel is `.core-menu-panel` with a `.core-menu-title` + `ul`); styles in `main.css`. Pure CSS: `:hover` opens it only after `--quick-menu-dwell` (1000ms, set on `.core-menu` — the one knob for "how long before it appears"); `:focus-within` opens immediately for keyboard users; `--quick-menu-gap` (1.5rem) is the vertical clearance and also sizes the `::before` hover bridge; close is delayed ~120ms. Panel is borderless with a soft shadow, on `--background` in light (`--surface` was rejected as too dark on light paper) and `--surface` in dark; anchored `left: 0` to the icon. Desktop only: removed under `@media (hover: none), (max-width: 768px)` so a tap navigates to co/re. Umami: `Quick menu` event with an `item` property.
 
 ### Shop checkout: Stripe via hcd-checkout (Sept 2026)
-The shop is still dormant (`shop_enabled: false`), but checkout is now real
-code, not a faked receipt. Shape, per the July 2026 research in the `made-shop`
+**Live since 2026-09-22** (`shop_enabled: true`; one product listed, the
+Tissue Dispenser). Checkout is real code, not a faked receipt. Shape, per the July 2026 research in the `made-shop`
 repo (`docs/ecommerce-research.md`, "Architecture A"):
 
 - **Flow:** `assets/js/cart.js` holds the cart in localStorage. "Check out" on
@@ -472,11 +472,10 @@ repo (`docs/ecommerce-research.md`, "Architecture A"):
   `localhost`, so a cart added on `127.0.0.1` is a different origin's storage.
 - **Stock is still manual:** edit the note's `stock:` after a sale; the rebuilt
   catalog makes the function refuse it. Oversell window = time to edit.
-- **Go-live checklist:** Jon adds `STRIPE_SECRET_KEY` (live) in the Vercel
-  project settings and deploys; real `price:`/`variants:`/`stock:` on the
-  first product (all current values are PLACEHOLDERs); flip `shop_enabled:
-  true`; then give `_docs/website.md` a shop section (deliberately not written
-  while the shop is invisible).
+- **Went live 2026-09-22:** live restricted Stripe key + `STRIPE_TAX=1`
+  (Stripe Tax Basic, Wisconsin registration) on Vercel; US-only $8 shipping;
+  receipts on in Stripe; `_docs/website.md` has its shop paragraph. To take
+  the shop down again: `shop_enabled: false` and push — nothing else.
 
 ### Dev environment note
 Ruby was upgraded to 3.4.7; use `bundle _2.7.2_ exec …` (see Jekyll Development Server). `Gemfile.lock`, `.DS_Store`, `jekyll.log`, `.obsidian/workspace.json`, and `.claude/` are gitignored. The Obsidian git-sync plugin can switch the working-tree branch mid-session.

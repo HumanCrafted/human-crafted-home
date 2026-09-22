@@ -21,7 +21,7 @@ url: "https://humancrafted.co" # the base hostname & protocol for your site, e.g
 # Enforced by _plugins/shop_toggle.rb (drops the shop-only pages) plus
 # `site.shop_enabled` guards in _layouts/default.html, _layouts/project.html
 # and index.md.
-shop_enabled: false
+shop_enabled: true
 
 # Where "Check out" sends the cart when the shop is on. A small Vercel function
 # (repo: HumanCrafted/hcd-checkout) that re-prices the cart against

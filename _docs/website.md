@@ -115,6 +115,10 @@ The [[materials|Materials]] note is the same database shape applied to laser-cut
 - `acrylic-colors.base` gives Obsidian views: all colors, by vendor, by finish, an *In Inventory* filter, and a *Reorder* view with prices and purchase links
 - Each color carries a `palettes:` list (curated sets, assigned in Obsidian; a color can be in several). The hub renders a homepage-style `.tag-filter` bar above the table — buttons collected by Liquid from all `palettes` values, rows tagged `data-palettes`, shown/hidden by the same inline-script pattern as the project grid, with `?palette=<slug>` deep links (names slugified for clean URLs; the script slugifies incoming params so old display-name links still resolve, and clicking a filter writes the slug to the address bar for sharing). The bar and script render only when at least one color has a palette. This replaces the old app's palette-builder: palettes are authored in front matter, not assembled in the browser
 
+### The shop (Made)
+
+Selling happens on the project pages themselves; there's no separate storefront. A project joins the shop through its front matter (a status, a price, variants with their own SKUs and stock, and for coloured things a `color:` naming the material note), and the build does the rest: a buy block on the page, a Made mark on its homepage card, a "made" filter, and a machine-readable catalog. The cart lives in the browser. Checkout is a single small function on Vercel that re-prices the cart against that catalog and hands off to Stripe's hosted checkout page, which takes the address, shipping, payment and tax — this site never sees a card. One switch in the config turns the whole thing on or off; off, the build carries no trace of it.
+
 ## Key Decisions
 
 ### Why Jekyll?
