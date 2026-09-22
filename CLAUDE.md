@@ -401,6 +401,7 @@ merged but still exists locally; safe to delete.)
   - Home → `human / crafted` (unchanged, links home).
   - Hubs `/lab/`, `/re/` → `humancrafted.co/lab` · `co/re` — `humancrafted.` dims to 25% (links home), `co/<section>` is bright/current.
   - Sub-pages → nested display-only crumb `humancrafted.co/re/<slug>` (`humancrafted`→home, `co/re`→hub, slug current). **Real URLs stay flat** — the nesting is visual only, no SEO/URL migration.
+  - **Made crumb** (Sept 2026): a project that's for sale (shop on, `shop_status: available`) reads `humancrafted.co/made/<slug>` instead — `data-wm-state="made"`; the whole `humancrafted.co/` is the dim home link (one piece, so ≤1024px drops it and shows `made/<slug>`), `made` links to the Made-filtered projects (`/?category=made#projects`, what `/made/` redirects to), slug current. Same `.wm-new` wipe.
   - **Crumb text** (July 2026): explicit front-matter `crumb:` wins, then `title:`, then the de-hyphenated slug. Any post/doc/page with a long descriptive title (e.g. shop-notes posts) should set a short `crumb:` — first used on `_posts/2026-07-31-shop-notes-…​.md` (`crumb: shop notes`).
 - **Renamed the hub `/more/` → `/re/`** (co/re = "core", the body of work) via **`jekyll-redirect-from`** (added to `Gemfile` + `_config.yml`); old `/more/` redirects. Nav label stays "More".
 - "Let's co/lab" pill shows on **all** pages now.

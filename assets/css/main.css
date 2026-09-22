@@ -211,7 +211,8 @@ a.site-title:hover {
      phone layout does — the longest crumbs ("toilet paper holder") otherwise
      push the theme toggle out of the viewport around 800px. */
   .site-title--crumb[data-wm-state="sub"] .wm-back,
-  .site-title--crumb[data-wm-state="sub"] .wm-dot {
+  .site-title--crumb[data-wm-state="sub"] .wm-dot,
+  .site-title--crumb[data-wm-state="made"] .wm-back {
     display: none;
   }
 }
@@ -958,7 +959,8 @@ hr {
   /* Sub-page crumbs drop the long "humancrafted." prefix on mobile so
      co/re/<slug> fits beside the nav; home stays reachable via co/re. */
   .site-title--crumb[data-wm-state="sub"] .wm-back,
-  .site-title--crumb[data-wm-state="sub"] .wm-dot {
+  .site-title--crumb[data-wm-state="sub"] .wm-dot,
+  .site-title--crumb[data-wm-state="made"] .wm-back {
     display: none;
   }
 
