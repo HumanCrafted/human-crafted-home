@@ -72,9 +72,9 @@ With a standard cardboard box of tissues, once half empty, you're reaching in to
 
 ### Materials and colors
 
-Fluorescent yellow and green came first. Gold, rose, translucent green, black, white, khaki, and frosted followed. With the translucent versions, so the color carries the light, shadows cast on the surrounding surfaces in a very interesting way.
+Currently producing in classic transparent gold and rose gold, transparent green, gloss black, and frosted.  Will be adding additional colors soon.
 
-![[acrylic-black|Black|column=5]] ![[acrylic-frosted-satin-ice|Frosted]] ![[acrylic-light-green-transparent|Light Green Transparent]] ![[acrylic-gold-transparent|Gold Transparent]] ![[acrylic-rose-gold-transparent|Rose Gold Transparent]]
+![[acrylic-black|Gloss Black|column=5]] ![[acrylic-frosted-satin-ice|Frosted]] ![[acrylic-light-green-transparent|Transparent Light Green]] ![[acrylic-gold-transparent|Transparent Gold]] ![[acrylic-rose-gold-transparent|Transparent Rose Gold]]
 
 ### Making it
 

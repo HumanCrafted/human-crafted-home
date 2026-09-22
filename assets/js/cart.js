@@ -293,14 +293,18 @@
       if (priceEl) priceEl.textContent = money(cents(v.dataset.price));
 
       if (stockEl) {
+        // Stock is per variant. With more than one on offer, say which one
+        // the number belongs to — "Only 2 left" alone reads as the total.
+        var multi = form.querySelectorAll('input[name="variant"]').length > 1;
+        var which = multi ? v.dataset.name : '';
         if (form.dataset.type === 'digital') {
           stockEl.textContent = 'Instant download';
           stockEl.className = 'product-stock is-digital';
         } else if (stock <= lowAt) {
-          stockEl.textContent = 'Only ' + stock + ' left';
+          stockEl.textContent = 'Only ' + stock + ' left' + (which ? ' in ' + which : '');
           stockEl.className = 'product-stock is-low';
         } else {
-          stockEl.textContent = stock + ' in stock';
+          stockEl.textContent = stock + (which ? ' ' + which : '') + ' in stock';
           stockEl.className = 'product-stock';
         }
       }
