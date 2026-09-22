@@ -11,13 +11,14 @@
             "id": "4ef47e1f08672c10",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "_docs/acrylic-colors.base",
-                "viewName": "All Colors"
+                "file": "_docs/rogue-wave-huila-community-decaf.md",
+                "mode": "preview",
+                "source": false
               },
-              "icon": "lucide-table",
-              "title": "acrylic-colors"
+              "icon": "lucide-file",
+              "title": "rogue-wave-huila-community-decaf"
             }
           }
         ]
@@ -113,6 +114,7 @@
         "state": {
           "type": "backlink",
           "state": {
+            "file": "_docs/rogue-wave-huila-community-decaf.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -166,11 +168,12 @@
       "bases:Create new base": false
     }
   },
-  "active": "4ef47e1f08672c10",
+  "active": "7da6e81695832470",
   "lastOpenFiles": [
+    "_docs/coffee-beans.base",
+    "_docs/acrylic-colors.base",
     "_docs/espresso.md",
     "_docs/acrylic-colors.md",
-    "_docs/acrylic-colors.base",
     "_docs/perc-perc-up.md",
     "_docs/perc-brazil-legender.md",
     "_docs/coffee-roaster-perc.md",

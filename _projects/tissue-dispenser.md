@@ -27,12 +27,29 @@ gallery_images:
 headline: A translucent acrylic tray with a solid maple plate that rides down the stack as the tissues go.
 # --- shop: PLACEHOLDER price/SKU/stock — replace with real values ---
 shop_status: available
-price: 25.00
+price: 54.00
 ships_in: 3–5 business days
 variants:
-  - name: Standard
-    sku: TIS-DIS-STD
-    stock: 10
+  - name: Black
+    sku: TIS-DIS-BLK
+    price: 54.00
+    stock: 2
+  - name: Frosted
+    sku: TIS-DIS-FRO
+    price: 54.00
+    stock: 2
+  - name: Light Green
+    sku: TIS-DIS-LGN
+    price: 54.00
+    stock: 2
+  - name: Gold
+    sku: TIS-DIS-GOL
+    price: 54.00
+    stock: 2
+  - name: Rose Gold
+    sku: TIS-DIS-RGD
+    price: 54.00
+    stock: 2
 # --- /shop ---
 version: "1.0"
 tools:
