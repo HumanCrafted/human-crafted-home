@@ -77,6 +77,7 @@ One linking convention, authored in Obsidian and resolved to Jekyll URLs at buil
 - Targets are normalized, so `[[Shop V3]]`, `[[shop_v3]]`, and `[[shop-v3]]` all land on the same page
 - Images embed with `![[image.ext]]`, with options as pipe segments — `![[plan.svg|width=500]]` sets a display width, and `![[a.svg|column=3]]![[b.svg]]![[c.svg]]` lays a line of embeds out as an equal-column grid (stacking to one column on phones)
 - 3D models embed the same way — `![[model.stl]]` becomes a spinnable viewer 
+- Notes embed too — `![[acrylic-black]]` (no file extension) renders as a labeled material chip built from that note's image and title, and a line of them becomes a grid. That's how a product page's "Materials and colors" section is written; any note with an image works, so filament or fabric notes will render the same way
 - The same links work in Obsidian's editor and graph view and on the live site
 - A build-time safeguard skips stray or empty notes, so a broken link can't take down the site
 
@@ -106,7 +107,7 @@ The [[tooling|Tooling]] note is a catalogue of every bit in the shop across four
 - Vendor is a plain field plus a `purchase_url`, not a linked note — unlike coffee roasters, there aren't enough vendors to justify their own pages
 
 #### Acrylic Colors
-The [[acrylic-colors|Acrylic Colors]] note is the same database shape applied to laser-cutter sheet stock — one note per color, tagged `acrylic`, rendered as a single table from `site.docs`. It absorbed the old standalone `acrylic-colors` GitHub Pages app (humancrafted.github.io/acrylic-colors), which is being sunset; the palette-builder feature did not come along, just the database.
+The [[materials|Materials]] note is the same database shape applied to laser-cutter sheet stock — one note per color in its own `_materials/` collection (no individual pages, like music and places), tagged `acrylic`, rendered as a single table on the hub. It absorbed the old standalone `acrylic-colors` GitHub Pages app (humancrafted.github.io/acrylic-colors), which is being sunset; the palette-builder feature did not come along, just the database.
 - Front matter per color: `vendor`, `finish`, `sheet_size`, `price` (quoted string, so "18.90" doesn't render as "18.9"), `price_scale`, `in_inventory`, `purchase_url`, `image`
 - Swatch images live in `assets/images/` as `acrylic-<color>.png/jpg`, carried in an `image:` field so the hub table can render thumbnails (`.acrylic-swatch` in `main.css`; the table scrolls in its own box like the music table)
 - `finish` (opaque / transparent / fluorescent / frosted / glitter / flake / glimmer / pearl) is taken straight from the vendor's product names, added as a groupable property

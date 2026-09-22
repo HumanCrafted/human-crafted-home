@@ -1,0 +1,12 @@
+{%- comment -%}
+  Swatch dot for a variant pill. `color` is the slug of a material note
+  (_materials/acrylic-*.md) whose `hex:` gives the colour. Renders nothing when the
+  variant has no color or the note has no hex, so plain variants are unchanged.
+  Usage: {% include variant-swatch.html color=v.color %}
+{%- endcomment -%}
+{%- if include.color -%}
+  {%- assign _cdoc = site.materials | where: "slug", include.color | first -%}
+  {%- if _cdoc.hex -%}
+<span class="variant-swatch" style="--swatch: {{ _cdoc.hex }}" aria-hidden="true"></span>
+  {%- endif -%}
+{%- endif -%}

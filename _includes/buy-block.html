@@ -111,6 +111,7 @@
       <p class="product-label">{% if page.variants.size > 1 %}options{% else %}option{% endif %} once offered</p>
       {%- for v in page.variants %}
       <div class="variant is-disabled">
+        {%- include variant-swatch.html color=v.color %}
         <span class="variant-name">{{ v.name }}</span>
         {%- if prices_vary %}
         {%- assign v_price = v.price | default: page.price %}
@@ -152,6 +153,7 @@
                  data-name="{{ v.name | escape }}"
                  data-stock="{% if is_digital %}999{% else %}{{ v.stock | default: 0 }}{% endif %}"
                  {% if sold_out %}disabled{% elsif first_available %}checked{% assign first_available = false %}{% endif %}>
+          {%- include variant-swatch.html color=v.color %}
           <span class="variant-name">{{ v.name }}</span>
           {%- if prices_vary %}
           <span class="variant-price">{% include money.html amount=v_price %}</span>

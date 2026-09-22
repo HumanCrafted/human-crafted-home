@@ -74,6 +74,12 @@ collections:
     output: false
   places:
     output: false
+  # Materials database: one note per colour/stock (acrylic sheet so far).
+  # No pages — the /materials/ hub renders the table, product pages embed
+  # notes as chips (![[acrylic-black]]) and read variant swatches from `hex:`.
+  # Old /acrylic-<name>/ URLs redirect to the hub (redirect_from on materials.md).
+  materials:
+    output: false
 
 # Obsidian-friendly settings
 kramdown:

@@ -46,6 +46,16 @@ module ObsidianLinks
     "width"  => :width,  "w"   => :width,
     "column" => :column, "col" => :column, "c" => :column,
   }.freeze
+  # Note embeds: ![[slug]] with no file extension — Obsidian's transclusion.
+  # On the site an embedded note that carries an `image:` renders as a labeled
+  # chip (image + title); a line of them becomes a chip row. Used for
+  # the "Materials and colors" section on product pages: ![[acrylic-mint]].
+  # Anything with a "." or "#" in the target is not a note embed (images,
+  # models, bases, heading links) and is left to the other regexes.
+  NOTE_EMBED_RE = /!\[\[([^\|\]\.#]+?)[ \t]*(?:\|([^\]]+))?\]\]/
+  NOTE_ROW_RE   = /^[ \t]*(?:!\[\[[^\|\]\.#]+?[ \t]*(?:\|[^\]]+)?\]\][ \t]*)+$/
+  # A chip row defaults to one column per chip up to this many, then wraps.
+  CHIP_MAX_COLS = 6
   # Obsidian .base embeds -> Jekyll include.
   BASE_RE       = /!\[\[([^\]]+)\.base\]\]/
   # Wiki links: [[target|Display]] or [[target]] (not preceded by "!").
@@ -156,6 +166,59 @@ module ObsidianLinks
     end
   end
 
+  # Convert a line of note embeds -> a chip row.
+  #
+  #   ![[acrylic-mint]] ![[acrylic-black]]            one row, 2 columns
+  #   ![[acrylic-mint|column=4]] ![[...]] ...           4 columns, wrapping
+  #   ![[acrylic-light-green-transparent|Light Green]]  caption override — the
+  #                                                     first plain segment, as
+  #                                                     with image alt text
+  #
+  # Each embed must resolve to a document (by `slug:` or filename) that has an
+  # `image:`; otherwise the whole line is left as typed and a warning is logged,
+  # so a typo shows up in the build rather than as a silently missing chip.
+  def self.convert_note_embeds(text, site, baseurl)
+    text.gsub(NOTE_ROW_RE) do |line|
+      embeds = line.scan(NOTE_EMBED_RE).map { |slug, blob| [slugify(slug), parse_image_segments(blob)] }
+      chips = embeds.map do |slug, o|
+        doc = find_note(site, slug)
+        img = doc && image_filename(doc.data['image'])
+        unless img
+          Jekyll.logger.warn "obsidian_links:", "![[#{slug}]] — no note with an image by that name; left as text"
+          break nil
+        end
+        label  = o[:alt].to_s.strip.empty? ? doc.data['title'].to_s : o[:alt]
+        title  = CGI.escapeHTML(label)
+        # Caption is the label only — the note's `finish` was tried beneath it
+        # and dropped as redundant ("Gold Transparent / transparent").
+        %(<figure class="material-chip"><img src="#{baseurl}/assets/images/#{img}" alt="#{title}" loading="lazy"><figcaption>#{title}</figcaption></figure>)
+      end
+      next line unless chips
+
+      cols   = embeds.filter_map { |_, o| o[:column] }.first || [chips.size, CHIP_MAX_COLS].min
+      indent = line[/\A[ \t]*/]
+      %(#{indent}<div class="chip-row" style="--cols: #{cols}">#{chips.join}</div>)
+    end
+  end
+
+  # A document by slug — `slug:` front matter first, then the filename (posts
+  # lose their date prefix, same as wiki links).
+  def self.find_note(site, slug)
+    site.documents.find do |d|
+      next false unless d.data['draft'] != true
+      own = d.data['slug'].to_s
+      own = File.basename(d.basename, '.*').sub(/\A\d{4}-\d{2}-\d{2}-/, '') if own.empty?
+      slugify(own) == slug
+    end
+  end
+
+  # `image:` is a bare filename on material notes and an ![[embed]] elsewhere.
+  def self.image_filename(raw)
+    return nil if raw.nil? || raw.to_s.strip.empty?
+    m = raw.to_s.strip.match(/\A(?:!\[\[)?([^\|\]]+?)(?:\|[^\]]*)?(?:\]\])?\z/)
+    m && m[1].strip
+  end
+
   # Convert ![[name.base]] -> {% include name-table.html %}
   def self.convert_base_embeds(text)
     text.gsub(BASE_RE) { "{% include #{$1.strip}-table.html %}" }
@@ -256,6 +319,9 @@ Jekyll::Hooks.register [:pages, :documents], :pre_render do |item|
   item.content = ObsidianLinks.convert_models(item.content)
   item.content = ObsidianLinks.convert_image_rows(item.content, baseurl)
   item.content = ObsidianLinks.convert_images(item.content, baseurl)
+  # Note embeds after images (images carry an extension, notes don't) and
+  # before wiki links, which would otherwise see the "[[slug]]" inside.
+  item.content = ObsidianLinks.convert_note_embeds(item.content, item.site, baseurl)
 
   if item.content.include?('{% if') || (item.data['layout'] == 'doc')
     # Files that carry their own Liquid: convert per line, leaving any line that

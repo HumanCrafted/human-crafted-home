@@ -557,6 +557,18 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
 
 .variant-price { font-weight: 400; }
 
+/* Colour dot, ringed in the pill's current text colour so it survives both
+   states: black on the paper pill gets an ink ring, black on the ink pill a
+   paper ring, and white/clear the reverse. */
+.variant-swatch {
+  flex: 0 0 auto;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: var(--swatch);
+  box-shadow: inset 0 0 0 1px currentColor;
+}
+
 /* Sold out: muted ring and text, the name struck through. The "sold out"
    flag stays in the markup for screen readers but isn't drawn — the strike
    says it. */
