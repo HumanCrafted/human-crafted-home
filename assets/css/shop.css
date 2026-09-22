@@ -65,7 +65,9 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
 .cart-drawer {
   position: fixed;
   inset: 0;
-  z-index: 200;
+  /* Above the floating co/lab pill (z-index 1001 in main.css), which sits in
+     the same corner as the drawer's checkout button. */
+  z-index: 1100;
   visibility: hidden;
   pointer-events: none;
 }
