@@ -2,7 +2,8 @@
   Breadcrumb wordmark. Four states driven by page.url (and the shop):
     home      "/"            -> human / crafted   (plain wordmark, links home)
     hub       /lab/ /re/ /ops/ -> humancrafted.co/<section>   (prefix dim -> home)
-    made      a project that's for sale (shop on) -> humancrafted.co/made/<slug>
+    made      a project that's for sale, or a shop page (cart, thanks) — shop on
+              -> humancrafted.co/made/<slug>
               (humancrafted.co dim -> home; made -> the Made-filtered projects)
     sub-page  everything else  -> humancrafted.co/re/<slug>   (prefix dim -> home, co/re -> hub)
   Real URLs are unchanged; the nested path is a display-only breadcrumb.
@@ -24,9 +25,13 @@
   {%- if slug == "" -%}{%- assign slug = parts[parts.size | minus: 2] -%}{%- endif -%}
   {%- comment -%} Display-only crumb: explicit front-matter `crumb:` wins, then title, then slug {%- endcomment -%}
   {%- if page.crumb and page.crumb != "" -%}{%- assign crumb = page.crumb -%}{%- elsif page.title and page.title != "" -%}{%- assign crumb = page.title -%}{%- else -%}{%- assign crumb = slug | replace: "-", " " -%}{%- endif -%}
-  {%- if site.shop_enabled and page.shop_status == "available" -%}
+  {%- assign under_made = false -%}
+  {%- if site.shop_enabled and page.shop_status == "available" %}{% assign under_made = true %}{% endif -%}
+  {%- if site.shop_enabled and page.shop %}{% assign under_made = true %}{% endif -%}
+  {%- if under_made -%}
   {%- comment -%}
-    A product for sale files under Made rather than co/re. The whole
+    A product for sale — and the shop's own pages (cart, thanks; `shop: true`
+    in their front matter) — file under Made rather than co/re. The whole
     "humancrafted.co/" is the dim home link (so narrow screens can drop it in
     one piece and show "made/<slug>"); "made" links to the Made-filtered
     projects — the same view /made/ redirects to, linked directly to skip the
