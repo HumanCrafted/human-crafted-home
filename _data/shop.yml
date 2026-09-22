@@ -19,21 +19,26 @@ free_shipping_over: 75
 shipping:
   - code: US
     region: United States
-    rate: 6.00
+    rate: 8.00
     note: 3–5 business days
     countries: [US]
-  - code: CA
-    region: Canada
-    rate: 16.00
-    note: 7–14 business days
-    countries: [CA]
-  - code: INTL
-    region: Everywhere else
-    rate: 28.00
-    note: 10–21 business days, duties not included
-    # PLACEHOLDER list — trim or extend to where you're actually willing to ship.
-    # Quote "NO" (Norway): unquoted, YAML reads it as the boolean false.
-    countries: [GB, IE, FR, DE, NL, BE, ES, IT, PT, AT, CH, DK, SE, "NO", FI, AU, NZ, JP, SG, KR, MX]
+# US only for launch (Sept 2026). The $8 flat rate is the middle of USPS
+# Ground Advantage commercial rates from Evansville for the 2 lb tier
+# (Chicago $5.90 · Denver $7.09 · Los Angeles $8.27, Sept 2026) plus about a
+# dollar for the box; orders over free_shipping_over ship free. Alaska and
+# Hawaii are included under US — Stripe can't exclude states, so those rare
+# labels cost a few dollars more. To reopen a region, uncomment it:
+#  - code: CA
+#    region: Canada
+#    rate: 16.00
+#    note: 7–14 business days
+#    countries: [CA]
+#  - code: INTL
+#    region: Everywhere else
+#    rate: 28.00
+#    note: 10–21 business days, duties not included
+#    # Quote "NO" (Norway): unquoted, YAML reads it as the boolean false.
+#    countries: [GB, IE, FR, DE, NL, BE, ES, IT, PT, AT, CH, DK, SE, "NO", FI, AU, NZ, JP, SG, KR, MX]
 
 # Sales tax is Stripe's job: set STRIPE_TAX=1 on the checkout function once
 # Stripe Tax is switched on in the Dashboard. The cart shows "at checkout".

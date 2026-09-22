@@ -494,7 +494,7 @@
             '<aside class="cart-summary">' +
               '<h2>Summary</h2>' +
               row('Subtotal', money(t.subtotal, cat.settings.symbol)) +
-              (physical ? regionPicker(cat, region) : '') +
+              (physical && cat.shipping.length > 1 ? regionPicker(cat, region) : '') +
               row('Shipping', t.shipping.cents === 0 ? esc(t.shipping.label) : money(t.shipping.cents, cat.settings.symbol)) +
               row('Tax', 'At checkout') +
               row('Total', money(t.total, cat.settings.symbol) + (physical ? ' + tax' : ''), 'summary-row--total') +
@@ -518,8 +518,9 @@
       root.addEventListener('click', function (e) {
         var btn = e.target.closest('[data-checkout]');
         if (!btn) return;
+        // No picker when there's a single region — send that region's code.
         var sel = root.querySelector('[data-region]');
-        startCheckout(cat, sel ? sel.value : null, btn, root);
+        startCheckout(cat, sel ? sel.value : readRegion(cat), btn, root);
       });
     }).catch(function () {
       root.innerHTML = '<p class="cart-error">Couldn’t load the catalog. Reload the page?</p>';
@@ -536,6 +537,8 @@
       notices.map(function (n) { return '<li>' + esc(n) + '</li>'; }).join('') + '</ul>';
   }
 
+  // Only shown when there's a choice to make; with one region the shipping
+  // row simply states the rate and the function gets that region's code.
   function regionPicker(cat, current) {
     return '<div class="cart-region">' +
       '<label for="cart-region">Ship to</label>' +

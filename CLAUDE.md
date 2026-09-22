@@ -428,7 +428,7 @@ repo (`docs/ecommerce-research.md`, "Architecture A"):
   static copy (PLACEHOLDER wording). Tax estimate removed from `_data/shop.yml`
   and `catalog.json` — Stripe calculates it (`STRIPE_TAX=1` on the function
   once Stripe Tax is on in the Dashboard); the cart says "at checkout".
-- **Region picker on `/cart/`** (`.cart-region`, remembered in `hc-region`):
+- **Region picker on `/cart/`** (`.cart-region`, remembered in `hc-region`; **hidden when `_data/shop.yml` lists a single region** — the cart then states that rate and sends its code; launch is US-only at a flat $8 from Rollo's Ground Advantage 2 lb rates, CA/INTL kept commented in the file):
   hosted Checkout shows *every* `shipping_options` entry to everyone, so the
   shopper picks a region first and the function sends exactly one rate plus
   that region's `countries:` as `allowed_countries`. Each region in
