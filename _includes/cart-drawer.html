@@ -8,7 +8,14 @@
   <div class="cart-drawer-panel">
     <div class="cart-drawer-head">
       <h2>Cart</h2>
-      <button type="button" class="cart-drawer-close" aria-label="Close cart">&times;</button>
+      <button type="button" class="cart-drawer-close" aria-label="Close cart">
+        {%- comment -%} Lucide panel-right-close: a panel tucking back to the right edge — not an ×, which the remove-line marks below already use. {%- endcomment %}
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect width="18" height="18" x="3" y="3" rx="2"/>
+          <path d="M15 3v18"/>
+          <path d="m8 9 3 3-3 3"/>
+        </svg>
+      </button>
     </div>
     <div class="cart-drawer-body" data-cart-drawer-body></div>
     <div class="cart-drawer-foot" data-cart-drawer-foot></div>

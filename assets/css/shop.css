@@ -120,11 +120,14 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
   background: none;
   border: none;
   color: var(--foreground);
-  font-size: 1.75rem;
-  line-height: 1;
+  display: inline-flex;
+  align-items: center;
   cursor: pointer;
-  padding: 0 0.25rem;
+  padding: 0.25rem;
+  transition: transform 150ms ease;
 }
+
+.cart-drawer-close:hover { transform: translateX(1px); }
 
 .cart-drawer-body {
   flex: 1;
