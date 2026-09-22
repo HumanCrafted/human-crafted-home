@@ -33,7 +33,7 @@ gallery_images:
   - "![[cord-keeper-mmoca-exhibit.jpg]]"
 headline: "A concrete cable weight born from a museum exhibit — and the first Human Crafted product."
 # --- shop: PLACEHOLDER price/SKU/stock — replace with real values ---
-shop_status: archived
+shop_status: off   # was archived — listed again when it's ready
 price: 25.00
 variants:
   - name: Standard

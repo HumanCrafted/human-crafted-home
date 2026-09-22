@@ -19,7 +19,7 @@ gallery_images:
   - "![[fridge-folders-6.JPG]]"
 headline: The desktop folder icon, pulled off the screen and stuck to the fridge.
 # --- shop: PLACEHOLDER price/SKU/stock — replace with real values ---
-shop_status: archived
+shop_status: off   # was archived — listed again when it's ready
 price: 25.00
 variants:
   - name: Standard

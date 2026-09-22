@@ -26,7 +26,7 @@ headline: A minimal bi-fold wallet made from bonded nylon instead of stitching, 
 # (The odd numbers below are deliberate placeholders that exercise the cases:
 # an override on the first variant, one variant falling back to the default,
 # and an override on a sold-out variant.)
-shop_status: available
+shop_status: off   # was available — listed again when it's ready
 price: 25.00
 ships_in: 3–5 business days
 variants:

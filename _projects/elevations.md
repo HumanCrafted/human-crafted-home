@@ -24,7 +24,7 @@ gallery_images:
   - "![[elevations-terrain-render.jpg]]"
 headline: States drawn as their own topography, sliced into acrylic bars and set into a birch panel.
 # --- shop: PLACEHOLDER price/SKU/stock — replace with real values ---
-shop_status: archived
+shop_status: off   # was archived — listed again when it's ready
 price: 25.00
 variants:
   - name: Standard

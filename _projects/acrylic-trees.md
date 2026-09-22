@@ -13,7 +13,7 @@ draft: false
 gallery_images:
 headline:
 # --- shop: PLACEHOLDER sizes/colors/prices/stock — replace with real values ---
-shop_status: available
+shop_status: off   # was available — listed again when it's ready
 price: 25.00
 ships_in: 3–5 business days
 # Two axes. `options` declares them (list order = display order). Each variant

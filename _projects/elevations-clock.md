@@ -25,7 +25,7 @@ gallery_images:
   - "![[elevations-clock-built-exhibit.jpg]]"
 headline: A laser-cut birch clock with hour markers drawn as stacked bars, like a topographic map.
 # --- shop: PLACEHOLDER price/SKU/stock — replace with real values ---
-shop_status: archived
+shop_status: off   # was archived — listed again when it's ready
 price: 25.00
 variants:
   - name: Standard

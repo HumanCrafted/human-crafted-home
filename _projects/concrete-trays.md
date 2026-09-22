@@ -23,7 +23,7 @@ gallery_images:
   - "![[concrete-tray-detail.jpg]]"
 headline: A pair of cast concrete trays, one round and one rectangular, for the small stuff by the sink or on a desk.
 # --- shop: PLACEHOLDER price/SKU/stock — replace with real values ---
-shop_status: archived
+shop_status: off   # was archived — listed again when it's ready
 price: 25.00
 variants:
   - name: Standard
