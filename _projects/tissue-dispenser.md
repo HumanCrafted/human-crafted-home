@@ -55,7 +55,7 @@ variants:
   - name: Rose Gold
     sku: TIS-DIS-RGD
     price: 54.00
-    stock: 2
+    stock: 1
     color: acrylic-rose-gold-transparent
 # --- /shop ---
 version: "1.0"
