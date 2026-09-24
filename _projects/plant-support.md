@@ -8,9 +8,9 @@ categories:
   - 3d printing
   - around the house
 published_date: 2021-11-05
-draft: false
-gallery_images: 
-headline: 
+draft: true
+gallery_images:
+headline:
 version: "1.0"
 tools:
   - 3d-printer
