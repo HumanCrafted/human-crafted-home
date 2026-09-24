@@ -521,6 +521,11 @@ body.shop-page .colab-fab { display: none; }
   .header-content:has(.core-menu):has(.made-nav-btn):has(.cart-link:not(.is-empty)) { gap: 1rem; }
   .site-nav:has(.core-menu):has(.made-nav-btn):has(.cart-link:not(.is-empty)) { gap: 0.75rem; }
   .site-nav:has(.core-menu):has(.cart-link:not(.is-empty)) .made-nav-btn { padding: 0 0.75rem; }
+  /* Made pages (/made/, products, cart, thanks) carry the hamburger too, beside
+     a long crumb ("humancrafted.co/made", "made/tissue dispenser") and the
+     cart — that ran the hamburger ~10px off a 375px screen. Tighter gaps. */
+  .header-content:has(.core-menu):has(.site-title--crumb[data-wm-state^="made"]) { gap: 1rem; }
+  .header-content:has(.site-title--crumb[data-wm-state^="made"]) .site-nav:has(.core-menu) { gap: 0.75rem; }
   .site-nav .made-nav-btn .made-mark { height: 1.0625rem; width: 2.675rem; margin-bottom: 0.1875rem; }
 }
 

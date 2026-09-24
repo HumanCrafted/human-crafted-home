@@ -122,9 +122,15 @@
                             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
                         </svg>
                     </button>
-                    {% if page.url == "/" or page.url == "/re/" %}
+                    {%- assign show_core_menu = false -%}
+                    {%- if page.url == "/" or page.url == "/re/" %}{% assign show_core_menu = true %}{% endif -%}
+                    {%- if site.shop_enabled and page.shop or site.shop_enabled and page.shop_status == "available" %}{% assign show_core_menu = true %}{% endif -%}
+                    {% if show_core_menu %}
                     {% comment %}
-                      co/re hamburger, shown on home and on co/re itself. Last in the
+                      co/re hamburger, shown on home, on co/re itself, and on the
+                      Made pages (/made/, products for sale, cart, thanks) — whose
+                      crumb files them under made, not co/re, so this is their way
+                      back into the body of work. Last in the
                       nav (past the theme toggle) since the Made pill joined it —
                       the pills lead, the utility icons trail.
                       Hovering (or keyboard-focusing) it floats a
