@@ -77,34 +77,18 @@
             <div class="header-content">
                 {% include wordmark.html %}
                 <nav class="site-nav">
-                    {% if page.url == "/" or page.url == "/re/" %}
                     {% comment %}
-                      co/re hamburger, shown on home and on co/re itself.
-                      Hovering (or keyboard-focusing) it floats a
-                      quick-access list of shortcuts into co/re, driven by
-                      _data/quick_menu.yml. The icon itself still links to /re/.
-                      Desktop only: hidden on touch devices and below 769px, so a
-                      tap navigates. Opens only after a dwell (--quick-menu-dwell).
+                      Made pill: the way in to the things for sale (/made/).
+                      Only while the shop is on and something is available, so
+                      it never leads to an empty page. Hover fills accent, like
+                      co/lab. Styled in shop.css.
                     {% endcomment %}
-                    {%- assign quick_items = site.data.quick_menu | where_exp: "item", "item.enabled != false" -%}
-                    <div class="core-menu">
-                        <a href="{{ '/re/' | relative_url }}" class="core-link" aria-label="co/re — about &amp; archive"{% if page.url == "/re/" %} aria-current="page"{% endif %} data-umami-event="Core nav">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <path d="M3 6h18M3 12h18M3 18h18"/>
-                            </svg>
-                        </a>
-                        {% if quick_items.size > 0 %}
-                        <div class="core-menu-panel">
-                            <span class="core-menu-title" id="core-menu-title">Quick links</span>
-                            <ul aria-labelledby="core-menu-title">
-                                {% for item in quick_items %}
-                                <li>{% if item.url contains "://" %}<a href="{{ item.url }}" target="_blank" rel="noopener" data-umami-event="Quick menu" data-umami-event-item="{{ item.name }}">{{ item.name }}</a>{% else %}<a href="{{ item.url | relative_url }}" data-umami-event="Quick menu" data-umami-event-item="{{ item.name }}">{{ item.name }}</a>{% endif %}</li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                        {% endif %}
-                    </div>
-                    {% endif %}
+                    {%- if site.shop_enabled -%}
+                    {%- assign made_count = site.projects | where: "shop_status", "available" | where: "draft", false | size -%}
+                    {%- if made_count > 0 %}
+                    <a href="{{ '/made/' | relative_url }}" class="made-nav-btn" aria-label="Made — things to buy"{% if page.url == "/made/" %} aria-current="page"{% endif %} data-umami-event="Made nav">{% include made-wordmark.html %}</a>
+                    {%- endif -%}
+                    {%- endif %}
                     <div class="colab-link-wrapper">
                         <a href="{{ '/lab/' | relative_url }}" class="btn colab-btn" data-umami-event="Colab CTA button">
                             Let's co/lab
@@ -138,13 +122,43 @@
                             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
                         </svg>
                     </button>
+                    {% if page.url == "/" or page.url == "/re/" %}
+                    {% comment %}
+                      co/re hamburger, shown on home and on co/re itself. Last in the
+                      nav (past the theme toggle) since the Made pill joined it —
+                      the pills lead, the utility icons trail.
+                      Hovering (or keyboard-focusing) it floats a
+                      quick-access list of shortcuts into co/re, driven by
+                      _data/quick_menu.yml. The icon itself still links to /re/.
+                      Desktop only: hidden on touch devices and below 769px, so a
+                      tap navigates. Opens only after a dwell (--quick-menu-dwell).
+                    {% endcomment %}
+                    {%- assign quick_items = site.data.quick_menu | where_exp: "item", "item.enabled != false" -%}
+                    <div class="core-menu">
+                        <a href="{{ '/re/' | relative_url }}" class="core-link" aria-label="co/re — about &amp; archive"{% if page.url == "/re/" %} aria-current="page"{% endif %} data-umami-event="Core nav">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M3 6h18M3 12h18M3 18h18"/>
+                            </svg>
+                        </a>
+                        {% if quick_items.size > 0 %}
+                        <div class="core-menu-panel">
+                            <span class="core-menu-title" id="core-menu-title">Quick links</span>
+                            <ul aria-labelledby="core-menu-title">
+                                {% for item in quick_items %}
+                                <li>{% if item.url contains "://" %}<a href="{{ item.url }}" target="_blank" rel="noopener" data-umami-event="Quick menu" data-umami-event-item="{{ item.name }}">{{ item.name }}</a>{% else %}<a href="{{ item.url | relative_url }}" data-umami-event="Quick menu" data-umami-event-item="{{ item.name }}">{{ item.name }}</a>{% endif %}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endif %}
                 </nav>
             </div>
         </header>
 
         <main class="page-content">
             {% unless page.layout == "project" or page.layout == "post" %}
-                {% if page.title and page.url != "/" %}
+                {% if page.title and page.url != "/" and page.hide_title != true %}
                     <h1>{{ page.title }}</h1>
                     {% if page.collection == "docs" and page.tag %}
                       {% unless page.tag contains 'index' %}

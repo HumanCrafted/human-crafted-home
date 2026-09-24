@@ -1,8 +1,36 @@
 {%- comment -%}
-  "Available to buy" marker on a homepage card: the Made wordmark on a small
-  ink pill, pinned to the lower-right corner of the thumbnail box. Made is the
-  sub-brand the products ship under, so the mark on the card is the same mark
-  as on the box. Rendered by index.md inside `.project-image` when a project is
-  `shop_status: available`; styled in shop.css (.for-sale-mark).
+  "Available to buy" marker on a project card: the price on a small ink pill,
+  pinned to the lower-right corner of the thumbnail box. A price reads as "for
+  sale" to anyone; the Made wordmark (used here until Sept 2026) only meant
+  something once you knew the brand — that job moved to the Made pill in the
+  nav. Styled in shop.css (.for-sale-mark).
+
+  Price: the lowest in-stock variant price, "from $X" when in-stock prices
+  differ, whole dollars when the cents are zero. Every variant at stock 0 →
+  "sold out". A product without variants uses its own `price:`.
+
+  Usage: {% include for-sale-icon.html project=project %}
 {%- endcomment -%}
-<span class="for-sale-mark" role="img" aria-label="Made — available to buy">{% include made-wordmark.html %}</span>
+{%- assign _p = include.project -%}
+{%- assign _lo = nil -%}{%- assign _hi = nil -%}
+{%- if _p.variants -%}
+  {%- for v in _p.variants -%}
+    {%- assign _vp = v.price | default: _p.price -%}
+    {%- if v.stock == nil or v.stock > 0 -%}
+      {%- if _lo == nil or _vp < _lo -%}{%- assign _lo = _vp -%}{%- endif -%}
+      {%- if _hi == nil or _vp > _hi -%}{%- assign _hi = _vp -%}{%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- else -%}
+  {%- assign _lo = _p.price -%}{%- assign _hi = _p.price -%}
+{%- endif -%}
+{%- if _lo == nil -%}
+<span class="for-sale-mark for-sale-mark--soldout">sold out</span>
+{%- else -%}
+  {%- assign _sym = site.data.shop.symbol | default: "$" -%}
+  {%- assign _c = _lo | times: 100.0 | round -%}
+  {%- assign _whole = _c | divided_by: 100 -%}
+  {%- assign _frac = _c | modulo: 100 -%}
+  {%- capture _amt -%}{{ _sym }}{{ _whole }}{% if _frac != 0 %}.{% if _frac < 10 %}0{% endif %}{{ _frac }}{% endif %}{%- endcapture -%}
+<span class="for-sale-mark">{% if _hi > _lo %}from {% endif %}{{ _amt }}</span>
+{%- endif -%}

@@ -35,39 +35,7 @@ title:
   </div>
 </div>
 
-<div class="project-grid">
-  {% assign sorted_projects = site.projects | where: 'draft', false | sort: 'published_date' | reverse %}
-  {% for project in sorted_projects %}
-    <a href="{{ project.url | relative_url }}" class="project-card" data-categories="{{ project.categories | join: ',' }}"{% if site.shop_enabled and project.shop_status == "available" %} data-shop="available"{% endif %}>
-      <div class="project-image">
-        {%- comment -%}
-          Only currently-available projects get the "shop" pill. Archived ones
-          keep their price/variants on the detail page but read as ordinary
-          archive entries here.
-        {%- endcomment -%}
-        {% if site.shop_enabled and project.shop_status == "available" %}{% include for-sale-icon.html %}{% endif %}
-        {% if project.main_image %}
-          {% if project.main_image contains '![[' %}
-            {% assign image_filename = project.main_image | replace: '![[', '' | replace: ']]', '' %}
-            <img src="{{ '/assets/images/' | append: image_filename | relative_url }}" alt="{{ project.title }}" />
-          {% elsif project.main_image contains '../assets/images/' %}
-            {% assign image_filename = project.main_image | replace: '![](', '' | replace: ')', '' | replace: '../assets/images/', '' %}
-            <img src="{{ '/assets/images/' | append: image_filename | relative_url }}" alt="{{ project.title }}" />
-          {% else %}
-            {% assign image_path = project.main_image | replace: '![', '' | replace: '](', '' | replace: ')', '' | split: '](' | last %}
-            <img src="{{ image_path | relative_url }}" alt="{{ project.title }}" />
-          {% endif %}
-        {% else %}
-          <!-- Fallback SVG -->
-          <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
-            <rect x="10" y="30" width="100" height="40" fill="#666" rx="4"/>
-          </svg>
-        {% endif %}
-      </div>
-      <h3 class="project-title">{{ project.title }}</h3>
-    </a>
-  {% endfor %}
-</div>
+{% include project-grid.html %}
 
 <script>
 // Tag filtering functionality

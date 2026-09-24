@@ -2,9 +2,10 @@
   Breadcrumb wordmark. Four states driven by page.url (and the shop):
     home      "/"            -> human / crafted   (plain wordmark, links home)
     hub       /lab/ /re/ /ops/ -> humancrafted.co/<section>   (prefix dim -> home)
+    made-hub  /made/ itself -> humancrafted.co/made   (prefix dim -> home, kept at every width)
     made      a project that's for sale, or a shop page (cart, thanks) — shop on
               -> humancrafted.co/made/<slug>
-              (humancrafted.co dim -> home; made -> the Made-filtered projects)
+              (humancrafted.co dim -> home; made -> /made/)
     sub-page  everything else  -> humancrafted.co/re/<slug>   (prefix dim -> home, co/re -> hub)
   Real URLs are unchanged; the nested path is a display-only breadcrumb.
   Stable hooks for the on-load morph (wordmark.js): .wm-human .wm-crafted .wm-tail .wm-slash .wm-back
@@ -17,6 +18,15 @@
   {%- if section == "" -%}{%- assign section = parts[parts.size | minus: 2] -%}{%- endif -%}
   <span class="site-title site-title--crumb" data-wm-state="hub">
     <a href="{{ '/' | relative_url }}" class="wm-back" data-umami-event="Wordmark home"><span class="wm-human">human</span><span class="wm-crafted">crafted</span></a><span class="wm-tail"><span class="wm-dot">.</span><span class="wm-new"><span class="wm-current">co<span class="wm-slash">/</span>{{ section }}</span></span></span>
+  </span>
+{%- elsif page.url == "/made/" -%}
+  {%- comment -%}
+    Own state (not "made") so narrow screens keep the whole
+    "humancrafted.co/made": dropping the prefix left a lone "made" with no
+    way home.
+  {%- endcomment -%}
+  <span class="site-title site-title--crumb" data-wm-state="made-hub">
+    <a href="{{ '/' | relative_url }}" class="wm-back" data-umami-event="Wordmark home"><span class="wm-human">human</span><span class="wm-crafted">crafted</span><span class="wm-dot">.</span>co<span class="wm-slash">/</span></a><span class="wm-tail"><span class="wm-new"><span class="wm-current">made</span></span></span>
   </span>
 {%- else -%}
   {%- assign clean = page.url | remove: ".html" -%}
@@ -33,12 +43,10 @@
     A product for sale — and the shop's own pages (cart, thanks; `shop: true`
     in their front matter) — file under Made rather than co/re. The whole
     "humancrafted.co/" is the dim home link (so narrow screens can drop it in
-    one piece and show "made/<slug>"); "made" links to the Made-filtered
-    projects — the same view /made/ redirects to, linked directly to skip the
-    bounce.
+    one piece and show "made/<slug>"); "made" links to /made/.
   {%- endcomment -%}
   <span class="site-title site-title--crumb" data-wm-state="made">
-    <a href="{{ '/' | relative_url }}" class="wm-back" data-umami-event="Wordmark home"><span class="wm-human">human</span><span class="wm-crafted">crafted</span><span class="wm-dot">.</span>co<span class="wm-slash">/</span></a><span class="wm-tail"><a href="{{ '/' | relative_url }}?category=made#projects" class="wm-hub" data-umami-event="Wordmark made">made</a><span class="wm-new"><span class="wm-sep">/</span><span class="wm-current">{{ crumb }}</span></span></span>
+    <a href="{{ '/' | relative_url }}" class="wm-back" data-umami-event="Wordmark home"><span class="wm-human">human</span><span class="wm-crafted">crafted</span><span class="wm-dot">.</span>co<span class="wm-slash">/</span></a><span class="wm-tail"><a href="{{ '/made/' | relative_url }}" class="wm-hub" data-umami-event="Wordmark made">made</a><span class="wm-new"><span class="wm-sep">/</span><span class="wm-current">{{ crumb }}</span></span></span>
   </span>
   {%- else -%}
   <span class="site-title site-title--crumb" data-wm-state="sub">

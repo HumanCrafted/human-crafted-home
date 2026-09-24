@@ -266,8 +266,8 @@ a.site-title:hover {
    --quick-menu-dwell, so a passing hover never shows it (easter-egg feel).
    Keyboard focus opens it immediately. The ::before strip bridges the gap
    between icon and panel so the cursor can cross without it closing; close is
-   delayed slightly to forgive a wobble. Left-aligned with the icon and kept
-   clear of the co/lab pill by the vertical gap. Removed on touch devices and
+   delayed slightly to forgive a wobble. The icon is last in the nav, so the
+   panel hangs from its right edge (right: 0) to stay inside the page. Removed on touch devices and
    below 769px so a tap just navigates to /re/ as before. */
 .site-nav .core-menu {
   --quick-menu-dwell: 1000ms;   /* hover time before the panel appears */
@@ -280,7 +280,7 @@ a.site-title:hover {
 .site-nav .core-menu-panel {
   position: absolute;
   top: calc(100% + var(--quick-menu-gap));
-  left: 0;
+  right: 0;
   z-index: 60;
   min-width: 13rem;
   padding: 0.75rem 0 0.5rem;

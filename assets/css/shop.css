@@ -139,13 +139,13 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
   padding: 0.75rem 1.5rem 1.5rem;
 }
 
-/* On phones the floating co/lab pill lands on top of Add to cart and Check
-   out. Shop pages (a product for sale, the cart, the thanks page — see the
-   body class in default.html) go without it there; co/lab stays a nav item
-   on wider screens and reachable from every other page. */
-@media (max-width: 768px) {
-  body.shop-page .colab-fab { display: none; }
-}
+/* Shop pages (/made/, a product for sale, the cart, the thanks page — see the
+   body class in default.html) go without "Let's co/lab" at every width: the
+   nav pill and the phone FAB both. Someone there came to buy; co/lab is one
+   click away on every other page. (It also keeps the FAB off Add to cart and
+   Check out on phones.) */
+body.shop-page .colab-link-wrapper,
+body.shop-page .colab-fab { display: none; }
 
 /* --- Cart lines (shared by drawer and cart page) -------------------------- */
 .cart-line {
@@ -373,27 +373,19 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
 
 .cart-summary h2 + * { margin-top: 0; }
 
-/* --- "Available to buy" mark on the homepage archive card ----------------
-   The only signal that a project is buyable: an ink disc with a paper "$".
-   Ink/paper rather than accent — the archive grid stays quiet, and the accent
-   is left to mean "active/current" as it does elsewhere.
-
-   Alignment: the disc stays INLINE in the text flow (vertical-align: middle)
-   rather than being a flex sibling of the title text. Flex looked identical on
-   one-line titles but detached the disc to the right of the whole block as soon
-   as a title wrapped — which it does on mobile. Inline keeps it trailing the
-   last word wherever that lands. */
-/* The pill is positioned against the thumbnail box, which needs to be the
-   containing block. The box already clips and rounds (main.css), so the pill
-   inherits its corner. */
+/* --- "Available to buy" mark on a project card ----------------------------
+   The price on an ink pill, pinned to the lower-right of the thumbnail box
+   (_includes/for-sale-icon.html). Ink/paper rather than accent — the grid
+   stays quiet, and the accent is left to mean "active/current". The pill is
+   positioned against the thumbnail box, which already clips and rounds
+   (main.css), so it inherits its corner. */
 .project-image { position: relative; }
 
 .for-sale-mark {
   position: absolute;
   right: 0.625rem;
   bottom: 0.625rem;
-  /* Ink pill carrying the Made wordmark in paper — the .btn inversion, so it
-     flips with the theme. Sized so the mark's strokes stay ≥ ~2px. */
+  /* The .btn inversion, so it flips with the theme. */
   background: var(--foreground);
   color: var(--background);
   display: inline-flex;
@@ -401,18 +393,27 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
   height: 1.625rem;
   padding: 0 0.75rem;
   border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
   pointer-events: none;
 }
 
-/* The wordmark (inline SVG, currentColor) wherever it appears on a pill.
-   Explicit width (360:143) so both pills measure the same, and max-* reset
-   because the card pill sits inside .project-image, whose `svg { max-width:
-   80% }` rule is meant for the illustration and was shrinking the mark. The
-   bottom margin lifts the mark ~1.5px in the flex-centred pill: the "d"
-   ascender makes the box taller than the word's body, which otherwise sits
-   low. */
-.for-sale-mark .made-mark,
-.tag-filter .made-mark {
+/* Every variant out: keep the pill (it's still a Made product) but mute it. */
+.for-sale-mark--soldout {
+  background: var(--background);
+  color: var(--muted-foreground);
+  box-shadow: inset 0 0 0 1.5px var(--muted-foreground);
+}
+
+/* The Made wordmark (inline SVG, currentColor) wherever it appears on a pill
+   — the homepage filter and the nav. Explicit width (360:143) so the pills
+   measure the same. The bottom margin lifts the mark ~1.5px in the
+   flex-centred pill: the "d" ascender makes the box taller than the word's
+   body, which otherwise sits low. */
+.tag-filter .made-mark,
+.made-nav-btn .made-mark {
   display: block;
   height: 0.875rem;
   width: 2.203rem;
@@ -420,9 +421,6 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
   max-height: none;
   margin-bottom: 0.1875rem;
 }
-
-/* The card scales its thumbnail on hover; the pill rides along with it, which
-   keeps it pinned to the same corner of the same box. Nothing extra needed. */
 
 /* The Made filter in the tag bar is the same pill as the card marks, so the
    filter and the marks read as one device. Resting state is the outline
@@ -461,6 +459,71 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
 @media (prefers-reduced-motion: reduce) {
   .tag-filter[data-filter="made"]:hover { transform: none; }
 }
+
+/* --- Made pill in the nav -------------------------------------------------
+   The way in for someone who came to buy: the Made wordmark on an outlined
+   pill, the same height as the co/lab pill beside it (.btn, 2.5rem) so the
+   two read as a pair, but outlined rather than filled so it doesn't compete
+   with it. Same ring as the Made filter. Filled ink on /made/ itself — the
+   filter's "selected" state, and the nav's "you are here". Stays in the nav on
+   phones, where co/lab moves to the floating button. */
+.site-nav .made-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: 2.5rem;
+  padding: 0 1.25rem;
+  border-radius: 999px;
+  color: var(--foreground);
+  background: var(--background);
+  box-shadow: inset 0 0 0 2px var(--foreground);
+  text-decoration: none;
+  transition: background-color 150ms ease, color 150ms ease, box-shadow 150ms ease;
+}
+
+.site-nav .made-nav-btn .made-mark {
+  height: 1.25rem;
+  width: 3.147rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Hover: the co/lab pill's accent fill, so the nav's two pills answer the
+   same way. (A "for sale →" label sliding out after the wordmark was tried
+   and dropped, Sept 2026.) Not on /made/ itself — you're already there. */
+.site-nav .made-nav-btn:not([aria-current]):hover,
+.site-nav .made-nav-btn:not([aria-current]):focus-visible {
+  background: var(--accent);
+  color: var(--foreground);
+  box-shadow: none;
+  text-decoration: none;
+}
+
+.site-nav .made-nav-btn[aria-current="page"] {
+  background: var(--foreground);
+  color: var(--background);
+  box-shadow: none;
+}
+
+/* Phones: the pill joins the hamburger, cart and theme toggle beside the
+   wordmark, and at main.css's 2rem gap the toggle ran off a 375px screen on
+   home. Tighter spacing only when the pill is actually there. */
+@media (max-width: 768px) {
+  .site-nav:has(.made-nav-btn) { gap: 1.25rem; }
+  .site-nav .made-nav-btn { height: 2.25rem; padding: 0 1rem; }
+  /* Phones show the pill on the homepage only. Every other page has a
+     breadcrumb wordmark, and crumb + pill + icons overran 375px (co/re's
+     "humancrafted.co/re" pushed the hamburger off-screen; long sub-page slugs
+     do the same). Under Made the crumb already says so ("made/<slug>",
+     "humancrafted.co/made"). */
+  .header-content:has(.site-title--crumb) .made-nav-btn { display: none; }
+  /* Worst case — home or co/re (hamburger) with something in the cart: five
+     items. Squeeze the gaps and the pill so they still fit 375px. */
+  .header-content:has(.core-menu):has(.made-nav-btn):has(.cart-link:not(.is-empty)) { gap: 1rem; }
+  .site-nav:has(.core-menu):has(.made-nav-btn):has(.cart-link:not(.is-empty)) { gap: 0.75rem; }
+  .site-nav:has(.core-menu):has(.cart-link:not(.is-empty)) .made-nav-btn { padding: 0 0.75rem; }
+  .site-nav .made-nav-btn .made-mark { height: 1.0625rem; width: 2.675rem; margin-bottom: 0.1875rem; }
+}
+
 
 /* --- Buy block on a project page -----------------------------------------
    No card: the block sits on the paper between the meta line and the body,
