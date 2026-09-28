@@ -1,5 +1,5 @@
 # Quick-access menu — the small floating list that appears when hovering the
-# co/re hamburger icon in the homepage nav. Each entry is a shortcut into co/re.
+# co/re hamburger icon in the nav (every page on desktop). Each entry is a shortcut into co/re.
 # `url` is a site path (/slug/) or a full https:// link (opens in a new tab).
 # Order here is display order. Set enabled: false to hide one without deleting it.
 
@@ -17,4 +17,8 @@
 
 - name: Tooling
   url: /tooling/
+  enabled: true
+
+- name: Design System
+  url: /design-system/
   enabled: true

@@ -363,6 +363,14 @@ a.site-title:hover {
   }
 }
 
+/* Co/re sub-pages carry the hamburger on desktop only: on a phone their
+   crumb (co/re/<slug>) already links the hub and the header has no room. */
+@media (max-width: 768px) {
+  .site-nav .core-menu--wide-only {
+    display: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .site-nav .core-menu-panel {
     transform: none;
