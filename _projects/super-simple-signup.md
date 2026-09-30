@@ -7,7 +7,7 @@ featured: false
 categories:
   - code
   - brand
-published_date:
+published_date: 2026-09-30
 draft: false
 gallery_images:
 headline: A signup sheet in one link. No accounts, no ads, and it's free.
