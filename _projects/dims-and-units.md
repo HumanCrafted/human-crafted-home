@@ -2,14 +2,14 @@
 layout: project
 title: Dims and Units
 slug: dims-and-units
-main_image: "![[dims+units-logos.svg]]"
+main_image: "![[dims-units-logo.svg]]"
 featured: false
 categories:
   - code
 published_date: 2026-07-12
 draft: false
 gallery_images:
-headline: "Two Figma plugins that bring real-world units to a pixel canvas."
+headline: Two Figma plugins that bring real-world units to a pixel canvas.
 version: "1.0"
 tools:
   - claude
