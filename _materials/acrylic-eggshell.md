@@ -7,9 +7,10 @@ sheet_size: 18x24
 process:
   - laser-cutter
 price: "27.50"
-price_scale: "$$"
+price_scale: $$
 in_inventory: false
-palettes: []
+palettes:
+  - Fall 2026
 purchase_url: https://www.cohnacrylics.com/products/1-8-eggshell-pastel-acrylic?variant=46558234378296
 image: acrylic-eggshell.jpg
 swatch: acrylic-eggshell-swatch.jpg

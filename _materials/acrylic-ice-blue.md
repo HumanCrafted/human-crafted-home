@@ -7,9 +7,10 @@ sheet_size: 18x24
 process:
   - laser-cutter
 price: "27.50"
-price_scale: "$$"
+price_scale: $$
 in_inventory: false
-palettes: []
+palettes:
+  - Fall 2026
 purchase_url: https://www.cohnacrylics.com/products/1-8-ice-pastel-acrylic?variant=46558234181688
 image: acrylic-ice-blue.jpg
 swatch: acrylic-ice-blue-swatch.jpg

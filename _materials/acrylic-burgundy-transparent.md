@@ -7,14 +7,13 @@ sheet_size: 18x24
 process:
   - laser-cutter
 price: "23.95"
-price_scale: "$$"
+price_scale: $$
 in_inventory: false
-palettes: []
+palettes:
+  - Fall 2026
 purchase_url: https://www.cohnacrylics.com/products/1-8-clear-colour-acrylic-burgundy-358?variant=50847903612984
 image: acrylic-burgundy-transparent.jpg
 swatch: acrylic-burgundy-transparent-swatch.jpg
-# Sampled from the render above (median of the chip centre) — the swatch dot
-# on a product page's variant pill. Re-sample if the image changes.
 hex: "#5C0C13"
 tags:
   - acrylic

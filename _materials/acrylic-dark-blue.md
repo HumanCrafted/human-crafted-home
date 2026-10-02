@@ -7,14 +7,13 @@ sheet_size: 18x24
 process:
   - laser-cutter
 price: "18.90"
-price_scale: "$"
+price_scale: $
 in_inventory: false
-palettes: []
+palettes:
+  - Fall 2026
 purchase_url: https://www.canalplastic.com/products/2114-dark-blue-opaque-acrylic-sheet?variant=32920739598
 image: acrylic-dark-blue.png
 swatch: acrylic-dark-blue-swatch.jpg
-# Sampled from the render above (median of the chip centre) — the swatch dot
-# on a product page's variant pill. Re-sample if the image changes.
 hex: "#0D2A75"
 tags:
   - acrylic
