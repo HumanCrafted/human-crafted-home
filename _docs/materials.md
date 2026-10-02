@@ -82,7 +82,8 @@ Liquid 4 has no array push, so build a delimited string and split it. {% endcomm
     <tbody>
       {% for color in colors %}
       <tr data-palettes="{% for p in color.palettes %}{{ p | slugify }}{% unless forloop.last %},{% endunless %}{% endfor %}">
-        <td><img class="acrylic-swatch" src="{{ '/assets/images/' | append: color.image | relative_url }}" alt="{{ color.title }} {{ color.material }} swatch" loading="lazy"></td>
+        {%- assign thumb = color.swatch | default: color.image %}
+        <td><img class="acrylic-swatch" src="{{ '/assets/images/' | append: thumb | relative_url }}" alt="{{ color.title }} {{ color.material }} swatch" loading="lazy"></td>
         <td>{{ color.title }}</td>
         <td>{% if color.hex %}<span class="copy-hex">{{ color.hex }}</span>{% endif %}</td>
         <td>{{ color.finish }}</td>
