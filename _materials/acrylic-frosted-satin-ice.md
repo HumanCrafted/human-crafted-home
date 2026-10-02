@@ -9,7 +9,7 @@ process:
 price: "31.30"
 price_scale: "$$"
 in_inventory: true
-palettes: ["Fall 2025"]
+palettes: ["GDS 2025"]
 purchase_url: https://www.canalplastic.com/products/0d010-df-frosted-satin-ice-acrylic-sheet?variant=32918345230
 image: acrylic-frosted-satin-ice.png
 swatch: acrylic-frosted-satin-ice-swatch.jpg

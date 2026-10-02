@@ -10,7 +10,7 @@ price: "27.50"
 price_scale: $$
 in_inventory: false
 palettes:
-  - Fall 2026
+  - GDS 2026
 purchase_url: https://www.cohnacrylics.com/products/1-8-pastel-acrylic-eucalyptus?variant=51468312379448
 image: acrylic-eucalyptus.jpg
 swatch: acrylic-eucalyptus-swatch.jpg

@@ -10,8 +10,8 @@ price: "18.00"
 price_scale: $$$
 in_inventory: false
 palettes:
-  - Fall 2025
-  - Fall 2026
+  - GDS 2025
+  - GDS 2026
 purchase_url: https://www.cohnacrylics.com/products/1-8-pearl-cadmium-acrylic-sheets?variant=46558225367096
 image: acrylic-pearl-cadmium.jpg
 swatch: acrylic-pearl-cadmium-swatch.jpg

@@ -9,7 +9,7 @@ process:
 price: "18.90"
 price_scale: "$"
 in_inventory: false
-palettes: ["Fall 2025"]
+palettes: ["GDS 2025"]
 purchase_url: https://www.canalplastic.com/products/2423-red-transparent-acrylic-sheet?variant=32917835726
 image: acrylic-red-transparent.png
 swatch: acrylic-red-transparent-swatch.jpg

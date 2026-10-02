@@ -9,7 +9,7 @@ process:
 price: "27.00"
 price_scale: "$$"
 in_inventory: false
-palettes: ["Fall 2025"]
+palettes: ["GDS 2025"]
 purchase_url: https://www.cohnacrylics.com/products/1-8-pastel-acrylic-aloe?variant=46804568244280
 image: acrylic-aloe.jpg
 swatch: acrylic-aloe-swatch.jpg

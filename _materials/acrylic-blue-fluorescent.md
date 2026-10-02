@@ -9,7 +9,7 @@ process:
 price: "20.48"
 price_scale: "$$"
 in_inventory: false
-palettes: ["Fall 2025"]
+palettes: ["GDS 2025"]
 purchase_url: https://www.canalplastic.com/products/5010-blue-fluorescent-acrylic-sheet?variant=32914735182
 image: acrylic-blue-fluorescent.png
 swatch: acrylic-blue-fluorescent-swatch.jpg

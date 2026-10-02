@@ -10,8 +10,8 @@ price: "27.00"
 price_scale: $$
 in_inventory: false
 palettes:
-  - Fall 2025
-  - Fall 2026
+  - GDS 2025
+  - GDS 2026
 purchase_url: https://www.cohnacrylics.com/products/1-8-marshmallow-pastel-acrylic?variant=46558233690168
 image: acrylic-marshmallow.jpg
 swatch: acrylic-marshmallow-swatch.jpg

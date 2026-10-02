@@ -10,8 +10,8 @@ price: "27.00"
 price_scale: $$
 in_inventory: false
 palettes:
-  - Fall 2025
-  - Fall 2026
+  - GDS 2025
+  - GDS 2026
 purchase_url: https://www.cohnacrylics.com/products/1-8-heritage-acrylic-pine?variant=46804664188984
 image: acrylic-pine.png
 swatch: acrylic-pine-swatch.jpg

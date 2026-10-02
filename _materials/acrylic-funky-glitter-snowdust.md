@@ -10,7 +10,7 @@ price: "17.95"
 price_scale: $$$
 in_inventory:
 palettes:
-  - Fall 2026
+  - GDS 2026
 purchase_url: https://www.cohnacrylics.com/products/1-8-funky-glitter-acrylic-snowdust?variant=51468311593016
 image: acrylic-funky-glitter-snowdust.jpg
 swatch: acrylic-funky-glitter-snowdust-swatch.jpg

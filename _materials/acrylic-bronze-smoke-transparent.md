@@ -9,7 +9,7 @@ process:
 price: "18.90"
 price_scale: "$"
 in_inventory: true
-palettes: ["Fall 2025"]
+palettes: ["GDS 2025"]
 purchase_url: https://www.canalplastic.com/products/2370-bronze-smoke-acrylic-sheet?variant=32914727630
 image: acrylic-bronze-smoke-transparent.png
 swatch: acrylic-bronze-smoke-transparent-swatch.jpg

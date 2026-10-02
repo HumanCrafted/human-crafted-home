@@ -10,7 +10,7 @@ price: "27.50"
 price_scale: $$
 in_inventory: false
 palettes:
-  - Fall 2026
+  - GDS 2026
 purchase_url: https://www.cohnacrylics.com/products/1-8-blueberry-pastel-acrylic?variant=46558233493560
 image: acrylic-blueberry.jpg
 swatch: acrylic-blueberry-swatch.jpg
