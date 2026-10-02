@@ -1,8 +1,11 @@
 ---
 title: Frosted Satin Ice
+material: acrylic
 vendor: Canal Plastics
 finish: frosted
 sheet_size: 18x24
+process:
+  - laser-cutter
 price: "31.30"
 price_scale: "$$"
 in_inventory: true

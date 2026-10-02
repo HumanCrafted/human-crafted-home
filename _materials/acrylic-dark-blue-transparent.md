@@ -1,8 +1,11 @@
 ---
 title: Dark Blue Transparent
+material: acrylic
 vendor: Canal Plastics
 finish: transparent
 sheet_size: 18x24
+process:
+  - laser-cutter
 price: "18.90"
 price_scale: "$"
 in_inventory: false

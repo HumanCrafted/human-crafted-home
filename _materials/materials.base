@@ -1,11 +1,12 @@
 filters:
   and:
     - file.inFolder("_materials")
-    - file.hasTag("acrylic")
 formulas:
   color: file.asLink(title)
   cost: if(price, "$" + price, "")
 properties:
+  note.material:
+    displayName: Material
   note.title:
     displayName: Color
   note.vendor:
@@ -14,6 +15,8 @@ properties:
     displayName: Finish
   note.sheet_size:
     displayName: Sheet
+  note.process:
+    displayName: Process
   note.price:
     displayName: Price
   note.price_scale:
@@ -33,13 +36,33 @@ views:
     name: All Colors
     order:
       - formula.color
+      - material
       - finish
       - palettes
       - vendor
       - sheet_size
+      - process
       - formula.cost
       - price_scale
       - in_inventory
+    sort:
+      - property: vendor
+        direction: ASC
+      - property: title
+        direction: ASC
+    columnSize:
+      formula.color: 260
+  - type: table
+    name: By Material
+    groupBy:
+      property: material
+      direction: ASC
+    order:
+      - formula.color
+      - finish
+      - vendor
+      - sheet_size
+      - process
     sort:
       - property: vendor
         direction: ASC

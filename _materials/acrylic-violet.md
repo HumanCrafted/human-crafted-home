@@ -1,8 +1,11 @@
 ---
 title: Violet
+material: acrylic
 vendor: Tap Plastics
 finish: opaque
 sheet_size: 18x24
+process:
+  - laser-cutter
 price: "28.80"
 price_scale: "$$"
 in_inventory: false

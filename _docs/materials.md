@@ -55,26 +55,29 @@ gallery_images:
 version: "1.0"
 draft: false
 ---
-Database of the materials things get made from — one note per color or stock, with a swatch, the vendor, and what it costs. Acrylic sheet for the [[laser-cutter|laser cutter]] so far; filament, fabric and wood get their own sections as they're catalogued. Prices are raw retail costs as last recorded.
+Database of the materials things get made from — one note per color or stock, with a swatch and the vendor. Acrylic sheet for the [[laser-cutter|laser cutter]] so far; filament, fabric and wood get their own sections as they're catalogued.
 
-## Acrylic
+{% comment %} One section per `material:` value (acrylic, filament…), in name
+order; rows within a section sorted by vendor, then title. A note with no
+`material:` isn't listed. {% endcomment %}
+{% assign published = site.materials | where_exp: "doc", "doc.draft != true" | where_exp: "doc", "doc.material" %}
+{% assign material_groups = published | group_by: "material" | sort: "name" %}
 
-Grouped by vendor.
-
-{% assign unsorted_colors = site.materials | where_exp: "doc", "doc.tags contains 'acrylic'" | where_exp: "doc", "doc.draft != true" %}
-{% assign colors = "" | split: "" %}
-{% assign vendor_groups = unsorted_colors | group_by: "vendor" | sort: "name" %}
-{% for g in vendor_groups %}{% assign g_sorted = g.items | sort: "title" %}{% assign colors = colors | concat: g_sorted %}{% endfor %}
-
-{% comment %} Collect unique palette names across all colors; blanks dropped.
+{% comment %} Collect unique palette names across all materials; blanks dropped.
 Liquid 4 has no array push, so build a delimited string and split it. {% endcomment %}
-{% assign palette_names = unsorted_colors | map: "palettes" | join: "," | split: "," | uniq | sort %}
+{% assign palette_names = published | map: "palettes" | join: "," | split: "," | uniq | sort %}
 {% assign palette_str = "" %}
 {% for p in palette_names %}{% assign p_stripped = p | strip %}{% if p_stripped != "" %}{% assign palette_str = palette_str | append: p_stripped | append: "," %}{% endif %}{% endfor %}
 {% assign palettes = palette_str | split: "," %}
 
-{% if colors.size > 0 %}
-<div class="acrylic-database">
+{% for group in material_groups %}
+{% assign colors = "" | split: "" %}
+{% assign vendor_groups = group.items | group_by: "vendor" | sort: "name" %}
+{% for g in vendor_groups %}{% assign g_sorted = g.items | sort: "title" %}{% assign colors = colors | concat: g_sorted %}{% endfor %}
+
+## {{ group.name | capitalize }}
+
+<div class="materials-database">
   <table>
     <thead>
       <tr>
@@ -82,20 +85,24 @@ Liquid 4 has no array push, so build a delimited string and split it. {% endcomm
         <th>Color</th>
         <th>Finish</th>
         <th>Sheet</th>
-        <th>Price</th>
-        <th>In inventory</th>
+        <th>Process</th>
         <th>Vendor</th>
       </tr>
     </thead>
     <tbody>
       {% for color in colors %}
       <tr data-palettes="{% for p in color.palettes %}{{ p | slugify }}{% unless forloop.last %},{% endunless %}{% endfor %}">
-        <td><img class="acrylic-swatch" src="{{ '/assets/images/' | append: color.image | relative_url }}" alt="{{ color.title }} acrylic swatch" loading="lazy"></td>
+        <td><img class="acrylic-swatch" src="{{ '/assets/images/' | append: color.image | relative_url }}" alt="{{ color.title }} {{ color.material }} swatch" loading="lazy"></td>
         <td>{{ color.title }}</td>
         <td>{{ color.finish }}</td>
         <td>{{ color.sheet_size }}</td>
-        <td>${{ color.price }}</td>
-        <td>{% if color.in_inventory %}yes{% endif %}</td>
+        <td>
+          {%- for slug in color.process -%}
+            {%- assign tool = site.docs | where: "slug", slug | first -%}
+            {%- if tool -%}<a href="{{ tool.url | relative_url }}">{{ tool.title }}</a>{%- else -%}{{ slug }}{%- endif -%}
+            {%- unless forloop.last %}, {% endunless -%}
+          {%- endfor -%}
+        </td>
         <td>
           {% if color.purchase_url %}
             <a href="{{ color.purchase_url }}">{{ color.vendor }}</a>
@@ -109,8 +116,8 @@ Liquid 4 has no array push, so build a delimited string and split it. {% endcomm
   </table>
 </div>
 {% else %}
-<p><em>No colors catalogued yet. Add a note to _materials/ with the 'acrylic' tag to see it here.</em></p>
-{% endif %}
+<p><em>No materials catalogued yet. Add a note to _materials/ with a <code>material:</code> field to see it here.</em></p>
+{% endfor %}
 
 {% if palettes.size > 0 %}
 <div class="tag-filters">
@@ -124,7 +131,7 @@ Liquid 4 has no array push, so build a delimited string and split it. {% endcomm
 // Palette filtering — same pattern as the homepage project grid (index.md).
 document.addEventListener('DOMContentLoaded', function() {
   const filters = document.querySelectorAll('.tag-filter');
-  const rows = document.querySelectorAll('.acrylic-database tbody tr');
+  const rows = document.querySelectorAll('.materials-database tbody tr');
 
   function applyFilter(filterValue) {
     filters.forEach(f => f.classList.remove('active'));

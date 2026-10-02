@@ -1,8 +1,11 @@
 ---
 title: Funky Glitter Mistletoe
+material: acrylic
 vendor: Cohn Acrylics
 finish: glitter
 sheet_size: 12x19
+process:
+  - laser-cutter
 price: "18.00"
 price_scale: "$$$"
 in_inventory: false

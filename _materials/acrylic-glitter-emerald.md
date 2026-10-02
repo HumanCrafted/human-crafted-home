@@ -1,8 +1,11 @@
 ---
 title: Glitter Emerald
+material: acrylic
 vendor: Cohn Acrylics
 finish: glitter
 sheet_size: 12x19
+process:
+  - laser-cutter
 price: "17.00"
 price_scale: "$$$"
 in_inventory: false

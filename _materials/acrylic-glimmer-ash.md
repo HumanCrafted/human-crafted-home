@@ -1,8 +1,11 @@
 ---
 title: Glimmer Ash
+material: acrylic
 vendor: Cohn Acrylics
 finish: glimmer
 sheet_size: 12x19
+process:
+  - laser-cutter
 price: "18.00"
 price_scale: "$$$"
 in_inventory: false

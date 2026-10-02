@@ -1,8 +1,11 @@
 ---
 title: Burgundy Transparent
+material: acrylic
 vendor: Cohn Acrylics
 finish: transparent
 sheet_size: 18x24
+process:
+  - laser-cutter
 price: "23.00"
 price_scale: "$$"
 in_inventory: false

@@ -564,7 +564,7 @@ td {
 
 /* Acrylic colors database (/acrylic-colors/). Seven columns is wider than a
    phone; scroll the table inside its own box like the music table. */
-.acrylic-database {
+.materials-database {
   overflow-x: auto;
 }
 

@@ -1,8 +1,11 @@
 ---
 title: Lemon Chiffon
+material: acrylic
 vendor: Cohn Acrylics
 finish: opaque
 sheet_size: 18x24
+process:
+  - laser-cutter
 price: "27.00"
 price_scale: "$$"
 in_inventory: false

@@ -1,8 +1,11 @@
 ---
 title: Blue Fluorescent
+material: acrylic
 vendor: Canal Plastics
 finish: fluorescent
 sheet_size: 18x24
+process:
+  - laser-cutter
 price: "20.48"
 price_scale: "$$"
 in_inventory: false
