@@ -12,6 +12,7 @@ in_inventory: false
 palettes: []
 purchase_url: https://www.canalplastic.com/products/2157-red-opaque-acrylic-sheet?variant=32920741582
 image: acrylic-red.png
+swatch: acrylic-red-swatch.jpg
 # Sampled from the render above (median of the chip centre) — the swatch dot
 # on a product page's variant pill. Re-sample if the image changes.
 hex: "#B72624"

@@ -12,6 +12,7 @@ in_inventory: false
 palettes: ["Fall 2025"]
 purchase_url: https://www.cohnacrylics.com/products/1-8-earth-toned-acrylic-persimmon
 image: acrylic-persimmon.png
+swatch: acrylic-persimmon-swatch.jpg
 # Sampled from the render above (median of the chip centre) — the swatch dot
 # on a product page's variant pill. Re-sample if the image changes.
 hex: "#C04736"

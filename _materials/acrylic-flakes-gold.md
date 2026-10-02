@@ -14,6 +14,7 @@ palettes:
   - Fall 2026
 purchase_url: https://www.cohnacrylics.com/products/1-8-gold-flakes?variant=46558226612280
 image: acrylic-flakes-gold.jpg
+swatch: acrylic-flakes-gold-swatch.jpg
 hex: "#E4E4E1"
 tags:
   - acrylic

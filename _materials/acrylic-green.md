@@ -12,6 +12,7 @@ in_inventory: false
 palettes: []
 purchase_url: https://www.canalplastic.com/products/2108-green-opaque-acrylic-sheet?variant=32920727310
 image: acrylic-green.png
+swatch: acrylic-green-swatch.jpg
 # Sampled from the render above (median of the chip centre) — the swatch dot
 # on a product page's variant pill. Re-sample if the image changes.
 hex: "#1C4820"

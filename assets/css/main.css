@@ -2490,8 +2490,9 @@ body.places-map-open {
 
 /* Material chips — a line of note embeds (![[acrylic-mint]] ...) rendered by
    _plugins/obsidian_links.rb as a labeled grid. --cols comes from the embed's
-   column= option or the chip count. Images are the material notes' studio
-   renders, cropped square and biased up toward the floating chip. */
+   column= option or the chip count. Images are the notes' generated `swatch:`
+   squares (script/swatches.py); a note without one falls back to its studio
+   render, cropped square and biased up toward the floating chip. */
 .chip-row {
   display: grid;
   grid-template-columns: repeat(var(--cols, 4), 1fr);

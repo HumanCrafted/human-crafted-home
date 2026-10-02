@@ -12,6 +12,7 @@ in_inventory: true
 palettes: []
 purchase_url: https://www.canalplastic.com/products/1300-gold-transparent-acrylic-sheet?variant=13846697377901
 image: acrylic-gold-transparent.png
+swatch: acrylic-gold-transparent-swatch.jpg
 # Sampled from the render above (median of the chip centre) — the swatch dot
 # on a product page's variant pill. Re-sample if the image changes.
 hex: "#EFC588"

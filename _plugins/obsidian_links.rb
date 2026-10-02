@@ -48,7 +48,9 @@ module ObsidianLinks
   }.freeze
   # Note embeds: ![[slug]] with no file extension — Obsidian's transclusion.
   # On the site an embedded note that carries an `image:` renders as a labeled
-  # chip (image + title); a line of them becomes a chip row. Used for
+  # chip (image + title); a line of them becomes a chip row. The chip shows the
+  # note's `swatch:` (the even square script/swatches.py cuts from the vendor
+  # photo) when it has one, else the `image:` itself. Used for
   # the "Materials and colors" section on product pages: ![[acrylic-mint]].
   # Anything with a "." or "#" in the target is not a note embed (images,
   # models, bases, heading links) and is left to the other regexes.
@@ -182,7 +184,7 @@ module ObsidianLinks
       embeds = line.scan(NOTE_EMBED_RE).map { |slug, blob| [slugify(slug), parse_image_segments(blob)] }
       chips = embeds.map do |slug, o|
         doc = find_note(site, slug)
-        img = doc && image_filename(doc.data['image'])
+        img = doc && (image_filename(doc.data['swatch']) || image_filename(doc.data['image']))
         unless img
           Jekyll.logger.warn "obsidian_links:", "![[#{slug}]] — no note with an image by that name; left as text"
           break nil

@@ -14,6 +14,7 @@ palettes:
   - Fall 2026
 purchase_url: https://www.cohnacrylics.com/products/1-8-pearl-cadmium-acrylic-sheets?variant=46558225367096
 image: acrylic-pearl-cadmium.jpg
+swatch: acrylic-pearl-cadmium-swatch.jpg
 hex: "#488644"
 tags:
   - acrylic

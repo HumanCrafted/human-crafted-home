@@ -12,6 +12,7 @@ in_inventory: false
 palettes: []
 purchase_url: https://www.cohnacrylics.com/products/1-8-pearl-acrylic-golden-sandstone?variant=51429680250936
 image: acrylic-golden-sandstone.jpg
+swatch: acrylic-golden-sandstone-swatch.jpg
 # Sampled from the render above (median of the chip centre) — the swatch dot
 # on a product page's variant pill. Re-sample if the image changes.
 hex: "#DFC09A"

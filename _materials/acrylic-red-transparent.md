@@ -12,6 +12,7 @@ in_inventory: false
 palettes: ["Fall 2025"]
 purchase_url: https://www.canalplastic.com/products/2423-red-transparent-acrylic-sheet?variant=32917835726
 image: acrylic-red-transparent.png
+swatch: acrylic-red-transparent-swatch.jpg
 # Sampled from the render above (median of the chip centre) — the swatch dot
 # on a product page's variant pill. Re-sample if the image changes.
 hex: "#8D1B18"

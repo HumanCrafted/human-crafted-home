@@ -12,6 +12,7 @@ in_inventory: true
 palettes: []
 purchase_url: https://www.canalplastic.com/products/2111-light-green-transparent-acrylic-sheet?variant=32917826510
 image: acrylic-light-green-transparent.png
+swatch: acrylic-light-green-transparent-swatch.jpg
 # Sampled from the render above (median of the chip centre) — the swatch dot
 # on a product page's variant pill. Re-sample if the image changes.
 hex: "#AFE1D4"

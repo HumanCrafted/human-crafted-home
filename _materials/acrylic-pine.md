@@ -14,6 +14,7 @@ palettes:
   - Fall 2026
 purchase_url: https://www.cohnacrylics.com/products/1-8-heritage-acrylic-pine?variant=46804664188984
 image: acrylic-pine.png
+swatch: acrylic-pine-swatch.jpg
 hex: "#242F29"
 tags:
   - acrylic

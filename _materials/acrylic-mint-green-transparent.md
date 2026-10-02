@@ -12,6 +12,7 @@ in_inventory: false
 palettes: []
 purchase_url: https://www.canalplastic.com/products/2414-mint-green-transparent-acrylic-sheet?variant=13846706782317
 image: acrylic-mint-green-transparent.png
+swatch: acrylic-mint-green-transparent-swatch.jpg
 # Sampled from the render above (median of the chip centre) — the swatch dot
 # on a product page's variant pill. Re-sample if the image changes.
 hex: "#59C48E"

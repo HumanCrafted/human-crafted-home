@@ -13,6 +13,7 @@ palettes:
   - Fall 2026
 purchase_url: https://www.cohnacrylics.com/products/1-8-pearl-ruby-acrylic-sheets?variant=46558225629240
 image: acrylic-pearl-ruby.jpg
+swatch: acrylic-pearl-ruby-swatch.jpg
 hex: "#AD4A50"
 tags:
   - acrylic

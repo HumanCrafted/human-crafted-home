@@ -12,6 +12,7 @@ in_inventory: true
 palettes: ["Fall 2025"]
 purchase_url: https://www.canalplastic.com/products/0d010-df-frosted-satin-ice-acrylic-sheet?variant=32918345230
 image: acrylic-frosted-satin-ice.png
+swatch: acrylic-frosted-satin-ice-swatch.jpg
 # Sampled from the render above (median of the chip centre) — the swatch dot
 # on a product page's variant pill. Re-sample if the image changes.
 hex: "#E8E8E8"

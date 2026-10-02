@@ -12,6 +12,7 @@ in_inventory: false
 palettes: ["Fall 2025"]
 purchase_url: https://www.cohnacrylics.com/products/1-8-pastel-acrylic-aloe?variant=46804568244280
 image: acrylic-aloe.jpg
+swatch: acrylic-aloe-swatch.jpg
 # Sampled from the render above (median of the chip centre) — the swatch dot
 # on a product page's variant pill. Re-sample if the image changes.
 hex: "#CED8B5"

@@ -12,6 +12,7 @@ in_inventory: false
 palettes: []
 purchase_url: https://www.canalplastic.com/products/2308-teal-opaque-acrylic-sheet?variant=42066240897133
 image: acrylic-teal.png
+swatch: acrylic-teal-swatch.jpg
 # Sampled from the render above (median of the chip centre) — the swatch dot
 # on a product page's variant pill. Re-sample if the image changes.
 hex: "#3D8B8C"

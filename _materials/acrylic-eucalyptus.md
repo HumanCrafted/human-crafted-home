@@ -13,6 +13,7 @@ palettes:
   - Fall 2026
 purchase_url: https://www.cohnacrylics.com/products/1-8-pastel-acrylic-eucalyptus?variant=51468312379448
 image: acrylic-eucalyptus.jpg
+swatch: acrylic-eucalyptus-swatch.jpg
 hex: "#90A085"
 tags:
   - acrylic

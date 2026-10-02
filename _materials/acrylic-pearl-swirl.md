@@ -13,6 +13,7 @@ palettes:
   - Fall 2026
 purchase_url: https://www.cohnacrylics.com/products/1-8-pearl-swirl-acrylic-sheets?variant=46558225465400
 image: acrylic-pearl-swirl.jpg
+swatch: acrylic-pearl-swirl-swatch.jpg
 hex: "#E1CEC8"
 tags:
   - acrylic

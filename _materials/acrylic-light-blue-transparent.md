@@ -12,6 +12,7 @@ in_inventory: false
 palettes:
 purchase_url: https://www.canalplastic.com/products/2069-light-blue-transparent-acrylic-sheet?variant=32917837582
 image: acrylic-light-blue-transparent.png
+swatch: acrylic-light-blue-transparent-swatch.jpg
 # Sampled from the render above (median of the chip centre) — the swatch dot
 # on a product page's variant pill. Re-sample if the image changes.
 hex: "#60C1EB"

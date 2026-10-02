@@ -12,6 +12,7 @@ in_inventory: false
 palettes: []
 purchase_url: https://www.canalplastic.com/products/2114-dark-blue-opaque-acrylic-sheet?variant=32920739598
 image: acrylic-dark-blue.png
+swatch: acrylic-dark-blue-swatch.jpg
 # Sampled from the render above (median of the chip centre) — the swatch dot
 # on a product page's variant pill. Re-sample if the image changes.
 hex: "#0D2A75"

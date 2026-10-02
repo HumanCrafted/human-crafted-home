@@ -14,6 +14,7 @@ palettes:
   - Fall 2026
 purchase_url: https://www.cohnacrylics.com/products/1-8-earth-toned-acrylic-persimmon-copy
 image: acrylic-dusk.png
+swatch: acrylic-dusk-swatch.jpg
 hex: "#00324A"
 tags:
   - acrylic

@@ -14,6 +14,7 @@ palettes:
   - Fall 2026
 purchase_url: https://www.cohnacrylics.com/products/1-8-marshmallow-pastel-acrylic?variant=46558233690168
 image: acrylic-marshmallow.jpg
+swatch: acrylic-marshmallow-swatch.jpg
 hex: "#E5DCD7"
 tags:
   - acrylic
