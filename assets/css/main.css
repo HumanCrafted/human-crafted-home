@@ -380,36 +380,6 @@ a.site-title:hover {
   }
 }
 
-/* Floating co/lab button — mobile only (desktop has the nav pill).
-   a.colab-fab outranks the .btn { display: inline-flex } it also carries. */
-a.colab-fab {
-  display: none;
-}
-
-/* Co/lab button styling */
-.site-nav .colab-btn {
-  /* Inherits from .btn base styles - just need overrides for navigation specificity */
-  box-sizing: border-box;
-  white-space: nowrap;
-}
-
-/* Removed - now inherits from .btn:hover */
-
-.site-nav .colab-btn.active {
-  font-weight: 500;
-  text-decoration: underline;
-  text-decoration-style: wavy;
-}
-
-/* Removed - now inherits from [data-theme="dark"] .btn:hover */
-
-
-.site-nav .colab-btn svg {
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;
-}
-
 /* Theme Toggle */
 .theme-toggle {
   background: none;
@@ -978,31 +948,6 @@ hr {
     gap: 2rem;
   }
   
-  .colab-link-wrapper {
-    display: none; /* Hide Let's co/lab on mobile — the floating FAB takes over */
-  }
-
-  a.colab-fab {
-    display: inline-flex;
-    position: fixed;
-    right: 1rem;
-    bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
-    /* Leaflet's own CSS puts its control corners (.leaflet-top/.leaflet-bottom,
-       holding the zoom and places-map expand buttons) at z-index: 1000 — this
-       has to clear that or the map control corner covers the FAB on scroll. */
-    z-index: 1001;
-    height: 2.25rem;
-    padding: 0 1.1rem;
-    font-size: 16px !important;
-    gap: 0.3rem;
-  }
-
-  .colab-fab svg {
-    width: 18px;
-    height: 18px;
-    flex-shrink: 0;
-  }
-  
   .page-content {
     padding: 0;
   }
@@ -1507,15 +1452,21 @@ hr {
   color: var(--foreground);
 }
 
-/* Footer follow link */
-.footer-follow {
+/* Footer links: "let's co/lab!" (was a nav pill + phone FAB until Oct 2026)
+   and "follow along!" */
+.footer-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-link {
   color: var(--foreground);
   font-size: 14px;
   letter-spacing: -0.21px;
   text-decoration: none;
 }
 
-.footer-follow:hover {
+.footer-link:hover {
   text-decoration: underline;
   text-decoration-style: wavy;
   font-weight: 500;

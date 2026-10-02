@@ -65,8 +65,7 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
 .cart-drawer {
   position: fixed;
   inset: 0;
-  /* Above the floating co/lab pill (z-index 1001 in main.css), which sits in
-     the same corner as the drawer's checkout button. */
+  /* Above Leaflet's map controls (z-index 1000). */
   z-index: 1100;
   visibility: hidden;
   pointer-events: none;
@@ -138,14 +137,6 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
 .cart-drawer-foot {
   padding: 0.75rem 1.5rem 1.5rem;
 }
-
-/* Shop pages (/made/, a product for sale, the cart, the thanks page — see the
-   body class in default.html) go without "Let's co/lab" at every width: the
-   nav pill and the phone FAB both. Someone there came to buy; co/lab is one
-   click away on every other page. (It also keeps the FAB off Add to cart and
-   Check out on phones.) */
-body.shop-page .colab-link-wrapper,
-body.shop-page .colab-fab { display: none; }
 
 /* --- Cart lines (shared by drawer and cart page) -------------------------- */
 .cart-line {
@@ -462,11 +453,9 @@ body.shop-page .colab-fab { display: none; }
 
 /* --- Made pill in the nav -------------------------------------------------
    The way in for someone who came to buy: the Made wordmark on an outlined
-   pill, the same height as the co/lab pill beside it (.btn, 2.5rem) so the
-   two read as a pair, but outlined rather than filled so it doesn't compete
-   with it. Same ring as the Made filter. Filled ink on /made/ itself — the
-   filter's "selected" state, and the nav's "you are here". Stays in the nav on
-   phones, where co/lab moves to the floating button. */
+   pill (the .btn height, 2.5rem). Same ring as the Made filter. Filled ink on
+   /made/ itself — the filter's "selected" state, and the nav's "you are
+   here". Stays in the nav on phones (homepage only, see below). */
 .site-nav .made-nav-btn {
   display: inline-flex;
   align-items: center;
@@ -487,8 +476,7 @@ body.shop-page .colab-fab { display: none; }
   margin-bottom: 0.25rem;
 }
 
-/* Hover: the co/lab pill's accent fill, so the nav's two pills answer the
-   same way. (A "for sale →" label sliding out after the wordmark was tried
+/* Hover: the .btn accent fill. (A "for sale →" label sliding out after the wordmark was tried
    and dropped, Sept 2026.) Not on /made/ itself — you're already there. */
 .site-nav .made-nav-btn:not([aria-current]):hover,
 .site-nav .made-nav-btn:not([aria-current]):focus-visible {

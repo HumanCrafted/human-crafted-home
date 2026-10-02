@@ -80,8 +80,8 @@
                     {% comment %}
                       Made pill: the way in to the things for sale (/made/).
                       Only while the shop is on and something is available, so
-                      it never leads to an empty page. Hover fills accent, like
-                      co/lab. Styled in shop.css.
+                      it never leads to an empty page. Hover fills accent.
+                      Styled in shop.css.
                     {% endcomment %}
                     {%- if site.shop_enabled -%}
                     {%- assign made_count = site.projects | where: "shop_status", "available" | where: "draft", false | size -%}
@@ -89,15 +89,6 @@
                     <a href="{{ '/made/' | relative_url }}" class="made-nav-btn" aria-label="Made — things to buy"{% if page.url == "/made/" %} aria-current="page"{% endif %} data-umami-event="Made nav">{% include made-wordmark.html %}</a>
                     {%- endif -%}
                     {%- endif %}
-                    <div class="colab-link-wrapper">
-                        <a href="{{ '/lab/' | relative_url }}" class="btn colab-btn" data-umami-event="Colab CTA button">
-                            Let's co/lab
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M5 12h14"/>
-                                <path d="M12 5l7 7-7 7"/>
-                            </svg>
-                        </a>
-                    </div>
                     {% comment %}
                       Cart. Hidden while empty on non-shop pages (CSS .cart-link.is-empty),
                       so it only shows up once it's relevant. cart.js sets the count.
@@ -189,22 +180,17 @@
         <footer class="site-footer">
             <div class="footer-content">
                 <p>&copy; {{ 'now' | date: "%Y" }} Human Crafted LLC. All rights reserved.</p>
-                <a href="{{ '/follow/' | relative_url }}" class="footer-follow" data-umami-event="Follow footer">follow along!</a>
+                <div class="footer-links">
+                    <a href="{{ '/follow/' | relative_url }}" class="footer-link" data-umami-event="Follow footer">follow along!</a>
+                    {%- unless page.url == "/lab/" %}
+                    <a href="{{ '/lab/' | relative_url }}" class="footer-link" data-umami-event="Colab footer">let's co/lab!</a>
+                    {%- endunless %}
+                </div>
             </div>
         </footer>
     </div>
 
     {% if site.shop_enabled %}{% include cart-drawer.html %}{% endif %}
-
-    {% unless page.url == "/lab/" %}
-    <a href="{{ '/lab/' | relative_url }}" class="btn colab-fab" data-umami-event="Colab FAB" aria-label="Let's co/lab">
-        Let's co/lab
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M5 12h14"/>
-            <path d="M12 5l7 7-7 7"/>
-        </svg>
-    </a>
-    {% endunless %}
 
     <!-- Umami event tracking for wiki sections -->
     {% if jekyll.environment == "production" %}
