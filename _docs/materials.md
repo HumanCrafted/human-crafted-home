@@ -72,6 +72,7 @@ Liquid 4 has no array push, so build a delimited string and split it. {% endcomm
       <tr>
         <th></th>
         <th>Color</th>
+        <th>Hex<sup role="doc-noteref"><a href="#fn:hex" class="footnote" rel="footnote">1</a></sup></th>
         <th>Finish</th>
         <th>Sheet</th>
         <th>Process</th>
@@ -83,6 +84,7 @@ Liquid 4 has no array push, so build a delimited string and split it. {% endcomm
       <tr data-palettes="{% for p in color.palettes %}{{ p | slugify }}{% unless forloop.last %},{% endunless %}{% endfor %}">
         <td><img class="acrylic-swatch" src="{{ '/assets/images/' | append: color.image | relative_url }}" alt="{{ color.title }} {{ color.material }} swatch" loading="lazy"></td>
         <td>{{ color.title }}</td>
+        <td>{% if color.hex %}<span class="copy-hex">{{ color.hex }}</span>{% endif %}</td>
         <td>{{ color.finish }}</td>
         <td>{{ color.sheet_size }}</td>
         <td>
@@ -167,3 +169,11 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 {% endif %}
+
+<script src="{{ '/assets/js/copy-hex.js' | relative_url }}" defer></script>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:hex"><p>Hex values are sampled from the manufacturers' product photos, so they're approximate.</p></li>
+  </ol>
+</div>

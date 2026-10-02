@@ -393,7 +393,7 @@ merged but still exists locally; safe to delete.)
 - Migrated off the old ad-hoc palette/fonts onto the documented tokens (see Design System above): paper/ink/accent, **IBM Plex Sans** for wordmark + CTA, body 16px, retuned dark-mode SVG invert filter.
 - **Project grid → 5 columns** (3 on tablet ≤1024px, 2 on mobile ≤768px).
 - **Footer social → a collapsible "socials" disclosure** of lowercase text links (`<details>` in `footer-social.liquid`, data-driven from `_data/social.yml`), with a graceful fade-in. **Superseded** — `fdd05b0` deleted `footer-social.liquid` and moved the links to a standalone page instead. That page is now `_docs/follow.md` (`/follow/`), reached from a plain "follow along!" link in the footer; `_data/social.yml` still drives the list.
-- **New living style guide**: `_docs/design-system.md` (a Note, `/design-system/`) — color swatches with **click-to-copy hex**, type/spacing/component specimens. Reuses the `.wiki-two-column` rhythm.
+- **New living style guide**: `_docs/design-system.md` (a Note, `/design-system/`) — color swatches with **click-to-copy hex** (shared `assets/js/copy-hex.js` since Oct 2026 — binds `.system-chip` and any `.copy-hex` element, also used by the `/materials/` Hex column), type/spacing/component specimens. Reuses the `.wiki-two-column` rhythm.
 - **Doc/Note section headings** now ruled + Plex Sans Bold (`.doc-content > h2/h3`).
 
 ### Breadcrumb wordmark (`_includes/wordmark.html` + `assets/js/wordmark.js`)

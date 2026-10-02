@@ -194,48 +194,4 @@ The Human Crafted design system. Tokens, components, and patterns I use across h
   </div>
 </div>
 
-<script>
-(function () {
-  document.querySelectorAll('.system-chip').forEach(function (chip) {
-    var hexEl = chip.querySelector('.chip-hex');
-    if (!hexEl) return;
-    var hex = hexEl.textContent.trim();
-    chip.setAttribute('role', 'button');
-    chip.setAttribute('tabindex', '0');
-    chip.setAttribute('aria-label', 'Copy hex ' + hex);
-    chip.title = 'Click to copy ' + hex;
-    var resetTimer;
-    function flash() {
-      chip.classList.add('copied');
-      hexEl.textContent = 'copied!';
-      clearTimeout(resetTimer);
-      resetTimer = setTimeout(function () {
-        hexEl.textContent = hex;
-        chip.classList.remove('copied');
-      }, 1100);
-    }
-    function legacyCopy() {
-      var ta = document.createElement('textarea');
-      ta.value = hex;
-      ta.style.position = 'fixed';
-      ta.style.opacity = '0';
-      document.body.appendChild(ta);
-      ta.select();
-      try { document.execCommand('copy'); } catch (e) {}
-      document.body.removeChild(ta);
-      flash();
-    }
-    function copy() {
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(hex).then(flash).catch(legacyCopy);
-      } else {
-        legacyCopy();
-      }
-    }
-    chip.addEventListener('click', copy);
-    chip.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); copy(); }
-    });
-  });
-})();
-</script>
+<script src="{{ '/assets/js/copy-hex.js' | relative_url }}" defer></script>

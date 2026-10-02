@@ -1672,6 +1672,24 @@ hr {
   font-weight: 500;
 }
 
+/* Materials table hex (assets/js/copy-hex.js) — same click-to-copy as the
+   chips. "copied!" is the same 7 characters as "#RRGGBB" in the mono face,
+   so the cell doesn't shift when it flashes. */
+.copy-hex {
+  cursor: pointer;
+}
+
+.copy-hex:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.copy-hex.copied {
+  color: var(--foreground);
+  font-weight: 500;
+}
+
 .system-chip .chip-box {
   width: 96px;
   height: 96px;
