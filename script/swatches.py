@@ -53,6 +53,17 @@ TEXTURED = {"pearl", "glitter", "flake", "glimmer"}
 INSET = {"canal": 0.06, "cohn": 0.17, "tap": 0.10}
 
 
+# Hand-placed corners for photos the automatic pass can't read, as fractions
+# of the image (TL, TR, BR, BL) plus an inset. Keep this short — it's for odd
+# shots, not tuning.
+#   acrylic-burgundy-transparent: Cohn shows two overlapping transparent
+#     sheets, so the outline wraps both; use the overlap, the cleanest single
+#     rectangle (and where its `hex:` was sampled).
+QUAD_OVERRIDES = {
+    "acrylic-burgundy-transparent": ([(0.363, 0.221), (0.541, 0.186), (0.632, 0.529), (0.469, 0.596)], 0.08),
+}
+
+
 # ---------------------------------------------------------------- notes
 
 def front_matter(text, key):
@@ -196,8 +207,13 @@ def smooth_flat(img):
     return cv2.GaussianBlur(img, (0, 0), img.shape[0] / 60)
 
 
-def make_swatch(img, vendor, finish):
-    if vendor == "cohn":
+def make_swatch(img, vendor, finish, override=None):
+    inset = INSET[vendor]
+    if override:
+        corners, inset = override
+        h, w = img.shape[:2]
+        quad = np.float32([(x * w, y * h) for x, y in corners])
+    elif vendor == "cohn":
         # GrabCut is slow on a full-size render; find the chip on a ~800px
         # copy and scale the corners back up.
         scale = min(1.0, 800 / img.shape[1])
@@ -205,7 +221,7 @@ def make_swatch(img, vendor, finish):
         quad = quad_from_mask(mask_cohn(small)) / scale
     else:
         quad = quad_from_mask(mask_on_white(img))
-    out = straighten(img, quad, INSET[vendor])
+    out = straighten(img, quad, inset)
     out = even_lighting(out)
     if finish not in TEXTURED:
         out = smooth_flat(out)
@@ -252,7 +268,7 @@ def main():
                 full = cohn_full_render(front_matter(text, "purchase_url"), src)
                 if full is not None:
                     src, vendor_note = full, " full-size"
-            swatch, quad = make_swatch(src, vendor, finish)
+            swatch, quad = make_swatch(src, vendor, finish, QUAD_OVERRIDES.get(note.stem))
         except Exception as e:  # one bad photo shouldn't stop the batch
             print(f"FAIL  {note.stem}: {e}")
             failed += 1

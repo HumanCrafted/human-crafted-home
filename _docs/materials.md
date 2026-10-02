@@ -8,6 +8,7 @@ redirect_from:
   - /acrylic-black/
   - /acrylic-blue-fluorescent/
   - /acrylic-bronze-smoke-transparent/
+  - /acrylic-burgundy-transparent/
   - /acrylic-dark-blue/
   - /acrylic-dark-blue-transparent/
   - /acrylic-dusk/
