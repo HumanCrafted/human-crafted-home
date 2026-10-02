@@ -15,7 +15,8 @@ palettes:
 purchase_url: https://www.cohnacrylics.com/products/1-8-heritage-acrylic-wine?variant=46804665172024
 image: acrylic-wine.png
 swatch: acrylic-wine-swatch.jpg
-hex: "#490809"
+hex: "#771419"
+hex_source: in person
 tags:
   - acrylic
 layout: doc

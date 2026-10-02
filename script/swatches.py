@@ -9,6 +9,10 @@ tilted), insets past the edges and corners, evens out the lighting, and writes
 `assets/images/<slug>-swatch.jpg`. It then records that file as `swatch:` on
 the note. The original `image:` is never touched.
 
+A note whose `hex:` was checked against a real sheet says so with
+`hex_source: in person`; its swatch is then shifted so its overall colour
+matches that hex (texture kept), since the vendor photo was off.
+
 Textured Cohn colours (pearl, glitter, flake) are the exception to "use the
 photo we have": in our copies the chip is only ~100px across, too little to
 show flecks or sparkle. For those the script fetches Cohn's full-size render
@@ -207,6 +211,18 @@ def smooth_flat(img):
     return cv2.GaussianBlur(img, (0, 0), img.shape[0] / 60)
 
 
+def match_hex(img, hex_value):
+    """Shift the swatch's overall colour onto a hex checked in person. Moves
+    every pixel by the same amount in Lab, so flecks and swirls keep their
+    contrast and only the colour as a whole changes."""
+    h = hex_value.lstrip("#")
+    target = np.uint8([[[int(h[4:6], 16), int(h[2:4], 16), int(h[0:2], 16)]]])  # BGR
+    target = cv2.cvtColor(target, cv2.COLOR_BGR2LAB).astype(np.float32)[0, 0]
+    lab = cv2.cvtColor(img, cv2.COLOR_BGR2LAB).astype(np.float32)
+    lab += target - np.median(lab.reshape(-1, 3), axis=0)
+    return cv2.cvtColor(np.clip(lab, 0, 255).astype(np.uint8), cv2.COLOR_LAB2BGR)
+
+
 def make_swatch(img, vendor, finish, override=None):
     inset = INSET[vendor]
     if override:
@@ -269,6 +285,10 @@ def main():
                 if full is not None:
                     src, vendor_note = full, " full-size"
             swatch, quad = make_swatch(src, vendor, finish, QUAD_OVERRIDES.get(note.stem))
+            hex_value = front_matter(text, "hex")
+            if (front_matter(text, "hex_source") or "").lower() == "in person" and hex_value:
+                swatch = match_hex(swatch, hex_value)
+                vendor_note += ", matched to in-person hex"
         except Exception as e:  # one bad photo shouldn't stop the batch
             print(f"FAIL  {note.stem}: {e}")
             failed += 1

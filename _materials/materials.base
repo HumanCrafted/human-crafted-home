@@ -9,6 +9,10 @@ properties:
     displayName: Material
   note.title:
     displayName: Color
+  note.hex:
+    displayName: Hex
+  note.hex_source:
+    displayName: Hex Source
   note.vendor:
     displayName: Vendor
   note.finish:
@@ -36,6 +40,8 @@ views:
     name: All Colors
     order:
       - formula.color
+      - hex
+      - hex_source
       - material
       - finish
       - palettes
@@ -59,6 +65,7 @@ views:
       direction: ASC
     order:
       - formula.color
+      - hex
       - finish
       - vendor
       - sheet_size
@@ -77,6 +84,7 @@ views:
       direction: ASC
     order:
       - formula.color
+      - hex
       - finish
       - sheet_size
       - formula.cost
@@ -94,6 +102,7 @@ views:
       direction: ASC
     order:
       - formula.color
+      - hex
       - vendor
       - sheet_size
       - formula.cost

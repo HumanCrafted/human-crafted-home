@@ -15,7 +15,8 @@ palettes:
 purchase_url: https://www.cohnacrylics.com/products/1-8-earth-toned-acrylic-persimmon-copy
 image: acrylic-dusk.png
 swatch: acrylic-dusk-swatch.jpg
-hex: "#00324A"
+hex: "#23484F"
+hex_source: in person
 tags:
   - acrylic
 layout: doc

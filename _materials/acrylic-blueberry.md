@@ -14,7 +14,8 @@ palettes:
 purchase_url: https://www.cohnacrylics.com/products/1-8-blueberry-pastel-acrylic?variant=46558233493560
 image: acrylic-blueberry.jpg
 swatch: acrylic-blueberry-swatch.jpg
-hex: "#5D8B98"
+hex: "#748E9B"
+hex_source: in person
 tags:
   - acrylic
 layout: doc

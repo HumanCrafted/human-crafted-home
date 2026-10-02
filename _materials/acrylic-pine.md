@@ -15,7 +15,8 @@ palettes:
 purchase_url: https://www.cohnacrylics.com/products/1-8-heritage-acrylic-pine?variant=46804664188984
 image: acrylic-pine.png
 swatch: acrylic-pine-swatch.jpg
-hex: "#242F29"
+hex: "#3E472E"
+hex_source: in person
 tags:
   - acrylic
 layout: doc
