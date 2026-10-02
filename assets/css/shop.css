@@ -486,6 +486,52 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
   text-decoration: none;
 }
 
+/* Note: a hand-drawn-style "buy stuff" with an arrow curving up to the
+   pill, below and to its left (Oct 2026 experiment). Fades in on hover with a
+   desktop pointer, and once on phones (≤768px) on a visitor's first page view
+   with the pill on screen (.is-noting, set by the script after the header in
+   default.html). Sits in the header's bottom padding. Never takes the
+   pointer, so it can't widen the hover area. Not rendered on /made/. */
+.site-nav .made-nav-btn { position: relative; }
+
+.made-nav-note {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.375rem;
+  position: absolute;
+  top: calc(100% + 0.375rem);
+  right: calc(100% - 1rem);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.21px;
+  white-space: nowrap;
+  color: var(--foreground);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 150ms ease;
+}
+
+.made-nav-note svg {
+  flex-shrink: 0;
+  /* The svg is taller than the text, so with flex-end this drops the text
+     until the arrow's tail sits level with the middle of its x-height. */
+  margin-bottom: 0.45rem;
+}
+
+/* The first-arrival showing fades slower than a hover. */
+.site-nav .made-nav-btn.is-noting .made-nav-note {
+  opacity: 1;
+  transition-duration: 400ms;
+}
+
+@media (hover: hover) and (min-width: 769px) {
+  .site-nav .made-nav-btn:hover .made-nav-note,
+  .site-nav .made-nav-btn:focus-visible .made-nav-note {
+    opacity: 1;
+  }
+}
+
 .site-nav .made-nav-btn[aria-current="page"] {
   background: var(--foreground);
   color: var(--background);

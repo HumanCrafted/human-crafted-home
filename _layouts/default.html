@@ -86,7 +86,7 @@
                     {%- if site.shop_enabled -%}
                     {%- assign made_count = site.projects | where: "shop_status", "available" | where: "draft", false | size -%}
                     {%- if made_count > 0 %}
-                    <a href="{{ '/made/' | relative_url }}" class="made-nav-btn" aria-label="Made — things to buy"{% if page.url == "/made/" %} aria-current="page"{% endif %} data-umami-event="Made nav">{% include made-wordmark.html %}</a>
+                    <a href="{{ '/made/' | relative_url }}" class="made-nav-btn" aria-label="Made — things to buy"{% if page.url == "/made/" %} aria-current="page"{% endif %} data-umami-event="Made nav">{% include made-wordmark.html %}{% unless page.url == "/made/" %}<span class="made-nav-note" aria-hidden="true"><span>buy stuff</span><svg width="32" height="30" viewBox="0 0 32 30" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="M1 27C12 23 22 14 28 3"/><path d="M22.6 5.7 28 3l.7 6"/></svg></span>{% endunless %}</a>
                     {%- endif -%}
                     {%- endif %}
                     {% comment %}
@@ -153,6 +153,27 @@
                 </nav>
             </div>
         </header>
+        {%- if made_count > 0 %}
+        <script>
+        // First arrival on a phone: show the Made pill's "buy stuff" note for
+        // a few seconds, once per browser (desktop gets it on hover instead).
+        // Skipped (and not used up) wherever the pill is hidden — e.g. phone
+        // crumb pages — or storage is blocked.
+        (function () {
+            if (!window.matchMedia('(max-width: 768px)').matches) return;
+            var pill = document.querySelector('.made-nav-btn');
+            if (!pill || !pill.querySelector('.made-nav-note') || !pill.getClientRects().length) return;
+            try {
+                if (localStorage.getItem('hc-made-note')) return;
+                localStorage.setItem('hc-made-note', '1');
+            } catch (e) { return; }
+            setTimeout(function () {
+                pill.classList.add('is-noting');
+                setTimeout(function () { pill.classList.remove('is-noting'); }, 4000);
+            }, 800);
+        })();
+        </script>
+        {%- endif %}
 
         <main class="page-content">
             {% unless page.layout == "project" or page.layout == "post" %}
