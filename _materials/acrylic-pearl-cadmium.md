@@ -7,13 +7,13 @@ sheet_size: 12x19
 process:
   - laser-cutter
 price: "18.00"
-price_scale: "$$$"
+price_scale: $$$
 in_inventory: false
-palettes: ["Fall 2025"]
+palettes:
+  - Fall 2025
+  - Fall 2026
 purchase_url: https://www.cohnacrylics.com/products/1-8-pearl-cadmium-acrylic-sheets?variant=46558225367096
 image: acrylic-pearl-cadmium.jpg
-# Sampled from the render above (median of the chip centre) — the swatch dot
-# on a product page's variant pill. Re-sample if the image changes.
 hex: "#488644"
 tags:
   - acrylic

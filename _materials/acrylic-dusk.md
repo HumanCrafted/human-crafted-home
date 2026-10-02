@@ -7,13 +7,13 @@ sheet_size: 18x24
 process:
   - laser-cutter
 price: "27.00"
-price_scale: "$$"
+price_scale: $$
 in_inventory: false
-palettes: ["Fall 2025"]
+palettes:
+  - Fall 2025
+  - Fall 2026
 purchase_url: https://www.cohnacrylics.com/products/1-8-earth-toned-acrylic-persimmon-copy
 image: acrylic-dusk.png
-# Sampled from the render above (median of the chip centre) — the swatch dot
-# on a product page's variant pill. Re-sample if the image changes.
 hex: "#00324A"
 tags:
   - acrylic

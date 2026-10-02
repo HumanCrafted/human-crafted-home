@@ -7,13 +7,13 @@ sheet_size: 12x19
 process:
   - laser-cutter
 price: "18.00"
-price_scale: "$$$"
+price_scale: $$$
 in_inventory: false
-palettes: ["Fall 2025"]
+palettes:
+  - Fall 2025
+  - Fall 2026
 purchase_url: https://www.cohnacrylics.com/products/1-8-gold-flakes?variant=46558226612280
 image: acrylic-flakes-gold.jpg
-# Sampled from the render above (median of the chip centre) — the swatch dot
-# on a product page's variant pill. Re-sample if the image changes.
 hex: "#E4E4E1"
 tags:
   - acrylic
