@@ -5,27 +5,19 @@ slug: materials
 redirect_from:
   - /acrylic-colors/
   - /acrylic-aloe/
-  - /acrylic-baby-blue/
   - /acrylic-black/
   - /acrylic-blue-fluorescent/
   - /acrylic-bronze-smoke-transparent/
-  - /acrylic-brown-transparent/
-  - /acrylic-burgundy-transparent/
   - /acrylic-dark-blue/
   - /acrylic-dark-blue-transparent/
   - /acrylic-dusk/
   - /acrylic-flakes-gold/
   - /acrylic-frosted-satin-ice/
-  - /acrylic-funky-glitter-mistletoe/
-  - /acrylic-glimmer-ash/
-  - /acrylic-glitter-emerald/
   - /acrylic-gold-transparent/
   - /acrylic-green/
   - /acrylic-green-transparent/
   - /acrylic-ivory/
-  - /acrylic-kelly-green/
   - /acrylic-khaki/
-  - /acrylic-lemon-chiffon/
   - /acrylic-light-blue-transparent/
   - /acrylic-light-green-transparent/
   - /acrylic-lilac/
@@ -41,11 +33,8 @@ redirect_from:
   - /acrylic-rose-gold-transparent/
   - /acrylic-teal/
   - /acrylic-teal-transparent/
-  - /acrylic-turquoise/
-  - /acrylic-violet/
   - /acrylic-white/
   - /acrylic-wine/
-  - /acrylic-wisteria/
 main_image:
 featured: false
 tags:
