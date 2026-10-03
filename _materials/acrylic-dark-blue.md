@@ -10,7 +10,7 @@ price: "18.90"
 price_scale: $
 in_inventory: false
 palettes:
-  - Fall 2026
+  - GDS 2026
 purchase_url: https://www.canalplastic.com/products/2114-dark-blue-opaque-acrylic-sheet?variant=32920739598
 image: acrylic-dark-blue.png
 swatch: acrylic-dark-blue-swatch.jpg

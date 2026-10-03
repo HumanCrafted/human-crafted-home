@@ -11,7 +11,7 @@ price_scale: $$
 in_inventory: false
 palettes:
   - GDS 2025
-  - Fall 2026
+  - GDS 2026
 purchase_url: https://www.cohnacrylics.com/products/1-8-earth-toned-acrylic-persimmon
 image: acrylic-persimmon.png
 swatch: acrylic-persimmon-swatch.jpg

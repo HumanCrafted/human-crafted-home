@@ -19,6 +19,10 @@
   url: /tooling/
   enabled: true
 
+- name: Materials
+  url: /materials/
+  enabled: true
+
 - name: Design System
   url: /design-system/
   enabled: true
