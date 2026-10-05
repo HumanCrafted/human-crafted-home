@@ -57,16 +57,41 @@ variants:
     price: 54.00
     stock: 1
     color: acrylic-rose-gold-transparent
-  - name: Avocado Shake
-    sku: TIS-DIS-AVO
-    price: 62.00
-    stock: 1
-    color: acrylic-pearl-avocado-shake
+  - name: Eggshell
+    sku: TIS-DIS-EGG
+    price: 54.00
+    stock: 2
+    color: acrylic-eggshell
   - name: Metallic Yellow
     sku: TIS-DIS-MYL
     price: 62.00
     stock: 1
     color: acrylic-metallic-yellow
+  - name: Persimmon
+    sku: TIS-DIS-PER
+    price: 54.00
+    stock: 2
+    color: acrylic-persimmon
+  - name: Burgundy
+    sku: TIS-DIS-BUR
+    price: 54.00
+    stock: 2
+    color: acrylic-burgundy-transparent
+  - name: Avocado Shake
+    sku: TIS-DIS-AVO
+    price: 62.00
+    stock: 1
+    color: acrylic-pearl-avocado-shake
+  - name: Ice Blue
+    sku: TIS-DIS-ICE
+    price: 54.00
+    stock: 2
+    color: acrylic-ice-blue
+  - name: Dark Blue
+    sku: TIS-DIS-DBL
+    price: 54.00
+    stock: 2
+    color: acrylic-dark-blue
 # --- /shop ---
 version: "1.0"
 tools:
@@ -82,7 +107,7 @@ With a standard cardboard box of tissues, once half empty, you're reaching in to
 
 ### Materials and colors
 
-![[acrylic-black|Gloss Black|column=5]] ![[acrylic-frosted-satin-ice|Frosted]] ![[acrylic-light-green-transparent|Transparent Light Green]] ![[acrylic-gold-transparent|Transparent Gold]] ![[acrylic-rose-gold-transparent|Transparent Rose Gold]] ![[acrylic-pearl-avocado-shake|Pearl Avocado Shake]] ![[acrylic-metallic-yellow|Metallic Yellow]]
+![[acrylic-black|Gloss Black]] ![[acrylic-frosted-satin-ice|Frosted]] ![[acrylic-light-green-transparent|Transparent Light Green]] ![[acrylic-gold-transparent|Transparent Gold]] ![[acrylic-rose-gold-transparent|Transparent Rose Gold]] ![[acrylic-eggshell|Eggshell]] ![[acrylic-metallic-yellow|Metallic Yellow]] ![[acrylic-persimmon|Persimmon]] ![[acrylic-burgundy-transparent|Transparent Burgundy]] ![[acrylic-pearl-avocado-shake|Pearl Avocado Shake]] ![[acrylic-ice-blue|Ice Blue]] ![[acrylic-dark-blue|Dark Blue]]
 
 ### Making it
 
