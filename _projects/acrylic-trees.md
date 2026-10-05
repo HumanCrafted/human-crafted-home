@@ -25,13 +25,13 @@ gallery_images:
   - "![[acrylic-trees-offcuts.jpg]]"
 headline: Small laser-cut acrylic trees, two flat pieces that slot together and stand on their own.
 # --- shop: sizes and colors from CoOps (products/acrylic-trees, plans/2026-acrylic-trees) ---
-# NOT FOR SALE: off until the 2026 color palette is final. Set `available` to list it.
+# Listed 2026-10-05. Set `off` to take it down.
 # Stock = one sheet per color on the current layouts (CoOps products/acrylic-trees,
 # "Made from"): regular colors on 18x24-v1, premium on 12x19-v1. Lower it by
 # hand after each sale.
 # Prices match Good Day Shop's 2026 retail, in two tiers: premium colors
 # (Pearl Mint, Funky Glitter Sleigh Bells; Cohn 12x19 sheets) and regular.
-shop_status: off
+shop_status: available
 price: 6.00
 ships_in: 1–2 weeks
 # Size × Color. Every combination is offered; sku, price and stock are per
