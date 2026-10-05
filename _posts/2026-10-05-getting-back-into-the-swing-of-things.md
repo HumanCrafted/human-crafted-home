@@ -3,7 +3,7 @@ layout: post
 title: Getting back into the swing of things
 crumb: 2026-10-05 getting back into it
 date: 2026-10-05
-draft: false
+draft: true
 categories:
   - shop-notes
 ---
