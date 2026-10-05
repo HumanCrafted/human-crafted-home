@@ -16,14 +16,19 @@ gallery_images:
   - "![[acrylic-robin-packaging.jpg]]"
   - "![[acrylic-robin-with-cactus.jpg]]"
 headline: A flat laser-cut acrylic robin that stands on two thin legs, read entirely from its profile.
-# --- shop: PLACEHOLDER price/SKU/stock — replace with real values ---
-shop_status: off   # was available — listed again when it's ready
-price: 25.00
+# --- shop: price/SKU/stock ---
+# One color for now: Bronze Smoke Transparent ($12, Jon 2026-10-05). Tracked
+# in CoOps products/acrylic-robin; SKU uses the shared color code (BRZ, as on the trees).
+# Stock is still the old placeholder count — set it to what's on the shelf.
+shop_status: available
+price: 12.00
 ships_in: 3–5 business days
 variants:
-  - name: Standard
-    sku: ACR-ROB-STD
+  - name: Bronze Smoke
+    sku: ACR-ROB-BRZ
+    price: 12.00
     stock: 10
+    color: acrylic-bronze-smoke-transparent
 # --- /shop ---
 version: "1.0"
 tools:
@@ -37,3 +42,7 @@ The Acrylic Robin is a laser-cut robin, my home state bird, and shamelessly insp
 ### Making it
 
 The body is a single piece of acrylic, cut on the laser.. Two thin legs slide into the bottom edge so it stands on its own. 
+
+### Materials and colors
+
+![[acrylic-bronze-smoke-transparent|Bronze Smoke Transparent]]
