@@ -7,14 +7,13 @@ sheet_size: 18x24
 process:
   - laser-cutter
 price: "18.90"
-price_scale: "$"
+price_scale: $
 in_inventory: false
-palettes: []
+palettes:
+  - Fall 2026
 purchase_url: https://www.canalplastic.com/products/2025-black-opaque-acrylic-sheet?variant=32920752014
 image: acrylic-black.png
 swatch: acrylic-black-swatch.jpg
-# Sampled from the render above (median of the chip centre) — the swatch dot
-# on a product page's variant pill. Re-sample if the image changes.
 hex: "#070508"
 tags:
   - acrylic

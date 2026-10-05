@@ -10,7 +10,7 @@ price: "17.95"
 price_scale: $$$
 in_inventory: false
 palettes:
-  - GDS 2026
+  - Fall 2026
 purchase_url: https://www.cohnacrylics.com/products/1-8-pearl-acrylic-avocado-shake?variant=50807040933944
 image: acrylic-pearl-avocado-shake.jpg
 swatch: acrylic-pearl-avocado-shake-swatch.jpg

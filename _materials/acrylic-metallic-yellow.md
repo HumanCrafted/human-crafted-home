@@ -10,7 +10,7 @@ price: "14.95"
 price_scale: $$$
 in_inventory: false
 palettes:
-  - GDS 2026
+  - Fall 2026
 purchase_url: https://www.cohnacrylics.com/products/iridescent-acrylic-canary-yellow?variant=46602410328120
 image: acrylic-metallic-yellow.jpg
 swatch: acrylic-metallic-yellow-swatch.jpg

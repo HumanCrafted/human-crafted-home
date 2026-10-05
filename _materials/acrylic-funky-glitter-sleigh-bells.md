@@ -9,7 +9,8 @@ process:
 price: "17.95"
 price_scale: $$$
 in_inventory: false
-palettes: []
+palettes:
+  - Trees 2026
 purchase_url: https://www.cohnacrylics.com/products/1-8-christmas-acrylic-sleigh-bells?variant=48452792647736
 image: acrylic-funky-glitter-sleigh-bells.jpg
 swatch: acrylic-funky-glitter-sleigh-bells-swatch.jpg

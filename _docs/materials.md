@@ -176,6 +176,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:hex"><p>Hex values are sampled from the manufacturers' product photos, so they're approximate.</p></li>
+    <li id="fn:hex"><p>Hex values are sampled from the manufacturers' product photos and sometimes adjusted in person, so they're approximate.</p></li>
   </ol>
 </div>

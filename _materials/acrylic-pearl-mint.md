@@ -9,7 +9,8 @@ process:
 price: "17.95"
 price_scale: $$$
 in_inventory: false
-palettes: []
+palettes:
+  - Trees 2026
 purchase_url: https://www.cohnacrylics.com/products/1-8-pearl-mint-acrylic-sheets?variant=46558225268792
 image: acrylic-pearl-mint.jpg
 swatch: acrylic-pearl-mint-swatch.jpg

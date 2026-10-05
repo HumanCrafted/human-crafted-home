@@ -7,14 +7,13 @@ sheet_size: 18x24
 process:
   - laser-cutter
 price: "26.15"
-price_scale: "$$"
+price_scale: $$
 in_inventory: true
-palettes: []
+palettes:
+  - Fall 2026
 purchase_url: https://www.canalplastic.com/products/1350-rose-gold-transparent-acrylic-sheet?variant=13846694461549
 image: acrylic-rose-gold-transparent.png
 swatch: acrylic-rose-gold-transparent-swatch.jpg
-# Sampled from the render above (median of the chip centre) — the swatch dot
-# on a product page's variant pill. Re-sample if the image changes.
 hex: "#E1BCAB"
 tags:
   - acrylic

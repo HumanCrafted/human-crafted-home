@@ -10,7 +10,7 @@ price: "23.95"
 price_scale: $$
 in_inventory: false
 palettes:
-  - GDS 2026
+  - Fall 2026
 purchase_url: https://www.cohnacrylics.com/products/1-8-clear-colour-acrylic-burgundy-358?variant=50847903612984
 image: acrylic-burgundy-transparent.jpg
 swatch: acrylic-burgundy-transparent-swatch.jpg

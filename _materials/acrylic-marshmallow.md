@@ -12,6 +12,7 @@ in_inventory: false
 palettes:
   - GDS 2025
   - GDS 2026
+  - Trees 2026
 purchase_url: https://www.cohnacrylics.com/products/1-8-marshmallow-pastel-acrylic?variant=46558233690168
 image: acrylic-marshmallow.jpg
 swatch: acrylic-marshmallow-swatch.jpg

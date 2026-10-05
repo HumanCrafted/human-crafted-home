@@ -10,7 +10,7 @@ price: "27.50"
 price_scale: $$
 in_inventory: false
 palettes:
-  - GDS 2026
+  - Fall 2026
 purchase_url: https://www.cohnacrylics.com/products/1-8-eggshell-pastel-acrylic?variant=46558234378296
 image: acrylic-eggshell.jpg
 swatch: acrylic-eggshell-swatch.jpg
