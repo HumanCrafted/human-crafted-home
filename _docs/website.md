@@ -77,7 +77,7 @@ One linking convention, authored in Obsidian and resolved to Jekyll URLs at buil
 - Targets are normalized, so `[[Shop V3]]`, `[[shop_v3]]`, and `[[shop-v3]]` all land on the same page
 - Images embed with `![[image.ext]]`, with options as pipe segments — `![[plan.svg|width=500]]` sets a display width, and `![[a.svg|column=3]]![[b.svg]]![[c.svg]]` lays a line of embeds out as an equal-column grid (stacking to one column on phones)
 - 3D models embed the same way — `![[model.stl]]` becomes a spinnable viewer 
-- Notes embed too — `![[acrylic-black]]` (no file extension) renders as a labeled material chip built from that note's image and title, and a line of them becomes a grid. That's how a product page's "Materials and colors" section is written; any note with an image works, so filament or fabric notes will render the same way
+- Notes embed too — `![[acrylic-black]]` (no file extension) renders as a labeled material chip built from that note's image and title, and a line of them becomes a grid six across, every chip the same size however many there are. That's how a product page's "Materials and colors" section is written; any note with an image works, so filament or fabric notes will render the same way
 - The same links work in Obsidian's editor and graph view and on the live site
 - A build-time safeguard skips stray or empty notes, so a broken link can't take down the site
 

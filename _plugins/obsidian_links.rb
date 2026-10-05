@@ -170,7 +170,7 @@ module ObsidianLinks
 
   # Convert a line of note embeds -> a chip row.
   #
-  #   ![[acrylic-mint]] ![[acrylic-black]]            one row, 2 columns
+  #   ![[acrylic-mint]] ![[acrylic-black]]            one row, 6-column grid
   #   ![[acrylic-mint|column=4]] ![[...]] ...           4 columns, wrapping
   #   ![[acrylic-light-green-transparent|Light Green]]  caption override — the
   #                                                     first plain segment, as
@@ -197,7 +197,9 @@ module ObsidianLinks
       end
       next line unless chips
 
-      cols   = embeds.filter_map { |_, o| o[:column] }.first || [chips.size, CHIP_MAX_COLS].min
+      # Always a CHIP_MAX_COLS grid, so a lone chip is the same size as one in
+      # a full row; `column=N` overrides it for that row.
+      cols   = embeds.filter_map { |_, o| o[:column] }.first || CHIP_MAX_COLS
       indent = line[/\A[ \t]*/]
       %(#{indent}<div class="chip-row" style="--cols: #{cols}">#{chips.join}</div>)
     end
