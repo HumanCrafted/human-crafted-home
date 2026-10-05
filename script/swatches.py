@@ -288,6 +288,10 @@ def main():
             hex_value = front_matter(text, "hex")
             if (front_matter(text, "hex_source") or "").lower() == "in person" and hex_value:
                 swatch = match_hex(swatch, hex_value)
+                # Lifting a near-black photo (e.g. Bronze Smoke) brings its
+                # JPEG noise up with it; smooth flat finishes again after.
+                if finish not in TEXTURED:
+                    swatch = smooth_flat(swatch)
                 vendor_note += ", matched to in-person hex"
         except Exception as e:  # one bad photo shouldn't stop the batch
             print(f"FAIL  {note.stem}: {e}")

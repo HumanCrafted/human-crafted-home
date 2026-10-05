@@ -15,7 +15,8 @@ image: acrylic-bronze-smoke-transparent.png
 swatch: acrylic-bronze-smoke-transparent-swatch.jpg
 # Sampled from the render above (median of the chip centre) — the swatch dot
 # on a product page's variant pill. Re-sample if the image changes.
-hex: "#0F0605"
+hex: "#443C29"
+hex_source: in person
 tags:
   - acrylic
 layout: doc

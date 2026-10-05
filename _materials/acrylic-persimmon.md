@@ -15,7 +15,7 @@ palettes:
 purchase_url: https://www.cohnacrylics.com/products/1-8-earth-toned-acrylic-persimmon
 image: acrylic-persimmon.png
 swatch: acrylic-persimmon-swatch.jpg
-hex: "#C04736"
+hex: "#C05436"
 hex_source: in person
 tags:
   - acrylic
