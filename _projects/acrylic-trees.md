@@ -26,9 +26,11 @@ gallery_images:
 headline: Small laser-cut acrylic trees, two flat pieces that slot together and stand on their own.
 # --- shop: sizes and colors from CoOps (products/acrylic-trees, plans/2026-acrylic-trees) ---
 # NOT FOR SALE: off until the 2026 color palette is final. Set `available` to list it.
-# PRICES ARE 0.00 PLACEHOLDERS and STOCK IS 0. Fill in both before switching on.
+# STOCK IS 0. Fill it in before switching on.
+# Prices match Good Day Shop's 2026 retail, in two tiers: premium colors
+# (Pearl Mint, Funky Glitter Sleigh Bells; Cohn 12x19 sheets) and regular.
 shop_status: off
-price: 0.00
+price: 6.00
 ships_in: 1–2 weeks
 # Size × Color. Every combination is offered; sku, price and stock are per
 # combination, so premium colors can carry their own price.
@@ -47,51 +49,51 @@ options:
       - { label: Wine, material: acrylic-wine }
       - { label: Bronze Smoke Transparent, material: acrylic-bronze-smoke-transparent }
 variants:
-  - { sku: ACR-TRE-T-FRS,  size: Tiny,    color: Frosted Satin Ice,          price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-T-MAR,  size: Tiny,    color: Marshmallow,                price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-T-SLB,  size: Tiny,    color: Funky Glitter Sleigh Bells, price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-T-PMT,  size: Tiny,    color: Pearl Mint,                 price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-T-PIN,  size: Tiny,    color: Pine Green,                 price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-T-PER,  size: Tiny,    color: Persimmon,                  price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-T-RED,  size: Tiny,    color: Transparent Red,            price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-T-WIN,  size: Tiny,    color: Wine,                       price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-T-BRZ,  size: Tiny,    color: Bronze Smoke Transparent,   price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-S-FRS,  size: Small,   color: Frosted Satin Ice,          price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-S-MAR,  size: Small,   color: Marshmallow,                price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-S-SLB,  size: Small,   color: Funky Glitter Sleigh Bells, price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-S-PMT,  size: Small,   color: Pearl Mint,                 price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-S-PIN,  size: Small,   color: Pine Green,                 price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-S-PER,  size: Small,   color: Persimmon,                  price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-S-RED,  size: Small,   color: Transparent Red,            price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-S-WIN,  size: Small,   color: Wine,                       price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-S-BRZ,  size: Small,   color: Bronze Smoke Transparent,   price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-M-FRS,  size: Medium,  color: Frosted Satin Ice,          price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-M-MAR,  size: Medium,  color: Marshmallow,                price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-M-SLB,  size: Medium,  color: Funky Glitter Sleigh Bells, price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-M-PMT,  size: Medium,  color: Pearl Mint,                 price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-M-PIN,  size: Medium,  color: Pine Green,                 price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-M-PER,  size: Medium,  color: Persimmon,                  price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-M-RED,  size: Medium,  color: Transparent Red,            price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-M-WIN,  size: Medium,  color: Wine,                       price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-M-BRZ,  size: Medium,  color: Bronze Smoke Transparent,   price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-L-FRS,  size: Large,   color: Frosted Satin Ice,          price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-L-MAR,  size: Large,   color: Marshmallow,                price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-L-SLB,  size: Large,   color: Funky Glitter Sleigh Bells, price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-L-PMT,  size: Large,   color: Pearl Mint,                 price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-L-PIN,  size: Large,   color: Pine Green,                 price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-L-PER,  size: Large,   color: Persimmon,                  price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-L-RED,  size: Large,   color: Transparent Red,            price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-L-WIN,  size: Large,   color: Wine,                       price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-L-BRZ,  size: Large,   color: Bronze Smoke Transparent,   price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-XL-FRS, size: X-Large, color: Frosted Satin Ice,          price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-XL-MAR, size: X-Large, color: Marshmallow,                price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-XL-SLB, size: X-Large, color: Funky Glitter Sleigh Bells, price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-XL-PMT, size: X-Large, color: Pearl Mint,                 price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-XL-PIN, size: X-Large, color: Pine Green,                 price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-XL-PER, size: X-Large, color: Persimmon,                  price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-XL-RED, size: X-Large, color: Transparent Red,            price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-XL-WIN, size: X-Large, color: Wine,                       price: 0.00, stock: 0 }
-  - { sku: ACR-TRE-XL-BRZ, size: X-Large, color: Bronze Smoke Transparent,   price: 0.00, stock: 0 }
+  - { sku: ACR-TRE-T-FRS,  size: Tiny,    color: Frosted Satin Ice,          price: 6.00,  stock: 0 }
+  - { sku: ACR-TRE-T-MAR,  size: Tiny,    color: Marshmallow,                price: 6.00,  stock: 0 }
+  - { sku: ACR-TRE-T-SLB,  size: Tiny,    color: Funky Glitter Sleigh Bells, price: 7.00,  stock: 0 }
+  - { sku: ACR-TRE-T-PMT,  size: Tiny,    color: Pearl Mint,                 price: 7.00,  stock: 0 }
+  - { sku: ACR-TRE-T-PIN,  size: Tiny,    color: Pine Green,                 price: 6.00,  stock: 0 }
+  - { sku: ACR-TRE-T-PER,  size: Tiny,    color: Persimmon,                  price: 6.00,  stock: 0 }
+  - { sku: ACR-TRE-T-RED,  size: Tiny,    color: Transparent Red,            price: 6.00,  stock: 0 }
+  - { sku: ACR-TRE-T-WIN,  size: Tiny,    color: Wine,                       price: 6.00,  stock: 0 }
+  - { sku: ACR-TRE-T-BRZ,  size: Tiny,    color: Bronze Smoke Transparent,   price: 6.00,  stock: 0 }
+  - { sku: ACR-TRE-S-FRS,  size: Small,   color: Frosted Satin Ice,          price: 7.00,  stock: 0 }
+  - { sku: ACR-TRE-S-MAR,  size: Small,   color: Marshmallow,                price: 7.00,  stock: 0 }
+  - { sku: ACR-TRE-S-SLB,  size: Small,   color: Funky Glitter Sleigh Bells, price: 8.00,  stock: 0 }
+  - { sku: ACR-TRE-S-PMT,  size: Small,   color: Pearl Mint,                 price: 8.00,  stock: 0 }
+  - { sku: ACR-TRE-S-PIN,  size: Small,   color: Pine Green,                 price: 7.00,  stock: 0 }
+  - { sku: ACR-TRE-S-PER,  size: Small,   color: Persimmon,                  price: 7.00,  stock: 0 }
+  - { sku: ACR-TRE-S-RED,  size: Small,   color: Transparent Red,            price: 7.00,  stock: 0 }
+  - { sku: ACR-TRE-S-WIN,  size: Small,   color: Wine,                       price: 7.00,  stock: 0 }
+  - { sku: ACR-TRE-S-BRZ,  size: Small,   color: Bronze Smoke Transparent,   price: 7.00,  stock: 0 }
+  - { sku: ACR-TRE-M-FRS,  size: Medium,  color: Frosted Satin Ice,          price: 10.00, stock: 0 }
+  - { sku: ACR-TRE-M-MAR,  size: Medium,  color: Marshmallow,                price: 10.00, stock: 0 }
+  - { sku: ACR-TRE-M-SLB,  size: Medium,  color: Funky Glitter Sleigh Bells, price: 12.00, stock: 0 }
+  - { sku: ACR-TRE-M-PMT,  size: Medium,  color: Pearl Mint,                 price: 12.00, stock: 0 }
+  - { sku: ACR-TRE-M-PIN,  size: Medium,  color: Pine Green,                 price: 10.00, stock: 0 }
+  - { sku: ACR-TRE-M-PER,  size: Medium,  color: Persimmon,                  price: 10.00, stock: 0 }
+  - { sku: ACR-TRE-M-RED,  size: Medium,  color: Transparent Red,            price: 10.00, stock: 0 }
+  - { sku: ACR-TRE-M-WIN,  size: Medium,  color: Wine,                       price: 10.00, stock: 0 }
+  - { sku: ACR-TRE-M-BRZ,  size: Medium,  color: Bronze Smoke Transparent,   price: 10.00, stock: 0 }
+  - { sku: ACR-TRE-L-FRS,  size: Large,   color: Frosted Satin Ice,          price: 12.00, stock: 0 }
+  - { sku: ACR-TRE-L-MAR,  size: Large,   color: Marshmallow,                price: 12.00, stock: 0 }
+  - { sku: ACR-TRE-L-SLB,  size: Large,   color: Funky Glitter Sleigh Bells, price: 14.00, stock: 0 }
+  - { sku: ACR-TRE-L-PMT,  size: Large,   color: Pearl Mint,                 price: 14.00, stock: 0 }
+  - { sku: ACR-TRE-L-PIN,  size: Large,   color: Pine Green,                 price: 12.00, stock: 0 }
+  - { sku: ACR-TRE-L-PER,  size: Large,   color: Persimmon,                  price: 12.00, stock: 0 }
+  - { sku: ACR-TRE-L-RED,  size: Large,   color: Transparent Red,            price: 12.00, stock: 0 }
+  - { sku: ACR-TRE-L-WIN,  size: Large,   color: Wine,                       price: 12.00, stock: 0 }
+  - { sku: ACR-TRE-L-BRZ,  size: Large,   color: Bronze Smoke Transparent,   price: 12.00, stock: 0 }
+  - { sku: ACR-TRE-XL-FRS, size: X-Large, color: Frosted Satin Ice,          price: 14.00, stock: 0 }
+  - { sku: ACR-TRE-XL-MAR, size: X-Large, color: Marshmallow,                price: 14.00, stock: 0 }
+  - { sku: ACR-TRE-XL-SLB, size: X-Large, color: Funky Glitter Sleigh Bells, price: 17.00, stock: 0 }
+  - { sku: ACR-TRE-XL-PMT, size: X-Large, color: Pearl Mint,                 price: 17.00, stock: 0 }
+  - { sku: ACR-TRE-XL-PIN, size: X-Large, color: Pine Green,                 price: 14.00, stock: 0 }
+  - { sku: ACR-TRE-XL-PER, size: X-Large, color: Persimmon,                  price: 14.00, stock: 0 }
+  - { sku: ACR-TRE-XL-RED, size: X-Large, color: Transparent Red,            price: 14.00, stock: 0 }
+  - { sku: ACR-TRE-XL-WIN, size: X-Large, color: Wine,                       price: 14.00, stock: 0 }
+  - { sku: ACR-TRE-XL-BRZ, size: X-Large, color: Bronze Smoke Transparent,   price: 14.00, stock: 0 }
 # --- /shop ---
 version: "1.0"
 tools:
