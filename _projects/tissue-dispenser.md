@@ -67,7 +67,7 @@ variants:
   - name: Persimmon
     sku: TIS-DIS-PER
     price: 54
-    stock: 2
+    stock: 1
     color: acrylic-persimmon
   - name: Burgundy
     sku: TIS-DIS-BUR
