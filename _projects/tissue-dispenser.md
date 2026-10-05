@@ -38,7 +38,7 @@ variants:
     stock: 2
     color: acrylic-black
   - name: Frosted
-    sku: TIS-DIS-FRO
+    sku: TIS-DIS-FRS
     price: 54.00
     stock: 2
     color: acrylic-frosted-satin-ice
@@ -57,6 +57,16 @@ variants:
     price: 54.00
     stock: 1
     color: acrylic-rose-gold-transparent
+  - name: Avocado Shake
+    sku: TIS-DIS-AVO
+    price: 62.00
+    stock: 1
+    color: acrylic-pearl-avocado-shake
+  - name: Metallic Yellow
+    sku: TIS-DIS-MYL
+    price: 62.00
+    stock: 1
+    color: acrylic-metallic-yellow
 # --- /shop ---
 version: "1.0"
 tools:
@@ -72,7 +82,7 @@ With a standard cardboard box of tissues, once half empty, you're reaching in to
 
 ### Materials and colors
 
-![[acrylic-black|Gloss Black|column=5]] ![[acrylic-frosted-satin-ice|Frosted]] ![[acrylic-light-green-transparent|Transparent Light Green]] ![[acrylic-gold-transparent|Transparent Gold]] ![[acrylic-rose-gold-transparent|Transparent Rose Gold]]
+![[acrylic-black|Gloss Black|column=5]] ![[acrylic-frosted-satin-ice|Frosted]] ![[acrylic-light-green-transparent|Transparent Light Green]] ![[acrylic-gold-transparent|Transparent Gold]] ![[acrylic-rose-gold-transparent|Transparent Rose Gold]] ![[acrylic-pearl-avocado-shake|Pearl Avocado Shake]] ![[acrylic-metallic-yellow|Metallic Yellow]]
 
 ### Making it
 

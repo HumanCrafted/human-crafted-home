@@ -35,7 +35,7 @@ variants:
     stock: 0
     color: acrylic-black
   - name: Frosted
-    sku: BAT-CON-FRO
+    sku: BAT-CON-FRS
     price: 0.00
     stock: 0
     color: acrylic-frosted-satin-ice
@@ -75,7 +75,7 @@ variants:
     stock: 0
     color: acrylic-burgundy-transparent
   - name: Pearl Avocado
-    sku: BAT-CON-PAV
+    sku: BAT-CON-AVO
     price: 0.00
     stock: 0
     color: acrylic-pearl-avocado-shake
