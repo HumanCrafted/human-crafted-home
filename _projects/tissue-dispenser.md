@@ -101,7 +101,7 @@ process:
   - laser cutting
 ---
 
-The Tissue Dispenser holds a stack of tissues in a translucent acrylic tray with a solid maple plate sitting on top of them. You pull tissues up through the opening in the plate. As the stack gets shorter the plate rides down with it, so the last tissue comes out the same way the first one did.
+The Tissue Dispenser holds a stack of tissues in an acrylic tray with a solid maple plate sitting on top of them. You pull tissues up through the opening in the plate. As the stack gets shorter the plate rides down with it, so the last tissue comes out the same way the first one did.
 
 With a standard cardboard box of tissues, once half empty, you're reaching in to dig the tissues out or pulling the whole box with you. The better experience I was after was to weight the stack by just the right amount and have a smooth pull every time. Not to mention, it just looks way better!  
 
