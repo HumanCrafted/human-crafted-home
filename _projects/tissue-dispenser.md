@@ -24,75 +24,71 @@ gallery_images:
   - "![[tissue-dispenser-styled-vignette.jpg]]"
   - "![[tissue-dispenser-black-bathroom.jpg]]"
   - "![[tissue-dispenser-illustration.jpg]]"
-headline: A translucent acrylic tray with a solid maple plate that rides down the stack as the tissues go.
-# --- shop: price/SKU/stock ---
+headline: An acrylic tray with a solid maple plate that rides down the stack as the tissues go.
 shop_status: available
-price: 54.00
+price: 54
 ships_in: 1–2 weeks (just starting production again, bear with me)
-# `color:` names the material note (_materials/acrylic-*.md) each variant is cut
-# from; the buy block reads its swatch from there.
 variants:
   - name: Black
     sku: TIS-DIS-BLK
-    price: 54.00
+    price: 54
     stock: 2
     color: acrylic-black
   - name: Frosted
     sku: TIS-DIS-FRS
-    price: 54.00
+    price: 54
     stock: 2
     color: acrylic-frosted-satin-ice
   - name: Light Green
     sku: TIS-DIS-LGN
-    price: 54.00
+    price: 54
     stock: 2
     color: acrylic-light-green-transparent
   - name: Gold
     sku: TIS-DIS-GOL
-    price: 54.00
+    price: 54
     stock: 2
     color: acrylic-gold-transparent
   - name: Rose Gold
     sku: TIS-DIS-RGD
-    price: 54.00
+    price: 54
     stock: 1
     color: acrylic-rose-gold-transparent
   - name: Eggshell
     sku: TIS-DIS-EGG
-    price: 54.00
+    price: 54
     stock: 2
     color: acrylic-eggshell
   - name: Metallic Yellow
     sku: TIS-DIS-MYL
-    price: 62.00
+    price: 62
     stock: 1
     color: acrylic-metallic-yellow
   - name: Persimmon
     sku: TIS-DIS-PER
-    price: 54.00
+    price: 54
     stock: 2
     color: acrylic-persimmon
   - name: Burgundy
     sku: TIS-DIS-BUR
-    price: 54.00
+    price: 54
     stock: 2
     color: acrylic-burgundy-transparent
   - name: Avocado Shake
     sku: TIS-DIS-AVO
-    price: 62.00
+    price: 62
     stock: 1
     color: acrylic-pearl-avocado-shake
   - name: Ice Blue
     sku: TIS-DIS-ICE
-    price: 54.00
+    price: 54
     stock: 2
     color: acrylic-ice-blue
   - name: Dark Blue
     sku: TIS-DIS-DBL
-    price: 54.00
+    price: 54
     stock: 2
     color: acrylic-dark-blue
-# --- /shop ---
 version: "1.0"
 tools:
   - laser-cutter
