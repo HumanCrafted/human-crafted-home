@@ -72,8 +72,6 @@ With a standard cardboard box of tissues, once half empty, you're reaching in to
 
 ### Materials and colors
 
-Currently producing in classic transparent gold and rose gold, transparent green, gloss black, and frosted.  Will be adding additional colors soon.
-
 ![[acrylic-black|Gloss Black|column=5]] ![[acrylic-frosted-satin-ice|Frosted]] ![[acrylic-light-green-transparent|Transparent Light Green]] ![[acrylic-gold-transparent|Transparent Gold]] ![[acrylic-rose-gold-transparent|Transparent Rose Gold]]
 
 ### Making it
