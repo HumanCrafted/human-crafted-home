@@ -27,7 +27,7 @@ gallery_images:
 headline: An acrylic tray with a solid maple plate that rides down the stack as the tissues go.
 shop_status: available
 price: 54
-ships_in: 1–2 weeks (just starting production again, bear with me)
+ships_in: 1–2 weeks
 variants:
   - name: Black
     sku: TIS-DIS-BLK
