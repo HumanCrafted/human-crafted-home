@@ -8,7 +8,7 @@ categories:
   - shop-notes
 ---
 
-Well, so much for writing more often. 🤨 It's not for a lack of time or things to write about, quite the opposite. I've been cranking out all sorts of things: more shop organization, dialing up/in manufacturing processes on the [cnc-router](https://humancrafted.co/cnc-router/), two local community websites, a community map, a new app, a Wii balance board hack, lots of updates to the website, researching new colors for products, diving deep into code-generated 3D printing, and most exciting of all... ramping up production of some Human Crafted favorites for the holiday season. 
+Well, so much for writing more often. 🤨 It's not for a lack of time or things to write about, quite the opposite. I've been cranking out all sorts of things: more shop organization, dialing up/in manufacturing processes on the [cnc router](https://humancrafted.co/cnc-router/), two local community websites, a community map, a new app, a Wii balance board hack, lots of updates to the website, researching new colors for products, diving deep into code-generated 3D printing, and most exciting of all... ramping up production of some Human Crafted favorites for the holiday season. 
 
 Since I'm so far behind, for today's message let's focus on those new (old) products:
 
