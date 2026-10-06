@@ -54,6 +54,21 @@ Jekyll::Hooks.register :site, :post_read do |site|
   next unless rummage
 
   live = %w[available archived]
+
+  # Local preview (_config.rummage.yml): parked items show as if live, so a
+  # listing can be worked on without setting it `available` in the note
+  # (git-sync would publish that). Never set on the real build.
+  if site.config["shop_enabled"] && site.config["rummage_preview"]
+    # YAML reads a bare `off` as the boolean false, hence both.
+    previewed = rummage.docs.select { |d| %w[off false].include?(d.data["shop_status"].to_s) }
+    previewed.each { |d| d.data["shop_status"] = "available" }
+    unless previewed.empty?
+      Jekyll.logger.info "rummage:",
+        "PREVIEW — showing #{previewed.size} parked item#{"s" unless previewed.size == 1}: " \
+        "#{previewed.map { |d| d.data["slug"] || d.basename_without_ext }.sort.join(", ")}"
+    end
+  end
+
   dropped = rummage.docs.reject do |d|
     site.config["shop_enabled"] && live.include?(d.data["shop_status"].to_s)
   end

@@ -1,0 +1,19 @@
+# Local-only override: previews rummage items that are parked at
+# `shop_status: off`, so a listing can be worked on before it goes live.
+#
+# Layer it after the shop override (the shop has to be on too):
+#
+#   bundle _2.7.2_ exec jekyll serve --config _config.yml,_config.shop.yml,_config.rummage.yml
+#
+# or use the "jekyll-rummage" preview configuration in .claude/launch.json,
+# which runs exactly that on port 4002.
+#
+# Why not just set the note to `available` while working on it: the Obsidian
+# git-sync plugin commits and pushes on its own, which would publish the
+# listing — placeholder prices and all. This file changes nothing about what
+# GitHub Actions builds. shop_toggle.rb reads the flag and treats every `off`
+# rummage item as `available` for this build only.
+rummage_preview: true
+
+# Its own build folder, so it doesn't clobber the other dev servers' output.
+destination: _site-rummage
