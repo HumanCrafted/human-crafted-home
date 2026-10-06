@@ -194,6 +194,34 @@ a.site-title:hover {
   white-space: nowrap;
 }
 
+/* A crumb too long for the row truncates its current segment with "…"
+   instead of pushing the nav off-screen. The nav is flex-shrink: 0, so the
+   crumb takes the squeeze; the min-width: 0 chain lets each level shrink
+   below its text width, and only .wm-current gives way — the dim prefix
+   and the hub link stay whole. */
+.site-title--crumb,
+.site-title--crumb .wm-tail,
+.site-title--crumb .wm-new {
+  min-width: 0;
+}
+
+.site-title--crumb .wm-back,
+.site-title--crumb .wm-hub,
+.site-title--crumb .wm-dot,
+.site-title--crumb .wm-sep {
+  flex-shrink: 0;
+}
+
+.site-title--crumb .wm-current {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Room for descenders ("g", "p") that overflow: hidden would clip at
+     line-height 1.1. */
+  padding-bottom: 0.15em;
+  margin-bottom: -0.15em;
+}
+
 /* Navigation */
 .site-nav {
   display: flex;
