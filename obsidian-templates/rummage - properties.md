@@ -1,7 +1,7 @@
 ---
 title: 
 crumb: 
-slug: 
+slug:     # <thing>-rummage, matching the filename
 main_image: 
 published_date: 
 gallery_images: 
