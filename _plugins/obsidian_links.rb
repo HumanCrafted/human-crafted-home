@@ -46,6 +46,11 @@ module ObsidianLinks
     "width"  => :width,  "w"   => :width,
     "column" => :column, "col" => :column, "c" => :column,
   }.freeze
+  # frame= is the one word-valued image option: a treatment for screenshots of
+  # the site, which are paper-coloured and otherwise melt into the page.
+  # ![[shot.png|frame=shadow]] -> class="frame-shadow" (styled in main.css).
+  # Values are whitelisted; add a word here and a .frame-<word> rule to add one.
+  IMAGE_FRAMES  = %w[shadow].freeze
   # Note embeds: ![[slug]] with no file extension — Obsidian's transclusion.
   # On the site an embedded note that carries an `image:` renders as a labeled
   # chip (image + title); a line of them becomes a chip row. The chip shows the
@@ -116,7 +121,7 @@ module ObsidianLinks
       next line unless cols
 
       imgs = embeds.map do |filename, o|
-        %(<img src="#{baseurl}/assets/images/#{filename}" alt="#{CGI.escapeHTML(o[:alt])}">)
+        %(<img src="#{baseurl}/assets/images/#{filename}" alt="#{CGI.escapeHTML(o[:alt])}"#{frame_attr(o)}>)
       end
       # Keep the line's indentation: an indented row (inside a list item) must
       # stay indented, or kramdown reads the div as ending the list.
@@ -126,8 +131,9 @@ module ObsidianLinks
   end
 
   # Split an embed's pipe blob ("caption|width=500", "column=3", ...) into
-  # { alt:, width:, column: }. key=value segments are matched against
-  # IMAGE_OPTS (numeric values only); the first plain segment is the alt text.
+  # { alt:, width:, column:, frame: }. key=value segments are matched against
+  # IMAGE_OPTS (numeric values only), or frame= against IMAGE_FRAMES; the first
+  # plain segment is the alt text.
   # A bare numeric segment ("500" or "500x300") is Obsidian's drag-resize
   # width syntax — honored as width= so a resize in Obsidian isn't read as alt.
   def self.parse_image_segments(blob)
@@ -138,11 +144,18 @@ module ObsidianLinks
       elsif (kv = part.match(/\A([a-z]+)\s*=\s*(\d+)\z/i))
         key = IMAGE_OPTS[kv[1].downcase]
         opts[key] = kv[2] if key
+      elsif (fr = part.match(/\Aframe\s*=\s*([a-z]+)\z/i))
+        opts[:frame] = fr[1].downcase if IMAGE_FRAMES.include?(fr[1].downcase)
       elsif opts[:alt].empty?
         opts[:alt] = part
       end
     end
     opts
+  end
+
+  # ' class="frame-<word>"' for a framed embed, "" otherwise.
+  def self.frame_attr(opts)
+    opts[:frame] ? %( class="frame-#{opts[:frame]}") : ""
   end
 
   # Convert ![[image.ext]] / ![[image.ext|alt]] -> ![alt](baseurl/assets/images/..)
@@ -153,15 +166,18 @@ module ObsidianLinks
   #   ![[img.svg|alt text|width=500]]    alt + width together
   #   ![[img.svg|500]]                   what Obsidian writes when an image is
   #                                      drag-resized in the editor; same as width=
-  # A sized image is emitted as an <img> tag (markdown can't carry a width);
-  # the base img CSS (max-width:100%) still shrinks it on narrow screens.
+  #   ![[shot.png|frame=shadow]]         screenshot treatment (see IMAGE_FRAMES)
+  # A sized or framed image is emitted as an <img> tag (markdown can't carry a
+  # width or class); the base img CSS (max-width:100%) still shrinks it on
+  # narrow screens.
   def self.convert_images(text, baseurl)
     text.gsub(IMAGE_RE) do
       filename = $1.strip
       o        = parse_image_segments($2)
 
-      if o[:width]
-        %(<img src="#{baseurl}/assets/images/#{filename}" alt="#{CGI.escapeHTML(o[:alt])}" width="#{o[:width]}">)
+      if o[:width] || o[:frame]
+        width = o[:width] ? %( width="#{o[:width]}") : ""
+        %(<img src="#{baseurl}/assets/images/#{filename}" alt="#{CGI.escapeHTML(o[:alt])}"#{width}#{frame_attr(o)}>)
       else
         "![#{o[:alt]}](#{baseurl}/assets/images/#{filename})"
       end

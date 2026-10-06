@@ -641,6 +641,14 @@ img {
   height: auto;
 }
 
+/* Framed images — ![[shot.png|frame=shadow]] (obsidian_links.rb IMAGE_FRAMES).
+   Screenshots of the site are paper-coloured and melt into the page; a rounded
+   corner and soft shadow lift them off it, like the cart drawer panel. */
+img.frame-shadow {
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06), 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
 @media (max-width: 768px) {
   .image-row {
     grid-template-columns: 1fr;

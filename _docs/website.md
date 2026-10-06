@@ -75,7 +75,7 @@ A small easter egg on every page on desktop: dwelling the cursor on the co/re ha
 One linking convention, authored in Obsidian and resolved to Jekyll URLs at build time:
 - Internal links are `[[slug|Display Text]]` (or `[[slug]]`) — a note's filename is its URL
 - Targets are normalized, so `[[Shop V3]]`, `[[shop_v3]]`, and `[[shop-v3]]` all land on the same page
-- Images embed with `![[image.ext]]`, with options as pipe segments — `![[plan.svg|width=500]]` sets a display width, and `![[a.svg|column=3]]![[b.svg]]![[c.svg]]` lays a line of embeds out as an equal-column grid (stacking to one column on phones)
+- Images embed with `![[image.ext]]`, with options as pipe segments — `![[plan.svg|width=500]]` sets a display width, and `![[a.svg|column=3]]![[b.svg]]![[c.svg]]` lays a line of embeds out as an equal-column grid (stacking to one column on phones), and `![[shot.png|frame=shadow]]` gives a screenshot of the site rounded corners and a soft shadow so it doesn't melt into the paper
 - 3D models embed the same way — `![[model.stl]]` becomes a spinnable viewer 
 - Notes embed too — `![[acrylic-black]]` (no file extension) renders as a labeled material chip built from that note's image and title, and a line of them becomes a grid six across, every chip the same size however many there are. That's how a product page's "Materials and colors" section is written; any note with an image works, so filament or fabric notes will render the same way
 - The same links work in Obsidian's editor and graph view and on the live site
