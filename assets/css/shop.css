@@ -558,8 +558,10 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
   /* Made pages (/made/, products, cart, thanks) carry the hamburger too, beside
      a long crumb ("humancrafted.co/made", "made/tissue dispenser") and the
      cart — that ran the hamburger ~10px off a 375px screen. Tighter gaps. */
-  .header-content:has(.core-menu):has(.site-title--crumb[data-wm-state^="made"]) { gap: 1rem; }
-  .header-content:has(.site-title--crumb[data-wm-state^="made"]) .site-nav:has(.core-menu) { gap: 0.75rem; }
+  .header-content:has(.core-menu):has(.site-title--crumb[data-wm-state^="made"]),
+  .header-content:has(.core-menu):has(.site-title--crumb[data-wm-state^="rummage"]) { gap: 1rem; }
+  .header-content:has(.site-title--crumb[data-wm-state^="made"]) .site-nav:has(.core-menu),
+  .header-content:has(.site-title--crumb[data-wm-state^="rummage"]) .site-nav:has(.core-menu) { gap: 0.75rem; }
   .site-nav .made-nav-btn .made-mark { height: 1.0625rem; width: 2.675rem; margin-bottom: 0.1875rem; }
 }
 

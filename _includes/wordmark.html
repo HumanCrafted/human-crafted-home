@@ -6,6 +6,9 @@
     made      a project that's for sale, or a shop page (cart, thanks) — shop on
               -> humancrafted.co/made/<slug>
               (humancrafted.co dim -> home; made -> /made/)
+    rummage-hub / rummage
+              /rummage/ and its items (_rummage/) — the made-hub/made shapes
+              with "rummage" in place of "made"
     sub-page  everything else  -> humancrafted.co/re/<slug>   (prefix dim -> home, co/re -> hub)
   Real URLs are unchanged; the nested path is a display-only breadcrumb.
   Stable hooks for the on-load morph (wordmark.js): .wm-human .wm-crafted .wm-tail .wm-slash .wm-back
@@ -18,6 +21,10 @@
   {%- if section == "" -%}{%- assign section = parts[parts.size | minus: 2] -%}{%- endif -%}
   <span class="site-title site-title--crumb" data-wm-state="hub">
     <a href="{{ '/' | relative_url }}" class="wm-back" data-umami-event="Wordmark home"><span class="wm-human">human</span><span class="wm-crafted">crafted</span></a><span class="wm-tail"><span class="wm-dot">.</span><span class="wm-new"><span class="wm-current">co<span class="wm-slash">/</span>{{ section }}</span></span></span>
+  </span>
+{%- elsif page.url == "/rummage/" -%}
+  <span class="site-title site-title--crumb" data-wm-state="rummage-hub">
+    <a href="{{ '/' | relative_url }}" class="wm-back" data-umami-event="Wordmark home"><span class="wm-human">human</span><span class="wm-crafted">crafted</span><span class="wm-dot">.</span>co<span class="wm-slash">/</span></a><span class="wm-tail"><span class="wm-new"><span class="wm-current">rummage</span></span></span>
   </span>
 {%- elsif page.url == "/made/" -%}
   {%- comment -%}
@@ -38,7 +45,12 @@
   {%- assign under_made = false -%}
   {%- if site.shop_enabled and page.shop_status == "available" %}{% assign under_made = true %}{% endif -%}
   {%- if site.shop_enabled and page.shop %}{% assign under_made = true %}{% endif -%}
-  {%- if under_made -%}
+  {%- if page.collection == "rummage" -%}
+  {%- comment -%} A rummage item: the made crumb's shape, filed under rummage. {%- endcomment -%}
+  <span class="site-title site-title--crumb" data-wm-state="rummage">
+    <a href="{{ '/' | relative_url }}" class="wm-back" data-umami-event="Wordmark home"><span class="wm-human">human</span><span class="wm-crafted">crafted</span><span class="wm-dot">.</span>co<span class="wm-slash">/</span></a><span class="wm-tail"><a href="{{ '/rummage/' | relative_url }}" class="wm-hub" data-umami-event="Wordmark rummage">rummage</a><span class="wm-new"><span class="wm-sep">/</span><span class="wm-current">{{ crumb }}</span></span></span>
+  </span>
+  {%- elsif under_made -%}
   {%- comment -%}
     A product for sale — and the shop's own pages (cart, thanks; `shop: true`
     in their front matter) — file under Made rather than co/re. The whole

@@ -25,11 +25,17 @@ layout: default
     categories, into the homepage's Made filter — the sub-brand its card and
     its packaging carry. Plain text here, not the wordmark: an image among
     underlined mono words would read as a sticker. Only while the shop is on (an off build carries none of
-    this) and only for `available`, never `archived`.
+    this) and only for `available`, never `archived`. Projects only: rummage
+    items share this layout but aren't Made and aren't in that filter.
   {%- endcomment -%}
   {%- assign for_sale = false -%}
-  {%- if site.shop_enabled and page.shop_status == "available" %}{% assign for_sale = true %}{% endif -%}
-  {% if page.categories or page.published_date or for_sale %}
+  {%- if site.shop_enabled and page.shop_status == "available" and page.collection == "projects" %}{% assign for_sale = true %}{% endif -%}
+  {%- comment -%}
+    No meta line on rummage items — the simplified page is image, title, buy
+    block, body. (They'd show an empty "Categories:": Jekyll gives every
+    collection document a `categories` array, and an empty array is truthy.)
+  {%- endcomment -%}
+  {% if page.collection != "rummage" %}{% if page.categories or page.published_date or for_sale %}
   <div class="project-meta">
     {% if page.published_date %}
     <div class="project-date">
@@ -51,7 +57,7 @@ layout: default
     </div>
     {% endif %}
   </div>
-  {% endif %}
+  {% endif %}{% endif %}
 </div>
 
 {% comment %}

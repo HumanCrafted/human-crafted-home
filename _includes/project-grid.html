@@ -4,11 +4,24 @@
 
   Usage: {% include project-grid.html %}            all projects
          {% include project-grid.html made=true %}  only shop_status: available
+         {% include project-grid.html items=list in_stock=true %}
+             a different list (rummage.md passes the available rummage
+             items), skipping any whose variants are all at stock 0 — a sold
+             one-off leaves the grid instead of showing "sold out".
 {%- endcomment -%}
 <div class="project-grid">
-  {% assign sorted_projects = site.projects | where: 'draft', false | sort: 'published_date' | reverse %}
+  {% if include.items -%}
+    {%- assign sorted_projects = include.items -%}
+  {%- else -%}
+    {%- assign sorted_projects = site.projects | where: 'draft', false | sort: 'published_date' | reverse -%}
+  {%- endif %}
   {% if include.made %}{% assign sorted_projects = sorted_projects | where: 'shop_status', 'available' %}{% endif %}
   {% for project in sorted_projects %}
+    {%- if include.in_stock -%}
+      {%- assign _stock = 0 -%}
+      {%- for v in project.variants %}{% assign _stock = _stock | plus: v.stock %}{% endfor -%}
+      {%- if _stock < 1 %}{% continue %}{% endif -%}
+    {%- endif %}
     <a href="{{ project.url | relative_url }}" class="project-card" data-categories="{{ project.categories | join: ',' }}"{% if site.shop_enabled and project.shop_status == "available" %} data-shop="available"{% endif %}>
       <div class="project-image">
         {%- comment -%}

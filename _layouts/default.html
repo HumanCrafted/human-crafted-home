@@ -116,6 +116,8 @@
                     {%- assign show_core_menu = false -%}
                     {%- if page.url == "/" or page.url == "/re/" %}{% assign show_core_menu = true %}{% endif -%}
                     {%- if site.shop_enabled and page.shop or site.shop_enabled and page.shop_status == "available" %}{% assign show_core_menu = true %}{% endif -%}
+                    {%- comment -%} Rummage pages are shop pages too, but "humancrafted.co/rummage" is too long to share a 375px row with the hamburger; their crumb links home. {%- endcomment -%}
+                    {%- if page.url == "/rummage/" or page.collection == "rummage" %}{% assign show_core_menu = false %}{% endif -%}
                     {% comment %}
                       co/re hamburger. Every page on desktop, so the quick links
                       are reachable from co/re sub-pages too. On phones only on

@@ -51,6 +51,7 @@ The site's colors, typography, spacing, and components are documented in the [[d
 - **_docs/** - Documentation pages including tools, processes, and notes
 - **_posts/** - Blog-style content (if needed)
 - **_music/** - Track and artist notes, front matter only, `output: false` (no per-track pages). The [[music|Music]] note renders them as one table straight from `site.music`. The `.base` files beside them drive Obsidian's own table view and are excluded from the build, so the two are maintained separately.
+- **_rummage/** - One note per leftover for sale (old stock, retired products, offcuts, tools). Same shop front matter as a project, listed on `/rummage/` instead of the project grid. Only items on sale are built at all.
 - **_places/** - One note per place worth visiting (restaurants, breweries, farms, coffee shops, shops, stays), front matter only, `output: false` — same pattern as music. The [[places|Places]] note renders them as pins on a map. `places.base` gives Obsidian its own table, to-visit, and map views.
 
 #### Track previews
@@ -120,6 +121,8 @@ The [[materials|Materials]] note is the same database shape applied to laser-cut
 ### The shop (Made)
 
 Selling happens on the project pages themselves; there's no separate storefront. A project joins the shop through its front matter (a status, a price, variants with their own SKUs and stock, and for coloured things a `color:` naming the material note), and the build does the rest: a buy block on the page, its price on its project card, a "made" filter on the homepage, a place on `/made/`, and a machine-readable catalog. `/made/` is the homepage grid with only the things for sale, reached from a Made pill in the nav. The site never says "shop" for it, because here the shop is where things get made. So the store goes by Made, the brand the products ship under, and the filter keeps those products in with the rest of the work. The cart lives in the browser. Checkout is a single small function on Vercel that re-prices the cart against that catalog and hands off to Stripe's hosted checkout page, which takes the address, shipping, payment and tax — this site never sees a card. One switch in the config turns the whole thing on or off; off, the build carries no trace of it.
+
+Leftovers — old stock, retired products, offcuts, tools — go through the same cart and checkout but live apart from the work, in a `_rummage` collection listed on `/rummage/`. Each item is a note with the same shop front matter as a project, on a simpler page (image, title, buy block, a few words). Its crumb reads `humancrafted.co/rummage/<item>`. Rummage items join the same catalog, so the checkout function sells them without knowing the difference; their SKUs start `RUM-` so they can't collide with Made's. One-offs drop off the `/rummage/` grid once their stock reaches zero, and setting an item's status to off removes its page entirely.
 
 ## Key Decisions
 

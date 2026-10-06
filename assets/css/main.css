@@ -212,7 +212,8 @@ a.site-title:hover {
      push the theme toggle out of the viewport around 800px. */
   .site-title--crumb[data-wm-state="sub"] .wm-back,
   .site-title--crumb[data-wm-state="sub"] .wm-dot,
-  .site-title--crumb[data-wm-state="made"] .wm-back {
+  .site-title--crumb[data-wm-state="made"] .wm-back,
+  .site-title--crumb[data-wm-state="rummage"] .wm-back {
     display: none;
   }
 }
@@ -943,7 +944,8 @@ hr {
      co/re/<slug> fits beside the nav; home stays reachable via co/re. */
   .site-title--crumb[data-wm-state="sub"] .wm-back,
   .site-title--crumb[data-wm-state="sub"] .wm-dot,
-  .site-title--crumb[data-wm-state="made"] .wm-back {
+  .site-title--crumb[data-wm-state="made"] .wm-back,
+  .site-title--crumb[data-wm-state="rummage"] .wm-back {
     display: none;
   }
 

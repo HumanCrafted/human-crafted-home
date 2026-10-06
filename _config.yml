@@ -48,6 +48,7 @@ plugins:
 # Exclude from processing
 exclude:
   - .obsidian/
+  - obsidian-templates/   # Obsidian note templates — not pages
   - "**/*.base"
   - Gemfile
   - Gemfile.lock
@@ -80,6 +81,24 @@ collections:
   # Old /acrylic-<name>/ URLs redirect to the hub (redirect_from on materials.md).
   materials:
     output: false
+  # Rummage: old stock, retired products, offcuts, tools — one note per item,
+  # sold through the same cart and checkout as Made but kept out of the
+  # project grid (it isn't the body of work). Flat /:slug/ like everything
+  # else; the crumb shows humancrafted.co/rummage/<slug>. Only `available`
+  # (and `archived`) items are built, and none at all with the shop off —
+  # see _plugins/shop_toggle.rb. Listed on /rummage/ (rummage.md).
+  rummage:
+    output: true
+    permalink: /:slug/
+
+# Rummage items use the project layout (image, title, buy block, body,
+# gallery) so a note needs no `layout:` line.
+defaults:
+  - scope:
+      path: ""
+      type: rummage
+    values:
+      layout: project
 
 # Obsidian-friendly settings
 kramdown:

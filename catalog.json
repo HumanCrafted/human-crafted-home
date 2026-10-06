@@ -35,6 +35,16 @@ shop_page: true   # withheld entirely when shop_enabled is false
 {%- if site.shop_enabled -%}
 {%- assign for_sale = site.projects
       | where_exp: "p", "p.shop_status == 'available' or p.shop_status == 'archived'" -%}
+{%- comment -%}
+  Rummage items (_rummage/) join the same catalog, so the one cart and the one
+  checkout function sell them without knowing the difference. shop_toggle.rb
+  has already dropped any item that isn't available/archived; the filter here
+  is the same allow-list again. SKUs must not collide with Made's — rummage
+  ones start RUM-.
+{%- endcomment -%}
+{%- assign rummage = site.rummage
+      | where_exp: "p", "p.shop_status == 'available' or p.shop_status == 'archived'" -%}
+{%- assign for_sale = for_sale | concat: rummage -%}
 {%- endif -%}
 {
   "generated": "{{ site.time | date_to_xmlschema }}",

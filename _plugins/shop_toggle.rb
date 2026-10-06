@@ -39,3 +39,29 @@ Jekyll::Hooks.register :site, :post_read do |site|
   Jekyll.logger.info "shop:",
     "disabled (shop_enabled: false) — withheld #{withheld.size}: #{withheld.sort.join(", ")}"
 end
+
+# Rummage items (_rummage/) exist only to be sold, so unlike a project they
+# have no page to fall back to once they're off sale. Drop every item when the
+# shop is off, and otherwise any item whose `shop_status` isn't `available` or
+# `archived` — the same allow-list as catalog.json and the project layout, so
+# setting `shop_status: off` (or a typo) takes an item off the site entirely.
+# Sold-out items (stock 0) are kept: they leave the /rummage/ grid but their
+# page and catalog entry stay, so a cart still holding one is told it sold.
+# Runs at :post_read, before generators, so the sitemap and the co/re redirect
+# stubs never see a dropped item.
+Jekyll::Hooks.register :site, :post_read do |site|
+  rummage = site.collections["rummage"]
+  next unless rummage
+
+  live = %w[available archived]
+  dropped = rummage.docs.reject do |d|
+    site.config["shop_enabled"] && live.include?(d.data["shop_status"].to_s)
+  end
+  next if dropped.empty?
+
+  rummage.docs.reject! { |d| dropped.include?(d) }
+  Jekyll.logger.info "rummage:",
+    "withheld #{dropped.size} item#{"s" unless dropped.size == 1} " \
+    "(#{site.config["shop_enabled"] ? "not available" : "shop off"}): " \
+    "#{dropped.map { |d| d.data["slug"] || d.basename_without_ext }.sort.join(", ")}"
+end

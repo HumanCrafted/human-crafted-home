@@ -13,7 +13,9 @@ This is the [[core]] of Human Crafted, a boutique design studio and product desi
 
 {% include wiki-two-column.html title="Services" auto="services_docs" show_all_link="/services/" show_all_text="View all services" %}
 
-{% include wiki-two-column.html title="Resources" items="Decimal Equivalents:/decimal-chart/,Hardware Design:/hardware-design/" auto="resources" %}
+{%- assign resource_items = "Decimal Equivalents:/decimal-chart/,Hardware Design:/hardware-design/" -%}
+{%- if site.shop_enabled %}{% assign resource_items = resource_items | append: ",Rummage Shop:/rummage/" %}{% endif -%}
+{% include wiki-two-column.html title="Resources" items=resource_items auto="resources" %}
 
 {% include wiki-two-column.html title="Notes" auto="note_docs" show_all_link="/notes/" show_all_text="View all notes" %}
 
