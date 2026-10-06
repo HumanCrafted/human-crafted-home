@@ -8,6 +8,8 @@
     price: 32.00
     shop_type: physical          # or `digital` (no qty, no shipping)
     ships_in: 2–3 business days  # or `delivery:` for digital
+    buy_note: "Older colors? See the [[rummage|Rummage Shop]]."  # optional
+                                 # fine print under the ships line; [[links]] ok
     variants:
       - name: Natural
         sku: CK-NAT
@@ -228,6 +230,9 @@
         Ships in {{ page.ships_in | default: "3–5 business days" }}.
       {%- endif -%}
     </p>
+    {%- if page.buy_note %}
+    <p class="buy-fineprint buy-note">{{ page.buy_note | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+    {%- endif %}
   </form>
   {%- endif %}
 </section>

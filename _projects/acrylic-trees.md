@@ -34,6 +34,7 @@ headline: Small laser-cut acrylic trees, two flat pieces that slot together and 
 shop_status: available
 price: 6.00
 ships_in: 1–2 weeks
+buy_note: "Looking for discounted older colors and sizes? Check our [[rummage|Rummage Shop]] page."
 # Size × Color. Every combination is offered; sku, price and stock are per
 # combination, so premium colors can carry their own price.
 options:

@@ -609,6 +609,15 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
   color: var(--muted-foreground);
 }
 
+/* buy_note: a second fine-print line, tucked under "Ships in …". */
+.buy-fineprint.buy-note {
+  margin-top: 0.25rem;
+}
+
+.buy-note a {
+  color: inherit;
+}
+
 /* --- Variant picker: pills -------------------------------------------------
    The same control the homepage's Made filter uses: outlined pill at
    rest, solid ink when chosen, a 1px lift on hover. Each pill is the <label>

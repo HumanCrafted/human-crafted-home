@@ -321,6 +321,16 @@ Jekyll::Hooks.register [:pages, :documents], :pre_render do |item|
     item.data['image'] = "/assets/images/#{$1.strip}"
   end
 
+  # ---- buy_note (shop fine print under "Ships in …"): wiki links -> markdown,
+  # so the note links the same way as the body. Rendered by buy-block.html.
+  if item.data['buy_note'].is_a?(String)
+    item.data['buy_note'] = item.data['buy_note'].gsub(ObsidianLinks::WIKI_RE) do
+      target = $1.strip
+      disp   = $2 ? $2.strip : target
+      "[#{disp}](#{baseurl}#{ObsidianLinks.target_path(target)})"
+    end
+  end
+
   # If the first content line is just an image, give coffee notes a sane description.
   if item.content.strip.match(/^!\[\[([^\]]+\.(jpg|jpeg|png|gif|svg|webp))\]\]/)
     item.data['description'] ||= "Coffee review with tasting notes and brewing recommendations"
