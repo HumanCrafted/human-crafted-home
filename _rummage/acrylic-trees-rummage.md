@@ -1,5 +1,5 @@
 ---
-title: Acrylic Trees
+title: Acrylic Trees (Rummage)
 crumb: acrylic trees
 slug: acrylic-trees-rummage
 main_image: "![[acrylic-trees-thumbnail.svg]]"
@@ -80,7 +80,7 @@ variants:
   - { sku: RUM-TRE-XXXL-GRT, size: XXXL, color: Transparent Green, price: 12.00, stock: 1 }
   - { sku: RUM-TRE-XXXL-GRN, size: XXXL, color: Green,             price: 12.00, stock: 1 }
 ---
-This is a selection of acrylic trees we have extra stock of or aren't currently making. The current selection of trees is on the [[acrylic-trees|Acrylic Trees]] page.
+This is a selection of acrylic trees we have extra stock of or aren't currently making, at steep discounts. The current selection of trees is on the main [[acrylic-trees|Acrylic Trees]] page.
 
 ### Sizes and colors
 
