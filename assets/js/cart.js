@@ -318,18 +318,23 @@
       if (!combos) return;
       var values = chosen();
 
-      // Grey out any value that can't be reached from the current choices on
-      // the other axes. Still selectable — picking it explains itself.
+      // Grey out a value with nothing in stock given the choices on the axes
+      // ABOVE it: the first axis (size) only when it's sold out everywhere,
+      // the next (color) when it isn't in the chosen size. One-way, so the
+      // top row never looks crossed out just because of a pick below it.
+      // Still selectable — picking it moves the other axes to match
+      // (followPick), or explains itself if nothing matches.
       axes.forEach(function (fs, axis) {
         fs.querySelectorAll('label.variant').forEach(function (label) {
           var input = label.querySelector('input');
-          var trial = values.slice();
-          trial[axis] = input.value;
-          var c = comboFor(trial);
-          var reachable = !!(c && c.stock > 0);
+          var withValue = combos.filter(function (c) {
+            for (var j = 0; j < axis; j++) if (c.values[j] !== values[j]) return false;
+            return c.values[axis] === input.value;
+          });
+          var reachable = withValue.some(function (c) { return c.stock > 0; });
           label.classList.toggle('is-soldout', !reachable);
           var flag = label.querySelector('.variant-flag');
-          if (flag) flag.textContent = reachable ? '' : (c ? 'sold out' : 'not offered');
+          if (flag) flag.textContent = reachable ? '' : (withValue.length ? 'sold out' : 'not offered');
         });
       });
 
@@ -396,7 +401,46 @@
       }
     }
 
-    form.addEventListener('change', function () { resolveCombo(); sync(); });
+    // Picking a value that doesn't pair with the current choices moves the
+    // other axes to the closest in-stock combination with that value: keep as
+    // many of the current choices as possible, then the first in display
+    // order. A value with nothing in stock anywhere is left as picked, so it
+    // still explains itself ("Sold out in …").
+    function followPick(axis) {
+      var values = chosen();
+      var current = comboFor(values);
+      if (current && current.stock > 0) return;
+      var order = axes.map(function (fs) {
+        return Array.prototype.map.call(fs.querySelectorAll('input'), function (r) { return r.value; });
+      });
+      var best = null, bestKey = null;
+      combos.forEach(function (c) {
+        if (!(c.stock > 0) || c.values[axis] !== values[axis]) return;
+        var key = [0];
+        c.values.forEach(function (val, j) {
+          if (j === axis) return;
+          if (val !== values[j]) key[0]++;
+          key.push(order[j].indexOf(val));
+        });
+        for (var k = 0; best && k < key.length && key[k] === bestKey[k]; k++);
+        if (!best || (k < key.length && key[k] < bestKey[k])) { best = c; bestKey = key; }
+      });
+      if (!best) return;
+      axes.forEach(function (fs, j) {
+        fs.querySelectorAll('input').forEach(function (r) {
+          if (r.value === best.values[j]) r.checked = true;
+        });
+      });
+    }
+
+    form.addEventListener('change', function (e) {
+      if (combos) {
+        var fs = e.target.closest('fieldset[data-option]');
+        if (fs) followPick(axes.indexOf(fs));
+      }
+      resolveCombo();
+      sync();
+    });
 
     form.querySelectorAll('.qty-btn').forEach(function (btn) {
       btn.addEventListener('click', function () {
