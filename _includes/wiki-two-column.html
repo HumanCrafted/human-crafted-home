@@ -95,6 +95,6 @@
     {%- endcapture -%}
     {{- list | strip -}}
     {%- comment %} Show all link — hug the comma to the last item (no stray space) {% endcomment -%}
-    {%- if include.show_all_link -%}{%- if include.items or include.auto -%},{%- endif %} <a href="{{ include.show_all_link | relative_url }}">{{ include.show_all_text | default: "View all" }}</a>{%- endif -%}
+    {%- if include.show_all_link -%}{%- if include.items or include.auto -%},{%- endif %} <a class="wiki-view-all" href="{{ include.show_all_link | relative_url }}">{{ include.show_all_text | default: "View all" }}</a>{%- endif -%}
   </div>
 </div>

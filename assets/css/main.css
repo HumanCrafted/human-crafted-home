@@ -1667,6 +1667,12 @@ hr {
   text-decoration-style: wavy;
 }
 
+/* "View all …" closes each list — italic so it reads as a way out, not an entry */
+.wiki-comma-list .wiki-view-all {
+  font-style: italic;
+  color: var(--muted-foreground);
+}
+
 /* Tablet and Mobile two column */
 @media (max-width: 1024px) {
   .wiki-two-column {
