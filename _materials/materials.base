@@ -17,6 +17,8 @@ properties:
     displayName: Vendor
   note.finish:
     displayName: Finish
+  note.line:
+    displayName: Line
   note.sheet_size:
     displayName: Sheet
   note.process:
@@ -46,6 +48,7 @@ views:
       - finish
       - palettes
       - vendor
+      - line
       - sheet_size
       - process
       - formula.cost
@@ -68,6 +71,7 @@ views:
       - hex
       - finish
       - vendor
+      - line
       - sheet_size
       - process
     sort:

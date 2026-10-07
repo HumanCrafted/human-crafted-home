@@ -45,7 +45,7 @@ gallery_images:
 version: "1.0"
 draft: false
 ---
-Database of the materials things get made from — one note per color or stock, with a swatch and the vendor. Acrylic sheet for the [[laser-cutter|laser cutter]] so far; filament, fabric and wood get their own sections as they're catalogued.
+Database of the materials things get made from — one note per color or stock, with a swatch and the vendor. Acrylic sheet for the [[laser-cutter|laser cutter]] and filament for the [[3d-printer|3D printer]] so far; fabric and wood get their own sections as they're catalogued.
 
 {% comment %} One section per `material:` value (acrylic, filament…), in name
 order; rows within a section sorted by vendor, then title. A note with no
@@ -64,6 +64,8 @@ Liquid 4 has no array push, so build a delimited string and split it. {% endcomm
 {% assign colors = "" | split: "" %}
 {% assign vendor_groups = group.items | group_by: "vendor" | sort: "name" %}
 {% for g in vendor_groups %}{% assign g_sorted = g.items | sort: "title" %}{% assign colors = colors | concat: g_sorted %}{% endfor %}
+{% comment %} Sheet stock has a size; filament has a product line instead. {% endcomment %}
+{% assign has_line = group.items | where_exp: "doc", "doc.line" | size %}
 
 ## {{ group.name | capitalize }}
 
@@ -75,7 +77,7 @@ Liquid 4 has no array push, so build a delimited string and split it. {% endcomm
         <th>Color</th>
         <th>Hex<sup role="doc-noteref"><a href="#fn:hex" class="footnote" rel="footnote">1</a></sup></th>
         <th>Finish</th>
-        <th>Sheet</th>
+        <th>{% if has_line > 0 %}Line{% else %}Sheet{% endif %}</th>
         <th>Process</th>
         <th>Vendor</th>
       </tr>
@@ -88,7 +90,7 @@ Liquid 4 has no array push, so build a delimited string and split it. {% endcomm
         <td>{{ color.title }}</td>
         <td>{% if color.hex %}<span class="copy-hex">{{ color.hex }}</span>{% endif %}</td>
         <td>{{ color.finish }}</td>
-        <td>{{ color.sheet_size }}</td>
+        <td>{{ color.line | default: color.sheet_size }}</td>
         <td>
           {%- for slug in color.process -%}
             {%- assign tool = site.docs | where: "slug", slug | first -%}
