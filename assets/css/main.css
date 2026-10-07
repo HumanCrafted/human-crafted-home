@@ -597,6 +597,19 @@ td {
   overflow-x: auto;
 }
 
+/* Quick links to each material's section, above the palette filters. */
+.materials-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Clear the fixed header when a quick link jumps to a section heading. */
+.materials-jump ~ h2 {
+  scroll-margin-top: 9rem;
+}
+
 .acrylic-swatch {
   display: block;
   width: 2.75rem;

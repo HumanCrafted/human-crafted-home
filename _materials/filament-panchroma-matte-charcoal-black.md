@@ -7,8 +7,6 @@ finish: matte
 process:
   - 3d-printer
 vendor_sku: CA04015
-palettes:
-  - Fall 2026
 purchase_url: https://us.polymaker.com/products/matte-pla
 swatch: filament-panchroma-matte-charcoal-black-swatch.png
 hex: "#2F2E30"

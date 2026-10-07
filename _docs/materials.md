@@ -60,6 +60,23 @@ Liquid 4 has no array push, so build a delimited string and split it. {% endcomm
 {% for p in palette_names %}{% assign p_stripped = p | strip %}{% if p_stripped != "" %}{% assign palette_str = palette_str | append: p_stripped | append: "," %}{% endif %}{% endfor %}
 {% assign palettes = palette_str | split: "," %}
 
+{% comment %} Quick links to each material's section (heading ids come from
+kramdown), then the palette filters, which act on every table. {% endcomment %}
+{% if material_groups.size > 1 %}
+<nav class="materials-jump" aria-label="Materials sections">
+  {% for group in material_groups %}<a href="#{{ group.name | slugify }}">{{ group.name | capitalize }}</a>{% endfor %}
+</nav>
+{% endif %}
+
+{% if palettes.size > 0 %}
+<div class="tag-filters">
+  <button class="tag-filter active" data-filter="all">all</button>
+  {% for palette in palettes %}
+    <button class="tag-filter" data-filter="{{ palette | strip | slugify }}">{{ palette | strip }}</button>
+  {% endfor %}
+</div>
+{% endif %}
+
 {% for group in material_groups %}
 {% assign colors = "" | split: "" %}
 {% assign vendor_groups = group.items | group_by: "vendor" | sort: "name" %}
@@ -115,12 +132,6 @@ Liquid 4 has no array push, so build a delimited string and split it. {% endcomm
 {% endfor %}
 
 {% if palettes.size > 0 %}
-<div class="tag-filters">
-  <button class="tag-filter active" data-filter="all">all</button>
-  {% for palette in palettes %}
-    <button class="tag-filter" data-filter="{{ palette | strip | slugify }}">{{ palette | strip }}</button>
-  {% endfor %}
-</div>
 
 <script>
 // Palette filtering — same pattern as the homepage project grid (index.md).
@@ -141,6 +152,19 @@ document.addEventListener('DOMContentLoaded', function() {
       } else {
         const rowPalettes = row.dataset.palettes.split(',');
         row.style.display = rowPalettes.includes(filterValue) ? '' : 'none';
+      }
+    });
+
+    // A material with nothing in the palette drops out entirely: its heading,
+    // its table, and its quick link.
+    document.querySelectorAll('.materials-database').forEach(db => {
+      const show = [...db.querySelectorAll('tbody tr')].some(r => r.style.display !== 'none');
+      db.style.display = show ? '' : 'none';
+      const heading = db.previousElementSibling;
+      if (heading && heading.tagName === 'H2') {
+        heading.style.display = show ? '' : 'none';
+        const jump = document.querySelector(`.materials-jump a[href="#${heading.id}"]`);
+        if (jump) jump.style.display = show ? '' : 'none';
       }
     });
 

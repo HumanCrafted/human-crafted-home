@@ -7,8 +7,6 @@ finish: matte
 process:
   - 3d-printer
 vendor_sku: CA04016
-palettes:
-  - Fall 2026
 purchase_url: https://us.polymaker.com/products/matte-pla
 swatch: filament-panchroma-matte-cotton-white-swatch.png
 hex: "#F4EFEB"
