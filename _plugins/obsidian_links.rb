@@ -54,8 +54,8 @@ module ObsidianLinks
   # Note embeds: ![[slug]] with no file extension — Obsidian's transclusion.
   # On the site an embedded note that carries an `image:` renders as a labeled
   # chip (image + title); a line of them becomes a chip row. The chip shows the
-  # note's `swatch:` (the even square script/swatches.py cuts from the vendor
-  # photo) when it has one, else the `image:` itself. Used for
+  # note's `swatch:` (the even square cut from the vendor photo, or the
+  # Blender render for filament; both made in hcd-products) when it has one, else the `image:` itself. Used for
   # the "Materials and colors" section on product pages: ![[acrylic-mint]].
   # Anything with a "." or "#" in the target is not a note embed (images,
   # models, bases, heading links) and is left to the other regexes.
