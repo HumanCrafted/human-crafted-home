@@ -45,6 +45,6 @@ A saved patch stores every control as a value and every cable as from and to, wi
 
 ### Under the hood
 
-Next.js on Vercel, Postgres on Neon, Vercel Blob for the panel graphics and audio, Clerk for accounts and billing. Free for 20 patches, and sharing publicly earns more. Pro is unlimited. The brand site at synthpatch.io is plain static HTML.
+Next.js on Vercel, Postgres on Neon, Vercel Blob for the panel graphics and audio, Clerk for accounts and billing. Free for 20 patches, and sharing publicly earns more. Pro is unlimited. The brand site at [synthpatch.io](https://synthpatch.io) is plain static HTML.
 
 The logo is one patch cable that writes S and P, with a plug on each end.
