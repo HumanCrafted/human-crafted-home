@@ -11,8 +11,14 @@ gallery_images:
 version: "1.0"
 draft: false
 ---
-**Specs:** 7" x 7" x 7" build volume, Prusa MINI+  
+**Printers:** Bambu Lab X2D, Prusa MINI+  
+**Nozzles:** 0.2, 0.4, 0.6, and 0.8 mm for both printers  
 **Materials:** PLA, PETG, ABS
+
+### Specs
+
+- **Bambu Lab X2D** - 10" x 10" x 10" build volume, enclosed with a heated chamber, dual nozzle for two materials/colors in one print
+- **Prusa MINI+** - 7" x 7" x 7" build volume
 
 ### Capabilities
 
@@ -29,8 +35,8 @@ draft: false
 
 ### Process
 
-1. **Design** in Fusion 360
-2. **Slice** and optimize print settings in PrusaSlicer
+1. **Design** in Fusion 360 or with AI-assisted G-code generation
+2. **Slice** (modeled prints) and optimize print settings in Bambu Studio or PrusaSlicer
 3. **Print** with tuned parameters for the material
 4. **Finishing** - support removal, sanding, assembly
 

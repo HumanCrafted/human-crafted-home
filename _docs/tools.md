@@ -21,9 +21,10 @@ This is a collection of all the tools and software I use in my design and fabric
 | [Materials]({{ "/materials/" | relative_url }})                                                      | Materials database — acrylic sheet colors so far, with vendors and prices |
 | Digital mockups                    | Figma, Affinity, Illustrator                                    |                                                             |
 | Web design                         | Static Page Sites, Framer, Notion + Super, Webflow, Squarespace |                                                             |
-| [3D Printer]({{ "/3d-printer/"     | relative_url }})                                                | 7 in x 7 in x 7 in, Prusa MINI+, PrusaSlicer, Prusa Connect |
+| [3D Printer]({{ "/3d-printer/"     | relative_url }})                                                | Bambu Lab X2D (10 in x 10 in x 10 in), Prusa MINI+ (7 in x 7 in x 7 in), Bambu Studio, PrusaSlicer, Prusa Connect |
 | CAD Design                         | [Fusion360]({{ "/fusion360/"                                    | relative_url }})                                            |
 | Electronics mockups                | Arduino, Raspberry Pi, IoT                                      |                                                             |
 | Organization                       | Notion, Obsidian, Airtable, Mural, Figjam                       |                                                             |
 | Business Operations                | Toggl, Xero, Ramp, Tally.so, Obsidian, Umami, Loops             |                                                             |
 | AI Tools                           | Claude Desktop, Claude Cowork, Claude Code                      |                                                             |
+| [Software Tools]({{ "/custom-software-tools-and-utilities/" | relative_url }})                  | Claude Code, Xcode (SwiftUI), Python, JavaScript, Vercel, GitHub, Obsidian |
