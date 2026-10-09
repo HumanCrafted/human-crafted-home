@@ -22,6 +22,7 @@ This website was built with the help of Claude Code, and inspired by [Steph Ango
 ### Core Framework
 - **Jekyll** - Static site generator with GitHub Pages compatibility
 - **GitHub Pages** - Free hosting with automatic builds on push to main branch
+- **jekyll-sitemap** - Generates `/sitemap.xml` from every page and collection item on each build. Redirect stubs and utility pages (cart, thanks, 404) opt out with `sitemap: false`
 
 ### Content Management
 - **[Obsidian](https://obsidian.md)** - Primary markdown editor for content creation

@@ -59,6 +59,7 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - README.md
+  - CLAUDE.md
 
 # Collections for organized content
 collections:

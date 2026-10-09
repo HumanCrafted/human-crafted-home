@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.humancrafted.co/sitemap.xml
+Sitemap: https://humancrafted.co/sitemap.xml
