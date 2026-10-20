@@ -23,6 +23,10 @@
   url: /materials/
   enabled: true
 
+- name: Sources
+  url: /sources/
+  enabled: true
+
 - name: Design System
   url: /design-system/
   enabled: true
