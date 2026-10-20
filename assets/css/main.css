@@ -622,6 +622,17 @@ td {
   border-radius: 0.25rem;
 }
 
+/* /sources/ thumbnails (script/sources.py). Toned from ink to the light paper
+   color, so on the light page the photo's background disappears and in dark
+   mode each one reads as a small paper tile. Same max-width opt-out as above. */
+.source-thumb {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  max-width: none;
+  border-radius: 0.25rem;
+}
+
 /* Preview play buttons (assets/js/music-player.js). The gutter is reserved by
    padding on every title cell and the button is placed into it, so titles align
    whether or not a track has a preview — most don't, and a bare-text title is

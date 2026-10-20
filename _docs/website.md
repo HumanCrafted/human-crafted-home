@@ -121,10 +121,10 @@ The [[materials|Materials]] note is the same database shape applied to laser-cut
 - Each color carries a `palettes:` list (curated sets, assigned in Obsidian; a color can be in several). The hub renders a homepage-style `.tag-filter` bar above the table — buttons collected by Liquid from all `palettes` values, rows tagged `data-palettes`, shown/hidden by the same inline-script pattern as the project grid, with `?palette=<slug>` deep links (names slugified for clean URLs; the script slugifies incoming params so old display-name links still resolve, and clicking a filter writes the slug to the address bar for sharing). The bar and script render only when at least one color has a palette. This replaces the old app's palette-builder: palettes are authored in front matter, not assembled in the browser
 
 #### Sources
-The [[sources|Sources]] note lists where the parts, packaging and a few shop supplies come from: rubber feet, maple, cello bags, shipping boxes and the like. Unlike Materials, the record doesn't live in this vault. It lives in the private CoOps ops vault, one note per supply with counts, prices and order history. `script/sources.py` copies across only what the page shows (item, part number, vendor and link, and which products use it) into `_data/sources.yml`, and the note renders that as a table.
+The [[sources|Sources]] note lists where the parts, packaging and a few shop supplies come from: rubber feet, maple, cello bags, shipping boxes and the like. Unlike Materials, the record doesn't live in this vault. It lives in the private CoOps ops vault, one note per supply with counts, prices and order history. `script/sources.py` copies across only what the page shows (item, part number and vendor link) into `_data/sources.yml`, and the note renders that as a table.
 - A supply shows up once its CoOps note carries `site: true`; prices, counts and pack sizes are never copied
-- Used for is worked out from the CoOps product notes' parts tables and linked to each project page; shop gear names a page itself (`used_for: 3d-printer`)
 - The data file is generated, so it's changed by editing CoOps and running the script again, not by hand
+- Each supply can name a photo (`site_image:`, usually the vendor's product shot). The script turns it into a small square thumbnail toned from the page's ink to its paper color, so the vendor's white background disappears into the page; in dark mode each one sits on a little paper tile
 
 ### The shop (Made)
 

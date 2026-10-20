@@ -4,21 +4,23 @@
 
 - name: "Cello bags"
   slug: "cello-bags"
-  used_for: ["acrylic-trees"]
   items:
-    - item: "2x3"
+    - item: "2x3, 2 mil clear OPP, self-adhesive flap"
       vendor: "NicePackaging (Amazon)"
       url: "https://www.amazon.com/dp/B077YZB9NY"
-    - item: "3x5"
+      image: "sources/cello-bags-2x3.jpg"
+    - item: "3x5, 2 mil clear OPP, self-adhesive flap"
       vendor: "NicePackaging (Amazon)"
       url: "https://www.amazon.com/dp/B077H1TTNC"
-    - item: "4x6"
+      image: "sources/cello-bags-3x5.jpg"
+    - item: "4x6, 2 mil clear OPP, self-adhesive flap"
       vendor: "NicePackaging (Amazon)"
       url: "https://www.amazon.com/dp/B077H27J6J"
+      image: "sources/cello-bags-4x6.jpg"
 
 - name: "Desiccant"
   slug: "desiccant"
-  used_for: ["3d-printer"]
+  image: "sources/desiccant.jpg"
   items:
     - item: "Dry & Dry orange indicating silica gel beads, 3-5 mm"
       vendor: "Dry & Dry (Amazon)"
@@ -26,7 +28,7 @@
 
 - name: "Filament containers"
   slug: "filament-containers"
-  used_for: ["3d-printer"]
+  image: "sources/filament-containers.jpg"
   items:
     - item: "Wildone 4L airtight cereal container, grey"
       vendor: "Wildone (Amazon)"
@@ -34,7 +36,7 @@
 
 - name: "Hang tags"
   slug: "hang-tags"
-  used_for: []
+  image: "sources/hang-tags.jpg"
   items:
     - item: "Clear plastic hang tab, slot hole"
       vendor: "xiongyidun (Amazon)"
@@ -42,24 +44,15 @@
 
 - name: "Label printer tape"
   slug: "label-printer-tape"
-  used_for: ["acrylic-trees"]
+  image: "sources/label-printer-tape.jpg"
   items:
     - item: "Brother TZe-231, 12mm black on white"
       vendor: "Office Depot"
       url: "https://www.officedepot.com/a/products/5460896/"
 
-- name: "Maple"
-  slug: "maple"
-  used_for: ["bath-container", "tissue-dispenser"]
-  items:
-    - item: "Mastercraft 1 x 6 x 6' maple"
-      part: "1047088"
-      vendor: "Menards"
-      url: "https://www.menards.com/main/building-materials/lumber-boards/boards/mastercraft-reg-1-x-6-maple-board/1047088/p-1444422749478-c-13115.htm"
-
 - name: "Packing foam"
   slug: "packing-foam"
-  used_for: []
+  image: "sources/packing-foam.jpg"
   items:
     - item: "12\" x 350' x 1/16\", perforated, white"
       part: "G1014366"
@@ -68,7 +61,6 @@
 
 - name: "Rubber feet"
   slug: "rubber-feet"
-  used_for: ["tissue-dispenser"]
   items:
     - item: "Push-and-Stay bumper, black, 1/4\" hole"
       part: "9309K121"
@@ -77,7 +69,7 @@
 
 - name: "Shipping boxes"
   slug: "shipping-boxes"
-  used_for: ["acrylic-trees"]
+  image: "sources/shipping-boxes.jpg"
   items:
     - item: "10x7x5 kraft, single wall, 32 ECT"
       part: "G8545704"
@@ -86,7 +78,7 @@
 
 - name: "Shipping tape"
   slug: "shipping-tape"
-  used_for: ["acrylic-trees"]
+  image: "sources/shipping-tape.jpg"
   items:
     - item: "Scotch Box Lock paper tape, 1.88\" x 25 yd"
       part: "9097035"
