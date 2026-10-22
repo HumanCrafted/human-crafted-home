@@ -47,6 +47,8 @@ It's 4.75" × 0.875" × 0.1", the same length as a standard stick, so the wrappe
 
 Printed flat on the [[3d-printer|3D printer]] in Polymaker Panchroma Matte PLA.
 
+Have a 3D printer? Download the [STL](https://raw.githubusercontent.com/HumanCrafted/xyz-fyi/main/butter-stick/print/butter-stick.stl) or [3MF](https://raw.githubusercontent.com/HumanCrafted/xyz-fyi/main/butter-stick/print/butter-stick.3mf) and print your own. Free for personal use under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
 ### Materials and colors
 
 ![[filament-panchroma-matte-savannah-yellow|Savannah Yellow]]

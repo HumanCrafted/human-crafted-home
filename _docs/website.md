@@ -32,7 +32,7 @@ This website was built with the help of Claude Code, and inspired by [Steph Ango
 ### Development Tools
 - **Claude Code and Cowork** - AI-powered development assistant for implementation, edits, and content prototyping.
 - **[Figma](https://figma.com)** - Design prototyping, reference and specifications. Collaborating with Claude using the Figma MCP
-- **[Umami](https://umami.is)** - Privacy-first, cookieless analytics
+- **[Umami](https://umami.is)** - Privacy-first, cookieless analytics. Downloadable print files (STL, 3MF) live in the public [xyz-fyi](https://github.com/HumanCrafted/xyz-fyi) repo, CC BY-NC-SA 4.0, and a note links them as plain markdown; a small script in the layout records any click on an xyz-fyi link as a `File download` event with the file name, so no tracking markup goes in the note
 - **[Loops](https://loops.so)** - Email newsletter, the signup form on the [[follow|Follow]] page, and audience/contact management
 
 ## Design System

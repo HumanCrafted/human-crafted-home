@@ -215,9 +215,18 @@
 
     {% if site.shop_enabled %}{% include cart-drawer.html %}{% endif %}
 
-    <!-- Umami event tracking for wiki sections -->
+    <!-- Umami event tracking for wiki sections and file downloads -->
     {% if jekyll.environment == "production" %}
     <script>
+    // Track downloads of files hosted in the xyz-fyi repo (STL, 3MF, STEP...),
+    // so a plain markdown link needs no data-umami-event attribute.
+    document.addEventListener('click', function(e) {
+        const link = e.target.closest('a[href*="/HumanCrafted/xyz-fyi/"]');
+        if (link && window.umami) {
+            window.umami.track('File download', { file: link.pathname.split('/').pop() });
+        }
+    });
+
     document.addEventListener('DOMContentLoaded', function() {
         // Track wiki section expansions
         const wikiSections = document.querySelectorAll('.wiki-item[data-wiki-section]');
