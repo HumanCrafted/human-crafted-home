@@ -41,11 +41,11 @@ The Butter Stick is a measuring stick for butter. Set it next to a stick of butt
 
 It's 4.75" × 0.875" × 0.1", the same length as a standard stick, so the wrapper can go straight in the trash.
 
+*It's a guide for marking the cut, not a knife or a butter dish. Like any 3D print, it isn't certified food safe, and the fine layer lines can hold onto grease. So keep the contact brief and hand wash it in warm, soapy water. No dishwasher: PLA can warp.*
+
 ### Making it
 
 Printed flat on the [[3d-printer|3D printer]] in Polymaker Panchroma Matte PLA.
-
-It's a guide for marking the cut, not a knife or a butter dish. Like any 3D print, it isn't certified food safe, and the fine layer lines can hold onto grease. So keep the contact brief and hand wash it in warm, soapy water. No dishwasher: PLA can warp.
 
 ### Materials and colors
 
