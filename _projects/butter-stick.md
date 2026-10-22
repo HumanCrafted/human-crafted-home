@@ -37,13 +37,15 @@ process:
   - 3d printing
 ---
 
-The Butter Stick is a measuring stick for butter. Set it next to a stick of butter and cut at a notch. Each notch is a tablespoon, with a longer one at the halfway mark (4 tablespoons). The conversion is printed on top: 8 TBSP · 1/2 C · 1/4 LB.
+The Butter Stick is a measuring stick for butter. Set it next to a stick of butter and cut at a notch. The notches mark every tablespoon, graduated like a ruler. The conversion is printed on top: 8 TBSP · 1/2 C · 1/4 LB.
 
 It's 4.75" × 0.875" × 0.1", the same length as a standard stick, so the wrapper can go straight in the trash.
 
 ### Making it
 
-Printed flat on the [[3d-printer|3D printer]] in Polymaker Panchroma Matte PLA. Hand wash only. PLA can warp in the dishwasher.
+Printed flat on the [[3d-printer|3D printer]] in Polymaker Panchroma Matte PLA.
+
+It's a guide for marking the cut, not a knife or a butter dish. Like any 3D print, it isn't certified food safe, and the fine layer lines can hold onto grease. So keep the contact brief and hand wash it in warm, soapy water. No dishwasher: PLA can warp.
 
 ### Materials and colors
 
