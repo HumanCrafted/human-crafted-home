@@ -8,6 +8,14 @@ symbol: "$"
 # Orders at or above this subtotal ship free. Set to null to always charge.
 free_shipping_over: 75
 
+# A cart of nothing but small items (products with `ship_size: small` — trees,
+# robin, Butter Stick) ships free from this lower subtotal instead. A mailer
+# costs the same to send up to ~14 oz (Rollo, Oct 2026: $8.62 to CA at 8 oz,
+# same as the 2 lb box), so one $6 tree can't carry shipping but a bundle can.
+# One box-size item in the cart and the order is back on free_shipping_over.
+# Set to null to turn the small-item threshold off.
+free_shipping_small_over: 25
+
 # Flat shipping rates by region. The shopper picks a region on /cart/ before
 # checkout; the checkout function then offers Stripe exactly one rate and
 # restricts the address form to that region's `countries` (ISO 3166-1 codes).

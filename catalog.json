@@ -53,6 +53,7 @@ shop_page: true   # withheld entirely when shop_enabled is false
     "symbol": {{ site.data.shop.symbol | jsonify }},
     "currency": {{ site.data.shop.currency | jsonify }},
     "free_shipping_over": {{ site.data.shop.free_shipping_over | default: 0 }},
+    "free_shipping_small_over": {{ site.data.shop.free_shipping_small_over | default: 0 }},
     "low_stock_at": {{ site.data.shop.low_stock_at | default: 5 }}
   },
   "shipping": [
@@ -72,6 +73,7 @@ shop_page: true   # withheld entirely when shop_enabled is false
       "slug": {{ p.slug | default: p.title | slugify | jsonify }},
       "title": {{ p.title | jsonify }},
       "type": {{ p.shop_type | default: "physical" | jsonify }},
+      "ship_size": {{ p.ship_size | default: "box" | jsonify }},
       "status": {{ p.shop_status | jsonify }},
       "price": {{ p.price | default: 0 }},
       "url": {{ p.url | relative_url | jsonify }},

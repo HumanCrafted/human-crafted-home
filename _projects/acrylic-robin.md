@@ -23,6 +23,7 @@ headline: A flat laser-cut acrylic robin that stands on two thin legs, read enti
 shop_status: available
 price: 12.00
 ships_in: 3–5 business days
+ship_size: small
 variants:
   - name: Bronze Smoke
     sku: ACR-ROB-BRZ

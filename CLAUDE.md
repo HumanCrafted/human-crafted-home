@@ -440,6 +440,18 @@ repo (`docs/ecommerce-research.md`, "Architecture A"):
   YAML reads bare `NO` as false) or the function refuses it. The INTL list is
   a placeholder. `catalog.json` now also carries `site` (absolute origin, for
   Stripe product images) and `countries` per region.
+- **Small-item free shipping (Oct 2026):** a product with `ship_size: small`
+  (fits a mailer; default is `box`) counts as small. A cart whose physical
+  items are all small ships free at `free_shipping_small_over` ($25,
+  `_data/shop.yml`) instead of `free_shipping_over` ($75); one box item and
+  the $75 rule applies. Under $25 it pays the same flat $8. Why: an 8 oz
+  mailer costs about what the box does (Rollo Ground Advantage $6.31 Chicago,
+  $8.62 CA), so a cheaper small *rate* would be a subsidy — free-over-$25 rewards
+  bundling instead. Two copies of the rule must agree: `freeThreshold()` in
+  cart.js (display + the "add $X more" hint on `/cart/`) and `buildOrder()` in
+  hcd-checkout `lib/catalog.js` (what's charged). `catalog.json` carries
+  `ship_size` per product and the setting. **Deploy hcd-checkout first** when
+  changing the rule, or the cart promises free shipping Stripe doesn't give.
 - **Errors** come back as `400 { error, notices[] }` and render inline at the
   top of `/cart/` via `showCheckoutNotices()`, same voice as `reconcile()`.
 - **Buy block design (Sept 2026):** no card — the block sits on the paper

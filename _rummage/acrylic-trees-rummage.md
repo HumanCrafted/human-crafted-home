@@ -20,6 +20,7 @@ gallery_images:
 # (DBT = Dark Blue Transparent; DBL is the opaque Dark Blue on the XXL).
 shop_status: available
 price: 3.00
+ship_size: small
 options:
   - name: Size
     values: [Tiny, Small, Medium, Large, X-Large, XXL, XXXL]

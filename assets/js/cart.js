@@ -150,12 +150,27 @@
 
   // ---------------------------------------------------------------- totals
 
+  // Which free-shipping threshold applies. A cart of nothing but small items
+  // (ship_size: small — they go in a mailer) has its own, lower one; a single
+  // box-size item puts the order back on free_shipping_over. Same rule as
+  // buildOrder() in hcd-checkout, which is what actually charges.
+  function freeThreshold(items, cat) {
+    var small = cents(cat.settings.free_shipping_small_over || 0);
+    var allSmall = items.every(function (i) {
+      if (i.type === 'digital') return true;
+      var hit = findVariant(cat, i.sku);
+      return !!hit && hit.product.ship_size === 'small';
+    });
+    if (small && allSmall) return { cents: small, small: true };
+    return { cents: cents(cat.settings.free_shipping_over || 0), small: false };
+  }
+
   function shippingFor(items, cat, regionCode) {
     var physical = items.some(function (i) { return i.type !== 'digital'; });
     if (!physical) return { cents: 0, label: 'No shipping — download' };
 
     var sub = subtotalCents(items);
-    var threshold = cents(cat.settings.free_shipping_over || 0);
+    var threshold = freeThreshold(items, cat).cents;
     if (threshold && sub >= threshold) return { cents: 0, label: 'Free over ' + money(threshold, cat.settings.symbol) };
 
     var region = cat.shipping.filter(function (s) { return s.code === regionCode; })[0];
@@ -540,6 +555,7 @@
               row('Subtotal', money(t.subtotal, cat.settings.symbol)) +
               (physical && cat.shipping.length > 1 ? regionPicker(cat, region) : '') +
               row('Shipping', t.shipping.cents === 0 ? esc(t.shipping.label) : money(t.shipping.cents, cat.settings.symbol)) +
+              smallShippingHint(items, cat, t) +
               row('Tax', 'At checkout') +
               row('Total', money(t.total, cat.settings.symbol) + (physical ? ' + tax' : ''), 'summary-row--total') +
               '<button type="button" class="btn cart-checkout-btn" data-checkout data-umami-event="Checkout start">Check out →</button>' +
@@ -573,6 +589,17 @@
 
   function row(label, value, cls) {
     return '<div class="summary-row' + (cls ? ' ' + cls : '') + '"><span>' + label + '</span><span>' + value + '</span></div>';
+  }
+
+  // A small-items-only cart that's still paying for shipping says how far it
+  // is from the lower threshold — the point of the threshold is bundling.
+  function smallShippingHint(items, cat, t) {
+    if (t.shipping.cents === 0 || t.shipping.unset) return '';
+    var free = freeThreshold(items, cat);
+    if (!free.small || !free.cents) return '';
+    return '<p class="cart-fineprint">Small items ship free over ' +
+      money(free.cents, cat.settings.symbol) + ' — add ' +
+      money(free.cents - t.subtotal, cat.settings.symbol) + ' more.</p>';
   }
 
   function noticesHtml(notices) {

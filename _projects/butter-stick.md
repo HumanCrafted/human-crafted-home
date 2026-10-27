@@ -23,6 +23,7 @@ headline: A 3D-printed measuring stick for butter, notched at every tablespoon.
 shop_status: available
 price: 6.00
 ships_in: 3–5 business days
+ship_size: small
 variants:
   - name: Savannah Yellow
     sku: BUT-STK-SAV
