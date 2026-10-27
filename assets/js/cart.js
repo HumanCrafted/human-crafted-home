@@ -505,13 +505,67 @@
 
   // ---------------------------------------------------------------- cart page
 
+  // A link like /cart/?items=BUT-STK-SAV:3,ACR-TRE-T-FRS:1 fills the cart with
+  // exactly that order — for sending someone an order made up for them. It
+  // replaces whatever was in the cart, then drops the query so a reload
+  // doesn't do it again. A SKU the catalog doesn't know is left out with a
+  // notice; reconcile() then checks stock and price as for any cart.
+  function loadFromLink(cat) {
+    var params = new URLSearchParams(window.location.search);
+    var raw = params.get('items');
+    if (raw == null) return [];
+
+    var notices = [];
+    var items = [];
+    raw.split(',').forEach(function (part) {
+      var bits = part.split(':');
+      var sku = (bits[0] || '').trim();
+      if (!sku) return;
+      var qty = Math.floor(Number(bits[1] || 1));
+      if (!(qty >= 1)) qty = 1;
+
+      var hit = findVariant(cat, sku);
+      if (!hit) {
+        notices.push('“' + sku + '” isn’t in the shop any more and was left out.');
+        return;
+      }
+      var same = items.filter(function (i) { return i.sku === sku; })[0];
+      if (same) { same.qty += qty; return; }
+
+      var isDigital = hit.product.type === 'digital';
+      items.push({
+        sku: sku,
+        slug: hit.product.slug,
+        title: hit.product.title,
+        variant: hit.variant.name,
+        price: hit.variant.price,
+        image: hit.product.image,
+        url: hit.product.url,
+        type: hit.product.type,
+        qty: isDigital ? 1 : qty,
+        max: isDigital ? 1 : hit.variant.stock
+      });
+    });
+    write(items);
+
+    params.delete('items');
+    var rest = params.toString();
+    history.replaceState(null, '', window.location.pathname + (rest ? '?' + rest : '') + window.location.hash);
+    return notices;
+  }
+
   function initCartPage() {
     var root = document.querySelector('[data-cart-page]');
     if (!root) return;
 
     catalog().then(function (cat) {
+      // Shown on the first render only, alongside reconcile()'s own.
+      var linkNotices = loadFromLink(cat);
+
       function render() {
         var state = reconcile(cat);
+        state.notices = linkNotices.concat(state.notices);
+        linkNotices = [];
         var items = state.items;
 
         if (!items.length) {

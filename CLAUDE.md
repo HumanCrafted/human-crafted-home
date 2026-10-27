@@ -452,6 +452,17 @@ repo (`docs/ecommerce-research.md`, "Architecture A"):
   hcd-checkout `lib/catalog.js` (what's charged). `catalog.json` carries
   `ship_size` per product and the setting. **Deploy hcd-checkout first** when
   changing the rule, or the cart promises free shipping Stripe doesn't give.
+- **Order links (Oct 2026):** `/cart/?items=SKU:qty,SKU:qty` (qty defaults
+  to 1) fills the cart with exactly that order — for sending a made-up order
+  to someone. It *replaces* the visitor's cart, then strips the query
+  (`history.replaceState`) so a reload doesn't redo it. Unknown SKUs are left
+  out with a notice; stock/price go through `reconcile()` like any cart.
+  `loadFromLink()` in cart.js. Pair with a one-off **promotion code**
+  (`allow_promotion_codes: true` in hcd-checkout since Oct 2026; Jon makes the
+  codes in the Stripe Dashboard). Stripe coupons never discount shipping, so
+  "free shipping" is an $8-off coupon; product-limited coupons won't match
+  because every checkout line is ad-hoc `product_data`. Don't put a code in
+  the link.
 - **Errors** come back as `400 { error, notices[] }` and render inline at the
   top of `/cart/` via `showCheckoutNotices()`, same voice as `reconcile()`.
 - **Buy block design (Sept 2026):** no card — the block sits on the paper

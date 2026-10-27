@@ -132,6 +132,8 @@ Selling happens on the project pages themselves; there's no separate storefront.
 
 Shipping is one flat rate per order, free over a set amount. Small things that fit a mailer carry `ship_size: small` in their front matter. A cart of nothing but those ships free from a much lower amount, because a mailer costs the same to send whether it holds one small thing or five. One bigger item in the cart and it's back on the regular rule. The cart works this out from the catalog to show it, and the checkout function works it out again to charge it.
 
+An order can also be sent as a link. `/cart/?items=` followed by SKUs and quantities fills the visitor's cart with exactly that order, ready to check out, and the cart checks it against the catalog like any other. Stripe's page takes promotion codes, which are made by hand in Stripe for one-off cases.
+
 Leftovers — old stock, retired products, offcuts, tools — go through the same cart and checkout but live apart from the work, in a `_rummage` collection listed on `/rummage/`. Each item is a note with the same shop front matter as a project, on a simpler page (image, title, buy block, a few words). Its crumb reads `humancrafted.co/rummage/<item>`. Rummage items join the same catalog, so the checkout function sells them without knowing the difference; their SKUs start `RUM-` so they can't collide with Made's. One-offs drop off the `/rummage/` grid once their stock reaches zero, and setting an item's status to off removes its page entirely. A product can point shoppers there from its own buy block with a `buy_note:` — a line of fine print under the shipping time, written with the same `[[slug|Text]]` links as the body (the plugin converts that one front-matter field too).
 
 ## Key Decisions
