@@ -426,8 +426,15 @@ repo (`docs/ecommerce-research.md`, "Architecture A"):
   the site's own `/catalog.json`, re-prices and stock-checks every SKU, creates
   a Stripe Checkout Session, and answers `{ url }`. The browser goes to
   Stripe's hosted page (address, shipping, payment incl. Link/Apple Pay, tax),
-  which returns to `/thanks/?session_id=…` (cart.js empties the cart) or
-  `/cart/` on cancel. The site never sees a card; the browser never sets a price.
+  which returns to `/thanks/?order=HC-…&session_id=…` (cart.js empties the
+  cart and shows the order number) or `/cart/` on cancel. The site never sees
+  a card; the browser never sets a price.
+- **Order numbers (Oct 2026):** the function gives each order `HC-` + six
+  random characters (no 0/O/1/I/L; no counter — there's no database), written
+  to the session/payment metadata `order` and the front of the payment
+  description, so it's on the Stripe receipt email, the Payments list, `/thanks/`
+  and the Rollo export's Order ID. Checkout also sets `customer_creation:
+  'always'` — buyers were landing as Stripe "guests".
 - **Gone:** `checkout.md` and the fake `placeOrder()`/receipt. `thanks.md` is
   static copy (PLACEHOLDER wording). Tax estimate removed from `_data/shop.yml`
   and `catalog.json` — Stripe calculates it (`STRIPE_TAX=1` on the function

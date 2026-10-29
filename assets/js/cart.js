@@ -732,9 +732,10 @@
 
   // ---------------------------------------------------------------- thanks
   //
-  // Stripe's success_url is /thanks/?session_id=… — arriving with that
-  // parameter means the payment went through, so the cart is done. The page
-  // copy itself is static (thanks.md); the receipt comes from Stripe.
+  // Stripe's success_url is /thanks/?order=HC-…&session_id=… — arriving with
+  // session_id means the payment went through, so the cart is done. The order
+  // number (set by the checkout function, also on the Stripe receipt) fills
+  // the page's hidden order line; anything not shaped like one is ignored.
 
   function initThanks() {
     var root = document.querySelector('[data-thanks-page]');
@@ -742,6 +743,13 @@
 
     var params = new URLSearchParams(window.location.search);
     if (!params.get('session_id')) return;
+
+    var number = params.get('order') || '';
+    var line = root.querySelector('[data-thanks-order]');
+    if (line && /^HC-[23456789A-HJKMNP-Z]{6}$/.test(number)) {
+      line.querySelector('[data-order-number]').textContent = number;
+      line.hidden = false;
+    }
 
     write([]);
     // Drop the id from the address bar so a reload or a shared link doesn't
