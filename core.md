@@ -7,7 +7,7 @@ redirect_from:
 ---
 This is the [[core]] of human / crafted, a boutique design studio and product design brand run by Jon Alling. Below you can learn more [[about-me|about me]], explore my [past work](/#projects)
 {%- if site.shop_enabled %} (or [buy some](/made/)){% endif -%}
-, see the [[services|services]] I offer, dig into my [[process|process]], reference the [[tools|tools]] that help me bring ideas to life, and sift through my notes, resources, and [[writing|writing]]. If you want to collab, get in touch [[lab|here]], or just [[follow|follow along]].
+, see the [[services|services]] I offer, dig into my [[process|process]], reference the [[tools|tools]] that help me bring ideas to life, and sift through my [[notes|notes]], resources, and [[writing|writing]]. If you want to collab, get in touch [[lab|here]], or just [[follow|follow along]].
 
 {% include wiki-two-column.html title="About" auto="about_docs" %}
 
