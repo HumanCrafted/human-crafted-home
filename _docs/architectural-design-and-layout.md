@@ -18,4 +18,4 @@ Space planning and layout concepts: how a room, shop, or home should work before
 
 Residential remodels, studio and shop buildouts, retail and tradeshow spaces.
 
-[[lab|Get in touch]] and we can talk through what you're planning.
+[Get in touch](mailto:hello@humancrafted.co) and we can talk through what you're planning.

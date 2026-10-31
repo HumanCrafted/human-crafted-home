@@ -18,4 +18,4 @@ Concept through manufacturing. Industrial design and mechanical engineering from
 
 25 years of it, consumer products through commercial equipment.
 
-[[lab|Get in touch]] and we can scope it.
+[Get in touch](mailto:hello@humancrafted.co) and we can scope it.

@@ -14,7 +14,7 @@ gallery_images:
 version: "1.0"
 draft: false
 ---
-Small, fast sites that YOU own. Static pages, no CMS subscription, no platform deciding what your content looks like next year or how much they'll charge you. Best for simple, single or multi-page sites with limited interactivity, but [[lab|let's discuss]] your needs if they are more complex.
+Small, fast sites that YOU own. Static pages, no CMS subscription, no platform deciding what your content looks like next year or how much they'll charge you. Best for simple, single or multi-page sites with limited interactivity, but [let's discuss](mailto:hello@humancrafted.co) your needs if they are more complex.
 
 ## What a project looks like
 
@@ -26,8 +26,8 @@ Small, fast sites that YOU own. Static pages, no CMS subscription, no platform d
 
 ## Good fit for
 
-Studio and portfolio sites, non-profits, product one-pagers, documentation, and small business sites that need to stay fast and stay cheap to run. *If you need e-commerce [[lab|let's discuss]].*
+Studio and portfolio sites, non-profits, product one-pagers, documentation, and small business sites that need to stay fast and stay cheap to run. *If you need e-commerce [let's discuss](mailto:hello@humancrafted.co).*
 
 ## What it costs
 
-Cost depends on page count and how much design work is net-new versus adapting something you already have. Hosting is typically free or a few dollars a month. Full projects range from a few hundred to a few thousand.  [[lab|Get in touch]] and let's make something great.
+Cost depends on page count and how much design work is net-new versus adapting something you already have. Hosting is typically free or a few dollars a month. Full projects range from a few hundred to a few thousand.  [Get in touch](mailto:hello@humancrafted.co) and let's make something great.

@@ -18,4 +18,4 @@ Product strategy, positioning, and the practical parts of getting from nothing t
 
 Useful for early founders, small teams without a design lead, and anyone deciding what to build next.
 
-[[lab|Get in touch]] and we can talk it through.
+[Get in touch](mailto:hello@humancrafted.co) and we can talk it through.

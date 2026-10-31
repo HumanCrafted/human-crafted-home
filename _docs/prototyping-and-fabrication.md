@@ -20,4 +20,4 @@ Working prototypes and short production runs, made in the studio. Laser, CNC, an
 
 Good for test units, market samples, corporate gifts, tradeshow pieces, and low-volume custom products.
 
-[[lab|Get in touch]] with what you need made.
+[Get in touch](mailto:hello@humancrafted.co) with what you need made.
