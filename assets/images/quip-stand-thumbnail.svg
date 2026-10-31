@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" fill="#2A2824">
   <defs>
     <style>
       .cls-1 {
-        fill: #333;
+        fill: #2A2824;
       }
     </style>
   </defs>

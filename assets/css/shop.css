@@ -76,7 +76,7 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
 .cart-drawer-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(var(--shade), 0.4);
   opacity: 0;
   transition: opacity 250ms ease;
 }
@@ -92,7 +92,7 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
   background: var(--background);
   /* Borderless, lifted off the page by a soft shadow — same treatment as the
      quick-links panel. */
-  box-shadow: -12px 0 40px rgba(0, 0, 0, 0.14);
+  box-shadow: -12px 0 40px rgba(var(--shade), 0.14);
   display: flex;
   flex-direction: column;
   transform: translateX(100%);
@@ -159,10 +159,10 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
 
 .cart-line--lg .cart-line-image { width: 6.5rem; height: 6.5rem; }
 
-/* The drawer lives outside .page-content, so main.css's dark-mode SVG invert
+/* The drawer lives outside .page-content, so main.css's dark-mode SVG filter
    never reaches its thumbnails. Same filter, same reason. */
 [data-theme="dark"] .cart-line-image img[src$=".svg"] {
-  filter: invert(91%) sepia(17%) saturate(166%) hue-rotate(1deg) brightness(94%) contrast(88%);
+  filter: url(#ink-dark);
 }
 .cart-line-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
 

@@ -14,6 +14,10 @@
   --muted-foreground: #736356;  /* ink-muted — secondary text */
   --surface: #ECE3CE;           /* paper-warm — warm section / callout */
   --border: #948F87;            /* rules / dividers */
+  /* shade — the colour of shadows and backdrops, as an RGB triplet for
+     rgba(var(--shade), alpha). Ink on paper; under dark the page already is
+     ink, so a shadow has to go darker than it (black, only ever at low alpha). */
+  --shade: 42, 40, 36;
 
   /* Design-system accent hues — used to color-code Places map pins by
      category/status (see _docs/design-system.md and places-map.js). Each
@@ -33,6 +37,7 @@
   --muted-foreground: #948F87;  /* ink-muted (dark) */
   --surface: #3A3733;           /* raised surface */
   --border: #736356;
+  --shade: 0, 0, 0;
 
   --ds-yellow: #C9A832;         /* yellow-deep */
   --ds-gold:   #9A6720;         /* gold-deep */
@@ -454,12 +459,21 @@ a.site-title:hover {
   display: block;
 }
 
-/* Dark mode SVG filter */
+/* Dark mode SVG filter: #ink-dark in default.html maps ink to dark ink and
+   paper to dark paper exactly. Its <svg> must stay rendered (display: none
+   breaks the reference in some browsers), so it's just taken out of flow. */
+.filter-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
 [data-theme="dark"] .svg-darkmode,
 [data-theme="dark"] .page-content img[src$=".svg"],
 [data-theme="dark"] .project-image img[src$=".svg"],
 [data-theme="dark"] .project-image svg {
-  filter: invert(91%) sepia(17%) saturate(166%) hue-rotate(1deg) brightness(94%) contrast(88%);
+  filter: url(#ink-dark);
   will-change: auto;
 }
 
@@ -719,7 +733,7 @@ img {
    corner and soft shadow lift them off it, like the cart drawer panel. */
 img.frame-shadow {
   border-radius: 0.75rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06), 0 12px 32px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 6px rgba(var(--shade), 0.06), 0 12px 32px rgba(var(--shade), 0.12);
 }
 
 @media (max-width: 768px) {
@@ -1343,7 +1357,7 @@ hr {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(var(--shade), 0.8);
   z-index: 1000;
   cursor: pointer;
   animation: fadeIn 150ms ease;
@@ -1365,7 +1379,7 @@ hr {
 }
 
 .lightbox img[src$=".svg"] {
-  filter: invert(91%) sepia(17%) saturate(166%) hue-rotate(1deg) brightness(94%) contrast(88%);
+  filter: url(#ink-dark);
 }
 
 .lightbox-close {
@@ -2014,7 +2028,7 @@ hr {
 }
 
 [data-theme="dark"] .illo-figure img {
-  filter: invert(91%) sepia(17%) saturate(166%) hue-rotate(1deg) brightness(94%) contrast(88%);
+  filter: url(#ink-dark);
 }
 
 .illo-notes {
@@ -2308,11 +2322,11 @@ body.places-map-open {
   align-items: center;
   justify-content: center;
   background: var(--background);
-  border: 2px solid rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(var(--shade), 0.2);
   border-radius: 4px;
   color: var(--foreground);
   cursor: pointer;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 5px rgba(var(--shade), 0.4);
 }
 .places-expand-btn:hover {
   background: var(--muted);
@@ -2327,7 +2341,7 @@ body.places-map-open {
   background: var(--background);
   color: var(--foreground);
   border-radius: 0;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 6px rgba(var(--shade), 0.3);
 }
 .places-map .leaflet-popup-content {
   font-family: 'IBM Plex Mono', monospace;

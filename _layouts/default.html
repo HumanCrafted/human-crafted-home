@@ -72,6 +72,22 @@
   the nav cart icon shows while the cart is empty (see .cart-link.is-empty).
 {%- endcomment -%}
 <body{% if site.shop_enabled and page.shop or site.shop_enabled and page.shop_status == "available" %} class="shop-page"{% endif %}>
+    {%- comment -%}
+      Dark mode for the line drawings (filter: url(#ink-dark) in main.css and
+      shop.css). Drawings are ink on a transparent ground (script/ink.py keeps
+      them that way); this maps each channel straight across so ink #2A2824
+      lands exactly on dark ink #ECE3CE and paper #FAF7F2 on dark paper
+      #2A2824. slope/intercept per channel = the line through those two pairs.
+    {%- endcomment %}
+    <svg class="filter-defs" aria-hidden="true" focusable="false" width="0" height="0">
+        <filter id="ink-dark" color-interpolation-filters="sRGB">
+            <feComponentTransfer>
+                <feFuncR type="linear" slope="-0.9327" intercept="1.0791"/>
+                <feFuncG type="linear" slope="-0.9034" intercept="1.0319"/>
+                <feFuncB type="linear" slope="-0.8252" intercept="0.9243"/>
+            </feComponentTransfer>
+        </filter>
+    </svg>
     <div class="site-container">
         <header class="site-header">
             <div class="header-content">

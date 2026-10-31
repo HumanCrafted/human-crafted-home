@@ -44,6 +44,7 @@ The site's colors, typography, spacing, and components are documented in the [[d
 2. **Fusion 360 Render**: Simple render to export PNG with shadow
 3. **Adobe Illustrator**: Clean up vector illustration and composite with shadow
 4. **Final Format**: SVG for crisp display at any size with automatic dark mode conversion
+5. **Ink, not black**: every drawing is cut shapes in the page's ink (#2A2824) on a transparent ground, with no white or other fills. Exports arrive in pure black, so `script/ink.py` recolors them (and `--check` lists any that still need it). Dark mode runs each drawing through one exact color map that turns ink into the dark-mode text color and paper into the dark page, so a drawing always matches the type around it. Shadows and dimmed backdrops use the same ink, darkened further in dark mode
 
 ## Development Details
 
