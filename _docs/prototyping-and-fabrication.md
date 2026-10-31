@@ -1,10 +1,12 @@
 ---
 layout: doc
-title: Small Scale Production or Prototyping
-slug: small-scale-production-or-prototyping
+title: Prototyping and Fabrication
+slug: prototyping-and-fabrication
+redirect_from:
+  - /small-scale-production-or-prototyping/
 weight: 50
-crumb: production and prototyping
-summary: Working prototypes and short runs, cut and printed in the studio.
+crumb: prototyping and fabrication
+summary: Working prototypes, signs and displays, jigs and fixtures, custom and replacement parts, and short production runs.
 main_image:
 featured: false
 tags:

@@ -266,7 +266,7 @@ a.site-title:hover {
   text-decoration-style: wavy;
 }
 
-/* co/re hamburger link — icon button matching the theme toggle */
+/* co/re icon link (cut-away globe) — icon button matching the theme toggle */
 .site-nav .core-link {
   display: flex;
   align-items: center;
@@ -289,7 +289,7 @@ a.site-title:hover {
   flex-shrink: 0;
 }
 
-/* Quick-access menu — floats under the co/re hamburger (homepage, desktop
+/* Quick-access menu — floats under the co/re icon (homepage, desktop
    only). Items come from _data/quick_menu.yml. Pure CSS, and deliberately
    slow: it only appears after the cursor dwells on the icon for
    --quick-menu-dwell, so a passing hover never shows it (easter-egg feel).
@@ -389,7 +389,7 @@ a.site-title:hover {
   }
 }
 
-/* Co/re sub-pages carry the hamburger on desktop only: on a phone their
+/* Co/re sub-pages carry the co/re icon on desktop only: on a phone their
    crumb (co/re/<slug>) already links the hub and the header has no room. */
 @media (max-width: 768px) {
   .site-nav .core-menu--wide-only {
@@ -497,16 +497,36 @@ h1 {
   line-height: 1.1;
 }
 
+/* Homepage hero band: the statement plus a quieter services line under it.
+   min-height, not height, so the band grows instead of clipping where the
+   two wrap to more lines (phones). */
+.hero {
+  min-height: 40vh;
+  max-width: 60%;
+  margin-bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-sub {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: var(--muted-foreground);
+  margin: 2rem 0 0;
+}
+
+.hero-sub a {
+  color: var(--foreground);
+  font-weight: 500;
+}
+
 .hero-title {
   font-size: 3rem;
   font-weight: 400;
-  margin-bottom: 6rem;
+  margin-bottom: 0;
   margin-top: 0;
   line-height: 1.1;
-  max-width: 60%;
-  height: 40vh;
-  display: flex;
-  align-items: center;
 }
 
 h2 {
@@ -1011,11 +1031,18 @@ hr {
     padding: 0;
   }
   
+  .hero {
+    min-height: 30vh;
+    max-width: 100%;
+  }
+
   .hero-title {
     font-size: 2.25rem;
-    margin-top: 0;
-    height: 30vh;
-    max-width: 100%;
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+    margin-top: 1.5rem;
   }
   
   h1 {
@@ -1432,6 +1459,71 @@ hr {
   margin-top: 2rem;
 }
 
+/* co/lab (/lab/, _layouts/lab.html): the Venn beside the intro, then the
+   services as title | summary rows. The 500px first column is the Venn's
+   width, so the summaries start on the same line as the intro text. */
+.lab-intro {
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 6rem;
+}
+
+.lab-intro-image {
+  width: 100%;
+  height: auto;
+}
+
+.lab-intro-text > p:first-child {
+  margin-top: 0;
+}
+
+.services-list {
+  margin: 0 0 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.services-list-row {
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  gap: 4rem;
+}
+
+.services-list dt {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 700;
+}
+
+.services-list dd {
+  margin: 0;
+}
+
+.lab-closing {
+  max-width: 720px;
+}
+
+@media (max-width: 1024px) {
+  .lab-intro,
+  .services-list-row {
+    grid-template-columns: 1fr;
+  }
+
+  .lab-intro {
+    gap: 2rem;
+  }
+
+  .lab-intro-image {
+    max-width: 500px;
+  }
+
+  .services-list-row {
+    gap: 0.25rem;
+  }
+}
+
 /* Subscribe form (Loops signup) */
 .subscribe-form {
   margin-top: 1.5rem;
@@ -1511,8 +1603,9 @@ hr {
   color: var(--foreground);
 }
 
-/* Footer links: "let's co/lab!" (was a nav pill + phone FAB until Oct 2026)
-   and "follow along!" */
+/* Footer links: "follow along" and "email me" (a mailto). Underlined at rest
+   like any link. Until Oct 2026 the second was "let's co/lab!" to /lab/,
+   before that a nav pill + phone FAB. */
 .footer-links {
   display: flex;
   gap: 2rem;
@@ -1522,7 +1615,7 @@ hr {
   color: var(--foreground);
   font-size: 14px;
   letter-spacing: -0.21px;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .footer-link:hover {

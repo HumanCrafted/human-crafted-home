@@ -11,7 +11,7 @@ This is the [[core]] of human / crafted, a boutique design studio and product de
 
 {% include wiki-two-column.html title="About" auto="about_docs" %}
 
-{% include wiki-two-column.html title="Services" auto="services_docs" show_all_link="/services/" show_all_text="View all services" %}
+{% include wiki-two-column.html title="Services" auto="services_docs" show_all_link="/lab/" show_all_text="View all services" %}
 
 {%- assign resource_items = "Decimal Equivalents:/decimal-chart/,Hardware Design:/hardware-design/" -%}
 {%- if site.shop_enabled %}{% assign resource_items = resource_items | append: ",Rummage Shop:/rummage/" %}{% endif -%}

@@ -1,0 +1,35 @@
+---
+layout: default
+---
+{%- comment -%}
+  co/lab: the services page at /lab/ (merged from /services/, Oct 2026).
+  The page's markdown is the intro, set beside the front-matter `image:`
+  (the Venn). Below it: the Email me button, the service list built from
+  every doc tagged `services` (weight order, title | summary), and a closing
+  line. Service pages crumb as humancrafted.co/lab/<slug> (wordmark.html).
+{%- endcomment -%}
+{%- assign services = site.docs | where_exp: "doc", "doc.draft != true" | where_exp: "doc", "doc.tags contains 'services'" | sort: "weight" -%}
+<div class="lab-intro">
+  {%- if page.image %}
+  <img class="lab-intro-image" src="{{ '/assets/images/' | append: page.image | relative_url }}" alt="">
+  {%- endif %}
+  <div class="lab-intro-text">
+    {{ content }}
+    <a href="mailto:hello@humancrafted.co" class="btn contact-btn" data-umami-event="Email button">Email me</a>
+  </div>
+</div>
+
+<hr class="section-divider">
+<h2 class="projects-title" id="services">What I can help with</h2>
+
+<dl class="services-list">
+  {%- for service in services %}
+  <div class="services-list-row">
+    <dt><a href="{{ service.url | relative_url }}">{{ service.title }}</a></dt>
+    <dd>{{ service.summary }}</dd>
+  </div>
+  {%- endfor %}
+</dl>
+
+<hr class="section-divider">
+<p class="lab-closing">View <a href="{{ '/' | relative_url }}#projects">the projects</a> for examples of work I have done. Not sure which service you need, or need something that isn't on the list? <a href="mailto:hello@humancrafted.co" data-umami-event="Email closing">Email me</a> and we can talk it through.</p>

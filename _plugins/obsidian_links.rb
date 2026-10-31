@@ -78,6 +78,7 @@ module ObsidianLinks
     "core"  => "/re/",  # core.md -> /re/
     "re"    => "/re/",
     "more"  => "/re/",  # legacy /more/ label, redirects to /re/
+    "services" => "/lab/",  # services merged into /lab/ (Oct 2026); /services/ redirects
     "index" => "/",     # homepage
     "home"  => "/",
   }.freeze

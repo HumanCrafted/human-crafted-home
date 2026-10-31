@@ -1,10 +1,11 @@
 ---
-layout: default
-title: Let's Collab.
+layout: lab
+title: Services
 permalink: /lab/
+image: vennColab.svg
+redirect_from:
+  - /services/
 ---
-![[vennColab.svg]]
+Need a little help (or a lot)? Human Crafted is an [[about-me|experienced]] one-person studio, so the work is direct: you're talking to the person doing it. Most engagements start small, prove something out, and grow from there.
 
-I love working with other passionate entrepreneurs, creative individuals, and forward-thinking companies. You have dreams and goals — I love planning and building. Let's **collab** to make something great! Read [[core|more]] about what I do and [[services|how]] I work, email me using the button below ↓, or reach out on one of my [[follow|socials]]. 
-
-<a href="mailto:hello@humancrafted.co" class="btn contact-btn">Contact me</a>
+I love working with other passionate entrepreneurs, creative individuals, and forward-thinking companies. You have dreams and goals — I love planning and building. Let's **collab** to make something great!

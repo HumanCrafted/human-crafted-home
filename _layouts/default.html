@@ -116,10 +116,12 @@
                     {%- assign show_core_menu = false -%}
                     {%- if page.url == "/" or page.url == "/re/" %}{% assign show_core_menu = true %}{% endif -%}
                     {%- if site.shop_enabled and page.shop or site.shop_enabled and page.shop_status == "available" %}{% assign show_core_menu = true %}{% endif -%}
-                    {%- comment -%} Rummage pages are shop pages too, but "humancrafted.co/rummage" is too long to share a 375px row with the hamburger; their crumb links home. {%- endcomment -%}
+                    {%- comment -%} Rummage pages are shop pages too, but "humancrafted.co/rummage" is too long to share a 375px row with the co/re icon; their crumb links home. {%- endcomment -%}
                     {%- if page.url == "/rummage/" or page.collection == "rummage" %}{% assign show_core_menu = false %}{% endif -%}
                     {% comment %}
-                      co/re hamburger. Every page on desktop, so the quick links
+                      co/re icon: a globe cut through, its core showing (was a
+                      hamburger until Oct 2026). Sits beside the sun/moon theme
+                      toggle on purpose. Every page on desktop, so the quick links
                       are reachable from co/re sub-pages too. On phones only on
                       home, co/re itself, and the Made pages (/made/, products for
                       sale, cart, thanks — whose crumb files them under made, so
@@ -138,7 +140,9 @@
                     <div class="core-menu{% unless show_core_menu %} core-menu--wide-only{% endunless %}">
                         <a href="{{ '/re/' | relative_url }}" class="core-link" aria-label="co/re — about &amp; archive"{% if page.url == "/re/" %} aria-current="page"{% endif %} data-umami-event="Core nav">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <path d="M3 6h18M3 12h18M3 18h18"/>
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 2v20"/>
+                                <path d="M12 6.75a5.25 5.25 0 0 1 0 10.5Z" fill="currentColor" stroke="none"/>
                             </svg>
                         </a>
                         {% if quick_items.size > 0 %}
@@ -204,10 +208,8 @@
             <div class="footer-content">
                 <p>&copy; {{ 'now' | date: "%Y" }} Human Crafted LLC. All rights reserved.</p>
                 <div class="footer-links">
-                    <a href="{{ '/follow/' | relative_url }}" class="footer-link" data-umami-event="Follow footer">follow along!</a>
-                    {%- unless page.url == "/lab/" %}
-                    <a href="{{ '/lab/' | relative_url }}" class="footer-link" data-umami-event="Colab footer">let's co/lab!</a>
-                    {%- endunless %}
+                    <a href="{{ '/follow/' | relative_url }}" class="footer-link" data-umami-event="Follow footer">follow along</a>
+                    <a href="mailto:hello@humancrafted.co" class="footer-link" data-umami-event="Email footer">email me</a>
                 </div>
             </div>
         </footer>

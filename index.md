@@ -3,7 +3,10 @@ layout: default
 title:
 ---
 
-<h1 class="hero-title">A design studio specializing in the rapid realization of ideas.</h1>
+<div class="hero">
+  <h1 class="hero-title">A design studio specializing in the rapid realization of ideas.</h1>
+  <p class="hero-sub">Design, engineering and fabrication. Websites and software&nbsp;tools. Strategy and&nbsp;mentoring. <a href="{{ '/lab/' | relative_url }}" data-umami-event="Hero services">Services for&nbsp;hire&nbsp;→</a></p>
+</div>
 
 <hr class="section-divider">
 

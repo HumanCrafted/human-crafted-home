@@ -9,7 +9,8 @@
     rummage-hub / rummage
               /rummage/ and its items (_rummage/) — the made-hub/made shapes
               with "rummage" in place of "made"
-    sub-page  everything else  -> humancrafted.co/re/<slug>   (prefix dim -> home, co/re -> hub)
+    sub-page  everything else  -> humancrafted.co/re/<slug>   (prefix dim -> home, co/re -> hub);
+              service docs read humancrafted.co/lab/<slug> instead (co/lab -> /lab/)
   Real URLs are unchanged; the nested path is a display-only breadcrumb.
   Stable hooks for the on-load morph (wordmark.js): .wm-human .wm-crafted .wm-tail .wm-slash .wm-back
 {%- endcomment -%}
@@ -61,8 +62,14 @@
     <a href="{{ '/' | relative_url }}" class="wm-back" data-umami-event="Wordmark home"><span class="wm-human">human</span><span class="wm-crafted">crafted</span><span class="wm-dot">.</span>co<span class="wm-slash">/</span></a><span class="wm-tail"><a href="{{ '/made/' | relative_url }}" class="wm-hub" data-umami-event="Wordmark made">made</a><span class="wm-new"><span class="wm-sep">/</span><span class="wm-current">{{ crumb }}</span></span></span>
   </span>
   {%- else -%}
+  {%- comment -%}
+    Service pages (docs tagged `services`) file under co/lab, where their list
+    lives; every other sub-page under co/re. Same "sub" shape either way.
+  {%- endcomment -%}
+  {%- assign hub = "re" -%}
+  {%- if page.collection == "docs" and page.tags contains "services" %}{% assign hub = "lab" %}{% endif -%}
   <span class="site-title site-title--crumb" data-wm-state="sub">
-    <a href="{{ '/' | relative_url }}" class="wm-back" data-umami-event="Wordmark home"><span class="wm-human">human</span><span class="wm-crafted">crafted</span></a><span class="wm-tail"><span class="wm-dot">.</span><a href="{{ '/re/' | relative_url }}" class="wm-hub" data-umami-event="Wordmark hub">co<span class="wm-slash">/</span>re</a><span class="wm-new"><span class="wm-sep">/</span><span class="wm-current">{{ crumb }}</span></span></span>
+    <a href="{{ '/' | relative_url }}" class="wm-back" data-umami-event="Wordmark home"><span class="wm-human">human</span><span class="wm-crafted">crafted</span></a><span class="wm-tail"><span class="wm-dot">.</span><a href="{{ '/' | append: hub | append: '/' | relative_url }}" class="wm-hub" data-umami-event="Wordmark hub">co<span class="wm-slash">/</span>{{ hub }}</a><span class="wm-new"><span class="wm-sep">/</span><span class="wm-current">{{ crumb }}</span></span></span>
   </span>
   {%- endif -%}
 {%- endif -%}
