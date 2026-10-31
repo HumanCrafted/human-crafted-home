@@ -4,7 +4,7 @@ title: Brand and Identity Design
 slug: brand-and-identity-design
 weight: 30
 crumb: brand and identity
-summary: A logo, a typeface, a palette. Just a refresh or a whole need design.
+summary: A logo, a typeface, a palette. Just a refresh or a whole new design.
 main_image:
 featured: false
 tags:
