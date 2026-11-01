@@ -21,17 +21,16 @@ gallery_images:
   - "![[fridge-frames-8.JPG]]"
   - "![[fridge-frames-9.JPG]]"
 headline: Neon acrylic photo frames that live on the fridge and hold on with magnets.
-# --- shop: PLACEHOLDER price/SKU/stock — replace with real values ---
-shop_status: off   # was archived — listed again when it's ready
-price: 25.00
+shop_status: off
+price: 25
 variants:
   - name: Standard
     sku: FRI-FRA-STD
     stock: 10
-# --- /shop ---
 version: "1.0"
 tools:
   - laser-cutter
+  - figma
 process:
   - laser cutting
 ---

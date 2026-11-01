@@ -9,12 +9,13 @@ categories:
   - laser
 published_date: 2018-10-01
 draft: false
-gallery_images: 
-headline: 
+gallery_images:
+headline:
 version: "1.0"
 tools:
   - laser-cutter
   - cnc-router
+  - fusion360
 process:
 ---
 

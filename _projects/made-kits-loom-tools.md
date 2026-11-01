@@ -21,6 +21,7 @@ headline: A set of laser-cut acrylic weaving tools, combs and needles, made with
 version: "1.0"
 tools:
   - laser-cutter
+  - fusion360
 process:
   - laser cutting
 ---

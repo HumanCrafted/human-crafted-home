@@ -22,16 +22,15 @@ gallery_images:
   - "![[concrete-tray-with-coaster.jpg]]"
   - "![[concrete-tray-detail.jpg]]"
 headline: A pair of cast concrete trays, one round and one rectangular, for the small stuff by the sink or on a desk.
-# --- shop: PLACEHOLDER price/SKU/stock — replace with real values ---
-shop_status: off   # was archived — listed again when it's ready
-price: 25.00
+shop_status: off
+price: 25
 variants:
   - name: Standard
     sku: CON-TRA-STD
     stock: 10
-# --- /shop ---
 version: "1.0"
 tools:
+  - fusion360
 process:
   - silicone mold making
   - concrete casting

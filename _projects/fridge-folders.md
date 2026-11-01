@@ -18,17 +18,16 @@ gallery_images:
   - "![[fridge-folders-5.JPG]]"
   - "![[fridge-folders-6.JPG]]"
 headline: The desktop folder icon, pulled off the screen and stuck to the fridge.
-# --- shop: PLACEHOLDER price/SKU/stock — replace with real values ---
-shop_status: off   # was archived — listed again when it's ready
-price: 25.00
+shop_status: off
+price: 25
 variants:
   - name: Standard
     sku: FRI-FOL-STD
     stock: 10
-# --- /shop ---
 version: "1.0"
 tools:
   - laser-cutter
+  - figma
 process:
   - laser cutting
 ---

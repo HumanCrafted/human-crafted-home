@@ -16,24 +16,20 @@ gallery_images:
   - "![[butter-stick-label.jpg]]"
   - "![[butter-stick-conversions.jpg]]"
 headline: A 3D-printed measuring stick for butter, notched at every tablespoon.
-# --- shop: price/SKU/stock ---
-# One color: Savannah Yellow ($6, Jon 2026-10-22). Printed to order, so stock
-# is a ceiling (20) rather than a shelf count; lower it by hand after each sale.
-# Tracked in CoOps products/butter-stick; SKU is BUT-STK-<color>, SAV = Savannah Yellow.
 shop_status: available
-price: 6.00
+price: 6
 ships_in: 3–5 business days
 ship_size: small
 variants:
   - name: Savannah Yellow
     sku: BUT-STK-SAV
-    price: 6.00
+    price: 6
     stock: 20
     color: filament-panchroma-matte-savannah-yellow
-# --- /shop ---
 version: "2.0"
 tools:
   - 3d-printer
+  - fusion360
 process:
   - 3d printing
 ---

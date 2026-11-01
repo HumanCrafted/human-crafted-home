@@ -11,12 +11,13 @@ categories:
   - desktop
 published_date: 2021-03-22
 draft: false
-gallery_images: 
-headline: 
+gallery_images:
+headline:
 version: "1.0"
 tools:
   - laser-cutter
   - cnc-router
+  - fusion360
 process:
 ---
 

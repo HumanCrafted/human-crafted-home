@@ -31,17 +31,16 @@ gallery_images:
   - "![[cord-keeper-curing.jpg]]"
   - "![[cord-keeper-batch-curing.jpg]]"
   - "![[cord-keeper-mmoca-exhibit.jpg]]"
-headline: "A concrete cable weight born from a museum exhibit — and the first Human Crafted product."
-# --- shop: PLACEHOLDER price/SKU/stock — replace with real values ---
-shop_status: off   # was archived — listed again when it's ready
-price: 25.00
+headline: A concrete cable weight born from a museum exhibit — and the first Human Crafted product.
+shop_status: off
+price: 25
 variants:
   - name: Standard
     sku: COR-KEE-STD
     stock: 10
-# --- /shop ---
 version: "1.0"
 tools:
+  - fusion360
 process:
   - concrete casting
   - silicone mold making

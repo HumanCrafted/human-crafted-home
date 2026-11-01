@@ -10,11 +10,12 @@ categories:
   - kitchen
 published_date: 2020-12-21
 draft: false
-gallery_images: 
+gallery_images:
 headline: A place for tacos
 version: "1.0"
 tools:
   - 3d-printer
+  - fusion360
 process:
 ---
 

@@ -15,6 +15,7 @@ gallery_images:
 headline: A new home for Human Crafted
 version: "1.0"
 tools:
+  - fusion360
 process:
 ---
 

@@ -14,6 +14,7 @@ headline:
 version: "1.0"
 tools:
   - 3d-printer
+  - fusion360
 process:
 ---
 

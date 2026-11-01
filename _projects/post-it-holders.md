@@ -9,19 +9,18 @@ categories:
   - desktop
 published_date: 2019-11-05
 draft: false
-gallery_images: 
-headline: 
-# --- shop: PLACEHOLDER price/SKU/stock — replace with real values ---
-shop_status: off   # was archived — listed again when it's ready
-price: 25.00
+gallery_images:
+headline:
+shop_status: off
+price: 25
 variants:
   - name: Standard
     sku: POS-IT-STD
     stock: 10
-# --- /shop ---
 version: "1.0"
 tools:
   - laser-cutter
+  - fusion360
 process:
 ---
 

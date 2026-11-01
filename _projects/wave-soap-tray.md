@@ -2,7 +2,7 @@
 layout: project
 title: Wave Soap Tray
 slug: wave-soap-tray
-main_image: 
+main_image:
 featured: false
 categories:
   - 3d printing
@@ -10,10 +10,11 @@ categories:
   - bathroom
 published_date: 2025-06-10
 draft: true
-gallery_images: 
-headline: 
+gallery_images:
+headline:
 version: "1.0"
 tools:
   - 3d-printer
+  - fusion360
 process:
 ---

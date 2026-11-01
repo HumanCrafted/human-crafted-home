@@ -31,10 +31,10 @@ gallery_images:
   - "![[sherman-court-19.jpg]]"
   - "![[sherman-court-21.jpg]]"
   - "![[sherman-court-23.jpg]]"
- 
 headline: A 1950 ranch, back in the town we grew up in
 version: "1.0"
 tools:
+  - figma
 process:
 ---
 

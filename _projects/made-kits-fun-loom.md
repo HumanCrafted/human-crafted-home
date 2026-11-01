@@ -9,11 +9,12 @@ categories:
   - client work
 published_date: 2020-03-16
 draft: false
-gallery_images: 
-headline: 
+gallery_images:
+headline:
 version: "1.0"
 tools:
   - laser-cutter
+  - fusion360
 process:
 ---
 

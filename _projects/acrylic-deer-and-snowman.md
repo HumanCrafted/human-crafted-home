@@ -10,11 +10,12 @@ categories:
   - holiday
 published_date: 2019-11-11
 draft: false
-gallery_images: 
-headline: 
+gallery_images:
+headline:
 version: "1.0"
 tools:
   - laser-cutter
+  - figma
 process:
 ---
 

@@ -10,11 +10,12 @@ categories:
   - wooden
 published_date: 2018-12-10
 draft: false
-gallery_images: 
-headline: 
+gallery_images:
+headline:
 version: "1.0"
 tools:
   - cnc-router
+  - fusion360
 process:
 ---
 

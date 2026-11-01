@@ -16,24 +16,20 @@ gallery_images:
   - "![[acrylic-robin-packaging.jpg]]"
   - "![[acrylic-robin-with-cactus.jpg]]"
 headline: A flat laser-cut acrylic robin that stands on two thin legs, read entirely from its profile.
-# --- shop: price/SKU/stock ---
-# One color for now: Bronze Smoke Transparent ($12, Jon 2026-10-05). Tracked
-# in CoOps products/acrylic-robin; SKU uses the shared color code (BRZ, as on the trees).
-# Stock is still the old placeholder count — set it to what's on the shelf.
 shop_status: available
-price: 12.00
+price: 12
 ships_in: 3–5 business days
 ship_size: small
 variants:
   - name: Bronze Smoke
     sku: ACR-ROB-BRZ
-    price: 12.00
+    price: 12
     stock: 10
     color: acrylic-bronze-smoke-transparent
-# --- /shop ---
 version: "1.0"
 tools:
   - laser-cutter
+  - figma
 process:
   - laser cutting
 ---

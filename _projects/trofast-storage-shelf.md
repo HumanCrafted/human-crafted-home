@@ -11,11 +11,12 @@ categories:
   - furniture
 published_date: 2019-12-19
 draft: false
-gallery_images: 
-headline: 
+gallery_images:
+headline:
 version: "1.0"
 tools:
   - cnc-router
+  - laser-cutter
 process:
 ---
 

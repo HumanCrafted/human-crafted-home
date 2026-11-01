@@ -11,11 +11,12 @@ categories:
   - coffee
 published_date: 2022-01-02
 draft: false
-gallery_images: 
-headline: 
+gallery_images:
+headline:
 version: "1.0"
 tools:
   - 3d-printer
+  - fusion360
 process:
 ---
 

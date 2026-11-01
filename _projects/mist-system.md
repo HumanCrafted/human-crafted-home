@@ -8,10 +8,11 @@ categories:
   - client work
 published_date: 2017-05-12
 draft: false
-gallery_images: 
-headline: 
+gallery_images:
+headline:
 version: "1.0"
 tools:
+  - fusion360
 process:
 ---
 

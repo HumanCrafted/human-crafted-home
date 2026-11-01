@@ -93,6 +93,7 @@ version: "1.0"
 tools:
   - laser-cutter
   - cnc-router
+  - fusion360
 process:
   - laser cutting
 ---

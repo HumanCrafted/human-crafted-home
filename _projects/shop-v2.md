@@ -8,10 +8,11 @@ categories:
   - around the shop
 published_date: 2019-12-04
 draft: false
-gallery_images: 
-headline: 
+gallery_images:
+headline:
 version: "1.0"
 tools:
+  - fusion360
 process:
 ---
 

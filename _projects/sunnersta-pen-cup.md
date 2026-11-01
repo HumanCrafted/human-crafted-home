@@ -10,11 +10,12 @@ categories:
   - around the shop
 published_date: 2021-02-20
 draft: false
-gallery_images: 
-headline: 
+gallery_images:
+headline:
 version: "1.0"
 tools:
   - 3d-printer
+  - fusion360
 process:
 ---
 

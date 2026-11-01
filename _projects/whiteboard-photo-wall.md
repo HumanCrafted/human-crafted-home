@@ -9,11 +9,12 @@ categories:
   - wooden
 published_date: 2020-03-02
 draft: false
-gallery_images: 
-headline: 
+gallery_images:
+headline:
 version: "1.0"
 tools:
   - cnc-router
+  - laser-cutter
 process:
 ---
 

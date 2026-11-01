@@ -14,6 +14,7 @@ headline: A signup sheet in one link. No accounts, no ads, and it's free.
 version: "1.0"
 tools:
   - claude
+  - figma
 process:
 ---
 

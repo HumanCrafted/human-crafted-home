@@ -16,6 +16,7 @@ headline:
 version: "1.0"
 tools:
   - laser-cutter
+  - fusion360
 process:
 ---
 
