@@ -5,7 +5,7 @@ slug: prototyping-and-fabrication
 redirect_from:
   - /small-scale-production-or-prototyping/
 weight: 50
-crumb: prototyping and fabrication
+crumb: prototypes and fabs
 summary: Working prototypes, signs and displays, jigs and fixtures, custom and replacement parts, and short production runs.
 main_image:
 featured: false
