@@ -43,4 +43,4 @@ Some people still want paper, so Claude.ai built a script that makes a fillable 
 
 ### Under the hood
 
-Built on the same base as the [[ehs-music-boosters|EHS Music Boosters]] site: [Astro](https://astro.build), [Keystatic](https://keystatic.com) for editing, [Vercel](https://vercel.com) for hosting. The content is markdown in a git repo. Handing it off means transferring the repo and the Vercel project. Nothing else is tied to Human Crafted.
+Built on the same base as the [[ehs-music-boosters|EHS Music Boosters]] site: [Astro](https://astro.build), [Keystatic](https://keystatic.com) for editing, [Vercel](https://vercel.com) for hosting. The content is markdown in a git repo. 
