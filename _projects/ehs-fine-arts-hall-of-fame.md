@@ -29,7 +29,6 @@ Midnight navy, brass linework and ivory type, [Fraunces](https://fonts.google.co
 
 ![[ehs-fine-arts-hall-of-fame-district-logo.png|Evansville Community School District logo|column=2]]![[ehs-fine-arts-hall-of-fame-logo.svg|Fine Arts Hall of Fame mark, the flame on a two-bar base]]
 
-Every inductee gets a page, with one simple markdown file per person.
 
 ### Nominating
 
