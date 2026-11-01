@@ -4,6 +4,8 @@ _site/
 _site-shop/
 # local rummage-preview build (see _config.rummage.yml)
 _site-rummage/
+# second local build when another chat holds :4000 (jekyll-alt in .claude/launch.json)
+_site-alt/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
