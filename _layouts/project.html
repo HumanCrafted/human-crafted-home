@@ -100,6 +100,17 @@ layout: default
   </div>
 {% endif %}
 
+{%- comment -%}
+  Client, code, space planning and retail projects end with a way to hire the studio, in the hero's
+  wording. Projects only, and never on something for sale: those pages have
+  their own next step.
+{%- endcomment -%}
+{%- if page.collection == "projects" and for_sale == false -%}
+  {%- if page.categories contains "client work" or page.categories contains "code" or page.categories contains "space planning" or page.categories contains "retail" %}
+<p class="project-hire">Want something like this? <a href="{{ '/lab/' | relative_url }}" data-umami-event="Project services">Services&nbsp;for&nbsp;hire&nbsp;→</a></p>
+  {%- endif -%}
+{%- endif %}
+
 <!-- Lightbox -->
 <div class="lightbox" id="lightbox">
   <button class="lightbox-close" id="lightbox-close">&times;</button>

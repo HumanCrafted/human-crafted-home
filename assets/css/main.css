@@ -586,8 +586,9 @@ a:hover {
   line-height: 1;
 }
 
-/* Resources open in a new tab — show the arrow even on humancrafted.co subdomains */
-.wiki-comma-list a[target="_blank"]::after {
+/* Resources and tool links open in a new tab — show the arrow even on humancrafted.co subdomains */
+.wiki-comma-list a[target="_blank"]::after,
+.doc-content a[target="_blank"]::after {
   content: "↗";
   font-size: 0.85em;
   margin-left: 0.2em;
@@ -1342,6 +1343,17 @@ hr {
 .project-content a:hover {
   font-weight: 500;
   text-decoration-style: wavy;
+}
+
+/* Bottom of client and code projects: same voice as the hero's services line */
+.project-hire {
+  color: var(--muted-foreground);
+  margin: 3rem 0 0;
+}
+
+.project-hire a {
+  color: var(--foreground);
+  font-weight: 500;
 }
 
 .project-footer {
