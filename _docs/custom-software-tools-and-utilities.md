@@ -40,4 +40,4 @@ Individuals and small businesses with a repetitive task, a spreadsheet that's ou
 
 ## What it costs
 
-Cost depends on how much the tool needs to do and where it runs. A web app or script usually costs nothing to host. A native iPhone app needs an Apple Developer account ($99/year). PLACEHOLDER: project price range. [Get in touch](mailto:hello@humancrafted.co) and let's make something useful.
+Cost depends on how much the tool needs to do and where it runs. A web app or script usually costs nothing to host. A native iPhone app needs an Apple Developer account ($99/year). [Get in touch](mailto:hello@humancrafted.co) and let's make something useful.
