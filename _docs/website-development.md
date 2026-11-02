@@ -31,7 +31,7 @@ If you don't know what any of this means, don't worry. It's not complicated and 
 - **[EHS Music Boosters](https://ehsmusicboosters.com){:target="_blank" rel="noopener"}** - a website and brand identity for a band and choir parent group.
 - **[EHS Fine Arts Hall of Fame](https://evansvillefineartshof.org){:target="_blank" rel="noopener"}** - a landing page with nomination form submissions.
 - **[Masen](https://masen.pro){:target="_blank" rel="noopener"}** - a website for an industrial data services company.
-- **[Human Crafted](https://humancrafted.co)** - this site, including its e-commerce shop.
+- **[Human Crafted](/)** - this site, including its e-commerce shop.
 - **[Super Simple Signup](https://supersimplesignup.com){:target="_blank" rel="noopener"}** - the website and brand for a signup sheet app with no accounts or ads.
 - **[Synth Patch](https://synthpatch.io){:target="_blank" rel="noopener"}** - the website and brand for an app that saves synth patches.
 
