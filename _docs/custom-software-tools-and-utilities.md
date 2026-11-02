@@ -2,7 +2,7 @@
 layout: doc
 title: Custom Software Tools & Utilities
 slug: custom-software-tools-and-utilities
-weight: 45
+weight: 20
 crumb: software tools
 summary: Small apps and utilities built for one job, the one your off-the-shelf software doesn't quite do.
 main_image:
@@ -14,30 +14,40 @@ gallery_images:
 version: "1.0"
 draft: false
 ---
-Small apps and utilities built for one job. A converter that fits your exact workflow, a tracker that keeps your data in files you own, a phone app that does one thing well.
+Small apps and utilities built for one job. A quote calculator, a job tracker, a phone app for logging hours, a spreadsheet turned into a real tool.
 
-The code is written with AI (mostly Claude Code). What I bring is the rest: working out what the tool should actually do, designing how it works, and testing it against real use until it holds up. The same way I'd approach a jig or a fixture in the shop.
+Together we work out what the tool should actually do, design how it works, and test it against real use until it holds up. The same way I'd approach a jig or a fixture in the shop.
 
 ## What a project looks like
 
 - **Define** - what the tool needs to do, who uses it, and where the data lives. Most tools do one job.
-- **Build** - a web app, a native iPhone or Mac app, or a script, whichever fits the job.
+- **Build** - a web app, a native iPhone or Mac app, a script, or maybe an [[ai-integration|AI integration]], whichever fits the job. Code is written with AI assistance. 
 - **Test** - against your real files and real use, not sample data.
 - **Data** - plain files (markdown, CSV, your own folders) wherever possible, not a database locked inside someone else's service.
 - **Handoff** - the code and data are yours, documented well enough for you, someone else, or an AI to keep going.
 
 ## Examples
 
-- **DXF to SVG** - a browser-based converter that takes Fusion 360 sketches into Figma as editable vectors. Files never leave your computer.
-- **Illustrated Thumbnails** - turns CAD data (a DXF drawing plus an STL model) into isometric line art with a real cast shadow, for product pages.
-- **FoodBase** - a plain-text food database (recipes, groceries, pantry, nutrition) with an iPhone app for meal planning and a second app that just scans receipts. The [template](https://github.com/HumanCrafted/FoodBase-Template) is public.
-- **A time tracker** for iPhone and Mac that saves billable hours as plain markdown in an Obsidian vault.
-- **An operations vault** for a small product business: products, SKUs, pricing, supplies, and clients, kept in sync with this site's shop.
+- **DXF to SVG**\* - a browser-based converter that takes Fusion 360 sketches into Figma as editable vectors. Files never leave your computer. [Try it](https://dxftosvg.humancrafted.co){:target="_blank" rel="noopener"}.
+- **Illustrated Thumbnails**\* - turns CAD data (a DXF drawing plus an STL model) into isometric line art with a real cast shadow, for product pages. [Try it](https://thumbs.humancrafted.co){:target="_blank" rel="noopener"}.
+- **[[super-simple-signup|Super Simple Signup]]** - a signup sheet in one link. No accounts, no ads, and it's free.
+- **[[dims-and-units|Dims and Units]]** - two Figma plugins that bring real-world units to a pixel canvas.
+- **No Time Flat**\* - a time tracker for iPhone and Mac that saves billable hours as plain markdown in an Obsidian vault.
+- **Co-Ops**\* - the operations vault I run Human Crafted on: products, inventory, pricing, orders, supplies, client job reports and invoice packets.
+
+*\* Project page coming soon.*
 
 ## Good fit for
 
-Individuals and small businesses with a repetitive task, a spreadsheet that's outgrown itself, or a workflow stuck between two apps that don't talk to each other. *If you need something bigger, [let's discuss](mailto:hello@humancrafted.co).*
+Any size business or community group with a repetitive task, a spreadsheet doing too much, or a workflow stuck between two apps that don't talk to each other.
 
 ## What it costs
 
-Cost depends on how much the tool needs to do and where it runs. A web app or script usually costs nothing to host. A native iPhone app needs an Apple Developer account ($99/year). [Get in touch](mailto:hello@humancrafted.co) and let's make something useful.
+| What               | Price                    |
+| ------------------ | ------------------------ |
+| Small tool         | From $2,500              |
+| Keeping it running | Average $100-200 a month |
+
+The price depends on how much the tool needs to do, and it's fixed before I start. If you run it yourself, a simple web app or script usually costs little or nothing to host. Or I can keep it running: hosting, updates, and up to 30 minutes of small changes a month. Bigger changes get their own price. Cancel anytime, and the tool stays yours.
+
+[Get in touch](mailto:hello@humancrafted.co) and let's make something useful.

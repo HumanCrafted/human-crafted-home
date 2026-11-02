@@ -2,7 +2,7 @@
 layout: doc
 title: Brand and Identity Design
 slug: brand-and-identity-design
-weight: 30
+weight: 50
 crumb: brand and identity
 summary: A logo, a typeface, a palette. Just a refresh or a whole new design.
 main_image:
@@ -24,10 +24,23 @@ A logo, a typeface, a palette. Something new or just a refresh. Works on its own
 - **Applications** - the mark in the places it actually lands: packaging, signage, print, web, socials
 - **Handoff** - source files, exports in the formats you'll need, and the help to implement and integrate
 
+## Examples
+
+- **[[ehs-music-boosters|EHS Music Boosters]]** - a mezzo *m* and a flat sign combined into one mark, with notation shapes used across the site.
+- **[[synth-patch|Synth Patch]]** - one patch cable that writes S and P, with a plug on each end.
+- **[[super-simple-signup|Super Simple Signup]]** - an S drawn as a snake.
+
 ## Good fit for
 
-New businesses that need a first identity, and existing ones with an aging identity that is missing cohesion and relevance. Product brands, studios, and small shops (digital or physical products).
+New businesses that need a first identity, existing ones with an aging identity, or even prototype brands for testing new business concepts. Product brands, studios, and small shops (digital or physical products).
 
 ## What it costs
 
-Depends on how far the system needs to go, and what came before it: a mark and a basic palette can be a few hundred, with a full identity and assets extending into the thousands. [Get in touch](mailto:hello@humancrafted.co) and we will plan it out together.
+| What                     | Price       |
+| ------------------------ | ----------- |
+| Logo and basic palette   | From $500   |
+| Full identity and assets | From $2,500 |
+
+The price depends on how far the system needs to go and what came before it, and it's fixed before I start.
+
+[Get in touch](mailto:hello@humancrafted.co) and we will plan it out together.
