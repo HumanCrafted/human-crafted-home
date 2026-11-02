@@ -25,7 +25,7 @@ process:
 
 ### The design
 
-Midnight navy, brass linework and ivory type, [Fraunces](https://fonts.google.com/specimen/Fraunces) for headlines, [Marcellus](https://fonts.google.com/specimen/Marcellus) for the engraved names. The logo mark is a portion borrowed from the district's logo, but with a base that emulates an award.
+Midnight navy, brass linework and ivory type, [Fraunces](https://fonts.google.com/specimen/Fraunces) for headlines, [Marcellus](https://fonts.google.com/specimen/Marcellus) for the engraved names. The logo mark is a portion borrowed from the district's existing logo, but with a base that emulates an award.
 
 ![[ehs-fine-arts-hall-of-fame-district-logo.png|Evansville Community School District logo|column=2]]![[ehs-fine-arts-hall-of-fame-logo.svg|Fine Arts Hall of Fame mark, the flame on a two-bar base]]
 
