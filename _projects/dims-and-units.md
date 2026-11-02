@@ -6,6 +6,7 @@ main_image: "![[dims-units-logo.svg]]"
 featured: false
 categories:
   - code
+  - brand
 published_date: 2026-07-12
 draft: false
 gallery_images:

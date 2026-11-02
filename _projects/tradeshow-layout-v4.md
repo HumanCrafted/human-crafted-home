@@ -8,6 +8,7 @@ categories:
   - furniture
   - wooden
   - retail
+  - space planning
 published_date: 2019-08-05
 draft: false
 gallery_images:

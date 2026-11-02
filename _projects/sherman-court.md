@@ -6,7 +6,7 @@ main_image: "![[sherman-ct.svg]]"
 featured: false
 categories:
   - around the house
-  - architectural design
+  - space planning
 published_date: 2021-10-01
 draft: false
 gallery_images:
