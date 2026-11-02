@@ -29,6 +29,7 @@ I took inspiration for the Booster identity from the many music books we have ar
 
 ![[ehs-music-boosters-logo.svg|EHS Music Boosters logo, an m with a flat sign|column=2]]![[ehs-music-boosters-collage.png|Collage of music notation: mf, bass clef, sharp, treble clef, flat, rest and an eighth note]]
 
+Logo exploration.
 ![[ehs-music-boosters-logo-options.svg|Nine EHS Music Boosters logo options]]
 
 
