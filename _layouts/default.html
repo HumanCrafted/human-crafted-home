@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    {% assign title_lower = page.title | downcase %}{% assign site_lower = site.title | downcase %}<title>{% if page.title and page.url != "/" %}{% if title_lower contains site_lower %}{{ page.title }}{% else %}{{ page.title }} | {{ site.title }}{% endif %}{% else %}{{ site.title }}{% endif %}</title>
+    {% assign title_lower = page.title | downcase %}{% assign site_lower = site.title | downcase %}<title>{% if page.title and page.url != "/" %}{% if title_lower contains site_lower %}{{ page.title }}{% else %}{{ page.title }} | {{ site.title }}{% endif %}{% else %}{{ page.home_title | default: site.title }}{% endif %}</title>
     <link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
     <link rel="icon" type="image/png" href="{{ '/favicon.png' | relative_url }}">
     <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}">

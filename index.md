@@ -1,6 +1,7 @@
 ---
 layout: default
 title:
+home_title: "human crafted | design studio in Evansville, WI"
 ---
 
 <div class="hero">

@@ -1,6 +1,9 @@
 ---
 layout: doc
 title: About me
+description: "Hi, I'm Jon, a creative engineer. I started Human Crafted in 2016 as a boutique design studio and product design brand."
+seo:
+  type: WebPage
 slug: about-me
 weight: 10
 redirect_from:

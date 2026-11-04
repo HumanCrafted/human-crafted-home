@@ -1,6 +1,7 @@
 ---
 layout: lab
 title: Services
+description: "Websites, software tools, AI, brand, product engineering and prototyping from a solo design studio in Evansville, WI."
 permalink: /lab/
 image: vennColab.svg
 redirect_from:

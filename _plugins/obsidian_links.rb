@@ -333,7 +333,8 @@ Jekyll::Hooks.register [:pages, :documents], :pre_render do |item|
   end
 
   # If the first content line is just an image, give coffee notes a sane description.
-  if item.content.strip.match(/^!\[\[([^\]]+\.(jpg|jpeg|png|gif|svg|webp))\]\]/)
+  # Coffee-tagged notes only: other image-first pages (projects, About me) must not get this.
+  if Array(item.data['tags']).include?('coffee') && item.content.strip.match(/^!\[\[([^\]]+\.(jpg|jpeg|png|gif|svg|webp))\]\]/)
     item.data['description'] ||= "Coffee review with tasting notes and brewing recommendations"
   end
 
