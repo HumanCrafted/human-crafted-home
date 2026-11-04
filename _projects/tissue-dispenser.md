@@ -52,7 +52,7 @@ variants:
   - name: Rose Gold
     sku: TIS-DIS-RGD
     price: 54
-    stock: 1
+    stock: 2
     color: acrylic-rose-gold-transparent
   - name: Eggshell
     sku: TIS-DIS-EGG
@@ -67,12 +67,12 @@ variants:
   - name: Persimmon
     sku: TIS-DIS-PER
     price: 54
-    stock: 1
+    stock: 2
     color: acrylic-persimmon
   - name: Burgundy
     sku: TIS-DIS-BUR
     price: 54
-    stock: 2
+    stock: 0
     color: acrylic-burgundy-transparent
   - name: Avocado Shake
     sku: TIS-DIS-AVO
