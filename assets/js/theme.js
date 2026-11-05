@@ -1,96 +1,83 @@
-// Theme switching functionality
+// Theme: follow the system, unless the toggle has overridden it.
+//
+// A toggle click holds only until the system next changes. An override is
+// always the opposite of the system theme, so storing the theme alone is
+// enough: once the two match, the system has changed and the override is
+// dropped. Toggling back to match the system releases it the same way.
 (function() {
-  const STORAGE_KEY = 'theme-preference';
-  
-  // Get theme preference from localStorage or default to 'system'
-  function getThemePreference() {
-    if (typeof localStorage !== 'undefined') {
-      return localStorage.getItem(STORAGE_KEY) || 'system';
-    }
-    return 'system';
+  const OVERRIDE_KEY = 'theme-override';
+  const systemDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+  function readOverride() {
+    try { return localStorage.getItem(OVERRIDE_KEY); } catch (e) { return null; }
   }
-  
-  // Set theme preference in localStorage
-  function setThemePreference(theme) {
-    if (typeof localStorage !== 'undefined') {
-      localStorage.setItem(STORAGE_KEY, theme);
-    }
+
+  function writeOverride(theme) {
+    try { localStorage.setItem(OVERRIDE_KEY, theme); } catch (e) {}
   }
-  
-  // Get the actual theme to apply (resolving 'system' to 'light' or 'dark')
-  function getThemeToApply(preference) {
-    if (preference === 'system') {
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-    return preference;
+
+  function clearOverride() {
+    try { localStorage.removeItem(OVERRIDE_KEY); } catch (e) {}
   }
-  
-  // Apply theme to document
+
+  function systemTheme() {
+    return systemDark.matches ? 'dark' : 'light';
+  }
+
+  // The theme to show right now, dropping an override the system has caught up to.
+  function currentTheme() {
+    const override = readOverride();
+    if (!override) return systemTheme();
+    if (override === systemTheme()) {
+      clearOverride();
+      return systemTheme();
+    }
+    return override;
+  }
+
   function applyTheme(theme) {
     const root = document.documentElement;
-    
+
     if (theme === 'dark') {
       root.setAttribute('data-theme', 'dark');
     } else {
       root.removeAttribute('data-theme');
     }
-  }
-  
-  // Initialize theme on page load
-  function initTheme() {
-    const preference = getThemePreference();
-    const theme = getThemeToApply(preference);
-    applyTheme(theme);
-    
-    // Update toggle button if it exists
-    updateToggleButton(preference);
-  }
-  
-  // Update theme toggle button state
-  function updateToggleButton(preference) {
+
+    // Icon visibility is handled by CSS from data-theme.
     const toggle = document.querySelector('.theme-toggle');
     if (toggle) {
-      const theme = getThemeToApply(preference);
       toggle.setAttribute('aria-label', `Switch to ${theme === 'light' ? 'dark' : 'light'} theme`);
-      // Icon visibility is now handled by CSS based on data-theme attribute
     }
   }
-  
-  // Toggle theme
+
   function toggleTheme() {
-    const currentPreference = getThemePreference();
-    const currentTheme = getThemeToApply(currentPreference);
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    
-    setThemePreference(newTheme);
+    const newTheme = currentTheme() === 'light' ? 'dark' : 'light';
+
+    if (newTheme === systemTheme()) {
+      clearOverride();
+    } else {
+      writeOverride(newTheme);
+    }
     applyTheme(newTheme);
-    updateToggleButton(newTheme);
   }
-  
-  // Initialize theme immediately (before DOM loads)
-  initTheme();
-  
-  // Listen for system theme changes
-  if (typeof window !== 'undefined') {
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function() {
-      const preference = getThemePreference();
-      if (preference === 'system') {
-        const theme = getThemeToApply(preference);
-        applyTheme(theme);
-        updateToggleButton(preference);
-      }
-    });
-  }
-  
-  // Set up theme toggle when DOM is ready
+
+  // Runs in <head>, before first paint.
+  // The old key pinned a toggle click forever; clear it so everyone starts back on the system.
+  try { localStorage.removeItem('theme-preference'); } catch (e) {}
+  applyTheme(currentTheme());
+
+  // The system changed: any override is over.
+  systemDark.addEventListener('change', function() {
+    clearOverride();
+    applyTheme(systemTheme());
+  });
+
   document.addEventListener('DOMContentLoaded', function() {
     const toggle = document.querySelector('.theme-toggle');
     if (toggle) {
       toggle.addEventListener('click', toggleTheme);
-      updateToggleButton(getThemePreference());
+      applyTheme(currentTheme());
     }
   });
-  
-  // Expose toggle function globally for manual use
-  window.toggleTheme = toggleTheme;
 })();
