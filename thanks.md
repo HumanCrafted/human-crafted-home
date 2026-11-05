@@ -19,5 +19,9 @@ sitemap: false
 <div class="thanks-page" data-thanks-page>
   <p class="thanks-lede">Your order is in. Stripe is emailing the receipt now, and the shipping notice will follow from me.</p>
   <p class="thanks-order" data-thanks-order hidden>Your order number is <strong data-order-number></strong>.</p>
+  <div class="thanks-signup">
+    <p>Want an occasional email when I make something new?</p>
+    {% include subscribe-form.html source="humancrafted.co/thanks" %}
+  </div>
   <a href="{{ '/#projects' | relative_url }}" class="btn">Back to projects →</a>
 </div>

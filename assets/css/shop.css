@@ -345,6 +345,8 @@ body.shop-page .cart-link.is-empty:hover { opacity: 1; }
 .thanks-page { max-width: 34rem; margin-bottom: 6rem; }
 .thanks-lede { margin-bottom: 1.5rem; }
 .thanks-order { margin-bottom: 1.5rem; }
+.thanks-signup { margin: 3rem 0; }
+.thanks-signup .subscribe-form { margin-top: 1rem; }
 
 /* --- Responsive ----------------------------------------------------------- */
 @media (max-width: 1024px) {

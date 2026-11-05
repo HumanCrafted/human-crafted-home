@@ -2,6 +2,8 @@
   Loops signup. Posts to Loops' public form endpoint — the form ID in the URL is
   the auth, so there's no API key and no server. Works as-is on GitHub Pages.
   Config lives in _config.yml: loops_form_id, loops_list_id.
+  Pass source="humancrafted.co/…" to record which page a signup came from in
+  Loops; it defaults to the Follow page.
   The plain method="post" is the no-JS path; subscribe.js intercepts it to keep
   the reader on the page. Renders nothing until loops_form_id is set.
 {%- endcomment -%}
@@ -13,7 +15,7 @@
            placeholder="you@example.com" autocomplete="email" required>
     <button class="btn subscribe-btn" type="submit" data-umami-event="Subscribe submit">Sign up</button>
   </div>
-  <input type="hidden" name="source" value="humancrafted.co/follow">
+  <input type="hidden" name="source" value="{{ include.source | default: 'humancrafted.co/follow' }}">
   {%- if site.loops_list_id and site.loops_list_id != "" %}
   <input type="hidden" name="mailingLists" value="{{ site.loops_list_id }}">
   {%- endif %}
